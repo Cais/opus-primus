@@ -15,5 +15,5 @@
 /** Set CONSTANTS */
 define( 'OPUS_INCLUDES', get_template_directory() . '/includes/' );
 
-/** Add Post Layout */
+/** Add Post Structures */
 require_once( OPUS_INCLUDES . 'class.OpusPrimusPostStructures.php' );
