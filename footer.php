@@ -1,4 +1,4 @@
-<<?php
+<?php
 /**
  * Footer Template
  * Default document footer.

@@ -54,29 +54,45 @@ class OpusPrimusPostLayout {
 
     /**
      * Opus Post Content
-     * Outputs `the_content` or `the_excerpt` if the page being displayed is an
-     * archive.
+     * Outputs `the_content`
      *
      * @package OpusPrimus
      *
      * @uses    apply_filters
      * @uses    is_archive
      * @uses    the_content
-     * @uses    the_excerpt
      */
     function opus_post_content() {
         /** Add empty filter before the post content */
         apply_filters( 'opus_before_the_content', '' );
 
-        /** The post content */
-        if ( ! is_archive() ) {
-            the_content();
-        } else {
-            the_excerpt();
-        }
+        /** The post excerpt */
+        the_content();
 
         /** Add empty filter after the post content */
         apply_filters( 'opus_after_the_content', '' );
+
+    }
+
+    /**
+     * Opus Post Excerpt
+     * Outputs `the_excerpt`
+     *
+     * @package OpusPrimus
+     *
+     * @uses    apply_filters
+     * @uses    is_archive
+     * @uses    the_excerpt
+     */
+    function opus_post_excerpt() {
+        /** Add empty filter before the post excerpt */
+        apply_filters( 'opus_before_the_excerpt', '' );
+
+        /** The post excerpt */
+        the_excerpt();
+
+        /** Add empty filter after the post excerpt */
+        apply_filters( 'opus_after_the_excerpt', '' );
 
     }
 
@@ -125,7 +141,7 @@ class OpusPrimusPostLayout {
     }
 
     /**
-     * Opus Post Link Navigation
+     * Opus Posts Link Navigation
      * Outputs the navigation structure to move between posts
      *
      * @package OpusPrimus
@@ -134,7 +150,7 @@ class OpusPrimusPostLayout {
      * @uses    next_posts_link
      * @uses    previous_posts_link
      */
-    function opus_post_link_navigation() {
+    function opus_posts_link_navigation() {
         /** Add empty filter before post link navigation */
         apply_filters( 'opus_before_post_link_navigation', '' );
 
@@ -178,4 +194,4 @@ class OpusPrimusPostLayout {
 
     }
 }
-$opus_layout = new OpusPrimusPostLayout();
+$opus_layout = new OpusPrimusPostLayout;
