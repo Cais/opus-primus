@@ -16,4 +16,4 @@
 define( 'OPUS_INCLUDES', get_template_directory() . '/includes/' );
 
 /** Add Post Layout */
-require_once( OPUS_INCLUDES . 'class.OpusPrimusPostLayout.php' );
+require_once( OPUS_INCLUDES . 'class.OpusPrimusPostStructures.php' );

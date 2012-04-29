@@ -34,15 +34,15 @@
 
 get_header();
 
-global $opus_layout;
+global $opus_structure;
 if ( have_posts() ):
     while ( have_posts() ):
         the_post();
         get_template_part( 'opus-primus', get_post_format() );
     endwhile;
-    $opus_layout->opus_posts_link_navigation();
+    $opus_structure->opus_posts_link_navigation();
 else:
-    $opus_layout->opus_search();
+    $opus_structure->opus_search();
 endif;
 
 get_sidebar();

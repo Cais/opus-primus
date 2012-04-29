@@ -194,4 +194,4 @@ class OpusPrimusPostLayout {
 
     }
 }
-$opus_layout = new OpusPrimusPostLayout;
+$opus_structure = new OpusPrimusPostLayout;

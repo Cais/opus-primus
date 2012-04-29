@@ -12,12 +12,12 @@
  * @copyright   Copyright (c) 2012, Opus Primus
  */
 
-/** Call the Post Layout variable */
-global $opus_layout;
+/** Call the Post Structure variable */
+global $opus_structure;
 
 /** Display the post */
-$opus_layout->opus_post_title();
-$opus_layout->opus_post_meta();
-$opus_layout->opus_post_content();
-$opus_layout->opus_post_author();
-$opus_layout->opus_link_pages();
+$opus_structure->opus_post_title();
+$opus_structure->opus_post_meta();
+$opus_structure->opus_post_content();
+$opus_structure->opus_post_author();
+$opus_structure->opus_link_pages();

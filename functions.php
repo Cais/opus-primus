@@ -1,7 +1,7 @@
 <?php
 /**
- * Header Template
- * Default document header and theme navigation.
+ * Functions
+ * Where the magic happens ...
  *
  * @package     OpusPrimus
  * @since       0.1
@@ -13,4 +13,5 @@
  */
 
 /** Call the initialization file to get things started */
+/** @noinspection PhpIncludeInspection - IDE commentary can be ignored */
 require_once( get_template_directory() . '/includes/opus-ignite.php' );
