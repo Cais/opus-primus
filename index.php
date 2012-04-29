@@ -3,7 +3,7 @@
  * Opus Primus
  * A WordPress Framework Theme.
  *
- * @package     Opus_Primus
+ * @package     OpusPrimus
  * @since       0.1
  *
  * @link        http://opusprimus.com
@@ -31,3 +31,19 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
+
+get_header();
+
+if ( have_posts() ):
+    while ( have_posts() ):
+        the_post();
+        get_template_part( 'opus-primus', get_post_format() );
+    endwhile;
+else:
+    if ( isset( $opus_layout ) ) {
+        $opus_layout->opus_search();
+    }
+endif;
+
+get_sidebar();
+get_footer();
