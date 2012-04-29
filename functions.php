@@ -17,19 +17,18 @@
 require_once( get_template_directory() . '/includes/opus-ignite.php' );
 
 
-/**
- * Enqueue Comment Reply Script
- *
- * If the page being viewed is a single post/page; and, comments are open; and,
- * threaded comments are turned on then enqueue the built-in comment-reply
- * script.
- *
- * @package OpusPrimus
- * @since   0.1
- *
- * @return  void
- */
 if ( ! function_exists( 'opus_enqueue_comment_reply' ) ) {
+    /**
+     * Enqueue Comment Reply Script
+     * If the page being viewed is a single post/page; and, comments are open;
+     * and, threaded comments are turned on then enqueue the built-in
+     * comment-reply
+     * script.
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     * @return  void
+     */
     function opus_enqueue_comment_reply() {
         if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
             wp_enqueue_script( 'comment-reply' );
