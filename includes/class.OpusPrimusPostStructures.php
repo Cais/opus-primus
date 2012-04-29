@@ -25,9 +25,10 @@ class OpusPrimusPostLayout {
         /** Add empty filter before the post title */
         apply_filters( 'opus_before_post_title', '' );
 
-        /** The Post Title */
-        the_title();
+        /** The Post Title */ ?>
+        <h2><?php the_title(); ?></h2>
 
+        <?php
         /** Add empty filter after the post title */
         apply_filters( 'opus_after_post_title', '' );
 

@@ -38,7 +38,7 @@ global $opus_structure;
 if ( have_posts() ):
     while ( have_posts() ):
         the_post();
-        get_template_part( 'opus-primus', get_post_format() );
+        get_template_part( 'loops/opus-primus', get_post_format() );
     endwhile;
     $opus_structure->opus_posts_link_navigation();
 else:
