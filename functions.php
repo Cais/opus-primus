@@ -39,11 +39,58 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
             )*/ );
         /** Add post-formats support for aside, quote, and status */
         add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video' ) );
-        /** Add menu support */
-        register_nav_menus( array(
-            'primary'   => __( 'Primary Menu', 'opusprimus' ),
-            'secondary' => __( 'Secondary Menu', 'opusprimus' ),
-        ) );
+
+        /**
+         * Add primary wp_nav_menu() custom menu support
+         *
+         * @package OpusPrimus
+         * @since   0.1
+         */
+        if ( ! function_exists( 'opus_primus_primary_menu' ) ) {
+            function opus_primus_primary_menu() {
+                if ( function_exists( 'wp_nav_menu' ) ) {
+                    wp_nav_menu( array(
+                        'theme_location'    => 'primary',
+                        'menu_class'        => 'nav',
+                        'fallback_cb'       => 'opus_primus_list_pages'
+                    ) );
+                } else {
+                    opus_primus_list_pages();
+                }
+            }
+        }
+        if ( ! function_exists( 'opus_primus_list_pages' ) ) {
+            function opus_primus_list_pages() { ?>
+                <ul class="nav"><?php wp_list_pages( 'title_li=' ); ?></ul>
+            <?php }
+        }
+        register_nav_menu( 'primary', __( 'Primary Menu', 'opusprimus' ) );
+
+        /**
+         * Add secondary wp_nav_menu() custom menu support
+         *
+         * @package OpusPrimus
+         * @since   0.1
+         */
+        if ( ! function_exists( 'opus_primus_secondary_menu' ) ) {
+            function opus_primus_secondary_menu() {
+                if ( function_exists( 'wp_nav_menu' ) ) {
+                    wp_nav_menu( array(
+                        'theme_location'    => 'secondary',
+                        'menu_class'        => 'nav',
+                        'fallback_cb'       => 'opus_primus_list_pages'
+                    ) );
+                } else {
+                    opus_primus_list_pages();
+                }
+            }
+        }
+        if ( ! function_exists( 'opus_primus_list_pages' ) ) {
+            function opus_primus_list_pages() { ?>
+                <ul class="nav"><?php wp_list_pages( 'title_li=' ); ?></ul>
+            <?php }
+        }
+        register_nav_menu( 'secondary', __( 'Secondary Menu', 'opusprimus' ) );
 
     }
 }

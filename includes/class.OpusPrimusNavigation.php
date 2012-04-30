@@ -79,7 +79,7 @@ class OpusPrimusNavigation {
         apply_filters( 'opus_before_primary_menu', '' );
 
         /** Primary Menu */
-        wp_nav_menu( array( 'theme-location' => 'primary' ) );
+        opus_primus_primary_menu();
 
         /** Add empty filter after the primary menu */
         apply_filters( 'opus_after_primary_menu', '' );
@@ -96,13 +96,13 @@ class OpusPrimusNavigation {
      * @uses    wp_nav_menu
      */
     function opus_secondary_menu() {
-        /** Add empty filter before the secondary menu */
+        /** Add empty filter before the primary menu */
         apply_filters( 'opus_before_secondary_menu', '' );
 
-        /** Secondary Menu */
-        wp_nav_menu( array( 'theme-location' => 'secondary' ) );
+        /** Primary Menu */
+        opus_primus_secondary_menu();
 
-        /** Add empty filter after the secondary menu */
+        /** Add empty filter after the primary menu */
         apply_filters( 'opus_after_secondary_menu', '' );
 
     }
