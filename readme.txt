@@ -39,8 +39,13 @@ the case may be, individually noted. This may not be construed as overriding
 any item with a previously applied license, stated or not, which will take
 precedence.
 
-* Normalize.css is a project by Nicolas Gallagher and Jonathan Neal.
-Licensed as Public Domain - see http://necolas.github.com/normalize.css/
+* Normalize.css is a project by Nicolas Gallagher and Jonathan Neal. A minimized
+version is used. Licensed as Public Domain
+- for more information see http://necolas.github.com/normalize.css/
+
+* less-1.3.0.js is a project by Alexis Sellier. A minimized version is used.
+Licensed under Apache v2.0
+- for more information see https://github.com/cloudhead/less.js
 
 == Screenshots ==
 

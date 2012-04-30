@@ -34,6 +34,8 @@
 
 /** Set CONSTANTS */
 define( 'OPUS_INCLUDES', get_template_directory() . '/includes/' );
+define( 'OPUS_JS', get_template_directory_uri() . '/js/' );
+define( 'OPUS_CSS', get_template_directory_uri() . '/css/' );
 
 /** Add Post Structures */
 require_once( OPUS_INCLUDES . 'class.OpusPrimusPostStructures.php' );

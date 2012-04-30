@@ -36,6 +36,18 @@
 /** @noinspection PhpIncludeInspection - IDE commentary can be ignored */
 require_once( get_template_directory() . '/includes/opus-ignite.php' );
 
+/**
+ * Add LESS stylesheet and javascript
+ */
+function opus_primus_LESS() {
+    /** Add LESS link */
+    printf ( '<link rel="stylesheet/less" type="text/css" href="%1$s">', OPUS_CSS . 'style.less' );
+    // wp_enqueue_style( 'LESS', OPUS_CSS . 'style.less', '', '0.1', 'screen' );
+    /** Add JavaScript to compile LESS */
+    wp_enqueue_script( 'less-1.3', OPUS_JS . 'less-1.3.0.min.js', '', '1.3.0' );
+}
+add_action( 'wp_enqueue_scripts', 'opus_primus_LESS' );
+
 if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
     /**
      * Opus Primus Theme Setup
