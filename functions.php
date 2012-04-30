@@ -37,12 +37,22 @@
 require_once( get_template_directory() . '/includes/opus-ignite.php' );
 
 /**
+ * Opus Primus LESS
+ *
  * Add LESS stylesheet and javascript
+ *
+ * @package OpusPrimus
+ * @since   0.1
+ *
+ * @uses    OPUS_CSS    (constant)
+ * @uses    OPUS_JS     (constant)
+ * @uses    wp_enqueue_script
  */
 function opus_primus_LESS() {
-    /** Add LESS link */
+    /** Add LESS link - cannot enqueue due to rel requirement */
     printf ( '<link rel="stylesheet/less" type="text/css" href="%1$s">', OPUS_CSS . 'style.less' );
-    // wp_enqueue_style( 'LESS', OPUS_CSS . 'style.less', '', '0.1', 'screen' );
+    /** Print new line - head section will be easier to read */
+    printf ( "\n" );
     /** Add JavaScript to compile LESS */
     wp_enqueue_script( 'less-1.3', OPUS_JS . 'less-1.3.0.min.js', '', '1.3.0' );
 }
