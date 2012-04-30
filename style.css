@@ -122,3 +122,14 @@ img.alignright, img.right { display: inline; margin: 0 0 8px 8px; }
 .gallery-caption { /* Required by WordPress - may be defined in another section */ }
 .bypostauthor { /* Required by WordPress - may be defined in another section */ }
 /** End: Minimum WordPress Style Requirements ------------------------------- */
+
+
+/** Miscellaneous Elements -------------------------------------------------- */
+/**
+ * @todo sort into CSS categories
+ */
+.navigation {}
+.nav {}
+
+
+/** End: Miscellaneous Elements --------------------------------------------- */

@@ -53,9 +53,12 @@ class OpusPrimusNavigation {
         /** Add empty filter before linking pages navigation of a multi-page post */
         apply_filters( 'opus_before_links_pages', '' );
 
-        /** Linking pages navigation */
-        wp_link_pages();
+        /** Linking pages navigation */ ?>
+        <div class="navigation">
+            <?php wp_link_pages(); ?>
+        </div>
 
+        <?php
         /** Add empty filter after linking pages navigation of a multi-page post */
         apply_filters( 'opus_after_link_pages', '' );
 
