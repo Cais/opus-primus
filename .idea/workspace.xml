@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="Acknowledge and note license of 'normalize.css'">
+    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Cais.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Cais.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/opus-ignite.php" afterPath="$PROJECT_DIR$/includes/opus-ignite.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loops/opus-primus.php" afterPath="$PROJECT_DIR$/loops/opus-primus.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +32,63 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="opus-ignite.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="opus-ignite.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/opus-ignite.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="69" selection-start="450" selection-end="450" vertical-scroll-proportion="0.17221418">
+            <state line="20" column="71" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="0" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#6#1107#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="12" selection-start="1796" selection-end="1796" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#6#254#0" expanded="true" />
+                <element signature="e#2505#3894#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class.OpusPrimusPostStructures.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="121" column="0" selection-start="2785" selection-end="2785" vertical-scroll-proportion="-5.9615383">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class.OpusPrimusNavigation.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="86" column="5" selection-start="2275" selection-end="2275" vertical-scroll-proportion="0.36034733">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="33" selection-start="845" selection-end="845" vertical-scroll-proportion="-19.615385">
+              <folding>
+                <element signature="e#6#278#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -52,15 +111,17 @@
         <option value="$PROJECT_DIR$/sidebar.php" />
         <option value="$PROJECT_DIR$/footer.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusPostLayout.php" />
-        <option value="$PROJECT_DIR$/header.php" />
-        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/opus-primus.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/resources/normalize.css" />
         <option value="$PROJECT_DIR$/readme.txt" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php" />
         <option value="$PROJECT_DIR$/includes/opus-ignite.php" />
+        <option value="$PROJECT_DIR$/loops/opus-primus.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" />
+        <option value="$PROJECT_DIR$/header.php" />
+        <option value="$PROJECT_DIR$/functions.php" />
       </list>
     </option>
   </component>
@@ -300,7 +361,11 @@
       <created>1335731215244</created>
       <updated>1335731215244</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Documentation clarification">
+      <created>1335731603755</created>
+      <updated>1335731603755</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -365,7 +430,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Acknowledge and note license of 'normalize.css'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Documentation clarification" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -381,6 +446,7 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Basic theme files" />
     <MESSAGE value="Acknowledge and note license of 'normalize.css'" />
+    <MESSAGE value="Documentation clarification" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -396,49 +462,6 @@
     <entry file="file://$PROJECT_DIR$/sidebar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="3" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="24" selection-start="130" selection-end="130" vertical-scroll-proportion="-4.576923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="49" selection-start="2537" selection-end="2537" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#6#254#0" expanded="true" />
-            <element signature="e#462#1029#0" expanded="false" />
-            <element signature="e#1098#2487#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="33" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#6#1107#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loops/opus-primus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#6#284#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="44" selection-start="397" selection-end="397" vertical-scroll-proportion="-7.8461537">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
@@ -462,9 +485,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="12" selection-start="1796" selection-end="1796" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#6#254#0" expanded="true" />
+            <element signature="e#2505#3894#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loops/opus-primus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="22" selection-start="361" selection-end="361" vertical-scroll-proportion="0.3936324">
+          <folding>
+            <element signature="e#6#284#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/opus-ignite.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="69" selection-start="450" selection-end="450" vertical-scroll-proportion="0.17221418">
+        <state line="20" column="71" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="0" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#6#1107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="0" selection-start="2785" selection-end="2785" vertical-scroll-proportion="-5.9615383">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="33" selection-start="845" selection-end="845" vertical-scroll-proportion="-19.615385">
+          <folding>
+            <element signature="e#6#278#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="5" selection-start="2275" selection-end="2275" vertical-scroll-proportion="0.36034733">
           <folding />
         </state>
       </provider>

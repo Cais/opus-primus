@@ -17,3 +17,5 @@ define( 'OPUS_INCLUDES', get_template_directory() . '/includes/' );
 
 /** Add Post Structures */
 require_once( OPUS_INCLUDES . 'class.OpusPrimusPostStructures.php' );
+/** Add Navigation */
+require_once( OPUS_INCLUDES . 'class.OpusPrimusNavigation.php' );

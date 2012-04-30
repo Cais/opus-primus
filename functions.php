@@ -16,6 +16,38 @@
 /** @noinspection PhpIncludeInspection - IDE commentary can be ignored */
 require_once( get_template_directory() . '/includes/opus-ignite.php' );
 
+if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
+    /**
+     * Opus Primus Theme Setup
+     * Add theme support for: post-thumbnails, automatic feed links, TinyMCE
+     * editor style, custom background, post formats
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     */
+    function opus_primus_theme_setup() {
+        /** This theme uses post thumbnails */
+        add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
+        /** Add default posts and comments RSS feed links to head */
+        add_theme_support( 'automatic-feed-links' );
+        /** Add theme support for editor-style */
+        add_editor_style();
+        /** This theme allows users to set a custom background */
+        add_theme_support( 'custom-background' /*, array(
+                'default-color' => '',
+                'default-image' => get_stylesheet_directory_uri() . '/images/background.png'
+            )*/ );
+        /** Add post-formats support for aside, quote, and status */
+        add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video' ) );
+        /** Add menu support */
+        register_nav_menus( array(
+            'primary'   => __( 'Primary Menu', 'opusprimus' ),
+            'secondary' => __( 'Secondary Menu', 'opusprimus' ),
+        ) );
+
+    }
+}
+add_action( 'after_setup_theme', 'opus_primus_theme_setup' );
 
 if ( ! function_exists( 'opus_enqueue_comment_reply' ) ) {
     /**

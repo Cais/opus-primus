@@ -13,11 +13,11 @@
  */
 
 /** Call the Post Structure variable */
-global $opus_structure;
+global $opus_nav, $opus_structure;
 
 /** Display the post */
 $opus_structure->opus_post_title();
 $opus_structure->opus_post_meta();
 $opus_structure->opus_post_content();
 $opus_structure->opus_post_author();
-$opus_structure->opus_link_pages();
+$opus_nav->opus_link_pages();

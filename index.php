@@ -34,13 +34,13 @@
 
 get_header();
 
-global $opus_structure;
+global $opus_nav, $opus_structure;
 if ( have_posts() ):
     while ( have_posts() ):
         the_post();
         get_template_part( 'loops/opus-primus', get_post_format() );
     endwhile;
-    $opus_structure->opus_posts_link_navigation();
+    $opus_nav->opus_posts_link_navigation();
 else:
     $opus_structure->opus_search();
 endif;
