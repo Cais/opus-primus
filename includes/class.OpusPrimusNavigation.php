@@ -66,12 +66,44 @@ class OpusPrimusNavigation {
     }
 
     /**
+     * Opus Primus Primary Menu
+     * Define the primary menu parameters
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    wp_nav_menu
+     */
+    function opus_primus_primary_menu() {
+        wp_nav_menu( array(
+            'theme_location'    => 'primary',
+            'menu_class'        => 'nav',
+            'fallback_cb'       => 'OpusPrimusNavigation::opus_primus_list_pages',
+        ) );
+    }
+
+    /**
+     * Opus Primus List Pages
+     * Callback function for the menu
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    wp_list_pages
+     */
+    function opus_primus_list_pages() { ?>
+        <ul class="nav"><?php wp_list_pages( 'title_li=' ); ?></ul>
+    <?php
+    }
+
+    /**
      * Opus Primary Menu
      * Primary navigation menu
      *
      * @package OpusPrimus
      *
      * @uses    apply_filters
+     * @uses    opus_primus_primary_menu
      * @uses    wp_nav_menu
      */
     function opus_primary_menu() {
@@ -79,11 +111,28 @@ class OpusPrimusNavigation {
         apply_filters( 'opus_before_primary_menu', '' );
 
         /** Primary Menu */
-        opus_primus_primary_menu();
+        $this->opus_primus_primary_menu();
 
         /** Add empty filter after the primary menu */
         apply_filters( 'opus_after_primary_menu', '' );
 
+    }
+
+    /**
+     * Opus Primus Secondary Menu
+     * Define the secondary menu parameters
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    wp_nav_menu
+     */
+    function opus_primus_secondary_menu() {
+        wp_nav_menu( array(
+            'theme_location'    => 'secondary',
+            'menu_class'        => 'nav',
+            'fallback_cb'       => 'OpusPrimusNavigation::opus_primus_list_pages',
+        ) );
     }
 
     /**
@@ -93,6 +142,7 @@ class OpusPrimusNavigation {
      * @package OpusPrimus
      *
      * @uses    apply_filters
+     * @uses    opus_primus_secondary_menu
      * @uses    wp_nav_menu
      */
     function opus_secondary_menu() {
@@ -100,7 +150,7 @@ class OpusPrimusNavigation {
         apply_filters( 'opus_before_secondary_menu', '' );
 
         /** Primary Menu */
-        opus_primus_secondary_menu();
+        $this->opus_primus_secondary_menu();
 
         /** Add empty filter after the primary menu */
         apply_filters( 'opus_after_secondary_menu', '' );
