@@ -3,15 +3,15 @@
  * Opus Primus
  * A WordPress Framework Theme.
  *
- * @package     OpusPrimus
+ * @package     Opus_Primus
  * @since       0.1
- *
- * @link        http://opusprimus.com
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
  * @copyright   Copyright (c) 2012, Opus Primus
  *
- * This program is free software; you can redistribute it and/or modify it under
+ * This file is part of Opus Primus.
+ *
+ * Opus Primus is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License version 2, as published by the
  * Free Software Foundation.
  *
