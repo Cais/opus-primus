@@ -50,7 +50,7 @@ require_once( get_template_directory() . '/includes/opus-ignite.php' );
  */
 function opus_primus_LESS() {
     /** Add LESS link - cannot enqueue due to rel requirement */
-    printf ( '<link rel="stylesheet/less" type="text/css" href="%1$s">', OPUS_CSS . 'style.less' );
+    printf ( '<!--suppress HtmlUnknownTarget - IDE commentary --><link rel="stylesheet/less" type="text/css" href="%1$s">', OPUS_CSS . 'style.less' );
     /** Print new line - head section will be easier to read */
     printf ( "\n" );
     /** Add JavaScript to compile LESS */
