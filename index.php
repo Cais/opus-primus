@@ -6,6 +6,10 @@
  * @package     Opus_Primus
  * @since       0.1
  *
+ * @internal    RECOMMENDED HTML5
+ * @internal    RECOMMENDED CSS3
+ * @internal    REQUIRED    WordPress 3.4
+ *
  * @author      Opus Primus <in.opus.primus@gmail.com>
  * @copyright   Copyright (c) 2012, Opus Primus
  *
