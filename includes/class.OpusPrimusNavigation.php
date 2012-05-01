@@ -75,8 +75,8 @@ class OpusPrimusNavigation {
      * @uses    previous_posts_link
      */
     function opus_posts_link_navigation() {
-        /** Add empty filter before post link navigation */
-        apply_filters( 'opus_before_post_link_navigation', '' );
+        /** Add empty filter before posts link navigation */
+        apply_filters( 'opus_before_posts_link_navigation', '' );
 
         /** Post link navigation */ ?>
         <div class="navigation">
@@ -89,8 +89,8 @@ class OpusPrimusNavigation {
         </div>
 
         <?php
-        /** Add empty filter after post link navigation */
-        apply_filters( 'opus_after_post_link_navigation', '' );
+        /** Add empty filter after posts link navigation */
+        apply_filters( 'opus_after_posts_link_navigation', '' );
 
     }
 
