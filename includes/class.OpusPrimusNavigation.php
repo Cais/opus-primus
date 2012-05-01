@@ -65,7 +65,7 @@ class OpusPrimusNavigation {
     }
 
     /**
-     * Opus Posts Link Navigation
+     * Opus Posts Link
      * Outputs the navigation structure to move between posts
      *
      * @package OpusPrimus
@@ -74,9 +74,9 @@ class OpusPrimusNavigation {
      * @uses    next_posts_link
      * @uses    previous_posts_link
      */
-    function opus_posts_link_navigation() {
-        /** Add empty filter before posts link navigation */
-        apply_filters( 'opus_before_posts_link_navigation', '' );
+    function opus_posts_link() {
+        /** Add empty filter before posts link */
+        apply_filters( 'opus_before_posts_link', '' );
 
         /** Post link navigation */ ?>
         <div class="navigation">
@@ -89,8 +89,8 @@ class OpusPrimusNavigation {
         </div>
 
         <?php
-        /** Add empty filter after posts link navigation */
-        apply_filters( 'opus_after_posts_link_navigation', '' );
+        /** Add empty filter after posts link */
+        apply_filters( 'opus_after_posts_link', '' );
 
     }
 
