@@ -29,4 +29,19 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @todo Remove / comment out test code
+ * @todo Review potential of additional widget area(s)
  */
+
+if ( is_active_sidebar( 'primary-widget' ) ) :
+    dynamic_sidebar( 'primary-widget' );
+else :
+    echo 'Test: Primary Widget Area<br />';
+endif;
+
+if ( is_active_sidebar( 'secondary-widget' ) ) :
+    dynamic_sidebar( 'secondary-widget' );
+else :
+    echo 'Test: Primary Widget Area<br />';
+endif;

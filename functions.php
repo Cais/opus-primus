@@ -173,3 +173,43 @@ if ( ! function_exists( 'opus_wp_title' ) ) {
     }
 }
 add_filter( 'wp_title', 'opus_wp_title', 10, 3 );
+
+/**
+ * Opus Primus Widgets
+ * Register Widget areas.
+ *
+ * @package OpusPrimus
+ * @since   0.1
+ *
+ * @uses    register_sidebar
+ */
+function opus_primus_widgets() {
+    /** To override Opus Primus Widgets in a Child-Theme:
+     * - remove action hook;
+     * - add your widget initialization function;
+     * - use it in the new action hook.
+     */
+
+    register_sidebar( array(
+        'name' => __( 'Primary Widget Area', 'opusprimus' ),
+        'id' => 'primary-widget',
+        'description' => __( 'Drag and drop widgets into this area to have them appear on your web site.', 'opusprimus' ),
+        /* 'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+        'after_widget' => '</li>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>', */
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Secondary Widget Area', 'opusprimus' ),
+        'id' => 'secondary-widget',
+        'description' => __( 'Drag and drop widgets into this area to have them appear on your web site.', 'opusprimus' ),
+        /* 'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+        'after_widget' => '</li>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>', */
+    ) );
+
+}
+/** Register sidebars by running `opus_primus_widgets` on the `widgets_init` action hook. */
+add_action( 'widgets_init', 'opus_primus_widgets' );
