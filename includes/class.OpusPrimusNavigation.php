@@ -54,7 +54,7 @@ class OpusPrimusNavigation {
         apply_filters( 'opus_before_links_pages', '' );
 
         /** Linking pages navigation */ ?>
-        <div class="navigation">
+        <div class="navigation link-pages">
             <?php wp_link_pages(); ?>
         </div>
 
@@ -79,7 +79,7 @@ class OpusPrimusNavigation {
         apply_filters( 'opus_before_posts_link', '' );
 
         /** Posts link navigation */ ?>
-        <div class="navigation">
+        <div class="navigation posts-link">
             <div class="right">
                 <?php next_posts_link(); ?>
             </div>
@@ -109,16 +109,16 @@ class OpusPrimusNavigation {
         apply_filters( 'opus_before_post_link', '' );
 
         /** Post link navigation */ ?>
-    <div class="navigation">
-        <div class="right">
-            <?php next_post_link(); ?>
+        <div class="navigation post-link">
+            <div class="right">
+                <?php next_post_link(); ?>
+            </div>
+            <div class="left">
+                <?php previous_post_link(); ?>
+            </div>
         </div>
-        <div class="left">
-            <?php previous_post_link(); ?>
-        </div>
-    </div>
 
-    <?php
+        <?php
         /** Add empty filter after post link */
         apply_filters( 'opus_after_post_link', '' );
 

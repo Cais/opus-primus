@@ -4,7 +4,6 @@
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/single.php" afterPath="$PROJECT_DIR$/single.php" />
     </list>
     <ignored path="opus-primus.iws" />
@@ -41,7 +40,7 @@
       <file leaf-file-name="single.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/single.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="20" selection-start="1351" selection-end="1351" vertical-scroll-proportion="0.0">
+            <state line="47" column="13" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#6#1078#0" expanded="true" />
               </folding>
@@ -52,7 +51,7 @@
       <file leaf-file-name="class.OpusPrimusNavigation.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="0" selection-start="2783" selection-end="2783" vertical-scroll-proportion="0.23550296">
+            <state line="55" column="48" selection-start="1733" selection-end="1733" vertical-scroll-proportion="0.46272188">
               <folding />
             </state>
           </provider>
@@ -85,8 +84,8 @@
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/sidebar.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" />
         <option value="$PROJECT_DIR$/single.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" />
       </list>
     </option>
   </component>
@@ -402,7 +401,11 @@
       <created>1335888996322</created>
       <updated>1335888996322</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Add Opus Post Link function">
+      <created>1335889448638</created>
+      <updated>1335889448638</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -480,7 +483,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Renamed `opus_posts_link_navigation`" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Opus Post Link function" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -509,6 +512,7 @@
     <MESSAGE value="Add primary and secondary widget areas" />
     <MESSAGE value="Add single template (fix document typos)" />
     <MESSAGE value="Renamed `opus_posts_link_navigation`" />
+    <MESSAGE value="Add Opus Post Link function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -600,7 +604,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/single.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="20" selection-start="1351" selection-end="1351" vertical-scroll-proportion="0.0">
+        <state line="47" column="13" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#6#1078#0" expanded="true" />
           </folding>
@@ -609,7 +613,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="0" selection-start="2783" selection-end="2783" vertical-scroll-proportion="0.23550296">
+        <state line="55" column="48" selection-start="1733" selection-end="1733" vertical-scroll-proportion="0.46272188">
           <folding />
         </state>
       </provider>

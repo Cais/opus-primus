@@ -30,10 +30,11 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
+global $opus_nav, $opus_structure;
 
 get_header();
 
-global $opus_nav, $opus_structure;
+$opus_nav->opus_post_link();
 if ( have_posts() ):
     while ( have_posts() ):
         the_post();
@@ -42,7 +43,6 @@ if ( have_posts() ):
 else:
     $opus_structure->opus_search();
 endif;
-$opus_nav->opus_post_link();
 
 get_sidebar();
 get_footer();
