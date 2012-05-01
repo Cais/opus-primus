@@ -1,7 +1,7 @@
 <?php
 /**
  * Opus Ignite
- * Initialization file for the theme
+ * Initialization file for the theme: defined CONSTANTS; and, included classes.
  *
  * @package     Opus_Primus
  * @since       0.1
@@ -33,11 +33,11 @@
  */
 
 /** Set CONSTANTS */
-define( 'OPUS_INCLUDES', get_template_directory() . '/includes/' );
+define( 'OPUS_INC', get_template_directory() . '/includes/' );
 define( 'OPUS_JS', get_template_directory_uri() . '/js/' );
 define( 'OPUS_CSS', get_template_directory_uri() . '/css/' );
 
 /** Add Post Structures */
-require_once( OPUS_INCLUDES . 'class.OpusPrimusPostStructures.php' );
+require_once( OPUS_INC . 'class.OpusPrimusPostStructures.php' );
 /** Add Navigation */
-require_once( OPUS_INCLUDES . 'class.OpusPrimusNavigation.php' );
+require_once( OPUS_INC . 'class.OpusPrimusNavigation.php' );
