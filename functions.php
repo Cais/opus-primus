@@ -66,6 +66,10 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
      *
      * @package OpusPrimus
      * @since   0.1
+     *
+     * @uses    add_editor_style
+     * @uses    add_theme_support - adds: automatic-feed-links; custom-background; post-formats; post-thumbnails
+     * @uses    register_nav_menus
      */
     function opus_primus_theme_setup() {
         /** This theme uses post thumbnails */
@@ -112,7 +116,11 @@ if ( ! function_exists( 'opus_enqueue_comment_reply' ) ) {
      *
      * @package OpusPrimus
      * @since   0.1
-     * @return  void
+     *
+     * @uses    is_singular
+     * @uses    comments_open
+     * @uses    get_option
+     * @uses    wp_enqueue_script
      */
     function opus_enqueue_comment_reply() {
         if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -138,6 +146,10 @@ if ( ! function_exists( 'opus_wp_title' ) ) {
      * @param       string $old_title - default title text
      * @param       string $sep - separator character
      * @param       string $sep_location - left|right - separator placement in relationship to title
+     *
+     * @uses        get_bloginfo - name, description
+     * @uses        is_home
+     * @uses        is_front_page
      *
      * @return      string - new title text
      */
