@@ -61,6 +61,26 @@ class OpusPrimusPostStructures {
     }
 
     /**
+     * Opus Primus Use Posted
+     *
+     * This returns a URL to the post using the anchor text 'Posted' in the meta
+     * details with the post excerpt as the URL title; or, returns the word
+     * 'Posted' if the post title exists
+     *
+     * @package     OpusPrimus
+     * @since       0.1
+     *
+     * @return      string - URL|Posted
+     */
+    function opus_primus_use_posted() {
+        $opus_no_title = get_the_title();
+        empty( $opus_no_title )
+            ? $opus_no_title = '<span class="no-title"><a href="' . get_permalink() . '" title="' . get_the_excerpt() . '">' . __( 'Posted', 'opusprimus' ) . '</span></a>'
+            : $opus_no_title = __( 'Posted', 'opusprimus' );
+        return apply_filters( 'opus_primus_use_posted', $opus_no_title );
+    }
+
+    /**
      * Opus Post Meta
      * Outputs post meta details
      *
@@ -73,6 +93,7 @@ class OpusPrimusPostStructures {
         apply_filters( 'opus_before_post_meta', '' );
 
         /** Post Meta */
+        printf( __( '', 'opusprimus' ) );
 
         /** Add empty filter after post meta */
         apply_filters( 'opus_after_meta_filter', '' );
