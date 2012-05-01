@@ -66,7 +66,7 @@ class OpusPrimusNavigation {
 
     /**
      * Opus Posts Link
-     * Outputs the navigation structure to move between posts
+     * Outputs the navigation structure to move between archive pages
      *
      * @package OpusPrimus
      *
@@ -78,7 +78,7 @@ class OpusPrimusNavigation {
         /** Add empty filter before posts link */
         apply_filters( 'opus_before_posts_link', '' );
 
-        /** Post link navigation */ ?>
+        /** Posts link navigation */ ?>
         <div class="navigation">
             <div class="right">
                 <?php next_posts_link(); ?>
@@ -91,6 +91,36 @@ class OpusPrimusNavigation {
         <?php
         /** Add empty filter after posts link */
         apply_filters( 'opus_after_posts_link', '' );
+
+    }
+
+    /**
+     * Opus Post Link
+     * Outputs the navigation structure to move between posts
+     *
+     * @package OpusPrimus
+     *
+     * @uses    apply_filters
+     * @uses    next_posts_link
+     * @uses    previous_posts_link
+     */
+    function opus_post_link() {
+        /** Add empty filter before post link */
+        apply_filters( 'opus_before_post_link', '' );
+
+        /** Post link navigation */ ?>
+    <div class="navigation">
+        <div class="right">
+            <?php next_post_link(); ?>
+        </div>
+        <div class="left">
+            <?php previous_post_link(); ?>
+        </div>
+    </div>
+
+    <?php
+        /** Add empty filter after post link */
+        apply_filters( 'opus_after_post_link', '' );
 
     }
 

@@ -39,10 +39,10 @@ if ( have_posts() ):
         the_post();
         get_template_part( 'loops/opus-primus', get_post_format() );
     endwhile;
-    $opus_nav->opus_posts_link();
 else:
     $opus_structure->opus_search();
 endif;
+$opus_nav->opus_post_link();
 
 get_sidebar();
 get_footer();

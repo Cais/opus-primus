@@ -30,7 +30,7 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="49" column="29" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#6#1218#0" expanded="true" />
               </folding>
@@ -38,10 +38,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="single.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="single.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/single.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="33" selection-start="1315" selection-end="1315" vertical-scroll-proportion="0.8002296">
+            <state line="44" column="20" selection-start="1351" selection-end="1351" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#6#1078#0" expanded="true" />
               </folding>
@@ -49,10 +49,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="class.OpusPrimusNavigation.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="class.OpusPrimusNavigation.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="22" selection-start="2011" selection-end="2011" vertical-scroll-proportion="-13.538462">
+            <state line="97" column="0" selection-start="2783" selection-end="2783" vertical-scroll-proportion="0.23550296">
               <folding />
             </state>
           </provider>
@@ -76,7 +76,6 @@
         <option value="$PROJECT_DIR$/loops/opus-primus.php" />
         <option value="$PROJECT_DIR$/footer.php" />
         <option value="$PROJECT_DIR$/header.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/includes/opus-ignite.php" />
         <option value="$PROJECT_DIR$/resources/less.js/less-1.3.0.js" />
         <option value="$PROJECT_DIR$/resources/less.js/LICENSE" />
@@ -85,8 +84,9 @@
         <option value="$PROJECT_DIR$/css/style.less" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/sidebar.php" />
-        <option value="$PROJECT_DIR$/single.php" />
+        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" />
+        <option value="$PROJECT_DIR$/single.php" />
       </list>
     </option>
   </component>
@@ -398,7 +398,11 @@
       <created>1335888855787</created>
       <updated>1335888855787</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Renamed `opus_posts_link_navigation`">
+      <created>1335888996322</created>
+      <updated>1335888996322</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -476,7 +480,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add single template (fix document typos)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed `opus_posts_link_navigation`" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -504,6 +508,7 @@
     <MESSAGE value="IDE update" />
     <MESSAGE value="Add primary and secondary widget areas" />
     <MESSAGE value="Add single template (fix document typos)" />
+    <MESSAGE value="Renamed `opus_posts_link_navigation`" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -577,22 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="22" selection-start="2011" selection-end="2011" vertical-scroll-proportion="-13.538462">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#6#1218#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loops/opus-primus.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="45" selection-start="1380" selection-end="1380" vertical-scroll-proportion="0.19517796">
@@ -600,12 +589,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="29" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#6#1218#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/single.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="33" selection-start="1315" selection-end="1315" vertical-scroll-proportion="0.8002296">
+        <state line="44" column="20" selection-start="1351" selection-end="1351" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#6#1078#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="0" selection-start="2783" selection-end="2783" vertical-scroll-proportion="0.23550296">
+          <folding />
         </state>
       </provider>
     </entry>
