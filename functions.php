@@ -178,10 +178,20 @@ add_filter( 'wp_title', 'opus_wp_title', 10, 3 );
  * Opus Primus Widgets
  * Register Widget areas.
  *
- * @package OpusPrimus
- * @since   0.1
+ * @package     OpusPrimus
+ * @since       0.1
  *
- * @uses    register_sidebar
+ * @internal    Uses default widget structure
+ * @example     'name' => sprintf(__('Sidebar %d'), $i ),
+ * @example     'id' => "sidebar-$i",
+ * @example     'description' => '',
+ * @example     'class' => '',
+ * @example     'before_widget' => '<li id="%1$s" class="widget %2$s">',
+ * @example     'after_widget' => "</li>\n",
+ * @example     'before_title' => '<h2 class="widgettitle">',
+ * @example     'after_title' => "</h2>\n",
+ *
+ * @uses        register_sidebar
  */
 function opus_primus_widgets() {
     /** To override Opus Primus Widgets in a Child-Theme:
@@ -191,23 +201,15 @@ function opus_primus_widgets() {
      */
 
     register_sidebar( array(
-        'name' => __( 'Primary Widget Area', 'opusprimus' ),
-        'id' => 'primary-widget',
-        'description' => __( 'Drag and drop widgets into this area to have them appear on your web site.', 'opusprimus' ),
-        /* 'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-        'after_widget' => '</li>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>', */
+        'name'          => __( 'Primary Widget Area', 'opusprimus' ),
+        'id'            => 'primary-widget',
+        'description'   => __( 'Drag and drop widgets into this area to have them appear on your web site.', 'opusprimus' ),
     ) );
 
     register_sidebar( array(
-        'name' => __( 'Secondary Widget Area', 'opusprimus' ),
-        'id' => 'secondary-widget',
-        'description' => __( 'Drag and drop widgets into this area to have them appear on your web site.', 'opusprimus' ),
-        /* 'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-        'after_widget' => '</li>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>', */
+        'name'          => __( 'Secondary Widget Area', 'opusprimus' ),
+        'id'            => 'secondary-widget',
+        'description'   => __( 'Drag and drop widgets into this area to have them appear on your web site.', 'opusprimus' ),
     ) );
 
 }
