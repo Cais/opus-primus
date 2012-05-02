@@ -43,5 +43,5 @@ endif;
 if ( is_active_sidebar( 'secondary-widget' ) ) :
     dynamic_sidebar( 'secondary-widget' );
 else :
-    echo 'Test: Primary Widget Area<br />';
+    echo 'Test: Secondary Widget Area<br />';
 endif;
