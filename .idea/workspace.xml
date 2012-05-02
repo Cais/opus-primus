@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.less" afterPath="$PROJECT_DIR$/css/style.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +25,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="style.less" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css/style.less">
+      <file leaf-file-name="class.OpusPrimusPostStructures.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="20" selection-start="70" selection-end="70" vertical-scroll-proportion="0.058553386">
-              <folding />
+            <state line="166" column="29" selection-start="5991" selection-end="5991" vertical-scroll-proportion="0.7786982">
+              <folding>
+                <element signature="e#6#1162#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,7 +55,6 @@
         <option value="$PROJECT_DIR$/inc/opus-ignite.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" />
         <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php" />
         <option value="$PROJECT_DIR$/includes/opus-ignite.php" />
         <option value="$PROJECT_DIR$/loops/opus-primus.php" />
         <option value="$PROJECT_DIR$/footer.php" />
@@ -63,6 +64,7 @@
         <option value="$PROJECT_DIR$/sidebar.php" />
         <option value="$PROJECT_DIR$/single.php" />
         <option value="$PROJECT_DIR$/css/style.less" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php" />
       </list>
     </option>
   </component>
@@ -416,7 +418,11 @@
       <created>1335965508338</created>
       <updated>1335965508338</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Make @package name consistent as 'OpusPrimus' (no underscore separation)">
+      <created>1335965539068</created>
+      <updated>1335965539068</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -564,13 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="22" selection-start="166" selection-end="166" vertical-scroll-proportion="-4.576923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/opus-ignite.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="24" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
@@ -640,6 +639,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="20" selection-start="70" selection-end="70" vertical-scroll-proportion="0.058553386">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="166" column="29" selection-start="5991" selection-end="5991" vertical-scroll-proportion="0.7786982">
+          <folding>
+            <element signature="e#6#1162#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

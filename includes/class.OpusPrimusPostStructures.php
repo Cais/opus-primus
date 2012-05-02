@@ -104,8 +104,8 @@ class OpusPrimusPostStructures {
      * @uses    opus_primus_no_title_link
      */
     function opus_post_byline( $keyword = 'Posted' ) {
-        /** Add empty filter before post meta */
-        apply_filters( 'opus_before_post_meta', '' );
+        /** Add empty filter before post by line */
+        apply_filters( 'opus_before_post_byline', '' );
 
         /** Post Meta details - inspired by TwentyTen */
         printf( __( '%1$s on %2$s at %3$s by %4$s', 'opusprimus' ),
@@ -119,8 +119,8 @@ class OpusPrimusPostStructures {
             )
         );
 
-        /** Add empty filter after post meta */
-        apply_filters( 'opus_after_meta_filter', '' );
+        /** Add empty filter after post by line */
+        apply_filters( 'opus_after_post_byline', '' );
 
     }
 
@@ -135,6 +135,7 @@ class OpusPrimusPostStructures {
      *
      * @internal    REQUIRES use within the_Loop
      *
+     * @uses    apply_filters
      * @uses    get_permalink
      * @uses    get_post_type
      * @uses    get_the_category_list
@@ -142,9 +143,12 @@ class OpusPrimusPostStructures {
      * @uses    is_object_in_taxonomy
      * @uses    the_title_attribute
      *
-     * @todo Review structure and text to make more unique
+     * @todo Rewrite to be more Opus Primus than Twenty Ten
      */
     function opus_primus_meta_tags() {
+        /** Add empty filter before meta tags */
+        apply_filters( 'opus_before_meta_tags', '' );
+
         /** Retrieves tag list of current post, separated by commas. */
         $opus_tag_list = get_the_tag_list( '', ', ', '' );
         if ( $opus_tag_list ) {
@@ -155,13 +159,16 @@ class OpusPrimusPostStructures {
             $posted_in = __( 'Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'opusprimus' );
         }
         /** Prints the string, replacing the placeholders. */
-        printf(
-            $posted_in,
+        printf( $posted_in,
             get_the_category_list( ', ' ),
             $opus_tag_list,
             get_permalink(),
             the_title_attribute( 'echo=0' )
         );
+
+        /** Add empty filter after meta tags */
+        apply_filters( 'opus_after_meta_tags', '' );
+
     }
 
     /**
