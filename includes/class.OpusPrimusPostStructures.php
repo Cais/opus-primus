@@ -34,9 +34,7 @@
 
 class OpusPrimusPostStructures {
     /** Construct */
-    function __construct() {
-
-    }
+    function __construct() {}
 
     /**
      * Opus Post Title

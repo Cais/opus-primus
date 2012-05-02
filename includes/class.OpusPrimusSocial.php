@@ -34,9 +34,7 @@
 
 class OpusPrimusSocial {
     /** Construct */
-    function __construct() {
-
-    }
+    function __construct() {}
 
     /**
      * Google+ Share

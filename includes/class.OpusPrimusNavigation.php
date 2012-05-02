@@ -35,9 +35,7 @@
 
 class OpusPrimusNavigation {
     /** Construct */
-    function __construct() {
-
-    }
+    function __construct() {}
 
     /**
      * Opus Link Pages

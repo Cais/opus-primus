@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusSocial.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/opus-ignite.php" afterPath="$PROJECT_DIR$/includes/opus-ignite.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusSocial.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusSocial.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,10 +28,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="class.OpusPrimusSocial.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="class.OpusPrimusSocial.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusSocial.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="45" selection-start="1300" selection-end="1300" vertical-scroll-proportion="0.6877153">
+            <state line="36" column="29" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#6#1141#0" expanded="true" />
               </folding>
@@ -42,7 +42,7 @@
       <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="0" selection-start="1694" selection-end="1694" vertical-scroll-proportion="-29.884615">
+            <state line="50" column="36" selection-start="1696" selection-end="1696" vertical-scroll-proportion="-29.23077">
               <folding>
                 <element signature="e#6#1126#0" expanded="true" />
               </folding>
@@ -64,7 +64,16 @@
       <file leaf-file-name="class.OpusPrimusPostStructures.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="60" selection-start="221" selection-end="221" vertical-scroll-proportion="-5.230769">
+            <state line="8" column="47" selection-start="214" selection-end="214" vertical-scroll-proportion="-5.230769">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class.OpusPrimusNavigation.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="29" selection-start="1269" selection-end="1269" vertical-scroll-proportion="0.10059172">
               <folding />
             </state>
           </provider>
@@ -93,12 +102,12 @@
         <option value="$PROJECT_DIR$/sidebar.php" />
         <option value="$PROJECT_DIR$/single.php" />
         <option value="$PROJECT_DIR$/css/style.less" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/includes/opus-ignite.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusSocial.php" />
         <option value="$PROJECT_DIR$/header.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusSocial.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" />
       </list>
     </option>
   </component>
@@ -468,7 +477,11 @@
       <created>1335986668891</created>
       <updated>1335986668891</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Add new class Opus Primus Social">
+      <created>1335989521009</created>
+      <updated>1335989521009</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -546,7 +559,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change apply_filters to do_action (more correct per @Otto42)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new class Opus Primus Social" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -583,6 +596,7 @@
     <MESSAGE value="Added filters to _meta_tags; updated documentation; corrected filter names in _post_byline" />
     <MESSAGE value="Added _modified_post" />
     <MESSAGE value="Change apply_filters to do_action (more correct per @Otto42)" />
+    <MESSAGE value="Add new class Opus Primus Social" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -633,13 +647,6 @@
         <state line="3" column="20" selection-start="70" selection-end="70" vertical-scroll-proportion="0.058553386" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="39" selection-start="1405" selection-end="1405" vertical-scroll-proportion="-7.8461537">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loops/opus-primus.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="10" selection-start="451" selection-end="451" vertical-scroll-proportion="0.29276693">
@@ -654,6 +661,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="36" selection-start="1696" selection-end="1696" vertical-scroll-proportion="-29.23077">
+          <folding>
+            <element signature="e#6#1126#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusSocial.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="29" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#6#1141#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/opus-ignite.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="56" selection-start="1612" selection-end="1612" vertical-scroll-proportion="0.0">
@@ -665,26 +690,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="60" selection-start="221" selection-end="221" vertical-scroll-proportion="-5.230769">
+        <state line="8" column="47" selection-start="214" selection-end="214" vertical-scroll-proportion="-5.230769">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/header.php">
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="0" selection-start="1694" selection-end="1694" vertical-scroll-proportion="-29.884615">
-          <folding>
-            <element signature="e#6#1126#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusSocial.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="45" selection-start="1300" selection-end="1300" vertical-scroll-proportion="0.6877153">
-          <folding>
-            <element signature="e#6#1141#0" expanded="true" />
-          </folding>
+        <state line="37" column="29" selection-start="1269" selection-end="1269" vertical-scroll-proportion="0.10059172">
+          <folding />
         </state>
       </provider>
     </entry>
