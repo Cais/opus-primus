@@ -125,6 +125,42 @@ class OpusPrimusPostStructures {
     }
 
     /**
+     * Opus Primus Modified Post
+     *
+     * If the post time and the last modified time are different display
+     * modified date and time and the modifying author
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @internal    Original author Edward Caissie <edward.caissie@gmail.com>
+     *
+     * @uses    (global) $post
+     * @uses    get_post_meta
+     * @uses    get_the_modified_date
+     * @uses    get_the_modified_time
+     * @uses    get_the_time
+     * @uses    get_userdata
+     * @uses    home_url
+     */
+    function opus_primus_modified_post(){
+        /** Grab the $post object */
+        global $post;
+        /** @var $last_user - establish the last user */
+        $last_user = '';
+        if ( $last_id = get_post_meta( $post->ID, '_edit_last', true ) ) {
+            $last_user = get_userdata( $last_id );
+        }
+        /** Check if there is a time difference from the original post date */
+        if ( get_the_time() <> get_the_modified_time() ) {
+            printf( __( 'Last modified by %1$s on %2$s @ %3$s.', 'opusprimus' ),
+                '<a href="' . home_url( '?author=' . $last_user->ID ) . '">' . $last_user->display_name . '</a>',
+                get_the_modified_date( get_option( 'date_format' ) ),
+                get_the_modified_time( get_option( 'time_format' ) ) );
+        }
+    }
+
+    /**
      * Opus Primus Meta Tags
      *
      * Prints HTML with meta information for the current post (category, tags

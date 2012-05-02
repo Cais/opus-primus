@@ -28,7 +28,7 @@
       <file leaf-file-name="class.OpusPrimusPostStructures.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="166" column="29" selection-start="5991" selection-end="5991" vertical-scroll-proportion="0.7786982">
+            <state line="153" column="78" selection-start="5208" selection-end="5208" vertical-scroll-proportion="0.6579882">
               <folding>
                 <element signature="e#6#1162#0" expanded="true" />
               </folding>
@@ -422,7 +422,11 @@
       <created>1335965539068</created>
       <updated>1335965539068</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Added filters to _meta_tags; updated documentation; corrected filter names in _post_byline">
+      <created>1335971373615</created>
+      <updated>1335971373615</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -500,7 +504,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make @package name consistent as 'OpusPrimus' (no underscore separation)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added filters to _meta_tags; updated documentation; corrected filter names in _post_byline" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -534,6 +538,7 @@
     <MESSAGE value="Add more details to documentation" />
     <MESSAGE value="Add more details to widgets documentation" />
     <MESSAGE value="Make @package name consistent as 'OpusPrimus' (no underscore separation)" />
+    <MESSAGE value="Added filters to _meta_tags; updated documentation; corrected filter names in _post_byline" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -644,7 +649,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="29" selection-start="5991" selection-end="5991" vertical-scroll-proportion="0.7786982">
+        <state line="153" column="78" selection-start="5208" selection-end="5208" vertical-scroll-proportion="0.6579882">
           <folding>
             <element signature="e#6#1162#0" expanded="true" />
           </folding>
