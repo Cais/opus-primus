@@ -3,7 +3,7 @@
  * Opus Ignite
  * Initialization file for the theme: defined CONSTANTS; and, included classes.
  *
- * @package     Opus_Primus
+ * @package     OpusPrimus
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>

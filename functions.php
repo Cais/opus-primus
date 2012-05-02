@@ -3,7 +3,7 @@
  * Functions
  * Where the magic happens ...
  *
- * @package     Opus_Primus
+ * @package     OpusPrimus
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>

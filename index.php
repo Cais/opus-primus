@@ -3,7 +3,7 @@
  * Opus Primus
  * A WordPress Framework Theme.
  *
- * @package     Opus_Primus
+ * @package     OpusPrimus
  * @since       0.1
  *
  * @internal    RECOMMENDED HTML5

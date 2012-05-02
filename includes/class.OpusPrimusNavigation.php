@@ -4,7 +4,7 @@
  * Controls for the navigation between multi-page posts, site pages, and menu
  * navigation structures.
  *
- * @package     Opus_Primus
+ * @package     OpusPrimus
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
@@ -45,6 +45,7 @@ class OpusPrimusNavigation {
      * same post.
      *
      * @package OpusPrimus
+     * @since   0.1
      *
      * @uses    apply_filters
      * @uses    wp_link_pages
@@ -69,6 +70,7 @@ class OpusPrimusNavigation {
      * Outputs the navigation structure to move between archive pages
      *
      * @package OpusPrimus
+     * @since   0.1
      *
      * @uses    apply_filters
      * @uses    next_posts_link
@@ -99,6 +101,7 @@ class OpusPrimusNavigation {
      * Outputs the navigation structure to move between posts
      *
      * @package OpusPrimus
+     * @since   0.1
      *
      * @uses    apply_filters
      * @uses    next_posts_link
@@ -160,6 +163,7 @@ class OpusPrimusNavigation {
      * Primary navigation menu
      *
      * @package OpusPrimus
+     * @since   0.1
      *
      * @uses    apply_filters
      * @uses    opus_primus_primary_menu
@@ -199,6 +203,7 @@ class OpusPrimusNavigation {
      * Secondary navigation menu
      *
      * @package OpusPrimus
+     * @since   0.1
      *
      * @uses    apply_filters
      * @uses    opus_primus_secondary_menu

@@ -3,7 +3,7 @@
  * Opus Primus default loop template
  * Displays the default loop content
  *
- * @package     Opus_Primus
+ * @package     OpusPrimus
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>

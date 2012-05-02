@@ -3,7 +3,7 @@
  * Opus Primus Post Structures
  * Controls for the organization and layout of the post and its content.
  *
- * @package     Opus_Primus
+ * @package     OpusPrimus
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
@@ -43,6 +43,7 @@ class OpusPrimusPostStructures {
      * Outputs the post title
      *
      * @package OpusPrimus
+     * @since   0.1
      *
      * @uses    apply_filters
      * @uses    the_title
@@ -168,6 +169,7 @@ class OpusPrimusPostStructures {
      * Outputs `the_content`
      *
      * @package OpusPrimus
+     * @since   0.1
      *
      * @uses    apply_filters
      * @uses    is_archive
@@ -190,6 +192,7 @@ class OpusPrimusPostStructures {
      * Outputs `the_excerpt`
      *
      * @package OpusPrimus
+     * @since   0.1
      *
      * @uses    apply_filters
      * @uses    is_archive
@@ -213,6 +216,7 @@ class OpusPrimusPostStructures {
      * use profile information
      *
      * @package OpusPrimus
+     * @since   0.1
      *
      * @uses    apply_filters
      * @uses    the_author
@@ -234,6 +238,7 @@ class OpusPrimusPostStructures {
      * Outputs message if no posts are found by 'the_Loop' query
      *
      * @package OpusPrimus
+     * @since   0.1
      *
      * @uses    apply_filters
      * @uses    esc_html
