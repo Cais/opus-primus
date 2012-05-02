@@ -1,7 +1,7 @@
 <?php
 /**
- * Opus Ignite
- * Initialization file for the theme: defined CONSTANTS; and, included classes.
+ * Opus Primus Social
+ * Controls for the social extensions, buttons, shares, etc.
  *
  * @package     OpusPrimus
  * @since       0.1
@@ -32,14 +32,21 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-/** Set CONSTANTS */
-define( 'OPUS_INC', get_template_directory() . '/includes/' );
-define( 'OPUS_JS', get_template_directory_uri() . '/js/' );
-define( 'OPUS_CSS', get_template_directory_uri() . '/css/' );
+class OpusPrimusSocial {
+    /** Construct */
+    function __construct() {
 
-/** Add Post Structures */
-require_once( OPUS_INC . 'class.OpusPrimusPostStructures.php' );
-/** Add Navigation */
-require_once( OPUS_INC . 'class.OpusPrimusNavigation.php' );
-/** Add Sharing */
-require_once( OPUS_INC . 'class.OpusPrimusSocial.php' );
+    }
+
+    /**
+     * Google+ Share
+     * @todo Look at using wp_enqueue on this
+     */
+    function opus_primus_google_plus_share() {
+        echo '
+            <script src="https://apis.google.com/js/plusone.js"></script>
+            <g:plus action="share" annotation="bubble"></g:plus>
+            ';
+    }
+}
+$opus_shares = new OpusPrimusSocial;
