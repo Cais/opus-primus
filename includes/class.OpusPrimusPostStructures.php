@@ -70,30 +70,53 @@ class OpusPrimusPostStructures {
      * @package     OpusPrimus
      * @since       0.1
      *
+     * @param       string $keyword - word or phrase to use as anchor text when no title is present
      * @return      string - URL|Posted
      */
-    function opus_primus_use_posted() {
+    function opus_primus_no_title_link( $keyword ) {
         $opus_no_title = get_the_title();
         empty( $opus_no_title )
-            ? $opus_no_title = '<span class="no-title"><a href="' . get_permalink() . '" title="' . get_the_excerpt() . '">' . __( 'Posted', 'opusprimus' ) . '</span></a>'
-            : $opus_no_title = __( 'Posted', 'opusprimus' );
-        return apply_filters( 'opus_primus_use_posted', $opus_no_title );
+            ? $opus_no_title = '<span class="no-title"><a href="' . get_permalink() . '" title="' . get_the_excerpt() . '">' . $keyword . '</span></a>'
+            : $opus_no_title = $keyword;
+        return apply_filters( 'opus_primus_no_title_link', $opus_no_title );
     }
 
     /**
-     * Opus Post Meta
-     * Outputs post meta details
+     * Opus Post By Line
+     * Outputs post meta details consisting of a configurable keyword for post
+     * link anchor text, the date and time posted, and the post author. The post
+     * author is also linked to the author's archive page.
      *
      * @package OpusPrimus
+     * @since   0.1
+     *
+     * @param   string $keyword default = Posted
      *
      * @uses    apply_filters
+     * @uses    esc_attr
+     * @uses    get_author_posts_url
+     * @uses    get_option - date_format, time_format
+     * @uses    get_the_author
+     * @uses    get_the_author_meta - ID
+     * @uses    get_the_date
+     * @uses    get_the_time
+     * @uses    opus_primus_no_title_link
      */
-    function opus_post_meta() {
+    function opus_post_byline( $keyword = 'Posted' ) {
         /** Add empty filter before post meta */
         apply_filters( 'opus_before_post_meta', '' );
 
-        /** Post Meta */
-        printf( __( '', 'opusprimus' ) );
+        /** Post Meta details - inspired by TwentyTen */
+        printf( __( '%1$s on %2$s at %3$s by %4$s', 'opusprimus' ),
+            $this->opus_primus_no_title_link( $keyword ),
+            get_the_date( get_option( 'date_format' ) ),
+            get_the_time( get_option( 'time_format' ) ),
+            sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
+                get_author_posts_url( get_the_author_meta( 'ID' ) ),
+                esc_attr( sprintf( __( 'View all posts by %s', 'opusprimus' ), get_the_author() ) ),
+                get_the_author()
+            )
+        );
 
         /** Add empty filter after post meta */
         apply_filters( 'opus_after_meta_filter', '' );
