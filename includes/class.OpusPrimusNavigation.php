@@ -47,12 +47,12 @@ class OpusPrimusNavigation {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    apply_filters
+     * @uses    do_action
      * @uses    wp_link_pages
      */
     function opus_link_pages() {
-        /** Add empty filter before linking pages navigation of a multi-page post */
-        apply_filters( 'opus_before_links_pages', '' );
+        /** Add empty hook before linking pages navigation of a multi-page post */
+        do_action( 'opus_before_links_pages' );
 
         /** Linking pages navigation */ ?>
         <div class="navigation link-pages">
@@ -60,8 +60,8 @@ class OpusPrimusNavigation {
         </div>
 
         <?php
-        /** Add empty filter after linking pages navigation of a multi-page post */
-        apply_filters( 'opus_after_link_pages', '' );
+        /** Add empty hook after linking pages navigation of a multi-page post */
+        do_action( 'opus_after_link_pages' );
 
     }
 
@@ -72,13 +72,13 @@ class OpusPrimusNavigation {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    apply_filters
+     * @uses    do_action
      * @uses    next_posts_link
      * @uses    previous_posts_link
      */
     function opus_posts_link() {
-        /** Add empty filter before posts link */
-        apply_filters( 'opus_before_posts_link', '' );
+        /** Add empty hook before posts link */
+        do_action( 'opus_before_posts_link' );
 
         /** Posts link navigation */ ?>
         <div class="navigation posts-link">
@@ -91,8 +91,8 @@ class OpusPrimusNavigation {
         </div>
 
         <?php
-        /** Add empty filter after posts link */
-        apply_filters( 'opus_after_posts_link', '' );
+        /** Add empty hook after posts link */
+        do_action( 'opus_after_posts_link' );
 
     }
 
@@ -103,13 +103,13 @@ class OpusPrimusNavigation {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    apply_filters
+     * @uses    do_action
      * @uses    next_posts_link
      * @uses    previous_posts_link
      */
     function opus_post_link() {
-        /** Add empty filter before post link */
-        apply_filters( 'opus_before_post_link', '' );
+        /** Add empty hook before post link */
+        do_action( 'opus_before_post_link' );
 
         /** Post link navigation */ ?>
         <div class="navigation post-link">
@@ -122,8 +122,8 @@ class OpusPrimusNavigation {
         </div>
 
         <?php
-        /** Add empty filter after post link */
-        apply_filters( 'opus_after_post_link', '' );
+        /** Add empty hook after post link */
+        do_action( 'opus_after_post_link' );
 
     }
 
@@ -165,19 +165,19 @@ class OpusPrimusNavigation {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    apply_filters
+     * @uses    do_action
      * @uses    opus_primus_primary_menu
      * @uses    wp_nav_menu
      */
     function opus_primary_menu() {
-        /** Add empty filter before the primary menu */
-        apply_filters( 'opus_before_primary_menu', '' );
+        /** Add empty hook before the primary menu */
+        do_action( 'opus_before_primary_menu' );
 
         /** Primary Menu */
         $this->opus_primus_primary_menu();
 
-        /** Add empty filter after the primary menu */
-        apply_filters( 'opus_after_primary_menu', '' );
+        /** Add empty hook after the primary menu */
+        do_action( 'opus_after_primary_menu' );
 
     }
 
@@ -205,19 +205,19 @@ class OpusPrimusNavigation {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    apply_filters
+     * @uses    do_action
      * @uses    opus_primus_secondary_menu
      * @uses    wp_nav_menu
      */
     function opus_secondary_menu() {
-        /** Add empty filter before the primary menu */
-        apply_filters( 'opus_before_secondary_menu', '' );
+        /** Add empty hook before the primary menu */
+        do_action( 'opus_before_secondary_menu' );
 
         /** Primary Menu */
         $this->opus_primus_secondary_menu();
 
-        /** Add empty filter after the primary menu */
-        apply_filters( 'opus_after_secondary_menu', '' );
+        /** Add empty hook after the primary menu */
+        do_action( 'opus_after_secondary_menu' );
 
     }
 

@@ -215,3 +215,10 @@ function opus_primus_widgets() {
 }
 /** Register sidebars by running `opus_primus_widgets` on the `widgets_init` action hook. */
 add_action( 'widgets_init', 'opus_primus_widgets' );
+
+
+/** Testing ... testing ... testing ... */
+function opus_test() {
+    echo 'BACON Test!!! PS: This works, too!<br />';
+}
+// add_action( 'opus_before_post_byline', 'opus_test' );

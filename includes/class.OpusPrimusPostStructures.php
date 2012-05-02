@@ -49,15 +49,15 @@ class OpusPrimusPostStructures {
      * @uses    the_title
      */
     function opus_post_title() {
-        /** Add empty filter before the post title */
-        apply_filters( 'opus_before_post_title', '' );
+        /** Add empty hook before the post title */
+        do_action( 'opus_before_post_title' );
 
         /** The Post Title */ ?>
         <h2><?php the_title(); ?></h2>
 
         <?php
-        /** Add empty filter after the post title */
-        apply_filters( 'opus_after_post_title', '' );
+        /** Add empty hook after the post title */
+        do_action( 'opus_after_post_title' );
 
     }
 
@@ -72,9 +72,16 @@ class OpusPrimusPostStructures {
      * @since       0.1
      *
      * @param       string $keyword - word or phrase to use as anchor text when no title is present
-     * @return      string - URL|Posted
+     *
+     * @uses        apply_filters
+     * @uses        get_permalink
+     * @uses        get_the_excerpt
+     * @uses        get_the_title
+     *
+     * @return      string - URL|text
      */
     function opus_primus_no_title_link( $keyword ) {
+        /** Create URL or string text */
         $opus_no_title = get_the_title();
         empty( $opus_no_title )
             ? $opus_no_title = '<span class="no-title"><a href="' . get_permalink() . '" title="' . get_the_excerpt() . '">' . $keyword . '</span></a>'
@@ -91,21 +98,22 @@ class OpusPrimusPostStructures {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @param   string $keyword default = Posted
+     * @param   string $keyword ( default = Posted )
+     * @param   string $show_mod_author ( default = false )
      *
-     * @uses    apply_filters
+     * @uses    do_action
      * @uses    esc_attr
      * @uses    get_author_posts_url
-     * @uses    get_option - date_format, time_format
+     * @uses    get_option ( date_format, time_format )
      * @uses    get_the_author
-     * @uses    get_the_author_meta - ID
+     * @uses    get_the_author_meta ( ID )
      * @uses    get_the_date
      * @uses    get_the_time
      * @uses    opus_primus_no_title_link
      */
-    function opus_post_byline( $keyword = 'Posted' ) {
-        /** Add empty filter before post by line */
-        apply_filters( 'opus_before_post_byline', '' );
+    function opus_post_byline( $keyword = 'Posted', $show_mod_author = 'false' ) {
+        /** Add empty hook before post by line */
+        do_action( 'opus_before_post_byline' );
 
         /** Post Meta details - inspired by TwentyTen */
         printf( __( '%1$s on %2$s at %3$s by %4$s', 'opusprimus' ),
@@ -119,8 +127,13 @@ class OpusPrimusPostStructures {
             )
         );
 
-        /** Add empty filter after post by line */
-        apply_filters( 'opus_after_post_byline', '' );
+        /** Modified Post Author */
+        if ( $show_mod_author ) {
+            $this->opus_primus_modified_post();
+        }
+
+        /** Add empty hook after post by line */
+        do_action( 'opus_after_post_byline' );
 
     }
 
@@ -136,6 +149,7 @@ class OpusPrimusPostStructures {
      * @internal    Original author Edward Caissie <edward.caissie@gmail.com>
      *
      * @uses    (global) $post
+     * @uses    do_action
      * @uses    get_post_meta
      * @uses    get_the_modified_date
      * @uses    get_the_modified_time
@@ -144,6 +158,9 @@ class OpusPrimusPostStructures {
      * @uses    home_url
      */
     function opus_primus_modified_post(){
+        /** Add empty hook before modified post author */
+        do_action( 'opus_before_modified_post' );
+
         /** Grab the $post object */
         global $post;
         /** @var $last_user - establish the last user */
@@ -158,6 +175,10 @@ class OpusPrimusPostStructures {
                 get_the_modified_date( get_option( 'date_format' ) ),
                 get_the_modified_time( get_option( 'time_format' ) ) );
         }
+
+        /** Add empty hook after modified post author */
+        do_action( 'opus_after_modified_post' );
+
     }
 
     /**
@@ -171,7 +192,7 @@ class OpusPrimusPostStructures {
      *
      * @internal    REQUIRES use within the_Loop
      *
-     * @uses    apply_filters
+     * @uses    do_action
      * @uses    get_permalink
      * @uses    get_post_type
      * @uses    get_the_category_list
@@ -182,8 +203,8 @@ class OpusPrimusPostStructures {
      * @todo Rewrite to be more Opus Primus than Twenty Ten
      */
     function opus_primus_meta_tags() {
-        /** Add empty filter before meta tags */
-        apply_filters( 'opus_before_meta_tags', '' );
+        /** Add empty hook before meta tags */
+        do_action( 'opus_before_meta_tags' );
 
         /** Retrieves tag list of current post, separated by commas. */
         $opus_tag_list = get_the_tag_list( '', ', ', '' );
@@ -202,8 +223,8 @@ class OpusPrimusPostStructures {
             the_title_attribute( 'echo=0' )
         );
 
-        /** Add empty filter after meta tags */
-        apply_filters( 'opus_after_meta_tags', '' );
+        /** Add empty hook after meta tags */
+        do_action( 'opus_after_meta_tags' );
 
     }
 
@@ -214,19 +235,18 @@ class OpusPrimusPostStructures {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    apply_filters
-     * @uses    is_archive
+     * @uses    do_action
      * @uses    the_content
      */
     function opus_post_content() {
-        /** Add empty filter before the post content */
-        apply_filters( 'opus_before_the_content', '' );
+        /** Add empty hook before the content */
+        do_action( 'opus_before_the_content' );
 
         /** The post excerpt */
         the_content();
 
-        /** Add empty filter after the post content */
-        apply_filters( 'opus_after_the_content', '' );
+        /** Add empty hook after the content */
+        do_action( 'opus_after_the_content' );
 
     }
 
@@ -237,42 +257,43 @@ class OpusPrimusPostStructures {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    apply_filters
-     * @uses    is_archive
+     * @uses    do_action
      * @uses    the_excerpt
      */
     function opus_post_excerpt() {
-        /** Add empty filter before the post excerpt */
-        apply_filters( 'opus_before_the_excerpt', '' );
+        /** Add empty hook before the excerpt */
+        do_action( 'opus_before_the_excerpt' );
 
         /** The post excerpt */
         the_excerpt();
 
-        /** Add empty filter after the post excerpt */
-        apply_filters( 'opus_after_the_excerpt', '' );
+        /** Add empty hook after the excerpt */
+        do_action( 'opus_after_the_excerpt' );
 
     }
 
     /**
      * Opus Post Author
      * Outputs the author details: web address, email, and biography from the
-     * use profile information
+     * use profile information - not designed for use in the post meta section.
      *
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    apply_filters
+     * @uses    do_action
      * @uses    the_author
+     *
+     * @todo Flesh out author details being displayed
      */
     function opus_post_author() {
-        /** Add empty filter before post author details */
-        apply_filters( 'opus_before_post_author', '' );
+        /** Add empty hook before post author details */
+        do_action( 'opus_before_post_author' );
 
         /** Author details */
         the_author();
 
-        /** Add empty filter after post author details */
-        apply_filters( 'opus_after_post_author', '' );
+        /** Add empty hook after post author details */
+        do_action( 'opus_after_post_author' );
 
     }
 
@@ -283,21 +304,21 @@ class OpusPrimusPostStructures {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    apply_filters
+     * @uses    do_action
      * @uses    esc_html
      * @uses    get_search_form
      * @uses    get_search_query
      */
     function opus_search(){
-        /** Add empty filter before no posts results from the_loop query */
-        apply_filters( 'opus_before_search', '' );
+        /** Add empty hook before no posts results from the_loop query */
+        do_action( 'opus_before_search' );
 
         /** No results from the_loop query */
         printf( __( 'Search Results for: %s', 'opus' ), '<span>' . esc_html( get_search_query() ) . '</span>' );
         get_search_form();
 
-        /** Add empty filter after no posts results from the_loop query */
-        apply_filters( 'opus_after_search', '' );
+        /** Add empty hook after no posts results from the_loop query */
+        do_action( 'opus_after_search' );
 
     }
 }
