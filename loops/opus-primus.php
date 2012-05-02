@@ -39,5 +39,6 @@ global $opus_nav, $opus_structure;
 $opus_structure->opus_post_title();
 $opus_structure->opus_post_byline();
 $opus_structure->opus_post_content();
+$opus_structure->opus_primus_meta_tags();
 $opus_structure->opus_post_author();
 $opus_nav->opus_link_pages();

@@ -29,7 +29,7 @@
       <file leaf-file-name="class.OpusPrimusPostStructures.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="58" selection-start="2882" selection-end="2882" vertical-scroll-proportion="0.15644172">
+            <state line="118" column="29" selection-start="4121" selection-end="4121" vertical-scroll-proportion="-0.36503068">
               <folding />
             </state>
           </provider>
@@ -38,7 +38,7 @@
       <file leaf-file-name="opus-primus.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loops/opus-primus.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="36" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.0">
+            <state line="41" column="41" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -71,8 +71,8 @@
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/includes/opus-ignite.php" />
         <option value="$PROJECT_DIR$/sidebar.php" />
-        <option value="$PROJECT_DIR$/loops/opus-primus.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php" />
+        <option value="$PROJECT_DIR$/loops/opus-primus.php" />
       </list>
     </option>
   </component>
@@ -359,7 +359,11 @@
       <created>1335921250888</created>
       <updated>1335921250888</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Changed `post_meta` to `post_byline`; added date, time, and author details">
+      <created>1335928719396</created>
+      <updated>1335928719396</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -437,7 +441,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correct test text" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed `post_meta` to `post_byline`; added date, time, and author details" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -464,6 +468,7 @@
     <MESSAGE value="Stylesheets copyright update" />
     <MESSAGE value="Documentation updates" />
     <MESSAGE value="Correct test text" />
+    <MESSAGE value="Changed `post_meta` to `post_byline`; added date, time, and author details" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -538,14 +543,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/loops/opus-primus.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="36" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.0">
+        <state line="41" column="41" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="58" selection-start="2882" selection-end="2882" vertical-scroll-proportion="0.15644172">
+        <state line="118" column="29" selection-start="4121" selection-end="4121" vertical-scroll-proportion="-0.36503068">
           <folding />
         </state>
       </provider>

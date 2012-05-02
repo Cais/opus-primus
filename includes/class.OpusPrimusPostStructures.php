@@ -124,6 +124,46 @@ class OpusPrimusPostStructures {
     }
 
     /**
+     * Opus Primus Meta Tags
+     *
+     * Prints HTML with meta information for the current post (category, tags
+     * and permalink) - inspired by TwentyTen
+     *
+     * @package     OpusPrimus
+     * @since       0.1
+     *
+     * @internal    REQUIRES use within the_Loop
+     *
+     * @uses    get_permalink
+     * @uses    get_post_type
+     * @uses    get_the_category_list
+     * @uses    get_the_tag_list
+     * @uses    is_object_in_taxonomy
+     * @uses    the_title_attribute
+     *
+     * @todo Review structure and text to make more unique
+     */
+    function opus_primus_meta_tags() {
+        /** Retrieves tag list of current post, separated by commas. */
+        $opus_tag_list = get_the_tag_list( '', ', ', '' );
+        if ( $opus_tag_list ) {
+            $posted_in = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'opusprimus' );
+        } elseif ( is_object_in_taxonomy( get_post_type(), 'category' ) ) {
+            $posted_in = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'opusprimus' );
+        } else {
+            $posted_in = __( 'Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'opusprimus' );
+        }
+        /** Prints the string, replacing the placeholders. */
+        printf(
+            $posted_in,
+            get_the_category_list( ', ' ),
+            $opus_tag_list,
+            get_permalink(),
+            the_title_attribute( 'echo=0' )
+        );
+    }
+
+    /**
      * Opus Post Content
      * Outputs `the_content`
      *
