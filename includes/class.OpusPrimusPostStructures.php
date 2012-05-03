@@ -288,11 +288,14 @@ class OpusPrimusPostStructures {
      * @uses    get_the_author_meta ( display_name, user_url, user_email, user_description )
      * @uses    user_can
      *
-     * @todo Still needs to be reviewed for at least optimization
+     * @todo Add gravatar
+     * @todo Review general layout and content
      */
     function opus_post_author() {
         /** Get and set variables */
         global $opus_author_id;
+        if ( ! isset( $opus_author_id ) )
+            $opus_author_id = '';
         $opus_author_display_name   = get_the_author_meta( 'display_name', $opus_author_id );
         $opus_author_url            = get_the_author_meta( 'user_url', $opus_author_id );
         $opus_author_email          = get_the_author_meta( 'user_email', $opus_author_id );
@@ -317,7 +320,11 @@ class OpusPrimusPostStructures {
             } else {
                 echo 'guest';
             } ?>">
-            <h2><?php _e( 'About ', 'opusprimus' ); echo $opus_author_display_name; ?></h2>
+            <h2>
+                <?php
+                if ( ! empty( $opus_author_id ) )
+                    _e( 'About ', 'opusprimus' ); echo $opus_author_display_name; ?>
+            </h2>
             <ul>
             <?php
             if ( ! empty( $opus_author_url ) ) { ?>
