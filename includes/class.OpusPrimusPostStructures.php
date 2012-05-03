@@ -69,7 +69,7 @@ class OpusPrimusPostStructures {
      * @package     OpusPrimus
      * @since       0.1
      *
-     * @param       string $keyword - word or phrase to use as anchor text when no title is present
+     * @param       string $anchor_word - word or phrase to use as anchor text when no title is present
      *
      * @uses        apply_filters
      * @uses        get_permalink
@@ -78,25 +78,25 @@ class OpusPrimusPostStructures {
      *
      * @return      string - URL|text
      */
-    function opus_primus_no_title_link( $keyword ) {
+    function opus_primus_no_title_link( $anchor_word ) {
         /** Create URL or string text */
         $opus_no_title = get_the_title();
         empty( $opus_no_title )
-            ? $opus_no_title = '<span class="no-title"><a href="' . get_permalink() . '" title="' . get_the_excerpt() . '">' . $keyword . '</span></a>'
-            : $opus_no_title = $keyword;
+            ? $opus_no_title = '<span class="no-title"><a href="' . get_permalink() . '" title="' . get_the_excerpt() . '">' . $anchor_word . '</span></a>'
+            : $opus_no_title = $anchor_word;
         return apply_filters( 'opus_primus_no_title_link', $opus_no_title );
     }
 
     /**
      * Opus Post By Line
-     * Outputs post meta details consisting of a configurable keyword for post
+     * Outputs post meta details consisting of a configurable anchor_word for post
      * link anchor text, the date and time posted, and the post author. The post
      * author is also linked to the author's archive page.
      *
      * @package OpusPrimus
      * @since   0.1
      *
-     * @param   string $keyword ( default = Posted )
+     * @param   string $anchor_word ( default = Posted )
      * @param   string $show_mod_author ( default = false )
      *
      * @uses    do_action
@@ -109,18 +109,18 @@ class OpusPrimusPostStructures {
      * @uses    get_the_time
      * @uses    opus_primus_no_title_link
      */
-    function opus_post_byline( $keyword = 'Posted', $show_mod_author = 'false' ) {
+    function opus_post_byline( $anchor_word = 'Posted', $show_mod_author = 'false' ) {
         /** Add empty hook before post by line */
         do_action( 'opus_before_post_byline' );
 
         /** Post Meta details - inspired by TwentyTen */
         printf( __( '%1$s on %2$s at %3$s by %4$s', 'opusprimus' ),
-            $this->opus_primus_no_title_link( $keyword ),
+            $this->opus_primus_no_title_link( $anchor_word ),
             get_the_date( get_option( 'date_format' ) ),
             get_the_time( get_option( 'time_format' ) ),
-            sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
+            sprintf( '<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
                 get_author_posts_url( get_the_author_meta( 'ID' ) ),
-                esc_attr( sprintf( __( 'View all posts by %s', 'opusprimus' ), get_the_author() ) ),
+                esc_attr( sprintf( __( 'View all posts by %1$s', 'opusprimus' ), get_the_author() ) ),
                 get_the_author()
             )
         );
@@ -190,31 +190,33 @@ class OpusPrimusPostStructures {
      *
      * @internal    REQUIRES use within the_Loop
      *
+     * @param       string $anchor_word ( default = Posted )
+     *
      * @uses    do_action
      * @uses    get_permalink
      * @uses    get_post_type
      * @uses    get_the_category_list
      * @uses    get_the_tag_list
      * @uses    is_object_in_taxonomy
+     * @uses    opus_primus_no_title_link
      * @uses    the_title_attribute
-     *
-     * @todo Rewrite to be more Opus Primus than Twenty Ten
      */
-    function opus_primus_meta_tags() {
+    function opus_primus_meta_tags( $anchor_word = 'Posted' ) {
         /** Add empty hook before meta tags */
         do_action( 'opus_before_meta_tags' );
 
         /** Retrieves tag list of current post, separated by commas. */
         $opus_tag_list = get_the_tag_list( '', ', ', '' );
         if ( $opus_tag_list ) {
-            $posted_in = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'opusprimus' );
+            $posted_in = __( '%1$s in %2$s and tagged %3$s. Bookmark the <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a>.', 'opusprimus' );
         } elseif ( is_object_in_taxonomy( get_post_type(), 'category' ) ) {
-            $posted_in = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'opusprimus' );
+            $posted_in = __( '%1$s in %2$s. Bookmark the <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a>.', 'opusprimus' );
         } else {
-            $posted_in = __( 'Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'opusprimus' );
+            $posted_in = __( 'Bookmark the <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a>.', 'opusprimus' );
         }
         /** Prints the string, replacing the placeholders. */
-        printf( $posted_in,
+        printf( '<div class="meta-tags">' . $posted_in . '</div>',
+            $this->opus_primus_no_title_link( $anchor_word ),
             get_the_category_list( ', ' ),
             $opus_tag_list,
             get_permalink(),
@@ -280,16 +282,47 @@ class OpusPrimusPostStructures {
      *
      * @uses    do_action
      * @uses    the_author
+     * @uses    get_query_var
+     * @uses    get_user_by
+     * @uses    get_userdata
+     * @uses    user_can
      *
-     * @todo Flesh out author details being displayed
+     * @todo Needs to be fixed
      */
     function opus_post_author() {
+        $curauth = ( get_query_var( 'author_name ' ) ) ? get_user_by( 'id', get_query_var( 'author_name' ) ) : get_userdata( get_query_var( 'author' ) );
+
         /** Add empty hook before post author details */
         do_action( 'opus_before_post_author' );
 
-        /** Author details */
-        the_author();
+        /** Author details */ ?>
+        <div id="author" class="<?php
+            /** Add class as related to the user role (see 'Role:' drop-down in User options) */
+            if ( user_can( $curauth->ID, 'administrator' ) ) {
+                echo 'administrator';
+            } elseif ( user_can( $curauth->ID, 'editor' ) ) {
+                echo 'editor';
+            } elseif ( user_can( $curauth->ID, 'contributor' ) ) {
+                echo 'contributor';
+            } elseif ( user_can( $curauth->ID, 'subscriber' ) ) {
+                echo 'subscriber';
+            } else {
+                echo 'guest';
+            }
+            if ( ( $curauth->ID ) == '1' ) echo ' administrator-prime'; ?>">
+            <h2><?php _e( 'About ', 'shades' ); ?><?php echo $curauth->display_name; ?></h2>
+            <ul>
+                <?php if ( ! empty( $curauth->user_url ) ) { ?>
+                <li><?php _e( 'Website', 'shades' ); ?>: <a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a> <?php _e( 'or', 'shades' ); ?> <a href="mailto:<?php echo $curauth->user_email; ?>"><?php _e( 'email', 'shades' ); ?></a></li>
+                <?php
+                }
+                if ( ! empty( $curauth->user_description ) ) { ?>
+                    <li><?php _e( 'Biography', 'shades' ); ?>: <?php echo $curauth->user_description; ?></li>
+                <?php } ?>
+            </ul>
+        </div><!-- #author -->
 
+        <?php
         /** Add empty hook after post author details */
         do_action( 'opus_after_post_author' );
 
