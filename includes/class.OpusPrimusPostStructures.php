@@ -320,4 +320,4 @@ class OpusPrimusPostStructures {
 
     }
 }
-$opus_structure = new OpusPrimusPostStructures;
+$opus_structure = new OpusPrimusPostStructures();

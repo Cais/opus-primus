@@ -220,4 +220,4 @@ class OpusPrimusNavigation {
     }
 
 }
-$opus_nav = new OpusPrimusNavigation;
+$opus_nav = new OpusPrimusNavigation();

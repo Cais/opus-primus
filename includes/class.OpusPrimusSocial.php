@@ -47,4 +47,4 @@ class OpusPrimusSocial {
             ';
     }
 }
-$opus_shares = new OpusPrimusSocial;
+$opus_shares = new OpusPrimusSocial();
