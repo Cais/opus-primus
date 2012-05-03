@@ -110,6 +110,10 @@ class OpusPrimusPostStructures {
      * @uses    opus_primus_no_title_link
      */
     function opus_post_byline( $anchor_word = 'Posted', $show_mod_author = 'false' ) {
+        /** Grab the author ID from within the loop and globalize it for later use. */
+        global $opus_author_id;
+        $opus_author_id = get_the_author_meta( 'ID' );
+
         /** Add empty hook before post by line */
         do_action( 'opus_before_post_byline' );
 
@@ -119,7 +123,7 @@ class OpusPrimusPostStructures {
             get_the_date( get_option( 'date_format' ) ),
             get_the_time( get_option( 'time_format' ) ),
             sprintf( '<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
-                get_author_posts_url( get_the_author_meta( 'ID' ) ),
+                get_author_posts_url( $opus_author_id ),
                 esc_attr( sprintf( __( 'View all posts by %1$s', 'opusprimus' ), get_the_author() ) ),
                 get_the_author()
             )
@@ -281,44 +285,41 @@ class OpusPrimusPostStructures {
      * @since   0.1
      *
      * @uses    do_action
-     * @uses    the_author
-     * @uses    get_query_var
-     * @uses    get_user_by
-     * @uses    get_userdata
-     * @uses    user_can
      *
-     * @todo Needs to be fixed
+     * @todo Still needs to be reviewed for at least optimization
      */
     function opus_post_author() {
-        $curauth = ( get_query_var( 'author_name ' ) ) ? get_user_by( 'id', get_query_var( 'author_name' ) ) : get_userdata( get_query_var( 'author' ) );
-
+        global $opus_author_id;
         /** Add empty hook before post author details */
         do_action( 'opus_before_post_author' );
 
         /** Author details */ ?>
+
         <div id="author" class="<?php
             /** Add class as related to the user role (see 'Role:' drop-down in User options) */
-            if ( user_can( $curauth->ID, 'administrator' ) ) {
+            if ( user_can( $opus_author_id, 'administrator' ) ) {
                 echo 'administrator';
-            } elseif ( user_can( $curauth->ID, 'editor' ) ) {
+            } elseif ( user_can( $opus_author_id, 'editor' ) ) {
                 echo 'editor';
-            } elseif ( user_can( $curauth->ID, 'contributor' ) ) {
+            } elseif ( user_can( $opus_author_id, 'contributor' ) ) {
                 echo 'contributor';
-            } elseif ( user_can( $curauth->ID, 'subscriber' ) ) {
+            } elseif ( user_can( $opus_author_id, 'subscriber' ) ) {
                 echo 'subscriber';
             } else {
                 echo 'guest';
             }
-            if ( ( $curauth->ID ) == '1' ) echo ' administrator-prime'; ?>">
-            <h2><?php _e( 'About ', 'shades' ); ?><?php echo $curauth->display_name; ?></h2>
+            if ( $opus_author_id == '1' ) echo ' administrator-prime'; ?>">
+            <h2><?php _e( 'About ', 'opusprimus' ); echo get_the_author_meta( 'display_name', $opus_author_id ); ?></h2>
             <ul>
-                <?php if ( ! empty( $curauth->user_url ) ) { ?>
-                <li><?php _e( 'Website', 'shades' ); ?>: <a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a> <?php _e( 'or', 'shades' ); ?> <a href="mailto:<?php echo $curauth->user_email; ?>"><?php _e( 'email', 'shades' ); ?></a></li>
-                <?php
-                }
-                if ( ! empty( $curauth->user_description ) ) { ?>
-                    <li><?php _e( 'Biography', 'shades' ); ?>: <?php echo $curauth->user_description; ?></li>
-                <?php } ?>
+            <?php
+            $opus_author_url = get_the_author_meta( 'user_url', $opus_author_id );
+            if ( ! empty( $opus_author_url ) ) { ?>
+                <li><?php _e( 'Website', 'opusprimus' ); ?>: <a href="<?php echo get_the_author_meta( 'user_url', $opus_author_id ); ?>"><?php echo get_the_author_meta( 'user_url', $opus_author_id ); ?></a> <?php _e( 'or', 'opusprimus' ); ?> <a href="mailto:<?php echo get_the_author_meta( 'user_email', $opus_author_id ); ?>"><?php _e( 'email', 'opusprimus' ); ?></a></li>
+            <?php }
+            $opus_author_desc = get_the_author_meta( 'user_description', $opus_author_id );
+            if ( ! empty( $opus_author_desc ) ) { ?>
+                <li><?php _e( 'Biography', 'opusprimus' ); ?>: <?php echo get_the_author_meta( 'user_description', $opus_author_id ); ?></li>
+            <?php } ?>
             </ul>
         </div><!-- #author -->
 
