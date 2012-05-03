@@ -289,7 +289,7 @@ class OpusPrimusPostStructures {
      * @uses    user_can
      *
      * @todo Add gravatar
-     * @todo Review general layout and content
+     * @todo Add more styling ... put a box around the output?
      */
     function opus_post_author() {
         /** Get and set variables */
@@ -326,13 +326,21 @@ class OpusPrimusPostStructures {
                     _e( 'About ', 'opusprimus' ); echo $opus_author_display_name; ?>
             </h2>
             <ul>
-            <?php
-            if ( ! empty( $opus_author_url ) ) { ?>
-                <li><?php _e( 'Website', 'opusprimus' ); ?>: <a href="<?php echo $opus_author_url; ?>"><?php echo $opus_author_url; ?></a> <?php _e( 'or', 'opusprimus' ); ?> <a href="mailto:<?php echo $opus_author_email ?>"><?php _e( 'email', 'opusprimus' ); ?></a></li>
-            <?php }
-            if ( ! empty( $opus_author_desc ) ) { ?>
-                <li><?php _e( 'Biography', 'opusprimus' ); ?>: <?php echo $opus_author_desc; ?></li>
-            <?php } ?>
+                <?php
+                if ( ! empty( $opus_author_url ) ) { ?>
+                    <li>
+                        <?php
+                        printf( __( 'Visit the %1$s of the author or %2$s the author.', 'opusprimus' ),
+                            '<a href="' . $opus_author_url . '">' . __( 'web site', 'opusprimus' ) . '</a>',
+                            '<a href="mailto:' .  $opus_author_email . '">' . __( 'e-mail', 'opusprimus' ) . '</a>'
+                        ); ?>
+                    </li>
+                <?php }
+                if ( ! empty( $opus_author_desc ) ) { ?>
+                    <li>
+                        <?php printf( __( 'Biography: %1$s', 'opusprimus' ), $opus_author_desc ); ?>
+                    </li>
+                <?php } ?>
             </ul>
         </div>
 
