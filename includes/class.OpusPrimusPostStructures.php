@@ -285,17 +285,26 @@ class OpusPrimusPostStructures {
      * @since   0.1
      *
      * @uses    do_action
+     * @uses    get_the_author_meta ( display_name, user_url, user_email, user_description )
+     * @uses    user_can
      *
      * @todo Still needs to be reviewed for at least optimization
      */
     function opus_post_author() {
+        /** Get and set variables */
         global $opus_author_id;
+        $opus_author_display_name   = get_the_author_meta( 'display_name', $opus_author_id );
+        $opus_author_url            = get_the_author_meta( 'user_url', $opus_author_id );
+        $opus_author_email          = get_the_author_meta( 'user_email', $opus_author_id );
+        $opus_author_desc           = get_the_author_meta( 'user_description', $opus_author_id );
+
         /** Add empty hook before post author details */
         do_action( 'opus_before_post_author' );
 
         /** Author details */ ?>
-
-        <div id="author" class="<?php
+        <div class="author <?php
+            /** Pay homage to the first administrator */
+            if ( $opus_author_id == '1' ) echo ' administrator-prime';
             /** Add class as related to the user role (see 'Role:' drop-down in User options) */
             if ( user_can( $opus_author_id, 'administrator' ) ) {
                 echo 'administrator';
@@ -307,21 +316,18 @@ class OpusPrimusPostStructures {
                 echo 'subscriber';
             } else {
                 echo 'guest';
-            }
-            if ( $opus_author_id == '1' ) echo ' administrator-prime'; ?>">
-            <h2><?php _e( 'About ', 'opusprimus' ); echo get_the_author_meta( 'display_name', $opus_author_id ); ?></h2>
+            } ?>">
+            <h2><?php _e( 'About ', 'opusprimus' ); echo $opus_author_display_name; ?></h2>
             <ul>
             <?php
-            $opus_author_url = get_the_author_meta( 'user_url', $opus_author_id );
             if ( ! empty( $opus_author_url ) ) { ?>
-                <li><?php _e( 'Website', 'opusprimus' ); ?>: <a href="<?php echo get_the_author_meta( 'user_url', $opus_author_id ); ?>"><?php echo get_the_author_meta( 'user_url', $opus_author_id ); ?></a> <?php _e( 'or', 'opusprimus' ); ?> <a href="mailto:<?php echo get_the_author_meta( 'user_email', $opus_author_id ); ?>"><?php _e( 'email', 'opusprimus' ); ?></a></li>
+                <li><?php _e( 'Website', 'opusprimus' ); ?>: <a href="<?php echo $opus_author_url; ?>"><?php echo $opus_author_url; ?></a> <?php _e( 'or', 'opusprimus' ); ?> <a href="mailto:<?php echo $opus_author_email ?>"><?php _e( 'email', 'opusprimus' ); ?></a></li>
             <?php }
-            $opus_author_desc = get_the_author_meta( 'user_description', $opus_author_id );
             if ( ! empty( $opus_author_desc ) ) { ?>
-                <li><?php _e( 'Biography', 'opusprimus' ); ?>: <?php echo get_the_author_meta( 'user_description', $opus_author_id ); ?></li>
+                <li><?php _e( 'Biography', 'opusprimus' ); ?>: <?php echo $opus_author_desc; ?></li>
             <?php } ?>
             </ul>
-        </div><!-- #author -->
+        </div>
 
         <?php
         /** Add empty hook after post author details */
