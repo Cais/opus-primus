@@ -32,6 +32,14 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
+/**
+ * `wp_footer` is placed inside the #opus element to provide a container for
+ * styling content displayed in the footer by other code constructs such as
+ * plugins and scripts.
+ */
 wp_footer(); ?>
+
+</div><!-- #opus -->
+
 </body>
 </html>

@@ -1,7 +1,7 @@
 <?php
 /**
  * Header Template
- * Default document header and theme navigation.
+ * Default document header including primary navigation.
  *
  * @package     OpusPrimus
  * @since       0.1
@@ -36,6 +36,7 @@
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
+    <meta name="viewport" content="width=device-width" />
     <title><?php wp_title( '|', true, 'right' ); ?></title>
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
@@ -44,8 +45,19 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div id="opus">
+    <header>
 
-<?php
-global $opus_nav;
-$opus_nav->opus_primary_menu();
-$opus_nav->opus_secondary_menu(); ?>
+        <hgroup>
+            <h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
+            <h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
+        </hgroup>
+
+        <nav>
+            <?php
+            global $opus_nav;
+            $opus_nav->opus_primary_menu();
+            // $opus_nav->opus_secondary_menu(); ?>
+        </nav>
+
+    </header>
