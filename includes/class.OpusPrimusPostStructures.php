@@ -279,7 +279,7 @@ class OpusPrimusPostStructures {
     /**
      * Opus Post Author
      * Outputs the author details: web address, email, and biography from the
-     * use profile information - not designed for use in the post meta section.
+     * user profile information - not designed for use in the post meta section.
      *
      * @package OpusPrimus
      * @since   0.1
@@ -305,9 +305,9 @@ class OpusPrimusPostStructures {
         do_action( 'opus_before_post_author' );
 
         /** Author details */ ?>
-        <div class="author <?php
-            /** Pay homage to the first administrator */
-            if ( $opus_author_id == '1' ) echo ' administrator-prime';
+        <div class="author details <?php
+            /** Pay homage to the first administrator ... do not forget a trailing space */
+            if ( $opus_author_id == '1' ) echo 'administrator-prime ';
             /** Add class as related to the user role (see 'Role:' drop-down in User options) */
             if ( user_can( $opus_author_id, 'administrator' ) ) {
                 echo 'administrator';
@@ -330,9 +330,9 @@ class OpusPrimusPostStructures {
                 if ( ! empty( $opus_author_url ) ) { ?>
                     <li>
                         <?php
-                        printf( __( 'Visit the %1$s of the author or %2$s the author.', 'opusprimus' ),
-                            '<a href="' . $opus_author_url . '">' . __( 'web site', 'opusprimus' ) . '</a>',
-                            '<a href="mailto:' .  $opus_author_email . '">' . __( 'e-mail', 'opusprimus' ) . '</a>'
+                        printf( __( 'Visit the web site of %1$s or email %2$s.', 'opusprimus' ),
+                            '<a href="' . $opus_author_url . '">' . $opus_author_display_name . '</a>',
+                            '<a href="mailto:' .  $opus_author_email . '">' . $opus_author_display_name . '</a>'
                         ); ?>
                     </li>
                 <?php }
