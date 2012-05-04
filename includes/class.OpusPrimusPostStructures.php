@@ -96,8 +96,11 @@ class OpusPrimusPostStructures {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @param   string $anchor_word ( default = Posted )
-     * @param   string $show_mod_author ( default = false )
+     * @param   array|string $byline_args - function controls
+     *
+     * @internal    @param   string $anchor_word ( default = Posted )
+     * @internal    @param   string $show_mod_author ( default = false )
+     * @internal    @param   string $tempus ( default = date ) - date|time
      *
      * @uses    do_action
      * @uses    esc_attr
@@ -108,8 +111,17 @@ class OpusPrimusPostStructures {
      * @uses    get_the_date
      * @uses    get_the_time
      * @uses    opus_primus_no_title_link
+     * @uses    wp_parse_args
      */
-    function opus_post_byline( $anchor_word = 'Posted', $show_mod_author = 'false' ) {
+    function opus_post_byline( $byline_args = '' ) {
+        /** Set defaults */
+        $defaults = array(
+            'anchor_word'       => 'Posted',
+            'show_mod_author'   => false,
+            'tempus'            => 'date',
+        );
+        $byline_args = wp_parse_args( (array) $byline_args, $defaults );
+
         /** Grab the author ID from within the loop and globalize it for later use. */
         global $opus_author_id;
         $opus_author_id = get_the_author_meta( 'ID' );
@@ -119,7 +131,7 @@ class OpusPrimusPostStructures {
 
         /** Post Meta details - inspired by TwentyTen */
         printf( __( '%1$s on %2$s at %3$s by %4$s', 'opusprimus' ),
-            $this->opus_primus_no_title_link( $anchor_word ),
+            $this->opus_primus_no_title_link( $byline_args['anchor_word'] ),
             get_the_date( get_option( 'date_format' ) ),
             get_the_time( get_option( 'time_format' ) ),
             sprintf( '<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
@@ -130,8 +142,8 @@ class OpusPrimusPostStructures {
         );
 
         /** Modified Post Author */
-        if ( $show_mod_author ) {
-            $this->opus_primus_modified_post();
+        if ( $byline_args['show_mod_author'] || ( 'time' == $byline_args['tempus'] ) ) {
+            $this->opus_primus_modified_post( $byline_args['tempus'] );
         }
 
         /** Add empty hook after post by line */
@@ -150,16 +162,19 @@ class OpusPrimusPostStructures {
      *
      * @internal    Original author Edward Caissie <edward.caissie@gmail.com>
      *
+     * @param   string $tempus - date|time ( default = date )
+     *
      * @uses    (global) $post
      * @uses    do_action
      * @uses    get_post_meta
+     * @uses    get_the_date
      * @uses    get_the_modified_date
      * @uses    get_the_modified_time
      * @uses    get_the_time
      * @uses    get_userdata
      * @uses    home_url
      */
-    function opus_primus_modified_post(){
+    function opus_primus_modified_post( $tempus = 'date' ){
         /** Add empty hook before modified post author */
         do_action( 'opus_before_modified_post' );
 
@@ -171,11 +186,20 @@ class OpusPrimusPostStructures {
             $last_user = get_userdata( $last_id );
         }
         /** Check if there is a time difference from the original post date */
-        if ( get_the_time() <> get_the_modified_time() ) {
-            printf( __( 'Last modified by %1$s on %2$s @ %3$s.', 'opusprimus' ),
-                '<a href="' . home_url( '?author=' . $last_user->ID ) . '">' . $last_user->display_name . '</a>',
-                get_the_modified_date( get_option( 'date_format' ) ),
-                get_the_modified_time( get_option( 'time_format' ) ) );
+        if ( 'time' == $tempus ) {
+            if ( get_the_time() <> get_the_modified_time() ) {
+                printf( __( 'Last modified by %1$s on %2$s @ %3$s.', 'opusprimus' ),
+                    '<a href="' . home_url( '?author=' . $last_user->ID ) . '">' . $last_user->display_name . '</a>',
+                    get_the_modified_date( get_option( 'date_format' ) ),
+                    get_the_modified_time( get_option( 'time_format' ) ) );
+            }
+        } else {
+            if ( get_the_date() <> get_the_modified_date() ) {
+                printf( __( 'Last modified by %1$s on %2$s @ %3$s.', 'opusprimus' ),
+                    '<a href="' . home_url( '?author=' . $last_user->ID ) . '">' . $last_user->display_name . '</a>',
+                    get_the_modified_date( get_option( 'date_format' ) ),
+                    get_the_modified_time( get_option( 'time_format' ) ) );
+            }
         }
 
         /** Add empty hook after modified post author */
