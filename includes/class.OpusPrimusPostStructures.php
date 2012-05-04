@@ -102,6 +102,13 @@ class OpusPrimusPostStructures {
      * @internal    @param   string $show_mod_author ( default = false )
      * @internal    @param   string $tempus ( default = date ) - date|time
      *
+     * @example     opus_post_byline( array( 'anchor_word' => 'Written', 'tempus' => 'time' ) )
+     * @internal    This example will use the word "Written" as the anchor text
+     * if there is no title for the post; using 'time' will show the modified
+     * post author if there is any difference in time while using the default
+     * 'date' will only show if there is a difference of more than one (1) day.
+     * Also note, 'show_mod_author' is not needed if 'tempus' is set to 'time'.
+     *
      * @uses    do_action
      * @uses    esc_attr
      * @uses    get_author_posts_url
@@ -129,7 +136,7 @@ class OpusPrimusPostStructures {
         /** Add empty hook before post by line */
         do_action( 'opus_before_post_byline' );
 
-        /** Post Meta details - inspired by TwentyTen */
+        /** Output post meta details - date, time, and author */
         printf( __( '%1$s on %2$s at %3$s by %4$s', 'opusprimus' ),
             $this->opus_primus_no_title_link( $byline_args['anchor_word'] ),
             get_the_date( get_option( 'date_format' ) ),
@@ -141,7 +148,12 @@ class OpusPrimusPostStructures {
             )
         );
 
-        /** Modified Post Author */
+        /** To hook into this space use `opus_before_modified_post` */
+
+        /**
+         * Show modified post author if set to true or if the time span is
+         * measured in hours
+         */
         if ( $byline_args['show_mod_author'] || ( 'time' == $byline_args['tempus'] ) ) {
             $this->opus_primus_modified_post( $byline_args['tempus'] );
         }
@@ -185,11 +197,16 @@ class OpusPrimusPostStructures {
         if ( $last_id = get_post_meta( $post->ID, '_edit_last', true ) ) {
             $last_user = get_userdata( $last_id );
         }
+        /**
+         * @var $line_height - set temporary value for use with `get_avatar`
+         * @todo set this value programmatically
+         */
+        $line_height = 19;
         /** Check if there is a time difference from the original post date */
         if ( 'time' == $tempus ) {
             if ( get_the_time() <> get_the_modified_time() ) {
                 printf( __( 'Last modified by %1$s on %2$s @ %3$s.', 'opusprimus' ),
-                    '<a href="' . home_url( '?author=' . $last_user->ID ) . '">' . $last_user->display_name . '</a>',
+                    get_avatar( $last_user, $line_height ) . '<a href="' . home_url( '?author=' . $last_user->ID ) . '">' . $last_user->display_name . '</a>',
                     get_the_modified_date( get_option( 'date_format' ) ),
                     get_the_modified_time( get_option( 'time_format' ) ) );
             }
@@ -309,6 +326,7 @@ class OpusPrimusPostStructures {
      * @since   0.1
      *
      * @uses    do_action
+     * @uses    get_avatar
      * @uses    get_the_author_meta ( display_name, user_url, user_email, user_description )
      * @uses    user_can
      *
@@ -347,7 +365,8 @@ class OpusPrimusPostStructures {
             <h2>
                 <?php
                 if ( ! empty( $opus_author_id ) )
-                    _e( 'About ', 'opusprimus' ); echo $opus_author_display_name; ?>
+                    echo get_avatar( $opus_author_id );
+                    printf( __( 'About %1$s', 'opusprimus' ), $opus_author_display_name ); ?>
             </h2>
             <ul>
                 <?php
