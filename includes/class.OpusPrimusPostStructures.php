@@ -213,7 +213,7 @@ class OpusPrimusPostStructures {
         } else {
             if ( get_the_date() <> get_the_modified_date() ) {
                 printf( __( 'Last modified by %1$s on %2$s @ %3$s.', 'opusprimus' ),
-                    '<a href="' . home_url( '?author=' . $last_user->ID ) . '">' . $last_user->display_name . '</a>',
+                    get_avatar( $last_user, $line_height ) . '<a href="' . home_url( '?author=' . $last_user->ID ) . '">' . $last_user->display_name . '</a>',
                     get_the_modified_date( get_option( 'date_format' ) ),
                     get_the_modified_time( get_option( 'time_format' ) ) );
             }
