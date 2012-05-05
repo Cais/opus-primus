@@ -33,7 +33,6 @@
  */
 
 /** Call the initialization file to get things started */
-/** @noinspection PhpIncludeInspection - IDE commentary can be ignored */
 require_once( get_template_directory() . '/includes/opus-ignite.php' );
 
 /**
@@ -50,13 +49,36 @@ require_once( get_template_directory() . '/includes/opus-ignite.php' );
  */
 function opus_primus_LESS() {
     /** Add LESS link - cannot enqueue due to rel requirement */
-    printf ( '<!--suppress HtmlUnknownTarget - IDE commentary --><link rel="stylesheet/less" type="text/css" href="%1$s">', OPUS_CSS . 'style.less' );
+    printf ( '<link rel="stylesheet/less" type="text/css" href="%1$s">', OPUS_CSS . 'style.less' );
     /** Print new line - head section will be easier to read */
     printf ( "\n" );
     /** Add JavaScript to compile LESS */
     wp_enqueue_script( 'less-1.3', OPUS_JS . 'less-1.3.0.min.js', '', '1.3.0' );
 }
 add_action( 'wp_enqueue_scripts', 'opus_primus_LESS' );
+
+if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
+    /**
+     * Opus Primus Enqueue Scripts
+     * Use to enqueue the theme javascript and custom stylesheet, if it exists
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    OPUS_CSS    (constant)
+     * @uses    wp_enqueue_script
+     * @uses    wp_enqueue_style
+     */
+    function opus_primus_enqueue_scripts() {
+        /** Enqueue scripts */
+        wp_enqueue_script( 'jquery' );
+        /** Enqueue stylesheets */
+        if ( is_readable( OPUS_CSS . 'opus-primus-custom-style.css' ) ) {
+            wp_enqueue_style( 'Opus-Primus-Custom-Style', OPUS_CSS . 'opus-primus-custom-style.css', array(), '0.1', 'screen' );
+        }
+    }
+}
+add_action( 'wp_enqueue_scripts', 'opus_primus_enqueue_scripts' );
 
 if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
     /**
