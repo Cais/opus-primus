@@ -88,6 +88,45 @@ class OpusPrimusPostStructures {
     }
 
     /**
+     * Opus Primus Comment Count
+     * Displays amount of approved comments the post or page has
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    comments_popup_link
+     * @uses    is_page
+     */
+    function opus_primus_comments_link() {
+        /** Add empty hook before comments link */
+        do_action( 'opus_before_comments_link' );
+
+        if ( ! post_password_required() && comments_open() ) {
+            if ( is_page() ) {
+                comments_popup_link(
+                    __( 'There are no comments.', 'opusprimus' ),
+                    __( 'There is 1 comment.', 'opusprimus' ),
+                    __( 'There are % comments.', 'opusprimus' ),
+                    'comments-link',
+                    ''
+                );
+            } else {
+                comments_popup_link(
+                    __( 'There are no comments.', 'opusprimus' ),
+                    __( 'There is 1 comment.', 'opusprimus' ),
+                    __( 'There are % comments.', 'opusprimus' ),
+                    'comments-link',
+                    __( 'Comments are closed.', 'opusprimus' )
+                );
+            }
+        }
+
+        /** Add empty hook after comments link */
+        do_action( 'opus_after_comments_link' );
+
+    }
+
+    /**
      * Opus Post By Line
      * Outputs post meta details consisting of a configurable anchor_word for post
      * link anchor text, the date and time posted, and the post author. The post
@@ -330,7 +369,6 @@ class OpusPrimusPostStructures {
      * @uses    get_the_author_meta ( display_name, user_url, user_email, user_description )
      * @uses    user_can
      *
-     * @todo Add gravatar
      * @todo Add more styling ... put a box around the output?
      */
     function opus_post_author() {

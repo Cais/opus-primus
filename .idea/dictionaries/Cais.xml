@@ -4,6 +4,7 @@
       <w>bloginfo</w>
       <w>caissie</w>
       <w>changelog</w>
+      <w>commentlist</w>
       <w>curauth</w>
       <w>gmpg</w>
       <w>mailto</w>
@@ -11,9 +12,11 @@
       <w>pingback</w>
       <w>primus</w>
       <w>screenshots</w>
+      <w>singlecomments</w>
       <w>sprintf</w>
       <w>tagline</w>
       <w>userdata</w>
+      <w>userid</w>
     </words>
   </dictionary>
 </component>

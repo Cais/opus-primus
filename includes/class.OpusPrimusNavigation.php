@@ -219,5 +219,30 @@ class OpusPrimusNavigation {
 
     }
 
+    /**
+     * Opus Primus Comments Navigation
+     * Displays a link between pages of comments
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    do_action
+     * @uses    next_comments_link
+     * @uses    previous_comments_link
+     */
+    function opus_comments_navigation() {
+        /** Add empty hook before comments link */
+        do_action( 'opus_before_comments_link' ); ?>
+
+        <div class="navigation comment-link">
+            <div class="left"><?php previous_comments_link() ?></div>
+            <div class="right"><?php next_comments_link() ?></div>
+        </div>
+
+        <?php
+        /** Add empty hook after comments link */
+        do_action( 'opus_after_comments_link' );
+    }
+
 }
 $opus_nav = new OpusPrimusNavigation();
