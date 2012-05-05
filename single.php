@@ -32,7 +32,7 @@
  */
 global $opus_nav, $opus_structure;
 
-get_header();
+get_header( get_post_format() );
 
 $opus_nav->opus_post_link();
 if ( have_posts() ):
@@ -44,5 +44,5 @@ else:
     $opus_structure->opus_search();
 endif;
 
-get_sidebar();
-get_footer();
+get_sidebar( get_post_format() );
+get_footer( get_post_format() );

@@ -36,7 +36,7 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-get_header();
+get_header( get_post_format() );
 
 global $opus_nav, $opus_structure;
 if ( have_posts() ):
@@ -49,5 +49,5 @@ else:
 endif;
 $opus_nav->opus_posts_link();
 
-get_sidebar();
-get_footer();
+get_sidebar( get_post_format() );
+get_footer( get_post_format() );
