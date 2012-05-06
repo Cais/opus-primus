@@ -123,29 +123,4 @@ img.alignright, img.right { display: inline; margin: 0 0 8px 8px; }
 .bypostauthor { /* Required by WordPress - may be defined in another section */ }
 /** End: Minimum WordPress Style Requirements ------------------------------- */
 
-
-/** Miscellaneous Elements -------------------------------------------------- */
-/**
- * @todo sort into CSS categories
- */
-.navigation {}
-    .link-pages {}
-    .post-link {}
-    .posts-link {}
-.nav {}
-
-span.author-url {}
-    a.archive-url {}
-
-.administrator {}
-.editor {}
-.contributor {}
-.subscriber {}
-.guest {}
-
-.meta-byline {}
-.meta-tags {}
-span.author-modified-time {}
-span.author-modified-date {}
-
-/** End: Miscellaneous Elements --------------------------------------------- */
+/** See ../css/style.less for additional styles */
