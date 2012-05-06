@@ -175,8 +175,13 @@ class OpusPrimusPostStructures {
         /** Add empty hook before post by line */
         do_action( 'opus_before_post_byline' );
 
-        /** Output post meta details - date, time, and author */
-        printf( __( '%1$s on %2$s at %3$s by %4$s', 'opusprimus' ),
+        /** @var string $opus_post_byline - create byline details string */
+        $opus_post_byline = __( '%1$s on %2$s at %3$s by %4$s', 'opusprimus' );
+        /**
+         * Output post byline (date, time, and author) and open the CSS wrapper
+         */
+        echo '<div class="meta-byline">';
+        printf( $opus_post_byline,
             $this->opus_primus_no_title_link( $byline_args['anchor_word'] ),
             get_the_date( get_option( 'date_format' ) ),
             get_the_time( get_option( 'time_format' ) ),
@@ -187,8 +192,6 @@ class OpusPrimusPostStructures {
             )
         );
 
-        /** To hook into this space use `opus_before_modified_post` */
-
         /**
          * Show modified post author if set to true or if the time span is
          * measured in hours
@@ -196,6 +199,9 @@ class OpusPrimusPostStructures {
         if ( $byline_args['show_mod_author'] || ( 'time' == $byline_args['tempus'] ) ) {
             $this->opus_primus_modified_post( $byline_args['tempus'] );
         }
+
+        /** Close CSS wrapper for the post byline */
+        echo '</div>';
 
         /** Add empty hook after post by line */
         do_action( 'opus_after_post_byline' );
@@ -226,33 +232,57 @@ class OpusPrimusPostStructures {
      * @uses    home_url
      */
     function opus_primus_modified_post( $tempus = 'date' ){
-        /** Add empty hook before modified post author */
-        do_action( 'opus_before_modified_post' );
+        /** Grab the $post object and bring in the original post author ID */
+        global $post, $opus_author_id;
 
-        /** Grab the $post object */
-        global $post;
         /** @var $last_user - establish the last user */
         $last_user = '';
         if ( $last_id = get_post_meta( $post->ID, '_edit_last', true ) ) {
             $last_user = get_userdata( $last_id );
         }
+
         /**
-         * @var $line_height - set temporary value for use with `get_avatar`
-         * @todo set this value programmatically
+         * @var $line_height - set value for use with `get_avatar`
+         * @todo Review if this can be set programmatically
          */
         $line_height = 19;
+
+        /** @var string $mod_author_phrase - create the "mod_author_phrase"
+         * depending on whether or not the modifying author is the same as the
+         * post author or another author.
+         */
+        $mod_author_phrase = ' ';
+        /** Compare user IDs */
+        if ( $opus_author_id !== $last_user->ID ) {
+            $mod_author_phrase .= __( 'Last modified by %1$s %2$s on %3$s at %4$s.', 'opusprimus' );
+            $mod_author_avatar = get_avatar( $last_user->user_email, $line_height );
+
+            /**
+             * Add empty hook before modified post author for use when the post
+             * author and the last (modified) author are different.
+             */
+            do_action( 'opus_before_modified_post' );
+
+        } else {
+            $mod_author_phrase .= __( 'and modified on %3$s at %4$s.', 'opusprimus' );
+            $mod_author_avatar = '';
+        }
+
         /** Check if there is a time difference from the original post date */
         if ( 'time' == $tempus ) {
             if ( get_the_time() <> get_the_modified_time() ) {
-                printf( __( '<span class="author-modified-time">Last modified by %1$s on %2$s @ %3$s.</span>', 'opusprimus' ),
-                    get_avatar( $last_user, $line_height ) . '<a href="' . home_url( '?author=' . $last_user->ID ) . '">' . $last_user->display_name . '</a>',
+                /** @var $mod_author_phrase string */
+                printf( '<span class="author-modified-time">' . $mod_author_phrase . '</span>',
+                    $mod_author_avatar,
+                    '<a href="' . home_url( '?author=' . $last_user->ID ) . '">' . $last_user->display_name . '</a>',
                     get_the_modified_date( get_option( 'date_format' ) ),
                     get_the_modified_time( get_option( 'time_format' ) ) );
             }
         } else {
             if ( get_the_date() <> get_the_modified_date() ) {
-                printf( __( '<span class="author-modified-date">Last modified by %1$s on %2$s @ %3$s.</span>', 'opusprimus' ),
-                    get_avatar( $last_user, $line_height ) . '<a href="' . home_url( '?author=' . $last_user->ID ) . '">' . $last_user->display_name . '</a>',
+                printf( '<span class="author-modified-date">' . $mod_author_phrase . '</span>',
+                    $mod_author_avatar,
+                    '<a href="' . home_url( '?author=' . $last_user->ID ) . '">' . $last_user->display_name . '</a>',
                     get_the_modified_date( get_option( 'date_format' ) ),
                     get_the_modified_time( get_option( 'time_format' ) ) );
             }
@@ -281,7 +311,6 @@ class OpusPrimusPostStructures {
      * @uses    get_post_type
      * @uses    get_the_category_list
      * @uses    get_the_tag_list
-     * @uses    is_object_in_taxonomy
      * @uses    opus_primus_no_title_link
      * @uses    the_title_attribute
      */
@@ -289,17 +318,21 @@ class OpusPrimusPostStructures {
         /** Add empty hook before meta tags */
         do_action( 'opus_before_meta_tags' );
 
-        /** Retrieves tag list of current post, separated by commas. */
+        /**
+         * Retrieves tag list of current post, separated by commas; if there are
+         * tags associated with the post show them, If there are no tags on for
+         * the post then do not make any references to tags.
+         */
         $opus_tag_list = get_the_tag_list( '', ', ', '' );
         if ( $opus_tag_list ) {
-            $posted_in = __( '%1$s in %2$s and tagged %3$s. Bookmark the <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a>.', 'opusprimus' );
-        } elseif ( is_object_in_taxonomy( get_post_type(), 'category' ) ) {
-            $posted_in = __( '%1$s in %2$s. Bookmark the <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a>.', 'opusprimus' );
+            $opus_posted_in = __( '%1$s in %2$s and tagged %3$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark.', 'opusprimus' );
         } else {
-            $posted_in = __( 'Bookmark the <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a>.', 'opusprimus' );
+            $opus_posted_in = __( '%1$s in %2$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark.', 'opusprimus' );
         }
-        /** Prints the string, replacing the placeholders. */
-        printf( '<div class="meta-tags">' . $posted_in . '</div>',
+        /**
+         * Prints the "opus_posted_in" string, replacing the placeholders
+         */
+        printf( '<div class="meta-tags">' . $opus_posted_in . '</div>',
             $this->opus_primus_no_title_link( $anchor_word ),
             get_the_category_list( ', ' ),
             $opus_tag_list,
