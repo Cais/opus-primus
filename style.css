@@ -143,4 +143,9 @@ span.author-url {}
 .subscriber {}
 .guest {}
 
+.meta-byline {}
+.meta-tags {}
+span.author-modified-time {}
+span.author-modified-date {}
+
 /** End: Miscellaneous Elements --------------------------------------------- */
