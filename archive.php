@@ -34,3 +34,29 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
+
+/** Call the Post Structure and Navigation class variables */
+global $opus_nav, $opus_structure;
+
+get_header( get_post_format() );
+
+$opus_nav->opus_post_link();
+if ( have_posts() ):
+    while ( have_posts() ):
+        the_post();
+
+        $opus_structure->opus_post_title();
+        $opus_structure->opus_post_byline( array( 'tempus' => 'time' ) );
+        $opus_structure->opus_primus_comments_link();
+        $opus_structure->opus_post_excerpt();
+        $opus_structure->opus_primus_meta_tags();
+        $opus_nav->opus_link_pages();
+
+        comments_template();
+    endwhile;
+else:
+    $opus_structure->opus_search();
+endif;
+
+get_sidebar( get_post_format() );
+get_footer( get_post_format() );

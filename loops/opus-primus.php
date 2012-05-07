@@ -32,12 +32,12 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-/** Call the Post Structure variable */
+/** Call the Post Structure and Navigation class variables */
 global $opus_nav, $opus_structure;
 
 /** Display the post */
 $opus_structure->opus_post_title();
-$opus_structure->opus_post_byline( array( 'tempus' => 'time' ) );
+$opus_structure->opus_post_byline( array( 'show_mod_author' => true ) );
 if ( ! is_single() ) {
     $opus_structure->opus_primus_comments_link();
 }
