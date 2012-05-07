@@ -252,8 +252,14 @@ class OpusPrimusPostStructures {
          * post author or another author.
          */
         $mod_author_phrase = ' ';
-        /** Compare user IDs */
-        if ( $opus_author_id !== $last_user->ID ) {
+        /**
+         * Check last_user ID exists in database; and, then compare user IDs.
+         * If the last user is not in the database an error will occur, and if
+         * the last user is not in the database then the modifications should
+         * not be noted ( per developer prerogative ).
+         * @todo review as additional use-cases arise
+         */
+        if ( ( ! empty( $last_user ) ) && ( $opus_author_id !== $last_user->ID ) ) {
             $mod_author_phrase .= __( 'Last modified by %1$s %2$s on %3$s at %4$s.', 'opusprimus' );
             $mod_author_avatar = get_avatar( $last_user->user_email, $line_height );
 
