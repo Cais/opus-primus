@@ -31,12 +31,9 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-/** Do not delete these lines */
-if ( !empty( $_SERVER['SCRIPT_FILENAME'] ) && 'comments.php' == basename( $_SERVER['SCRIPT_FILENAME'] ) )
-    die ( __( 'Please do not load this page directly. Thanks!', 'opusprimus' ) );
-if ( post_password_required() ) { ?>
-    <p class="nocomments"><?php _e( 'This post is password protected. Enter the password to view comments.', 'opusprimus' ); ?></p>
-<?php
+/** Conditional check for password protected posts ... no comments for you! */
+if ( post_password_required() ) {
+    _e( 'This post is password protected. Enter the password to view comments.', 'opusprimus' );
     return;
 }
 
@@ -80,13 +77,16 @@ add_filter( 'comment_class', 'opus_primus_comment_author' );
 
 /** Show the comments */
 if ( have_comments() ) : ?>
-    <div id="comments"><?php comments_number(); ?></div>
-    <ul>
-        <?php wp_list_comments(); ?>
-    </ul>
-    <?php
-    global $opus_nav;
-    $opus_nav->opus_comments_navigation();
+    <div class="comments">
+        <div class="comments-number"><?php comments_number(); ?></div>
+        <ul class="comments-list">
+            <?php wp_list_comments(); ?>
+        </ul>
+        <?php
+        global $opus_nav;
+        $opus_nav->opus_comments_navigation(); ?>
+    </div><!-- .comments -->
+<?php
 else :
     /** This is displayed if there are no comments so far*/
     if ( 'open' == $post->comment_status ) :
@@ -95,7 +95,7 @@ else :
     else :
         /** Comments are closed */
         if ( ! is_page() ) {
-            printf( __( 'New comments are not being accepted at this time, please feel free to contact the post author directly.', 'opusprimus' ) );
+            _e( 'New comments are not being accepted at this time, please feel free to contact the post author directly.', 'opusprimus' );
         }
     endif;
 endif;

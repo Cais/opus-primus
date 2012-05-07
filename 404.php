@@ -1,14 +1,10 @@
 <?php
 /**
- * Opus Primus
- * A WordPress Framework Theme.
+ * 404 Template
+ * Displays when a 404 error is produced, such as when a page does not exist.
  *
  * @package     OpusPrimus
  * @since       0.1
- *
- * @internal    RECOMMENDED HTML5
- * @internal    RECOMMENDED CSS3
- * @internal    REQUIRED    WordPress 3.4
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
  * @copyright   Copyright (c) 2012, Opus Primus
@@ -35,19 +31,3 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
-
-get_header();
-
-global $opus_nav, $opus_structure;
-if ( have_posts() ):
-    while ( have_posts() ):
-        the_post();
-        get_template_part( 'loops/opus-primus', get_post_format() );
-    endwhile;
-else:
-    $opus_structure->opus_search();
-endif;
-$opus_nav->opus_posts_link();
-
-get_sidebar();
-get_footer();
