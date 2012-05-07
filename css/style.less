@@ -32,8 +32,12 @@
 
 /** Table of Contents ------------------------------------------------------- */
 /**
- * === Constants ===
+ * === Variables ===
  * - relative sizes - 100%, 200%, 300%, etc.
+ *
+ * === Clearance ===
+ * - clear left, right, and both
+ * - all elements that require clear: both
  *
  * === Fade Colors and Directions ===
  * - start and end colors as well as not supported fade color
@@ -45,13 +49,34 @@
  */
 /** End: Table of Contents -------------------------------------------------- */
 
-/** === Constants === ------------------------------------------------------- */
+/** === Variables === ------------------------------------------------------- */
 /** relative sizes ---------------------------------------------------------- */
 @all-in: 100%;
 @double: 200%;
 @triple: 300%;
 
-/** End: Constants ---------------------------------------------------------- */
+/** End: Variables ---------------------------------------------------------- */
+
+/** === Clearance === ------------------------------------------------------- */
+/** Micro Clearfix ---------------------------------------------------------- */
+.cf:before, .cf:after { content: ""; display: table; }
+.cf:after { clear: both; }
+.cf { zoom: 1; }
+
+/** Generic clearing classes ------------------------------------------------ */
+.clear { clear: both; }
+.clr-l { clear: left; }
+.clr-r { clear: right; }
+
+/** All elements requiring clear: both -------------------------------------- */
+.navigation,
+.post-title,
+.meta-byline,
+.meta-tags,
+.author.details {
+    .clear;
+}
+/** End: Clearance ---------------------------------------------------------- */
 
 /** === Fade Colors and Directions === -------------------------------------- */
 @fade-not: #e8e8e8;

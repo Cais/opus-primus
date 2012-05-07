@@ -51,7 +51,7 @@ class OpusPrimusPostStructures {
         do_action( 'opus_before_post_title' );
 
         /** The Post Title */ ?>
-        <h2><?php the_title(); ?></h2>
+        <h2 class="post-title"><?php the_title(); ?></h2>
 
         <?php
         /** Add empty hook after the post title */
