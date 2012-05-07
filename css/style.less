@@ -73,6 +73,8 @@
 .post-title,
 .meta-byline,
 .meta-tags,
+.more-link,
+.comments-link,
 .author.details {
     .clear;
 }
@@ -80,8 +82,12 @@
 
 /** === Fade Colors and Directions === -------------------------------------- */
 @fade-not: #e8e8e8;
+/* @fade-not: purple; */
 @fade-to: #ffffff;
+/* @fade-to: lighten( @fade-not, 100% ); */
 @fade-from: #cacaca;
+/* @fade-from: darken( @fade-not, 10% ); */
+/* @fade-from: @fade-not * .5; */
 
 .fade-right {
     /* for browsers not supporting gradient without image */
