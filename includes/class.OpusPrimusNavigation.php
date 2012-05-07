@@ -53,7 +53,7 @@ class OpusPrimusNavigation {
         do_action( 'opus_before_links_pages' );
 
         /** Linking pages navigation */ ?>
-        <div class="navigation link-pages">
+        <div class="navigation link-pages cf">
             <?php wp_link_pages(); ?>
         </div>
 
@@ -79,7 +79,7 @@ class OpusPrimusNavigation {
         do_action( 'opus_before_posts_link' );
 
         /** Posts link navigation */ ?>
-        <div class="navigation posts-link">
+        <div class="navigation posts-link cf">
             <div class="right">
                 <?php next_posts_link(); ?>
             </div>
@@ -110,7 +110,7 @@ class OpusPrimusNavigation {
         do_action( 'opus_before_post_link' );
 
         /** Post link navigation */ ?>
-        <div class="navigation post-link">
+        <div class="navigation post-link cf">
             <div class="right">
                 <?php next_post_link(); ?>
             </div>
@@ -234,7 +234,7 @@ class OpusPrimusNavigation {
         /** Add empty hook before comments link */
         do_action( 'opus_before_comments_link' ); ?>
 
-        <div class="navigation comment-link">
+        <div class="navigation comment-link cf">
             <div class="left"><?php previous_comments_link() ?></div>
             <div class="right"><?php next_comments_link() ?></div>
         </div>

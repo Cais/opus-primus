@@ -80,9 +80,9 @@ add_filter( 'comment_class', 'opus_primus_comment_author' );
 
 /** Show the comments */
 if ( have_comments() ) : ?>
-    <h4 id="comments"><?php comments_number( __( 'No Comments', 'shades' ), __( 'One Comment', 'shades' ), __( '% Comments', 'shades' ) );?></h4>
-    <ul class="commentlist" id="singlecomments">
-        <?php wp_list_comments( array( 'avatar_size' => 60, 'reply_text' => __( '&raquo; Reply to this Comment &laquo;', 'shades' ) ) ); ?>
+    <div id="comments"><?php comments_number(); ?></div>
+    <ul>
+        <?php wp_list_comments(); ?>
     </ul>
     <?php
     global $opus_nav;
@@ -91,8 +91,12 @@ else :
     /** This is displayed if there are no comments so far*/
     if ( 'open' == $post->comment_status ) :
         /** If comments are open, but there are no comments. */
+        _e( 'Start a discussion ...', 'opusprimus' );
     else :
         /** Comments are closed */
+        if ( ! is_page() ) {
+            printf( __( 'New comments are not being accepted at this time, please feel free to contact the post author directly.', 'opusprimus' ) );
+        }
     endif;
 endif;
 comment_form();

@@ -38,7 +38,9 @@ global $opus_nav, $opus_structure;
 /** Display the post */
 $opus_structure->opus_post_title();
 $opus_structure->opus_post_byline( array( 'tempus' => 'time' ) );
-$opus_structure->opus_primus_comments_link();
+if ( ! is_single() ) {
+    $opus_structure->opus_primus_comments_link();
+}
 $opus_structure->opus_post_content();
 $opus_structure->opus_primus_meta_tags();
 $opus_nav->opus_link_pages();
