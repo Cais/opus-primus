@@ -51,6 +51,9 @@
 
 /** === Variables === ------------------------------------------------------- */
 /** relative sizes ---------------------------------------------------------- */
+@quarter: 25%;
+@third: 33%;
+@half: 50%;
 @all-in: 100%;
 @double: 200%;
 @triple: 300%;
@@ -77,6 +80,27 @@
     .clear;
 }
 /** End: Clearance ---------------------------------------------------------- */
+
+/** === Decorations === ----------------------------------------------------- */
+/** Borders ----------------------------------------------------------------- */
+@border-color: #000000;
+
+.top-line-thin( @radius: 5px ) {
+    border-top-color: @border-color;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-left-radius: @radius;
+    border-top-right-radius: @radius;
+}
+.bottom-line-thin( @radius: 5px ) {
+    border-bottom-color: @border-color;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-left-radius: @radius;
+    border-bottom-right-radius: @radius;
+}
+
+/** End: Decorations -------------------------------------------------------- */
 
 /** === Fade Colors and Directions === -------------------------------------- */
 @fade-not: #e8e8e8;
@@ -118,7 +142,13 @@
 
 .meta-byline {
     .fade-right;
+    // .top-line-thin;
     line-height: @double;
+}
+
+.meta-tags {
+    // .bottom-line-thin;
+    font-size: @half + @quarter;
 }
 
 

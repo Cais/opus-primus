@@ -53,9 +53,9 @@ class OpusPrimusNavigation {
         do_action( 'opus_before_links_pages' );
 
         /** Linking pages navigation */ ?>
-        <div class="navigation link-pages cf">
+        <p class="navigation link-pages cf">
             <?php wp_link_pages(); ?>
-        </div>
+        </p>
 
         <?php
         /** Add empty hook after linking pages navigation of a multi-page post */
@@ -79,14 +79,14 @@ class OpusPrimusNavigation {
         do_action( 'opus_before_posts_link' );
 
         /** Posts link navigation */ ?>
-        <div class="navigation posts-link cf">
+        <p class="navigation posts-link cf">
             <div class="right">
                 <?php next_posts_link(); ?>
             </div>
             <div class="left">
                 <?php previous_posts_link(); ?>
             </div>
-        </div>
+        </p>
 
         <?php
         /** Add empty hook after posts link */
@@ -110,14 +110,14 @@ class OpusPrimusNavigation {
         do_action( 'opus_before_post_link' );
 
         /** Post link navigation */ ?>
-        <div class="navigation post-link cf">
+        <p class="navigation post-link cf">
             <div class="right">
                 <?php next_post_link(); ?>
             </div>
             <div class="left">
                 <?php previous_post_link(); ?>
             </div>
-        </div>
+        </p>
 
         <?php
         /** Add empty hook after post link */
@@ -234,10 +234,10 @@ class OpusPrimusNavigation {
         /** Add empty hook before comments link */
         do_action( 'opus_before_comments_link' ); ?>
 
-        <div class="navigation comment-link cf">
+        <p class="navigation comment-link cf">
             <div class="left"><?php previous_comments_link() ?></div>
             <div class="right"><?php next_comments_link() ?></div>
-        </div>
+        </p>
 
         <?php
         /** Add empty hook after comments link */

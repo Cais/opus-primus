@@ -338,7 +338,7 @@ class OpusPrimusPostStructures {
         /**
          * Prints the "opus_posted_in" string, replacing the placeholders
          */
-        printf( '<div class="meta-tags">' . $opus_posted_in . '</div>',
+        printf( '<p class="meta-tags">' . $opus_posted_in . '</p>',
             $this->opus_primus_no_title_link( $anchor_word ),
             get_the_category_list( ', ' ),
             $opus_tag_list,
