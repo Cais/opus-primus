@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="Change DIV to P; added some LESS elements; and, added styles">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="Change DIV to P; added some LESS elements; and, added styles" />
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
