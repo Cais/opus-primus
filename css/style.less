@@ -33,14 +33,19 @@
 /** Table of Contents ------------------------------------------------------- */
 /**
  * === Variables ===
- * - relative sizes - 100%, 200%, 300%, etc.
+ * - Basic Colors
+ * - Relative Sizes - 100%, 200%, 300%, etc.
  *
  * === Clearance ===
  * - clear left, right, and both
  * - all elements that require clear: both
  *
+ * === Decorations ===
+ * - Borders
+ * - Corners
+ *
  * === Fade Colors and Directions ===
- * - start and end colors as well as not supported fade color
+ * - from and to colors as well as not supported fade color
  * - directions: left to right; right to left
  *
  * === Post Structures ===
@@ -50,7 +55,12 @@
 /** End: Table of Contents -------------------------------------------------- */
 
 /** === Variables === ------------------------------------------------------- */
-/** relative sizes ---------------------------------------------------------- */
+/** Basic Colors ( alphabetically ) ----------------------------------------- */
+@background: #fff;
+@border-color: #000;
+@color: #000;
+
+/** Relative Sizes ---------------------------------------------------------- */
 @quarter: 25%;
 @third: 33%;
 @half: 50%;
@@ -66,7 +76,7 @@
 .cf:after { clear: both; }
 .cf { zoom: 1; }
 
-/** Generic clearing classes ------------------------------------------------ */
+/** Generic Clearing Classes ------------------------------------------------ */
 .clear { clear: both; }
 .clr-l { clear: left; }
 .clr-r { clear: right; }
@@ -83,8 +93,6 @@
 
 /** === Decorations === ----------------------------------------------------- */
 /** Borders ----------------------------------------------------------------- */
-@border-color: #000000;
-
 .top-line-thin( @radius: 5px ) {
     border-top-color: @border-color;
     border-top-width: 1px;
@@ -98,6 +106,13 @@
     border-bottom-style: solid;
     border-bottom-left-radius: @radius;
     border-bottom-right-radius: @radius;
+}
+
+/** Corners ----------------------------------------------------------------- */
+.rounded-corners ( @radius: 5px ) {
+    border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
 }
 
 /** End: Decorations -------------------------------------------------------- */
@@ -139,17 +154,13 @@
 /** End: Fade Colors and Directions ----------------------------------------- */
 
 /** === Post Structures === ------------------------------------------------- */
-
 .meta-byline {
     .fade-right;
-    // .top-line-thin;
     line-height: @double;
 }
 
 .meta-tags {
-    // .bottom-line-thin;
     font-size: @half + @quarter;
 }
-
 
 /** End: Post Structures ---------------------------------------------------- */

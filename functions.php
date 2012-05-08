@@ -150,7 +150,7 @@ if ( ! function_exists( 'opus_enqueue_comment_reply' ) ) {
         }
     }
 }
-add_action( 'wp_enqueue_scripts', 'opus_enqueue_comment_reply' );
+add_action( 'comment_form_before', 'opus_enqueue_comment_reply' );
 
 
 if ( ! function_exists( 'opus_wp_title' ) ) {
