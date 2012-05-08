@@ -45,7 +45,7 @@ if ( have_posts() ):
         get_template_part( 'loops/opus-primus', get_post_format() );
     endwhile;
 else:
-    $opus_structure->opus_search();
+    $opus_structure->opus_primus_search();
 endif;
 $opus_nav->opus_posts_link();
 

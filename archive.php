@@ -45,17 +45,17 @@ if ( have_posts() ):
     while ( have_posts() ):
         the_post();
 
-        $opus_structure->opus_post_title();
-        $opus_structure->opus_post_byline( array( 'tempus' => 'time' ) );
+        $opus_structure->opus_primus_post_title();
+        $opus_structure->opus_primus_post_byline( array( 'tempus' => 'time' ) );
         $opus_structure->opus_primus_comments_link();
-        $opus_structure->opus_post_excerpt();
+        $opus_structure->opus_primus_post_excerpt();
         $opus_structure->opus_primus_meta_tags();
         $opus_nav->opus_link_pages();
 
         comments_template();
     endwhile;
 else:
-    $opus_structure->opus_search();
+    $opus_structure->opus_primus_search();
 endif;
 
 get_sidebar( get_post_format() );

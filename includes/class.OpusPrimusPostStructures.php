@@ -37,7 +37,7 @@ class OpusPrimusPostStructures {
     function __construct() {}
 
     /**
-     * Opus Post Title
+     * Opus Primus Post Title
      * Outputs the post title
      *
      * @package OpusPrimus
@@ -46,7 +46,7 @@ class OpusPrimusPostStructures {
      * @uses    apply_filters
      * @uses    the_title
      */
-    function opus_post_title() {
+    function opus_primus_post_title() {
         /** Add empty hook before the post title */
         do_action( 'opus_before_post_title' );
 
@@ -60,7 +60,7 @@ class OpusPrimusPostStructures {
     }
 
     /**
-     * Opus Primus Use Posted
+     * Opus Primus No Title Link
      *
      * This returns a URL to the post using the anchor text 'Posted' in the meta
      * details with the post excerpt as the URL title; or, returns the word
@@ -88,7 +88,7 @@ class OpusPrimusPostStructures {
     }
 
     /**
-     * Opus Primus Comment Count
+     * Opus Primus Comments Link
      * Displays amount of approved comments the post or page has
      *
      * @package OpusPrimus
@@ -127,7 +127,7 @@ class OpusPrimusPostStructures {
     }
 
     /**
-     * Opus Post By Line
+     * Opus Primus Post By Line
      * Outputs post meta details consisting of a configurable anchor_word for post
      * link anchor text, the date and time posted, and the post author. The post
      * author is also linked to the author's archive page.
@@ -141,7 +141,7 @@ class OpusPrimusPostStructures {
      * @internal    @param   string $show_mod_author ( default = false )
      * @internal    @param   string $tempus ( default = date ) - date|time
      *
-     * @example     opus_post_byline( array( 'anchor_word' => 'Written', 'tempus' => 'time' ) )
+     * @example     opus_primus_post_byline( array( 'anchor_word' => 'Written', 'tempus' => 'time' ) )
      * @internal    This example will use the word "Written" as the anchor text
      * if there is no title for the post; using 'time' will show the modified
      * post author if there is any difference in time while using the default
@@ -159,7 +159,7 @@ class OpusPrimusPostStructures {
      * @uses    opus_primus_no_title_link
      * @uses    wp_parse_args
      */
-    function opus_post_byline( $byline_args = '' ) {
+    function opus_primus_post_byline( $byline_args = '' ) {
         /** Set defaults */
         $defaults = array(
             'anchor_word'       => 'Posted',
@@ -352,7 +352,7 @@ class OpusPrimusPostStructures {
     }
 
     /**
-     * Opus Post Content
+     * Opus Primus Post Content
      * Outputs `the_content`
      *
      * @package OpusPrimus
@@ -361,7 +361,7 @@ class OpusPrimusPostStructures {
      * @uses    do_action
      * @uses    the_content
      */
-    function opus_post_content() {
+    function opus_primus_post_content() {
         /** Add empty hook before the content */
         do_action( 'opus_before_the_content' );
 
@@ -374,7 +374,7 @@ class OpusPrimusPostStructures {
     }
 
     /**
-     * Opus Post Excerpt
+     * Opus Primus Post Excerpt
      * Outputs `the_excerpt`
      *
      * @package OpusPrimus
@@ -383,7 +383,7 @@ class OpusPrimusPostStructures {
      * @uses    do_action
      * @uses    the_excerpt
      */
-    function opus_post_excerpt() {
+    function opus_primus_post_excerpt() {
         /** Add empty hook before the excerpt */
         do_action( 'opus_before_the_excerpt' );
 
@@ -396,7 +396,7 @@ class OpusPrimusPostStructures {
     }
 
     /**
-     * Opus Post Author
+     * Opus Primus Post Author
      * Outputs the author details: web address, email, and biography from the
      * user profile information - not designed for use in the post meta section.
      *
@@ -410,7 +410,7 @@ class OpusPrimusPostStructures {
      *
      * @todo Add more styling ... put a box around the output?
      */
-    function opus_post_author() {
+    function opus_primus_post_author() {
         /** Get and set variables */
         global $opus_author_id;
         if ( ! isset( $opus_author_id ) )
@@ -471,7 +471,7 @@ class OpusPrimusPostStructures {
     }
 
     /**
-     * Opus Search
+     * Opus Primus Search
      * Outputs message if no posts are found by 'the_Loop' query
      *
      * @package OpusPrimus
@@ -482,12 +482,17 @@ class OpusPrimusPostStructures {
      * @uses    get_search_form
      * @uses    get_search_query
      */
-    function opus_search(){
+    function opus_primus_search(){
         /** Add empty hook before no posts results from the_loop query */
         do_action( 'opus_before_search' );
 
-        /** No results from the_loop query */
-        printf( __( 'Search Results for: %s', 'opus' ), '<span>' . esc_html( get_search_query() ) . '</span>' );
+        /** No results from the_loop query */ ?>
+        <h2 class="post-title">
+            <?php printf( __( 'Search Results for: %s', 'opus' ), '<span class="search-results">' . esc_html( get_search_query() ) . '</span>' ); ?>
+        </h2>
+
+        <?php
+        printf ( '<div class="no-results">%1$s</div>', __( 'No results were found. Please feel free to search again.', 'opusprimus' ) );
         get_search_form();
 
         /** Add empty hook after no posts results from the_loop query */

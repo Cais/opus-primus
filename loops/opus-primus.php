@@ -36,15 +36,15 @@
 global $opus_nav, $opus_structure;
 
 /** Display the post */
-$opus_structure->opus_post_title();
-$opus_structure->opus_post_byline( array( 'show_mod_author' => true ) );
+$opus_structure->opus_primus_post_title();
+$opus_structure->opus_primus_post_byline( array( 'show_mod_author' => true ) );
 if ( ! is_single() ) {
     $opus_structure->opus_primus_comments_link();
 }
-$opus_structure->opus_post_content();
+$opus_structure->opus_primus_post_content();
 $opus_structure->opus_primus_meta_tags();
 $opus_nav->opus_link_pages();
 if ( is_single() ) {
-    $opus_structure->opus_post_author();
+    $opus_structure->opus_primus_post_author();
 }
 comments_template();

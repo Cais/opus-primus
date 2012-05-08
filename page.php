@@ -37,13 +37,13 @@ get_header();
 if ( have_posts() ):
     while ( have_posts() ):
         the_post();
-        $opus_structure->opus_post_title();
-        $opus_structure->opus_post_content();
-        $opus_structure->opus_post_byline();
-        $opus_structure->opus_post_author();
+        $opus_structure->opus_primus_post_title();
+        $opus_structure->opus_primus_post_content();
+        $opus_structure->opus_primus_post_byline();
+        $opus_structure->opus_primus_post_author();
     endwhile;
 else:
-    $opus_structure->opus_search();
+    $opus_structure->opus_primus_search();
 endif;
 
 comments_template();

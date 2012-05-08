@@ -31,3 +31,19 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
+
+get_header( 'search' );
+
+global $opus_nav, $opus_structure;
+if ( have_posts() ):
+    while ( have_posts() ):
+        the_post();
+        get_template_part( 'loops/opus-primus', get_post_format() );
+    endwhile;
+else:
+    $opus_structure->opus_primus_search();
+endif;
+$opus_nav->opus_posts_link();
+
+get_sidebar( 'search' );
+get_footer( 'search' );
