@@ -492,8 +492,17 @@ class OpusPrimusPostStructures {
         </h2>
 
         <?php
-        printf ( '<div class="no-results">%1$s</div>', __( 'No results were found. Please feel free to search again.', 'opusprimus' ) );
+        printf ( '<p class="no-results">%1$s</p>', __( 'No results were found. Please feel free to search again.', 'opusprimus' ) );
         get_search_form();
+
+        /**
+         * Flesh out the no results display with more information, such as:
+         * @todo Add wp_list_categories
+         * @todo Add wp_tag_cloud
+         * @todo Add wp_list_pages
+         *
+         * @todo Add custom searchform.php
+         */
 
         /** Add empty hook after no posts results from the_loop query */
         do_action( 'opus_after_search' );
