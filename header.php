@@ -56,8 +56,7 @@
         <nav>
             <?php
             global $opus_nav;
-            $opus_nav->opus_primary_menu();
-            // $opus_nav->opus_secondary_menu(); ?>
+            $opus_nav->opus_primary_menu(); ?>
         </nav>
 
     </header>

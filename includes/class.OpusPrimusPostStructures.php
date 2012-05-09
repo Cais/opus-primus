@@ -521,6 +521,8 @@ class OpusPrimusPostStructures {
             'number'    => 10,
         ) );
 
+        /** @todo Add a menu here? Featured pages? */
+
         /** Add empty hook after no posts results from the_loop query */
         do_action( 'opus_after_search' );
 
