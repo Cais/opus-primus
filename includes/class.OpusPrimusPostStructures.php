@@ -499,7 +499,6 @@ class OpusPrimusPostStructures {
 
         /**
          * Flesh out the no results display with more information, such as:
-         * @todo Add wp_tag_cloud
          * @todo Add wp_list_pages
          *
          * @todo Add custom searchform.php
@@ -507,8 +506,20 @@ class OpusPrimusPostStructures {
         printf( '<p class="no-results">%1$s</p>', __( '... or try one of the links below.', 'opusprimus' ) );
 
         global $opus_archive;
-        $opus_archive->opus_primus_top_10_categories_archive();
-        $opus_archive->opus_primus_archive_cloud();
+        $opus_archive->opus_primus_categories_archive( array(
+            'orderby'       => 'count',
+            'order'         => 'desc',
+            'show_count'    => 1,
+            'hierarchical'  => 0,
+            'title_li'      => '<span class="title">' . __( 'Top 10 Categories by Post Count:', 'opusprimus' ) . '</span>',
+            'number'        => 10,
+        ) );
+        $opus_archive->opus_primus_archive_cloud( array(
+            'taxonomy'  => 'post_tag',
+            'orderby'   => 'count',
+            'order'     => 'DESC',
+            'number'    => 10,
+        ) );
 
         /** Add empty hook after no posts results from the_loop query */
         do_action( 'opus_after_search' );

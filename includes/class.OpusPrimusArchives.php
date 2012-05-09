@@ -41,49 +41,74 @@ class OpusPrimusArchives {
     /**
      * Opus Primus Top 10 Categories Archive
      * Displays the top 10 categories by post count as links to the category
-     * archive page.
+     * archive page. Uses a specific set of `wp_list_categories` parameters that
+     * can be overloaded with other parameters.
      *
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    get_categories
-     * @uses    get_category_link
+     * @param   array|string $category_top_10_args
+     *
+     * @uses    wp_list_categories
+     * @uses    wp_parse_args
      */
-    function opus_primus_top_10_categories_archive() {
+    function opus_primus_top_10_categories_archive( $category_top_10_args = '' ) {
+        /** Add empty hook before category archive */
+        do_action( 'opus_before_category_archive' );
+
+        /** @var $defaults - Set initial parameters */
+        $defaults = array(
+            'orderby'       => 'count',
+            'order'         => 'desc',
+            'show_count'    => 1,
+            'hierarchical'  => 0,
+            'title_li'      => '<span class="title">' . __( 'Top 10 Categories by post count:', 'opusprimus' ) . '</span>',
+            'number'        => 10,
+        );
+        $category_top_10_args = wp_parse_args( (array) $category_top_10_args, $defaults );
         echo '<div class="archive category list top10 cf"><ul>';
-            $args = array(
-                'orderby'       => 'count',
-                'order'         => 'desc',
-                'show_count'    => 1,
-                'hierarchical'  => 0,
-                'title_li'      => '<span class="title">' . __( 'Top 10 Categories by post count:', 'opusprimus' ) . '</span>',
-                'number'        => 10,
-            );
-            wp_list_categories( $args );
+            wp_list_categories( $category_top_10_args );
         echo '</ul></div>';
+
+        /** Add empty hook after category archive */
+        do_action( 'opus_after_category_archive' );
     }
 
     /**
      * Opus Primus Category Archive
      * Displays all of the categories with links to their respective category
-     * archive page.
+     * archive page using `wp_list_categories` and all of its parameters.
+     *
+     * @link    http://codex.wordpress.org/Function_Reference/wp_list_categories
+     * @example opus_primus_categories_archive( array( 'number' => 12 ) );
+     * @internal The above example will use the default parameters but limit the output to 12 items
      *
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    get_categories
-     * @uses    get_category_link
+     * @param   array|string $category_args
+     *
+     * @uses    wp_list_categories
+     * @uses    wp_parse_args
      */
-    function opus_primus_categories_archive() {
-        echo '<ul class="archive category list cf">';
-        $args = array(
+    function opus_primus_categories_archive( $category_args = '' ) {
+        /** Add empty hook before category archive */
+        do_action( 'opus_before_category_archive' );
+
+        /** @var $defaults - set the default parameters */
+        $defaults = array(
             'orderby'       => 'name',
             'order'         => 'ASC',
             'hierarchical'  => 0,
             'title_li'      => __( 'All Categories:', 'opusprimus' ),
         );
-        wp_list_categories( $args );
+        $category_args = wp_parse_args( (array) $category_args, $defaults );
+        echo '<ul class="archive category list cf">';
+            wp_list_categories( $category_args );
         echo '</ul>';
+
+        /** Add empty hook after category archive */
+        do_action( 'opus_after_category_archive' );
     }
 
     /**
@@ -93,7 +118,8 @@ class OpusPrimusArchives {
      * output.
      *
      * @link    http://codex.wordpress.org/Function_Reference/wp_tag_cloud
-     * @example opus_primus_archive_cloud( array( 'taxonomy' => 'post_tag', 'number' => 10 ) ); - shows only the top 10 post tags.
+     * @example opus_primus_archive_cloud( array( 'taxonomy' => 'post_tag', 'number' => 10 ) );
+     * @Internal The above example shows only the top 10 post tags.
      *
      * @package OpusPrimus
      * @since   0.1
@@ -103,10 +129,11 @@ class OpusPrimusArchives {
      *
      * @uses    wp_parse_args
      * @uses    wp_tag_cloud
-     *
-     * @todo Review output if format is set to flat
      */
     function opus_primus_archive_cloud( $cloud_args = '' ) {
+        /** Add empty hook before archive cloud */
+        do_action( 'opus_before_archive_cloud' );
+
         /** @var $defaults - initial values to be used as parameters */
         $defaults = array(
             'taxonomy'  => array(
@@ -124,7 +151,7 @@ class OpusPrimusArchives {
         /** Top 'number' of displayed tags set */
         if ( isset( $cloud_args['number'] ) && ( 'DESC' == $cloud_args['order'] ) ) {
             $cloud_classes .= 'top' . $cloud_args['number'];
-            $cloud_title = sprintf( __( 'The Top %1$s Tags Cloud.', 'opusprimus' ), $cloud_args['number'] );
+            $cloud_title = sprintf( __( 'The Top %1$s Tags Cloud:', 'opusprimus' ), $cloud_args['number'] );
         }
 
         /** If a cloud class has been created then make sure to add a space before so it will be properly added to the class list */
@@ -134,7 +161,10 @@ class OpusPrimusArchives {
 
         /** Default title */
         if ( empty( $cloud_title ) )
-            $cloud_title = __( 'The Cloud', 'opusprimus' );
+            $cloud_title = __( 'The Cloud:', 'opusprimus' );
+
+        if ( isset( $cloud_args['format'] ) && ( 'flat' == $cloud_args['format'] ) )
+            $cloud_title .= '<br />';
 
         /**
          * Output the cloud with a title wrapped in an element with dynamic
@@ -145,6 +175,9 @@ class OpusPrimusArchives {
                 wp_tag_cloud( $cloud_args );
             echo '</li></ul>';
         echo '</div>';
+
+        /** Add empty hook after archive cloud */
+        do_action( 'opus_after_archive_cloud' );
     }
 
 }
