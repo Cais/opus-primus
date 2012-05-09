@@ -1,5 +1,5 @@
 === Opus Primus readme.txt ===
-* Last revised April 29, 2012
+* Last revised May 9, 2012
 
 == Contents ==
 * Copyright
@@ -34,10 +34,8 @@ The license for this software can also likely be found here:
 http://www.gnu.org/licenses/gpl-2.0.html
 
 == Licenses ==
-All theme items are licensed under the GNU General Public License v2; or, as
-the case may be, individually noted. This may not be construed as overriding
-any item with a previously applied license, stated or not, which will take
-precedence.
+All items are licensed under the GNU General Public License v2; or, as the case
+may be, individually noted below.
 
 * Normalize.css is a project by Nicolas Gallagher and Jonathan Neal. A minimized
 version is used. Licensed as Public Domain
@@ -47,8 +45,21 @@ version is used. Licensed as Public Domain
 Licensed under Apache v2.0
 - for more information see https://github.com/cloudhead/less.js
 
+This above may not be construed as overriding any item with a previously written
+and applied license, stated or not, which will take precedence over anything
+written here.
+
 == Screenshots ==
 
 == Basic FAQ ==
+Q: How do I modify an existing function from one of the classes?
+Most WordPress functions included with the theme will have their own filter,
+otherwise it would be recommended to extend the class and overload the theme
+function you are trying to modify.
+
+Q: Are Child-Themes supported and can they have their own LESS stylesheet?
+Simply put, yes. Opus Primus supports WordPress Child-Themes like any other well
+made theme. A very simple Child-Theme template is available upon request if you
+need help getting started. Please email in.opus.primus@gmail.com for more info.
 
 == Notes ==
