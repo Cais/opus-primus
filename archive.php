@@ -55,7 +55,7 @@ if ( have_posts() ):
         comments_template();
     endwhile;
 else:
-    $opus_structure->opus_primus_search();
+    $opus_structure->opus_primus_search_results();
 endif;
 
 get_sidebar( get_post_format() );

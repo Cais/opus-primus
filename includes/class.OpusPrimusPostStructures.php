@@ -477,12 +477,14 @@ class OpusPrimusPostStructures {
      * @package OpusPrimus
      * @since   0.1
      *
+     * @uses    $opus_archive ( global )
      * @uses    do_action
      * @uses    esc_html
      * @uses    get_search_form
      * @uses    get_search_query
+     * @uses    opus_primus_top_10_categories_archive
      */
-    function opus_primus_search(){
+    function opus_primus_search_results(){
         /** Add empty hook before no posts results from the_loop query */
         do_action( 'opus_before_search' );
 

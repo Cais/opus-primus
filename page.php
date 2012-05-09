@@ -43,7 +43,7 @@ if ( have_posts() ):
         $opus_structure->opus_primus_post_author();
     endwhile;
 else:
-    $opus_structure->opus_primus_search();
+    $opus_structure->opus_primus_search_results();
 endif;
 
 comments_template();
