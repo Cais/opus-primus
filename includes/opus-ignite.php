@@ -37,6 +37,8 @@ define( 'OPUS_INC', get_template_directory() . '/includes/' );
 define( 'OPUS_JS', get_template_directory_uri() . '/js/' );
 define( 'OPUS_CSS', get_template_directory_uri() . '/css/' );
 
+/** Add Archives */
+require_once( OPUS_INC . 'class.OpusPrimusArchives.php' );
 /** Add Post Structures */
 require_once( OPUS_INC . 'class.OpusPrimusPostStructures.php' );
 /** Add Navigation */

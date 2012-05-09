@@ -114,6 +114,10 @@
     -webkit-border-radius: @radius;
     -moz-border-radius: @radius;
 }
+.rounded-box ( @radius: 5px ) {
+    .rounded-corners ( @radius );
+    border: 1px solid #000000;
+}
 
 /** End: Decorations -------------------------------------------------------- */
 
@@ -164,3 +168,14 @@
 }
 
 /** End: Post Structures ---------------------------------------------------- */
+
+/** === Archives === -------------------------------------------------------- */
+div.archive.category.list ul li {
+    float: left;
+    list-style-type: none;
+    padding: 5px;
+    .rounded-box ( 10px ) ;
+    margin: 0 auto;
+}
+div.archive.category.list ul li ul li { border: none; }
+/** End: Archives ----------------------------------------------------------- */
