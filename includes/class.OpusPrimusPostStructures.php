@@ -508,6 +508,7 @@ class OpusPrimusPostStructures {
 
         global $opus_archive;
         $opus_archive->opus_primus_top_10_categories_archive();
+        $opus_archive->opus_primus_archive_cloud();
 
         /** Add empty hook after no posts results from the_loop query */
         do_action( 'opus_after_search' );
