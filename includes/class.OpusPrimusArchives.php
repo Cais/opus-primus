@@ -132,6 +132,7 @@ class OpusPrimusArchives {
             $cloud_classes = ' ' . $cloud_classes;
         }
 
+        /** Default title */
         if ( empty( $cloud_title ) )
             $cloud_title = __( 'The Cloud', 'opusprimus' );
 

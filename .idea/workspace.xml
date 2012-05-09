@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.less" afterPath="$PROJECT_DIR$/css/style.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusArchives.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusArchives.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,7 +37,7 @@
       <file leaf-file-name="class.OpusPrimusArchives.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusArchives.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="32" selection-start="2748" selection-end="2773" vertical-scroll-proportion="0.25373134">
+            <state line="134" column="25" selection-start="4612" selection-end="4612" vertical-scroll-proportion="0.60505164">
               <folding />
             </state>
           </provider>
@@ -585,7 +583,11 @@
       <created>1336566386004</created>
       <updated>1336566386004</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Opus Primus Archive Cloud">
+      <created>1336582661968</created>
+      <updated>1336582661968</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -663,7 +665,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic FAQ and License Verbiage updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Opus Primus Archive Cloud" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -676,7 +678,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Add Opus Post Link function" />
     <MESSAGE value="Added specificity classes to link navigation functions" />
     <MESSAGE value="Add more details to documentation" />
     <MESSAGE value="Add more details to widgets documentation" />
@@ -701,6 +702,7 @@
     <MESSAGE value="Change DIV to P; added some LESS elements; and, added styles" />
     <MESSAGE value="Add a few general LESS items; change comment reply script hook" />
     <MESSAGE value="Basic FAQ and License Verbiage updates" />
+    <MESSAGE value="Opus Primus Archive Cloud" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -773,13 +775,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="180" column="35" selection-start="5957" selection-end="5957" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="510" column="51" selection-start="18925" selection-end="18925" vertical-scroll-proportion="-23.5">
@@ -787,9 +782,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="180" column="35" selection-start="5957" selection-end="5957" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusArchives.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="32" selection-start="2748" selection-end="2773" vertical-scroll-proportion="0.25373134">
+        <state line="134" column="25" selection-start="4612" selection-end="4612" vertical-scroll-proportion="0.60505164">
           <folding />
         </state>
       </provider>
