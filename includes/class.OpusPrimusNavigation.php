@@ -40,24 +40,36 @@ class OpusPrimusNavigation {
     /**
      * Opus Link Pages
      * Outputs the navigation structure to move between multiple pages from the
-     * same post.
+     * same post. All parameters used by `wp_link_pages` can be passed through
+     * the function.
+     *
+     * @link    http://codex.wordpress.org/Function_Reference/wp_link_pages
+     * @example opus_link_pages( array( 'before' => '<p class="navigation link-pages cf">', 'after' => '</p>' ) );
+     * @internal The above example will output the `wp_link_pages` output in a
+     * wrapper consisting of a `p` tag with `classes`
      *
      * @package OpusPrimus
      * @since   0.1
      *
+     * @param   string|array $link_pages_args
+     *
      * @uses    do_action
      * @uses    wp_link_pages
      */
-    function opus_link_pages() {
+    function opus_link_pages( $link_pages_args = '' ) {
+        /** @var $defaults - initial values */
+        $defaults = array(
+            'before'    => '<p class="navigation link-pages cf">',
+            'after'     => '</p>',
+        );
+        $link_pages_args = wp_parse_args( (array) $defaults, $link_pages_args );
+
         /** Add empty hook before linking pages navigation of a multi-page post */
         do_action( 'opus_before_links_pages' );
 
-        /** Linking pages navigation */ ?>
-        <p class="navigation link-pages cf">
-            <?php wp_link_pages(); ?>
-        </p>
+        /** Linking pages navigation */
+        wp_link_pages( $link_pages_args );
 
-        <?php
         /** Add empty hook after linking pages navigation of a multi-page post */
         do_action( 'opus_after_link_pages' );
 
@@ -80,12 +92,8 @@ class OpusPrimusNavigation {
 
         /** Posts link navigation */ ?>
         <p class="navigation posts-link cf">
-            <div class="right">
-                <?php next_posts_link(); ?>
-            </div>
-            <div class="left">
-                <?php previous_posts_link(); ?>
-            </div>
+            <span class="right"><?php next_posts_link(); ?></span>
+            <span class="left"><?php previous_posts_link(); ?></span>
         </p>
 
         <?php
@@ -111,12 +119,8 @@ class OpusPrimusNavigation {
 
         /** Post link navigation */ ?>
         <p class="navigation post-link cf">
-            <div class="right">
-                <?php next_post_link(); ?>
-            </div>
-            <div class="left">
-                <?php previous_post_link(); ?>
-            </div>
+            <span class="right"><?php next_post_link(); ?></span>
+            <span class="left"><?php previous_post_link(); ?></span>
         </p>
 
         <?php
@@ -127,40 +131,49 @@ class OpusPrimusNavigation {
 
     /**
      * Opus Primus Primary Menu
-     * Define the primary menu parameters
+     * Define the primary menu parameters, these are passed through to the
+     * fallback function `opus_primus_page_menu`
+     *
+     * @link    http://codex.wordpress.org/Function_Reference/wp_nav_menu
      *
      * @package OpusPrimus
      * @since   0.1
      *
+     * @param   string|array $primary_menu_args
+     *
+     * @uses    opus_primus_page_menu
      * @uses    wp_nav_menu
+     * @uses    wp_parse_args
      */
-    function opus_primus_primary_menu() {
-        wp_nav_menu( array(
+    function opus_primus_primary_menu( $primary_menu_args = '' ) {
+        $defaults = array(
             'theme_location'    => 'primary',
             'menu_class'        => 'nav primary',
-            'fallback_cb'       => 'OpusPrimusNavigation::opus_primus_list_pages',
-        ) );
+            'fallback_cb'       => 'OpusPrimusNavigation::opus_primus_page_menu',
+        );
+        $primary_menu_args = wp_parse_args( (array) $defaults, $primary_menu_args );
+        wp_nav_menu( $primary_menu_args );
     }
 
     /**
-     * Opus Primus List Pages
-     * Callback function for the menu
+     * Opus Primus Page Menu
+     * Callback function for the wp_nav_menu call; accepts wp_nav_menu arguments
+     * passed through the callback function.
+     *
+     * @link    http://codex.wordpress.org/Function_Reference/wp_page_menu
      *
      * @package OpusPrimus
      * @since   0.1
      *
-     * @param   string|array $list_args
+     * @param   string|array $page_menu_args
      *
-     * @uses    wp_list_pages
+     * @uses    wp_page_menu
      * #uses    wp_parse_args
      */
-    function opus_primus_list_pages( $list_args = '' ) {
-        $defaults = array(
-            'title_li'  => '',
-        );
-        $list_args = wp_parse_args( (array) $defaults, $list_args ); ?>
-        <ul class="nav primary secondary"><?php wp_list_pages( $list_args ); ?></ul>
-    <?php
+    function opus_primus_page_menu( $page_menu_args = '' ) {
+        $defaults = array();
+        $page_menu_args = wp_parse_args( (array) $defaults, $page_menu_args );
+        wp_page_menu( $page_menu_args );
     }
 
     /**
@@ -188,19 +201,28 @@ class OpusPrimusNavigation {
 
     /**
      * Opus Primus Secondary Menu
-     * Define the secondary menu parameters
+     * Define the secondary menu parameters, these are passed through to the
+     * fallback function `opus_primus_page_menu`
+     *
+     * @link    http://codex.wordpress.org/Function_Reference/wp_nav_menu
      *
      * @package OpusPrimus
      * @since   0.1
      *
+     * @param   string|array $secondary_menu_args
+     *
+     * @uses    opus_primus_page_menu
      * @uses    wp_nav_menu
+     * @uses    wp_parse_args
      */
-    function opus_primus_secondary_menu() {
-        wp_nav_menu( array(
+    function opus_primus_secondary_menu( $secondary_menu_args = '' ) {
+        $defaults = array(
             'theme_location'    => 'secondary',
             'menu_class'        => 'nav secondary',
-            'fallback_cb'       => 'OpusPrimusNavigation::opus_primus_list_pages',
-        ) );
+            'fallback_cb'       => 'OpusPrimusNavigation::opus_primus_page_menu',
+        );
+        $secondary_menu_args = wp_parse_args( (array) $defaults, $secondary_menu_args );
+        wp_nav_menu( $secondary_menu_args );
     }
 
     /**
@@ -307,8 +329,8 @@ class OpusPrimusNavigation {
         do_action( 'opus_before_comments_link' ); ?>
 
         <p class="navigation comment-link cf">
-            <div class="left"><?php previous_comments_link() ?></div>
-            <div class="right"><?php next_comments_link() ?></div>
+            <span class="left"><?php previous_comments_link() ?></span>
+            <span class="right"><?php next_comments_link() ?></span>
         </p>
 
         <?php
