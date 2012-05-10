@@ -505,7 +505,9 @@ class OpusPrimusPostStructures {
          */
         printf( '<p class="no-results">%1$s</p>', __( '... or try one of the links below.', 'opusprimus' ) );
 
-        global $opus_archive;
+        /** Get the class variables */
+        global $opus_archive, $opus_nav;
+        /** Display a list of categories to choose from */
         $opus_archive->opus_primus_categories_archive( array(
             'orderby'       => 'count',
             'order'         => 'desc',
@@ -514,14 +516,15 @@ class OpusPrimusPostStructures {
             'title_li'      => '<span class="title">' . __( 'Top 10 Categories by Post Count:', 'opusprimus' ) . '</span>',
             'number'        => 10,
         ) );
+        /** Display a list of tags to choose from */
         $opus_archive->opus_primus_archive_cloud( array(
             'taxonomy'  => 'post_tag',
             'orderby'   => 'count',
             'order'     => 'DESC',
             'number'    => 10,
         ) );
-
-        /** @todo Add a menu here? Featured pages? */
+        /** Display a list of pages to choose from */
+        $opus_nav->opus_search_menu();
 
         /** Add empty hook after no posts results from the_loop query */
         do_action( 'opus_after_search' );

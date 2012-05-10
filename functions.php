@@ -122,6 +122,7 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
         register_nav_menus( array(
             'primary'   => 'Primary Menu',
             'secondary' => 'Secondary Menu',
+            'search'    => 'Search Results Menu',
         ) );
 
     }

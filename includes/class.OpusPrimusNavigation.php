@@ -137,7 +137,7 @@ class OpusPrimusNavigation {
     function opus_primus_primary_menu() {
         wp_nav_menu( array(
             'theme_location'    => 'primary',
-            'menu_class'        => 'nav',
+            'menu_class'        => 'nav primary',
             'fallback_cb'       => 'OpusPrimusNavigation::opus_primus_list_pages',
         ) );
     }
@@ -149,10 +149,17 @@ class OpusPrimusNavigation {
      * @package OpusPrimus
      * @since   0.1
      *
+     * @param   string|array $list_args
+     *
      * @uses    wp_list_pages
+     * #uses    wp_parse_args
      */
-    function opus_primus_list_pages() { ?>
-        <ul class="nav"><?php wp_list_pages( 'title_li=' ); ?></ul>
+    function opus_primus_list_pages( $list_args = '' ) {
+        $defaults = array(
+            'title_li'  => '',
+        );
+        $list_args = wp_parse_args( (array) $defaults, $list_args ); ?>
+        <ul class="nav primary secondary"><?php wp_list_pages( $list_args ); ?></ul>
     <?php
     }
 
@@ -191,7 +198,7 @@ class OpusPrimusNavigation {
     function opus_primus_secondary_menu() {
         wp_nav_menu( array(
             'theme_location'    => 'secondary',
-            'menu_class'        => 'nav',
+            'menu_class'        => 'nav secondary',
             'fallback_cb'       => 'OpusPrimusNavigation::opus_primus_list_pages',
         ) );
     }
@@ -216,6 +223,71 @@ class OpusPrimusNavigation {
 
         /** Add empty hook after the primary menu */
         do_action( 'opus_after_secondary_menu' );
+
+    }
+
+    /**
+     * Opus Primus Search List Pages
+     * Callback function for the menu
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @param   string|array $list_args
+     *
+     * @uses    wp_list_pages
+     * #uses    wp_parse_args
+     */
+    function opus_primus_search_list_pages( $list_args = '' ) {
+        $defaults = array(
+            'title_li'  => __( 'The Top Level of Pages', 'opusprimus' ),
+            'depth'     => 1,
+        );
+        $list_args = wp_parse_args( (array) $defaults, $list_args ); ?>
+    <ul class="nav search"><?php wp_list_pages( $list_args ); ?></ul>
+    <?php
+    }
+
+    /**
+     * Opus Primus Search Menu
+     * Define the search results menu parameters
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    wp_nav_menu
+     */
+    function opus_primus_search_menu() {
+        printf( '<ul class="featured search pages"><li><span class="title">%1$s</span>', __( 'Featured Pages:', 'opusprimus' ) );
+        wp_nav_menu( array(
+            'theme_location'    => 'search',
+            'container'         => 'li',
+            'menu_class'        => 'nav search',
+            'fallback_cb'       => 'OpusPrimusNavigation::opus_primus_search_list_pages',
+        ) );
+        echo '</li></ul>';
+    }
+
+    /**
+     * Opus Search Menu
+     * Search results navigation menu
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    do_action
+     * @uses    opus_primus_search_menu
+     * @uses    wp_nav_menu
+     */
+    function opus_search_menu() {
+        /** Add empty hook before the primary menu */
+        do_action( 'opus_before_search_menu' );
+
+        /** Primary Menu */
+        $this->opus_primus_search_menu();
+
+        /** Add empty hook after the primary menu */
+        do_action( 'opus_after_search_menu' );
 
     }
 
