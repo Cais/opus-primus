@@ -38,6 +38,22 @@ class OpusPrimusNavigation {
     function __construct() {}
 
     /**
+     * === Functions List ( in order of appearance ) ===
+     * - Opus Link Pages
+     * - Opus Posts Link
+     * - Opus Post Link
+     * - Opus Primus Primary Menu
+     * - Opus Primus Page Menu
+     * - Opus Primary Menu
+     * - Opus Primus Secondary Menu
+     * - Opus Secondary Menu
+     * - Opus Primus Search Page Menu
+     * - Opus Primus Search Menu
+     * - Opus Search Menu
+     * - Opus Primus Comments Navigation
+     */
+
+    /**
      * Opus Link Pages
      * Outputs the navigation structure to move between multiple pages from the
      * same post. All parameters used by `wp_link_pages` can be passed through
@@ -170,7 +186,7 @@ class OpusPrimusNavigation {
      * @uses    wp_page_menu
      * #uses    wp_parse_args
      */
-    function opus_primus_page_menu( $page_menu_args = '' ) {
+    function opus_primus_page_menu( $page_menu_args ) {
         $defaults = array();
         $page_menu_args = wp_parse_args( (array) $defaults, $page_menu_args );
         wp_page_menu( $page_menu_args );
@@ -289,7 +305,7 @@ class OpusPrimusNavigation {
      * @uses    wp_nav_menu
      * @uses    wp_parse_args
      */
-    function opus_primus_search_menu( $search_menu_args = '' ) {
+    function opus_primus_search_menu( $search_menu_args ) {
         $defaults = array(
             'theme_location'    => 'search',
             'container'         => 'li',
@@ -309,16 +325,18 @@ class OpusPrimusNavigation {
      * @package OpusPrimus
      * @since   0.1
      *
+     * @param   string|array $search_menu_args
+     *
      * @uses    do_action
      * @uses    opus_primus_search_menu
      * @uses    wp_nav_menu
      */
-    function opus_search_menu() {
+    function opus_search_menu( $search_menu_args = '' ) {
         /** Add empty hook before the primary menu */
         do_action( 'opus_before_search_menu' );
 
-        /** Primary Menu */
-        $this->opus_primus_search_menu();
+        /** Search Menu */
+        $this->opus_primus_search_menu( $search_menu_args );
 
         /** Add empty hook after the primary menu */
         do_action( 'opus_after_search_menu' );

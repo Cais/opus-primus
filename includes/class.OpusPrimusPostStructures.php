@@ -495,6 +495,8 @@ class OpusPrimusPostStructures {
      * @uses    get_search_form
      * @uses    get_search_query
      * @uses    opus_primus_top_10_categories_archive
+     *
+     * @todo Add custom searchform.php
      */
     function opus_primus_search_results(){
         /** Add empty hook before no posts results from the_loop query */
@@ -509,12 +511,6 @@ class OpusPrimusPostStructures {
         printf( '<p class="no-results">%1$s</p>', __( 'No results were found. Please feel free to search again.', 'opusprimus' ) );
         get_search_form();
 
-        /**
-         * Flesh out the no results display with more information, such as:
-         * @todo Add wp_list_pages
-         *
-         * @todo Add custom searchform.php
-         */
         printf( '<p class="no-results">%1$s</p>', __( '... or try one of the links below.', 'opusprimus' ) );
 
         /** Get the class variables */

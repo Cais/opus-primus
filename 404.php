@@ -31,3 +31,29 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
+
+get_header( '404' );
+
+echo '<h1>This is the 404 page!</h1>';
+
+/** Display links to archives */
+global $opus_archive;
+/** Display a list of categories to choose from */
+$opus_archive->opus_primus_categories_archive( array(
+    'orderby'       => 'count',
+    'order'         => 'desc',
+    'show_count'    => 1,
+    'hierarchical'  => 0,
+    'title_li'      => '<span class="title">' . __( 'Top 10 Categories by Post Count:', 'opusprimus' ) . '</span>',
+    'number'        => 10,
+) );
+/** Display a list of tags to choose from */
+$opus_archive->opus_primus_archive_cloud( array(
+    'taxonomy'  => 'post_tag',
+    'orderby'   => 'count',
+    'order'     => 'DESC',
+    'number'    => 10,
+) );
+
+get_sidebar( '404' );
+get_footer( '404' );
