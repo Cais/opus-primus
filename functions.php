@@ -46,6 +46,8 @@ require_once( get_template_directory() . '/includes/opus-ignite.php' );
  * @uses    OPUS_CSS    (constant)
  * @uses    OPUS_JS     (constant)
  * @uses    wp_enqueue_script
+ *
+ * @todo Review for removal depending on further Bootstrap implementation and testing
  */
 function opus_primus_LESS() {
     /** Add LESS link - cannot enqueue due to rel requirement */
@@ -55,7 +57,10 @@ function opus_primus_LESS() {
     /** Add JavaScript to compile LESS */
     wp_enqueue_script( 'less-1.3', OPUS_JS . 'less-1.3.0.min.js', '', '1.3.0' );
 }
-add_action( 'wp_enqueue_scripts', 'opus_primus_LESS' );
+/**
+ * Comment out LESS implementation
+ * add_action( 'wp_enqueue_scripts', 'opus_primus_LESS' );
+ */
 
 if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
     /**
@@ -72,7 +77,11 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
     function opus_primus_enqueue_scripts() {
         /** Enqueue scripts */
         wp_enqueue_script( 'jquery' );
+        wp_enqueue_script( 'bootstrap', OPUS_JS . 'bnsfc-options.js', array( 'jquery' ), '0.1' );
         /** Enqueue stylesheets */
+        wp_enqueue_style( 'Bootstrap', OPUS_CSS . 'bootstrap.css', array(), '0.1', 'screen' );
+        wp_enqueue_style( 'Bootstrap-Responsive', OPUS_CSS . 'bootstrap-responsive.css', array(), '0.1', 'screen' );
+        /** Enqueue custom stylesheet after to maintain expected specificity */
         if ( is_readable( OPUS_CSS . 'opus-primus-custom-style.css' ) ) {
             wp_enqueue_style( 'Opus-Primus-Custom-Style', OPUS_CSS . 'opus-primus-custom-style.css', array(), '0.1', 'screen' );
         }
