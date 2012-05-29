@@ -77,7 +77,7 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
     function opus_primus_enqueue_scripts() {
         /** Enqueue scripts */
         wp_enqueue_script( 'jquery' );
-        wp_enqueue_script( 'bootstrap', OPUS_JS . 'bnsfc-options.js', array( 'jquery' ), '0.1' );
+        wp_enqueue_script( 'bootstrap', OPUS_JS . 'bootstrap.js', array( 'jquery' ), '0.1' );
         /** Enqueue stylesheets */
         wp_enqueue_style( 'Bootstrap', OPUS_CSS . 'bootstrap.css', array(), '0.1', 'screen' );
         wp_enqueue_style( 'Bootstrap-Responsive', OPUS_CSS . 'bootstrap-responsive.css', array(), '0.1', 'screen' );
