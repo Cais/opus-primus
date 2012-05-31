@@ -34,6 +34,8 @@
  * @todo Review potential of additional widget area(s)
  */
 
+echo '<ul class="sidebar">';
+
 if ( is_active_sidebar( 'primary-widget' ) ) :
     dynamic_sidebar( 'primary-widget' );
 else :
@@ -45,3 +47,5 @@ if ( is_active_sidebar( 'secondary-widget' ) ) :
 else :
     echo 'Test: Secondary Widget Area<br />';
 endif;
+
+echo '</ul>';

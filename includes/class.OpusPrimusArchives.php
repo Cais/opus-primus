@@ -170,11 +170,11 @@ class OpusPrimusArchives {
          * Output the cloud with a title wrapped in an element with dynamic
          * classes.
          */
-        printf( '<div class="archive cloud list cf%1$s">', $cloud_classes );
-            echo '<ul><li><span class="title">' . $cloud_title . '</span>';
+        printf( '<ul class="archive cloud list cf%1$s">', $cloud_classes );
+            echo '<li><span class="title">' . $cloud_title . '</span>';
                 wp_tag_cloud( $cloud_args );
-            echo '</li></ul>';
-        echo '</div>';
+            echo '</li>';
+        echo '</ul>';
 
         /** Add empty hook after archive cloud */
         do_action( 'opus_after_archive_cloud' );
