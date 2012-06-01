@@ -42,6 +42,12 @@
 /** End: Table of Contents -------------------------------------------------- */
 
 /** === Baselines === ------------------------------------------------------- */
+body {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+div.meta-byline,
 h2.post-title,
 ul.archive,
 ul.sidebar {

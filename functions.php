@@ -57,10 +57,8 @@ function opus_primus_LESS() {
     /** Add JavaScript to compile LESS */
     wp_enqueue_script( 'less-1.3', OPUS_JS . 'less-1.3.0.min.js', '', '1.3.0' );
 }
-/**
- * Comment out LESS implementation
- * add_action( 'wp_enqueue_scripts', 'opus_primus_LESS' );
- */
+/** @todo Comment out LESS implementation? */
+add_action( 'wp_enqueue_scripts', 'opus_primus_LESS' );
 
 if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
     /**
