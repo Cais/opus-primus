@@ -215,8 +215,10 @@ add_filter( 'wp_title', 'opus_wp_title', 10, 3 );
  * @package     OpusPrimus
  * @since       0.1
  *
- * @internal    Uses default widget structure
- * @example     'name' => sprintf(__('Sidebar %d'), $i ),
+ * @uses        register_sidebar
+ *
+ * @internal    Relies on the default widget structure
+ * @example     'name' => sprintf( __('Sidebar %d'), $i ),
  * @example     'id' => "sidebar-$i",
  * @example     'description' => '',
  * @example     'class' => '',
@@ -224,8 +226,6 @@ add_filter( 'wp_title', 'opus_wp_title', 10, 3 );
  * @example     'after_widget' => "</li>\n",
  * @example     'before_title' => '<h2 class="widgettitle">',
  * @example     'after_title' => "</h2>\n",
- *
- * @uses        register_sidebar
  */
 function opus_primus_widgets() {
     /** To override Opus Primus Widgets in a Child-Theme:
