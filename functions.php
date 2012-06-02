@@ -54,7 +54,7 @@ function opus_primus_LESS() {
     printf ( '<link rel="stylesheet/less" type="text/css" href="%1$s">', OPUS_CSS . 'style.less' );
     /** Print new line - head section will be easier to read */
     printf ( "\n" );
-    /** Add JavaScript to compile LESS */
+    /** Add JavaScript to compile LESS on the fly */
     wp_enqueue_script( 'less-1.3', OPUS_JS . 'less-1.3.0.min.js', '', '1.3.0' );
 }
 /** @todo Comment out LESS implementation? */
@@ -71,10 +71,12 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
      * @uses    OPUS_CSS    (constant)
      * @uses    wp_enqueue_script
      * @uses    wp_enqueue_style
+     *
+     * @internal    jQuery is enqueued as a dependency of Bootstrap
      */
     function opus_primus_enqueue_scripts() {
         /** Enqueue scripts */
-        wp_enqueue_script( 'jquery' );
+        /** Enqueue Bootstrap JavaScript which will enqueue jQuery as a dependency */
         wp_enqueue_script( 'bootstrap', OPUS_JS . 'bootstrap.js', array( 'jquery' ), '0.1' );
         /** Enqueue Bootstrap stylesheets */
         wp_enqueue_style( 'Bootstrap', OPUS_CSS . 'bootstrap.css', array(), '0.1', 'screen' );
