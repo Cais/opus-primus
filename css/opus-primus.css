@@ -63,6 +63,130 @@ nav div.nav ul li {
 }
 
 /** nav div.nav ul li ul.children { display: none; } */
+/* === MENU === */
+div#top-navigation-menu {
+    clear: both;
+    left: 10px;
+    position: relative;
+    width: 970px;
+}
+
+.page ul.nav-menu { padding-left: 0; }
+
+.nav-menu {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    /* Raise above all other elements */
+    z-index: 1000;
+}
+
+.nav-menu a, .nav-menu a:hover {
+    border: none;
+    display: block;
+    text-decoration: none;
+}
+
+.nav-menu li {
+    float: left;
+    list-style: none outside none;
+    margin-left: 2px;
+    margin-right: 2px;
+    min-width: 99px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.nav-menu a, .nav-menu a:visited {
+    display: block;
+    font-weight: bold;
+    padding: 8px 12px;
+}
+.nav-menu a:hover, .nav-menu a:active {
+    background: #eee;
+    color: #000;
+    text-decoration: none;
+}
+
+/**
+ * Strongly influenced by the "Horizontal CSS Drop-Down Menu Module"
+ *
+ * found @link: http://www.lwis.net/
+ * @copyright 2006-2008 Live Web Institute. All Rights Reserved.
+ *
+ */
+ul.nav-menu,
+ul.nav-menu li,
+ul.nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.nav-menu {
+    float: left;
+    position: relative;
+    z-index: 1097;
+}
+
+ul.nav-menu li {
+    float: left;
+    vertical-align: middle;
+    zoom: 1;
+}
+
+ul.nav-menu li.hover,
+ul.nav-menu li:hover {
+    cursor: default;
+    position: relative;
+    z-index: 1099;
+}
+
+ul.nav-menu ul {
+    background: #eee;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    visibility: hidden;
+    width: auto;
+    z-index: 1098;
+}
+
+ul.nav-menu ul li { float: none; }
+
+ul.nav-menu ul ul {
+    left: 99%;
+    margin-top: -1px;
+    top: 1px;
+}
+
+ul.nav-menu li:hover > ul {
+    background: #eee;
+    visibility: visible;
+}
+
+ul.nav-menu ul.sub-menu li,
+ul.nav-menu ul.children li { list-style: none; }
+/* End: Horizontal CSS Drop-Down Menu Module */
+
+/* -- Rounded Corners for Menu -- */
+.nav-menu a, .nav-menu a:visited, .nav-menu a:hover, .nav-menu a:active,
+ul.nav-menu ul.sub-menu li, ul.nav-menu ul.children li, ul.nav-menu ul, ul.nav-menu ul ul {
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+/* WordPress 3.0 Navigation Menu default widget */
+.widget_nav_menu ul.sub-menu li {
+    background: none;
+    list-style: disc inside none;
+    padding: 0 0 0 15px;
+}
+/* === End: Menu === */
+
 
 /** End: Menu Related Elements ---------------------------------------------- */
 

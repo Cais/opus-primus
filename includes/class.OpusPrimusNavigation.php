@@ -164,7 +164,7 @@ class OpusPrimusNavigation {
     function opus_primus_primary_menu( $primary_menu_args ) {
         $defaults = array(
             'theme_location'    => 'primary',
-            'menu_class'        => 'nav primary',
+            'menu_class'        => 'nav-menu primary',
             'fallback_cb'       => 'OpusPrimusNavigation::opus_primus_page_menu',
         );
         $primary_menu_args = wp_parse_args( (array) $defaults, $primary_menu_args );
@@ -187,9 +187,13 @@ class OpusPrimusNavigation {
      * #uses    wp_parse_args
      */
     function opus_primus_page_menu( $page_menu_args ) {
-        $defaults = array();
+        $defaults = array(
+            'title_li'  => '',
+        );
         $page_menu_args = wp_parse_args( (array) $defaults, $page_menu_args );
-        wp_page_menu( $page_menu_args );
+        echo '<ul class="nav-menu">';
+            wp_list_pages( $page_menu_args );
+        echo '</ul>';
     }
 
     /**
@@ -236,7 +240,7 @@ class OpusPrimusNavigation {
     function opus_primus_secondary_menu( $secondary_menu_args ) {
         $defaults = array(
             'theme_location'    => 'secondary',
-            'menu_class'        => 'nav secondary',
+            'menu_class'        => 'nav-menu secondary',
             'fallback_cb'       => 'OpusPrimusNavigation::opus_primus_page_menu',
         );
         $secondary_menu_args = wp_parse_args( (array) $defaults, $secondary_menu_args );
