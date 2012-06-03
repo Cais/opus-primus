@@ -61,6 +61,9 @@ nav div.nav ul li {
     list-style-type: none;
     padding: 10px;
 }
+
+/** nav div.nav ul li ul.children { display: none; } */
+
 /** End: Menu Related Elements ---------------------------------------------- */
 
 /** === 404 Layout === ------------------------------------------------------ */

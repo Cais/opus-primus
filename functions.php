@@ -35,6 +35,38 @@
 /** Call the initialization file to get things started */
 require_once( get_template_directory() . '/includes/opus-ignite.php' );
 
+if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
+    /**
+     * Opus Primus Enqueue Scripts
+     * Use to enqueue the theme javascript and custom stylesheet, if it exists
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    OPUS_CSS    (constant)
+     * @uses    wp_enqueue_script
+     * @uses    wp_enqueue_style
+     *
+     * @internal    jQuery is enqueued as a dependency of Bootstrap
+     */
+    function opus_primus_enqueue_scripts() {
+        /** Enqueue scripts */
+        /** Enqueue Bootstrap JavaScript which will enqueue jQuery as a dependency */
+        wp_enqueue_script( 'bootstrap', OPUS_JS . 'bootstrap.js', array( 'jquery' ), '0.1' );
+        wp_enqueue_script( 'opus-primus', OPUS_JS . 'opus-primus.js', array( 'jquery' ), '0.1' );
+        /** Enqueue Bootstrap stylesheets */
+        wp_enqueue_style( 'Bootstrap', OPUS_CSS . 'bootstrap.css', array(), '0.1', 'screen' );
+        wp_enqueue_style( 'Bootstrap-Responsive', OPUS_CSS . 'bootstrap-responsive.css', array(), '0.1', 'screen' );
+        /** Enqueue Theme Stylesheets */
+        wp_enqueue_style( 'Opus-Primus', OPUS_CSS . 'opus-primus.css', array(), '0.1', 'screen' );
+        /** Enqueue custom stylesheet after to maintain expected specificity */
+        if ( is_readable( OPUS_CSS . 'opus-primus-custom-style.css' ) ) {
+            wp_enqueue_style( 'Opus-Primus-Custom-Style', OPUS_CSS . 'opus-primus-custom-style.css', array(), '0.1', 'screen' );
+        }
+    }
+}
+add_action( 'wp_enqueue_scripts', 'opus_primus_enqueue_scripts' );
+
 /**
  * Opus Primus LESS
  *
@@ -59,37 +91,6 @@ function opus_primus_LESS() {
 }
 /** @todo Comment out LESS implementation? */
 add_action( 'wp_enqueue_scripts', 'opus_primus_LESS' );
-
-if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
-    /**
-     * Opus Primus Enqueue Scripts
-     * Use to enqueue the theme javascript and custom stylesheet, if it exists
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @uses    OPUS_CSS    (constant)
-     * @uses    wp_enqueue_script
-     * @uses    wp_enqueue_style
-     *
-     * @internal    jQuery is enqueued as a dependency of Bootstrap
-     */
-    function opus_primus_enqueue_scripts() {
-        /** Enqueue scripts */
-        /** Enqueue Bootstrap JavaScript which will enqueue jQuery as a dependency */
-        wp_enqueue_script( 'bootstrap', OPUS_JS . 'bootstrap.js', array( 'jquery' ), '0.1' );
-        /** Enqueue Bootstrap stylesheets */
-        wp_enqueue_style( 'Bootstrap', OPUS_CSS . 'bootstrap.css', array(), '0.1', 'screen' );
-        wp_enqueue_style( 'Bootstrap-Responsive', OPUS_CSS . 'bootstrap-responsive.css', array(), '0.1', 'screen' );
-        /** Enqueue Theme Stylesheets */
-        wp_enqueue_style( 'Opus-Primus', OPUS_CSS . 'opus-primus.css', array(), '0.1', 'screen' );
-        /** Enqueue custom stylesheet after to maintain expected specificity */
-        if ( is_readable( OPUS_CSS . 'opus-primus-custom-style.css' ) ) {
-            wp_enqueue_style( 'Opus-Primus-Custom-Style', OPUS_CSS . 'opus-primus-custom-style.css', array(), '0.1', 'screen' );
-        }
-    }
-}
-add_action( 'wp_enqueue_scripts', 'opus_primus_enqueue_scripts' );
 
 if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
     /**
