@@ -33,6 +33,12 @@
  */
 
 /**
+ * Establish a #footer container
+ * @todo Do something interesting with it ...
+ */
+echo '<div id="footer"></div>';
+
+/**
  * `wp_footer` is placed inside the #opus element to provide a container for
  * styling content displayed in the footer by other code constructs such as
  * plugins and scripts.

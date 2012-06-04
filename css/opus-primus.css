@@ -41,6 +41,36 @@
  */
 /** End: Table of Contents -------------------------------------------------- */
 
+/** === General Layouts === ------------------------------------------------- */
+/** Full Width - Two Columns - Right Sidebar */
+body {
+    margin: 0 auto;
+}
+
+#content-wrapper {
+    float: left;
+    margin: 0 -333px 0 0;
+    width: 100%;
+}
+
+#the-loop {
+    margin: 0 333px 0 0;
+    padding: 10px;
+}
+
+#sidebar {
+    float: right;
+    overflow: hidden;
+    /** Width should not exceed margin-right size of above
+    width: 330px; */
+}
+
+#footer {
+    clear: both;
+}
+
+/** End: General Layouts ---------------------------------------------------- */
+
 /** === Baselines === ------------------------------------------------------- */
 body {
     padding-left: 20px;

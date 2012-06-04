@@ -32,20 +32,26 @@
  *
  * @todo Remove / comment out test code
  * @todo Review potential of additional widget area(s)
- */
+ */ ?>
 
-echo '<ul class="sidebar">';
+<div id="sidebar">
 
-if ( is_active_sidebar( 'primary-widget' ) ) :
-    dynamic_sidebar( 'primary-widget' );
-else :
-    echo 'Test: Primary Widget Area<br />';
-endif;
+    <ul id="sidebar-one">
+        <?php
+        if ( is_active_sidebar( 'primary-widget' ) ) :
+            dynamic_sidebar( 'primary-widget' );
+        else :
+            echo 'Test: Primary Widget Area<br />';
+        endif; ?>
+    </ul><!-- #sidebar-one -->
 
-if ( is_active_sidebar( 'secondary-widget' ) ) :
-    dynamic_sidebar( 'secondary-widget' );
-else :
-    echo 'Test: Secondary Widget Area<br />';
-endif;
+    <ul id="sidebar-two">
+        <?php
+        if ( is_active_sidebar( 'secondary-widget' ) ) :
+            dynamic_sidebar( 'secondary-widget' );
+        else :
+            echo 'Test: Secondary Widget Area<br />';
+        endif; ?>
+    </ul><!-- .sidebar-two -->
 
-echo '</ul>';
+</div><!-- #sidebar -->
