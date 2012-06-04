@@ -47,20 +47,27 @@ class OpusPrimusStructures {
      * @param   string $after
      * @param   bool $echo
      *
-     * @uses    apply_filters
+     * @uses    do_action
+     * @uses    the_permalink
      * @uses    the_title
+     * @uses    the_title_attribute
      */
     function post_title( $before = '', $after = '', $echo = true ) {
         /** Add empty hook before the post title */
         do_action( 'opus_before_post_title' );
 
-        /** The Post Title */
+        /** Set `the_title` parameters */
         if ( empty( $before ) )
             $before = '<h2 class="post-title">';
         if ( empty( $after ) )
             $after = '</h2>';
-        the_title( $before, $after, $echo );
 
+        /** Wrap the title in an anchor tag and provide a nice tool tip */ ?>
+        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ) ) ); ?>">
+            <?php the_title( $before, $after, $echo ); ?>
+        </a>
+
+        <?php
         /** Add empty hook after the post title */
         do_action( 'opus_after_post_title' );
 
