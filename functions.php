@@ -251,6 +251,14 @@ function opus_primus_widgets() {
 /** Register sidebars by running `opus_primus_widgets` on the `widgets_init` action hook. */
 add_action( 'widgets_init', 'opus_primus_widgets' );
 
+/**
+ * Temporary value of 1024 set for $content_width for testing purposes
+ * @todo Sort out proper width and/or calculation to set appropriate width
+ */
+if ( ! isset( $content_width ) ) {
+    $content_width = 1024;
+}
+
 
 /** Testing ... testing ... testing ... */
 function opus_test() {

@@ -34,6 +34,9 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @todo Templates: attachment, image, video, audio, category, tag, author, date, etc.
+ * @todo Post-Format Loops
  */
 
 get_header();
