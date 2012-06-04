@@ -84,7 +84,7 @@ if ( have_comments() ) : ?>
         </ul>
         <?php
         global $opus_nav;
-        $opus_nav->opus_comments_navigation(); ?>
+        $opus_nav->comments_navigation(); ?>
     </div><!-- .comments -->
 <?php
 else :

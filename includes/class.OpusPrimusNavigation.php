@@ -148,7 +148,7 @@ class OpusPrimusNavigation {
     /**
      * Opus Primus Primary Menu
      * Define the primary menu parameters, these are passed through to the
-     * fallback function `opus_primus_page_menu`
+     * fallback function `opus_list_pages`
      *
      * @link    http://codex.wordpress.org/Function_Reference/wp_nav_menu
      *
@@ -157,15 +157,15 @@ class OpusPrimusNavigation {
      *
      * @param   string|array $primary_menu_args
      *
-     * @uses    opus_primus_page_menu
+     * @uses    opus_list_pages
      * @uses    wp_nav_menu
      * @uses    wp_parse_args
      */
-    function opus_primus_primary_menu( $primary_menu_args ) {
+    function primary_menu( $primary_menu_args ) {
         $defaults = array(
             'theme_location'    => 'primary',
             'menu_class'        => 'nav-menu primary',
-            'fallback_cb'       => 'OpusPrimusNavigation::opus_primus_page_menu',
+            'fallback_cb'       => 'OpusPrimusNavigation::opus_list_pages',
         );
         $primary_menu_args = wp_parse_args( (array) $defaults, $primary_menu_args );
         wp_nav_menu( $primary_menu_args );
@@ -186,7 +186,7 @@ class OpusPrimusNavigation {
      * @uses    wp_page_menu
      * #uses    wp_parse_args
      */
-    function opus_primus_page_menu( $page_menu_args ) {
+    function opus_list_pages( $page_menu_args ) {
         $defaults = array(
             'title_li'  => '',
         );
@@ -206,7 +206,7 @@ class OpusPrimusNavigation {
      * @param   string|array $primary_menu_args
      *
      * @uses    do_action
-     * @uses    opus_primus_primary_menu
+     * @uses    primary_menu
      * @uses    wp_nav_menu
      */
     function opus_primary_menu( $primary_menu_args = '' ) {
@@ -214,7 +214,7 @@ class OpusPrimusNavigation {
         do_action( 'opus_before_primary_menu' );
 
         /** Primary Menu */
-        $this->opus_primus_primary_menu( $primary_menu_args );
+        $this->primary_menu( $primary_menu_args );
 
         /** Add empty hook after the primary menu */
         do_action( 'opus_after_primary_menu' );
@@ -224,7 +224,7 @@ class OpusPrimusNavigation {
     /**
      * Opus Primus Secondary Menu
      * Define the secondary menu parameters, these are passed through to the
-     * fallback function `opus_primus_page_menu`
+     * fallback function `opus_list_pages`
      *
      * @link    http://codex.wordpress.org/Function_Reference/wp_nav_menu
      *
@@ -233,15 +233,15 @@ class OpusPrimusNavigation {
      *
      * @param   string|array $secondary_menu_args
      *
-     * @uses    opus_primus_page_menu
+     * @uses    opus_list_pages
      * @uses    wp_nav_menu
      * @uses    wp_parse_args
      */
-    function opus_primus_secondary_menu( $secondary_menu_args ) {
+    function secondary_menu( $secondary_menu_args ) {
         $defaults = array(
             'theme_location'    => 'secondary',
             'menu_class'        => 'nav-menu secondary',
-            'fallback_cb'       => 'OpusPrimusNavigation::opus_primus_page_menu',
+            'fallback_cb'       => 'OpusPrimusNavigation::opus_list_pages',
         );
         $secondary_menu_args = wp_parse_args( (array) $defaults, $secondary_menu_args );
         wp_nav_menu( $secondary_menu_args );
@@ -257,7 +257,7 @@ class OpusPrimusNavigation {
      * @param   string|array $secondary_menu_args
      *
      * @uses    do_action
-     * @uses    opus_primus_secondary_menu
+     * @uses    secondary_menu
      * @uses    wp_nav_menu
      */
     function opus_secondary_menu( $secondary_menu_args = '' ) {
@@ -265,7 +265,7 @@ class OpusPrimusNavigation {
         do_action( 'opus_before_secondary_menu' );
 
         /** Primary Menu */
-        $this->opus_primus_secondary_menu( $secondary_menu_args );
+        $this->secondary_menu( $secondary_menu_args );
 
         /** Add empty hook after the primary menu */
         do_action( 'opus_after_secondary_menu' );
@@ -284,7 +284,7 @@ class OpusPrimusNavigation {
      * @uses    wp_page_menu
      * #uses    wp_parse_args
      */
-    function opus_primus_search_page_menu( $list_args = '' ) {
+    function search_page_menu( $list_args = '' ) {
         $defaults = array(
             'depth'     => 1,
             'show_home' => true,
@@ -305,16 +305,16 @@ class OpusPrimusNavigation {
      *
      * @param   string|array $search_menu_args
      *
-     * @uses    opus_primus_search_page_menu
+     * @uses    search_page_menu
      * @uses    wp_nav_menu
      * @uses    wp_parse_args
      */
-    function opus_primus_search_menu( $search_menu_args ) {
+    function search_menu( $search_menu_args ) {
         $defaults = array(
             'theme_location'    => 'search',
             'container'         => 'li',
             'menu_class'        => 'nav search',
-            'fallback_cb'       => 'OpusPrimusNavigation::opus_primus_search_page_menu',
+            'fallback_cb'       => 'OpusPrimusNavigation::search_page_menu',
         );
         $search_menu_args = wp_parse_args( (array) $defaults, $search_menu_args );
         printf( '<ul class="featured search pages"><li><span class="title">%1$s</span>', __( 'Featured Pages:', 'opusprimus' ) );
@@ -332,7 +332,7 @@ class OpusPrimusNavigation {
      * @param   string|array $search_menu_args
      *
      * @uses    do_action
-     * @uses    opus_primus_search_menu
+     * @uses    search_menu
      * @uses    wp_nav_menu
      */
     function opus_search_menu( $search_menu_args = '' ) {
@@ -340,7 +340,7 @@ class OpusPrimusNavigation {
         do_action( 'opus_before_search_menu' );
 
         /** Search Menu */
-        $this->opus_primus_search_menu( $search_menu_args );
+        $this->search_menu( $search_menu_args );
 
         /** Add empty hook after the primary menu */
         do_action( 'opus_after_search_menu' );
@@ -358,7 +358,7 @@ class OpusPrimusNavigation {
      * @uses    next_comments_link
      * @uses    previous_comments_link
      */
-    function opus_comments_navigation() {
+    function comments_navigation() {
         /** Add empty hook before comments link */
         do_action( 'opus_before_comments_link' ); ?>
 

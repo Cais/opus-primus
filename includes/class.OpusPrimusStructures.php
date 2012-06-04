@@ -32,7 +32,7 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-class OpusPrimusPostStructures {
+class OpusPrimusStructures {
     /** Construct */
     function __construct() {}
 
@@ -50,7 +50,7 @@ class OpusPrimusPostStructures {
      * @uses    apply_filters
      * @uses    the_title
      */
-    function opus_primus_post_title( $before = '', $after = '', $echo = true ) {
+    function post_title( $before = '', $after = '', $echo = true ) {
         /** Add empty hook before the post title */
         do_action( 'opus_before_post_title' );
 
@@ -85,13 +85,13 @@ class OpusPrimusPostStructures {
      *
      * @return      string - URL|text
      */
-    function opus_primus_no_title_link( $anchor ) {
+    function no_title_link( $anchor ) {
         /** Create URL or string text */
         $opus_no_title = get_the_title();
         empty( $opus_no_title )
             ? $opus_no_title = '<span class="no-title"><a href="' . get_permalink() . '" title="' . get_the_excerpt() . '">' . $anchor . '</span></a>'
             : $opus_no_title = $anchor;
-        return apply_filters( 'opus_primus_no_title_link', $opus_no_title );
+        return apply_filters( 'no_title_link', $opus_no_title );
     }
 
     /**
@@ -104,7 +104,7 @@ class OpusPrimusPostStructures {
      * @uses    comments_popup_link
      * @uses    is_page
      */
-    function opus_primus_comments_link() {
+    function comments_link() {
         /** Add empty hook before comments link */
         do_action( 'opus_before_comments_link' );
 
@@ -148,7 +148,7 @@ class OpusPrimusPostStructures {
      * @internal    @param   string $show_mod_author ( default = false )
      * @internal    @param   string $tempus ( default = date ) - date|time
      *
-     * @example     opus_primus_post_byline( array( 'anchor' => 'Written', 'tempus' => 'time' ) )
+     * @example     post_byline( array( 'anchor' => 'Written', 'tempus' => 'time' ) )
      * @internal    This example will use the word "Written" as the anchor text
      * if there is no title for the post; using 'time' will show the modified
      * post author if there is any difference in time while using the default
@@ -163,10 +163,10 @@ class OpusPrimusPostStructures {
      * @uses    get_the_author_meta ( ID )
      * @uses    get_the_date
      * @uses    get_the_time
-     * @uses    opus_primus_no_title_link
+     * @uses    no_title_link
      * @uses    wp_parse_args
      */
-    function opus_primus_post_byline( $byline_args = '' ) {
+    function post_byline( $byline_args = '' ) {
         /** Set defaults */
         $defaults = array(
             'anchor'            => 'Posted',
@@ -189,7 +189,7 @@ class OpusPrimusPostStructures {
          */
         echo '<div class="meta-byline">';
         printf( $opus_post_byline,
-            $this->opus_primus_no_title_link( $byline_args['anchor'] ),
+            $this->no_title_link( $byline_args['anchor'] ),
             get_the_date( get_option( 'date_format' ) ),
             get_the_time( get_option( 'time_format' ) ),
             sprintf( '<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
@@ -204,7 +204,7 @@ class OpusPrimusPostStructures {
          * measured in hours
          */
         if ( $byline_args['show_mod_author'] || ( 'time' == $byline_args['tempus'] ) ) {
-            $this->opus_primus_modified_post( $byline_args['tempus'] );
+            $this->modified_post( $byline_args['tempus'] );
         }
 
         /** Close CSS wrapper for the post byline */
@@ -236,7 +236,7 @@ class OpusPrimusPostStructures {
      * @uses    get_userdata
      * @uses    home_url
      */
-    function opus_primus_modified_post( $tempus = 'date' ){
+    function modified_post( $tempus = 'date' ){
         /** Grab the $post object and bring in the original post author ID */
         global $post, $opus_author_id;
 
@@ -322,10 +322,10 @@ class OpusPrimusPostStructures {
      * @uses    get_post_type
      * @uses    get_the_category_list
      * @uses    get_the_tag_list
-     * @uses    opus_primus_no_title_link
+     * @uses    no_title_link
      * @uses    the_title_attribute
      */
-    function opus_primus_meta_tags( $anchor = 'Posted' ) {
+    function meta_tags( $anchor = 'Posted' ) {
         /** Add empty hook before meta tags */
         do_action( 'opus_before_meta_tags' );
 
@@ -344,7 +344,7 @@ class OpusPrimusPostStructures {
          * Prints the "opus_posted_in" string, replacing the placeholders
          */
         printf( '<p class="meta-tags">' . $opus_posted_in . '</p>',
-            $this->opus_primus_no_title_link( $anchor ),
+            $this->no_title_link( $anchor ),
             get_the_category_list( ', ' ),
             $opus_tag_list,
             get_permalink(),
@@ -361,7 +361,7 @@ class OpusPrimusPostStructures {
      * Outputs `the_content` and allows for the_content parameters to be used
      *
      * @link    http://codex.wordpress.org/Function_Reference/the_content
-     * @example opus_primus_post_content( __( 'Read more of ...', 'opusprimus' ), the_title( '', '', false ) )
+     * @example post_content( __( 'Read more of ...', 'opusprimus' ), the_title( '', '', false ) )
      * @internal The above example, when the <!--more--> tag is used, will
      * provide a link to the single view of the post with the anchor text of:
      * "Read more of ... <the-post-title>"
@@ -375,7 +375,7 @@ class OpusPrimusPostStructures {
      * @uses    do_action
      * @uses    the_content
      */
-    function opus_primus_post_content( $more_link_text = '', $stripteaser = '' ) {
+    function post_content( $more_link_text = '', $stripteaser = '' ) {
         /** Add empty hook before the content */
         do_action( 'opus_before_the_content' );
 
@@ -397,7 +397,7 @@ class OpusPrimusPostStructures {
      * @uses    do_action
      * @uses    the_excerpt
      */
-    function opus_primus_post_excerpt() {
+    function post_excerpt() {
         /** Add empty hook before the excerpt */
         do_action( 'opus_before_the_excerpt' );
 
@@ -422,7 +422,7 @@ class OpusPrimusPostStructures {
      * @uses    get_the_author_meta ( display_name, user_url, user_email, user_description )
      * @uses    user_can
      */
-    function opus_primus_post_author() {
+    function post_author() {
         /** Get and set variables */
         global $opus_author_id;
         if ( ! isset( $opus_author_id ) )
@@ -483,7 +483,7 @@ class OpusPrimusPostStructures {
     }
 
     /**
-     * Opus Primus Search
+     * Opus Primus Search Results
      * Outputs message if no posts are found by 'the_Loop' query
      *
      * @package OpusPrimus
@@ -494,11 +494,11 @@ class OpusPrimusPostStructures {
      * @uses    esc_html
      * @uses    get_search_form
      * @uses    get_search_query
-     * @uses    opus_primus_top_10_categories_archive
+     * @uses    top_10_categories_archive
      *
      * @todo Add custom searchform.php
      */
-    function opus_primus_search_results(){
+    function search_results(){
         /** Add empty hook before no posts results from the_loop query */
         do_action( 'opus_before_search_results' );
 
@@ -516,7 +516,7 @@ class OpusPrimusPostStructures {
         /** Get the class variables */
         global $opus_archive, $opus_nav;
         /** Display a list of categories to choose from */
-        $opus_archive->opus_primus_categories_archive( array(
+        $opus_archive->categories_archive( array(
             'orderby'       => 'count',
             'order'         => 'desc',
             'show_count'    => 1,
@@ -525,7 +525,7 @@ class OpusPrimusPostStructures {
             'number'        => 10,
         ) );
         /** Display a list of tags to choose from */
-        $opus_archive->opus_primus_archive_cloud( array(
+        $opus_archive->archive_cloud( array(
             'taxonomy'  => 'post_tag',
             'orderby'   => 'count',
             'order'     => 'DESC',
@@ -539,4 +539,4 @@ class OpusPrimusPostStructures {
 
     }
 }
-$opus_structure = new OpusPrimusPostStructures();
+$opus_structure = new OpusPrimusStructures();

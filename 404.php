@@ -39,7 +39,7 @@ echo '<h1>This is the 404 page!</h1>';
 /** Display links to archives */
 global $opus_archive;
 /** Display a list of categories to choose from */
-$opus_archive->opus_primus_categories_archive( array(
+$opus_archive->categories_archive( array(
     'orderby'       => 'count',
     'order'         => 'desc',
     'show_count'    => 1,
@@ -48,7 +48,7 @@ $opus_archive->opus_primus_categories_archive( array(
     'number'        => 10,
 ) );
 /** Display a list of tags to choose from */
-$opus_archive->opus_primus_archive_cloud( array(
+$opus_archive->archive_cloud( array(
     'taxonomy'  => 'post_tag',
     'orderby'   => 'count',
     'order'     => 'DESC',

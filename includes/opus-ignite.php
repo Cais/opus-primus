@@ -40,7 +40,7 @@ define( 'OPUS_CSS', get_template_directory_uri() . '/css/' );
 /** Add Archives */
 require_once( OPUS_INC . 'class.OpusPrimusArchives.php' );
 /** Add Post Structures */
-require_once( OPUS_INC . 'class.OpusPrimusPostStructures.php' );
+require_once( OPUS_INC . 'class.OpusPrimusStructures.php' );
 /** Add Navigation */
 require_once( OPUS_INC . 'class.OpusPrimusNavigation.php' );
 /** Add Sharing */

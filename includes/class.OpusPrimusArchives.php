@@ -52,7 +52,7 @@ class OpusPrimusArchives {
      * @uses    wp_list_categories
      * @uses    wp_parse_args
      */
-    function opus_primus_top_10_categories_archive( $category_top_10_args = '' ) {
+    function top_10_categories_archive( $category_top_10_args = '' ) {
         /** Add empty hook before category archive */
         do_action( 'opus_before_category_archive' );
 
@@ -80,7 +80,7 @@ class OpusPrimusArchives {
      * archive page using `wp_list_categories` and all of its parameters.
      *
      * @link    http://codex.wordpress.org/Function_Reference/wp_list_categories
-     * @example opus_primus_categories_archive( array( 'number' => 12 ) );
+     * @example categories_archive( array( 'number' => 12 ) );
      * @internal The above example will use the default parameters but limit the output to 12 items
      *
      * @package OpusPrimus
@@ -91,7 +91,7 @@ class OpusPrimusArchives {
      * @uses    wp_list_categories
      * @uses    wp_parse_args
      */
-    function opus_primus_categories_archive( $category_args = '' ) {
+    function categories_archive( $category_args = '' ) {
         /** Add empty hook before category archive */
         do_action( 'opus_before_category_archive' );
 
@@ -118,7 +118,7 @@ class OpusPrimusArchives {
      * output.
      *
      * @link    http://codex.wordpress.org/Function_Reference/wp_tag_cloud
-     * @example opus_primus_archive_cloud( array( 'taxonomy' => 'post_tag', 'number' => 10 ) );
+     * @example archive_cloud( array( 'taxonomy' => 'post_tag', 'number' => 10 ) );
      * @Internal The above example shows only the top 10 post tags.
      *
      * @package OpusPrimus
@@ -130,7 +130,7 @@ class OpusPrimusArchives {
      * @uses    wp_parse_args
      * @uses    wp_tag_cloud
      */
-    function opus_primus_archive_cloud( $cloud_args = '' ) {
+    function archive_cloud( $cloud_args = '' ) {
         /** Add empty hook before archive cloud */
         do_action( 'opus_before_archive_cloud' );
 

@@ -166,7 +166,7 @@ if ( ! function_exists( 'opus_enqueue_comment_reply' ) ) {
 add_action( 'comment_form_before', 'opus_enqueue_comment_reply' );
 
 
-if ( ! function_exists( 'opus_wp_title' ) ) {
+if ( ! function_exists( 'opus_primus_title' ) ) {
     /**
      * Opus WP Title
      *
@@ -188,7 +188,7 @@ if ( ! function_exists( 'opus_wp_title' ) ) {
      *
      * @return      string - new title text
      */
-    function opus_wp_title( $old_title, $sep, $sep_location ) {
+    function opus_primus_title( $old_title, $sep, $sep_location ) {
         global $page, $paged;
         /** Set initial title text */
         $opus_title_text = $old_title . get_bloginfo( 'name' );
@@ -207,7 +207,7 @@ if ( ! function_exists( 'opus_wp_title' ) ) {
         return $opus_title_text;
     }
 }
-add_filter( 'wp_title', 'opus_wp_title', 10, 3 );
+add_filter( 'wp_title', 'opus_primus_title', 10, 3 );
 
 /**
  * Opus Primus Widgets

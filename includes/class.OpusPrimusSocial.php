@@ -40,7 +40,7 @@ class OpusPrimusSocial {
      * Google+ Share
      * @todo Look at using wp_enqueue on this
      */
-    function opus_primus_google_plus_share() {
+    function google_plus_share() {
         echo '
             <script src="https://apis.google.com/js/plusone.js"></script>
             <g:plus action="share" annotation="bubble"></g:plus>
