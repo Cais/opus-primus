@@ -61,8 +61,8 @@ body {
 #sidebar {
     float: right;
     overflow: hidden;
-    /** Width should not exceed margin-right size of above
-    width: 330px; */
+    /** Width should not exceed margin-right size of above */
+    width: 330px;
 }
 
 #footer {
