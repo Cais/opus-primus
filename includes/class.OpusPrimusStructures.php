@@ -490,6 +490,24 @@ class OpusPrimusStructures {
     }
 
     /**
+     * Opus Primus Post Coda
+     * Adds text art after post content to signify the end of the post
+     */
+    function post_coda(){
+        /** Add empty hook before post coda */
+        do_action( 'opus_before_post_coda' );
+
+        /** Create the text art */
+        $post_coda = '* * * * *';
+        printf( '<div class="post-coda">%1$s</div>', apply_filters( 'post_coda', $post_coda )  );
+        echo '<hr />';
+
+        /** Add empty hook after the post coda */
+        do_action( 'opus_after_post_coda' );
+
+    }
+
+    /**
      * Opus Primus Search Results
      * Outputs message if no posts are found by 'the_Loop' query
      *

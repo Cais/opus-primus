@@ -47,4 +47,5 @@ $opus_structure->meta_tags();
 if ( is_single() ) {
     $opus_structure->post_author();
 }
+$opus_structure->post_coda();
 comments_template();
