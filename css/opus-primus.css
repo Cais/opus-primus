@@ -32,6 +32,9 @@
 
 /** Table of Contents ------------------------------------------------------- */
 /**
+ * === General Layouts ===
+ * Full Width - Two Columns - Right Sidebar
+ *
  * === Baselines ===
  * Elements requiring clearance
  *
@@ -42,32 +45,58 @@
 /** End: Table of Contents -------------------------------------------------- */
 
 /** === General Layouts === ------------------------------------------------- */
-/** Full Width - Two Columns - Right Sidebar */
-body {
+/** Full Width */
+body { margin: 0 auto; }
+
+/** One Column - No Sidebars */
+body.one-colum #content-wrapper {
     margin: 0 auto;
+    width: 100%;
 }
 
-#content-wrapper {
+body.one-column div#the-loop {
+    padding: 10px;
+}
+
+body.one-column div#first-sidebar,
+body.one-column div#second-sidebar {
+    display: none;
+}
+
+/** Two Columns - One Right Sidebar */
+body.two-column div#content-wrapper {
     float: left;
     margin: 0 -333px 0 0;
     width: 100%;
 }
 
-#the-loop {
+body.two-column div#the-loop {
     margin: 0 333px 0 0;
     padding: 10px;
 }
 
-#sidebar {
+body.two-column div#first-sidebar,
+body.two-column div#second-sidebar {
     float: right;
     overflow: hidden;
     /** Width should not exceed margin-right size of above */
     width: 330px;
 }
 
-#footer {
-    clear: both;
-}
+/** Three Columns - Two Right Sidebars */
+body.three-column div#content-wrapper {}
+
+/** Left column - the content */
+body.three-column div#the-loop {}
+
+/** Middle column - first and second widget areas */
+body.three-column div#first-sidebar {}
+
+/** Right column - third and fourth widget areas */
+body.three-column div#second-sidebar {}
+
+#footer { clear: both; }
+
 
 /** End: General Layouts ---------------------------------------------------- */
 
@@ -219,10 +248,10 @@ ul.nav-menu ul.sub-menu li, ul.nav-menu ul.children li, ul.nav-menu ul, ul.nav-m
 /** End: Menu Related Elements ---------------------------------------------- */
 
 /** === Sidebars === -------------------------------------------------------- */
-div#sidebar ul {
+div.sidebar ul {
     list-style: none;
 }
-div#sidebar ul ul {
+div.sidebar ul ul {
     list-style: disc outside none;
 }
 /** End: Sidebars ----------------------------------------------------------- */

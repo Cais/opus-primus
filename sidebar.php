@@ -34,24 +34,46 @@
  * @todo Review potential of additional widget area(s)
  */ ?>
 
-<div id="sidebar">
+<div id="first-sidebar">
 
     <ul id="sidebar-one">
         <?php
-        if ( is_active_sidebar( 'primary-widget' ) ) :
-            dynamic_sidebar( 'primary-widget' );
+        if ( is_active_sidebar( 'first-widget' ) ) :
+            dynamic_sidebar( 'first-widget' );
         else :
-            echo 'Test: Primary Widget Area<br />';
+            echo 'Test: First Widget Area<br />';
         endif; ?>
     </ul><!-- #sidebar-one -->
 
     <ul id="sidebar-two">
         <?php
-        if ( is_active_sidebar( 'secondary-widget' ) ) :
-            dynamic_sidebar( 'secondary-widget' );
+        if ( is_active_sidebar( 'second-widget' ) ) :
+            dynamic_sidebar( 'second-widget' );
         else :
-            echo 'Test: Secondary Widget Area<br />';
+            echo 'Test: Second Widget Area<br />';
         endif; ?>
     </ul><!-- .sidebar-two -->
 
-</div><!-- #sidebar -->
+</div><!-- #first-sidebar -->
+
+<div id="second-sidebar">
+
+    <ul id="sidebar-three">
+        <?php
+        if ( is_active_sidebar( 'third-widget' ) ) :
+            dynamic_sidebar( 'third-widget' );
+        else :
+            echo 'Test: Third Widget Area<br />';
+        endif; ?>
+    </ul><!-- #sidebar-three -->
+
+    <ul id="sidebar-four">
+        <?php
+        if ( is_active_sidebar( 'fourth-widget' ) ) :
+            dynamic_sidebar( 'fourth-widget' );
+        else :
+            echo 'Test: Fourth Widget Area<br />';
+        endif; ?>
+    </ul><!-- .sidebar-four -->
+
+</div><!-- #second-sidebar -->

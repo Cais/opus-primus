@@ -141,6 +141,47 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 }
 add_action( 'after_setup_theme', 'opus_primus_theme_setup' );
 
+if ( ! function_exists( 'opus_primus_body_classes' ) ) {
+    /**
+     * Opus Primus Body Classes
+     * A collection of classes added to the HTML body tag for various purposes
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @param   $classes - existing body classes
+     * @return  array - classes to be added to the `body_class` output
+     */
+    function opus_primus_body_classes( $classes ) {
+        /** Sidebar Layouts */
+        /** Test if all widget areas are inactive for one-column layout */
+        if ( ! ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) || is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
+            $classes[] = 'one-column';
+        }
+        /** Test if the first-sidebar or second-sidebar is active by testing their component widget areas for a two column layout */
+        if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
+            && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
+                && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) ) {
+            $classes[] = 'two-column';
+        } elseif( ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) )
+            && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
+                && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) ) {
+            $classes[] = 'two-column';
+        }
+        /** Test if at least one widget area in each sidebar area is active for a three-column layout */
+        if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) ) && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
+            $classes[] = 'three-column';
+        }
+        /** End: Sidebar Layouts */
+
+        /** Return the classes for use with the `body_class` filter */
+        return $classes;
+
+    }
+}
+add_filter( 'body_class', 'opus_primus_body_classes' );
+
+
 if ( ! function_exists( 'opus_enqueue_comment_reply' ) ) {
     /**
      * Enqueue Comment Reply Script
@@ -236,14 +277,26 @@ function opus_primus_widgets() {
      */
 
     register_sidebar( array(
-        'name'          => __( 'Primary Widget Area', 'opusprimus' ),
-        'id'            => 'primary-widget',
+        'name'          => __( 'First Widget Area', 'opusprimus' ),
+        'id'            => 'first-widget',
         'description'   => __( 'Drag and drop widgets into this area to have them appear on your web site.', 'opusprimus' ),
     ) );
 
     register_sidebar( array(
-        'name'          => __( 'Secondary Widget Area', 'opusprimus' ),
-        'id'            => 'secondary-widget',
+        'name'          => __( 'Second Widget Area', 'opusprimus' ),
+        'id'            => 'second-widget',
+        'description'   => __( 'Drag and drop widgets into this area to have them appear on your web site.', 'opusprimus' ),
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Third Widget Area', 'opusprimus' ),
+        'id'            => 'third-widget',
+        'description'   => __( 'Drag and drop widgets into this area to have them appear on your web site.', 'opusprimus' ),
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Fourth Widget Area', 'opusprimus' ),
+        'id'            => 'fourth-widget',
         'description'   => __( 'Drag and drop widgets into this area to have them appear on your web site.', 'opusprimus' ),
     ) );
 
