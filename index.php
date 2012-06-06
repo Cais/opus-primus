@@ -43,6 +43,7 @@ get_header();
 global $opus_nav, $opus_structure;
 
 ?>
+<!-- Open layout containers -->
 <div class="opus-uno"><div class="opus-duo"><div class="opus-tre">
     <div id="content-wrapper">
         <div id="the-loop">
@@ -59,6 +60,7 @@ global $opus_nav, $opus_structure;
         </div><!-- #the-loop -->
     </div><!-- #content-wrapper -->
     <?php get_sidebar(); ?>
+<!-- Close layout containers -->
 </div></div></div>
 <?php
 get_footer();

@@ -153,24 +153,29 @@ if ( ! function_exists( 'opus_primus_body_classes' ) ) {
      * @return  array - classes to be added to the `body_class` output
      */
     function opus_primus_body_classes( $classes ) {
+        global $content_width;
         /** Sidebar Layouts */
         /** Test if all widget areas are inactive for one-column layout */
         if ( ! ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) || is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
             $classes[] = 'one-column';
+            $content_width = 980;
         }
         /** Test if the first-sidebar or second-sidebar is active by testing their component widget areas for a two column layout */
         if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
             && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
                 && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) ) {
             $classes[] = 'two-column';
+            $content_width = 720;
         } elseif( ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) )
             && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
                 && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) ) {
             $classes[] = 'two-column';
+            $content_width = 720;
         }
         /** Test if at least one widget area in each sidebar area is active for a three-column layout */
         if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) ) && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
             $classes[] = 'three-column';
+            $content_width = 468;
         }
         /** End: Sidebar Layouts */
 
@@ -308,9 +313,7 @@ add_action( 'widgets_init', 'opus_primus_widgets' );
  * Temporary value of 1024 set for $content_width for testing purposes
  * @todo Sort out proper width and/or calculation to set appropriate width
  */
-if ( ! isset( $content_width ) ) {
-    $content_width = 1024;
-}
+if ( ! isset( $content_width ) ) $content_width = 640;
 
 
 /** Testing ... testing ... testing ... */

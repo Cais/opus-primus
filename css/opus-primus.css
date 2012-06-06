@@ -33,7 +33,9 @@
 /** Table of Contents ------------------------------------------------------- */
 /**
  * === General Layouts ===
- * Full Width - Two Columns - Right Sidebar
+ * One Column - Fluid - Centered
+ * Two Columns - Fluid - One Right Sidebar
+ * Three Columns - Fluid - Two Right Sidebars
  *
  * === Baselines ===
  * Elements requiring clearance
@@ -45,88 +47,82 @@
 /** End: Table of Contents -------------------------------------------------- */
 
 /** === General Layouts === ------------------------------------------------- */
-/** Full Width */
 body { margin: 0 auto; }
 
-/** One Column - No Sidebars */
-body.one-colum #content-wrapper {
-    margin: 0 auto;
+/** One Column - Fluid - Centered */
+/** One-column layout heavily influenced by this article: http://matthewjamestaylor.com/blog/perfect-full-page.htm */
+/** The main one-column container */
+body.one-column .opus-uno {
+    clear: both;
+    float: left;
+    /** This chops off any overhanging divs */
+    overflow: hidden;
+    /** This fixes the IE7 overflow hidden bug */
+    position: relative;
+    /** This is the width of whole page */
     width: 100%;
 }
-
 body.one-column div#the-loop {
-    padding: 10px;
+    float: left;
+    /** Page left padding */
+    left: 2%;
+    overflow: hidden;
+    padding: 0 0 1em 0;
+    position: relative;
+    /** Page width minus left and right padding */
+    width: 96%;
 }
 
+/** Make certain the sidebars are not displayed */
 body.one-column div#first-sidebar,
 body.one-column div#second-sidebar {
     display: none;
 }
 
-/** Two Columns - One Right Sidebar */
-body.two-column div#content-wrapper {
+/** Two Columns - Fluid - One Right Sidebar */
+/** Two-column layout heavily influenced by this article: http://matthewjamestaylor.com/blog/perfect-2-column-right-menu.htm */
+/** The main two-column container */
+body.two-column .opus-uno {
+    clear: both;
     float: left;
-    margin: 0 -333px 0 0;
+    /** This chops off any overhanging divs */
+    overflow: hidden;
+    /** This fixes the IE7 overflow hidden bug */
+    position: relative;
+    /** This is the width of whole page */
     width: 100%;
 }
-
-body.two-column div#the-loop {
-    margin: 0 333px 0 0;
-    padding: 10px;
+/** Common two-column settings */
+body.two-column .opus-tre {
+    float: left;
+    position: relative;
+    width: 100%;
 }
-
+body.two-column div#the-loop,
 body.two-column div#first-sidebar,
 body.two-column div#second-sidebar {
-    float: right;
+    float: left;
     overflow: hidden;
-    /** Width should not exceed margin-right size of above */
-    width: 330px;
+    padding: 0 0 1em 0;
+    position: relative;
 }
-
-
-/** ---- */
-/* column container */
-.colmask {
-    position:relative;	/* This fixes the IE7 overflow hidden bug */
-    clear:both;
-    float:left;
-    width:100%;			/* width of whole page */
-    overflow:hidden;		/* This chops off any overhanging divs */
+body.two-column .opus-tre {
+    /** Right column width */
+    right: 25%;
 }
-/* common column settings */
-.colright,
-.colmid,
-.colleft {
-    float:left;
-    width:100%;
-    position:relative;
+body.two-column div#the-loop {
+    /** (right column width) plus (left column left padding) */
+    left: 27%;
+    /** Left column content width (left column width minus left and right padding) */
+    width: 71%;
 }
-.col1,
-.col2,
-.col3 {
-    float:left;
-    position:relative;
-    padding:0 0 1em 0;
-    overflow:hidden;
+body.two-column div#first-sidebar,
+body.two-column div#second-sidebar {
+    /** Right column content width (right column width minus left and right padding) */
+    width: 21%;
+    /** (right column width) plus (left column left and right padding) plus (right column left padding) */
+    left: 31%;
 }
-/* 2 Column (right menu) settings */
-.rightmenu {
-    background:#eee;		/* right column background colour */
-}
-.rightmenu .colleft {
-    right:25%;			/* right column width */
-    background:#fff;		/* left column background colour */
-}
-.rightmenu .col1 {
-    width:71%;			/* left column content width (left column width minus left and right padding) */
-    left:27%;			/* (right column width) plus (left column left padding) */
-}
-.rightmenu .col2 {
-    width:21%;			/* right column content width (right column width minus left and right padding) */
-    left:31%;			/* (right column width) plus (left column left and right padding) plus (right column left padding) */
-}
-
-/** ---- */
 
 /** Three Columns - Fluid - Two Right Sidebars */
 /** Three-column layout heavily influenced by this article: http://matthewjamestaylor.com/blog/perfect-3-column.htm */
@@ -185,18 +181,7 @@ body.three-column div#second-sidebar {
     width: 21%;
 }
 
-/** Left column - the content */
-body.three-column div#the-loop {}
-
-/** Middle column - first and second widget areas */
-body.three-column div#first-sidebar {}
-
-/** Right column - third and fourth widget areas */
-body.three-column div#second-sidebar {}
-
 #footer { clear: both; }
-
-
 /** End: General Layouts ---------------------------------------------------- */
 
 /** === Baselines === ------------------------------------------------------- */
