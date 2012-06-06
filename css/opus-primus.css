@@ -312,7 +312,9 @@ ul.nav-menu li:hover > ul {
 }
 
 ul.nav-menu ul.sub-menu li,
-ul.nav-menu ul.children li { list-style: none; }
+ul.nav-menu ul.children li {
+    list-style: none;
+}
 /* End: Horizontal CSS Drop-Down Menu Module */
 
 /* -- Rounded Corners for Menu -- */
@@ -353,6 +355,18 @@ table#wp-calendar tbody tr td a { font-weight: bold; }
 /** RSS */
 li.widget_rss ul li cite { font-style: italic; }
 li.widget_rss ul li cite:before { content: '~ '; }
+/** Text Widgets */
+li.widget_text {
+    margin: 0 3px;
+    overflow: hidden;
+}
+li.widget_text div.textwidget div.wp-caption { margin: 0; }
+li.widget_text div.textwidget div.wp-caption a img {
+    height: auto;
+    width: 98%;
+}
+/** Tag Cloud */
+li.widget_tag_cloud { margin: 0 3px; }
 /** End: Default Widgets ---------------------------------------------------- */
 
 /** === 404 Layout === ------------------------------------------------------ */
