@@ -39,8 +39,8 @@
  * @todo Post-Format Loops
  */
 
-get_header();
 global $opus_nav, $opus_structure;
+get_header();
 
 ?>
 <!-- Open layout containers -->

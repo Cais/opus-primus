@@ -32,18 +32,28 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-get_header( 'search' );
-
 global $opus_nav, $opus_structure;
-if ( have_posts() ):
-    while ( have_posts() ):
-        the_post();
-        get_template_part( 'loops/opus-primus', get_post_format() );
-    endwhile;
-else:
-    $opus_structure->search_results();
-endif;
-$opus_nav->opus_posts_link();
+get_header( 'search' ); ?>
+<!-- Open layout containers -->
+<div class="opus-uno"><div class="opus-duo"><div class="opus-tre">
+    <div id="content-wrapper">
+        <div id="the-loop">
+            <?php
 
-get_sidebar( 'search' );
+            if ( have_posts() ):
+                while ( have_posts() ):
+                    the_post();
+                    get_template_part( 'loops/opus-primus', get_post_format() );
+                endwhile;
+            else:
+                $opus_structure->search_results();
+            endif;
+            $opus_nav->opus_posts_link(); ?>
+
+        </div><!-- #the-loop -->
+    </div><!-- #content-wrapper -->
+    <?php get_sidebar( 'search' ); ?>
+    <!-- Close layout containers -->
+</div></div></div>
+<?php
 get_footer( 'search' );

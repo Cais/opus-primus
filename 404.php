@@ -32,28 +32,38 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-get_header( '404' );
-
-echo '<h1>This is the 404 page!</h1>';
-
-/** Display links to archives */
 global $opus_archive;
-/** Display a list of categories to choose from */
-$opus_archive->categories_archive( array(
-    'orderby'       => 'count',
-    'order'         => 'desc',
-    'show_count'    => 1,
-    'hierarchical'  => 0,
-    'title_li'      => '<span class="title">' . __( 'Top 10 Categories by Post Count:', 'opusprimus' ) . '</span>',
-    'number'        => 10,
-) );
-/** Display a list of tags to choose from */
-$opus_archive->archive_cloud( array(
-    'taxonomy'  => 'post_tag',
-    'orderby'   => 'count',
-    'order'     => 'DESC',
-    'number'    => 10,
-) );
+get_header( '404' ); ?>
+<!-- Open layout containers -->
+<div class="opus-uno"><div class="opus-duo"><div class="opus-tre">
+    <div id="content-wrapper">
+        <div id="the-loop">
+            <?php
 
-get_sidebar( '404' );
+            echo '<h1>This is the 404 page!</h1>';
+
+            /** Display links to archives */
+            /** Display a list of categories to choose from */
+            $opus_archive->categories_archive( array(
+                'orderby'       => 'count',
+                'order'         => 'desc',
+                'show_count'    => 1,
+                'hierarchical'  => 0,
+                'title_li'      => '<span class="title">' . __( 'Top 10 Categories by Post Count:', 'opusprimus' ) . '</span>',
+                'number'        => 10,
+            ) );
+            /** Display a list of tags to choose from */
+            $opus_archive->archive_cloud( array(
+                'taxonomy'  => 'post_tag',
+                'orderby'   => 'count',
+                'order'     => 'DESC',
+                'number'    => 10,
+            ) ); ?>
+
+        </div><!-- #the-loop -->
+    </div><!-- #content-wrapper -->
+    <?php get_sidebar( '404' ); ?>
+    <!-- Close layout containers -->
+</div></div></div>
+<?php
 get_footer( '404' );

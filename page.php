@@ -30,23 +30,33 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
+
 global $opus_nav, $opus_structure;
+get_header(); ?>
+<!-- Open layout containers -->
+<div class="opus-uno"><div class="opus-duo"><div class="opus-tre">
+    <div id="content-wrapper">
+        <div id="the-loop">
+            <?php
 
-get_header();
+            if ( have_posts() ):
+                while ( have_posts() ):
+                    the_post();
+                    $opus_structure->post_title();
+                    $opus_structure->post_content();
+                    $opus_structure->post_byline();
+                    $opus_structure->post_author();
+                endwhile;
+            else:
+                $opus_structure->search_results();
+            endif;
 
-if ( have_posts() ):
-    while ( have_posts() ):
-        the_post();
-        $opus_structure->post_title();
-        $opus_structure->post_content();
-        $opus_structure->post_byline();
-        $opus_structure->post_author();
-    endwhile;
-else:
-    $opus_structure->search_results();
-endif;
+            comments_template(); ?>
 
-comments_template();
-
-get_sidebar();
+        </div><!-- #the-loop -->
+    </div><!-- #content-wrapper -->
+    <?php get_sidebar(); ?>
+    <!-- Close layout containers -->
+</div></div></div>
+<?php
 get_footer();

@@ -37,26 +37,34 @@
 
 /** Call the Post Structure and Navigation class variables */
 global $opus_nav, $opus_structure;
+get_header( get_post_format() ); ?>
+<!-- Open layout containers -->
+<div class="opus-uno"><div class="opus-duo"><div class="opus-tre">
+    <div id="content-wrapper">
+        <div id="the-loop">
+            <?php
 
-get_header( get_post_format() );
+            $opus_nav->opus_post_link();
+            if ( have_posts() ):
+                while ( have_posts() ):
+                    the_post();
 
-$opus_nav->opus_post_link();
-if ( have_posts() ):
-    while ( have_posts() ):
-        the_post();
+                    $opus_structure->post_title();
+                    $opus_structure->post_byline( array( 'tempus' => 'time' ) );
+                    $opus_structure->comments_link();
+                    $opus_structure->post_excerpt();
+                    $opus_structure->meta_tags();
+                    $opus_nav->opus_link_pages();
 
-        $opus_structure->post_title();
-        $opus_structure->post_byline( array( 'tempus' => 'time' ) );
-        $opus_structure->comments_link();
-        $opus_structure->post_excerpt();
-        $opus_structure->meta_tags();
-        $opus_nav->opus_link_pages();
+                endwhile;
+            else:
+                $opus_structure->search_results();
+            endif; ?>
 
-        comments_template();
-    endwhile;
-else:
-    $opus_structure->search_results();
-endif;
-
-get_sidebar( get_post_format() );
+        </div><!-- #the-loop -->
+    </div><!-- #content-wrapper -->
+    <?php get_sidebar( get_post_format() ); ?>
+    <!-- Close layout containers -->
+</div></div></div>
+<?php
 get_footer( get_post_format() );
