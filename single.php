@@ -47,9 +47,7 @@ get_header( get_post_format() ); ?>
                 endwhile;
             else:
                 $opus_structure->search_results();
-            endif;
-
-            comments_template(); ?>
+            endif; ?>
 
         </div><!-- #the-loop -->
     </div><!-- #content-wrapper -->

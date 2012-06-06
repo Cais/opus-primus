@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/opus-primus.css" afterPath="$PROJECT_DIR$/css/opus-primus.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.less" afterPath="$PROJECT_DIR$/css/style.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/single.php" afterPath="$PROJECT_DIR$/single.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,19 +27,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="opus-primus.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="opus-primus.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="325" column="61" selection-start="8645" selection-end="8645" vertical-scroll-proportion="0.0">
+            <state line="354" column="50" selection-start="9669" selection-end="9669" vertical-scroll-proportion="0.6037296">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.less" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="style.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="196" column="80" selection-start="6491" selection-end="6491" vertical-scroll-proportion="0.8828932">
+            <state line="192" column="80" selection-start="6312" selection-end="6312" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -56,7 +58,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/single.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusArchives.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusPostStructures.php" />
@@ -70,6 +71,7 @@
         <option value="$PROJECT_DIR$/sidebar.php" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/single.php" />
         <option value="$PROJECT_DIR$/css/opus-primus.css" />
         <option value="$PROJECT_DIR$/css/style.less" />
       </list>
@@ -648,7 +650,11 @@
       <created>1338992253871</created>
       <updated>1338992253871</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Added default Calendar widget styles">
+      <created>1338992998089</created>
+      <updated>1338992998089</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -799,11 +805,6 @@
         <state line="48" column="38" selection-start="1453" selection-end="1453" vertical-scroll-proportion="-11.115385" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/single.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -843,16 +844,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
+    <entry file="file://$PROJECT_DIR$/single.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="325" column="61" selection-start="8645" selection-end="8645" vertical-scroll-proportion="0.0">
+        <state line="49" column="21" selection-start="1670" selection-end="1670" vertical-scroll-proportion="0.38224852">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="196" column="80" selection-start="6491" selection-end="6491" vertical-scroll-proportion="0.8828932">
+        <state line="192" column="80" selection-start="6312" selection-end="6312" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="354" column="50" selection-start="9669" selection-end="9669" vertical-scroll-proportion="0.6037296">
           <folding />
         </state>
       </provider>

@@ -350,6 +350,9 @@ table#wp-calendar { width: 100%; }
 table#wp-calendar tbody tr { text-align: center; }
 table#wp-calendar tbody tr td#today { outline: 1px solid; }
 table#wp-calendar tbody tr td a { font-weight: bold; }
+/** RSS */
+li.widget_rss ul li cite { font-style: italic; }
+li.widget_rss ul li cite:before { content: '~ '; }
 /** End: Default Widgets ---------------------------------------------------- */
 
 /** === 404 Layout === ------------------------------------------------------ */
