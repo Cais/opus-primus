@@ -32,19 +32,36 @@
 
 /** Table of Contents ------------------------------------------------------- */
 /**
+ * === Baselines ===
+ * body{} properties
+ * Elements requiring clearance
+ *
  * === General Layouts ===
  * One Column - Fluid - Centered
  * Two Columns - Fluid - One Right Sidebar
  * Three Columns - Fluid - Two Right Sidebars
  *
- * === Baselines ===
- * Elements requiring clearance
- *
  * === Menu Related Elements ===
+ * === Sidebars ===
+ * === Default Widgets ===
  * === 404 Layout ===
  *
  */
 /** End: Table of Contents -------------------------------------------------- */
+
+/** === Baselines === ------------------------------------------------------- */
+body {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+div.meta-byline,
+h2.post-title,
+ul.archive,
+ul.sidebar {
+    clear: both;
+}
+/** End: Baselines ---------------------------------------------------------- */
 
 /** === General Layouts === ------------------------------------------------- */
 body { margin: 0 auto; }
@@ -184,20 +201,6 @@ body.three-column div#second-sidebar {
 #footer { clear: both; }
 /** End: General Layouts ---------------------------------------------------- */
 
-/** === Baselines === ------------------------------------------------------- */
-body {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-div.meta-byline,
-h2.post-title,
-ul.archive,
-ul.sidebar {
-    clear: both;
-}
-/** End: Baselines ---------------------------------------------------------- */
-
 /** === Menu Related Elements === */
 nav div.nav ul li {
     float: left;
@@ -205,7 +208,6 @@ nav div.nav ul li {
     padding: 10px;
 }
 
-/** nav div.nav ul li ul.children { display: none; } */
 /* === MENU === */
 div#top-navigation-menu {
     clear: both;
@@ -341,6 +343,14 @@ div#second-sidebar ul li ul {
     list-style: disc outside none;
 }
 /** End: Sidebars ----------------------------------------------------------- */
+
+/** === Default Widgets === ------------------------------------------------- */
+/** Calendar */
+table#wp-calendar { width: 100%; }
+table#wp-calendar tbody tr { text-align: center; }
+table#wp-calendar tbody tr td#today { outline: 1px solid; }
+table#wp-calendar tbody tr td a { font-weight: bold; }
+/** End: Default Widgets ---------------------------------------------------- */
 
 /** === 404 Layout === ------------------------------------------------------ */
 ul.featured.search.pages li,
