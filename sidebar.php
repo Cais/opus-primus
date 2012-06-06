@@ -41,7 +41,7 @@
         if ( is_active_sidebar( 'first-widget' ) ) :
             dynamic_sidebar( 'first-widget' );
         else :
-            echo 'Test: First Widget Area<br />';
+            echo '<div class="test-text">' . 'Test: First Widget Area<br />' . '</div>';
         endif; ?>
     </ul><!-- #sidebar-one -->
 
@@ -50,7 +50,7 @@
         if ( is_active_sidebar( 'second-widget' ) ) :
             dynamic_sidebar( 'second-widget' );
         else :
-            echo 'Test: Second Widget Area<br />';
+            echo '<div class="test-text">' . 'Test: Second Widget Area<br />' . '</div>';
         endif; ?>
     </ul><!-- .sidebar-two -->
 
@@ -63,7 +63,7 @@
         if ( is_active_sidebar( 'third-widget' ) ) :
             dynamic_sidebar( 'third-widget' );
         else :
-            echo 'Test: Third Widget Area<br />';
+            echo '<div class="test-text">' . 'Test: Third Widget Area<br />' . '</div>';
         endif; ?>
     </ul><!-- #sidebar-three -->
 
@@ -72,7 +72,7 @@
         if ( is_active_sidebar( 'fourth-widget' ) ) :
             dynamic_sidebar( 'fourth-widget' );
         else :
-            echo 'Test: Fourth Widget Area<br />';
+            echo '<div class="test-text">' . 'Test: Fourth Widget Area<br />' . '</div>';
         endif; ?>
     </ul><!-- .sidebar-four -->
 
