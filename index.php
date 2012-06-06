@@ -58,8 +58,8 @@ get_header();
             endif;
             $opus_nav->opus_posts_link(); ?>
         </div><!-- #the-loop -->
+        <?php get_sidebar(); ?>
     </div><!-- #content-wrapper -->
-    <?php get_sidebar(); ?>
 <!-- Close layout containers -->
 </div></div></div>
 <?php

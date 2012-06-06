@@ -61,8 +61,8 @@ get_header( '404' ); ?>
             ) ); ?>
 
         </div><!-- #the-loop -->
+        <?php get_sidebar( '404' ); ?>
     </div><!-- #content-wrapper -->
-    <?php get_sidebar( '404' ); ?>
     <!-- Close layout containers -->
 </div></div></div>
 <?php

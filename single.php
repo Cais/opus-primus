@@ -50,8 +50,8 @@ get_header( get_post_format() ); ?>
             endif; ?>
 
         </div><!-- #the-loop -->
+        <?php get_sidebar( get_post_format() ); ?>
     </div><!-- #content-wrapper -->
-    <?php get_sidebar( get_post_format() ); ?>
     <!-- Close layout containers -->
 </div></div></div>
 <?php
