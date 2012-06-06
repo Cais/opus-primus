@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/opus-primus-layout.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/opus-primus-layout.css" afterPath="$PROJECT_DIR$/css/opus-primus-layout.css" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +28,7 @@
       <file leaf-file-name="opus-primus-layout.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/opus-primus-layout.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="0" selection-start="2180" selection-end="2180" vertical-scroll-proportion="1.3076923">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -671,7 +671,11 @@
       <created>1339009643891</created>
       <updated>1339009643891</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Add 'opus-primus-layout.css' to be enqueued">
+      <created>1339014110329</created>
+      <updated>1339014110329</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -749,7 +753,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify line height in the byline and add select as a percentage (over-riding bootstrap's static width)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add 'opus-primus-layout.css' to be enqueued" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -762,7 +766,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="More LESS tweaks" />
     <MESSAGE value="Namespace conformity; and updates to 'search'" />
     <MESSAGE value="Change DIV to P; added some LESS elements; and, added styles" />
     <MESSAGE value="Add a few general LESS items; change comment reply script hook" />
@@ -787,6 +790,7 @@
     <MESSAGE value="Add test-text containers" />
     <MESSAGE value="Changed content-wrapper container to include sidebars" />
     <MESSAGE value="Modify line height in the byline and add select as a percentage (over-riding bootstrap's static width)" />
+    <MESSAGE value="Add 'opus-primus-layout.css' to be enqueued" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -895,7 +899,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/opus-primus-layout.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="0" selection-start="2180" selection-end="2180" vertical-scroll-proportion="1.3076923">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
