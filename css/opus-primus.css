@@ -373,7 +373,6 @@ li.widget_tag_cloud { margin: 0 3px; }
 ul.featured.search.pages li,
 ul.archive.cloud.list li,
 ul.archive.category.list li,
-/* div.archive.category.list ul li, */
 ul.nav.search li {
     float: left;
     list-style-type: none;
