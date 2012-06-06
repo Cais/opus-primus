@@ -62,9 +62,8 @@ ul.sidebar {
     clear: both;
 }
 
-div#content-wrapper div#the-loop p embed {
-    max-width: 100%;
-}
+div#content-wrapper div#the-loop p embed { max-width: 100%; }
+select { width: 98%; }
 /** End: Baselines ---------------------------------------------------------- */
 
 /** === General Layouts === ------------------------------------------------- */

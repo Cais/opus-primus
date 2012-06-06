@@ -257,7 +257,7 @@ class OpusPrimusStructures {
          * @var $line_height - set value for use with `get_avatar`
          * @todo Review if this can be set programmatically
          */
-        $line_height = 19;
+        $line_height = 18;
 
         /** @var string $mod_author_phrase - create the "mod_author_phrase"
          * depending on whether or not the modifying author is the same as the
