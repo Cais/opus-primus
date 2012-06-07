@@ -203,12 +203,12 @@ ul.nav-menu ul.sub-menu li, ul.nav-menu ul.children li, ul.nav-menu ul, ul.nav-m
 /** End: Menu Related Elements ---------------------------------------------- */
 
 /** === Sidebars === -------------------------------------------------------- */
-div#first-sidebar ul,
-div#second-sidebar ul {
+div.first-sidebar ul,
+div.second-sidebar ul {
     list-style: none outside none;
 }
-div#first-sidebar ul li ul,
-div#second-sidebar ul li ul {
+div.first-sidebar ul li ul,
+div.second-sidebar ul li ul {
     list-style: disc outside none;
 }
 /** End: Sidebars ----------------------------------------------------------- */
