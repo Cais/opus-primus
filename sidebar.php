@@ -34,7 +34,7 @@
  * @todo Review potential of additional widget area(s)
  */ ?>
 
-<div id="first-sidebar">
+<div class="first-sidebar">
 
     <ul id="sidebar-one">
         <?php
@@ -56,7 +56,7 @@
 
 </div><!-- #first-sidebar -->
 
-<div id="second-sidebar">
+<div class="second-sidebar">
 
     <ul id="sidebar-three">
         <?php

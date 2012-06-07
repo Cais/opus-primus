@@ -32,38 +32,40 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-global $opus_archive;
+global $opus_archive, $opus_structure;
 get_header( '404' ); ?>
-<!-- Open layout containers -->
-<div class="opus-uno"><div class="opus-duo"><div class="opus-tre">
-    <div id="content-wrapper">
-        <div id="the-loop">
-            <?php
+<div class="content-wrapper">
 
-            echo '<h1>This is the 404 page!</h1>';
+    <?php echo $opus_structure->layout_open(); ?>
+    <div class="the-loop">
 
-            /** Display links to archives */
-            /** Display a list of categories to choose from */
-            $opus_archive->categories_archive( array(
-                'orderby'       => 'count',
-                'order'         => 'desc',
-                'show_count'    => 1,
-                'hierarchical'  => 0,
-                'title_li'      => '<span class="title">' . __( 'Top 10 Categories by Post Count:', 'opusprimus' ) . '</span>',
-                'number'        => 10,
-            ) );
-            /** Display a list of tags to choose from */
-            $opus_archive->archive_cloud( array(
-                'taxonomy'  => 'post_tag',
-                'orderby'   => 'count',
-                'order'     => 'DESC',
-                'number'    => 10,
-            ) ); ?>
+        <?php
+        echo '<h1>This is the 404 page!</h1>';
 
-        </div><!-- #the-loop -->
-        <?php get_sidebar( '404' ); ?>
-    </div><!-- #content-wrapper -->
-    <!-- Close layout containers -->
-</div></div></div>
+        /** Display links to archives */
+        /** Display a list of categories to choose from */
+        $opus_archive->categories_archive( array(
+            'orderby'       => 'count',
+            'order'         => 'desc',
+            'show_count'    => 1,
+            'hierarchical'  => 0,
+            'title_li'      => '<span class="title">' . __( 'Top 10 Categories by Post Count:', 'opusprimus' ) . '</span>',
+            'number'        => 10,
+        ) );
+        /** Display a list of tags to choose from */
+        $opus_archive->archive_cloud( array(
+            'taxonomy'  => 'post_tag',
+            'orderby'   => 'count',
+            'order'     => 'DESC',
+            'number'    => 10,
+        ) ); ?>
+
+    </div><!-- #the-loop -->
+
+    <?php
+    get_sidebar( '404' );
+    echo $opus_structure->layout_close(); ?>
+
+</div><!-- #content-wrapper -->
 <?php
 get_footer( '404' );

@@ -40,27 +40,26 @@
  */
 
 global $opus_nav, $opus_structure;
-get_header();
+get_header(); ?>
+<div class="content-wrapper">
 
-?>
-<!-- Open layout containers -->
-<div class="opus-uno"><div class="opus-duo"><div class="opus-tre">
-    <div id="content-wrapper">
-        <div id="the-loop">
-            <?php
-            if ( have_posts() ):
-                while ( have_posts() ):
-                    the_post();
-                    get_template_part( 'loops/opus-primus', get_post_format() );
-                endwhile;
-            else:
-                $opus_structure->search_results();
-            endif;
-            $opus_nav->opus_posts_link(); ?>
-        </div><!-- #the-loop -->
-        <?php get_sidebar(); ?>
-    </div><!-- #content-wrapper -->
-<!-- Close layout containers -->
-</div></div></div>
+    <?php echo $opus_structure->layout_open(); ?>
+    <div class="the-loop">
+        <?php
+        if ( have_posts() ):
+            while ( have_posts() ):
+                the_post();
+                get_template_part( 'loops/opus-primus', get_post_format() );
+            endwhile;
+        else:
+            $opus_structure->search_results();
+        endif;
+        $opus_nav->opus_posts_link(); ?>
+    </div><!-- #the-loop -->
+    <?php
+    get_sidebar();
+    echo $opus_structure->layout_close(); ?>
+
+</div><!-- #content-wrapper -->
 <?php
 get_footer();

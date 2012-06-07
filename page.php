@@ -32,14 +32,14 @@
  */
 
 global $opus_nav, $opus_structure;
-get_header(); ?>
-<!-- Open layout containers -->
-<div class="opus-uno"><div class="opus-duo"><div class="opus-tre">
-    <div id="content-wrapper">
-        <div id="the-loop">
-            <?php
+get_header( 'page' ); ?>
+<div class="content-wrapper">
 
-            if ( have_posts() ):
+    <?php echo $opus_structure->layout_open(); ?>
+    <div class="the-loop">
+
+        <?php
+        if ( have_posts() ):
                 while ( have_posts() ):
                     the_post();
                     $opus_structure->post_title();
@@ -53,10 +53,12 @@ get_header(); ?>
 
             comments_template(); ?>
 
-        </div><!-- #the-loop -->
-        <?php get_sidebar(); ?>
-    </div><!-- #content-wrapper -->
-    <!-- Close layout containers -->
-</div></div></div>
+    </div><!-- #the-loop -->
+
+    <?php
+    get_sidebar( 'page' );
+    echo $opus_structure->layout_close(); ?>
+
+</div><!-- #content-wrapper -->
 <?php
-get_footer();
+get_footer( 'page' );

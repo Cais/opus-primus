@@ -34,26 +34,28 @@
 
 global $opus_nav, $opus_structure;
 get_header( 'search' ); ?>
-<!-- Open layout containers -->
-<div class="opus-uno"><div class="opus-duo"><div class="opus-tre">
-    <div id="content-wrapper">
-        <div id="the-loop">
-            <?php
+<div class="content-wrapper">
 
-            if ( have_posts() ):
-                while ( have_posts() ):
-                    the_post();
-                    get_template_part( 'loops/opus-primus', get_post_format() );
-                endwhile;
-            else:
-                $opus_structure->search_results();
-            endif;
-            $opus_nav->opus_posts_link(); ?>
+    <?php echo $opus_structure->layout_open(); ?>
+    <div class="the-loop">
 
-        </div><!-- #the-loop -->
-        <?php get_sidebar( 'search' ); ?>
-    </div><!-- #content-wrapper -->
-    <!-- Close layout containers -->
-</div></div></div>
+        <?php
+        if ( have_posts() ):
+            while ( have_posts() ):
+                the_post();
+                get_template_part( 'loops/opus-primus', get_post_format() );
+            endwhile;
+        else:
+            $opus_structure->search_results();
+        endif;
+        $opus_nav->opus_posts_link(); ?>
+
+    </div><!-- #the-loop -->
+
+    <?php
+    get_sidebar( 'search' );
+    echo $opus_structure->layout_close(); ?>
+
+</div><!-- #content-wrapper -->
 <?php
 get_footer( 'search' );

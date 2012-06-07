@@ -1,264 +1,314 @@
-/** Credit to Matthew James Taylor from this article: http://matthewjamestaylor.com/blog/perfect-multi-column-liquid-layouts */
+/**
+ * Layouts Stylesheet for Opus Primus
+ *
+ * @package     OpusPrimus
+ * @since       0.1
+ *
+ * @author      Opus Primus <in.opus.primus@gmail.com>
+ * @copyright   Copyright (c) 2012, Opus Primus
+ *
+ * This file is part of Opus Primus.
+ *
+ * Opus Primus is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 2, as published by the
+ * Free Software Foundation.
+ *
+ * You may NOT assume that you can use any other version of the GPL.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, write to:
+ *
+ *      Free Software Foundation, Inc.
+ *      51 Franklin St, Fifth Floor
+ *      Boston, MA  02110-1301  USA
+ *
+ * The license for this software can also likely be found here:
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ */
 
-/** Holy Grail Layout */
-/* column container */
-.colmask {
-    position:relative;	/* This fixes the IE7 overflow hidden bug */
-    clear:both;
-    float:left;
-    width:100%;			/* width of whole page */
-    overflow:hidden;		/* This chops off any overhanging divs */
+/**
+ * Credit to Matthew James Taylor from this article:
+ * http://matthewjamestaylor.com/blog/perfect-multi-column-liquid-layouts
+ */
+
+/** Holy Grail Layout - to be implemented */
+/** column container */
+.column-mask {
+    position: relative; /** This fixes the IE7 overflow hidden bug */
+    clear: both;
+    float: left;
+    width: 100%;        /** width of whole page */
+    overflow: hidden;   /** This chops off any overhanging divs */
 }
-/* common column settings */
+/** common column settings */
 .colright,
-.colmid,
-.colleft {
-    float:left;
-    width:100%;			/* width of page */
-    position:relative;
+.column-middle,
+.column-left {
+    float: left;
+    width: 100%;        /** width of page */
+    position: relative;
 }
-.col1,
-.col2,
-.col3 {
-    float:left;
-    position:relative;
-    padding:0 0 1em 0;	/* no left and right padding on columns, we just make them narrower instead
-					only padding top and bottom is included here, make it whatever value you need */
-    overflow:hidden;
+.the-loop,
+.first-sidebar,
+.second-sidebar {
+    float: left;
+    position: relative;
+    padding: 0 0 1em 0;
+    /**
+     * no left and right padding on columns, we just make them narrower instead
+     * only padding top and bottom is included here, make it whatever value you
+     * need
+     */
+    overflow: hidden;
 }
-/* 3 Column settings */
+/** Holy Grail 3 Column settings */
 .threecol {
-    background:#eee;		/* right column background colour */
+    background: #eee;       /** right column background colour */
 }
-.threecol .colmid {
-    right:25%;			/* width of the right column */
-    background:#fff;		/* center column background colour */
+.threecol .column-middle {
+    right: 25%;             /** width of the right column */
+    background: #fff;       /** center column background colour */
 }
-.threecol .colleft {
-    right:50%;			/* width of the middle column */
-    background:#f4f4f4;	/* left column background colour */
+.threecol .column-left {
+    right: 50%;             /** width of the middle column */
+    background: #f4f4f4;    /** left column background colour */
 }
-.threecol .col1 {
-    width:46%;			/* width of center column content (column width minus padding on either side) */
-    left:102%;			/* 100% plus left padding of center column */
+.threecol .the-loop {
+    width: 46%;             /** width of center column content (column width minus padding on either side) */
+    left: 102%;             /** 100% plus left padding of center column */
 }
-.threecol .col2 {
-    width:21%;			/* Width of left column content (column width minus padding on either side) */
-    left:31%;			/* width of (right column) plus (center column left and right padding) plus (left column left padding) */
+.threecol .first-sidebar {
+    width: 21%;             /** Width of left column content (column width minus padding on either side) */
+    left: 31%;              /** width of (right column) plus (center column left and right padding) plus (left column left padding) */
 }
-.threecol .col3 {
-    width:21%;			/* Width of right column content (column width minus padding on either side) */
-    left:85%;			/* Please make note of the brackets here:
-					(100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding) */
+.threecol .second-sidebar {
+    width: 21%;             /** Width of right column content (column width minus padding on either side) */
+    left: 85%;
+    /**
+     * Please make note of the brackets here:
+     * (100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding)
+     */
 }
 
 /** Blog Style 3-Column Layout */
-/* column container */
-.colmask {
-    position:relative;		/* This fixes the IE7 overflow hidden bug */
-    clear:both;
-    float:left;
-    width:100%;				/* width of whole page */
-    overflow:hidden;			/* This chops off any overhanging divs */
+/** column container */
+.column-mask {
+    position: relative;     /** This fixes the IE7 overflow hidden bug */
+    clear: both;
+    float: left;
+    width: 100%;            /** width of whole page */
+    overflow: hidden;       /** This chops off any overhanging divs */
 }
-/* common column settings */
+/** common column settings */
 .colright,
-.colmid,
-.colleft {
-    float:left;
-    width:100%;				/* width of page */
-    position:relative;
+.column-middle,
+.column-left {
+    float: left;
+    width: 100%;            /** width of page */
+    position: relative;
 }
-.col1,
-.col2,
-.col3 {
-    float:left;
-    position:relative;
-    padding:0 0 1em 0;		/* no left and right padding on columns, we just make them narrower instead
-						only padding top and bottom is included here, make it whatever value you need */
-    overflow:hidden;
+.the-loop,
+.first-sidebar,
+.second-sidebar {
+    float: left;
+    position: relative;
+    padding: 0 0 1em 0;
+    /**
+     * no left and right padding on columns, we just make them narrower instead
+     * only padding top and bottom is included here, make it whatever value you
+     * need
+     */
+    overflow: hidden;
 }
-/* 3 Column blog style settings */
-.blogstyle {
-    background:#eee;			/* right column background colour */
+/** Blog Style 3 Column Settings */
+.blog-style {
+    background: #eee;       /** right column background colour */
 }
-.blogstyle .colmid {
-    right:25%;				/* width of the right column */
-    background:#f4f4f4;		/* center column background colour */
+.blog-style .column-middle {
+    right: 25%;             /** width of the right column */
+    background: #f4f4f4;    /** center column background colour */
 }
-.blogstyle .colleft {
-    right:25%;				/* width of the middle column */
-    background:#fff;			/* left column background colour */
+.blog-style .column-left {
+    right: 25%;             /** width of the middle column */
+    background: #fff;       /** left column background colour */
 }
-.blogstyle .col1 {
-    width:46%;				/* width of center column content (column width minus padding on either side) */
-    left:52%;				/* 100% plus left padding of center column */
+.blog-style .the-loop {
+    width: 46%;             /** width of center column content (column width minus padding on either side) */
+    left: 52%;              /** 100% plus left padding of center column */
 }
-.blogstyle .col2 {
-    width:21%;				/* Width of left column content (column width minus padding on either side) */
-    left:56%;				/* width of (right column) plus (center column left and right padding) plus (left column left padding) */
+.blog-style .first-sidebar {
+    width: 21%;             /** Width of left column content (column width minus padding on either side) */
+    left: 56%;              /** width of (right column) plus (center column left and right padding) plus (left column left padding) */
 }
-.blogstyle .col3 {
-    width:21%;				/* Width of right column content (column width minus padding on either side) */
-    left:60%;				/* Please make note of the brackets here:
-						(100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding) */
+.blog-style .second-sidebar {
+    width: 21%;             /** Width of right column content (column width minus padding on either side) */
+    left: 60%;
+    /**
+     * Please make note of the brackets here:
+     * (100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding)
+     */
 }
 
-/** Left Sidebar 2-Column Layout */
-/* column container */
-.colmask {
-    position:relative;	/* This fixes the IE7 overflow hidden bug */
-    clear:both;
-    float:left;
-    width:100%;			/* width of whole page */
-    overflow:hidden;		/* This chops off any overhanging divs */
+/** Left Sidebar 2-Column Layout - to be implemented */
+/** column container */
+.column-mask {
+    position: relative;     /** This fixes the IE7 overflow hidden bug */
+    clear: both;
+    float: left;
+    width: 100%;            /** width of whole page */
+    overflow: hidden;       /** This chops off any overhanging divs */
 }
-/* common column settings */
+/** common column settings */
 .colright,
-.colmid,
-.colleft {
-    float:left;
-    width:100%;
-    position:relative;
+.column-middle,
+.column-left {
+    float: left;
+    width: 100%;
+    position: relative;
 }
-.col1,
-.col2,
-.col3 {
-    float:left;
-    position:relative;
-    padding:0 0 1em 0;
-    overflow:hidden;
+.the-loop,
+.first-sidebar,
+.second-sidebar {
+    float: left;
+    position: relative;
+    padding: 0 0 1em 0;
+    overflow: hidden;
 }
-/* 2 Column (left menu) settings */
+/** 2 Column (left menu) settings */
 .leftmenu {
-    background:#fff;		/* right column background colour */
+    background: #fff;       /** right column background colour */
 }
-.leftmenu .colleft {
-    right:75%;			/* right column width */
-    background:#f4f4f4;	/* left column background colour */
+.leftmenu .column-left {
+    right: 75%;             /** right column width */
+    background: #f4f4f4;    /** left column background colour */
 }
-.leftmenu .col1 {
-    width:71%;			/* right column content width */
-    left:102%;			/* 100% plus left column left padding */
+.leftmenu .the-loop {
+    width: 71%;             /** right column content width */
+    left:102%;              /** 100% plus left column left padding */
 }
-.leftmenu .col2 {
-    width:21%;			/* left column content width (column width minus left and right padding) */
-    left:6%;			/* (right column left and right padding) plus (left column left padding) */
+.leftmenu .first-sidebar,
+.leftmenu .second-sidebar {
+    width: 21%;             /** left column content width (column width minus left and right padding) */
+    left: 6%;               /** (right column left and right padding) plus (left column left padding) */
 }
 
 /** Right Sidebar 2-Column Layout */
-/* column container */
-.colmask {
-    position:relative;	/* This fixes the IE7 overflow hidden bug */
-    clear:both;
-    float:left;
-    width:100%;			/* width of whole page */
-    overflow:hidden;		/* This chops off any overhanging divs */
+/** column container */
+.column-mask {
+    position: relative;     /** This fixes the IE7 overflow hidden bug */
+    clear: both;
+    float: left;
+    width: 100%;            /** width of whole page */
+    overflow: hidden;       /** This chops off any overhanging divs */
 }
-/* common column settings */
+/** common column settings */
 .colright,
-.colmid,
-.colleft {
-    float:left;
-    width:100%;
-    position:relative;
+.column-middle,
+.column-left {
+    float: left;
+    width: 100%;
+    position: relative;
 }
-.col1,
-.col2,
-.col3 {
-    float:left;
-    position:relative;
-    padding:0 0 1em 0;
-    overflow:hidden;
+.the-loop,
+.first-sidebar {
+    float: left;
+    position: relative;
+    padding: 0 0 1em 0;
+    overflow: hidden;
 }
-/* 2 Column (right menu) settings */
-.rightmenu {
-    background:#eee;		/* right column background colour */
+/** 2 Column (right sidebar) settings */
+.right-sidebar {
+    background: #eee;       /** right column background colour */
 }
-.rightmenu .colleft {
-    right:25%;			/* right column width */
-    background:#fff;		/* left column background colour */
+.right-sidebar .column-left {
+    right: 25%;             /** right column width */
+    background: #fff;       /** left column background colour */
 }
-.rightmenu .col1 {
-    width:71%;			/* left column content width (left column width minus left and right padding) */
-    left:27%;			/* (right column width) plus (left column left padding) */
+.right-sidebar .the-loop {
+    width: 71%;             /** left column content width (left column width minus left and right padding) */
+    left: 27%;              /** (right column width) plus (left column left padding) */
 }
-.rightmenu .col2 {
-    width:21%;			/* right column content width (right column width minus left and right padding) */
-    left:31%;			/* (right column width) plus (left column left and right padding) plus (right column left padding) */
+.right-sidebar .first-sidebar,
+.right-sidebar .second-sidebar {
+    width: 21%;             /** right column content width (right column width minus left and right padding) */
+    left: 31%;              /** (right column width) plus (left column left and right padding) plus (right column left padding) */
 }
 
-/** Double Page 2-Column Layout */
-/* column container */
-.colmask {
-    clear:both;
-    float:left;
-    width:100%;			/* width of whole page */
-    overflow:hidden;		/* This chops off any overhanging divs */
+/** Double Page 2-Column Layout - to be implemented */
+/** column container */
+.column-mask {
+    clear: both;
+    float: left;
+    width: 100%;            /** width of whole page */
+    overflow: hidden;       /** This chops off any overhanging divs */
 }
-/* common column settings */
+/** common column settings */
 .colright,
-.colmid,
-.colleft {
-    float:left;
-    width:100%;
-    position:relative;
+.column-middle,
+.column-left {
+    float: left;
+    width: 100%;
+    position: relative;
 }
-.col1,
-.col2,
-.col3 {
-    float:left;
-    position:relative;
-    padding:0 0 1em 0;
-    overflow:hidden;
+.the-loop,
+.first-sidebar,
+.second-sidebar {
+    float: left;
+    position: relative;
+    padding: 0 0 1em 0;
+    overflow: hidden;
 }
-/* 2 Column (double page) settings */
+/** 2 Column (double page) settings */
 .doublepage {
-    background:#eee;		/* right column background colour */
+    background: #eee;       /** right column background colour */
 }
-.doublepage .colleft {
-    right:50%;			/* right column width */
-    background:#fff;		/* left column background colour */
+.doublepage .column-left {
+    right: 50%;             /** right column width */
+    background: #fff;       /** left column background colour */
 }
-.doublepage .col1 {
-    width:46%;			/* left column content width (column width minus left and right padding) */
-    left:52%;			/* right column width plus left column left padding */
+.doublepage .the-loop {
+    width: 46%;             /** left column content width (column width minus left and right padding) */
+    left: 52%;              /** right column width plus left column left padding */
 }
-.doublepage .col2 {
-    width:46%;			/* right column content width (column width minus left and right padding) */
-    left:56%;			/* (right column width) plus (left column left and right padding) plus (right column left padding) */
+.doublepage .first-sidebar {
+    width: 46%;             /** right column content width (column width minus left and right padding) */
+    left: 56%;              /** (right column width) plus (left column left and right padding) plus (right column left padding) */
 }
 
 /** Full Page 1-Column Layout */
-/* column container */
-.colmask {
-    position:relative;	/* This fixes the IE7 overflow hidden bug */
-    clear:both;
-    float:left;
-    width:100%;			/* width of whole page */
-    overflow:hidden;		/* This chops off any overhanging divs */
+/** column container */
+.column-mask {
+    position: relative;     /** This fixes the IE7 overflow hidden bug */
+    clear: both;
+    float: left;
+    width: 100%;            /** width of whole page */
+    overflow: hidden;       /** This chops off any overhanging divs */
 }
-/* common column settings */
+/** common column settings */
 .colright,
-.colmid,
-.colleft {
-    float:left;
-    width:100%;
-    position:relative;
+.column-middle,
+.column-left {
+    float: left;
+    width: 100%;
+    position: relative;
 }
-.col1,
-.col2,
-.col3 {
-    float:left;
-    position:relative;
-    padding:0 0 1em 0;
-    overflow:hidden;
+.the-loop,
+.first-sidebar,
+.second-sidebar {
+    float: left;
+    position: relative;
+    padding: 0 0 1em 0;
+    overflow: hidden;
 }
-/* Full page settings */
-.fullpage {
-    background:#fff;		/* page background colour */
+/** Full page settings */
+.full-page {
+    background: #fff;       /** page background colour */
 }
-.fullpage .col1 {
-    width:96%;			/* page width minus left and right padding */
-    left:2%;			/* page left padding */
+.full-page .the-loop {
+    width: 96%;             /** page width minus left and right padding */
+    left: 2%;               /** page left padding */
 }

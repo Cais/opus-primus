@@ -37,6 +37,80 @@ class OpusPrimusStructures {
     function __construct() {}
 
     /**
+     * Opus Primus Layout - Open
+     * Adds appropriate CSS containers depending on the layout structure.
+     *
+     * @package     OpusPrimus
+     * @since       0.1
+     *
+     * @uses        is_active_sidebar
+     * @internal    works in conjunction with layout_close
+     *
+     * @return      string
+     */
+    function layout_open() {
+        $layout = '';
+        /** Test if all widget areas are inactive for one-column layout */
+        if ( ! ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) || is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
+            $layout = '<div class="column-mask full-page">';
+        }
+        /** Test if the first-sidebar or second-sidebar is active by testing their component widget areas for a two column layout */
+        if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
+            && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
+                && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) ) {
+            $layout = '<div class="column-mask right-sidebar"><div class="column-left">';
+        } elseif( ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) )
+            && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
+                && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) ) {
+            $layout = '<div class="column-mask right-sidebar"><div class="column-left">';
+        }
+        /** Test if at least one widget area in each sidebar area is active for a three-column layout */
+        if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) ) && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
+            $layout = '<div class="column-mask blog-style"><div class="column-middle"><div class="column-left">';
+        }
+
+        return $layout;
+
+    }
+
+    /**
+     * Opus Primus Layout - Close
+     * Closes appropriate CSS containers depending on the layout structure.
+     *
+     * @package     OpusPrimus
+     * @since       0.1
+     *
+     * @uses        is_active_sidebar
+     * @internal    works in conjunction with layout_open
+     *
+     * @return      string
+     */
+    function layout_close() {
+        $layout = '';
+        /** Test if all widget areas are inactive for one-column layout */
+        if ( ! ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) || is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
+            $layout = '</div><!-- .column-mask .full-page -->';
+        }
+        /** Test if the first-sidebar or second-sidebar is active by testing their component widget areas for a two column layout */
+        if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
+            && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
+                && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) ) {
+            $layout = '</div><!-- .column-mask .right-sidebar --></div><!--.column-left -->';
+        } elseif( ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) )
+            && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
+                && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) ) {
+            $layout = '</div><!-- .column-mask .right-sidebar --></div><!--.column-left -->';
+        }
+        /** Test if at least one widget area in each sidebar area is active for a three-column layout */
+        if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) ) && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
+            $layout = '</div><!-- .column-mask .blog-style --></div><!-- .column-middle --></div><!-- .column-left -->';
+        }
+
+        return $layout;
+
+    }
+
+    /**
      * Opus Primus Post Title
      * Outputs the post title
      *

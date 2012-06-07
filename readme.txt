@@ -62,4 +62,14 @@ Simply put, yes. Opus Primus supports WordPress Child-Themes like any other well
 made theme. A very simple Child-Theme template is available upon request if you
 need help getting started. Please email in.opus.primus@gmail.com for more info.
 
+Q: How does Opus Primus automatically handle multiple column layouts?
+Through some CSS trickery and code logic Opus Primus will display by default
+one, two, or three columns depending on which sidebar widget areas are active.
+There are four(4) widget areas built into two sidebar areas.
+
+The following will show how, if active, they affect the layout:
+- Full Page (one-column): no active widget areas
+- Two-Column: widget areas active only in one sidebar area
+- Three-Column: at least one widget area active in each sidebar area
+
 == Notes ==
