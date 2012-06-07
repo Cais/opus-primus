@@ -51,6 +51,7 @@ get_header( 'archive' ); ?>
             while ( have_posts() ):
                 the_post(); ?>
                 <div <?php post_class(); ?>>
+                    <?php
                     $opus_structure->post_title();
                     $opus_structure->post_byline( array( 'tempus' => 'time' ) );
                     $opus_structure->comments_link();
