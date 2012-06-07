@@ -38,25 +38,27 @@
 /** Call the Post Structure and Navigation class variables */
 global $opus_nav, $opus_structure;
 get_header( 'archive' ); ?>
+
 <div class="content-wrapper">
 
     <?php echo $opus_structure->layout_open(); ?>
+
     <div class="the-loop">
 
         <?php
-
         $opus_nav->opus_post_link();
         if ( have_posts() ):
             while ( have_posts() ):
-                the_post();
-
-                $opus_structure->post_title();
-                $opus_structure->post_byline( array( 'tempus' => 'time' ) );
-                $opus_structure->comments_link();
-                $opus_structure->post_excerpt();
-                $opus_structure->meta_tags();
-                $opus_nav->opus_link_pages();
-
+                the_post(); ?>
+                <div <?php post_class(); ?>>
+                    $opus_structure->post_title();
+                    $opus_structure->post_byline( array( 'tempus' => 'time' ) );
+                    $opus_structure->comments_link();
+                    $opus_structure->post_excerpt();
+                    $opus_structure->meta_tags();
+                    $opus_nav->opus_link_pages(); ?>
+                </div><!-- .post -->
+            <?php
             endwhile;
         else:
             $opus_structure->search_results();
@@ -66,8 +68,10 @@ get_header( 'archive' ); ?>
 
     <?php
     get_sidebar( 'archive' );
+
     echo $opus_structure->layout_close(); ?>
 
 </div><!-- #content-wrapper -->
+
 <?php
 get_footer( 'archive' );

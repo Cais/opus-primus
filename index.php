@@ -41,10 +41,13 @@
 
 global $opus_nav, $opus_structure;
 get_header(); ?>
+
 <div class="content-wrapper">
 
     <?php echo $opus_structure->layout_open(); ?>
+
     <div class="the-loop">
+
         <?php
         if ( have_posts() ):
             while ( have_posts() ):
@@ -55,11 +58,15 @@ get_header(); ?>
             $opus_structure->search_results();
         endif;
         $opus_nav->opus_posts_link(); ?>
+
     </div><!-- #the-loop -->
+
     <?php
     get_sidebar();
+
     echo $opus_structure->layout_close(); ?>
 
 </div><!-- #content-wrapper -->
+
 <?php
 get_footer();

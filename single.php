@@ -33,9 +33,11 @@
 
 global $opus_nav, $opus_structure;
 get_header( get_post_format() ); ?>
+
 <div class="content-wrapper">
 
     <?php echo $opus_structure->layout_open(); ?>
+
     <div class="the-loop">
 
         <?php
@@ -53,8 +55,10 @@ get_header( get_post_format() ); ?>
 
     <?php
     get_sidebar( get_post_format() );
+
     echo $opus_structure->layout_close(); ?>
 
 </div><!-- #content-wrapper -->
+
 <?php
 get_footer( get_post_format() );

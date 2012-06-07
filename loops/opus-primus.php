@@ -35,17 +35,23 @@
 /** Call the Post Structure and Navigation class variables */
 global $opus_nav, $opus_structure;
 
-/** Display the post */
-$opus_structure->post_byline( array( 'show_mod_author' => true ) );
-$opus_structure->post_title();
-if ( ! is_single() ) {
-    $opus_structure->comments_link();
-}
-$opus_structure->post_content();
-$opus_nav->opus_link_pages();
-$opus_structure->meta_tags();
-if ( is_single() ) {
-    $opus_structure->post_author();
-}
-$opus_structure->post_coda();
+/** Display the post */ ?>
+<div <?php post_class(); ?>>
+
+    <?php
+    $opus_structure->post_byline( array( 'show_mod_author' => true ) );
+    $opus_structure->post_title();
+    if ( ! is_single() ) {
+        $opus_structure->comments_link();
+    }
+    $opus_structure->post_content();
+    $opus_nav->opus_link_pages();
+    $opus_structure->meta_tags();
+    if ( is_single() ) {
+        $opus_structure->post_author();
+    }
+    $opus_structure->post_coda(); ?>
+
+</div><!-- .post -->
+<?php
 comments_template();
