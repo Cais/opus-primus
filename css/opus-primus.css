@@ -62,8 +62,10 @@ ul.sidebar {
     clear: both;
 }
 
+/** Fluid Secret Sauce */
 div#content-wrapper div#the-loop p embed { max-width: 100%; }
 select { width: 98%; }
+.gallery-item img { height: auto; }
 /** End: Baselines ---------------------------------------------------------- */
 
 /** === General Layouts === ------------------------------------------------- */
