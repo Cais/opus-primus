@@ -58,6 +58,7 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
         wp_enqueue_style( 'Bootstrap', OPUS_CSS . 'bootstrap.css', array(), '0.1', 'screen' );
         wp_enqueue_style( 'Bootstrap-Responsive', OPUS_CSS . 'bootstrap-responsive.css', array(), '0.1', 'screen' );
         /** Enqueue Theme Stylesheets */
+        wp_enqueue_style( 'Opus-Primus-Layout', OPUS_CSS . 'opus-primus-layout.css', array(), '0.1', 'screen' );
         wp_enqueue_style( 'Opus-Primus', OPUS_CSS . 'opus-primus.css', array(), '0.1', 'screen' );
         /** Enqueue custom stylesheet after to maintain expected specificity */
         if ( is_readable( OPUS_CSS . 'opus-primus-custom-style.css' ) ) {

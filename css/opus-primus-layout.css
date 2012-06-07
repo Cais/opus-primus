@@ -1,17 +1,6 @@
 /** Credit to Matthew James Taylor from this article: http://matthewjamestaylor.com/blog/perfect-multi-column-liquid-layouts */
 
-/** Holy Grail */
-body {
-    margin:0;
-    padding:0;
-    border:0;			/* This removes the border around the viewport in old versions of IE */
-    width:100%;
-    background:#fff;
-    min-width:600px;		/* Minimum width of layout - remove line if not required */
-    /* The min-width property does not work in old versions of Internet Explorer */
-    font-size:90%;
-}
-
+/** Holy Grail Layout */
 /* column container */
 .colmask {
     position:relative;	/* This fixes the IE7 overflow hidden bug */
@@ -20,7 +9,6 @@ body {
     width:100%;			/* width of whole page */
     overflow:hidden;		/* This chops off any overhanging divs */
 }
-
 /* common column settings */
 .colright,
 .colmid,
@@ -38,7 +26,6 @@ body {
 					only padding top and bottom is included here, make it whatever value you need */
     overflow:hidden;
 }
-
 /* 3 Column settings */
 .threecol {
     background:#eee;		/* right column background colour */
@@ -65,7 +52,33 @@ body {
 					(100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding) */
 }
 
-/** 3 Column blog style settings */
+/** Blog Style 3-Column Layout */
+/* column container */
+.colmask {
+    position:relative;		/* This fixes the IE7 overflow hidden bug */
+    clear:both;
+    float:left;
+    width:100%;				/* width of whole page */
+    overflow:hidden;			/* This chops off any overhanging divs */
+}
+/* common column settings */
+.colright,
+.colmid,
+.colleft {
+    float:left;
+    width:100%;				/* width of page */
+    position:relative;
+}
+.col1,
+.col2,
+.col3 {
+    float:left;
+    position:relative;
+    padding:0 0 1em 0;		/* no left and right padding on columns, we just make them narrower instead
+						only padding top and bottom is included here, make it whatever value you need */
+    overflow:hidden;
+}
+/* 3 Column blog style settings */
 .blogstyle {
     background:#eee;			/* right column background colour */
 }
@@ -91,7 +104,32 @@ body {
 						(100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding) */
 }
 
-/** 2 Column (left menu) settings */
+/** Left Sidebar 2-Column Layout */
+/* column container */
+.colmask {
+    position:relative;	/* This fixes the IE7 overflow hidden bug */
+    clear:both;
+    float:left;
+    width:100%;			/* width of whole page */
+    overflow:hidden;		/* This chops off any overhanging divs */
+}
+/* common column settings */
+.colright,
+.colmid,
+.colleft {
+    float:left;
+    width:100%;
+    position:relative;
+}
+.col1,
+.col2,
+.col3 {
+    float:left;
+    position:relative;
+    padding:0 0 1em 0;
+    overflow:hidden;
+}
+/* 2 Column (left menu) settings */
 .leftmenu {
     background:#fff;		/* right column background colour */
 }
@@ -108,7 +146,32 @@ body {
     left:6%;			/* (right column left and right padding) plus (left column left padding) */
 }
 
-/** 2 Column (right menu) settings */
+/** Right Sidebar 2-Column Layout */
+/* column container */
+.colmask {
+    position:relative;	/* This fixes the IE7 overflow hidden bug */
+    clear:both;
+    float:left;
+    width:100%;			/* width of whole page */
+    overflow:hidden;		/* This chops off any overhanging divs */
+}
+/* common column settings */
+.colright,
+.colmid,
+.colleft {
+    float:left;
+    width:100%;
+    position:relative;
+}
+.col1,
+.col2,
+.col3 {
+    float:left;
+    position:relative;
+    padding:0 0 1em 0;
+    overflow:hidden;
+}
+/* 2 Column (right menu) settings */
 .rightmenu {
     background:#eee;		/* right column background colour */
 }
@@ -125,7 +188,31 @@ body {
     left:31%;			/* (right column width) plus (left column left and right padding) plus (right column left padding) */
 }
 
-/** 2 Column (double page) settings */
+/** Double Page 2-Column Layout */
+/* column container */
+.colmask {
+    clear:both;
+    float:left;
+    width:100%;			/* width of whole page */
+    overflow:hidden;		/* This chops off any overhanging divs */
+}
+/* common column settings */
+.colright,
+.colmid,
+.colleft {
+    float:left;
+    width:100%;
+    position:relative;
+}
+.col1,
+.col2,
+.col3 {
+    float:left;
+    position:relative;
+    padding:0 0 1em 0;
+    overflow:hidden;
+}
+/* 2 Column (double page) settings */
 .doublepage {
     background:#eee;		/* right column background colour */
 }
@@ -142,7 +229,32 @@ body {
     left:56%;			/* (right column width) plus (left column left and right padding) plus (right column left padding) */
 }
 
-/** Full page settings */
+/** Full Page 1-Column Layout */
+/* column container */
+.colmask {
+    position:relative;	/* This fixes the IE7 overflow hidden bug */
+    clear:both;
+    float:left;
+    width:100%;			/* width of whole page */
+    overflow:hidden;		/* This chops off any overhanging divs */
+}
+/* common column settings */
+.colright,
+.colmid,
+.colleft {
+    float:left;
+    width:100%;
+    position:relative;
+}
+.col1,
+.col2,
+.col3 {
+    float:left;
+    position:relative;
+    padding:0 0 1em 0;
+    overflow:hidden;
+}
+/* Full page settings */
 .fullpage {
     background:#fff;		/* page background colour */
 }
