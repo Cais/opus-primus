@@ -68,14 +68,15 @@ class OpusPrimusNavigation {
      * @since   0.1
      *
      * @param   string|array $link_pages_args
+     * @param   string $preface - leading word or phrase before display of post page index - MUST set $link_pages_args for this to display.
      *
      * @uses    do_action
      * @uses    wp_link_pages
      */
-    function opus_link_pages( $link_pages_args = '' ) {
+    function opus_link_pages( $link_pages_args = '', $preface = '' ) {
         /** @var $defaults - initial values */
         $defaults = array(
-            'before'    => '<p class="navigation link-pages cf">',
+            'before'    => '<p class="navigation opus-link-pages cf">' . '<span class="opus-link-pages-preface">' . $preface . '</span>',
             'after'     => '</p>',
         );
         $link_pages_args = wp_parse_args( (array) $defaults, $link_pages_args );

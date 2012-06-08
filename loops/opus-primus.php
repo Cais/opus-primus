@@ -45,7 +45,7 @@ global $opus_nav, $opus_structure;
         $opus_structure->comments_link();
     }
     $opus_structure->post_content();
-    $opus_nav->opus_link_pages();
+    $opus_nav->opus_link_pages( array(), $preface = 'Pages:' );
     $opus_structure->meta_tags();
     if ( is_single() ) {
         $opus_structure->post_author();

@@ -202,6 +202,16 @@ ul.nav-menu ul.sub-menu li, ul.nav-menu ul.children li, ul.nav-menu ul, ul.nav-m
 /* === End: Menu === */
 /** End: Menu Related Elements ---------------------------------------------- */
 
+/** === Comments === -------------------------------------------------------- */
+div.comments ul.comments-list,
+div.comments ul.comments-list li.comment ul.children {
+    list-style: none outside none;
+}
+div#respond form#commentform p.comment-form-comment textarea#comment {
+    width: 96%;
+}
+/** End: Comments ----------------------------------------------------------- */
+
 /** === Sidebars === -------------------------------------------------------- */
 div.first-sidebar ul,
 div.second-sidebar ul {
@@ -251,5 +261,11 @@ ul.featured li ul.nav div.nav {
     margin-bottom: 0;
 }
 /** End: 404 Layout --------------------------------------------------------- */
+
+/** Hacks to be sorted out and corrected */
+body.two-column embed,
+body.three-column embed {
+    max-width: 100%;
+}
 
 .test-text {display: none;}
