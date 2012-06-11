@@ -159,8 +159,11 @@ class OpusPrimusGallery {
      *
      * @todo Clean-up code-formatting
      */
-    function gallery_single_only( $filtered, $attr = null ) {
+    static public function gallery_single_only( $filtered, $attr = null ) {
         global $post;
+
+        static $instance = 0;
+        $instance++;
 
         // We're trusting author input, so let's at least make sure it looks like a valid orderby statement
         if ( isset( $attr['orderby'] ) ) {
