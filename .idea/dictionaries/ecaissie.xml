@@ -2,8 +2,11 @@
   <dictionary name="ecaissie">
     <words>
       <w>blockquote</w>
+      <w>captiontag</w>
       <w>cloudhead</w>
       <w>fieldset</w>
+      <w>icontag</w>
+      <w>itemtag</w>
       <w>monospace</w>
       <w>necolas</w>
       <w>numberposts</w>
