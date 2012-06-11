@@ -43,5 +43,7 @@ require_once( OPUS_INC . 'class.OpusPrimusArchives.php' );
 require_once( OPUS_INC . 'class.OpusPrimusStructures.php' );
 /** Add Navigation */
 require_once( OPUS_INC . 'class.OpusPrimusNavigation.php' );
+/** Add Gallery */
+require_once( OPUS_INC . 'class.OpusPrimusGallery.php' );
 /** Add Sharing */
 require_once( OPUS_INC . 'class.OpusPrimusSocial.php' );
