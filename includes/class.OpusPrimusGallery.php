@@ -80,8 +80,8 @@ class OpusPrimusGallery {
                     'post_mime_type'    => 'image',
                     'order'             => 'ASC',
                     'orderby'           => 'menu_order ID',
-                    'numberposts'       => 1)
-            );
+                    'numberposts'       => 1
+                ) );
             foreach ( $attachments as $opus_thumb_id => $attachment )
                 echo wp_get_attachment_image( $opus_thumb_id, $size );
         }
@@ -129,12 +129,17 @@ class OpusPrimusGallery {
          * as the intent is to use these images as additional from gallery
          */
         $size = 'thumbnail';
+
         foreach ( $images->posts as $image ) {
             echo '<a href="' . get_permalink( $image->ID ) . '">' . wp_get_attachment_image( $image->ID, $size ) . '</a>';
         }
 
-        if ( 4 > ( $images->found_posts + 1 ) ) {
-            printf( __( 'There are %1$s images in this gallery.', 'opusprimus' ), ( $images->found_posts + 1 ) );
+        /**
+         * @todo Add link to gallery anchored on "this gallery" or "more images"
+         * @todo Add some style to this!
+         */
+        if ( ( $images->found_posts + 1 ) > 4 ) {
+            printf( '<br />' . __( 'There are %1$s more images in addition to these in this gallery.', 'opusprimus' ), ( $images->found_posts + 1 ) - 4 );
         }
 
         /** Add empty hook after secondary images */

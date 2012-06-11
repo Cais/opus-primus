@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/loops/opus-primus-gallery.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/opus-primus.css" afterPath="$PROJECT_DIR$/css/opus-primus.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" />
     </list>
     <ignored path="opus-primus.iws" />
@@ -37,7 +39,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/sidebar.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
         <option value="$PROJECT_DIR$/css/opus-primus-layout.css" />
@@ -45,7 +46,6 @@
         <option value="$PROJECT_DIR$/single.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/page.php" />
-        <option value="$PROJECT_DIR$/css/opus-primus.css" />
         <option value="$PROJECT_DIR$/css/style.less" />
         <option value="$PROJECT_DIR$/archive.php" />
         <option value="$PROJECT_DIR$/loops/opus-primus.php" />
@@ -53,6 +53,8 @@
         <option value="$PROJECT_DIR$/includes/opus-ignite.php" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" />
+        <option value="$PROJECT_DIR$/loops/opus-primus-gallery.php" />
+        <option value="$PROJECT_DIR$/css/opus-primus.css" />
       </list>
     </option>
   </component>
@@ -679,7 +681,11 @@
       <created>1339442939462</created>
       <updated>1339442939462</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="Added conditional check for post-format:gallery to `gallery_single_only`">
+      <created>1339443819819</created>
+      <updated>1339443819819</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -757,7 +763,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Specified static public for `gallery_single_only` and added $instance" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added conditional check for post-format:gallery to `gallery_single_only`" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -770,7 +776,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="More arguments and parameters" />
     <MESSAGE value="Updates to 404; code clean up and documentation of classes." />
     <MESSAGE value="IDE Update" />
     <MESSAGE value="Added 'opus-primus.css' for main theme styles" />
@@ -795,21 +800,12 @@
     <MESSAGE value="Added class OpusPrimusGallery - with `featured_image` and `secondary_images`" />
     <MESSAGE value="Added Single Only view filter for the Post Gallery" />
     <MESSAGE value="Specified static public for `gallery_single_only` and added $instance" />
+    <MESSAGE value="Added conditional check for post-format:gallery to `gallery_single_only`" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="74" selection-start="1848" selection-end="1848" vertical-scroll-proportion="1.0734788" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="210" column="4" selection-start="4798" selection-end="4798" vertical-scroll-proportion="0.489093" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/opus-primus-layout.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.9322618" />
@@ -881,11 +877,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loops/opus-primus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="69" column="74" selection-start="1961" selection-end="1961" vertical-scroll-proportion="-20.26923">
@@ -893,16 +884,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/loops/opus-primus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loops/opus-primus-gallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#6#1145#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="31" selection-start="1542" selection-end="1542" vertical-scroll-proportion="0.5510907">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusGallery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="276" column="0" selection-start="9781" selection-end="9781" vertical-scroll-proportion="0.69350964">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
           <folding>
             <element signature="e#6#1130#0" expanded="true" />
-            <marker date="1339443728233" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1339443728233" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1339443728233" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1339443728233" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1339443728233" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1339445895681" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1339445895681" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1339445895681" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1339445895681" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1339445895681" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>

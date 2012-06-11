@@ -46,6 +46,8 @@
  * === Default Widgets ===
  * === 404 Layout ===
  *
+ * === Post-Format: Gallery ===
+ *
  */
 /** End: Table of Contents -------------------------------------------------- */
 
@@ -261,6 +263,20 @@ ul.featured li ul.nav div.nav {
     margin-bottom: 0;
 }
 /** End: 404 Layout --------------------------------------------------------- */
+
+
+/** === Post-Format: Gallery === -------------------------------------------- */
+.gallery-featured-image,
+.gallery-secondary-images {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.gallery-secondary-images a {
+    margin: 2%;
+}
+
+/** End: Post-Format: Gallery ----------------------------------------------- */
 
 /** Hacks to be sorted out and corrected */
 body.two-column embed,
