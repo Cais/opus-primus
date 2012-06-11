@@ -274,10 +274,8 @@ class OpusPrimusGallery {
         /**
          * Only display output on single view otherwise return a space as an
          * empty string / array will not work.
-         *
-         * @todo review when *not* used with post-format: gallery in the index/home/front-page streams
          */
-        if ( is_single() ) {
+        if ( is_single() || ! has_post_format( 'gallery' ) ) {
             return $output;
         } else {
             return ' ';

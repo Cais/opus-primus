@@ -675,7 +675,11 @@
       <created>1339428647277</created>
       <updated>1339428647277</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Specified static public for `gallery_single_only` and added $instance">
+      <created>1339442939462</created>
+      <updated>1339442939462</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -753,7 +757,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Single Only view filter for the Post Gallery" />
+    <option name="LAST_COMMIT_MESSAGE" value="Specified static public for `gallery_single_only` and added $instance" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -766,7 +770,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="More arguments and parameters; fixed div inside p issue." />
     <MESSAGE value="More arguments and parameters" />
     <MESSAGE value="Updates to 404; code clean up and documentation of classes." />
     <MESSAGE value="IDE Update" />
@@ -791,6 +794,7 @@
     <MESSAGE value="i18n" />
     <MESSAGE value="Added class OpusPrimusGallery - with `featured_image` and `secondary_images`" />
     <MESSAGE value="Added Single Only view filter for the Post Gallery" />
+    <MESSAGE value="Specified static public for `gallery_single_only` and added $instance" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -831,17 +835,7 @@
         <state line="58" column="95" selection-start="1668" selection-end="1712" vertical-scroll-proportion="0.5633136" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="74" selection-start="1961" selection-end="1961" vertical-scroll-proportion="1.3857988" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/archive.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loops/opus-primus.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
@@ -887,16 +881,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/loops/opus-primus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="74" selection-start="1961" selection-end="1961" vertical-scroll-proportion="-20.26923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusGallery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="165" column="20" selection-start="5541" selection-end="5541" vertical-scroll-proportion="0.5108173">
+        <state line="276" column="0" selection-start="9781" selection-end="9781" vertical-scroll-proportion="0.69350964">
           <folding>
             <element signature="e#6#1130#0" expanded="true" />
-            <marker date="1339442778271" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1339442778271" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1339442778271" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1339442778271" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1339442778271" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1339443728233" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1339443728233" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1339443728233" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1339443728233" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1339443728233" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
