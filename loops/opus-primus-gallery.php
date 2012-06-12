@@ -35,6 +35,10 @@
 /** Call the Post Structure and Navigation class variables */
 global $opus_nav, $opus_structure, $opus_gallery;
 
+if ( is_single() ) {
+    remove_filter( 'post_gallery', 'OpusPrimusGallery::gallery_single_only' );
+}
+
 /** Display the post */ ?>
 <div <?php post_class(); ?>>
 
@@ -48,11 +52,15 @@ global $opus_nav, $opus_structure, $opus_gallery;
     <div class="gallery-featured-image">
         <?php $opus_gallery->featured_image(); ?>
     </div>
+
+    <?php if ( ! is_single() ) : ?>
     <div class="gallery-secondary-images">
         <?php $opus_gallery->secondary_images(); ?>
     </div>
 
     <?php
+    endif;
+
     $opus_structure->post_content();
     $opus_nav->opus_link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
     $opus_structure->meta_tags();
