@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
+    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="Added post-format: gallery loop (and some minor style for it)">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" />
     </list>
@@ -28,7 +28,16 @@
       <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="300" column="28" selection-start="12015" selection-end="12015" vertical-scroll-proportion="-7.1538463">
+            <state line="319" column="71" selection-start="13139" selection-end="13210" vertical-scroll-proportion="-19.576923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="opus-primus-gallery.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loops/opus-primus-gallery.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="0" selection-start="1360" selection-end="1360" vertical-scroll-proportion="-5.230769">
               <folding />
             </state>
           </provider>
@@ -37,14 +46,23 @@
       <file leaf-file-name="class.OpusPrimusGallery.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusGallery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="163" column="0" selection-start="5532" selection-end="5532" vertical-scroll-proportion="0.38701922">
+            <state line="173" column="11" selection-start="5833" selection-end="5833" vertical-scroll-proportion="0.38822114">
               <folding>
-                <marker date="1339514358189" expanded="true" signature="8311:8611" placeholder="..." />
-                <marker date="1339514358189" expanded="true" signature="8329:8353" placeholder="{...}" />
-                <marker date="1339514358189" expanded="true" signature="8384:8483" placeholder="{...}" />
-                <marker date="1339514358189" expanded="true" signature="8504:8541" placeholder="{...}" />
-                <marker date="1339514358189" expanded="true" signature="8575:8601" placeholder="{...}" />
+                <marker date="1339517803657" expanded="true" signature="8346:8646" placeholder="..." />
+                <marker date="1339517803657" expanded="true" signature="8364:8388" placeholder="{...}" />
+                <marker date="1339517803657" expanded="true" signature="8419:8518" placeholder="{...}" />
+                <marker date="1339517803657" expanded="true" signature="8539:8576" placeholder="{...}" />
+                <marker date="1339517803657" expanded="true" signature="8610:8636" placeholder="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="media.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../wp-includes/media.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="783" column="56" selection-start="29496" selection-end="29496" vertical-scroll-proportion="-11.961538">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,8 +93,8 @@
         <option value="$PROJECT_DIR$/404.php" />
         <option value="$PROJECT_DIR$/includes/opus-ignite.php" />
         <option value="$PROJECT_DIR$/functions.php" />
-        <option value="$PROJECT_DIR$/loops/opus-primus-gallery.php" />
         <option value="$PROJECT_DIR$/css/opus-primus.css" />
+        <option value="$PROJECT_DIR$/loops/opus-primus-gallery.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" />
       </list>
     </option>
@@ -114,12 +132,36 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="opus-primus" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -202,24 +244,14 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="options.lastSelected" value="web.server" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig" serverName="EAC" serverId="59791a67-7e89-437b-b6d2-d013c0025a62">
     <servers>
@@ -253,6 +285,7 @@
           <mappings>
             <mapping deploy="/public_html/wpthemes/wp-content/themes/opus-primus" local="$PROJECT_DIR$" web="/wp-content/themes/opus-primus" />
             <mapping deploy="/public_html/wpthemes/wp-includes" local="$PROJECT_DIR$/../../../wp-includes" web="/wp-includes" />
+            <mapping deploy="/public_html/wpthemes/wp-admin" local="$PROJECT_DIR$/../../../wp-admin" web="/wp-admin" />
           </mappings>
           <excludedPaths>
             <ExcludedPath>
@@ -333,6 +366,13 @@
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="59791a67-7e89-437b-b6d2-d013c0025a62" server_name="EAC">
       <method>
         <option name="FtpUpload" enabled="false">
@@ -341,13 +381,6 @@
         </option>
         <option name="PhingTarget" enabled="false" />
       </method>
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method />
     </configuration>
     <list size="0" />
   </component>
@@ -737,7 +770,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28655282" sideWeight="0.671875" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28975454" sideWeight="0.671875" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -878,11 +911,6 @@
         <state line="48" column="56" selection-start="1764" selection-end="1764" vertical-scroll-proportion="-11.115385" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../wp-includes/media.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="780" column="17" selection-start="29340" selection-end="29375" vertical-scroll-proportion="-8.269231" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="69" column="74" selection-start="1961" selection-end="1961" vertical-scroll-proportion="-20.26923" />
@@ -893,32 +921,41 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loops/opus-primus-gallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="31" selection-start="1542" selection-end="1542" vertical-scroll-proportion="0.5510907" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../../wp-includes/media.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="783" column="56" selection-start="29496" selection-end="29496" vertical-scroll-proportion="-11.961538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="300" column="28" selection-start="12015" selection-end="12015" vertical-scroll-proportion="-7.1538463">
+        <state line="319" column="71" selection-start="13139" selection-end="13210" vertical-scroll-proportion="-19.576923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loops/opus-primus-gallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="1360" selection-end="1360" vertical-scroll-proportion="-5.230769">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusGallery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="163" column="0" selection-start="5532" selection-end="5532" vertical-scroll-proportion="0.38701922">
+        <state line="173" column="11" selection-start="5833" selection-end="5833" vertical-scroll-proportion="0.38822114">
           <folding>
-            <marker date="1339514358189" expanded="true" signature="8311:8611" placeholder="..." />
-            <marker date="1339514358189" expanded="true" signature="8329:8353" placeholder="{...}" />
-            <marker date="1339514358189" expanded="true" signature="8384:8483" placeholder="{...}" />
-            <marker date="1339514358189" expanded="true" signature="8504:8541" placeholder="{...}" />
-            <marker date="1339514358189" expanded="true" signature="8575:8601" placeholder="{...}" />
+            <marker date="1339517803657" expanded="true" signature="8346:8646" placeholder="..." />
+            <marker date="1339517803657" expanded="true" signature="8364:8388" placeholder="{...}" />
+            <marker date="1339517803657" expanded="true" signature="8419:8518" placeholder="{...}" />
+            <marker date="1339517803657" expanded="true" signature="8539:8576" placeholder="{...}" />
+            <marker date="1339517803657" expanded="true" signature="8610:8636" placeholder="{...}" />
           </folding>
         </state>
       </provider>

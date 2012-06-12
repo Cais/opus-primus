@@ -168,7 +168,10 @@ class OpusPrimusGallery {
         static $instance = 0;
         $instance++;
 
-        // We're trusting author input, so let's at least make sure it looks like a valid orderby statement
+        /**
+         * We're trusting author input, so let's at least make sure it looks
+         * like a valid orderby statement
+         */
         if ( isset( $attr['orderby'] ) ) {
             $attr['orderby'] = sanitize_sql_orderby( $attr['orderby'] );
             if ( !$attr['orderby'] )
