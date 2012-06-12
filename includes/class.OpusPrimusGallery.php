@@ -161,8 +161,6 @@ class OpusPrimusGallery {
      * @param   $filtered
      *
      * @return  string HTML content to display gallery.
-     *
-     * @todo Clean-up code-formatting
      */
     static public function gallery_single_only( $filtered, $attr = null ) {
         global $post;
@@ -177,7 +175,7 @@ class OpusPrimusGallery {
                 unset( $attr['orderby'] );
         }
 
-        extract(shortcode_atts(array(
+        extract( shortcode_atts( array(
             'order'      => 'ASC',
             'orderby'    => 'menu_order ID',
             'id'         => $post->ID,
@@ -188,41 +186,41 @@ class OpusPrimusGallery {
             'size'       => 'thumbnail',
             'include'    => '',
             'exclude'    => ''
-        ), $attr));
+        ), $attr ) );
 
-        $id = intval($id);
+        $id = intval( $id );
         if ( 'RAND' == $order )
             $orderby = 'none';
 
-        if ( !empty($include) ) {
+        if ( ! empty( $include ) ) {
             $include = preg_replace( '/[^0-9,]+/', '', $include );
-            $_attachments = get_posts( array('include' => $include, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
+            $_attachments = get_posts( array( 'include' => $include, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby ) );
 
             $attachments = array();
             foreach ( $_attachments as $key => $val ) {
                 $attachments[$val->ID] = $_attachments[$key];
             }
-        } elseif ( !empty($exclude) ) {
+        } elseif ( ! empty( $exclude ) ) {
             $exclude = preg_replace( '/[^0-9,]+/', '', $exclude );
-            $attachments = get_children( array('post_parent' => $id, 'exclude' => $exclude, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
+            $attachments = get_children( array( 'post_parent' => $id, 'exclude' => $exclude, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby ) );
         } else {
-            $attachments = get_children( array('post_parent' => $id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
+            $attachments = get_children( array( 'post_parent' => $id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby ) );
         }
 
-        if ( empty($attachments) )
+        if ( empty( $attachments ) )
             return '';
 
         if ( is_feed() ) {
             $output = "\n";
             foreach ( $attachments as $att_id => $attachment )
-                $output .= wp_get_attachment_link($att_id, $size, true) . "\n";
+                $output .= wp_get_attachment_link( $att_id, $size, true ) . "\n";
             return $output;
         }
 
-        $itemtag = tag_escape($itemtag);
-        $captiontag = tag_escape($captiontag);
-        $columns = intval($columns);
-        $itemwidth = $columns > 0 ? floor(100/$columns) : 100;
+        $itemtag = tag_escape( $itemtag );
+        $captiontag = tag_escape( $captiontag );
+        $columns = intval( $columns );
+        $itemwidth = $columns > 0 ? floor( 100 / $columns ) : 100;
         $float = is_rtl() ? 'right' : 'left';
 
         $selector = "gallery-{$instance}";
@@ -254,17 +252,17 @@ class OpusPrimusGallery {
 
         $i = 0;
         foreach ( $attachments as $id => $attachment ) {
-            $link = isset($attr['link']) && 'file' == $attr['link'] ? wp_get_attachment_link($id, $size, false, false) : wp_get_attachment_link($id, $size, true, false);
+            $link = isset($attr['link']) && 'file' == $attr['link'] ? wp_get_attachment_link( $id, $size, false, false ) : wp_get_attachment_link( $id, $size, true, false );
 
             $output .= "<{$itemtag} class='gallery-item'>";
             $output .= "
 			<{$icontag} class='gallery-icon'>
 				$link
 			</{$icontag}>";
-            if ( $captiontag && trim($attachment->post_excerpt) ) {
+            if ( $captiontag && trim( $attachment->post_excerpt ) ) {
                 $output .= "
 				<{$captiontag} class='wp-caption-text gallery-caption'>
-				" . wptexturize($attachment->post_excerpt) . "
+				" . wptexturize( $attachment->post_excerpt ) . "
 				</{$captiontag}>";
             }
             $output .= "</{$itemtag}>";
