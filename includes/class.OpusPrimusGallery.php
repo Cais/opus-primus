@@ -83,7 +83,13 @@ class OpusPrimusGallery {
                     'numberposts'       => 1
                 ) );
             foreach ( $attachments as $opus_thumb_id => $attachment )
-                echo wp_get_attachment_image( $opus_thumb_id, $size );
+                if ( ! is_single() ) {
+                echo '<a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">'
+                    . wp_get_attachment_image( $opus_thumb_id, $size )
+                    . '</a>';
+                } else {
+                    echo wp_get_attachment_image( $opus_thumb_id, $size );
+                }
         }
 
         /** Add empty hook after featured image */
@@ -104,6 +110,7 @@ class OpusPrimusGallery {
      * @uses    do_action
      * @uses    get_permalink
      * @uses    get_the_ID
+     * @uses    the_title_attribute
      * @uses    wp_get_attachment_image
      */
     function secondary_images() {
@@ -135,11 +142,19 @@ class OpusPrimusGallery {
         }
 
         /**
-         * @todo Add link to gallery anchored on "this gallery" or "more images"
-         * @todo Add some style to this!
+         * Display a message indicating if more images are in the gallery than
+         * what are displayed in the post stream. If more images are in the
+         * gallery the text showing how many more will link to the single post.
          */
         if ( ( $images->found_posts + 1 ) > 4 ) {
-            printf( '<br />' . __( 'There are %1$s more images in addition to these in this gallery.', 'opusprimus' ), ( $images->found_posts + 1 ) - 4 );
+            printf( '<p class="more-images">%1$s</p>',
+                sprintf( _n(
+                    __( 'There is %2$sone more image%3$s in addition to these in the gallery.', 'opusprimus' ),
+                    __( 'There are %2$s%1$s more images%3$s in addition to these in the gallery.', 'opusprimus' ),
+                    ( $images->found_posts + 1 ) - 4 ),
+                ( $images->found_posts + 1 ) - 4,
+                '<a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">',
+                '</a>' ) );
         }
 
         /** Add empty hook after secondary images */

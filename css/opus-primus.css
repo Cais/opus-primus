@@ -276,6 +276,9 @@ ul.featured li ul.nav div.nav {
     margin: 2%;
 }
 
+.gallery-secondary-images p.more-images a {
+    margin: 0;
+}
 /** End: Post-Format: Gallery ----------------------------------------------- */
 
 /** Hacks to be sorted out and corrected */
