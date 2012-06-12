@@ -35,8 +35,8 @@
 /** Call the Post Structure and Navigation class variables */
 global $opus_nav, $opus_structure, $opus_gallery;
 
-if ( is_single() ) {
-    remove_filter( 'post_gallery', 'OpusPrimusGallery::gallery_single_only' );
+if ( ! is_single() ) {
+    add_filter('post_gallery', 'opus_primus_return_blank' );
 }
 
 /** Display the post */ ?>

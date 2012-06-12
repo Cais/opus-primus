@@ -316,18 +316,8 @@ function opus_primus_widgets() {
 /** Register sidebars by running `opus_primus_widgets` on the `widgets_init` action hook. */
 add_action( 'widgets_init', 'opus_primus_widgets' );
 
-/** Post Gallery filter - only show on single views */
-add_filter( 'post_gallery', 'OpusPrimusGallery::gallery_single_only' );
-
 /**
  * Temporary value of 1024 set for $content_width for testing purposes
  * @todo Sort out proper width and/or calculation to set appropriate width
  */
 if ( ! isset( $content_width ) ) $content_width = 1024;
-
-
-/** Testing ... testing ... testing ... */
-function opus_test() {
-    echo 'BACON Test!!! PS: This works, too!<br />';
-}
-// add_action( 'opus_before_post_byline', 'opus_test' );
