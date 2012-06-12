@@ -321,3 +321,7 @@ add_action( 'widgets_init', 'opus_primus_widgets' );
  * @todo Sort out proper width and/or calculation to set appropriate width
  */
 if ( ! isset( $content_width ) ) $content_width = 1024;
+
+/** Miscellaneous Functions */
+/** Return a space when all other __return_* fail, use this?! */
+function opus_primus_return_blank() { return ' '; }

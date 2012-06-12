@@ -640,10 +640,6 @@ class OpusPrimusStructures {
 }
 $opus_structure = new OpusPrimusStructures();
 
-/** Miscellaneous Functions */
-/** Return a space when all other __return_* fail, use this?! */
-function opus_primus_return_blank() { return ' '; }
-
 /** Testing ... testing ... testing ... */
 function opus_test() {
     echo 'BACON Test!!! PS: This works, too!<br />';

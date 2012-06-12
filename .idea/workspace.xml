@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/opus-primus.css" afterPath="$PROJECT_DIR$/css/opus-primus.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,10 +50,10 @@
         <option value="$PROJECT_DIR$/404.php" />
         <option value="$PROJECT_DIR$/includes/opus-ignite.php" />
         <option value="$PROJECT_DIR$/loops/opus-primus-gallery.php" />
-        <option value="$PROJECT_DIR$/functions.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" />
         <option value="$PROJECT_DIR$/css/opus-primus.css" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
+        <option value="$PROJECT_DIR$/functions.php" />
       </list>
     </option>
   </component>
@@ -701,7 +701,11 @@
       <created>1339524871060</created>
       <updated>1339524871060</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="Added links and i18n support to the text in secondary images">
+      <created>1339530320822</created>
+      <updated>1339530320822</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -779,7 +783,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added `return_blank` and removed gallery filter as not needed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added links and i18n support to the text in secondary images" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -792,7 +796,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Added $content_width reference and a few todo items" />
     <MESSAGE value="Update/re-factor Opus Primus Post Title" />
     <MESSAGE value="Add &quot;list&quot; styles for sidebar containers" />
     <MESSAGE value="Added default Calendar widget styles" />
@@ -817,6 +820,7 @@
     <MESSAGE value="Documentation and code-formatting" />
     <MESSAGE value="IDE update" />
     <MESSAGE value="Added `return_blank` and removed gallery filter as not needed" />
+    <MESSAGE value="Added links and i18n support to the text in secondary images" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -879,23 +883,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="322" column="55" selection-start="13293" selection-end="13293" vertical-scroll-proportion="-28.076923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loops/opus-primus-gallery.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="60" selection-start="1343" selection-end="1343" vertical-scroll-proportion="-4.576923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="38" selection-start="6428" selection-end="6428" vertical-scroll-proportion="-18.26923">
           <folding />
         </state>
       </provider>
@@ -912,6 +902,20 @@
     <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="278" column="0" selection-start="6749" selection-end="6749" vertical-scroll-proportion="0.72675085">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="326" column="51" selection-start="13442" selection-end="13442" vertical-scroll-proportion="0.95913464">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="631" column="49" selection-start="24828" selection-end="24828" vertical-scroll-proportion="0.5504808">
           <folding />
         </state>
       </provider>
