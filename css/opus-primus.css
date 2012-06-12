@@ -231,6 +231,7 @@ table#wp-calendar { width: 100%; }
 table#wp-calendar tbody tr { text-align: center; }
 table#wp-calendar tbody tr td#today { outline: 1px solid; }
 table#wp-calendar tbody tr td a { font-weight: bold; }
+table#wp-calendar tfoot tr td#next { text-align: right; }
 /** RSS */
 li.widget_rss ul li cite { font-style: italic; }
 li.widget_rss ul li cite:before { content: '~ '; }
