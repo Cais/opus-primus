@@ -282,6 +282,10 @@ div.image-exif div.image-dimensions {
     text-align: center;
 }
 
+.gallery-featured-image img {
+    height: auto;
+}
+
 .gallery-secondary-images a {
     margin: 2%;
 }

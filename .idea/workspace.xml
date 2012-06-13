@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/image.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/opus-primus.css" afterPath="$PROJECT_DIR$/css/opus-primus.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.less" afterPath="$PROJECT_DIR$/css/style.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,52 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="class.OpusPrimusGallery.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusGallery.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="180" column="73" selection-start="7017" selection-end="7017" vertical-scroll-proportion="-7.8076925">
-              <folding>
-                <element signature="e#6#1130#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.less" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css/style.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="131" column="20" selection-start="4043" selection-end="4043" vertical-scroll-proportion="0.8002296">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="image.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/image.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="57" selection-start="1766" selection-end="1766" vertical-scroll-proportion="-9.615385">
-              <folding>
-                <element signature="e#6#1168#0" expanded="true" />
-                <marker date="1339605586638" expanded="true" signature="1282:1624" placeholder="..." />
-                <marker date="1339605586638" expanded="true" signature="1361:1624" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="class.OpusPrimusNavigation.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="358" column="72" selection-start="10859" selection-end="10859" vertical-scroll-proportion="-8.961538">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="opus-primus.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="opus-primus.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="262" column="74" selection-start="6469" selection-end="6469" vertical-scroll-proportion="0.0">
+            <state line="285" column="17" selection-start="7113" selection-end="7113" vertical-scroll-proportion="0.6096441">
               <folding />
             </state>
           </provider>
@@ -104,11 +58,11 @@
         <option value="$PROJECT_DIR$/loops/opus-primus-gallery.php" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" />
-        <option value="$PROJECT_DIR$/css/opus-primus.css" />
         <option value="$PROJECT_DIR$/image.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" />
         <option value="$PROJECT_DIR$/css/style.less" />
+        <option value="$PROJECT_DIR$/css/opus-primus.css" />
       </list>
     </option>
   </component>
@@ -790,7 +744,11 @@
       <created>1339531556283</created>
       <updated>1339531556283</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="Added `image_exif`; add 'image' template; adjusted post-coda style">
+      <created>1339606216318</created>
+      <updated>1339606216318</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -818,6 +776,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29615796" sideWeight="0.671875" order="0" side_tool="false" content_ui="combo" />
@@ -825,7 +784,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -868,7 +826,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Calendar navigation fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added `image_exif`; add 'image' template; adjusted post-coda style" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -881,7 +839,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Added default Calendar widget styles" />
     <MESSAGE value="Added default RSS widget styles" />
     <MESSAGE value="Added default RSS widget styles; remove some comments from LESS file" />
     <MESSAGE value="Added Text Widget and Tag Cloud styles" />
@@ -906,6 +863,7 @@
     <MESSAGE value="Added links and i18n support to the text in secondary images" />
     <MESSAGE value="Move &quot;Miscellaneous Functions&quot; back into 'functions.php'" />
     <MESSAGE value="Calendar navigation fix" />
+    <MESSAGE value="Added `image_exif`; add 'image' template; adjusted post-coda style" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -955,14 +913,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="358" column="72" selection-start="10859" selection-end="10859" vertical-scroll-proportion="-8.961538">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="262" column="74" selection-start="6469" selection-end="6469" vertical-scroll-proportion="0.0">
+        <state line="358" column="72" selection-start="10859" selection-end="10859" vertical-scroll-proportion="0.27573964">
           <folding />
         </state>
       </provider>
@@ -981,11 +932,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/image.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="57" selection-start="1766" selection-end="1766" vertical-scroll-proportion="-9.615385">
+        <state line="56" column="57" selection-start="1766" selection-end="1766" vertical-scroll-proportion="0.295858">
           <folding>
             <element signature="e#6#1168#0" expanded="true" />
-            <marker date="1339605586638" expanded="true" signature="1282:1624" placeholder="..." />
-            <marker date="1339605586638" expanded="true" signature="1361:1624" placeholder="..." />
+            <marker date="1339605586638" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1339605586638" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1009,6 +960,13 @@
     <entry file="file://$PROJECT_DIR$/css/style.less">
       <provider selected="true" editor-type-id="text-editor">
         <state line="131" column="20" selection-start="4043" selection-end="4043" vertical-scroll-proportion="0.8002296">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="285" column="17" selection-start="7113" selection-end="7113" vertical-scroll-proportion="0.6096441">
           <folding />
         </state>
       </provider>
