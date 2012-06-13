@@ -337,13 +337,13 @@ class OpusPrimusNavigation {
      * @uses    wp_nav_menu
      */
     function opus_search_menu( $search_menu_args = '' ) {
-        /** Add empty hook before the primary menu */
+        /** Add empty hook before the search menu */
         do_action( 'opus_before_search_menu' );
 
         /** Search Menu */
         $this->search_menu( $search_menu_args );
 
-        /** Add empty hook after the primary menu */
+        /** Add empty hook after the search menu */
         do_action( 'opus_after_search_menu' );
 
     }
@@ -373,5 +373,20 @@ class OpusPrimusNavigation {
         do_action( 'opus_after_comments_link' );
     }
 
+
+    function image_nav() {
+        /** Add empty hook before the image navigation */
+        do_action( 'opus_before_image_nav' );
+
+        /** Add navigation links between pictures in the gallery */
+        echo '<div class="opus-image-navigation cf">';
+            echo previous_image_link( false, '<span class="left">' . __( 'Previous Photo', 'opusprimus' ) . '</span>' );
+            echo next_image_link( false, '<span class="right">' . __( 'Next Photo', 'opusprimus' ) . '</span>' );
+        echo '</div><!-- .opus-image-navigation -->';
+
+        /** Add empty hook after the image navigation */
+        do_action( 'opus_after_image_nav' );
+
+    }
 }
 $opus_nav = new OpusPrimusNavigation();

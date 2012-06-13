@@ -265,6 +265,15 @@ ul.featured li ul.nav div.nav {
 }
 /** End: 404 Layout --------------------------------------------------------- */
 
+/** === Attachment: Image === ----------------------------------------------- */
+h2#attachment-notice {
+    text-align: center;
+}
+div.the-loop div.attached-image,
+div.image-exif div.image-dimensions {
+    text-align: center;
+}
+/** End: Attachment: Image -------------------------------------------------- */
 
 /** === Post-Format: Gallery === -------------------------------------------- */
 .gallery-featured-image,
