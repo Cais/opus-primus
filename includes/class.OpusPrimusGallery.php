@@ -49,14 +49,17 @@ class OpusPrimusGallery {
      * @uses    (global) $opus_thumb_id
      * @uses    do_action
      * @uses    get_children
+     * @uses    get_permalink
      * @uses    get_post_thumbnail_id
+     * @uses    get_the_ID
      * @uses    has_post_thumbnail
      * @uses    the_post_thumbnail
+     * @uses    the_title_attribute
      * @uses    wp_get_attachment_image
      *
      * @return  int|string - featured image ID
      */
-    function featured_image() {
+    function featured_image( $order = 'ASC' ) {
         global $opus_thumb_id;
 
         /** Add empty hook before featured image */
@@ -71,7 +74,13 @@ class OpusPrimusGallery {
             /** use the thumbnail ("featured image") */
             /** @var $opus_thumb_id int|string */
             $opus_thumb_id = get_post_thumbnail_id();
-            the_post_thumbnail( $size ); // whatever size you want
+            if ( ! is_single() ) {
+                echo '<a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">';
+                the_post_thumbnail( $size );
+                echo '</a>';
+            } else {
+                the_post_thumbnail( $size );
+            }
         } else {
             $attachments = get_children( array(
                     'post_parent'       => get_the_ID(),
@@ -112,9 +121,19 @@ class OpusPrimusGallery {
      * @uses    get_the_ID
      * @uses    the_title_attribute
      * @uses    wp_get_attachment_image
+     * @uses    wp_parse_args
      */
-    function secondary_images() {
+    function secondary_images( $secondary_images_args = '' ) {
         global $opus_thumb_id;
+
+        /** Set defaults */
+        $defaults = array(
+            'order'     => 'ASC',
+            'orderby'   => 'menu_order ID',
+            'images'    => 3,
+        );
+        $secondary_images_args = wp_parse_args( (array) $secondary_images_args, $defaults );
+
 
         /** Add empty hook before secondary images */
         do_action( 'opus_before_secondary_images' );
@@ -124,9 +143,9 @@ class OpusPrimusGallery {
             'post_status'               => 'inherit',
             'post_type'                 => 'attachment',
             'post_mime_type'            => 'image',
-            'order'                     => 'ASC',
-            'orderby'                   => 'menu_order ID',
-            'posts_per_page'            => 3,
+            'order'                     => $secondary_images_args['order'],
+            'orderby'                   => $secondary_images_args['orderby'],
+            'posts_per_page'            => $secondary_images_args['images'],
             'post__not_in'              => array( $opus_thumb_id ),
             'update_post_term_cache'    => false,
         ) );
@@ -146,13 +165,13 @@ class OpusPrimusGallery {
          * what are displayed in the post stream. If more images are in the
          * gallery the text showing how many more will link to the single post.
          */
-        if ( ( $images->found_posts + 1 ) > 4 ) {
+        if ( ( $images->found_posts + 1 ) > ( $secondary_images_args['images'] + 1 ) ) {
             printf( '<p class="more-images">%1$s</p>',
                 sprintf( _n(
                     __( 'There is %2$sone more image%3$s in addition to these in the gallery.', 'opusprimus' ),
                     __( 'There are %2$s%1$s more images%3$s in addition to these in the gallery.', 'opusprimus' ),
-                    ( $images->found_posts + 1 ) - 4 ),
-                ( $images->found_posts + 1 ) - 4,
+                    ( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 ) ),
+                ( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 ),
                 '<a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">',
                 '</a>' ) );
         }
