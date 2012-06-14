@@ -273,6 +273,15 @@ div.the-loop div.attached-image,
 div.image-exif div.image-dimensions {
     text-align: center;
 }
+
+.wp-caption img {
+    height: auto;
+    max-width: 98%;
+}
+
+img {
+    height: auto;
+}
 /** End: Attachment: Image -------------------------------------------------- */
 
 /** === Post-Format: Gallery === -------------------------------------------- */
