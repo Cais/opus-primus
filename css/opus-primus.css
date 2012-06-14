@@ -217,11 +217,13 @@ div#respond form#commentform p.comment-form-comment textarea#comment {
 /** === Sidebars === -------------------------------------------------------- */
 div.first-sidebar ul,
 div.second-sidebar ul {
-    list-style: none outside none;
+    list-style: none inside none;
+    margin: 0 0 9px;
 }
 div.first-sidebar ul li ul,
 div.second-sidebar ul li ul {
-    list-style: disc outside none;
+    list-style: disc inside none;
+    margin: 0 0 0 25px;
 }
 /** End: Sidebars ----------------------------------------------------------- */
 
@@ -276,7 +278,7 @@ div.image-exif div.image-dimensions {
 
 .wp-caption,
 .wp-caption img {
-    max-width: 98%;
+    max-width: 99%;
 }
 
 img {
