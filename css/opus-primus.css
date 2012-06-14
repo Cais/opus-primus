@@ -274,8 +274,8 @@ div.image-exif div.image-dimensions {
     text-align: center;
 }
 
+.wp-caption,
 .wp-caption img {
-    height: auto;
     max-width: 98%;
 }
 
