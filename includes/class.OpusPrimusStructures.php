@@ -222,25 +222,26 @@ class OpusPrimusStructures {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @param   bool $standard - used for showing standard post-format string
-     *
      * @uses    get_post_format
+     * @uses    get_post_format_link
      * @uses    get_post_format_string
      *
-     * @return string
+     * @return  string - link to the post-format specific archive
      */
-    function post_format_flag( $standard = false ) {
-
+    function post_format_flag() {
 
         /** @var $flag_text - post-format */
         $flag_text = get_post_format_string( get_post_format() );
-        if ( false == $standard  && 'Standard' == $flag_text ) {
-            $flag_text = '';
+        $title_text = $flag_text;
+        if ( 'Standard' == $flag_text ) {
+            return null;
         } else {
             $flag_text = '<button><span class="post-format-flag">' . $flag_text . '</span></button>';
         }
 
-        echo apply_filters( 'post_format_flag', $flag_text );
+        $output = '<a href="' . get_post_format_link( get_post_format() ) . '" title="' . sprintf( __( 'View the %1$s archive.' ), $title_text ) . '">' . $flag_text . '</a>';
+
+        return $output;
     }
 
     /**
@@ -318,7 +319,7 @@ class OpusPrimusStructures {
         }
 
         /** Add a post-format flag to the byline */
-        $this->post_format_flag();
+        echo $this->post_format_flag();
 
         /** Close CSS wrapper for the post byline */
         echo '</div>';

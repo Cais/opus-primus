@@ -312,3 +312,8 @@
     width: 96%;             /** page width minus left and right padding */
     left: 2%;               /** page left padding */
 }
+
+/** Set minimum content area width to an appropriate value */
+.the-loop {
+    min-width: 520px;
+}
