@@ -310,6 +310,10 @@ div.meta-byline button {
 .gallery-secondary-images p.more-images a {
     margin: 0;
 }
+/** Post-Format: Gallery Archive -------------------------------------------- */
+.archive.term-post-format-gallery div.the-loop p.featured-image {
+    text-align: center;
+}
 /** End: Post-Format: Gallery ----------------------------------------------- */
 
 /** Hacks to be sorted out and corrected */

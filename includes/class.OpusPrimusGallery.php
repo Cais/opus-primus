@@ -41,10 +41,13 @@ class OpusPrimusGallery {
 
     /**
      * Opus Primus Featured Image
-     * If a featured image is assigned then return it's ID
+     * If a featured image is assigned then return it's ID; wrap it in anchor
+     * tags if not in the single view, otherwise just output the picture itself
      *
      * @package OpusPrimus
      * @since   0.1
+     *
+     * @param   string $size - thumbnail|medium|large|full (default WordPress image sizes)
      *
      * @uses    (global) $opus_thumb_id
      * @uses    do_action
@@ -59,7 +62,7 @@ class OpusPrimusGallery {
      *
      * @return  int|string - featured image ID
      */
-    function featured_image( $order = 'ASC' ) {
+    function featured_image( $size = 'large' ) {
         global $opus_thumb_id;
 
         /** Add empty hook before featured image */
@@ -69,15 +72,14 @@ class OpusPrimusGallery {
          * @var $size - standard WordPress image size; large as the intent is
          * to use as the featured image for gallery posts
          */
-        $size = 'large';
         if ( has_post_thumbnail() ) {
             /** use the thumbnail ("featured image") */
             /** @var $opus_thumb_id int|string */
             $opus_thumb_id = get_post_thumbnail_id();
             if ( ! is_single() ) {
-                echo '<a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">';
+                echo '<p class="featured-image"><a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">';
                 the_post_thumbnail( $size );
-                echo '</a>';
+                echo '</a></p>';
             } else {
                 the_post_thumbnail( $size );
             }
@@ -93,9 +95,9 @@ class OpusPrimusGallery {
                 ) );
             foreach ( $attachments as $opus_thumb_id => $attachment )
                 if ( ! is_single() ) {
-                echo '<a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">'
+                echo '<p class="featured-image"><a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">'
                     . wp_get_attachment_image( $opus_thumb_id, $size )
-                    . '</a>';
+                    . '</a></p>';
                 } else {
                     echo wp_get_attachment_image( $opus_thumb_id, $size );
                 }

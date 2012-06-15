@@ -35,9 +35,9 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-/** Call the Post Structure and Navigation class variables */
+/** Get the Post Structure and Navigation class variables */
 global $opus_nav, $opus_structure;
-get_header( 'archive' ); ?>
+get_header( get_post_format() ); ?>
 
 <div class="content-wrapper">
 
@@ -49,17 +49,8 @@ get_header( 'archive' ); ?>
         $opus_nav->opus_post_link();
         if ( have_posts() ):
             while ( have_posts() ):
-                the_post(); ?>
-                <div <?php post_class(); ?>>
-                    <?php
-                    $opus_structure->post_byline( array( 'tempus' => 'time' ) );
-                    $opus_structure->post_title();
-                    $opus_structure->comments_link();
-                    $opus_structure->post_excerpt();
-                    $opus_structure->meta_tags();
-                    $opus_nav->opus_link_pages(); ?>
-                </div><!-- .post -->
-            <?php
+                the_post();
+                get_template_part( 'archives/archive', get_post_format() );
             endwhile;
         else:
             $opus_structure->search_results();
@@ -68,11 +59,11 @@ get_header( 'archive' ); ?>
     </div><!-- #the-loop -->
 
     <?php
-    get_sidebar( 'archive' );
+    get_sidebar( get_post_format() );
 
     echo $opus_structure->layout_close(); ?>
 
 </div><!-- #content-wrapper -->
 
 <?php
-get_footer( 'archive' );
+get_footer( get_post_format() );
