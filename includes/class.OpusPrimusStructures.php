@@ -215,6 +215,32 @@ class OpusPrimusStructures {
     }
 
     /**
+     * Opus Primus Post Format Flag
+     * Returns a string with the post-format type; optionally can not display a
+     * flag for the standard post-format (default).
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @param   bool $standard - used for showing standard post-format string
+     *
+     * @uses    get_post_format
+     * @uses    get_post_format_string
+     *
+     * @return string
+     */
+    function post_format_flag( $standard = false ) {
+
+        /** @var $flag_text - post-format */
+        $flag_text = get_post_format_string( get_post_format() );
+        if ( false == $standard  && 'Standard' == $flag_text ) {
+            $flag_text = '';
+        }
+
+        return apply_filters( 'post_format_flag', $flag_text );
+    }
+
+    /**
      * Opus Primus Post By Line
      * Outputs post meta details consisting of a configurable anchor for post
      * link anchor text, the date and time posted, and the post author. The post
@@ -287,6 +313,9 @@ class OpusPrimusStructures {
         if ( $byline_args['show_mod_author'] || ( 'time' == $byline_args['tempus'] ) ) {
             $this->modified_post( $byline_args['tempus'] );
         }
+
+        /** Add a post-format flag to the far right side of the byline */
+        echo '<span class="post-format-flag">' . $this->post_format_flag() . '</span>';
 
         /** Close CSS wrapper for the post byline */
         echo '</div>';

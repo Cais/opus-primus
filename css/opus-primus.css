@@ -46,6 +46,7 @@
  * === Default Widgets ===
  * === 404 Layout ===
  *
+ * === Post-Format ===
  * === Post-Format: Gallery ===
  *
  */
@@ -285,6 +286,11 @@ img {
     height: auto;
 }
 /** End: Attachment: Image -------------------------------------------------- */
+
+/** === Post Formats === ---------------------------------------------------- */
+.post-format-flag {
+    float: right;
+}
 
 /** === Post-Format: Gallery === -------------------------------------------- */
 .gallery-featured-image,
