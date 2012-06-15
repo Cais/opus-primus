@@ -315,7 +315,7 @@ class OpusPrimusStructures {
         }
 
         /** Add a post-format flag to the far right side of the byline */
-        echo '<span class="post-format-flag">' . $this->post_format_flag() . '</span>';
+        echo '<button><span class="post-format-flag">' . $this->post_format_flag() . '</span></button>';
 
         /** Close CSS wrapper for the post byline */
         echo '</div>';

@@ -288,7 +288,7 @@ img {
 /** End: Attachment: Image -------------------------------------------------- */
 
 /** === Post Formats === ---------------------------------------------------- */
-.post-format-flag {
+div.meta-byline button {
     float: right;
 }
 
