@@ -231,13 +231,16 @@ class OpusPrimusStructures {
      */
     function post_format_flag( $standard = false ) {
 
+
         /** @var $flag_text - post-format */
         $flag_text = get_post_format_string( get_post_format() );
         if ( false == $standard  && 'Standard' == $flag_text ) {
             $flag_text = '';
+        } else {
+            $flag_text = '<button><span class="post-format-flag">' . $flag_text . '</span></button>';
         }
 
-        return apply_filters( 'post_format_flag', $flag_text );
+        echo apply_filters( 'post_format_flag', $flag_text );
     }
 
     /**
@@ -314,8 +317,8 @@ class OpusPrimusStructures {
             $this->modified_post( $byline_args['tempus'] );
         }
 
-        /** Add a post-format flag to the far right side of the byline */
-        echo '<button><span class="post-format-flag">' . $this->post_format_flag() . '</span></button>';
+        /** Add a post-format flag to the byline */
+        $this->post_format_flag();
 
         /** Close CSS wrapper for the post byline */
         echo '</div>';

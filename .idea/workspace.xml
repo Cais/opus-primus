@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="Sidebar content margin">
+    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/opus-primus.css" afterPath="$PROJECT_DIR$/css/opus-primus.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
     </list>
     <ignored path="opus-primus.iws" />
@@ -38,7 +37,7 @@
       <file leaf-file-name="class.OpusPrimusStructures.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="317" column="104" selection-start="12966" selection-end="12966" vertical-scroll-proportion="0.42908654">
+            <state line="319" column="51" selection-start="12957" selection-end="12957" vertical-scroll-proportion="0.7139423">
               <folding />
             </state>
           </provider>
@@ -71,8 +70,8 @@
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" />
         <option value="$PROJECT_DIR$/css/style.less" />
         <option value="$PROJECT_DIR$/css/opus-primus-layout.css" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
         <option value="$PROJECT_DIR$/css/opus-primus.css" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
       </list>
     </option>
   </component>
@@ -774,7 +773,11 @@
       <created>1339704269177</created>
       <updated>1339704269177</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="Make the post-format text into a button">
+      <created>1339773421206</created>
+      <updated>1339773421206</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -852,7 +855,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sidebar content margin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make the post-format text into a button" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -865,7 +868,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Comment clean-up" />
     <MESSAGE value="Add test-text containers" />
     <MESSAGE value="Changed content-wrapper container to include sidebars" />
     <MESSAGE value="Modify line height in the byline and add select as a percentage (over-riding bootstrap's static width)" />
@@ -890,6 +892,7 @@
     <MESSAGE value="Set featured-image img height property to auto to maintain aspect ratio" />
     <MESSAGE value="Fix aspect ratios for smaller viewport in desktop browser" />
     <MESSAGE value="Sidebar content margin" />
+    <MESSAGE value="Make the post-format text into a button" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -974,7 +977,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="317" column="104" selection-start="12966" selection-end="12966" vertical-scroll-proportion="0.42908654">
+        <state line="319" column="51" selection-start="12957" selection-end="12957" vertical-scroll-proportion="0.7139423">
           <folding />
         </state>
       </provider>
