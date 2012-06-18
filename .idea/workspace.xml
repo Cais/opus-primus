@@ -791,7 +791,11 @@
       <created>1340051114545</created>
       <updated>1340051114545</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="Add new class (90% complete) 'OpusPrimusImages'">
+      <created>1340051237220</created>
+      <updated>1340051237220</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
