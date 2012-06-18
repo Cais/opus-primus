@@ -195,7 +195,7 @@ class OpusPrimusGallery {
 
         /** Link to original image with size displayed */
         if ( $image_meta['width'] && $image_meta['height']  ) {
-            echo '<div class="image-dimensions">'
+            echo '<div class="image-exif_dimensions">'
                 . sprintf( __( '%1$s (Size: %2$s by %3$s)', 'opusprimus' ),
                     '<a href="' . wp_get_attachment_url( $post->ID ) . '">' . sprintf( __( 'Original image', 'opusprimus' ) ) . '</a>',
                     $image_meta['width'] . 'px',

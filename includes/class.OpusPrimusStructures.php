@@ -677,4 +677,4 @@ $opus_structure = new OpusPrimusStructures();
 function opus_test() {
     echo 'BACON Test!!! PS: This works, too!<br />';
 }
-// add_action( 'opus_before_post_byline', 'opus_test' );
+// add_action( 'opus_after_exif_dimensions', 'opus_test' );

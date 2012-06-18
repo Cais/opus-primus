@@ -861,7 +861,7 @@
                 //
                 //     small/12px
                 //
-                // We need to peek first, or we'll match on keywords and dimensions
+                // We need to peek first, or we'll match on keywords and exif_dimensions
                 //
                 shorthand: function () {
                     var a, b;

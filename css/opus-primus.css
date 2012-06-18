@@ -273,7 +273,7 @@ h2#attachment-notice {
     text-align: center;
 }
 div.the-loop div.attached-image,
-div.image-exif div.image-dimensions {
+div.exif-dimensions {
     text-align: center;
 }
 

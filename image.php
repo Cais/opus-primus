@@ -33,7 +33,7 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-global $post, $opus_nav, $opus_structure, $opus_gallery;
+global $post, $opus_nav, $opus_structure, $opus_gallery, $opus_image;
 get_header( 'image' ); ?>
 
 <div class="content-wrapper">
@@ -72,7 +72,8 @@ get_header( 'image' ); ?>
                     $size = 'large';
                     echo '<div class="attached-image"><a href="' . wp_get_attachment_url( $post->ID ) . '">' . wp_get_attachment_image( $post->ID, $size ) . '</a></div>';
 
-                    $opus_gallery->image_exif();
+                    $opus_image->exif_dimensions();
+                    $opus_image->display_exif_box();
 
                     $opus_structure->post_coda();
 
