@@ -277,6 +277,10 @@ div.exif-dimensions {
     text-align: center;
 }
 
+div.display-exif-box p {
+    margin: 0;
+}
+
 .wp-caption,
 .wp-caption img {
     max-width: 99%;

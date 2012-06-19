@@ -118,7 +118,7 @@ class OpusPrimusImages {
      * @uses    do_action
      * @uses    get_the_time
      *
-     * @return string
+     * @return  string
      */
     function exif_copyright() {
         /** Get the image meta object */
@@ -142,11 +142,8 @@ class OpusPrimusImages {
             $copyright .= sprintf( __( '&copy; %1$s %2$s', 'opusprimus' ), get_the_time( 'Y' ), $opus_image_meta['image_meta']['copyright'] );
         }
 
-        /** Output copyright string */
-        echo $copyright;
-
-        /** Add empty hook after EXIF copyright */
-        do_action( 'opus_after_exif_copyright' );
+        /** Return Copyright string */
+        return $copyright;
 
     }
 
@@ -185,11 +182,8 @@ class OpusPrimusImages {
             );
         }
 
-        /** Output timestamp string */
-        echo $timestamp;
-
-        /** Add empty hook after EXIF timestamp */
-        do_action( 'opus_after_exif_timestamp' );
+        /** Return Timestamp string */
+        return $timestamp;
 
     }
 
@@ -221,11 +215,8 @@ class OpusPrimusImages {
             $camera .= $opus_image_meta['image_meta']['camera'];
         }
 
-        /** Output camera string */
-        echo $camera;
-
-        /** Add empty hook after EXIF camera */
-        do_action( 'opus_after_exif_camera' );
+        /** Return Camera string */
+        return $camera;
 
     }
 
@@ -268,11 +259,8 @@ class OpusPrimusImages {
             }
         }
 
-        /** Output shutter string */
-        echo $shutter;
-
-        /** Add empty hook after EXIF shutter */
-        do_action( 'opus_after_exif_shutter' );
+        /** Return Shutter string */
+        return $shutter;
 
     }
 
@@ -285,6 +273,8 @@ class OpusPrimusImages {
      *
      * @uses    (global) $opus_image_meta
      * @uses    do_action
+     *
+     * @return  string
      */
     function exif_aperture() {
         /** Get the image meta object */
@@ -302,11 +292,8 @@ class OpusPrimusImages {
             $aperture .= $opus_image_meta['image_meta']['aperture'];
         }
 
-        /** Output aperture string */
-        echo $aperture;
-
-        /** Add empty hook before EXIF aperture */
-        do_action( 'opus_before_exif_aperture' );
+        /** Return Aperture string */
+        return $aperture;
 
     }
 
@@ -319,6 +306,8 @@ class OpusPrimusImages {
      *
      * @uses    (global) $opus_image_meta
      * @uses    do_action
+     *
+     * @return  string
      */
     function exif_caption() {
         /** Get the image meta object */
@@ -336,10 +325,8 @@ class OpusPrimusImages {
             $exif_caption .= $opus_image_meta['image_meta']['caption'];
         }
 
-        echo $exif_caption;
-
-        /** Add empty hook after EXIF caption */
-        do_action( 'opus_after_exif_caption' );
+        /** Return Caption string */
+        return $exif_caption;
 
     }
 
@@ -355,6 +342,8 @@ class OpusPrimusImages {
      * @uses    exif_data
      *
      * @internal mm = UI for millimeters; no need to translate
+     *
+     * @return  string
      */
     function exif_focal_length() {
         /** Get the image meta object */
@@ -372,10 +361,8 @@ class OpusPrimusImages {
             $focal_length .= $opus_image_meta['image_meta']['focal_length'] . 'mm';
         }
 
-        echo $focal_length;
-
-        /** Add empty hook after EXIF focal length */
-        do_action( 'opus_after_exif_focal_length' );
+        /** Return Focal Length string */
+        return $focal_length;
 
     }
 
@@ -390,7 +377,7 @@ class OpusPrimusImages {
      * @uses    do_action
      * @uses    exif_data
      *
-     * @internal mm = UI for millimeters; no need to translate
+     * @return  string
      */
     function exif_iso_speed() {
         /** Get the image meta object */
@@ -408,10 +395,8 @@ class OpusPrimusImages {
             $iso_speed .= $opus_image_meta['image_meta']['iso'];
         }
 
-        echo $iso_speed;
-
-        /** Add empty hook after EXIF ISO Speed */
-        do_action( 'opus_after_exif_iso_speed' );
+        /** Return ISO Speed */
+        return $iso_speed;
 
     }
 
@@ -424,6 +409,8 @@ class OpusPrimusImages {
      *
      * @uses    (global) $opus_image_meta
      * @uses    do_action
+     *
+     * @return  string
      */
     function exif_title() {
         /** Get the image meta object */
@@ -441,10 +428,8 @@ class OpusPrimusImages {
             $exif_title .= $opus_image_meta['image_meta']['title'];
         }
 
-        echo $exif_title;
-
-        /** Add empty hook after EXIF Title */
-        do_action( 'opus_after_exif_title' );
+        /** Return Title string */
+        return $exif_title;
 
     }
 
@@ -453,24 +438,45 @@ class OpusPrimusImages {
      * Opus Primus Display EXIF Box
      * Outputs the EXIF data using a box-model (read: div container)
      *
-     * @internal see display_exif_table for the tabular output
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @internal see display_exif_table for tabular output
      */
     function display_exif_box() {
         /** Wrap the exif output in its own container */
         echo '<div class="display-exif-box">';
 
-            $this->exif_copyright();
-            $this->exif_timestamp();
-            $this->exif_camera();
-            $this->exif_shutter();
-            $this->exif_aperture();
-            $this->exif_caption();
-            $this->exif_focal_length();
-            $this->exif_iso_speed();
-            $this->exif_title();
+        if ( $this->exif_copyright() ) {
+            printf( '<p class="exif-copyright">' . __( 'Copyright: %1$s', 'opusprimus' ) . '</p>', $this->exif_copyright() );
+        }
+        if ( $this->exif_timestamp() ) {
+            printf( '<p class="exif-timestamp">' . __( 'Taken: %1$s', 'opusprimus' ) . '</p>', $this->exif_timestamp() );
+        }
+        if ( $this->exif_camera() ) {
+            printf( '<p class="exif-camera">' . __( 'Camera: %1$s', 'opusprimus' ) . '</p>', $this->exif_camera() );
+        }
+        if ( $this->exif_shutter() ) {
+            printf( '<p class="exif-shutter">' . __( 'Shutter Speed: %1$s', 'opusprimus' ) . '</p>', $this->exif_shutter() );
+        }
+        if ( $this->exif_aperture() ) {
+            printf( '<p class="exif-aperture">' . __( 'Aperture: F%1$s', 'opusprimus' ) . '</p>', $this->exif_aperture() );
+        }
+        if ( $this->exif_caption() ) {
+            printf( '<p class="exif-caption">' . __( 'Caption: %1$s', 'opusprimus' ) . '</p>', $this->exif_caption() );
+        }
+        if ( $this->exif_focal_length() ) {
+            printf( '<p class="exif-focal-length>"' . __( 'Focal Length: %1$s', 'opusprimus' ) . '</p>', $this->exif_focal_length() );
+        }
+        if ( $this->exif_iso_speed() ) {
+            printf( '<p class="exif-iso-speed">' . __( 'ISO Speed: %1$s', 'opusprimus' ) . '</p>', $this->exif_iso_speed() );
+        }
+        if ( $this->exif_title() ) {
+            printf( '<p class="exif-title">' . __( 'Title: %1$s', 'opusprimus' ) . '</p>', $this->exif_title() );
+        }
 
-        /** Close exif display wrapper */
-        echo '</div><!-- .image-exif -->';
+        /** Close display exif box wrapper */
+        echo '</div><!-- .display-exif-box -->';
 
     }
 
