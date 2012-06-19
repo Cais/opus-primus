@@ -52,12 +52,6 @@ get_header( 'image' ); ?>
                 <div <?php post_class(); ?>>
 
                     <?php
-                    // get_template_part( 'loops/opus-primus', get_post_format() );
-
-                    /** Provide a link back to the gallery post with text and gallery post title */
-                    // echo '<a href="' . get_permalink( $post->post_parent ) . '">' . '&laquo; ' . __( 'Go back to the gallery post:', 'opusprimus' ) . '</a>';
-                    // echo '<h1>' . get_the_title( $post->post_parent ) . '</h1>';
-
                     /** Make it clear this is an attachment being displayed */
                     printf( '<h2 id="attachment-notice">'
                         . __( 'You are viewing an image attached to %1$s', 'opusprimus' )
@@ -68,12 +62,23 @@ get_header( 'image' ); ?>
                     $opus_structure->post_byline( array( 'show_mod_author' => true ) );
                     $opus_nav->image_nav();
 
+                    /** Image Title from media library */
+                    $opus_image->image_title();
+                    /** Image Caption from media library */
+                    $opus_structure->post_excerpt();
+
                     /** Show the image with link to original */
                     $size = 'large';
                     echo '<div class="attached-image"><a href="' . wp_get_attachment_url( $post->ID ) . '">' . wp_get_attachment_image( $post->ID, $size ) . '</a></div>';
 
+                    /** Original image dimensions with link */
                     $opus_image->exif_dimensions();
-                    $opus_image->display_exif_box();
+
+                    /** Image Description from media library */
+                    $opus_structure->post_content();
+
+                    /** Image meta data */
+                    $opus_image->display_exif_table();
 
                     $opus_structure->post_coda();
 

@@ -281,6 +281,10 @@ div.display-exif-box p {
     margin: 0;
 }
 
+table.display-exif-table tbody tr td {
+    padding-right: 10px;
+}
+
 .wp-caption,
 .wp-caption img {
     max-width: 99%;

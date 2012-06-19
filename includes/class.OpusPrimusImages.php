@@ -39,6 +39,7 @@ class OpusPrimusImages {
 
     }
 
+
     /**
      * Opus Primus EXIF Data
      * Returns an object containing the EXIF data found in an image if it exists
@@ -64,6 +65,7 @@ class OpusPrimusImages {
             return null;
         }
     }
+
 
     /**
      * Opus Primus EXIF Dimensions
@@ -107,6 +109,7 @@ class OpusPrimusImages {
 
     }
 
+
     /**
      * Opus Primus EXIF Copyright
      * Outputs a string containing the author and copyright text
@@ -147,6 +150,7 @@ class OpusPrimusImages {
 
     }
 
+
     /**
      * Opus Primus EXIF Timestamp
      * Outputs the timestamp including date and time as found in the image meta
@@ -186,6 +190,7 @@ class OpusPrimusImages {
         return $timestamp;
 
     }
+
 
     /**
      * Opus Primus EXIF Camera
@@ -264,6 +269,7 @@ class OpusPrimusImages {
 
     }
 
+
     /**
      * Opus Primus EXIF Aperture
      * Outputs the aperture details from the EXIF data
@@ -297,6 +303,7 @@ class OpusPrimusImages {
 
     }
 
+
     /**
      * Opus Primus EXIF Caption
      * Outputs the image caption from the EXIF data
@@ -329,6 +336,7 @@ class OpusPrimusImages {
         return $exif_caption;
 
     }
+
 
     /**
      * Opus Primus EXIF Focal Length
@@ -366,6 +374,7 @@ class OpusPrimusImages {
 
     }
 
+
     /**
      * Opus Primus EXIF ISO Speed
      * Outputs the ISO speed from the EXIF data
@@ -399,6 +408,7 @@ class OpusPrimusImages {
         return $iso_speed;
 
     }
+
 
     /**
      * Opus Primus EXIF Title
@@ -451,7 +461,7 @@ class OpusPrimusImages {
             printf( '<p class="exif-copyright">' . __( 'Copyright: %1$s', 'opusprimus' ) . '</p>', $this->exif_copyright() );
         }
         if ( $this->exif_timestamp() ) {
-            printf( '<p class="exif-timestamp">' . __( 'Taken: %1$s', 'opusprimus' ) . '</p>', $this->exif_timestamp() );
+            printf( '<p class="exif-timestamp">' . __( 'Uploaded: %1$s', 'opusprimus' ) . '</p>', $this->exif_timestamp() );
         }
         if ( $this->exif_camera() ) {
             printf( '<p class="exif-camera">' . __( 'Camera: %1$s', 'opusprimus' ) . '</p>', $this->exif_camera() );
@@ -479,6 +489,116 @@ class OpusPrimusImages {
         echo '</div><!-- .display-exif-box -->';
 
     }
+
+
+    /**
+     * Opus Primus Display EXIF Table
+     * Outputs the EXIF data using a table-model
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @internal see display_exif_box for box-model output
+     */
+    function display_exif_table() {
+        /** Only display table if meta data exists */
+        if ( ! ( $this->exif_copyright() ||
+            $this->exif_timestamp() ||
+            $this->exif_camera() ||
+            $this->exif_shutter() ||
+            $this->exif_aperture() ||
+            $this->exif_caption() ||
+            $this->exif_focal_length() ||
+            $this->exif_iso_speed() ||
+            $this->exif_title() ) ) {
+            return;
+        } else { ?>
+
+            <!-- Provide a CSS class for the exif output -->
+            <table class="display-exif-table">
+                <thead>
+                    <tr>
+                        <th><?php _e( 'Image Details', 'opusprimus' ); ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php
+                if ( $this->exif_copyright() ) {
+                    echo '<tr><td class="exif-copyright">' . __( 'Copyright', 'opusprimus' ) . '</td><td>' . $this->exif_copyright() . '</td></tr>';
+                }
+                if ( $this->exif_timestamp() ) {
+                    echo '<tr><td class="exif-timestamp">' . __( 'Uploaded', 'opusprimus' ) . '</td><td>' . $this->exif_timestamp() . '</td></tr>';
+                }
+                if ( $this->exif_camera() ) {
+                    echo '<tr><td class="exif-camera">' . __( 'Camera', 'opusprimus' ) . '</td><td>' . $this->exif_camera() . '</td></tr>';
+                }
+                if ( $this->exif_shutter() ) {
+                    echo '<tr><td class="exif-shutter">' . __( 'Shutter Speed', 'opusprimus' ) . '</td><td>' . $this->exif_shutter() . '</td></tr>';
+                }
+                if ( $this->exif_aperture() ) {
+                    echo '<tr><td class="exif-aperture">' . __( 'Aperture', 'opusprimus' ) . '</td><td>' . 'F' . $this->exif_aperture() . '</td></tr>';
+                }
+                if ( $this->exif_caption() ) {
+                    echo '<tr><td class="exif-caption">' . __( 'Caption', 'opusprimus' ) . '</td><td>' . $this->exif_caption() . '</td></tr>';
+                }
+                if ( $this->exif_focal_length() ) {
+                    echo '<tr><td class="exif-focal-length">' . __( 'Focal Length', 'opusprimus' ) . '</td><td>' . $this->exif_focal_length() . '</td></tr>';
+                }
+                if ( $this->exif_iso_speed() ) {
+                    echo '<tr><td class="exif-iso-speed">' . __( 'ISO Speed', 'opusprimus' ) . '</td><td>' . $this->exif_iso_speed() . '</td></tr>';
+                }
+                if ( $this->exif_title() ) {
+                    echo '<tr><td class="exif-title">' . __( 'Title', 'opusprimus' ) . '</td><td>' . $this->exif_title() . '</td></tr>';
+                } ?>
+                </tbody>
+                <tfoot></tfoot>
+                <!-- Close display exif table -->
+            </table><!-- .display-exif-table -->
+
+        <?php }
+
+    }
+
+    /**
+     * Opus Primus Image Title
+     * Outputs the image title as noted in the media library
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @param   string $before
+     * @param   string $after
+     * @param   bool $echo
+     *
+     * @uses    do_action
+     * @uses    the_permalink
+     * @uses    the_title
+     * @uses    the_title_attribute
+     */
+    function image_title( $before = '', $after = '', $echo = true ) {
+        /** Add empty hook before the image title */
+        do_action( 'opus_before_image_title' );
+
+        /** Set `the_title` parameters */
+        if ( empty( $before ) )
+            $before = '<h2 class="image-title">';
+        if ( empty( $after ) )
+            $after = '</h2>';
+
+        /** Wrap the title in an anchor tag and provide a nice tool tip */
+        if ( ! is_attachment() ) { ?>
+            <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ) ) ); ?>">
+                <?php the_title( $before, $after, $echo ); ?>
+            </a>
+        <?php } else {
+            the_title( $before, $after, $echo );
+        }
+
+        /** Add empty hook after the image title */
+        do_action( 'opus_after_image_title' );
+
+    }
+
 
 }
 $opus_image = new OpusPrimusImages();
