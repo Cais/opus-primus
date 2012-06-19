@@ -514,7 +514,7 @@ class OpusPrimusImages {
             return;
         } else { ?>
 
-            <!-- Provide a CSS class for the exif output -->
+        <!-- Provide a CSS class for the exif output -->
             <table class="display-exif-table">
                 <thead>
                     <tr>
@@ -561,7 +561,8 @@ class OpusPrimusImages {
 
     /**
      * Opus Primus Image Title
-     * Outputs the image title as noted in the media library
+     * Used in the image Attachment template file to output the image title as
+     * noted in the media library
      *
      * @package OpusPrimus
      * @since   0.1
@@ -596,6 +597,49 @@ class OpusPrimusImages {
 
         /** Add empty hook after the image title */
         do_action( 'opus_after_image_title' );
+
+    }
+
+
+    /**
+     * Opus Primus Image Media Title
+     * Used in the Post-Format: Image loop to output the title of the image from
+     * the media library
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    do_action
+     * @uses    get_children
+     * @uses    get_the_ID
+     */
+    function image_media_details() {
+
+        /** Add empty hook before Image Media Details */
+        do_action( 'opus_before_image_media_details' );
+
+        $attachments = get_children( array(
+            'post_parent'       => get_the_ID(),
+            'post_status'       => 'inherit',
+            'post_type'         => 'attachment',
+            'post_mime_type'    => 'image',
+            'order'             => 'ASC',
+            'orderby'           => 'menu_order ID',
+            'numberposts'       => 1
+        ) );
+        foreach ( $attachments as $attachment ) { ?>
+            <div class="image-media-details">
+                <h2 class="image-title"><?php echo $attachment->post_title; ?></h2>
+                <?php if ( $attachment->post_excerpt && is_archive() ) ?>
+                    <p class="image-post-excerpt"><?php echo $attachment->post_excerpt; ?></p>
+                <?php if ( $attachment->post_content ) ?>
+                    <p class="image-post-content"><?php echo $attachment->post_content; ?></p>
+            </div>
+        <?php
+        }
+
+        /** Add empty hook after Image Media Details */
+        do_action( 'opus_after_image_media_details' );
 
     }
 

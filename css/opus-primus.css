@@ -324,6 +324,24 @@ div.meta-byline button {
 }
 /** End: Post-Format: Gallery ----------------------------------------------- */
 
+/** === Post-Format: Image === ---------------------------------------------- */
+div.post.format-image h2.image-title {
+    text-align: center;
+}
+div.image-media-details {
+    margin: 0 auto;
+    width: 60%;
+}
+/** Post-Format Image Archive ----------------------------------------------- */
+.archive div.post.format-image h2.image-title {
+    text-align: left;
+}
+.archive div.image-media-details {
+    margin: 0;
+    width: 100%;
+}
+/** End: Post-Format: Image ------------------------------------------------- */
+
 /** Hacks to be sorted out and corrected */
 body.two-column embed,
 body.three-column embed {
