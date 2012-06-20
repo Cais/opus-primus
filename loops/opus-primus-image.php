@@ -39,7 +39,7 @@ global $opus_nav, $opus_structure, $opus_image;
 <div <?php post_class(); ?>>
 
     <?php
-    $opus_structure->post_byline( array( 'show_mod_author' => true ) );
+    $opus_structure->post_byline( array( 'show_mod_author' => true, 'anchor' => 'Displayed' ) );
     $opus_structure->post_title();
     if ( ! is_single() ) {
         $opus_structure->comments_link();

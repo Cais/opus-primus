@@ -43,7 +43,7 @@ global $opus_structure, $opus_nav, $opus_gallery, $opus_image;?>
 <div <?php post_class(); ?>>
 
     <?php
-    $opus_structure->post_byline( array( 'tempus' => 'time' ) );
+    $opus_structure->post_byline( array( 'tempus' => 'time', 'anchor' => 'Displayed' ) );
     $opus_structure->post_title();
     $opus_structure->comments_link();
     $opus_image->image_media_details();
