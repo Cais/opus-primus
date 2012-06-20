@@ -38,7 +38,7 @@
 
 /** Get the Post Structure, Navigation, and Gallery class variables */
 
-global $opus_structure, $opus_nav, $opus_gallery, $opus_image;?>
+global $opus_structure, $opus_nav;?>
 
 <div <?php post_class(); ?>>
 
@@ -46,8 +46,9 @@ global $opus_structure, $opus_nav, $opus_gallery, $opus_image;?>
     $opus_structure->post_byline( array( 'tempus' => 'time', 'anchor' => 'Displayed' ) );
     $opus_structure->post_title();
     $opus_structure->comments_link();
-    $opus_image->image_media_details();
-    $opus_gallery->featured_image( $size = 'medium' );
+
+    echo 'If you see this we are testing the archive-image template';
+
     $opus_structure->post_excerpt();
     $opus_nav->opus_link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
     $opus_structure->meta_tags();

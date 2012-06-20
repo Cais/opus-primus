@@ -79,6 +79,8 @@ class OpusPrimusImages {
      * @uses    (global) $post
      * @uses    do_action
      * @uses    wp_get_attachment_url
+     *
+     * @return  string
      */
     function exif_dimensions() {
         /** Get the post and image meta object */
@@ -94,18 +96,13 @@ class OpusPrimusImages {
 
         /** Link to original image with size displayed */
         if ( $width && $height ) {
-            $dimensions .= '<div class="exif-dimensions">'
-                . sprintf( __( '%1$s (Size: %2$s by %3$s)', 'opusprimus' ),
-                    '<a href="' . wp_get_attachment_url( $post->ID ) . '">' . sprintf( __( 'Original image', 'opusprimus' ) ) . '</a>',
-                    $width . 'px',
-                    $height . 'px' )
-                . '</div>';
+            $dimensions .= sprintf( __( '%1$s (Size: %2$s by %3$s)', 'opusprimus' ),
+                '<a href="' . wp_get_attachment_url( $post->ID ) . '">' . sprintf( __( 'Original image', 'opusprimus' ) ) . '</a>',
+                $width . 'px',
+                $height . 'px' );
         }
 
-        echo apply_filters( 'exif_dimensions', $dimensions );
-
-        /** Add empty hook after EXIF dimension */
-        do_action( 'opus_after_exif_dimensions' );
+        return apply_filters( 'exif_dimensions', $dimensions );
 
     }
 
@@ -457,6 +454,8 @@ class OpusPrimusImages {
         /** Wrap the exif output in its own container */
         echo '<div class="display-exif-box">';
 
+        if ( $this->exif_dimensions() )
+            printf( '<p class="exif-dimensions">%1$s</p>', $this->exif_dimensions() );
         if ( $this->exif_copyright() ) {
             printf( '<p class="exif-copyright">' . __( 'Copyright: %1$s', 'opusprimus' ) . '</p>', $this->exif_copyright() );
         }
@@ -500,29 +499,20 @@ class OpusPrimusImages {
      *
      * @internal see display_exif_box for box-model output
      */
-    function display_exif_table() {
-        /** Only display table if meta data exists */
-        if ( ! ( $this->exif_copyright() ||
-            $this->exif_timestamp() ||
-            $this->exif_camera() ||
-            $this->exif_shutter() ||
-            $this->exif_aperture() ||
-            $this->exif_caption() ||
-            $this->exif_focal_length() ||
-            $this->exif_iso_speed() ||
-            $this->exif_title() ) ) {
-            return;
-        } else { ?>
+    function display_exif_table() { ?>
 
         <!-- Provide a CSS class for the exif output -->
-            <table class="display-exif-table">
-                <thead>
-                    <tr>
-                        <th><?php _e( 'Image Details', 'opusprimus' ); ?></th>
-                    </tr>
-                </thead>
-                <tbody>
+        <table class="display-exif-table">
+            <thead>
+                <tr>
+                    <th><?php _e( 'Image Details', 'opusprimus' ); ?></th>
+                </tr>
+            </thead>
+            <tbody>
                 <?php
+                if ( $this->exif_dimensions() ) {
+                    echo '<tr><td class="exif-dimensions">' . __( 'Dimensions', 'opusprimus' ) . '</td><td>' . $this->exif_dimensions() . '</td></tr>';
+                }
                 if ( $this->exif_copyright() ) {
                     echo '<tr><td class="exif-copyright">' . __( 'Copyright', 'opusprimus' ) . '</td><td>' . $this->exif_copyright() . '</td></tr>';
                 }
@@ -550,13 +540,12 @@ class OpusPrimusImages {
                 if ( $this->exif_title() ) {
                     echo '<tr><td class="exif-title">' . __( 'Title', 'opusprimus' ) . '</td><td>' . $this->exif_title() . '</td></tr>';
                 } ?>
-                </tbody>
-                <tfoot></tfoot>
-                <!-- Close display exif table -->
-            </table><!-- .display-exif-table -->
+            </tbody>
+            <tfoot></tfoot>
+            <!-- Close display exif table -->
+        </table><!-- .display-exif-table -->
 
-        <?php }
-
+    <?php
     }
 
     /**
@@ -599,50 +588,6 @@ class OpusPrimusImages {
         do_action( 'opus_after_image_title' );
 
     }
-
-
-    /**
-     * Opus Primus Image Media Title
-     * Used in the Post-Format: Image loop to output the title of the image from
-     * the media library
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @uses    do_action
-     * @uses    get_children
-     * @uses    get_the_ID
-     */
-    function image_media_details() {
-
-        /** Add empty hook before Image Media Details */
-        do_action( 'opus_before_image_media_details' );
-
-        $attachments = get_children( array(
-            'post_parent'       => get_the_ID(),
-            'post_status'       => 'inherit',
-            'post_type'         => 'attachment',
-            'post_mime_type'    => 'image',
-            'order'             => 'ASC',
-            'orderby'           => 'menu_order ID',
-            'numberposts'       => 1
-        ) );
-        foreach ( $attachments as $attachment ) { ?>
-            <div class="image-media-details">
-                <h2 class="image-title"><?php echo $attachment->post_title; ?></h2>
-                <?php if ( $attachment->post_excerpt && is_archive() ) ?>
-                    <p class="image-post-excerpt"><?php echo $attachment->post_excerpt; ?></p>
-                <?php if ( $attachment->post_content ) ?>
-                    <p class="image-post-content"><?php echo $attachment->post_content; ?></p>
-            </div>
-        <?php
-        }
-
-        /** Add empty hook after Image Media Details */
-        do_action( 'opus_after_image_media_details' );
-
-    }
-
 
 }
 $opus_image = new OpusPrimusImages();

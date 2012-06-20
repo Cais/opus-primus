@@ -71,9 +71,6 @@ get_header( 'image' ); ?>
                     $size = 'large';
                     echo '<div class="attached-image"><a href="' . wp_get_attachment_url( $post->ID ) . '">' . wp_get_attachment_image( $post->ID, $size ) . '</a></div>';
 
-                    /** Original image dimensions with link */
-                    $opus_image->exif_dimensions();
-
                     /** Image Description from media library */
                     $opus_structure->post_content();
 
