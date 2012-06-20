@@ -589,5 +589,72 @@ class OpusPrimusImages {
 
     }
 
+
+    /**
+     * Opus Primus Archive Image Details
+     * Outputs details of the attached image, if they exist
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @param   string $size - standard WordPress post_thumbnail sizes / or custom defined sizes can be used
+     *
+     * @uses    (global) $post
+     * @uses    get_children
+     * @uses    get_permalink
+     * @uses    is_single
+     * @uses    the_title_attribute
+     * @uses    wp_get_attachment_image
+     *
+     * @todo Sort out a better output when the image is linked rather than attached
+     */
+    function archive_image_details( $size = 'medium' ) {
+        global $post;
+        $attachments = get_children( array(
+            'post_parent'       => $post->ID,
+            'post_status'       => 'inherit',
+            'post_type'         => 'attachment',
+            'post_mime_type'    => 'image',
+            'order'             => 'ASC',
+            'orderby'           => 'menu_order ID',
+            'numberposts'       => 1
+        ) );
+        $archive_image = '<p class="archive-image">' . __( 'The Image archive looks much better if the image is set as an attachment of the post.', 'opusprimus' ) . '</p>';
+        $archive_image_title = $archive_image_excerpt = $archive_image_content = '';
+        foreach ( $attachments as $opus_thumb_id => $attachment ) {
+            $archive_image = '<div class="archive-image"><a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">'
+                . wp_get_attachment_image( $opus_thumb_id, $size )
+                . '</a></div>';
+            $archive_image_title = $attachment->post_title;
+            $archive_image_excerpt = $attachment->post_excerpt;
+            $archive_image_content = $attachment->post_content;
+        }
+
+
+        if ( ! is_single() )
+            echo $archive_image; ?>
+        <table>
+            <thead>
+                <tr><th>
+                    <?php
+                    if ( ! empty( $archive_image_title ) )
+                        printf( '<span class="archive-image-title">' . __( 'Image Title: %1$s', 'opusprimus' )  . '</span>', $archive_image_title ); ?>
+                </th></tr>
+            </thead>
+            <tr>
+                <?php
+                if ( ! empty( $archive_image_excerpt ) )
+                    printf( '<td class="archive-image-excerpt">' . __( 'Image Caption: %1$s', 'opusprimus' )  . '</td>', $archive_image_excerpt ); ?>
+            </tr>
+            <tr>
+                <?php
+                if ( ! empty( $archive_image_content ) )
+                    printf( '<td class="archive-image-content">' . __( 'Image Description: %1$s', 'opusprimus' )  . '</td>', $archive_image_content ); ?>
+            </tr>
+        </table>
+
+    <?php
+    }
+
 }
 $opus_image = new OpusPrimusImages();

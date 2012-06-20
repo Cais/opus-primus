@@ -38,7 +38,7 @@
 
 /** Get the Post Structure, Navigation, and Gallery class variables */
 
-global $opus_structure, $opus_nav;?>
+global $opus_structure, $opus_nav, $opus_image;?>
 
 <div <?php post_class(); ?>>
 
@@ -47,7 +47,7 @@ global $opus_structure, $opus_nav;?>
     $opus_structure->post_title();
     $opus_structure->comments_link();
 
-    echo 'If you see this we are testing the archive-image template';
+    $opus_image->archive_image_details();
 
     $opus_structure->post_excerpt();
     $opus_nav->opus_link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );

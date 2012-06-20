@@ -45,7 +45,7 @@ global $opus_nav, $opus_structure, $opus_image;
         $opus_structure->comments_link();
     }
 
-    echo 'If you see this we are testing the image loop template';
+    // $opus_image->archive_image_details();
 
     $opus_structure->post_content();
     $opus_nav->opus_link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
