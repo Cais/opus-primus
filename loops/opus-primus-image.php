@@ -39,7 +39,6 @@ global $opus_nav, $opus_structure, $opus_image;
 <div <?php post_class(); ?>>
 
     <?php
-    echo 'Testing: This is the post-format: image loop<br />';
     $opus_structure->post_byline( array( 'show_mod_author' => true ) );
     $opus_structure->post_title();
     if ( ! is_single() ) {
