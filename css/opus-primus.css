@@ -333,12 +333,8 @@ div.image-media-details {
     width: 60%;
 }
 /** Post-Format Image Archive ----------------------------------------------- */
-.archive div.post.format-image h2.image-title {
-    text-align: left;
-}
-.archive div.image-media-details {
-    margin: 0;
-    width: 100%;
+table tbody tr td.archive-image {
+    text-align: center;
 }
 /** End: Post-Format: Image ------------------------------------------------- */
 

@@ -622,17 +622,14 @@ class OpusPrimusImages {
         $archive_image = '<p class="archive-image">' . __( 'The Image archive looks much better if the image is set as an attachment of the post.', 'opusprimus' ) . '</p>';
         $archive_image_title = $archive_image_excerpt = $archive_image_content = '';
         foreach ( $attachments as $opus_thumb_id => $attachment ) {
-            $archive_image = '<div class="archive-image"><a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">'
+            $archive_image = '<span class="archive-image"><a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">'
                 . wp_get_attachment_image( $opus_thumb_id, $size )
-                . '</a></div>';
+                . '</a></span>';
             $archive_image_title = $attachment->post_title;
             $archive_image_excerpt = $attachment->post_excerpt;
             $archive_image_content = $attachment->post_content;
-        }
+        } ?>
 
-
-        if ( ! is_single() )
-            echo $archive_image; ?>
         <table>
             <thead>
                 <tr><th>
@@ -641,6 +638,9 @@ class OpusPrimusImages {
                         printf( '<span class="archive-image-title">' . __( 'Image Title: %1$s', 'opusprimus' )  . '</span>', $archive_image_title ); ?>
                 </th></tr>
             </thead>
+            <tr>
+                <td class="archive-image"><?php if ( ! is_single() ) echo $archive_image; ?></td>
+            </tr>
             <tr>
                 <?php
                 if ( ! empty( $archive_image_excerpt ) )
