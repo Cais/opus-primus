@@ -599,9 +599,9 @@ class OpusPrimusImages {
      *
      * @param   string $size - standard WordPress post_thumbnail sizes / or custom defined sizes can be used
      *
-     * @uses    (global) $post
      * @uses    get_children
      * @uses    get_permalink
+     * @uses    get_the_ID
      * @uses    is_single
      * @uses    the_title_attribute
      * @uses    wp_get_attachment_image
@@ -609,9 +609,8 @@ class OpusPrimusImages {
      * @todo Sort out a better output when the image is linked rather than attached
      */
     function archive_image_details( $size = 'medium' ) {
-        global $post;
         $attachments = get_children( array(
-            'post_parent'       => $post->ID,
+            'post_parent'       => get_the_ID(),
             'post_status'       => 'inherit',
             'post_type'         => 'attachment',
             'post_mime_type'    => 'image',
