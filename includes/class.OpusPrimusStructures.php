@@ -475,7 +475,7 @@ class OpusPrimusStructures {
      * Outputs `the_content` and allows for the_content parameters to be used
      *
      * @link    http://codex.wordpress.org/Function_Reference/the_content
-     * @example post_content( __( 'Read more of ...', 'opusprimus' ), the_title( '', '', false ) )
+     * @example post_content( __( 'Read more of ... ', 'opusprimus' ) . the_title( '', '', false ) )
      * @internal The above example, when the <!--more--> tag is used, will
      * provide a link to the single view of the post with the anchor text of:
      * "Read more of ... <the-post-title>"
@@ -493,6 +493,12 @@ class OpusPrimusStructures {
         /** Add empty hook before the content */
         do_action( 'opus_before_the_content' );
 
+        if ( empty( $more_link_text ) ) {
+            $more_link_text = __( 'Continue reading ... ', 'opusprimus' ) . the_title( '', '', false );
+        }
+        if ( empty( $stripteaser ) ) {
+            $stripteaser = '';
+        }
         /** The post excerpt */
         the_content( $more_link_text, $stripteaser );
 
