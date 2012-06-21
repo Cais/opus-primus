@@ -74,8 +74,9 @@ The following will show how, if active, they affect the layout:
 
 == Notes ==
 1. $content_width is set based on how many columns being used and the common
-display size of 1024px * 768px. This being the case, the following widths will
-be used:
+display size of 1024px * 768px.
 
+This being the case, the following widths will be used:
 - one-column: 990px
-- two-column:
+- two-column: 700px
+- three-column: 450px

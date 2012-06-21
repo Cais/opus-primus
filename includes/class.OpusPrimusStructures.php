@@ -86,6 +86,8 @@ class OpusPrimusStructures {
      * @internal    $content_width is set based on the amount of columns being displayed and a display using the common 1024px x 768px resolution
      *
      * @return      string
+     *
+     * @todo Review $content_width settings
      */
     function layout_close() {
         global $content_width;
