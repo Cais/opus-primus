@@ -59,7 +59,7 @@ get_header( 'image' ); ?>
                         '<a href="' . get_permalink( $post->post_parent ) . '">' . get_the_title( $post->post_parent ) . '</a>'
                     );
 
-                    $opus_structure->post_byline( array( 'show_mod_author' => true ) );
+                    $opus_structure->post_byline( array( 'show_mod_author' => true, 'anchor' => 'Displayed' ) );
                     $opus_nav->image_nav();
 
                     /** Image Title from media library */
