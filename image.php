@@ -31,6 +31,9 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @todo clean up layout code
+ * @todo review CSS container names && clean up 'opus-primus.css' as needed
  */
 
 global $post, $opus_nav, $opus_structure, $opus_gallery, $opus_image;
@@ -67,15 +70,29 @@ get_header( 'image' ); ?>
                     /** Image Caption from media library */
                     $opus_structure->post_excerpt();
 
-                    /** Show the image with link to original */
-                    $size = 'large';
-                    echo '<div class="attached-image"><a href="' . wp_get_attachment_url( $post->ID ) . '">' . wp_get_attachment_image( $post->ID, $size ) . '</a></div>';
+                    /** Display image and its details in two columns */
+                    echo '<div class="right-column image-loop-contents">';
+                        echo '<div class="image-plus-details">';
+                            echo '<div class="image-column">';
 
-                    /** Image Description from media library */
-                    $opus_structure->post_content();
+                                /** Show the image with link to original */
+                                $size = 'large';
+                                echo '<div class="attached-image"><a href="' . wp_get_attachment_url( $post->ID ) . '">' . wp_get_attachment_image( $post->ID, $size ) . '</a></div>';
 
-                    /** Image meta data */
-                    $opus_image->display_exif_table();
+                                /** Image Description from media library */
+                                $opus_structure->post_content();
+
+                            echo '</div><!-- .image-column -->';
+
+                            echo '<div class="image-details-table">';
+
+                                /** Image meta data */
+                                $opus_image->display_exif_table();
+
+                            echo '</div><!-- .image-details-table -->';
+
+                        echo '</div><!-- .image-plus-details -->';
+                    echo '</div><!-- .right-column .image-loop-contents -->';
 
                     $opus_structure->post_coda();
 
