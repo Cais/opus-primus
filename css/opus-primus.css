@@ -48,7 +48,11 @@
  *
  * === Post-Format ===
  * === Post-Format: Gallery ===
+ * === Post-Format: Image ===
  *
+ *
+ * === Misbehaving Common Plugins ===
+ * Jetpack
  */
 /** End: Table of Contents -------------------------------------------------- */
 
@@ -293,45 +297,6 @@ table.display-exif-table tbody tr td {
 img {
     height: auto;
 }
-
-/** Display Image in left column and Image Details in right column */
-/* column container */
-.image-loop-contents {
-    position:relative;	/* This fixes the IE7 overflow hidden bug */
-    clear:both;
-    float:left;
-    width:100%;			/* width of whole page */
-    overflow:hidden;		/* This chops off any overhanging divs */
-}
-/* common column settings */
-.image-plus-details {
-    float:left;
-    width:100%;
-    position:relative;
-}
-.image-column,
-.image-details-table {
-    float:left;
-    position:relative;
-    padding:0 0 1em 0;
-    overflow:hidden;
-}
-/* 2 Column (right menu) settings */
-.right-column {
-    /** background:#eee;		/* right column background colour */
-}
-.right-column .image-plus-details {
-    right: 33%;			/* right column width */
-    /** background:#fff;		/* left column background colour */
-}
-.right-column .image-column {
-    width: 62%;			/* left column content width (left column width minus left and right padding) */
-    left: 35%;			/* (right column width) plus (left column left padding) */
-}
-.right-column .image-details-table {
-    width: 29%;			/* right column content width (right column width minus left and right padding) */
-    left: 35%;			/* (right column width) plus (left column left and right padding) plus (right column left padding) */
-}
 /** End: Attachment: Image -------------------------------------------------- */
 
 /** === Post Formats === ---------------------------------------------------- */
@@ -376,6 +341,19 @@ table tbody tr td.archive-image {
     text-align: center;
 }
 /** End: Post-Format: Image ------------------------------------------------- */
+
+
+
+/** === Misbehaving Common Plugins === -------------------------------------- */
+/** Jetpack - The custom gallery and image templates call the content a second
+ * time and thus Jetpack regurgitates itself again; this should correct it.
+ */
+div.sharing + div.attached-image + div.sharing,
+div.sharing + div.attached-image + p + div.sharing {
+    display: none;
+}
+/** End: Misbehaving Common Plugins ----------------------------------------- */
+
 
 /** Hacks to be sorted out and corrected */
 body.two-column embed,

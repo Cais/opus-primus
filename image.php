@@ -70,29 +70,15 @@ get_header( 'image' ); ?>
                     /** Image Caption from media library */
                     $opus_structure->post_excerpt();
 
-                    /** Display image and its details in two columns */
-                    echo '<div class="right-column image-loop-contents">';
-                        echo '<div class="image-plus-details">';
-                            echo '<div class="image-column">';
+                    /** Show the image with link to original */
+                    $size = 'large';
+                    echo '<div class="attached-image"><a href="' . wp_get_attachment_url( $post->ID ) . '">' . wp_get_attachment_image( $post->ID, $size ) . '</a></div>';
 
-                                /** Show the image with link to original */
-                                $size = 'large';
-                                echo '<div class="attached-image"><a href="' . wp_get_attachment_url( $post->ID ) . '">' . wp_get_attachment_image( $post->ID, $size ) . '</a></div>';
+                    /** Image Description from media library */
+                    $opus_structure->post_content();
 
-                                /** Image Description from media library */
-                                $opus_structure->post_content();
-
-                            echo '</div><!-- .image-column -->';
-
-                            echo '<div class="image-details-table">';
-
-                                /** Image meta data */
-                                $opus_image->display_exif_table();
-
-                            echo '</div><!-- .image-details-table -->';
-
-                        echo '</div><!-- .image-plus-details -->';
-                    echo '</div><!-- .right-column .image-loop-contents -->';
+                    /** Image meta data */
+                    $opus_image->display_exif_table();
 
                     $opus_structure->post_coda();
 
