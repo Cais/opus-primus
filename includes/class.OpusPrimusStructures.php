@@ -661,7 +661,7 @@ class OpusPrimusStructures {
         printf( '<p class="no-results">%1$s</p>', __( '... or try one of the links below.', 'opusprimus' ) );
 
         /** Get the class variables */
-        global $opus_archive, $opus_nav;
+        global $opus_archive;
         /** Display a list of categories to choose from */
         $opus_archive->categories_archive( array(
             'orderby'       => 'count',
@@ -679,7 +679,7 @@ class OpusPrimusStructures {
             'number'    => 10,
         ) );
         /** Display a list of pages to choose from */
-        $opus_nav->opus_search_menu();
+        opus_primus_search_menu();
 
         /** Add empty hook after no posts results from the_loop query */
         do_action( 'opus_after_search_results' );

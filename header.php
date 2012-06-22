@@ -54,9 +54,7 @@
         </hgroup>
 
         <nav>
-            <?php
-            global $opus_nav;
-            $opus_nav->opus_primary_menu(); ?>
+            <?php opus_primus_primary_menu(); ?>
         </nav>
 
     </header>
