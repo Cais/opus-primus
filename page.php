@@ -48,7 +48,7 @@ get_header( 'page' ); ?>
                         <?php
                         $opus_structure->post_title();
                         $opus_structure->post_content();
-                        $opus_structure->post_byline();
+                        $opus_structure->post_byline( array( 'show_mod_author' => true ) );
                         $opus_structure->post_author(); ?>
                     </div><!-- .post -->
                 <?php
