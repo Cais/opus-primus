@@ -253,6 +253,43 @@ class OpusPrimusStructures {
         return $output;
     }
 
+
+    /**
+     * Opus Primus Sticky Flag
+     * Returns a text string as a button that links to the post, used with the
+     * "sticky" post functionality of WordPress
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @param   string $sticky_text
+     *
+     * @uses    apply_filters
+     * @uses    is_sticky
+     * @uses    get_permalink
+     *
+     * @return  string
+     */
+    function sticky_flag( $sticky_text = '' ) {
+
+        if ( '' == $sticky_text ) {
+            $sticky_text = __( 'Featured', 'opusprimus' );
+            $sticky_text = apply_filters( 'sticky_flag', $sticky_text );
+        }
+        if ( is_sticky() ) {
+            $output = '<a href="' . get_permalink() . '" title="' . sprintf( __( 'Go to %1$s post', 'opusprimus' ), strtolower( $sticky_text ) ) . '">'
+                . '<button><span class="sticky-flag-text">'
+                . $sticky_text
+                . '</span></button>'
+                . '</a>';
+        } else {
+            $output = '';
+        }
+
+        return $output;
+
+    }
+
     /**
      * Opus Primus Post By Line
      * Outputs post meta details consisting of a configurable anchor for post
@@ -284,6 +321,8 @@ class OpusPrimusStructures {
      * @uses    get_the_date
      * @uses    get_the_time
      * @uses    no_title_link
+     * @uses    post_format_flag
+     * @uses    sticky_flag
      * @uses    wp_parse_args
      */
     function post_byline( $byline_args = '' ) {
@@ -291,6 +330,7 @@ class OpusPrimusStructures {
         $defaults = array(
             'anchor'            => 'Posted',
             'show_mod_author'   => false,
+            'sticky_flag'       => '',
             'tempus'            => 'date',
         );
         $byline_args = wp_parse_args( (array) $byline_args, $defaults );
@@ -327,6 +367,8 @@ class OpusPrimusStructures {
             $this->modified_post( $byline_args['tempus'] );
         }
 
+        /** Add a sticky note flag to the byline */
+        echo $this->sticky_flag( $byline_args['sticky_flag'] );
         /** Add a post-format flag to the byline */
         echo $this->post_format_flag();
 

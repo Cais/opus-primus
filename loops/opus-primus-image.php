@@ -39,13 +39,15 @@ global $opus_nav, $opus_structure, $opus_image;
 <div <?php post_class(); ?>>
 
     <?php
-    $opus_structure->post_byline( array( 'show_mod_author' => true, 'anchor' => 'Displayed' ) );
+    $opus_structure->post_byline( array(
+        'show_mod_author'   => true,
+        'anchor'            => 'Displayed',
+        'sticky_flag'       => 'Framed',
+    ) );
     $opus_structure->post_title();
     if ( ! is_single() ) {
         $opus_structure->comments_link();
     }
-
-    // $opus_image->archive_image_details();
 
     $opus_structure->post_content();
     $opus_nav->opus_link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
