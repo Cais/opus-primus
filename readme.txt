@@ -45,6 +45,10 @@ version is used. Licensed as Public Domain
 Licensed under Apache v2.0
 - for more information see https://github.com/cloudhead/less.js
 
+* Bootstrap is a project by Mark Otto and Jacob Thornton.
+Copyright 2012 Twitter, Inc. Licensed under the Apache License, Version 2.0
+- for more information see https://github.com/twitter/bootstrap/
+
 This above may not be construed as overriding any item with a previously written
 and applied license, stated or not, which will take precedence over anything
 written here.
