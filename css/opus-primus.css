@@ -69,12 +69,9 @@ ul.sidebar {
     clear: both;
 }
 
-a.featured-thumbnail + div.post-content {
-    float: left;
-}
-img.wp-post-image {
-    border: medium double #000000;
-}
+/** Featured Image */
+a.featured-thumbnail + div.post-content { float: left; }
+img.wp-post-image { border: medium double #000000; }
 
 /** Fluid Secret Sauce */
 div#content-wrapper div#the-loop p embed { max-width: 100%; }
