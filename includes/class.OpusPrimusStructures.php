@@ -198,6 +198,7 @@ class OpusPrimusStructures {
         /** Add empty hook before comments link */
         do_action( 'opus_before_comments_link' );
 
+        echo '<h5 class="comments-link">';
         if ( ! post_password_required() && comments_open() ) {
             if ( is_page() ) {
                 comments_popup_link(
@@ -217,6 +218,7 @@ class OpusPrimusStructures {
                 );
             }
         }
+        echo '</h5><!-- .comments-link -->';
 
         /** Add empty hook after comments link */
         do_action( 'opus_after_comments_link' );
@@ -550,8 +552,11 @@ class OpusPrimusStructures {
         if ( empty( $stripteaser ) ) {
             $stripteaser = '';
         }
+
+        echo '<div class="post-content">';
         /** The post excerpt */
         the_content( $more_link_text, $stripteaser );
+        echo '</div>';
 
         /** Add empty hook after the content */
         do_action( 'opus_after_the_content' );

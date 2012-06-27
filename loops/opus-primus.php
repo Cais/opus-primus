@@ -33,7 +33,7 @@
  */
 
 /** Call the Post Structure and Navigation class variables */
-global $opus_nav, $opus_structure;
+global $opus_nav, $opus_structure, $opus_image;
 
 /** Display the post */ ?>
 <div <?php post_class(); ?>>
@@ -44,6 +44,7 @@ global $opus_nav, $opus_structure;
     if ( ! is_single() ) {
         $opus_structure->comments_link();
     }
+    $opus_image->featured_thumbnail();
     $opus_structure->post_content();
     $opus_nav->opus_link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
     $opus_structure->meta_tags();

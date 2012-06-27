@@ -36,7 +36,7 @@
  * @todo review CSS container names && clean up 'opus-primus.css' as needed
  */
 
-global $post, $opus_nav, $opus_structure, $opus_gallery, $opus_image;
+global $post, $opus_nav, $opus_structure, $opus_image;
 get_header( 'image' ); ?>
 
 <div class="content-wrapper">

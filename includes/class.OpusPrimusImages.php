@@ -655,5 +655,30 @@ class OpusPrimusImages {
     <?php
     }
 
+    /**
+     * Opus Primus Featured Thumbnail
+     * Adds the featured image / post thumbnail to the post if not in the single
+     * view
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    get_post_thumbnail_id
+     * @uses    has_post_thumbnail
+     * @uses    is_single
+     * @uses    the_post_thumbnail
+     * @uses    the_title_attribute
+     *
+     * @todo clean up and have link display attachment archive
+     */
+    function featured_thumbnail() {
+        if ( has_post_thumbnail() && ! is_single() ) {
+            $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
+            echo '<a class="featured-thumbnail" href="' . $large_image_url[0] . '" title="' . the_title_attribute( 'echo=0' ) . '" >';
+                the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) );
+            echo '</a>';
+        }
+    }
+
 }
 $opus_image = new OpusPrimusImages();
