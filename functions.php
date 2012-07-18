@@ -70,14 +70,13 @@ add_action( 'wp_enqueue_scripts', 'opus_primus_enqueue_scripts' );
 
 /**
  * Opus Primus LESS
- *
  * Add LESS stylesheet and javascript
  *
  * @package OpusPrimus
  * @since   0.1
  *
- * @uses    OPUS_CSS    (constant)
- * @uses    OPUS_JS     (constant)
+ * @uses    (constant) OPUS_CSS
+ * @uses    (constant) OPUS_JS
  * @uses    wp_enqueue_script
  */
 function opus_primus_LESS() {
@@ -157,13 +156,11 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 
             /** Add empty hook after the primary menu */
             do_action( 'opus_after_primary_menu' );
-
         }
-
 
         /**
          * Opus Primus Secondary Menu
-         * Primary navigation menu
+         * Secondary navigation menu
          *
          * @package OpusPrimus
          * @since   0.1
@@ -189,9 +186,7 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 
             /** Add empty hook after the secondary menu */
             do_action( 'opus_after_secondary_menu' );
-
         }
-
 
         /**
          * Opus Primus List Pages
@@ -206,7 +201,7 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
          * @param   string|array $page_menu_args
          *
          * @uses    wp_page_menu
-         * #uses    wp_parse_args
+         * @uses    wp_parse_args
          */
         function opus_primus_list_pages( $page_menu_args ) {
             $defaults = array(
@@ -217,7 +212,6 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
             wp_list_pages( $page_menu_args );
             echo '</ul>';
         }
-
 
         /**
          * Opus Primus Search Menu
@@ -250,9 +244,7 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 
             /** Add empty hook after the search menu */
             do_action( 'opus_after_search_menu' );
-
         }
-
 
         /**
          * Opus Primus Search Page Menu
@@ -264,7 +256,7 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
          * @param   string|array $list_args
          *
          * @uses    wp_page_menu
-         * #uses    wp_parse_args
+         * @uses    wp_parse_args
          */
         function opus_primus_search_page_menu( $list_args = '' ) {
             $defaults = array(
@@ -272,12 +264,11 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
                 'show_home' => true,
             );
             $list_args = wp_parse_args( (array) $defaults, $list_args ); ?>
-        <ul class="nav search">
-            <?php wp_page_menu( $list_args ); ?>
-        </ul>
+            <ul class="nav search">
+                <?php wp_page_menu( $list_args ); ?>
+            </ul>
         <?php
         }
-
 
         /** Add custom menu support (Primary and Secondary) */
         register_nav_menus( array(
@@ -286,6 +277,24 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
             'search'    => 'Search Results Menu',
         ) );
 
+        /**
+         * Make theme available for translation
+         * Translations can be filed in the /languages/ directory
+         *
+         * @package OpusPrimus
+         * @since   0.1
+         *
+         * @uses    load_theme_textdomain
+         * @uses    get_locale
+         * @uses    get_template_directory
+         * @uses    get_template_directory_uri
+         */
+        load_theme_textdomain( 'opusprimus', get_template_directory() . '/languages' );
+        $locale = get_locale();
+        $locale_file = get_template_directory_uri() . "/languages/$locale.php";
+        if ( is_readable( $locale_file ) )
+            /** @noinspection PhpIncludeInspection */
+            require_once( $locale_file );
     }
 }
 add_action( 'after_setup_theme', 'opus_primus_theme_setup' );
@@ -336,11 +345,9 @@ if ( ! function_exists( 'opus_primus_body_classes' ) ) {
 
         /** Return the classes for use with the `body_class` filter */
         return apply_filters( 'opus_primus_body_classes', $classes );
-
     }
 }
 add_filter( 'body_class', 'opus_primus_body_classes' );
-
 
 if ( ! function_exists( 'opus_enqueue_comment_reply' ) ) {
     /**
@@ -365,7 +372,6 @@ if ( ! function_exists( 'opus_enqueue_comment_reply' ) ) {
     }
 }
 add_action( 'comment_form_before', 'opus_enqueue_comment_reply' );
-
 
 if ( ! function_exists( 'opus_primus_title' ) ) {
     /**
@@ -459,7 +465,6 @@ function opus_primus_widgets() {
         'id'            => 'fourth-widget',
         'description'   => __( 'This widget area is in “Sidebar Area Two”. If no widget areas are active, the web site will be one column. If the First and/or Second widget area is active in addition to this one, the web site will display three columns with this area in the right sidebar.', 'opusprimus' ),
     ) );
-
 }
 /** Register sidebars by running `opus_primus_widgets` on the `widgets_init` action hook. */
 add_action( 'widgets_init', 'opus_primus_widgets' );
