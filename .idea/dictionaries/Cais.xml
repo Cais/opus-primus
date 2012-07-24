@@ -8,6 +8,7 @@
       <w>commentlist</w>
       <w>curauth</w>
       <w>firefox</w>
+      <w>fitvids</w>
       <w>gmpg</w>
       <w>gravatar</w>
       <w>mailto</w>
@@ -20,6 +21,7 @@
       <w>tagline</w>
       <w>userdata</w>
       <w>userid</w>
+      <w>vids</w>
     </words>
   </dictionary>
 </component>
