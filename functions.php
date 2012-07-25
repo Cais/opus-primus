@@ -113,10 +113,10 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
         /** Add theme support for editor-style */
         add_editor_style();
         /** This theme allows users to set a custom background */
-        add_theme_support( 'custom-background' /*, array(
-                'default-color' => '',
-                'default-image' => get_stylesheet_directory_uri() . '/images/background.png'
-            )*/ );
+        add_theme_support( 'custom-background', array(
+                'default-color' => 'ffffff',
+                /* 'default-image' => get_stylesheet_directory_uri() . '/images/background.png' */
+            ) );
         /** Add support for ALL post-formats */
         add_theme_support( 'post-formats', array(
             'aside',
