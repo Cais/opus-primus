@@ -44,6 +44,8 @@
  * === Default Widgets ===
  * === 404 Layout ===
  *
+ * === General Images ===
+ *
  * === Post-Format ===
  * === Post-Format: Gallery ===
  * === Post-Format: Image ===
@@ -738,9 +740,18 @@ ul.featured li ul.nav div.nav {
 /** === General Images === -------------------------------------------------- */
 .gallery-item img { height: auto; }
 
+.shadow {
+    -moz-box-shadow: 3px 3px 4px #000;
+    -webkit-box-shadow: 3px 3px 4px #000;
+    box-shadow: 3px 3px 4px #000;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+
 /** Featured Image */
 a.featured-thumbnail + div.post-content { float: left; }
-img.wp-post-image { border: medium double #000000; }
 
 /** End: General Images ----------------------------------------------------- */
 
@@ -777,6 +788,10 @@ div.meta-byline button {
 }
 
 /** === Post-Format: Gallery === -------------------------------------------- */
+.format-gallery img.wp-post-image,
+.format-gallery img.attachment-thumbnail {
+    border: medium double #000000;
+}
 .gallery-featured-image,
 .gallery-secondary-images {
     margin: 10px 0;
@@ -793,6 +808,11 @@ div.meta-byline button {
 
 .gallery-secondary-images p.more-images a {
     margin: 0;
+}
+
+p.more-images,
+.gallery-caption {
+    padding-top: 3px;
 }
 /** Post-Format: Gallery Archive -------------------------------------------- */
 .archive.term-post-format-gallery div.the-loop p.featured-image {
