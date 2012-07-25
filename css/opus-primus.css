@@ -28,6 +28,8 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @todo Address "Placeholder" elements
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -82,7 +84,8 @@ a:focus {
     outline-offset: -2px;
 }
 
-abbr[title] {
+abbr[title],
+acronym[title] {
     cursor: help;
     border-bottom: 1px dotted #999999;
 }
@@ -93,6 +96,8 @@ address {
     font-style: normal;
     line-height: 18px;
 }
+
+big { /** Placeholder */ }
 
 /* - Blockquote tags */
 blockquote {
@@ -118,11 +123,11 @@ blockquote:before,
 blockquote:after {
     content: "";
 }
-/** - End: Blockquote tags */
-
 cite {
     font-style: normal;
 }
+/** - End: Blockquote tags */
+
 code,
 pre {
     padding: 0 3px 2px;
@@ -197,8 +202,7 @@ input[type="email"],
 input[type="url"],
 input[type="search"],
 input[type="tel"],
-input[type="color"],
-.uneditable-input {
+input[type="color"] {
     display: inline-block;
     height: 18px;
     padding: 4px;
@@ -335,8 +339,6 @@ input[type="radio"][readonly],
 input[type="checkbox"][readonly] {
     background-color: transparent;
 }
-
-
 /** - End: Forms */
 
 /** - H tags */
@@ -414,6 +416,8 @@ img {
     max-width: 99%;
     vertical-align: middle;
 }
+
+kbd { /** Placeholder */ }
 
 /** - Lists */
 /** -- unordered, ordered */
@@ -512,6 +516,7 @@ table {
     background-color: transparent;
 }
 
+tt { /** Placeholder */ }
 
 /** Elements Requiring Clearance */
 div.meta-byline,
