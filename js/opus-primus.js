@@ -35,6 +35,6 @@ jQuery( document ).ready( function( $ ) {
     /** Use fitVids to make video more responsive */
     $( 'div.post-content' ).fitVids();
     /** add a shadow class to make gallery images pop */
-    $( '.format-gallery img.wp-post-image, .format-gallery img.attachment-thumbnail' ).addClass( 'shadow' );
+    $( '.format-gallery img' ).addClass( 'shadow' );
 
 } );
