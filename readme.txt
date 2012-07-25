@@ -45,10 +45,6 @@ version is used. Licensed as Public Domain
 Licensed under Apache v2.0
 - for more information see https://github.com/cloudhead/less.js
 
-* Bootstrap is a project by Mark Otto and Jacob Thornton.
-Copyright 2012 Twitter, Inc. Licensed under the Apache License, Version 2.0
-- for more information see https://github.com/twitter/bootstrap/
-
 * FitVids is a project by Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com.
 Copyright 2011, released under the WTFPL license - http://sam.zoy.org/wtfpl/
 - for more information see https://github.com/davatron5000/FitVids.js
