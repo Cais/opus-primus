@@ -69,10 +69,6 @@ ul.sidebar {
     clear: both;
 }
 
-/** Featured Image */
-a.featured-thumbnail + div.post-content { float: left; }
-img.wp-post-image { border: medium double #000000; }
-
 /** Fluid Secret Sauce */
 div#content-wrapper div#the-loop p embed { max-width: 100%; }
 select { width: 98%; }
@@ -276,6 +272,16 @@ ul.featured li ul.nav div.nav {
 }
 /** End: 404 Layout --------------------------------------------------------- */
 
+/** === General Images === -------------------------------------------------- */
+/** Stop large images and videos from exceeding the content area */
+img { max-width: 99%; }
+
+/** Featured Image */
+a.featured-thumbnail + div.post-content { float: left; }
+img.wp-post-image { border: medium double #000000; }
+
+/** End: General Images ----------------------------------------------------- */
+
 /** === Attachment: Image === ----------------------------------------------- */
 h2#attachment-notice {
     text-align: center;
@@ -357,12 +363,5 @@ div.sharing + div.attached-image + p + div.sharing {
     display: none;
 }
 /** End: Misbehaving Common Plugins ----------------------------------------- */
-
-
-/** Hacks to be sorted out and corrected */
-body.two-column embed,
-body.three-column embed {
-    max-width: 100%;
-}
 
 .test-text {display: none;}
