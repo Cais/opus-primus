@@ -838,6 +838,17 @@ table tbody tr td.archive-image {
 }
 /** End: Post-Format: Image ------------------------------------------------- */
 
+/** Post-Format: Quote ------------------------------------------------------ */
+.format-quote blockquote p {
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 90px;
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+}
+/** End: Post-Format: Quote ------------------------------------------------- */
+
 
 
 /** === Misbehaving Common Plugins === -------------------------------------- */
