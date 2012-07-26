@@ -25,19 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="opus-primus.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="opus-primus.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="876" column="17" selection-start="18218" selection-end="18218" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="readme.txt" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/readme.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="20" selection-start="1771" selection-end="1771" vertical-scroll-proportion="0.66360503">
+            <state line="881" column="0" selection-start="18280" selection-end="18280" vertical-scroll-proportion="0.8828932">
               <folding />
             </state>
           </provider>
@@ -959,7 +950,11 @@
       <created>1343332277129</created>
       <updated>1343332277129</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="Documentation">
+      <created>1343332438984</created>
+      <updated>1343332438984</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1057,7 +1052,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add 'Merienda' font and use with Post-Format: Quote; another JetPack CSS hack added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Documentation" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1083,7 +1078,6 @@
     <MESSAGE value="Bootstrap updated to version 2.0.4" />
     <MESSAGE value="Added &quot;Featured Image&quot; support in the &quot;standard&quot; loop but not in single view." />
     <MESSAGE value="Added double border to &quot;Featured Image&quot;" />
-    <MESSAGE value="Documentation" />
     <MESSAGE value="Various optimizations and clean up" />
     <MESSAGE value="Removed bootstrap" />
     <MESSAGE value="CSS cleanup and notes" />
@@ -1095,6 +1089,7 @@
     <MESSAGE value="Post-Format: Quote single view styles" />
     <MESSAGE value="Post-Format: Quote without blockquote tag" />
     <MESSAGE value="Add 'Merienda' font and use with Post-Format: Quote; another JetPack CSS hack added" />
+    <MESSAGE value="Documentation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1174,16 +1169,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
+    <entry file="file://$PROJECT_DIR$/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="876" column="17" selection-start="18218" selection-end="18218" vertical-scroll-proportion="0.0">
+        <state line="51" column="20" selection-start="1771" selection-end="1771" vertical-scroll-proportion="0.66360503">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
+    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="20" selection-start="1771" selection-end="1771" vertical-scroll-proportion="0.66360503">
+        <state line="881" column="0" selection-start="18280" selection-end="18280" vertical-scroll-proportion="0.8828932">
           <folding />
         </state>
       </provider>

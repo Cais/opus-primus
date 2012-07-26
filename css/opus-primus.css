@@ -127,6 +127,9 @@ blockquote:after {
 cite {
     font-style: normal;
 }
+cite:before {
+    content: "~";
+}
 /** - End: Blockquote tags */
 
 code,
@@ -849,14 +852,28 @@ table tbody tr td.archive-image {
 }
 
 .format-quote .post-content,
-.format-quote blockquote p {
+.format-quote blockquote p:first-of-type,
+.archive.term-post-format-quote p:first-of-type {
     font-family: 'Merienda', courrier, serif;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 300;
-    line-height: 45px;
+    line-height: 33.75px;
     margin: 0 auto;
     text-align: justify;
 }
+
+.single .format-quote .post-content,
+.single .format-quote blockquote p {
+    font-size: 48px;
+    line-height: 67.5px;
+}
+
+/** Post-Format: Quote Archive ---------------------------------------------- */
+.archive.term-post-format-quote p:first-of-type {
+    font-size: 16px;
+    line-height: 22.5px;
+}
+
 /**
  * Another JetPack hack ...
  * Navigator: Captain, there's an iceberg ahead!
