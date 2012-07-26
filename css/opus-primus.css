@@ -852,8 +852,8 @@ table tbody tr td.archive-image {
 }
 
 .format-quote .post-content,
-.format-quote blockquote p:first-of-type,
-.archive.term-post-format-quote p:first-of-type {
+.format-quote blockquote p,
+.archive.term-post-format-quote .post p:first-of-type {
     font-family: 'Merienda', courrier, serif;
     font-size: 24px;
     font-weight: 300;
@@ -869,7 +869,7 @@ table tbody tr td.archive-image {
 }
 
 /** Post-Format: Quote Archive ---------------------------------------------- */
-.archive.term-post-format-quote p:first-of-type {
+.archive.term-post-format-quote .post p:first-of-type {
     font-size: 16px;
     line-height: 22.5px;
 }

@@ -28,7 +28,7 @@
       <file leaf-file-name="opus-primus.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="881" column="0" selection-start="18280" selection-end="18280" vertical-scroll-proportion="0.8828932">
+            <state line="854" column="27" selection-start="17606" selection-end="17606" vertical-scroll-proportion="0.5120551">
               <folding />
             </state>
           </provider>
@@ -954,7 +954,11 @@
       <created>1343332438984</created>
       <updated>1343332438984</updated>
     </task>
-    <option name="localTasksCounter" value="130" />
+    <task id="LOCAL-00130" summary="Adjusted Post-Format: Quote font-size based on view (see all posts, single, and archive)">
+      <created>1343333739820</created>
+      <updated>1343333739820</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1052,7 +1056,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted Post-Format: Quote font-size based on view (see all posts, single, and archive)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1065,7 +1069,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Add 'post-format: image' loop" />
     <MESSAGE value="Changed &quot;Posted&quot; to &quot;Displayed&quot; in gallery and image loops" />
     <MESSAGE value="Modified `display_exif_*` to include dimensions; image templates code clean-up" />
     <MESSAGE value="Archive Image loop for attached images" />
@@ -1090,6 +1093,7 @@
     <MESSAGE value="Post-Format: Quote without blockquote tag" />
     <MESSAGE value="Add 'Merienda' font and use with Post-Format: Quote; another JetPack CSS hack added" />
     <MESSAGE value="Documentation" />
+    <MESSAGE value="Adjusted Post-Format: Quote font-size based on view (see all posts, single, and archive)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1178,7 +1182,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="881" column="0" selection-start="18280" selection-end="18280" vertical-scroll-proportion="0.8828932">
+        <state line="854" column="27" selection-start="17606" selection-end="17606" vertical-scroll-proportion="0.5120551">
           <folding />
         </state>
       </provider>
