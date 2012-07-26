@@ -49,6 +49,11 @@ Licensed under Apache v2.0
 Copyright 2011, released under the WTFPL license - http://sam.zoy.org/wtfpl/
 - for more information see https://github.com/davatron5000/FitVids.js
 
+* Font: Merienda One
+Copyright (c) 2011, Eduardo Tunni (http://www.tipo.net.ar), with Reserved Font Name "Merienda"
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is available with a FAQ at: http://scripts.sil.org/OFL
+
 This above may not be construed as overriding any item with a previously written
 and applied license, stated or not, which will take precedence over anything
 written here.

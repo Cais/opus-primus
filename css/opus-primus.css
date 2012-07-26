@@ -839,18 +839,33 @@ table tbody tr td.archive-image {
 /** End: Post-Format: Image ------------------------------------------------- */
 
 /** Post-Format: Quote ------------------------------------------------------ */
+@font-face {
+    font-family: 'Merienda';
+    src: url('../fonts/Merienda.ttf') format('truetype');
+}
+
 .format-quote blockquote {
     border: none;
 }
 
 .format-quote .post-content,
 .format-quote blockquote p {
+    font-family: 'Merienda', courrier, serif;
     font-size: 32px;
     font-weight: 300;
     line-height: 45px;
     margin: 0 auto;
     text-align: justify;
-    width: 80%;
+}
+/**
+ * Another JetPack hack ...
+ * Navigator: Captain, there's an iceberg ahead!
+ * Captain: Hold your course! Engine room, ramming speed!
+ */
+blockquote + div.sharing {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
 }
 /** End: Post-Format: Quote ------------------------------------------------- */
 
