@@ -28,7 +28,7 @@
       <file leaf-file-name="opus-primus.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="846" column="23" selection-start="17503" selection-end="17503" vertical-scroll-proportion="0.90241104">
+            <state line="845" column="0" selection-start="17413" selection-end="17413" vertical-scroll-proportion="0.72675085">
               <folding />
             </state>
           </provider>
@@ -902,7 +902,11 @@
       <created>1343321610560</created>
       <updated>1343321610560</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="Post-Format: Quote single view styles">
+      <created>1343321960503</created>
+      <updated>1343321960503</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1000,7 +1004,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start Post-Format: Quote accentuation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Post-Format: Quote single view styles" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1013,7 +1017,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Adjust layout to set min-width of the-loop=520px (needs testing); linked post-format buttons to archive; modified archive to follow standard index structure." />
     <MESSAGE value="Add new class (partial) 'OpusPrimusImage'" />
     <MESSAGE value="Add new class (90% complete) 'OpusPrimusImages'" />
     <MESSAGE value="Add 'post-format: image' loop" />
@@ -1038,6 +1041,7 @@
     <MESSAGE value="Fixed js point" />
     <MESSAGE value="Updated JS to add drop shadows to more images" />
     <MESSAGE value="Start Post-Format: Quote accentuation" />
+    <MESSAGE value="Post-Format: Quote single view styles" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1122,7 +1126,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="846" column="23" selection-start="17503" selection-end="17503" vertical-scroll-proportion="0.90241104">
+        <state line="845" column="0" selection-start="17413" selection-end="17413" vertical-scroll-proportion="0.72675085">
           <folding />
         </state>
       </provider>

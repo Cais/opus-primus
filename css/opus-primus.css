@@ -839,6 +839,11 @@ table tbody tr td.archive-image {
 /** End: Post-Format: Image ------------------------------------------------- */
 
 /** Post-Format: Quote ------------------------------------------------------ */
+.format-quote blockquote {
+    border: none;
+}
+
+.format-quote .post-content,
 .format-quote blockquote p {
     font-size: 32px;
     font-weight: 300;
