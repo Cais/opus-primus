@@ -34,7 +34,9 @@ jQuery( document ).ready( function( $ ) {
     /** Note: $() will work as an alias for jQuery() inside of this function */
     /** Use fitVids to make video more responsive */
     $( 'div.post-content' ).fitVids();
-    /** add a shadow class to make gallery images pop */
-    $( '.format-gallery img' ).addClass( 'shadow' );
+    /** Add a drop shadow to make gallery images pop */
+    $( '.format-gallery img.wp-post-image, .format-gallery img.attachment-thumbnail, .format-gallery .featured-image img' ).addClass( 'image-shadow' );
+    /** Add a drop shadow to single attached images */
+    $( '.single .attached-image img' ).addClass( 'image-shadow' );
 
 } );
