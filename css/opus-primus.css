@@ -872,13 +872,10 @@ blockquote + div.sharing {
 
 
 /** === Misbehaving Common Plugins === -------------------------------------- */
-/** Jetpack - The custom gallery and image templates call the content a second
- * time and thus Jetpack regurgitates itself again; this should correct it.
+/**
+ * Plugin - Issue
+ * Jetpack - Share buttons
  */
-div.sharing + div.attached-image + div.sharing,
-div.sharing + div.attached-image + p + div.sharing {
-    display: none;
-}
 /** End: Misbehaving Common Plugins ----------------------------------------- */
 
 .test-text {display: none;}
