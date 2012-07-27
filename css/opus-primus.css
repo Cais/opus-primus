@@ -879,10 +879,7 @@ table tbody tr td.archive-image {
     filter: alpha(opacity=10);
     line-height: 0;
     opacity: 0.1;
-    position: relative;
     text-align: center;
-    top: 26px;
-    vertical-align: middle;
     zoom: 1;
 }
 

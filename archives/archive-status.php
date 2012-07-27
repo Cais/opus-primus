@@ -1,13 +1,15 @@
 <?php
 /**
- * Opus Primus Post-Format: Status Template
- * Displays the post-format: status loop
+ * Status Archive Loop
+ * This loop shows the Post-Format: Status archive.
  *
  * @package     OpusPrimus
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
  * @copyright   Copyright (c) 2012, Opus Primus
+ *
+ * @link        http://codex.wordpress.org/Template_Hierarchy - URI reference
  *
  * This file is part of Opus Primus.
  *
@@ -32,32 +34,22 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-/** Call the Post Structure and Navigation class variables */
-global $opus_nav, $opus_structure, $opus_image;
+/** Get the Post Structure and Navigation class variables */
+global $opus_structure, $opus_nav; ?>
 
-/** Display the post */ ?>
 <div <?php post_class(); ?>>
 
     <?php
     $opus_structure->post_byline( array(
-        'show_mod_author'   => true,
-        'anchor'            => 'Updated',
-        'sticky_flag'       => 'Breaking News',
+        'tempus'    => 'time',
+        'anchor'    => 'Updated'
     ) );
     $opus_structure->post_title();
-    if ( ! is_single() ) {
-        $opus_structure->comments_link();
-    }
-    $opus_image->featured_thumbnail();
-    $opus_structure->post_content();
+    $opus_structure->comments_link();
+    $opus_structure->post_excerpt();
     $opus_structure->status_update();
     $opus_nav->opus_link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
     $opus_structure->meta_tags();
-    if ( is_single() ) {
-        $opus_structure->post_author();
-    }
     $opus_structure->post_coda(); ?>
 
 </div><!-- .post -->
-<?php
-comments_template();
