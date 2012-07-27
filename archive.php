@@ -54,7 +54,8 @@ get_header( get_post_format() ); ?>
             endwhile;
         else:
             $opus_structure->search_results();
-        endif; ?>
+        endif;
+        $opus_nav->opus_posts_link(); ?>
 
     </div><!-- #the-loop -->
 

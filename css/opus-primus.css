@@ -836,8 +836,11 @@ div.attached-image + div.post-content {
     padding-top: 10px;
 }
 /** Post-Format Image Archive ----------------------------------------------- */
-table tbody tr td.archive-image {
-    text-align: center;
+.archive.term-post-format-image table thead tr th {
+    text-align: left;
+}
+td.archive-image-excerpt {
+    padding-top: 4px;
 }
 /** End: Post-Format: Image ------------------------------------------------- */
 
@@ -851,8 +854,7 @@ table tbody tr td.archive-image {
     border: none;
 }
 
-.format-quote blockquote p,
-.archive.term-post-format-quote .post p:first-of-type {
+.format-quote blockquote p {
     font-family: 'Merienda', courrier, serif;
     font-size: 24px;
     font-weight: 300;
@@ -861,16 +863,21 @@ table tbody tr td.archive-image {
     text-align: justify;
 }
 
-.single .format-quote .post-content,
 .single .format-quote blockquote p {
     font-size: 48px;
     line-height: 67.5px;
 }
 
 /** Post-Format: Quote Archive ---------------------------------------------- */
-.archive.term-post-format-quote .post p:first-of-type {
+.archive.term-post-format-quote {
     font-size: 16px;
     line-height: 22.5px;
+}
+
+.archive.term-post-format-quote p.meta-tags {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 75%;
+    line-height: 18px;
 }
 
 /** Post-Format: Status ----------------------------------------------------- */

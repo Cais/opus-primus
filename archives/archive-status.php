@@ -41,8 +41,9 @@ global $opus_structure, $opus_nav; ?>
 
     <?php
     $opus_structure->post_byline( array(
-        'tempus'    => 'time',
-        'anchor'    => 'Updated'
+        'tempus'        => 'time',
+        'anchor'        => 'Updated',
+        'sticky_flag'   => 'Breaking News'
     ) );
     $opus_structure->post_title();
     $opus_structure->comments_link();

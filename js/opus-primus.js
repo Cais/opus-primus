@@ -40,6 +40,6 @@ jQuery( document ).ready( function( $ ) {
     /** Add a drop shadow to make gallery images pop */
     $( '.format-gallery img.wp-post-image, .format-gallery img.attachment-thumbnail, .format-gallery .featured-image img' ).addClass( 'image-shadow' );
     /** Add a drop shadow to single attached images */
-    $( '.single .attached-image img' ).addClass( 'image-shadow' );
+    $( '.single .attached-image img, span.archive-image img' ).addClass( 'image-shadow' );
 
 } );

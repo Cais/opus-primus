@@ -43,7 +43,7 @@ global $opus_structure, $opus_nav; ?>
     $opus_structure->post_byline( array( 'tempus' => 'time' ) );
     $opus_structure->post_title();
     $opus_structure->comments_link();
-    $opus_structure->post_excerpt();
+    $opus_structure->post_content();
     $opus_nav->opus_link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
     $opus_structure->meta_tags();
     $opus_structure->post_coda(); ?>
