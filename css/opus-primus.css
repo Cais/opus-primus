@@ -851,7 +851,6 @@ table tbody tr td.archive-image {
     border: none;
 }
 
-.format-quote .post-content,
 .format-quote blockquote p,
 .archive.term-post-format-quote .post p:first-of-type {
     font-family: 'Merienda', courrier, serif;
