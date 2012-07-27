@@ -1,5 +1,7 @@
+<?php
 /**
- * Opus Primus JavaScripts
+ * Opus Primus Post-Format: Status Template
+ * Displays the post-format: status loop
  *
  * @package     OpusPrimus
  * @since       0.1
@@ -30,15 +32,28 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-jQuery( document ).ready( function( $ ) {
-    /** Note: $() will work as an alias for jQuery() inside of this function */
-    /** Use fit Text to display status update message across post */
-    $( '.post.format-status div.opus-status-update' ).fitText( 1.25 );
-    /** Use fitVids to make video more responsive */
-    $( 'div.post-content' ).fitVids();
-    /** Add a drop shadow to make gallery images pop */
-    $( '.format-gallery img.wp-post-image, .format-gallery img.attachment-thumbnail, .format-gallery .featured-image img' ).addClass( 'image-shadow' );
-    /** Add a drop shadow to single attached images */
-    $( '.single .attached-image img' ).addClass( 'image-shadow' );
+/** Call the Post Structure and Navigation class variables */
+global $opus_nav, $opus_structure, $opus_image;
 
-} );
+/** Display the post */ ?>
+<div <?php post_class(); ?>>
+
+    <?php
+    $opus_structure->post_byline( array( 'show_mod_author' => true ) );
+    $opus_structure->status_update();
+    $opus_structure->post_title();
+    if ( ! is_single() ) {
+        $opus_structure->comments_link();
+    }
+    $opus_image->featured_thumbnail();
+    $opus_structure->post_content();
+    $opus_nav->opus_link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
+    $opus_structure->meta_tags();
+    if ( is_single() ) {
+        $opus_structure->post_author();
+    }
+    $opus_structure->post_coda(); ?>
+
+</div><!-- .post -->
+<?php
+comments_template();

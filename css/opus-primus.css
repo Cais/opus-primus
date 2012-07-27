@@ -874,6 +874,25 @@ table tbody tr td.archive-image {
     line-height: 22.5px;
 }
 
+/** Post-Format: Status ----------------------------------------------------- */
+.post.format-status div.opus-status-update {
+    filter: alpha(opacity=10);
+    line-height: 0;
+    opacity: 0.1;
+    position: relative;
+    text-align: center;
+    top: 26px;
+    vertical-align: middle;
+    zoom: 1;
+}
+
+.transparent {
+    zoom: 1;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+/** End: Post-Format: Status ------------------------------------------------ */
+
 /**
  * Another JetPack hack ...
  * Navigator: Captain, there's an iceberg ahead!

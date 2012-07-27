@@ -49,12 +49,14 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
      * @uses    wp_enqueue_script
      * @uses    wp_enqueue_style
      *
-     * @internal    jQuery is enqueued as a dependency of Opus Primus
+     * @internal    jQuery is enqueued as a dependency
      */
     function opus_primus_enqueue_scripts() {
         /** Enqueue scripts */
-        /** Enqueue FitVids with jQuery Dependency */
+        /** Enqueue FitVids with jQuery dependency */
         wp_enqueue_script( 'fitVids', OPUS_JS . 'jquery.fitvids.js', array( 'jquery' ), '1.0', 'true' );
+        /** Enqueue FitText with jQuery dependency */
+        wp_enqueue_script( 'fitText', OPUS_JS . 'jquery.fittext.js', array( 'jquery' ), '1.0', 'true' );
         /** Enqueue Opus Primus JavaScript which will enqueue jQuery as a dependency */
         wp_enqueue_script( 'opus-primus', OPUS_JS . 'opus-primus.js', array( 'jquery' ), '0.1', 'true' );
         /** Enqueue Theme Stylesheets */

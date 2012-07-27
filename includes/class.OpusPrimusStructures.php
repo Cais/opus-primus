@@ -732,6 +732,32 @@ class OpusPrimusStructures {
         do_action( 'opus_after_search_results' );
 
     }
+
+    /**
+     * Opus Primus Status Update
+     * Displays the human time difference based on how long ago the post was
+     * updated
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @param   string $update_text
+     *
+     * @uses    do_action
+     * @uses    get_the_time
+     * @uses    human_time_diff
+     */
+    function status_update( $update_text = 'Updated', $days_ago = 7 ){
+        /** Add empty hook before status update output */
+        do_action( 'opus_before_status_update' );
+
+        if ( $days_ago < human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ) )
+            printf( __( '<div class="opus-status-update">%1$s %2$s ago</div>', 'opusprimus' ), $update_text, human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ) );
+
+        /** Add empty hook after status update output */
+        do_action( 'opus_after_status_update' );
+
+    }
 }
 $opus_structure = new OpusPrimusStructures();
 
