@@ -43,7 +43,7 @@ global $opus_structure, $opus_nav; ?>
     $opus_structure->post_byline( array(
         'tempus'        => 'time',
         'anchor'        => 'Updated',
-        'sticky_flag'   => 'Breaking News'
+        'sticky_flag'   => 'Newsworthy'
     ) );
     $opus_structure->post_title();
     $opus_structure->comments_link();
