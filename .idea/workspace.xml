@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/loops/opus-primus-quote.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/archive-quote.php" afterPath="$PROJECT_DIR$/archives/archive-quote.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/opus-primus.css" afterPath="$PROJECT_DIR$/css/opus-primus.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/archive-gallery.php" afterPath="$PROJECT_DIR$/archives/archive-gallery.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loops/opus-primus-gallery.php" afterPath="$PROJECT_DIR$/loops/opus-primus-gallery.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,39 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="opus-primus.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loops/opus-primus.php">
+      <file leaf-file-name="archive-gallery.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/archives/archive-gallery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="90" selection-start="0" selection-end="1844" vertical-scroll-proportion="-10.461538">
+            <state line="46" column="24" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.281203">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="opus-primus-quote.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loops/opus-primus-quote.php">
+      <file leaf-file-name="opus-primus-gallery.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loops/opus-primus-gallery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="88" selection-start="1154" selection-end="1154" vertical-scroll-proportion="-5.3076925">
-              <folding>
-                <element signature="e#6#1154#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="archive-quote.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/archives/archive-quote.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="24" selection-start="1441" selection-end="1441" vertical-scroll-proportion="0.2556391">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="opus-primus-image.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loops/opus-primus-image.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="46" column="28" selection-start="1483" selection-end="1483" vertical-scroll-proportion="-9.807693">
               <folding />
             </state>
           </provider>
@@ -78,8 +57,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" />
-        <option value="$PROJECT_DIR$/page.php" />
         <option value="$PROJECT_DIR$/loops/opus-primus-image.php" />
         <option value="$PROJECT_DIR$/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
@@ -94,6 +71,8 @@
         <option value="$PROJECT_DIR$/css/opus-primus.css" />
         <option value="$PROJECT_DIR$/loops/opus-primus-quote.php" />
         <option value="$PROJECT_DIR$/archives/archive-quote.php" />
+        <option value="$PROJECT_DIR$/loops/opus-primus-gallery.php" />
+        <option value="$PROJECT_DIR$/archives/archive-gallery.php" />
       </list>
     </option>
   </component>
@@ -928,7 +907,11 @@
       <created>1343494366716</created>
       <updated>1343494366716</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="Add 'opus-primus-quote'; update parameters in quote archive.">
+      <created>1343497059086</created>
+      <updated>1343497059086</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1006,7 +989,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Do not display Jetpack (WPStats) smiley face" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add 'opus-primus-quote'; update parameters in quote archive." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1019,7 +1002,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Set featured-image img height property to auto to maintain aspect ratio" />
     <MESSAGE value="Fix aspect ratios for smaller viewport in desktop browser" />
     <MESSAGE value="Sidebar content margin" />
     <MESSAGE value="Make the post-format text into a button" />
@@ -1044,21 +1026,12 @@
     <MESSAGE value="Fine tuning quote and status archives" />
     <MESSAGE value="Fix Post-Format: Quote font-size" />
     <MESSAGE value="Do not display Jetpack (WPStats) smiley face" />
+    <MESSAGE value="Add 'opus-primus-quote'; update parameters in quote archive." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="89" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.5112782" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/opus-ignite.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="59" selection-start="1467" selection-end="1467" vertical-scroll-proportion="-6.5384617" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="60" column="27" selection-start="2214" selection-end="2214" vertical-scroll-proportion="0.5214724" />
@@ -1135,6 +1108,20 @@
     <entry file="file://$PROJECT_DIR$/archives/archive-quote.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="24" selection-start="1441" selection-end="1441" vertical-scroll-proportion="0.2556391">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loops/opus-primus-gallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="28" selection-start="1483" selection-end="1483" vertical-scroll-proportion="-9.807693">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/archives/archive-gallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="24" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.281203">
           <folding />
         </state>
       </provider>
