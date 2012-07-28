@@ -40,7 +40,10 @@ global $opus_structure, $opus_nav; ?>
 <div <?php post_class(); ?>>
 
     <?php
-    $opus_structure->post_byline( array( 'tempus' => 'time' ) );
+    $opus_structure->post_byline( array(
+        'tempus'        => 'time',
+        'sticky_flag'   => 'Proclaimed'
+    ) );
     $opus_structure->post_title();
     $opus_structure->comments_link();
     $opus_structure->post_content();

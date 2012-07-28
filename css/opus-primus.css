@@ -740,6 +740,12 @@ ul.featured li ul.nav div.nav {
 }
 /** End: 404 Layout --------------------------------------------------------- */
 
+/** === General Archives === ------------------------------------------------ */
+.archive table thead tr th {
+    text-align: left;
+}
+/** End: General Archives --------------------------------------------------- */
+
 /** === General Images === -------------------------------------------------- */
 .gallery-item img { height: auto; }
 
@@ -836,10 +842,11 @@ div.attached-image + div.post-content {
     padding-top: 10px;
 }
 /** Post-Format Image Archive ----------------------------------------------- */
-.archive.term-post-format-image table thead tr th {
-    text-align: left;
-}
 td.archive-image-excerpt {
+    padding-top: 4px;
+}
+
+.archive table + p {
     padding-top: 4px;
 }
 /** End: Post-Format: Image ------------------------------------------------- */
