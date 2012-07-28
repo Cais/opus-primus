@@ -869,7 +869,7 @@ td.archive-image-excerpt {
 }
 
 /** Post-Format: Quote Archive ---------------------------------------------- */
-.archive.term-post-format-quote {
+.archive .format-quote blockquote p {
     font-size: 16px;
     line-height: 22.5px;
 }
