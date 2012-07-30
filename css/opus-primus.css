@@ -40,6 +40,7 @@
  * Elements Requiring Clearance
  *
  * === Menu Related Elements ===
+ * === Comments ===
  * === Sidebars ===
  * === Default Widgets ===
  * === 404 Layout ===
@@ -683,8 +684,40 @@ ul.nav-menu ul.sub-menu li, ul.nav-menu ul.children li, ul.nav-menu ul, ul.nav-m
 .comments-wrapper ul.comments-list li.comment ul.children {
     list-style: none outside none;
 }
+
+.pingback.odd,
+.trackback.odd,
+.comment.even {
+    background-color: #eee;
+}
+.comment.even blockquote {
+    border-left: 5px solid #666;
+}
+
+.pingback.even,
+.trackback.even,
+.comment.odd {
+    background-color: #f4f4f4;
+}
+.comment.odd blockquote {
+    border-left: 5px solid #7c7c7c;
+}
+
+
+.comment cite:before {
+    content:"";
+}
+
+.comment pre {
+    margin: 0 5px 9px;
+}
+
 div#respond form#commentform p.comment-form-comment textarea#comment {
     width: 96%;
+}
+
+.comment div.reply {
+    text-align: right;
 }
 /** End: Comments ----------------------------------------------------------- */
 
