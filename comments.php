@@ -33,49 +33,13 @@
  * @todo Review general commentary look and feel ... make more unique to OP
  */
 
-/** Conditional check for password protected posts ... no comments for you! */
-if ( post_password_required() ) {
-    _e( 'This post is password protected. Enter the password to view comments.', 'opusprimus' );
-    return;
-}
+/** Add Comments Class */
+require_once( OPUS_INC . 'class.OpusPrimusComments.php' );
 
-/**
- * Opus Primus Comment Author
- * Add classes to the comments based on the author
- *
- * @package OpusPrimus
- * @since   0.1
- *
- * @param   array $classes
- * @return  array $classes - original array plus additional role and user-id
- */
-function opus_primus_comment_author( $classes ) {
-    global $comment;
-    /** Add classes based on user role */
-    if ( user_can( $comment->user_id, 'administrator' ) ) {
-        $classes[] = 'administrator';
-    } elseif ( user_can( $comment->user_id, 'editor' ) ) {
-        $classes[] = 'editor';
-    } elseif ( user_can( $comment->user_id, 'contributor' ) ) {
-        $classes[] = 'contributor';
-    } elseif ( user_can( $comment->user_id, 'subscriber' ) ) {
-        $classes[] = 'subscriber';
-    } else {
-        $classes[] = 'guest';
-    }
-    /** Add user ID based classes */
-    if ( $comment->user_id == 1 ) {
-        /** Administrator 'Prime' => first registered user ID */
-        $userid = "administrator-prime user-id-1";
-    } else {
-        /** All other users - NB: user-id-0 -> non-registered user */
-        $userid = "user-id-" . ( $comment->user_id );
-    }
-    $classes[] = $userid;
-
-    return $classes;
-}
-add_filter( 'comment_class', 'opus_primus_comment_author' ); ?>
+/** Apply filters and actions */
+add_filter( 'comment_class', 'OpusPrimusComments::comment_authors' );
+add_action( 'comment_form_before', 'OpusPrimusComments::form_before' );
+add_action( 'comment_form_comments_closed', 'OpusPrimusComments::form_comments_closed' ); ?>
 
 <!-- Show the comments -->
 <div class="comments">
@@ -86,19 +50,7 @@ add_filter( 'comment_class', 'opus_primus_comment_author' ); ?>
     </ul>
     <?php
     global $opus_nav;
-    $opus_nav->comments_navigation(); ?>
-<?php
-else :
-    /** This is displayed if there are no comments so far*/
-    if ( 'open' == $post->comment_status ) :
-        /** If comments are open, but there are no comments. */
-        _e( 'Start a discussion ...', 'opusprimus' );
-    else :
-        /** Comments are closed */
-        if ( ! is_page() ) {
-            _e( 'New comments are not being accepted at this time, please feel free to contact the post author directly.', 'opusprimus' );
-        }
-    endif;
+    $opus_nav->comments_navigation();
 endif;
 comment_form(); ?>
 </div><!-- .comments -->
