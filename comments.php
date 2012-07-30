@@ -29,6 +29,8 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @todo Review general commentary look and feel ... make more unique to OP
  */
 
 /** Conditional check for password protected posts ... no comments for you! */
@@ -73,19 +75,18 @@ function opus_primus_comment_author( $classes ) {
 
     return $classes;
 }
-add_filter( 'comment_class', 'opus_primus_comment_author' );
+add_filter( 'comment_class', 'opus_primus_comment_author' ); ?>
 
-/** Show the comments */
-if ( have_comments() ) : ?>
-    <div class="comments">
-        <div class="comments-number"><?php comments_number(); ?></div>
-        <ul class="comments-list">
-            <?php wp_list_comments(); ?>
-        </ul>
-        <?php
-        global $opus_nav;
-        $opus_nav->comments_navigation(); ?>
-    </div><!-- .comments -->
+<!-- Show the comments -->
+<div class="comments">
+<?php if ( have_comments() ) : ?>
+    <div class="comments-number"><?php comments_number(); ?></div>
+    <ul class="comments-list">
+        <?php wp_list_comments(); ?>
+    </ul>
+    <?php
+    global $opus_nav;
+    $opus_nav->comments_navigation(); ?>
 <?php
 else :
     /** This is displayed if there are no comments so far*/
@@ -99,4 +100,5 @@ else :
         }
     endif;
 endif;
-comment_form();
+comment_form(); ?>
+</div><!-- .comments -->
