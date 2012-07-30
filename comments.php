@@ -50,7 +50,7 @@ add_action( 'comment_form_comments_closed', 'OpusPrimusComments::form_comments_c
 
         <?php if ( ! empty( $comments_by_type['comment'] ) ) { ?>
             <h3 id="comments">
-                <?php printf( __( '%1$s Comments', 'opusprimus' ), count( $wp_query->comments_by_type['comment'] ) );?>
+                <?php printf( __( '%1$s Comments', 'opusprimus' ), count( $wp_query->comments_by_type['comment'] ) ); ?>
             </h3>
             <ul class="comments-list">
                 <?php wp_list_comments( 'type=comment' ); ?>
@@ -60,7 +60,13 @@ add_action( 'comment_form_comments_closed', 'OpusPrimusComments::form_comments_c
 
         if ( ! empty( $comments_by_type['pingback'] ) ) { ?>
             <h3 id="pingbacks">
-                <?php printf( __( '%1$s Pingbacks', 'opusprimus' ), count( $wp_query->comments_by_type['pingback'] ) );?>
+                <?php printf(
+                    _n(
+                        __( '%1$s Pingback', 'opusprimus' ),
+                        __( '%1$s Pingbacks', 'opusprimus' ),
+                        count( $wp_query->comments_by_type['pingback'] ) ),
+                    count( $wp_query->comments_by_type['pingback'] )
+                ); ?>
             </h3>
             <ol class="pingbacks-list">
                 <?php wp_list_comments( 'type=pingback' ); ?>
@@ -70,7 +76,13 @@ add_action( 'comment_form_comments_closed', 'OpusPrimusComments::form_comments_c
 
         if ( ! empty( $comments_by_type['trackback'] ) ) { ?>
             <h3 id="trackbacks">
-                <?php printf( __( '%1$s Trackbacks', 'opusprimus' ), count( $wp_query->comments_by_type['trackback'] ) );?>
+                <?php printf(
+                    _n(
+                        __( '%1$s Trackback', 'opusprimus' ),
+                        __( '%1$s Trackbacks', 'opusprimus' ),
+                        count( $wp_query->comments_by_type['trackback'] ) ),
+                    count( $wp_query->comments_by_type['trackback'] )
+                ); ?>
             </h3>
             <ol class="trackbacks-list">
                 <?php wp_list_comments( 'type=trackback' ); ?>
