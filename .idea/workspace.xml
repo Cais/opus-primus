@@ -4,7 +4,7 @@
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comments.php" afterPath="$PROJECT_DIR$/comments.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/opus-primus.css" afterPath="$PROJECT_DIR$/css/opus-primus.css" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,36 +29,27 @@
       <file leaf-file-name="comments.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/comments.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="17" selection-start="3579" selection-end="3579" vertical-scroll-proportion="1.2875739">
+            <state line="81" column="22" selection-start="3185" selection-end="3185" vertical-scroll-proportion="0.9455621">
               <folding>
-                <marker date="1343676682658" expanded="true" signature="1994:2029" placeholder="..." />
-                <marker date="1343676682658" expanded="true" signature="2171:2211" placeholder="..." />
-                <marker date="1343676682658" expanded="true" signature="2171:2212" placeholder="..." />
-                <marker date="1343676682658" expanded="true" signature="2427:2462" placeholder="..." />
-                <marker date="1343676682658" expanded="true" signature="2607:2647" placeholder="..." />
-                <marker date="1343676682658" expanded="true" signature="2607:2648" placeholder="..." />
-                <marker date="1343676682658" expanded="true" signature="2866:2901" placeholder="..." />
-                <marker date="1343676682658" expanded="true" signature="3049:3089" placeholder="..." />
-                <marker date="1343676682658" expanded="true" signature="3049:3090" placeholder="..." />
-                <marker date="1343676682658" expanded="true" signature="3300:3335" placeholder="..." />
-                <marker date="1343676682658" expanded="true" signature="3501:3542" placeholder="..." />
+                <marker date="1343677108541" expanded="true" signature="1993:2028" placeholder="..." />
+                <marker date="1343677108541" expanded="true" signature="2170:2210" placeholder="..." />
+                <marker date="1343677108541" expanded="true" signature="2170:2211" placeholder="..." />
+                <marker date="1343677108541" expanded="true" signature="2405:2440" placeholder="..." />
+                <marker date="1343677108541" expanded="true" signature="2585:2625" placeholder="..." />
+                <marker date="1343677108541" expanded="true" signature="2585:2626" placeholder="..." />
+                <marker date="1343677108541" expanded="true" signature="2823:2858" placeholder="..." />
+                <marker date="1343677108541" expanded="true" signature="3006:3046" placeholder="..." />
+                <marker date="1343677108541" expanded="true" signature="3006:3047" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="class.OpusPrimusComments.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusComments.php">
+      <file leaf-file-name="opus-primus.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="0" selection-start="2872" selection-end="2872" vertical-scroll-proportion="-7.1923075">
-              <folding>
-                <element signature="e#1244#1506#0" expanded="false" />
-                <element signature="n#comment_authors#0;n#OpusPrimusComments#0;n#!!top" expanded="false" />
-                <element signature="e#2531#2871#0" expanded="false" />
-                <element signature="n#form_before#0;n#OpusPrimusComments#0;n#!!top" expanded="false" />
-                <element signature="e#3348#3610#0" expanded="false" />
-                <element signature="n#form_comments_closed#0;n#OpusPrimusComments#0;n#!!top" expanded="false" />
-              </folding>
+            <state line="682" column="59" selection-start="12973" selection-end="12973" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,7 +70,6 @@
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
         <option value="$PROJECT_DIR$/archives/archive-status.php" />
         <option value="$PROJECT_DIR$/js/opus-primus.js" />
-        <option value="$PROJECT_DIR$/css/opus-primus.css" />
         <option value="$PROJECT_DIR$/archives/archive-quote.php" />
         <option value="$PROJECT_DIR$/archive.php" />
         <option value="$PROJECT_DIR$/single.php" />
@@ -91,6 +81,7 @@
         <option value="$PROJECT_DIR$/loops/opus-primus-status.php" />
         <option value="$PROJECT_DIR$/includes/opus-ignite.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" />
+        <option value="$PROJECT_DIR$/css/opus-primus.css" />
         <option value="$PROJECT_DIR$/comments.php" />
       </list>
     </option>
@@ -185,6 +176,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -954,7 +963,11 @@
       <created>1343672746891</created>
       <updated>1343672746891</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="Update and add i18n support">
+      <created>1343676774332</created>
+      <updated>1343676774332</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1128,13 +1141,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="680" column="8" selection-start="12805" selection-end="12805" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="190" column="39" selection-start="6233" selection-end="6233" vertical-scroll-proportion="-28.576923">
@@ -1204,7 +1210,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusComments.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="0" selection-start="2872" selection-end="2872" vertical-scroll-proportion="-7.1923075">
+        <state line="89" column="0" selection-start="2872" selection-end="2872" vertical-scroll-proportion="0.22130178">
           <folding>
             <element signature="e#1244#1506#0" expanded="false" />
             <element signature="n#comment_authors#0;n#OpusPrimusComments#0;n#!!top" expanded="false" />
@@ -1216,21 +1222,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="682" column="59" selection-start="12973" selection-end="12973" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/comments.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="17" selection-start="3579" selection-end="3579" vertical-scroll-proportion="1.2875739">
+        <state line="81" column="22" selection-start="3185" selection-end="3185" vertical-scroll-proportion="0.9455621">
           <folding>
-            <marker date="1343676682658" expanded="true" signature="1994:2029" placeholder="..." />
-            <marker date="1343676682658" expanded="true" signature="2171:2211" placeholder="..." />
-            <marker date="1343676682658" expanded="true" signature="2171:2212" placeholder="..." />
-            <marker date="1343676682658" expanded="true" signature="2427:2462" placeholder="..." />
-            <marker date="1343676682658" expanded="true" signature="2607:2647" placeholder="..." />
-            <marker date="1343676682658" expanded="true" signature="2607:2648" placeholder="..." />
-            <marker date="1343676682658" expanded="true" signature="2866:2901" placeholder="..." />
-            <marker date="1343676682658" expanded="true" signature="3049:3089" placeholder="..." />
-            <marker date="1343676682658" expanded="true" signature="3049:3090" placeholder="..." />
-            <marker date="1343676682658" expanded="true" signature="3300:3335" placeholder="..." />
-            <marker date="1343676682658" expanded="true" signature="3501:3542" placeholder="..." />
+            <marker date="1343677108541" expanded="true" signature="1993:2028" placeholder="..." />
+            <marker date="1343677108541" expanded="true" signature="2170:2210" placeholder="..." />
+            <marker date="1343677108541" expanded="true" signature="2170:2211" placeholder="..." />
+            <marker date="1343677108541" expanded="true" signature="2405:2440" placeholder="..." />
+            <marker date="1343677108541" expanded="true" signature="2585:2625" placeholder="..." />
+            <marker date="1343677108541" expanded="true" signature="2585:2626" placeholder="..." />
+            <marker date="1343677108541" expanded="true" signature="2823:2858" placeholder="..." />
+            <marker date="1343677108541" expanded="true" signature="3006:3046" placeholder="..." />
+            <marker date="1343677108541" expanded="true" signature="3006:3047" placeholder="..." />
           </folding>
         </state>
       </provider>
