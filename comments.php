@@ -42,6 +42,7 @@ add_action( 'comment_form_before', 'OpusPrimusComments::form_before' );
 add_action( 'comment_form_comments_closed', 'OpusPrimusComments::form_comments_closed' ); ?>
 
 <!-- Show the comments -->
+<!-- Inspired by http://digwp.com/2010/02/separate-comments-pingbacks-trackbacks/ -->
 <div class="comments">
 
 <?php if (have_comments()) : global $wp_query; ?>
