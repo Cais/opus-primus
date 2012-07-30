@@ -37,7 +37,7 @@ class OpusPrimusComments {
     function __construct() {}
 
     /**
-     * Opus Primus Comments Authors
+     * Comment Authors
      * Add classes to the comments based on the author
      *
      * @package OpusPrimus
@@ -74,7 +74,7 @@ class OpusPrimusComments {
     }
 
     /**
-     * Opus Primus Comments Form Before
+     * Form Before
      * Text to be shown before form
      *
      * @package OpusPrimus
@@ -83,6 +83,9 @@ class OpusPrimusComments {
      * @uses    _e
      * @uses    have_comments
      * @uses    post_password_required
+     *
+     * @internal used with comment_form_before hook
+     * @internal NB: hook is only accessible if comments are open
      */
     function form_before() {
         /** Conditional check for password protected posts ... no comments for you! */
@@ -90,15 +93,14 @@ class OpusPrimusComments {
             _e( 'This post is password protected. Enter the password to view comments.', 'opusprimus' );
             return;
         }
-        global $post;
-        if ( ( ! have_comments() ) && ( 'open' == $post->comment_status ) ) :
-            /** If comments are open, but there are no comments. */
+        /** If comments are open, but there are no comments. */
+        if ( ! have_comments() ) :
             _e( 'Start a discussion ...', 'opusprimus' );
         endif;
     }
 
     /**
-     * Opus Primus Comments Form Comments Closed
+     * Form Comments Closed
      * Test to be displayed if comments are closed
      *
      * @package OpusPrimus
@@ -106,6 +108,8 @@ class OpusPrimusComments {
      *
      * @uses    _e
      * @uses    is_page
+     *
+     * @internal used with comment_form_comments_closed hook
      */
     function form_comments_closed() {
         if ( ! is_page() ) {

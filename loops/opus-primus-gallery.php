@@ -75,4 +75,4 @@ if ( ! is_single() ) {
 
 </div><!-- .post -->
 <?php
-comments_template();
+comments_template( '/comments.php', true );

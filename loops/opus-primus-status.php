@@ -60,4 +60,4 @@ global $opus_nav, $opus_structure, $opus_image;
 
 </div><!-- .post -->
 <?php
-comments_template();
+comments_template( '/comments.php', true );
