@@ -43,10 +43,10 @@ add_action( 'comment_form_comments_closed', 'OpusPrimusComments::form_comments_c
 
 <!-- Show the comments -->
 <!-- Inspired by http://digwp.com/2010/02/separate-comments-pingbacks-trackbacks/ -->
-<div class="comments">
+<div class="comments-wrapper">
     <?php if ( have_comments() ) : global $wp_query, $opus_nav; ?>
 
-        <h2 id="comments"><?php comments_number( 'No Responses', 'One Response', '% Responses' ); ?></h2>
+        <h2 id="all-comments"><?php comments_number( __( 'No Responses', 'opusprimus' ), __( 'One Response', 'opusprimus' ), __( '% Responses', 'opusprimus' ) ); ?></h2>
 
         <?php if ( ! empty( $comments_by_type['comment'] ) ) { ?>
 
@@ -87,6 +87,19 @@ add_action( 'comment_form_comments_closed', 'OpusPrimusComments::form_comments_c
 
         <?php } ?>
 
+        <?php if ( ! empty( $comments_by_type['pings'] ) ) { ?>
+
+            <h3 id="pings">
+                <?php printf( __( '%1$s Pingbacks &amp; Trackbacks', 'opusprimus' ), count( $wp_query->comments_by_type['pings'] ) );?>
+            </h3>
+            <ul class="pings-trackbacks-list">
+                <?php wp_list_comments( 'type=pings' ); ?>
+            </ul>
+
+            <?php $opus_nav->comments_navigation(); ?>
+
+        <?php } ?>
+
     <?php endif; ?>
     <?php comment_form(); ?>
-</div><!-- .comments -->
+</div><!-- .comments-wrapper -->
