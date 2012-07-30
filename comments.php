@@ -44,46 +44,49 @@ add_action( 'comment_form_comments_closed', 'OpusPrimusComments::form_comments_c
 <!-- Show the comments -->
 <!-- Inspired by http://digwp.com/2010/02/separate-comments-pingbacks-trackbacks/ -->
 <div class="comments">
+    <?php if ( have_comments() ) : global $wp_query, $opus_nav; ?>
 
-<?php if (have_comments()) : global $wp_query; ?>
+        <h2 id="comments"><?php comments_number( 'No Responses', 'One Response', '% Responses' ); ?></h2>
 
-	<h2 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses' ); ?></h2>
+        <?php if ( ! empty( $comments_by_type['comment'] ) ) { ?>
 
-	<?php if (!empty($comments_by_type['comment'])) { ?>
+            <h3 id="comments">
+                <?php printf( __( '%1$s Comments', 'opusprimus' ), count( $wp_query->comments_by_type['comment'] ) );?>
+            </h3>
+            <ul class="comments-list">
+                <?php wp_list_comments( 'type=comment' ); ?>
+            </ul>
 
-		<h3 id="comments"><?php echo count($wp_query->comments_by_type['comment']); ?> Comments</h3>
-		<ul class="comments-list">
-            <?php wp_list_comments('type=comment'); ?>
-        </ul>
+            <?php $opus_nav->comments_navigation(); ?>
 
-        <?php global $opus_nav; $opus_nav->comments_navigation(); ?>
+        <?php } ?>
 
-    <?php } ?>
+        <?php if ( ! empty( $comments_by_type['pingback'] ) ) { ?>
 
-    <?php if (!empty($comments_by_type['pingback'])) { ?>
+            <h3 id="pingbacks">
+                <?php printf( __( '%1$s Pingbacks', 'opusprimus' ), count( $wp_query->comments_by_type['pingback'] ) );?>
+            </h3>
+            <ol class="pingbacks-list">
+                <?php wp_list_comments( 'type=pingback' ); ?>
+            </ol>
 
-        <h3 id="pingbacks"><?php echo count($wp_query->comments_by_type['pingback']); ?> Pingbacks</h3>
-        <ol class="pingbacks-list">
-            <?php wp_list_comments('type=pingback'); ?>
-        </ol>
+            <?php $opus_nav->comments_navigation(); ?>
 
-        <?php global $opus_nav; $opus_nav->comments_navigation(); ?>
+        <?php } ?>
 
-    <?php } ?>
+        <?php if ( ! empty( $comments_by_type['trackback'] ) ) { ?>
 
-    <?php if (!empty($comments_by_type['trackback'])) { ?>
+            <h3 id="trackbacks">
+                <?php printf( __( '%1$s Trackbacks', 'opusprimus' ), count( $wp_query->comments_by_type['trackback'] ) );?>
+            </h3>
+            <ol class="trackbacks-list">
+                <?php wp_list_comments( 'type=trackback' ); ?>
+            </ol>
 
-        <h3 id="trackbacks"><?php echo count($wp_query->comments_by_type['trackback']); ?> Trackbacks</h3>
-        <ol class="trackbacks-list">
-            <?php wp_list_comments('type=trackback'); ?>
-        </ol>
+            <?php $opus_nav->comments_navigation(); ?>
 
-        <?php global $opus_nav; $opus_nav->comments_navigation(); ?>
+        <?php } ?>
 
-    <?php } ?>
-
-<?php endif; ?>
-
-<?php comment_form(); ?>
-
+    <?php endif; ?>
+    <?php comment_form(); ?>
 </div><!-- .comments -->

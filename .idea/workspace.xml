@@ -25,78 +25,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="class.OpusPrimusComments.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusComments.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="0" selection-start="1499" selection-end="1499" vertical-scroll-proportion="-18.307692">
-              <folding>
-                <element signature="e#6#1159#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="comments.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/comments.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="85" selection-start="1627" selection-end="1627" vertical-scroll-proportion="0.64378697">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#6#1158#0" expanded="true" />
+                <marker date="1343672699046" expanded="true" signature="2099:2139" placeholder="..." />
+                <marker date="1343672699046" expanded="true" signature="2535:2575" placeholder="..." />
+                <marker date="1343672699046" expanded="true" signature="2977:3017" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="opus-primus.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loops/opus-primus.php">
+      <file leaf-file-name="class.OpusPrimusComments.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusComments.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="20" selection-start="1844" selection-end="1844" vertical-scroll-proportion="-17.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="opus-primus-aside.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loops/opus-primus-aside.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="12" selection-start="1955" selection-end="1955" vertical-scroll-proportion="-19.615385">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="opus-primus-gallery.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loops/opus-primus-gallery.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="44" selection-start="1970" selection-end="1970" vertical-scroll-proportion="-21.384615">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="opus-primus-image.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loops/opus-primus-image.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="51" selection-start="1945" selection-end="1945" vertical-scroll-proportion="-19.615385">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="opus-primus-quote.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loops/opus-primus-quote.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="23" selection-start="1972" selection-end="1972" vertical-scroll-proportion="-19.615385">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="opus-primus-status.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loops/opus-primus-status.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="43" selection-start="2021" selection-end="2021" vertical-scroll-proportion="-20.26923">
-              <folding />
+            <state line="73" column="5" selection-start="2525" selection-end="2525" vertical-scroll-proportion="-29.884615">
+              <folding>
+                <element signature="e#6#1159#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,13 +70,13 @@
         <option value="$PROJECT_DIR$/archives/archive-quote.php" />
         <option value="$PROJECT_DIR$/archive.php" />
         <option value="$PROJECT_DIR$/single.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" />
         <option value="$PROJECT_DIR$/loops/opus-primus.php" />
         <option value="$PROJECT_DIR$/loops/opus-primus-aside.php" />
         <option value="$PROJECT_DIR$/loops/opus-primus-gallery.php" />
         <option value="$PROJECT_DIR$/loops/opus-primus-image.php" />
         <option value="$PROJECT_DIR$/loops/opus-primus-quote.php" />
         <option value="$PROJECT_DIR$/loops/opus-primus-status.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" />
         <option value="$PROJECT_DIR$/comments.php" />
       </list>
     </option>
@@ -222,43 +170,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="loops" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1020,7 +932,11 @@
       <created>1343667342347</created>
       <updated>1343667342347</updated>
     </task>
-    <option name="localTasksCounter" value="139" />
+    <task id="LOCAL-00139" summary="Documentation">
+      <created>1343667425061</created>
+      <updated>1343667425061</updated>
+    </task>
+    <option name="localTasksCounter" value="140" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1118,7 +1034,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update 'comments' and all loops referencing `comment_template`" />
+    <option name="LAST_COMMIT_MESSAGE" value="Documentation" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1146,7 +1062,6 @@
     <MESSAGE value="Post-Format: Quote single view styles" />
     <MESSAGE value="Post-Format: Quote without blockquote tag" />
     <MESSAGE value="Add 'Merienda' font and use with Post-Format: Quote; another JetPack CSS hack added" />
-    <MESSAGE value="Documentation" />
     <MESSAGE value="Adjusted Post-Format: Quote font-size based on view (see all posts, single, and archive)" />
     <MESSAGE value="More specific identifier needed" />
     <MESSAGE value="Add 'fitText.js'; add 'opus-primus-status.php'; added `status_update`; added CSS to make it all work." />
@@ -1156,6 +1071,7 @@
     <MESSAGE value="Moved 'comments' CSS container to wrap all output" />
     <MESSAGE value="Added Comments Class and applied to 'comments.php'" />
     <MESSAGE value="Update 'comments' and all loops referencing `comment_template`" />
+    <MESSAGE value="Documentation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1208,15 +1124,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusComments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="1499" selection-end="1499" vertical-scroll-proportion="-18.307692">
-          <folding>
-            <element signature="e#6#1159#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="190" column="39" selection-start="6233" selection-end="6233" vertical-scroll-proportion="-28.576923">
@@ -1237,51 +1144,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/loops/opus-primus.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="20" selection-start="1844" selection-end="1844" vertical-scroll-proportion="-17.0">
+        <state line="57" column="20" selection-start="1844" selection-end="1844" vertical-scroll-proportion="0.52307695">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loops/opus-primus-aside.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="12" selection-start="1955" selection-end="1955" vertical-scroll-proportion="-19.615385">
+        <state line="61" column="12" selection-start="1955" selection-end="1955" vertical-scroll-proportion="0.6035503">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loops/opus-primus-gallery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="44" selection-start="1970" selection-end="1970" vertical-scroll-proportion="-21.384615">
+        <state line="66" column="44" selection-start="1970" selection-end="1970" vertical-scroll-proportion="0.6579882">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loops/opus-primus-image.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="51" selection-start="1945" selection-end="1945" vertical-scroll-proportion="-19.615385">
+        <state line="61" column="51" selection-start="1945" selection-end="1945" vertical-scroll-proportion="0.6035503">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loops/opus-primus-quote.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="23" selection-start="1972" selection-end="1972" vertical-scroll-proportion="-19.615385">
+        <state line="61" column="23" selection-start="1972" selection-end="1972" vertical-scroll-proportion="0.6035503">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loops/opus-primus-status.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="43" selection-start="2021" selection-end="2021" vertical-scroll-proportion="-20.26923">
+        <state line="62" column="43" selection-start="2021" selection-end="2021" vertical-scroll-proportion="0.6236686">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusComments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="5" selection-start="2525" selection-end="2525" vertical-scroll-proportion="-29.884615">
+          <folding>
+            <element signature="e#6#1159#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/comments.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="85" selection-start="1627" selection-end="1627" vertical-scroll-proportion="0.64378697">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#6#1158#0" expanded="true" />
+            <marker date="1343672699046" expanded="true" signature="2099:2139" placeholder="..." />
+            <marker date="1343672699046" expanded="true" signature="2535:2575" placeholder="..." />
+            <marker date="1343672699046" expanded="true" signature="2977:3017" placeholder="..." />
           </folding>
         </state>
       </provider>
