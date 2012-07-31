@@ -694,6 +694,7 @@ ul.nav-menu ul.sub-menu li, ul.nav-menu ul.children li, ul.nav-menu ul, ul.nav-m
 .comment.even {
     background-color: #eee;
 }
+
 .comment.even blockquote {
     border-left: 5px solid #666;
 }
@@ -703,10 +704,10 @@ ul.nav-menu ul.sub-menu li, ul.nav-menu ul.children li, ul.nav-menu ul, ul.nav-m
 .comment.odd {
     background-color: #f4f4f4;
 }
+
 .comment.odd blockquote {
     border-left: 5px solid #7c7c7c;
 }
-
 
 .comment cite:before {
     content:"";
@@ -723,14 +724,17 @@ p.comment-form-url {
     padding-left: 5px;
     padding-right: 10px;
 }
+
 p.comment-form-comment {
     padding-left: 5px;
 }
+
 form#commentform span.required {
     color: red;
     font-weight: bold;
     font-size: 2em;
 }
+
 p.comment-notes span.required {
     position: relative;
     top: 8px;
@@ -740,13 +744,15 @@ p.comment-form-author span.required {
     left: 40px;
     top: -20px;
 }
+
 p.comment-form-email span.required {
     position: relative;
     left: 38px;
     top: -20px;
 }
-form#commentform p.comment-form-author input#author,
-form#commentform p.comment-form-email input#email {
+
+p.comment-form-author input#author,
+p.comment-form-email input#email {
     margin-left: -10px;
 }
 
@@ -754,7 +760,7 @@ p.comment-form-comment {
     clear: both;
 }
 
-div#respond form#commentform p.comment-form-comment textarea#comment {
+p.comment-form-comment textarea#comment {
     width: 96%;
 }
 
@@ -767,6 +773,7 @@ div#respond form#commentform p.comment-form-comment textarea#comment {
 .trackback .reply {
     display: none;
 }
+
 /** End: Comments ----------------------------------------------------------- */
 
 /** === Sidebars === -------------------------------------------------------- */
