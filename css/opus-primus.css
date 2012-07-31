@@ -726,9 +726,30 @@ p.comment-form-url {
 p.comment-form-comment {
     padding-left: 5px;
 }
-form#commentform p span.required {
-    display: none;
+form#commentform span.required {
+    color: red;
+    font-weight: bold;
+    font-size: 2em;
 }
+p.comment-notes span.required {
+    position: relative;
+    top: 8px;
+}
+p.comment-form-author span.required {
+    position: relative;
+    left: 40px;
+    top: -20px;
+}
+p.comment-form-email span.required {
+    position: relative;
+    left: 38px;
+    top: -20px;
+}
+form#commentform p.comment-form-author input#author,
+form#commentform p.comment-form-email input#email {
+    margin-left: -10px;
+}
+
 p.comment-form-comment {
     clear: both;
 }
