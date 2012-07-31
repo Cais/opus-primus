@@ -716,9 +716,24 @@ ul.nav-menu ul.sub-menu li, ul.nav-menu ul.children li, ul.nav-menu ul, ul.nav-m
     margin: 0 5px 9px;
 }
 
+p.comment-form-author,
+p.comment-form-email,
+p.comment-form-url {
+    float: left;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+p.comment-form-comment {
+    padding-left: 5px;
+}
+form#commentform p span.required {
+    display: none;
+}
+p.comment-form-comment {
+    clear: both;
+}
+
 div#respond form#commentform p.comment-form-comment textarea#comment {
-    left: 5px;
-    position: relative;
     width: 96%;
 }
 
