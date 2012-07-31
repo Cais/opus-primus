@@ -681,7 +681,11 @@ ul.nav-menu ul.sub-menu li, ul.nav-menu ul.children li, ul.nav-menu ul, ul.nav-m
 
 /** === Comments === -------------------------------------------------------- */
 .comments-wrapper ul.comments-list,
-.comments-wrapper ul.comments-list li.comment ul.children {
+.comments-wrapper ul.comments-list li.comment ul.children,
+.comments-wrapper ul.pingbacks-list,
+.comments-wrapper ul.pingbacks-list li.comment ul.children,
+.comments-wrapper ul.trackbacks-list,
+.comments-wrapper ul.trackbacks-list li.comment ul.children {
     list-style: none outside none;
 }
 
@@ -713,11 +717,19 @@ ul.nav-menu ul.sub-menu li, ul.nav-menu ul.children li, ul.nav-menu ul, ul.nav-m
 }
 
 div#respond form#commentform p.comment-form-comment textarea#comment {
+    left: 5px;
+    position: relative;
     width: 96%;
 }
 
 .comment div.reply {
     text-align: right;
+}
+
+/* Hack to hide the reply button ... */
+.pingback .reply,
+.trackback .reply {
+    display: none;
 }
 /** End: Comments ----------------------------------------------------------- */
 

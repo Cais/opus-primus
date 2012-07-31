@@ -41,5 +41,7 @@ jQuery( document ).ready( function( $ ) {
     $( '.format-gallery img.wp-post-image, .format-gallery img.attachment-thumbnail, .format-gallery .featured-image img' ).addClass( 'image-shadow' );
     /** Add a drop shadow to single attached images */
     $( '.single .attached-image img, span.archive-image img' ).addClass( 'image-shadow' );
+    /** Wrap the comment reply link text in a button */
+    $( 'div.reply a').wrapInner( '<button class="reply-button" />' )
 
 } );

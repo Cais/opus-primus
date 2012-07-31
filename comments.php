@@ -146,9 +146,9 @@ add_action( 'comment_form_comments_closed', 'opus_primus_form_comments_closed' )
                     count( $wp_query->comments_by_type['pingback'] )
                 ); ?>
             </h3>
-            <ol class="pingbacks-list">
+            <ul class="pingbacks-list">
                 <?php wp_list_comments( 'type=pingback' ); ?>
-            </ol>
+            </ul>
             <?php $opus_nav->comments_navigation();
         }
 
@@ -162,9 +162,9 @@ add_action( 'comment_form_comments_closed', 'opus_primus_form_comments_closed' )
                     count( $wp_query->comments_by_type['trackback'] )
                 ); ?>
             </h3>
-            <ol class="trackbacks-list">
+            <ul class="trackbacks-list">
                 <?php wp_list_comments( 'type=trackback' ); ?>
-            </ol>
+            </ul>
             <?php $opus_nav->comments_navigation();
         }
 
