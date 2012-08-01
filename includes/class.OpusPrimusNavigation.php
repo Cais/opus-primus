@@ -135,6 +135,7 @@ class OpusPrimusNavigation {
         do_action( 'opus_before_post_link' );
 
         /** Post link navigation */ ?>
+        <hr class="pre-post-link-navigation" />
         <p class="navigation post-link cf">
             <span class="right"><?php next_post_link(); ?></span>
             <span class="left"><?php previous_post_link(); ?></span>

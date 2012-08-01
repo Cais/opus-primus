@@ -411,10 +411,14 @@ h6 {
 /** - End: H tags */
 
 hr {
-    margin: 18px 0;
     border: 0;
     border-top: 1px solid #eeeeee;
     border-bottom: 1px solid #ffffff;
+    margin: 18px 0;
+}
+
+hr.pre-post-link-navigation {
+    margin: 9px;
 }
 
 img {
