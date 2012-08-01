@@ -46,7 +46,6 @@ get_header( get_post_format() ); ?>
     <div class="the-loop">
 
         <?php
-        $opus_nav->opus_post_link();
         if ( have_posts() ):
             while ( have_posts() ):
                 the_post();
