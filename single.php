@@ -41,7 +41,6 @@ get_header( get_post_format() ); ?>
     <div class="the-loop">
 
         <?php
-        $opus_nav->opus_post_link();
         if ( have_posts() ):
             while ( have_posts() ):
                 the_post();
@@ -49,7 +48,8 @@ get_header( get_post_format() ); ?>
             endwhile;
         else:
             $opus_structure->search_results();
-        endif; ?>
+        endif;
+        $opus_nav->opus_post_link(); ?>
 
     </div><!-- #the-loop -->
 
