@@ -683,6 +683,21 @@ ul.nav-menu ul.sub-menu li, ul.nav-menu ul.children li, ul.nav-menu ul, ul.nav-m
 }
 /** End: Menu Related Elements ---------------------------------------------- */
 
+/** === Post Elements === --------------------------------------------------- */
+/** Codas ------------------------------------------------------------------- */
+.post-coda {
+    font-size: 200%;
+    line-height: 25%;
+    margin-bottom: -15px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.post-coda + hr {
+    margin-bottom: 9px;
+}
+/** End: Post Elements ------------------------------------------------------ */
+
 /** === Comments === -------------------------------------------------------- */
 .comments-wrapper ul.comments-list,
 .comments-wrapper ul.comments-list li.comment ul.children,
