@@ -64,7 +64,7 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
         wp_enqueue_style( 'Opus-Primus', OPUS_CSS . 'opus-primus.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
         /** Enqueue custom stylesheet after to maintain expected specificity */
         if ( is_readable( OPUS_CSS . 'opus-primus-custom-style.css' ) ) {
-            wp_enqueue_style( 'Opus-Primus-Custom-Style', OPUS_CSS . 'opus-primus-custom-style.css', array(), '0.1', 'screen' );
+            wp_enqueue_style( 'Opus-Primus-Custom-Style', OPUS_CSS . 'opus-primus-custom-style.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
         }
     }
 }
