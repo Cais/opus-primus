@@ -313,11 +313,8 @@ if ( ! function_exists( 'opus_primus_body_classes' ) ) {
      *
      * @uses    (global) $content_width
      * @uses    is_active_sidebar
-     * @internal conscripts conditional to set $content_width based on layout
      *
-     * @return  array - classes to be added to the `body_class` output
-     *
-     * @todo Look for better way to set / reset $content_width
+     * @return  string - specific class based on active columns
      */
     function opus_primus_body_classes( $classes ) {
         global $content_width;
@@ -331,17 +328,14 @@ if ( ! function_exists( 'opus_primus_body_classes' ) ) {
             && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
                 && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) ) {
             $classes[] = 'two-column';
-            $content_width = 960;
         } elseif( ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) )
             && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
                 && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) ) {
             $classes[] = 'two-column';
-            $content_width = 960;
         }
         /** Test if at least one widget area in each sidebar area is active for a three-column layout */
         if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) ) && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
             $classes[] = 'three-column';
-            $content_width = 720;
         }
         /** End: Sidebar Layouts */
 
