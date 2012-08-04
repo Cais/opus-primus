@@ -30,14 +30,24 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
- */
+ */ ?>
 
-/**
- * Establish a #footer container
- * @todo Do something interesting with it ...
- */
-echo '<div id="footer"></div>';
+<footer>
 
+    <?php do_action( 'opus_primus_footer_intro' ); ?>
+
+    <?php
+    /**
+     * Establish a #footer container
+     * @todo Do something interesting with it ...
+     */
+    echo '<div id="footer"></div>'; ?>
+
+    <?php do_action( 'opus_primus_footer_exit' ); ?>
+
+</footer>
+
+<?php
 /**
  * `wp_footer` is placed inside the #opus element to provide a container for
  * styling content displayed in the footer by other code constructs such as
