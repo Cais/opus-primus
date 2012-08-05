@@ -34,45 +34,50 @@
  */
 
 /** Add empty hook before Sidebar-Footer */
-do_action( 'opus_primus_before_sidebar_footer' ); ?>
+do_action( 'opus_primus_before_sidebar_footer' );
 
-<div id="footer-sidebar">
-    <div class="footer-widget-area three-columns-footer">
-        <div class="column-middle">
-            <div class="column-left">
+/** Only resolve public facing space if there is an active footer widget area. */
+if ( is_active_sidebar( 'footer-middle' ) || is_active_sidebar( 'footer-left' ) || is_active_sidebar( 'footer-right' ) ) : ?>
 
-                <ul id="footer-sidebar-two">
-                    <?php
-                    if ( is_active_sidebar( 'footer-middle' ) ) :
-                        dynamic_sidebar( 'footer-middle' );
-                    else :
-                        echo '<div class="test-text">' . 'Test: Footer Middle Widget AreaHamburger fatback andouille, ball tip bacon t-bone turkey tenderloin. Ball tip shank pig, t-bone turducken prosciutto ground round rump bacon pork chop short loin turkey. Pancetta ball tip salami, hamburger t-bone capicola turkey ham hock pork belly tri-tip. Biltong bresaola tail, shoulder sausage turkey cow pork chop fatback. Turkey pork pig bacon short loin meatloaf, chicken ham hock flank andouille tenderloin shank rump filet mignon. Shoulder frankfurter shankle pancetta. Jowl andouille short ribs swine venison, pork loin pork chop meatball jerky filet mignon shoulder tenderloin chicken pork.<br />' . '</div>';
-                    endif; ?>
-                </ul><!-- #footer-sidebar-two -->
+    <div id="footer-sidebar">
+        <div class="footer-widget-area three-columns-footer">
+            <div class="column-middle">
+                <div class="column-left">
 
-                <ul id="footer-sidebar-one">
-                    <?php
-                    if ( is_active_sidebar( 'footer-left' ) ) :
-                        dynamic_sidebar( 'footer-left' );
-                    else :
-                        echo '<div class="test-text">' . 'BACON Test: Footer Left Widget AreaHamburger fatback andouille, ball tip bacon t-bone turkey tenderloin. Ball tip shank pig, t-bone turducken prosciutto ground round rump bacon pork chop short loin turkey. Pancetta ball tip salami, hamburger t-bone capicola turkey ham hock pork belly tri-tip. Biltong bresaola tail, shoulder sausage turkey cow pork chop fatback. Turkey pork pig bacon short loin meatloaf, chicken ham hock flank andouille tenderloin shank rump filet mignon. Shoulder frankfurter shankle pancetta. Jowl andouille short ribs swine venison, pork loin pork chop meatball jerky filet mignon shoulder tenderloin chicken pork.<br />' . '</div>';
-                    endif; ?>
-                </ul><!-- #footer-sidebar-one -->
+                    <ul id="footer-sidebar-two">
+                        <?php
+                        if ( is_active_sidebar( 'footer-middle' ) ) :
+                            dynamic_sidebar( 'footer-middle' );
+                        else :
+                            echo '<div class="test-text">' . 'Test: Footer Middle Widget AreaHamburger fatback andouille, ball tip bacon t-bone turkey tenderloin. Ball tip shank pig, t-bone turducken prosciutto ground round rump bacon pork chop short loin turkey. Pancetta ball tip salami, hamburger t-bone capicola turkey ham hock pork belly tri-tip. Biltong bresaola tail, shoulder sausage turkey cow pork chop fatback. Turkey pork pig bacon short loin meatloaf, chicken ham hock flank andouille tenderloin shank rump filet mignon. Shoulder frankfurter shankle pancetta. Jowl andouille short ribs swine venison, pork loin pork chop meatball jerky filet mignon shoulder tenderloin chicken pork.<br />' . '</div>';
+                        endif; ?>
+                    </ul><!-- #footer-sidebar-two -->
 
-                <ul id="footer-sidebar-three">
-                    <?php
-                    if ( is_active_sidebar( 'footer-right' ) ) :
-                        dynamic_sidebar( 'footer-right' );
-                    else :
-                        echo '<div class="test-text">' . 'Test: Footer Right Widget AreaHamburger fatback andouille, ball tip bacon t-bone turkey tenderloin. Ball tip shank pig, t-bone turducken prosciutto ground round rump bacon pork chop short loin turkey. Pancetta ball tip salami, hamburger t-bone capicola turkey ham hock pork belly tri-tip. Biltong bresaola tail, shoulder sausage turkey cow pork chop fatback. Turkey pork pig bacon short loin meatloaf, chicken ham hock flank andouille tenderloin shank rump filet mignon. Shoulder frankfurter shankle pancetta. Jowl andouille short ribs swine venison, pork loin pork chop meatball jerky filet mignon shoulder tenderloin chicken pork.<br />' . '</div>';
-                    endif; ?>
-                </ul><!-- #footer-sidebar-three -->
+                    <ul id="footer-sidebar-one">
+                        <?php
+                        if ( is_active_sidebar( 'footer-left' ) ) :
+                            dynamic_sidebar( 'footer-left' );
+                        else :
+                            echo '<div class="test-text">' . 'BACON Test: Footer Left Widget AreaHamburger fatback andouille, ball tip bacon t-bone turkey tenderloin. Ball tip shank pig, t-bone turducken prosciutto ground round rump bacon pork chop short loin turkey. Pancetta ball tip salami, hamburger t-bone capicola turkey ham hock pork belly tri-tip. Biltong bresaola tail, shoulder sausage turkey cow pork chop fatback. Turkey pork pig bacon short loin meatloaf, chicken ham hock flank andouille tenderloin shank rump filet mignon. Shoulder frankfurter shankle pancetta. Jowl andouille short ribs swine venison, pork loin pork chop meatball jerky filet mignon shoulder tenderloin chicken pork.<br />' . '</div>';
+                        endif; ?>
+                    </ul><!-- #footer-sidebar-one -->
 
+                    <ul id="footer-sidebar-three">
+                        <?php
+                        if ( is_active_sidebar( 'footer-right' ) ) :
+                            dynamic_sidebar( 'footer-right' );
+                        else :
+                            echo '<div class="test-text">' . 'Test: Footer Right Widget AreaHamburger fatback andouille, ball tip bacon t-bone turkey tenderloin. Ball tip shank pig, t-bone turducken prosciutto ground round rump bacon pork chop short loin turkey. Pancetta ball tip salami, hamburger t-bone capicola turkey ham hock pork belly tri-tip. Biltong bresaola tail, shoulder sausage turkey cow pork chop fatback. Turkey pork pig bacon short loin meatloaf, chicken ham hock flank andouille tenderloin shank rump filet mignon. Shoulder frankfurter shankle pancetta. Jowl andouille short ribs swine venison, pork loin pork chop meatball jerky filet mignon shoulder tenderloin chicken pork.<br />' . '</div>';
+                        endif; ?>
+                    </ul><!-- #footer-sidebar-three -->
+
+                </div>
             </div>
         </div>
-    </div>
-</div><!-- #footer-sidebar -->
+    </div><!-- #footer-sidebar -->
 
 <?php
+endif;
+
 /** Add empty hook after Sidebar-Footer */
 do_action( 'opus_primus_after_sidebar_footer' );
