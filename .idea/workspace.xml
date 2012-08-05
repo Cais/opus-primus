@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="" />
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,29 +21,7 @@
     <favorites_list name="opus-primus" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="62" selection-start="2282" selection-end="2282" vertical-scroll-proportion="-20.192308">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/footer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="61" selection-start="1601" selection-end="1621" vertical-scroll-proportion="0.7443609">
-              <folding>
-                <element signature="e#6#1105#0" expanded="true" />
-                <element signature="e#1189#1287#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -312,6 +288,31 @@
             </ExcludedPath>
             <ExcludedPath>
               <option name="path" value="/public_html/wp-admin" />
+            </ExcludedPath>
+            <ExcludedPath>
+              <option name="path" value="/public_html/wp-includes" />
+            </ExcludedPath>
+          </excludedPaths>
+        </serverdata>
+      </server>
+      <server id="e8cf6528-ab4d-48a8-bdf8-a250986b7cb3">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/public_html/wp-admin" local="$PROJECT_DIR$/../../../wp-admin" web="/wp-admin" />
+            <mapping deploy="/public_html/wp-content/themes/opus-primus" local="$PROJECT_DIR$" web="/wp-content/themes/opus-primus" />
+            <mapping deploy="/public_html/wp-includes" local="$PROJECT_DIR$/../../../wp-includes" web="/wp-includes" />
+          </mappings>
+          <excludedPaths>
+            <ExcludedPath>
+              <option name="local" value="true" />
+              <option name="path" value="C:\wamp\www\Opus-Primus\wp-admin" />
+            </ExcludedPath>
+            <ExcludedPath>
+              <option name="path" value="/public_html/wp-admin" />
+            </ExcludedPath>
+            <ExcludedPath>
+              <option name="local" value="true" />
+              <option name="path" value="C:\wamp\www\Opus-Primus\wp-includes" />
             </ExcludedPath>
             <ExcludedPath>
               <option name="path" value="/public_html/wp-includes" />
@@ -925,7 +926,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282123" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -938,7 +939,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2934363" sideWeight="0.6703911" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2934363" sideWeight="0.6703911" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1116,7 +1117,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="61" selection-start="1601" selection-end="1621" vertical-scroll-proportion="0.7443609">
+        <state line="52" column="61" selection-start="1541" selection-end="1541" vertical-scroll-proportion="0.7443609">
           <folding>
             <element signature="e#6#1105#0" expanded="true" />
             <element signature="e#1189#1287#0" expanded="true" />
