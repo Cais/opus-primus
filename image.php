@@ -39,67 +39,69 @@
 global $post, $opus_nav, $opus_structure, $opus_image;
 get_header( 'image' ); ?>
 
-<div class="content-wrapper">
+<section>
+    <div class="content-wrapper">
 
-    <?php echo $opus_structure->layout_open(); ?>
+        <?php echo $opus_structure->layout_open(); ?>
 
-    <div class="the-loop">
-
-        <?php
-        $opus_nav->opus_post_link();
-        if ( have_posts() ):
-            while ( have_posts() ):
-                the_post();
-
-                /** Display the post */ ?>
-                <div <?php post_class(); ?>>
-
-                    <?php
-                    /** Make it clear this is an attachment being displayed */
-                    printf( '<h2 id="attachment-notice">'
-                        . __( 'You are viewing an image attached to %1$s', 'opusprimus' )
-                        . '</h2>',
-                        '<a href="' . get_permalink( $post->post_parent ) . '">' . get_the_title( $post->post_parent ) . '</a>'
-                    );
-
-                    $opus_structure->post_byline( array( 'show_mod_author' => true, 'anchor' => 'Displayed' ) );
-                    $opus_nav->image_nav();
-
-                    /** Image Title from media library */
-                    $opus_image->image_title();
-                    /** Image Caption from media library */
-                    $opus_structure->post_excerpt();
-
-                    /** Show the image with link to original */
-                    $size = 'large';
-                    echo '<div class="attached-image"><a href="' . wp_get_attachment_url( $post->ID ) . '">' . wp_get_attachment_image( $post->ID, $size ) . '</a></div>';
-
-                    /** Image Description from media library */
-                    $opus_structure->post_content();
-
-                    /** Image meta data */
-                    $opus_image->display_exif_table();
-
-                    $opus_structure->post_coda();
-
-                    comments_template(); ?>
-
-                </div><!-- .post -->
+        <div class="the-loop">
 
             <?php
-            endwhile;
-        else:
-            $opus_structure->search_results();
-        endif; ?>
+            $opus_nav->opus_post_link();
+            if ( have_posts() ):
+                while ( have_posts() ):
+                    the_post();
 
-    </div><!-- #the-loop -->
+                    /** Display the post */ ?>
+                    <div <?php post_class(); ?>>
 
-    <?php
-    get_sidebar( 'image' );
+                        <?php
+                        /** Make it clear this is an attachment being displayed */
+                        printf( '<h2 id="attachment-notice">'
+                            . __( 'You are viewing an image attached to %1$s', 'opusprimus' )
+                            . '</h2>',
+                            '<a href="' . get_permalink( $post->post_parent ) . '">' . get_the_title( $post->post_parent ) . '</a>'
+                        );
 
-    echo $opus_structure->layout_close(); ?>
+                        $opus_structure->post_byline( array( 'show_mod_author' => true, 'anchor' => 'Displayed' ) );
+                        $opus_nav->image_nav();
 
-</div><!-- #content-wrapper -->
+                        /** Image Title from media library */
+                        $opus_image->image_title();
+                        /** Image Caption from media library */
+                        $opus_structure->post_excerpt();
+
+                        /** Show the image with link to original */
+                        $size = 'large';
+                        echo '<div class="attached-image"><a href="' . wp_get_attachment_url( $post->ID ) . '">' . wp_get_attachment_image( $post->ID, $size ) . '</a></div>';
+
+                        /** Image Description from media library */
+                        $opus_structure->post_content();
+
+                        /** Image meta data */
+                        $opus_image->display_exif_table();
+
+                        $opus_structure->post_coda();
+
+                        comments_template(); ?>
+
+                    </div><!-- .post -->
+
+                <?php
+                endwhile;
+            else:
+                $opus_structure->search_results();
+            endif; ?>
+
+        </div><!-- #the-loop -->
+
+        <?php
+        get_sidebar( 'image' );
+
+        echo $opus_structure->layout_close(); ?>
+
+    </div><!-- #content-wrapper -->
+</section>
 
 <?php
 get_footer( 'image' );

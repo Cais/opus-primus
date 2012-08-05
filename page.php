@@ -34,39 +34,41 @@
 global $opus_nav, $opus_structure;
 get_header( 'page' ); ?>
 
-<div class="content-wrapper">
+<section></section>
+    <div class="content-wrapper">
 
-    <?php echo $opus_structure->layout_open(); ?>
+        <?php echo $opus_structure->layout_open(); ?>
 
-    <div class="the-loop">
+        <div class="the-loop">
+
+            <?php
+            if ( have_posts() ):
+                    while ( have_posts() ):
+                        the_post(); ?>
+                        <div <?php post_class(); ?>>
+                            <?php
+                            $opus_structure->post_title();
+                            $opus_structure->post_content();
+                            $opus_structure->post_byline( array( 'show_mod_author' => true ) );
+                            $opus_structure->post_author(); ?>
+                        </div><!-- .post -->
+                    <?php
+                    endwhile;
+                else:
+                    $opus_structure->search_results();
+                endif;
+
+                comments_template(); ?>
+
+        </div><!-- #the-loop -->
 
         <?php
-        if ( have_posts() ):
-                while ( have_posts() ):
-                    the_post(); ?>
-                    <div <?php post_class(); ?>>
-                        <?php
-                        $opus_structure->post_title();
-                        $opus_structure->post_content();
-                        $opus_structure->post_byline( array( 'show_mod_author' => true ) );
-                        $opus_structure->post_author(); ?>
-                    </div><!-- .post -->
-                <?php
-                endwhile;
-            else:
-                $opus_structure->search_results();
-            endif;
+        get_sidebar( 'page' );
 
-            comments_template(); ?>
+        echo $opus_structure->layout_close(); ?>
 
-    </div><!-- #the-loop -->
-
-    <?php
-    get_sidebar( 'page' );
-
-    echo $opus_structure->layout_close(); ?>
-
-</div><!-- #content-wrapper -->
+    </div><!-- #content-wrapper -->
+</section>
 
 <?php
 get_footer( 'page' );

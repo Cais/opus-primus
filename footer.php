@@ -34,16 +34,25 @@
 
 <footer>
 
-    <?php do_action( 'opus_primus_footer_intro' ); ?>
+    <?php
+    /** Add empty hook at beginning of footer */
+    do_action( 'opus_primus_after_footer_open' ); ?>
+
+    <div id="footer">
+        <?php
+        /** Add empty hook before Sidebar-Footer */
+        do_action( 'opus_primus_before_sidebar_footer' );
+
+        /** Call the Sidebar-Footer template */
+        get_sidebar( 'footer' );
+
+        /** Add empty hook after Sidebar-Footer */
+        do_action( 'opus_primus_after_sidebar_footer' ); ?>
+    </div>
 
     <?php
-    /**
-     * Establish a #footer container
-     * @todo Do something interesting with it ...
-     */
-    echo '<div id="footer"></div>'; ?>
-
-    <?php do_action( 'opus_primus_footer_exit' ); ?>
+    /** Add empty hook at end of footer */
+    do_action( 'opus_primus_before_footer_close' ); ?>
 
 </footer>
 

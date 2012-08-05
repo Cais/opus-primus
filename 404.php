@@ -34,38 +34,42 @@
 
 global $opus_archive, $opus_structure;
 get_header( '404' ); ?>
-<div class="content-wrapper">
 
-    <?php echo $opus_structure->layout_open(); ?>
-    <div class="the-loop">
+<section>
+    <div class="content-wrapper">
+
+        <?php echo $opus_structure->layout_open(); ?>
+        <div class="the-loop">
+
+            <?php
+            echo '<h1>This is the 404 page!</h1>';
+
+            /** Display links to archives */
+            /** Display a list of categories to choose from */
+            $opus_archive->categories_archive( array(
+                'orderby'       => 'count',
+                'order'         => 'desc',
+                'show_count'    => 1,
+                'hierarchical'  => 0,
+                'title_li'      => '<span class="title">' . __( 'Top 10 Categories by Post Count:', 'opusprimus' ) . '</span>',
+                'number'        => 10,
+            ) );
+            /** Display a list of tags to choose from */
+            $opus_archive->archive_cloud( array(
+                'taxonomy'  => 'post_tag',
+                'orderby'   => 'count',
+                'order'     => 'DESC',
+                'number'    => 10,
+            ) ); ?>
+
+        </div><!-- #the-loop -->
 
         <?php
-        echo '<h1>This is the 404 page!</h1>';
+        get_sidebar( '404' );
+        echo $opus_structure->layout_close(); ?>
 
-        /** Display links to archives */
-        /** Display a list of categories to choose from */
-        $opus_archive->categories_archive( array(
-            'orderby'       => 'count',
-            'order'         => 'desc',
-            'show_count'    => 1,
-            'hierarchical'  => 0,
-            'title_li'      => '<span class="title">' . __( 'Top 10 Categories by Post Count:', 'opusprimus' ) . '</span>',
-            'number'        => 10,
-        ) );
-        /** Display a list of tags to choose from */
-        $opus_archive->archive_cloud( array(
-            'taxonomy'  => 'post_tag',
-            'orderby'   => 'count',
-            'order'     => 'DESC',
-            'number'    => 10,
-        ) ); ?>
+    </div><!-- #content-wrapper -->
+</section>
 
-    </div><!-- #the-loop -->
-
-    <?php
-    get_sidebar( '404' );
-    echo $opus_structure->layout_close(); ?>
-
-</div><!-- #content-wrapper -->
 <?php
 get_footer( '404' );
