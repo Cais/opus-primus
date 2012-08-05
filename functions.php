@@ -317,8 +317,7 @@ if ( ! function_exists( 'opus_primus_body_classes' ) ) {
      * @return  string - specific class based on active columns
      */
     function opus_primus_body_classes( $classes ) {
-        global $content_width;
-        /** Sidebar Layouts */
+        /** Theme Layout */
         /** Test if all widget areas are inactive for one-column layout */
         if ( ! ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) || is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
             $classes[] = 'one-column';
@@ -337,7 +336,6 @@ if ( ! function_exists( 'opus_primus_body_classes' ) ) {
         if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) ) && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
             $classes[] = 'three-column';
         }
-        /** End: Sidebar Layouts */
 
         /** Return the classes for use with the `body_class` filter */
         return apply_filters( 'opus_primus_body_classes', $classes );
@@ -414,7 +412,8 @@ add_filter( 'wp_title', 'opus_primus_title', 10, 3 );
 
 /**
  * Opus Primus Widgets
- * Register Widget areas.
+ * Register Widget areas ... four (4) in the "Sidebar" and three (3) in the
+ * "Footer"
  *
  * @package     OpusPrimus
  * @since       0.1
@@ -461,6 +460,25 @@ function opus_primus_widgets() {
         'id'            => 'fourth-widget',
         'description'   => __( 'This widget area is in “Sidebar Area Two”. If no widget areas are active, the web site will be one column. If the First and/or Second widget area is active in addition to this one, the web site will display three columns with this area in the right sidebar.', 'opusprimus' ),
     ) );
+
+    register_sidebar( array(
+        'name'  => __( 'First Footer Widget Area', 'opusprimus' ),
+        'id'    => 'footer-left',
+        'description'   => __( 'This widget area appears in the footer on the left side of the theme.', 'opusprimus' ),
+    ) );
+
+    register_sidebar( array(
+        'name'  => __( 'Second Footer Widget Area', 'opusprimus' ),
+        'id'    => 'footer-middle',
+        'description'   => __( 'This widget area appears in the footer in the middle of the theme.', 'opusprimus' ),
+    ) );
+
+    register_sidebar( array(
+        'name'  => __( 'Third Footer Widget Area', 'opusprimus' ),
+        'id'    => 'footer-right',
+        'description'   => __( 'This widget area appears in the footer on the right side of the theme.', 'opusprimus' ),
+    ) );
+
 }
 /** Register sidebars by running `opus_primus_widgets` on the `widgets_init` action hook. */
 add_action( 'widgets_init', 'opus_primus_widgets' );
