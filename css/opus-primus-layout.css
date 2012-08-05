@@ -45,7 +45,7 @@
     overflow: hidden;   /** This chops off any overhanging divs */
 }
 /** common column settings */
-.colright,
+.column-right,
 .column-middle,
 .column-left {
     float: left;
@@ -66,26 +66,26 @@
     overflow: hidden;
 }
 /** Holy Grail 3 Column settings */
-.threecol {
+.three-columns {
     background: #eee;       /** right column background colour */
 }
-.threecol .column-middle {
+.three-columns .column-middle {
     right: 25%;             /** width of the right column */
     background: #fff;       /** center column background colour */
 }
-.threecol .column-left {
+.three-columns .column-left {
     right: 50%;             /** width of the middle column */
     background: #f4f4f4;    /** left column background colour */
 }
-.threecol .the-loop {
+.three-columns .the-loop {
     width: 46%;             /** width of center column content (column width minus padding on either side) */
     left: 102%;             /** 100% plus left padding of center column */
 }
-.threecol .first-sidebar {
+.three-columns .first-sidebar {
     width: 21%;             /** Width of left column content (column width minus padding on either side) */
     left: 31%;              /** width of (right column) plus (center column left and right padding) plus (left column left padding) */
 }
-.threecol .second-sidebar {
+.three-columns .second-sidebar {
     width: 21%;             /** Width of right column content (column width minus padding on either side) */
     left: 85%;
     /**
@@ -104,7 +104,7 @@
     overflow: hidden;       /** This chops off any overhanging divs */
 }
 /** common column settings */
-.colright,
+.column-right,
 .column-middle,
 .column-left {
     float: left;
@@ -163,7 +163,7 @@
     overflow: hidden;       /** This chops off any overhanging divs */
 }
 /** common column settings */
-.colright,
+.column-right,
 .column-middle,
 .column-left {
     float: left;
@@ -206,7 +206,7 @@
     overflow: hidden;       /** This chops off any overhanging divs */
 }
 /** common column settings */
-.colright,
+.column-right,
 .column-middle,
 .column-left {
     float: left;
@@ -247,7 +247,7 @@
     overflow: hidden;       /** This chops off any overhanging divs */
 }
 /** common column settings */
-.colright,
+.column-right,
 .column-middle,
 .column-left {
     float: left;
@@ -289,7 +289,7 @@
     overflow: hidden;       /** This chops off any overhanging divs */
 }
 /** common column settings */
-.colright,
+.column-right,
 .column-middle,
 .column-left {
     float: left;
@@ -313,7 +313,53 @@
     left: 2%;               /** page left padding */
 }
 
-/** Set minimum content area width to an appropriate value */
-.the-loop {
-    min-width: 500px;
+/** Footer Layout ----------------------------------------------------------- */
+.footer-widget-area {
+    position: relative; /** This fixes the IE7 overflow hidden bug */
+    clear: both;
+    float: left;
+    width: 100%;        /** Width of whole section */
+    overflow: hidden;   /** This chops off any overhanging divs */
+}
+
+#footer-sidebar-two,
+#footer-sidebar-one,
+#footer-sidebar-three {
+    float: left;
+    position: relative;
+    /**
+     * No left and right padding on columns, we just make them narrower instead
+     * only padding top and bottom is included here, make it whatever value you
+     * need.
+     */
+    padding: 0 0 1em 0;
+    overflow: hidden;
+}
+/** 3 Column settings */
+.three-columns-footer {
+    background: #eee;       /** Right column background colour */
+}
+.three-columns-footer .column-middle {
+    right: 25%;             /** Width of the right column */
+    background: #fff;       /** Center column background colour */
+}
+.three-columns-footer .column-left {
+    right: 50%;             /** Width of the middle column */
+    background: #f4f4f4;    /** Left column background colour */
+}
+.three-columns-footer #footer-sidebar-two {
+    width: 46%;             /** Width of center column content (column width minus padding on either side) */
+    left: 102%;             /** 100% plus left padding of center column */
+}
+.three-columns-footer #footer-sidebar-one {
+    width: 21%;             /** Width of left column content (column width minus padding on either side) */
+    left: 31%;              /** Width of (right column) plus (center column left and right padding) plus (left column left padding) */
+}
+.three-columns-footer #footer-sidebar-three {
+    width: 21%;             /** Width of right column content (column width minus padding on either side) */
+    left: 85%;              /** Please make note of the brackets here:
+        (100% - left column width)
+        plus (center column left and right padding)
+        plus (left column left and right padding)
+        plus (right column left padding) */
 }
