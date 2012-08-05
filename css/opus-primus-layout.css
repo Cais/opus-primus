@@ -336,28 +336,31 @@
     overflow: hidden;
 }
 /** 3 Column settings */
+.three-columns-footer ul {
+    margin: 0 0 9px;        /** Remove default left margin */
+}
 .three-columns-footer {
-    background: #eee;       /** Right column background colour */
+    /** background: #eee;       /** Right column background colour */
 }
 .three-columns-footer .column-middle {
-    right: 25%;             /** Width of the right column */
-    background: #fff;       /** Center column background colour */
+    right: 33%;             /** Width of the right column */
+    /** background: #fff;       /** Center column background colour */
 }
 .three-columns-footer .column-left {
-    right: 50%;             /** Width of the middle column */
-    background: #f4f4f4;    /** Left column background colour */
+    right: 33%;             /** Width of the middle column */
+    /** background: #f4f4f4;    /** Left column background colour */
 }
 .three-columns-footer #footer-sidebar-two {
-    width: 46%;             /** Width of center column content (column width minus padding on either side) */
-    left: 102%;             /** 100% plus left padding of center column */
+    width: 31%;             /** Width of center column content (column width minus padding on either side) */
+    left: 101%;             /** 100% plus left padding of center column */
 }
 .three-columns-footer #footer-sidebar-one {
-    width: 21%;             /** Width of left column content (column width minus padding on either side) */
-    left: 31%;              /** Width of (right column) plus (center column left and right padding) plus (left column left padding) */
+    width: 31%;             /** Width of left column content (column width minus padding on either side) */
+    left: 36%;              /** Width of (right column) plus (center column left and right padding) plus (left column left padding) */
 }
 .three-columns-footer #footer-sidebar-three {
-    width: 21%;             /** Width of right column content (column width minus padding on either side) */
-    left: 85%;              /** Please make note of the brackets here:
+    width: 31%;             /** Width of right column content (column width minus padding on either side) */
+    left: 72%;              /** Please make note of the brackets here:
         (100% - left column width)
         plus (center column left and right padding)
         plus (left column left and right padding)
