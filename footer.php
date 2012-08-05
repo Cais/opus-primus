@@ -36,15 +36,7 @@
 do_action( 'opus_primus_before_footer' ); ?>
 
 <div id="footer">
-    <?php
-    /** Add empty hook before Sidebar-Footer */
-    do_action( 'opus_primus_before_sidebar_footer' );
-
-    /** Call the Sidebar-Footer template */
-    get_sidebar( 'footer' );
-
-    /** Add empty hook after Sidebar-Footer */
-    do_action( 'opus_primus_after_sidebar_footer' ); ?>
+    <?php get_sidebar( 'footer' ); ?>
 </div>
 
 <?php

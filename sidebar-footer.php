@@ -29,7 +29,12 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
- */ ?>
+ *
+ * @todo Remove / comment out test code
+ */
+
+/** Add empty hook before Sidebar-Footer */
+do_action( 'opus_primus_before_sidebar_footer' ); ?>
 
 <div id="footer-sidebar">
 
@@ -61,3 +66,7 @@
     </ul><!-- #footer-sidebar-three -->
 
 </div><!-- #footer-sidebar -->
+
+<?php
+/** Add empty hook after Sidebar-Footer */
+do_action( 'opus_primus_after_sidebar_footer' );
