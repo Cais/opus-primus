@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/opus-primus-layout.css" afterPath="$PROJECT_DIR$/css/opus-primus-layout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/opus-primus.css" afterPath="$PROJECT_DIR$/css/opus-primus.css" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +25,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="opus-primus-layout.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="opus-primus.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1042" column="0" selection-start="21660" selection-end="21660" vertical-scroll-proportion="0.85238785">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="opus-primus-layout.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/opus-primus-layout.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="4" selection-start="2079" selection-end="2079" vertical-scroll-proportion="1.7300885">
+            <state line="337" column="43" selection-start="10894" selection-end="10894" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -52,7 +61,6 @@
         <option value="$PROJECT_DIR$/comments.php" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/css/style.less" />
-        <option value="$PROJECT_DIR$/css/opus-primus.css" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/404.php" />
         <option value="$PROJECT_DIR$/archive.php" />
@@ -63,6 +71,7 @@
         <option value="$PROJECT_DIR$/footer.php" />
         <option value="$PROJECT_DIR$/sidebar-footer.php" />
         <option value="$PROJECT_DIR$/css/opus-primus-layout.css" />
+        <option value="$PROJECT_DIR$/css/opus-primus.css" />
       </list>
     </option>
   </component>
@@ -914,7 +923,11 @@
       <created>1344194824914</created>
       <updated>1344194824914</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="Complete equal width footer widget columns styles">
+      <created>1344195424461</created>
+      <updated>1344195424461</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -992,7 +1005,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Footer styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete equal width footer widget columns styles" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1005,7 +1018,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Add &quot;show_mod_author=true&quot; to page byline as the default" />
     <MESSAGE value="Added customizable sticky note flag" />
     <MESSAGE value="Fix broken current day box if at beginning or end of week." />
     <MESSAGE value="Change to a small subset of Bootstrap CSS; remove Bootstrap.js; remove Boostrap image files" />
@@ -1030,6 +1042,7 @@
     <MESSAGE value="Apply micro clearfix to major templates; move Micro Clearfix from LESS to CSS; remove old Clearfix CSS" />
     <MESSAGE value="Move some more code around ..." />
     <MESSAGE value="Footer styles" />
+    <MESSAGE value="Complete equal width footer widget columns styles" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1055,13 +1068,6 @@
     <entry file="file://$PROJECT_DIR$/css/style.less">
       <provider selected="true" editor-type-id="text-editor">
         <state line="73" column="0" selection-start="2300" selection-end="2300" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="542" column="0" selection-start="10272" selection-end="10272" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1142,7 +1148,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/opus-primus-layout.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="4" selection-start="2079" selection-end="2079" vertical-scroll-proportion="1.7300885">
+        <state line="337" column="43" selection-start="10894" selection-end="10894" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1042" column="0" selection-start="21660" selection-end="21660" vertical-scroll-proportion="0.85238785">
           <folding />
         </state>
       </provider>
