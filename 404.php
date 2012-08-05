@@ -35,7 +35,7 @@
 global $opus_archive, $opus_structure;
 get_header( '404' ); ?>
 
-<div class="content-wrapper">
+<div class="content-wrapper cf">
 
     <?php echo $opus_structure->layout_open(); ?>
     <div class="the-loop">

@@ -528,23 +528,15 @@ table {
 tt { /** Placeholder */ }
 
 /** Elements Requiring Clearance */
+/** Micro Clearfix ---------------------------------------------------------- */
+.cf:before, .cf:after { content: ""; display: table; }
+.cf:after { clear: both; }
+.cf { zoom: 1; }
+
 div.meta-byline,
 h2.post-title,
 ul.archive,
 ul.sidebar {
-    clear: both;
-}
-
-/** - Clearfix */
-.clearfix {
-    *zoom: 1;
-}
-.clearfix:before,
-.clearfix:after {
-    display: table;
-    content: "";
-}
-.clearfix:after {
     clear: both;
 }
 

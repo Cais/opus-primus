@@ -39,7 +39,7 @@
 global $opus_nav, $opus_structure;
 get_header( get_post_format() ); ?>
 
-<div class="content-wrapper">
+<div class="content-wrapper cf">
 
     <?php echo $opus_structure->layout_open(); ?>
 
