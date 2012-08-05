@@ -34,6 +34,7 @@
 
 global $opus_nav, $opus_structure;
 get_header( 'search' ); ?>
+
 <div class="content-wrapper">
 
     <?php echo $opus_structure->layout_open(); ?>
@@ -57,5 +58,6 @@ get_header( 'search' ); ?>
     echo $opus_structure->layout_close(); ?>
 
 </div><!-- #content-wrapper -->
+
 <?php
 get_footer( 'search' );
