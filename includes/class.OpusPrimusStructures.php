@@ -773,6 +773,31 @@ class OpusPrimusStructures {
         do_action( 'opus_after_status_update' );
 
     }
+
+    /**
+     * Opus Primus Credits
+     * Displays the current theme name and its parent if one exists.
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    is_child_theme
+     * @uses    parent
+     * @uses    wp_get_theme
+     *
+     * @todo Clean up; sort out text; make filterable; return data versus echo
+     */
+    function credits() {
+        $active_theme_data = wp_get_theme();
+        if ( is_child_theme() ) {
+            $parent_theme_data = $active_theme_data->parent();
+            echo 'Parent-Theme: ' . $parent_theme_data['Name'];
+            echo 'Child-Theme: ' . $active_theme_data['Name'];
+        } else {
+            echo $active_theme_data['Name'] . ' Theme';
+        }
+
+    }
 }
 $opus_structure = new OpusPrimusStructures();
 

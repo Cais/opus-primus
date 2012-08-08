@@ -30,6 +30,8 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @todo Place credits call more appropriately and clean up code formats
  */
 
 /** Add empty hook at beginning of footer */
@@ -37,6 +39,7 @@ do_action( 'opus_primus_before_footer' ); ?>
 
 <div id="footer">
     <?php get_sidebar( 'footer' ); ?>
+    <?php global $opus_structure; $opus_structure->credits(); ?>
 </div>
 
 <?php
