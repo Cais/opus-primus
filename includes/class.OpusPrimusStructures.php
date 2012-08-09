@@ -790,9 +790,14 @@ class OpusPrimusStructures {
      * @uses    parent
      * @uses    wp_get_theme
      *
+     * @param   bool $none - true|false - default show credits|return null
+     *
      * @return  mixed|void - theme credits with links|filtered credits
      */
-    function credits() {
+    function credits( $none=true ) {
+        if ( false == $none ) {
+            return null;
+        }
         $active_theme_data = wp_get_theme();
         if ( is_child_theme() ) {
             $parent_theme_data = $active_theme_data->parent();
@@ -816,6 +821,7 @@ class OpusPrimusStructures {
         return apply_filters( 'opus_primus_credits', $credits );
 
     }
+
 }
 $opus_structure = new OpusPrimusStructures();
 
