@@ -50,7 +50,10 @@
  * === Post-Format ===
  * === Post-Format: Gallery ===
  * === Post-Format: Image ===
+ * === Post-Format: Quote ===
+ * === Post-Format: Status ===
  *
+ * === Footer ===
  *
  * === Misbehaving Common Plugins ===
  * Jetpack
@@ -957,7 +960,7 @@ td.archive-image-excerpt {
 }
 /** End: Post-Format: Image ------------------------------------------------- */
 
-/** Post-Format: Quote ------------------------------------------------------ */
+/** === Post-Format: Quote === ---------------------------------------------- */
 @font-face {
     font-family: 'Merienda';
     src: url('../fonts/Merienda.ttf') format('truetype');
@@ -993,7 +996,19 @@ td.archive-image-excerpt {
     line-height: 18px;
 }
 
-/** Post-Format: Status ----------------------------------------------------- */
+/**
+ * Another JetPack hack ...
+ * Navigator: Captain, there's an iceberg ahead!
+ * Captain: Hold your course! Engine room, ramming speed!
+ */
+blockquote + div.sharing {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+}
+/** End: Post-Format: Quote ------------------------------------------------- */
+
+/** === Post-Format: Status === --------------------------------------------- */
 .post.format-status div.opus-status-update {
     filter: alpha(opacity=10);
     line-height: 0;
@@ -1009,26 +1024,11 @@ td.archive-image-excerpt {
 }
 /** End: Post-Format: Status ------------------------------------------------ */
 
-/**
- * Another JetPack hack ...
- * Navigator: Captain, there's an iceberg ahead!
- * Captain: Hold your course! Engine room, ramming speed!
- */
-blockquote + div.sharing {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    line-height: 24px;
-}
-/** End: Post-Format: Quote ------------------------------------------------- */
-
-/** === Credit Phrase === --------------------------------------------------- */
-div#site-generator {
+/** === Footer === ---------------------------------------------------------- */
+h6#site-generator {
     border-top: 1px solid #e0e0e0;
 }
-.credit-button{
-    text-transform: none;
-}
-/** End: Credit Phrase ------------------------------------------------------ */
+/** End: Footer ------------------------------------------------------------- */
 
 
 /** === Misbehaving Common Plugins === -------------------------------------- */
@@ -1037,7 +1037,7 @@ div#site-generator {
 /** Jetpack (WP Stats) - smiley face */
 img#wpstats { display: none; }
 
-/** Jetpack - scribe checkboxes after comments */
+/** Jetpack - subscribe checkboxes after comments */
 p.comment-subscription-form label#subscribe-blog-label,
 p.comment-subscription-form label#subscribe-label {
     left: 16px;

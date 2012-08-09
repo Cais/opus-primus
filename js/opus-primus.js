@@ -43,8 +43,4 @@ jQuery( document ).ready( function( $ ) {
     $( '.single .attached-image img, span.archive-image img' ).addClass( 'image-shadow' );
     /** Wrap the comment reply link text in a button */
     $( 'div.reply a' ).wrapInner( '<button class="reply-button" />' );
-    /** Wrap the credit-phrase links in a button */
-    $( 'span.credit-phrase a' ).wrapInner( '<button class="credit-button" />' );
-    $( '#site-generator' ).wrap( '<h6 />' );
-
 } );

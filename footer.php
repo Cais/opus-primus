@@ -43,9 +43,9 @@ do_action( 'opus_primus_before_footer' ); ?>
         <?php get_sidebar( 'footer' ); ?>
     </div>
 
-    <div id="site-generator">
+    <h6 id="site-generator">
         <?php global $opus_structure; echo $opus_structure->credits(); ?>
-    </div>
+    </h6>
 
     <div id="site-copyright">
         <?php  ?>
