@@ -30,8 +30,6 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
- *
- * @todo Place credits call more appropriately and clean up code formats
  */
 
 /** Add empty hook at beginning of footer */

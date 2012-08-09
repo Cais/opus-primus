@@ -842,9 +842,12 @@ class OpusPrimusStructures {
      * @uses    post_date_gmt
      *
      * @param   bool $show
+     * @param   bool $by_author
      * @return  mixed|null|void
+     *
+     * @todo set param as options
      */
-    function copyright( $show = true ){
+    function copyright( $show = true, $by_author = true ){
         if ( false == $show ) {
             return null;
         }
@@ -873,8 +876,19 @@ class OpusPrimusStructures {
             $output .= sprintf( __( 'Copyright &copy; %1$s-%2$s', 'opusprimus' ), $first_post_year, date( 'Y' ) );
         }
 
-        /** Append content owner */
-        $output .= ' <a href="' . home_url( '/' ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" rel="home">' . get_bloginfo( 'name', 'display' ) .'</a>';
+        /**
+         * Append content owner.
+         * Default settings will show post author as the copyright holder in
+         * single views.
+         */
+        if ( is_single() && $by_author ) {
+            global $post;
+            $author = get_the_author_meta( 'display_name', $post->post_author );
+            $author_url = get_the_author_meta( 'user_url', $post->post_author );
+            $output .= ' <a href="' . $author_url . '" title="' . esc_attr( sprintf( __( 'To the web site of %1$s', 'opusprimus' ), $author ) ) . '" rel="author">' . $author .'</a>';
+        } else {
+            $output .= ' <a href="' . home_url( '/' ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" rel="home">' . get_bloginfo( 'name', 'display' ) .'</a>';
+        }
         /** Append usage terms */
         $output .= ' ' . __( 'All Rights Reserved.', 'opusprimus' );
 
