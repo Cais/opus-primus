@@ -44,7 +44,7 @@ do_action( 'opus_primus_before_footer' ); ?>
     </div>
 
     <div id="site-generator">
-        <?php global $opus_structure; $opus_structure->credits(); ?>
+        <?php global $opus_structure; echo $opus_structure->credits(); ?>
     </div>
 
     <div id="site-copyright">

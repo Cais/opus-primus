@@ -776,25 +776,44 @@ class OpusPrimusStructures {
 
     /**
      * Opus Primus Credits
-     * Displays the current theme name and its parent if one exists.
+     * Displays the current theme name and its parent if one exists. Provides
+     * links to the Parent-Theme (Opus Primus), to the Child-Theme (if it
+     * exists) and to WordPress.org.
      *
      * @package OpusPrimus
      * @since   0.1
      *
+     * @uses    esc_attr__
+     * @uses    esc_attr
+     * @uses    esc_url
      * @uses    is_child_theme
      * @uses    parent
      * @uses    wp_get_theme
      *
-     * @todo Clean up; sort out text; make filterable; return data versus echo
+     * @return  mixed|void - theme credits with links|filtered credits
      */
     function credits() {
         $active_theme_data = wp_get_theme();
         if ( is_child_theme() ) {
             $parent_theme_data = $active_theme_data->parent();
-            echo '<br />Played on ' . $parent_theme_data['Name'] . '; tuned to ' . $active_theme_data['Name'] . '; and, conducted by WordPress.';
+            $credits = sprintf(
+                '<div class="generator"><span class="credit-phrase">'
+                    . __( 'Played on %1$s; tuned to %2$s; and, conducted by %3$s.', 'opusprimus' )
+                    . '</span></div>',
+                '<span id="parent-theme"><a href="' . esc_url( $parent_theme_data->get( 'ThemeURI' ) ) . '" title="' . esc_attr( $parent_theme_data->get( 'Description' ) ) . '">' . $parent_theme_data->get( 'Name' ) . '</a></span>',
+                '<span id="child-theme"><a href="' . esc_url( $active_theme_data->get( 'ThemeURI' ) ) . '" title="' . esc_attr( $active_theme_data->get( 'Description' ) ) . '">' . $active_theme_data->get( 'Name' ) . '</a></span>',
+                '<span id="wordpress-link"><a href="http://wordpress.org/" title="' . esc_attr__( 'Semantic Personal Publishing Platform', 'opusprimus' ) . '" rel="generator">WordPress</a></span>'
+            );
         } else {
-            echo '<br />Played on ' . $active_theme_data['Name'] . '; and, conducted by WordPress.';
+            $credits = sprintf(
+                '<div class="generator"><span class="credit-phrase">'
+                    . __( 'Played on %1$s; and, conducted by %2$s.', 'opusprimus' )
+                    . '</span></div>',
+                '<span id="parent-theme"><a href="' . esc_url( $active_theme_data->get( 'ThemeURI' ) ) . '" title="' . esc_attr( $active_theme_data->get( 'Description' ) ) . '">' . $active_theme_data->get( 'Name' ) . '</a></span>',
+                '<span id="wordpress-link"><a href="http://wordpress.org/" title="' . esc_attr__( 'Semantic Personal Publishing Platform', 'opusprimus' ) . '" rel="generator">WordPress</a></span>'
+            );
         }
+        return apply_filters( 'opus_primus_credits', $credits );
 
     }
 }
@@ -805,3 +824,4 @@ function opus_test() {
     echo 'BACON Test!!! PS: This works, too!<br />';
 }
 // add_action( 'opus_after_exif_dimensions', 'opus_test' );
+// add_filter( 'opus_primus_credits', 'opus_test' );

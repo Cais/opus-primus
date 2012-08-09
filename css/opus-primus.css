@@ -1021,6 +1021,14 @@ blockquote + div.sharing {
 }
 /** End: Post-Format: Quote ------------------------------------------------- */
 
+/** === Credit Phrase === --------------------------------------------------- */
+div#site-generator {
+    border-top: 1px solid #e0e0e0;
+}
+.credit-button{
+    text-transform: none;
+}
+/** End: Credit Phrase ------------------------------------------------------ */
 
 
 /** === Misbehaving Common Plugins === -------------------------------------- */
