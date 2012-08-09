@@ -37,11 +37,21 @@
 /** Add empty hook at beginning of footer */
 do_action( 'opus_primus_before_footer' ); ?>
 
-<div id="footer">
-    <?php get_sidebar( 'footer' ); ?>
-    <?php global $opus_structure; $opus_structure->credits(); ?>
-</div>
+<footer>
 
+    <div id="footer-widgets">
+        <?php get_sidebar( 'footer' ); ?>
+    </div>
+
+    <div id="site-generator">
+        <?php global $opus_structure; $opus_structure->credits(); ?>
+    </div>
+
+    <div id="site-copyright">
+        <?php  ?>
+    </div>
+
+</footer>
 <?php
 /** Add empty hook at end of footer */
 do_action( 'opus_primus_before_wp_footer' );

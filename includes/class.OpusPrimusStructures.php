@@ -791,10 +791,9 @@ class OpusPrimusStructures {
         $active_theme_data = wp_get_theme();
         if ( is_child_theme() ) {
             $parent_theme_data = $active_theme_data->parent();
-            echo 'Parent-Theme: ' . $parent_theme_data['Name'];
-            echo 'Child-Theme: ' . $active_theme_data['Name'];
+            echo '<br />Played on ' . $parent_theme_data['Name'] . '; tuned to ' . $active_theme_data['Name'] . '; and, conducted by WordPress.';
         } else {
-            echo $active_theme_data['Name'] . ' Theme';
+            echo '<br />Played on ' . $active_theme_data['Name'] . '; and, conducted by WordPress.';
         }
 
     }
