@@ -790,12 +790,12 @@ class OpusPrimusStructures {
      * @uses    parent
      * @uses    wp_get_theme
      *
-     * @param   bool $none - true|false - default show credits|return null
+     * @param   bool $show - true|false - default show credits|return null
      *
      * @return  mixed|void - theme credits with links|filtered credits
      */
-    function credits( $none=true ) {
-        if ( false == $none ) {
+    function credits( $show = true ) {
+        if ( false == $show ) {
             return null;
         }
         $active_theme_data = wp_get_theme();
@@ -818,7 +818,47 @@ class OpusPrimusStructures {
                 '<span id="wordpress-link"><a href="http://wordpress.org/" title="' . esc_attr__( 'Semantic Personal Publishing Platform', 'opusprimus' ) . '" rel="generator">WordPress</a></span>'
             );
         }
+
         return apply_filters( 'opus_primus_credits', $credits );
+
+    }
+
+
+    function copyright( $show = true ){
+        if ( false == $show ) {
+            return null;
+        }
+
+        /** @var $output - initialize output variable to empty */
+        $output = '';
+
+        /** @var $all_posts - retrieve all published posts in ascending order */
+        $all_posts = get_posts( 'post_status=publish&order=ASC' );
+        /** @var $first_post - get the first post */
+        $first_post = $all_posts[0];
+        /** @var $first_post_date - get the date in a standardized format */
+        $first_post_date = $first_post->post_date_gmt;
+
+        /** First post year versus current year */
+        $first_post_year = substr( $first_post_date, 0, 4 );
+        if ( $first_post_year == '' ) {
+            $first_post_year = date( 'Y' );
+        }
+
+        /** Add to output string */
+        if ( $first_post_year == date( 'Y' ) ) {
+            /** Only use current year if no published posts in previous years */
+            $output .= sprintf( __( 'Copyright &copy; %1$s', 'opusprimus' ), date( 'Y' ) );
+        } else {
+            $output .= sprintf( __( 'Copyright &copy; %1$s-%2$s', 'opusprimus' ), $first_post_year, date( 'Y' ) );
+        }
+
+        /** Append content owner */
+        $output .= ' <a href="' . home_url( '/' ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" rel="home">' . get_bloginfo( 'name', 'display' ) .'</a>';
+        /** Append usage terms */
+        $output .= ' ' . __( 'All Rights Reserved.', 'opusprimus' );
+
+        return apply_filters( 'opus_primus_copyright', $output );
 
     }
 

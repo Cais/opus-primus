@@ -47,9 +47,9 @@ do_action( 'opus_primus_before_footer' ); ?>
         <?php global $opus_structure; echo $opus_structure->credits(); ?>
     </h6>
 
-    <div id="site-copyright">
-        <?php  ?>
-    </div>
+    <h6 id="site-copyright">
+        <?php echo $opus_structure->copyright(); ?>
+    </h6>
 
 </footer>
 <?php
