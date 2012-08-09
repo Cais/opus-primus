@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer.php" afterPath="$PROJECT_DIR$/footer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
     </list>
     <ignored path="opus-primus.iws" />
@@ -29,7 +28,7 @@
       <file leaf-file-name="class.OpusPrimusStructures.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="855" column="32" selection-start="33569" selection-end="33569" vertical-scroll-proportion="0.6526442">
+            <state line="875" column="35" selection-start="34164" selection-end="34164" vertical-scroll-proportion="0.69471157">
               <folding />
             </state>
           </provider>
@@ -1025,7 +1024,11 @@
       <created>1344524480218</created>
       <updated>1344524480218</updated>
     </task>
-    <option name="localTasksCounter" value="154" />
+    <task id="LOCAL-00154" summary="Added copyright structure; updated 'footer.php'">
+      <created>1344530385838</created>
+      <updated>1344530385838</updated>
+    </task>
+    <option name="localTasksCounter" value="155" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1123,7 +1126,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added boolean parameter to `credits`" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added copyright structure; updated 'footer.php'" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1136,7 +1139,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Post-Format: Quote without blockquote tag" />
     <MESSAGE value="Add 'Merienda' font and use with Post-Format: Quote; another JetPack CSS hack added" />
     <MESSAGE value="Adjusted Post-Format: Quote font-size based on view (see all posts, single, and archive)" />
     <MESSAGE value="More specific identifier needed" />
@@ -1161,6 +1163,7 @@
     <MESSAGE value="Set custom style sheet enqueue version based on theme version" />
     <MESSAGE value="Remove jQuery wraps from footer elements; adjust relevant CSS" />
     <MESSAGE value="Added boolean parameter to `credits`" />
+    <MESSAGE value="Added copyright structure; updated 'footer.php'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1251,7 +1254,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="855" column="32" selection-start="33569" selection-end="33569" vertical-scroll-proportion="0.6526442">
+        <state line="875" column="35" selection-start="34164" selection-end="34164" vertical-scroll-proportion="0.69471157">
           <folding />
         </state>
       </provider>

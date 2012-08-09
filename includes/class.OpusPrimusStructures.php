@@ -824,6 +824,26 @@ class OpusPrimusStructures {
     }
 
 
+    /**
+     * Opus Primus Copyright
+     * Returns copyright year(s) as defined by the dates found in published
+     * posts. Recognized the site (via its title) as the copyright holder and
+     * notes the terms of the copyright.
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @internal $output can be filtered via the `opus_primus_copyright` hook
+     *
+     * @uses    apply_filters
+     * @uses    get_bloginfo
+     * @uses    get_posts
+     * @uses    home_url
+     * @uses    post_date_gmt
+     *
+     * @param   bool $show
+     * @return  mixed|null|void
+     */
     function copyright( $show = true ){
         if ( false == $show ) {
             return null;
