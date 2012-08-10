@@ -879,9 +879,9 @@ class OpusPrimusStructures {
         /**
          * Append content owner.
          * Default settings will show post author as the copyright holder in
-         * single views.
+         * single and page views.
          */
-        if ( is_single() && $by_author ) {
+        if ( ( is_single() || is_page() ) && $by_author ) {
             global $post;
             $author = get_the_author_meta( 'display_name', $post->post_author );
             $author_url = get_the_author_meta( 'user_url', $post->post_author );
