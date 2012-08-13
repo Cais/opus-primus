@@ -28,15 +28,6 @@
       <file leaf-file-name="media-queries.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/media-queries.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="6" selection-start="2755" selection-end="2755" vertical-scroll-proportion="0.6486797">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="opus-primus-layout.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/opus-primus-layout.css">
-          <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
@@ -1083,7 +1074,11 @@
       <created>1344876140864</created>
       <updated>1344876140880</updated>
     </task>
-    <option name="localTasksCounter" value="163" />
+    <task id="LOCAL-00163" summary="RWD ... more adjustments">
+      <created>1344877186562</created>
+      <updated>1344877186562</updated>
+    </task>
+    <option name="localTasksCounter" value="164" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1305,7 +1300,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/media-queries.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="6" selection-start="2755" selection-end="2755" vertical-scroll-proportion="0.6486797">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

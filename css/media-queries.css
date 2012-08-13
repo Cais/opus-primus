@@ -32,6 +32,74 @@
 
 /** ------------------------------------------------------------------------- */
 
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    /* Styles */
+    .two-column .the-loop,
+    .three-column .the-loop {
+        width: 98%;
+    }
+    .two-column .first-sidebar,
+    .three-column .first-sidebar,
+    .two-column .second-sidebar,
+    .three-column .second-sidebar {
+        width: 256px;
+    }
+    .right-sidebar .first-sidebar,
+    .right-sidebar .second-sidebar {
+        left: 28%;
+    }
+    .three-column .blog-style .first-sidebar,
+    .three-column .blog-style .second-sidebar {
+        left: 53%;
+    }
+
+    .right-sidebar {
+        background: none repeat scroll 0 0 #FFFFFF;
+    }
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and ( min-width : 321px ) {
+    /* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and ( max-width : 320px ) {
+    /* Styles */
+    .two-column .the-loop,
+    .three-column .the-loop {
+        width: 98%;
+    }
+    .two-column .first-sidebar,
+    .three-column .first-sidebar,
+    .two-column .second-sidebar,
+    .three-column .second-sidebar {
+        width: 256px;
+    }
+    .right-sidebar .first-sidebar,
+    .right-sidebar .second-sidebar {
+        left: 28%;
+    }
+    .three-column .blog-style .first-sidebar,
+    .three-column .blog-style .second-sidebar {
+        left: 53%;
+    }
+
+    .two-column .right-sidebar,
+    .three-column .column-middle,
+    .three-column .blog-style {
+        background: none repeat scroll 0 0 #FFFFFF;
+    }
+
+}
+
+
 /** iPads (portrait and landscape) */
 @media only screen
 and (min-device-width : 768px)
@@ -68,7 +136,7 @@ and (orientation : portrait) {
 
 /** Small Desktop / Laptop Screen */
 @media screen
-/* and ( min-width : 768px ) */
+and ( min-width : 481px )
 and ( max-width : 1023px ) {
     /** Layout */
     .two-column .the-loop,
