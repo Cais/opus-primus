@@ -32,11 +32,53 @@
 
 /** ------------------------------------------------------------------------- */
 
+/** iPads (portrait and landscape) */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+    /* Styles */
+}
+
+/** iPads (landscape) */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+    /* Styles */
+}
+
+/** iPads (portrait) */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+    /* Styles */
+}
+
+
+/** Width at maximum 800px */
+@media screen
+and ( max-width : 800px ) {
+    /** Placeholder for old 800 x 600 screens */
+}
+
+
+/** Width from 801px to 1023px */
+@media screen
+and ( min-width : 801px )
+and ( max-width : 1024px ) {
+    /** Viewport not at full screen */
+    .three-column .gallery-secondary-images a img {
+        max-width: 125px;
+    }
+
+}
+
 
 /** Width from 1024px to 1280px */
 @media screen
-and ( min-width: 1024px )
-and ( max-width: 1280px ) {
+and ( min-width : 1024px )
+and ( max-width : 1280px ) {
     .three-column .gallery-secondary-images a img {
         max-width: 125px;
     }
@@ -45,6 +87,7 @@ and ( max-width: 1280px ) {
 
 
 /** Width from 1281px to ... */
-@media screen and ( min-width: 1281px ) {
-
+@media screen
+and ( min-width : 1281px ) {
+    /** Wide Screens */
 }
