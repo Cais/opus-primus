@@ -57,10 +57,7 @@ and (orientation : portrait) {
     .three-column .the-loop {
         width: 98%;
     }
-    .blog-style .first-sidebar {
-        left: 51%;
-        width: 360px;
-    }
+    .blog-style .first-sidebar,
     .blog-style .second-sidebar {
         left: 53%;
         width: 360px;
@@ -71,7 +68,8 @@ and (orientation : portrait) {
 
 /** Small Desktop / Laptop Screen */
 @media screen
-and ( min-width : 768px ) {
+and ( min-width : 768px )
+and ( max-width : 800px ) {
     /** Layout */
     .two-column .the-loop,
     .three-column .the-loop {
@@ -83,9 +81,7 @@ and ( min-width : 768px ) {
     .three-column .second-sidebar {
         width: 360px;
     }
-    .blog-style .first-sidebar {
-        left: 51%;
-    }
+    .blog-style .first-sidebar,
     .blog-style .second-sidebar {
         left: 53%;
     }
