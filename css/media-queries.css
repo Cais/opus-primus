@@ -68,8 +68,8 @@ and (orientation : portrait) {
 
 /** Small Desktop / Laptop Screen */
 @media screen
-and ( min-width : 768px )
-and ( max-width : 800px ) {
+/* and ( min-width : 768px ) */
+and ( max-width : 1023px ) {
     /** Layout */
     .two-column .the-loop,
     .three-column .the-loop {
@@ -89,10 +89,9 @@ and ( max-width : 800px ) {
 }
 
 
-/** Support for 800 x 600 screens - are there any out there?! */
 @media screen
 and ( min-width : 769px )
-and ( max-width : 800px ) {
+and ( max-width : 1023px ) {
     /** Layout */
     .blog-style .second-sidebar {
         left: 56%;
