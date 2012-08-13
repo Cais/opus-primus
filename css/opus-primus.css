@@ -976,6 +976,7 @@ td.archive-image-excerpt {
     font-weight: 300;
     line-height: 33.75px;
     margin: 0 auto;
+    padding: 0 5px;
     text-align: justify;
 }
 
