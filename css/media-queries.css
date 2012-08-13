@@ -52,24 +52,67 @@ and (orientation : landscape) {
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : portrait) {
-    /* Styles */
+    /** Layout */
+    .two-column .the-loop,
+    .three-column .the-loop {
+        width: 98%;
+    }
+    .blog-style .first-sidebar {
+        left: 51%;
+        width: 360px;
+    }
+    .blog-style .second-sidebar {
+        left: 53%;
+        width: 360px;
+    }
+
 }
 
 
-/** Width at maximum 800px */
+/** Small Desktop / Laptop Screen */
 @media screen
+and ( min-width : 768px ) {
+    /** Layout */
+    .two-column .the-loop,
+    .three-column .the-loop {
+        width: 98%;
+    }
+    .two-column .first-sidebar,
+    .three-column .first-sidebar,
+    .two-column .second-sidebar,
+    .three-column .second-sidebar {
+        width: 360px;
+    }
+    .blog-style .first-sidebar {
+        left: 51%;
+    }
+    .blog-style .second-sidebar {
+        left: 53%;
+    }
+
+}
+
+
+/** Support for 800 x 600 screens - are there any out there?! */
+@media screen
+and ( min-width : 769px )
 and ( max-width : 800px ) {
-    /** Placeholder for old 800 x 600 screens */
+    /** Placeholder */
 }
 
 
-/** Width from 801px to 1023px */
+/** Width from 768px to 1023px */
 @media screen
-and ( min-width : 801px )
-and ( max-width : 1024px ) {
+and ( min-width : 768px )
+and ( max-width : 1023px ) {
     /** Viewport not at full screen */
     .three-column .gallery-secondary-images a img {
         max-width: 125px;
+    }
+
+    /** More */
+    body {
+        padding: 0 5px;
     }
 
 }
