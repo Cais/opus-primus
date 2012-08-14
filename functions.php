@@ -53,6 +53,8 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
      */
     function opus_primus_enqueue_scripts() {
         /** Enqueue scripts */
+        /** Enqueue ProtoFluid for testing purposes */
+        wp_enqueue_script( 'protoFluid', OPUS_JS . 'protoFluid3.02.js', array( 'jquery' ), '3.02' );
         /** Enqueue FitVids with jQuery dependency */
         wp_enqueue_script( 'fitVids', OPUS_JS . 'jquery.fitvids.js', array( 'jquery' ), '1.0', 'true' );
         /** Enqueue FitText with jQuery dependency */
@@ -63,6 +65,7 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
         wp_enqueue_style( 'Opus-Primus-Layout', OPUS_CSS . 'opus-primus-layout.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
         wp_enqueue_style( 'Opus-Primus', OPUS_CSS . 'opus-primus.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
         wp_enqueue_style( 'Opus-Primus-Media-Queries', OPUS_CSS . 'media-queries.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
+        // wp_enqueue_style( 'Opus-Primus-Responsive-Layout', OPUS_CSS . 'responsive-layout.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
         /** Enqueue custom stylesheet after to maintain expected specificity */
         if ( is_readable( OPUS_CSS . 'opus-primus-custom-style.css' ) ) {
             wp_enqueue_style( 'Opus-Primus-Custom-Style', OPUS_CSS . 'opus-primus-custom-style.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
