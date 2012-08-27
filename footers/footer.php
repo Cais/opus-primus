@@ -1,7 +1,8 @@
 <?php
 /**
  * Footer Template
- * Default document footer.
+ * A generic footer template to show when no other more specific post format
+ * footer template is available.
  *
  * @package     OpusPrimus
  * @since       0.1
@@ -30,25 +31,20 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
- */
+ */ ?>
 
-/** Add empty hook at beginning of footer */
-do_action( 'opus_primus_before_footer' );
+<footer>
 
-/** Call footer template based on post format */
-get_template_part( 'footers/footer', get_post_format() );
+    <div id="footer-widgets">
+        <?php get_sidebar( 'footer' ); ?>
+    </div>
 
-/** Add empty hook at end of footer */
-do_action( 'opus_primus_before_wp_footer' );
+    <h6 id="site-generator">
+        <?php global $opus_structure; echo $opus_structure->credits(); ?>
+    </h6>
 
-/**
- * `wp_footer` is placed inside the #opus element to provide a container for
- * styling content displayed in the footer by other code constructs such as
- * plugins and scripts.
- */
-wp_footer(); ?>
+    <h6 id="site-copyright">
+        <?php echo $opus_structure->copyright(); ?>
+    </h6>
 
-</div><!-- #opus -->
-
-</body>
-</html>
+</footer>
