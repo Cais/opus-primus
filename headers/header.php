@@ -1,7 +1,8 @@
 <?php
 /**
  * Header Template
- * Default document header including primary navigation.
+ * A generic header template to show when no other more specific post-format
+ * header template is available.
  *
  * @package     OpusPrimus
  * @since       0.1
@@ -30,35 +31,9 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
- */
-?>
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>" />
-    <meta name="viewport" content="width=device-width">
-    <title><?php wp_title( '|', true, 'right' ); ?></title>
-    <link rel="profile" href="http://gmpg.org/xfn/11" />
-    <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-    <?php wp_head(); ?>
-</head>
+ */ ?>
 
-<body <?php body_class(); ?>>
-<div id="opus">
-    <header>
-
-        <?php do_action( 'opus_primus_before_header' ); ?>
-
-        <?php get_template_part( 'headers/header', get_post_format() ); ?>
-
-        <?php do_action( 'opus_primus_after_header' ); ?>
-        <?php do_action( 'opus_primus_before_nav' ); ?>
-
-        <nav>
-            <?php opus_primus_primary_menu(); ?>
-        </nav>
-
-        <?php do_action( 'opus_primus_after_nav' ); ?>
-
-    </header>
+<hgroup>
+    <h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+    <h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
+</hgroup>

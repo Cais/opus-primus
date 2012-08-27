@@ -40,7 +40,7 @@
  */
 
 global $opus_nav, $opus_structure;
-get_header(); ?>
+get_header( get_post_format() ); ?>
 
 <div class="content-wrapper cf">
 
@@ -69,4 +69,4 @@ get_header(); ?>
 </div><!-- #content-wrapper -->
 
 <?php
-get_footer();
+get_footer( get_post_format() );
