@@ -48,6 +48,7 @@ do_action( 'opus_primus_before_wp_footer' );
  */
 wp_footer(); ?>
 
+<!-- The following tags are opened in header.php -->
 </div><!-- #opus -->
 
 </body>
