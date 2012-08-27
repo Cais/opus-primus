@@ -42,14 +42,14 @@ get_template_part( 'footers/footer', get_post_format() );
 do_action( 'opus_primus_before_wp_footer' );
 
 /**
- * `wp_footer` is placed inside the #opus element to provide a container for
- * styling content displayed in the footer by other code constructs such as
+ * `wp_footer` is placed inside the #opus-primus element to provide a container
+ * for styling content displayed in the footer by other code constructs such as
  * plugins and scripts.
  */
 wp_footer(); ?>
 
 <!-- The following tags are opened in header.php -->
-</div><!-- #opus -->
+</div><!-- #opus-primus -->
 
 </body>
 </html>

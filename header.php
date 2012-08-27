@@ -45,28 +45,13 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="opus">
-    <header>
+<div id="opus-primus">
+    <?php
+    /** Add empty hook before header */
+    do_action( 'opus_primus_before_header' );
 
-        <?php
-        /** Add empty hook before header */
-        do_action( 'opus_primus_before_header' );
+    /** Call header template with reference to post format */
+    get_template_part( 'headers/header', get_post_format() );
 
-        /** Call header template based on post-format */
-        get_template_part( 'headers/header', get_post_format() );
-
-        /** Add empty hook after header */
-        do_action( 'opus_primus_after_header' );
-
-        /** Add empty hook before primary navigation */
-        do_action( 'opus_primus_before_nav' ); ?>
-
-        <nav>
-            <?php opus_primus_primary_menu(); ?>
-        </nav>
-
-        <?php
-        /** Add empty hook after primary navigation */
-        do_action( 'opus_primus_after_nav' ); ?>
-
-    </header>
+    /** Add empty hook after header */
+    do_action( 'opus_primus_after_header' );
