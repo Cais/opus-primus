@@ -255,7 +255,6 @@ class OpusPrimusStructures {
         return $output;
     }
 
-
     /**
      * Opus Primus Sticky Flag
      * Returns a text string as a button that links to the post, used with the
@@ -554,8 +553,8 @@ class OpusPrimusStructures {
         }
 
         echo '<div class="post-content">';
-        /** The post excerpt */
-        the_content( $more_link_text, $stripteaser );
+            /** The post excerpt */
+            the_content( $more_link_text, $stripteaser );
         echo '</div>';
 
         /** Add empty hook after the content */
@@ -661,6 +660,12 @@ class OpusPrimusStructures {
     /**
      * Opus Primus Post Coda
      * Adds text art after post content to signify the end of the post
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    apply_filters
+     * @uses    do_action
      */
     function post_coda(){
         /** Add empty hook before post coda */
