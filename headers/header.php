@@ -31,7 +31,9 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
- */ ?>
+ */
+
+global $opus_nav; ?>
 
 <header>
 
@@ -55,7 +57,7 @@
     do_action( 'opus_primus_before_nav' ); ?>
 
     <nav>
-        <?php opus_primus_primary_menu(); ?>
+        <?php $opus_nav->opus_primus_primary_menu(); ?>
     </nav>
 
     <?php
