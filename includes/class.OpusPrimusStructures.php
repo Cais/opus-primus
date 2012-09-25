@@ -37,7 +37,7 @@ class OpusPrimusStructures {
     function __construct() {}
 
     /**
-     * Opus Primus Layout - Open
+     * Layout - Open
      * Adds appropriate CSS containers depending on the layout structure.
      *
      * @package     OpusPrimus
@@ -80,7 +80,7 @@ class OpusPrimusStructures {
     }
 
     /**
-     * Opus Primus Layout - Close
+     * Layout - Close
      * Closes appropriate CSS containers depending on the layout structure.
      *
      * @package     OpusPrimus
@@ -120,7 +120,7 @@ class OpusPrimusStructures {
     }
 
     /**
-     * Opus Primus Post Title
+     * Post Title
      * Outputs the post title
      *
      * @package OpusPrimus
@@ -157,7 +157,7 @@ class OpusPrimusStructures {
     }
 
     /**
-     * Opus Primus No Title Link
+     * No Title Link
      *
      * This returns a URL to the post using the anchor text 'Posted' in the meta
      * details with the post excerpt as the URL title; or, returns the word
@@ -185,7 +185,7 @@ class OpusPrimusStructures {
     }
 
     /**
-     * Opus Primus Comments Link
+     * Comments Link
      * Displays amount of approved comments the post or page has
      *
      * @package OpusPrimus
@@ -226,7 +226,7 @@ class OpusPrimusStructures {
     }
 
     /**
-     * Opus Primus Post Format Flag
+     * Post Format Flag
      * Returns a string with the post-format type; optionally can not display a
      * flag for the standard post-format (default).
      *
@@ -256,7 +256,7 @@ class OpusPrimusStructures {
     }
 
     /**
-     * Opus Primus Sticky Flag
+     * Sticky Flag
      * Returns a text string as a button that links to the post, used with the
      * "sticky" post functionality of WordPress
      *
@@ -292,7 +292,7 @@ class OpusPrimusStructures {
     }
 
     /**
-     * Opus Primus Post By Line
+     * Post Byline
      * Outputs post meta details consisting of a configurable anchor for post
      * link anchor text, the date and time posted, and the post author. The post
      * author is also linked to the author's archive page.
@@ -382,8 +382,7 @@ class OpusPrimusStructures {
     }
 
     /**
-     * Opus Primus Modified Post
-     *
+     * Modified Post
      * If the post time and the last modified time are different display
      * modified date and time and the modifying author
      *
@@ -471,8 +470,7 @@ class OpusPrimusStructures {
     }
 
     /**
-     * Opus Primus Meta Tags
-     *
+     * Meta Tags
      * Prints HTML with meta information for the current post (category, tags
      * and permalink) - inspired by TwentyTen
      *
@@ -523,7 +521,7 @@ class OpusPrimusStructures {
     }
 
     /**
-     * Opus Primus Post Content
+     * Post Content
      * Outputs `the_content` and allows for the_content parameters to be used
      *
      * @link    http://codex.wordpress.org/Function_Reference/the_content
@@ -563,7 +561,7 @@ class OpusPrimusStructures {
     }
 
     /**
-     * Opus Primus Post Excerpt
+     * Post Excerpt
      * Outputs `the_excerpt`
      *
      * @package OpusPrimus
@@ -585,7 +583,7 @@ class OpusPrimusStructures {
     }
 
     /**
-     * Opus Primus Post Author
+     * Post Author
      * Outputs the author details: web address, email, and biography from the
      * user profile information - not designed for use in the post meta section.
      *
@@ -658,7 +656,7 @@ class OpusPrimusStructures {
     }
 
     /**
-     * Opus Primus Post Coda
+     * Post Coda
      * Adds text art after post content to signify the end of the post
      *
      * @package OpusPrimus
@@ -682,7 +680,7 @@ class OpusPrimusStructures {
     }
 
     /**
-     * Opus Primus Search Results
+     * Search Results
      * Outputs message if no posts are found by 'the_Loop' query
      *
      * @package OpusPrimus
@@ -731,7 +729,7 @@ class OpusPrimusStructures {
             'number'    => 10,
         ) );
         /** Display a list of pages to choose from */
-        $opus_nav->opus_primus_search_menu();
+        $opus_nav->search_menu();
 
         /** Add empty hook after no posts results from the_loop query */
         do_action( 'opus_after_search_results' );
@@ -739,7 +737,7 @@ class OpusPrimusStructures {
     }
 
     /**
-     * Opus Primus Status Update
+     * Status Update
      * Displays the human time difference based on how long ago the post was
      * updated
      *
@@ -780,7 +778,7 @@ class OpusPrimusStructures {
     }
 
     /**
-     * Opus Primus Credits
+     * Credits
      * Displays the current theme name and its parent if one exists. Provides
      * links to the Parent-Theme (Opus Primus), to the Child-Theme (if it
      * exists) and to WordPress.org.
@@ -830,7 +828,7 @@ class OpusPrimusStructures {
 
 
     /**
-     * Opus Primus Copyright
+     * Copyright
      * Returns copyright year(s) as defined by the dates found in published
      * posts. Recognized the site (via its title) as the copyright holder and
      * notes the terms of the copyright.

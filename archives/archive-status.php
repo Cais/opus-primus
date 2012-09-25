@@ -49,7 +49,7 @@ global $opus_structure, $opus_nav; ?>
     $opus_structure->comments_link();
     $opus_structure->post_excerpt();
     $opus_structure->status_update();
-    $opus_nav->opus_link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
+    $opus_nav->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
     $opus_structure->meta_tags();
     $opus_structure->post_coda(); ?>
 

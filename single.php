@@ -49,7 +49,7 @@ get_header( get_post_format() ); ?>
         else:
             $opus_structure->search_results();
         endif;
-        $opus_nav->opus_post_link(); ?>
+        $opus_nav->post_link(); ?>
 
     </div><!-- #the-loop -->
 

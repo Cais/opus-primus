@@ -46,7 +46,7 @@ global $opus_nav, $opus_structure, $opus_image;
     }
     $opus_image->featured_thumbnail();
     $opus_structure->post_content();
-    $opus_nav->opus_link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
+    $opus_nav->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
     $opus_structure->meta_tags();
     $opus_structure->post_coda();
     if ( is_single() ) {

@@ -38,29 +38,13 @@ class OpusPrimusNavigation {
     function __construct() {}
 
     /**
-     * === Functions List ( in order of appearance ) ===
-     * - Opus Link Pages
-     * - Opus Posts Link
-     * - Opus Post Link
-     * - Opus Primus Primary Menu
-     * - Opus Primus Page Menu
-     * - Opus Primary Menu
-     * - Opus Primus Secondary Menu
-     * - Opus Secondary Menu
-     * - Opus Primus Search Page Menu
-     * - Opus Primus Search Menu
-     * - Opus Search Menu
-     * - Opus Primus Comments Navigation
-     */
-
-    /**
-     * Opus Link Pages
+     * Link Pages
      * Outputs the navigation structure to move between multiple pages from the
      * same post. All parameters used by `wp_link_pages` can be passed through
      * the function.
      *
      * @link    http://codex.wordpress.org/Function_Reference/wp_link_pages
-     * @example opus_link_pages( array( 'before' => '<p class="navigation link-pages cf">', 'after' => '</p>' ) );
+     * @example link_pages( array( 'before' => '<p class="navigation link-pages cf">', 'after' => '</p>' ) );
      * @internal The above example will output the `wp_link_pages` output in a
      * wrapper consisting of a `p` tag with `classes`
      *
@@ -73,7 +57,7 @@ class OpusPrimusNavigation {
      * @uses    do_action
      * @uses    wp_link_pages
      */
-    function opus_link_pages( $link_pages_args = '', $preface = '' ) {
+    function link_pages( $link_pages_args = '', $preface = '' ) {
         /** @var $defaults - initial values */
         $defaults = array(
             'before'    => '<p class="navigation opus-link-pages cf">' . '<span class="opus-link-pages-preface">' . $preface . '</span>',
@@ -93,7 +77,7 @@ class OpusPrimusNavigation {
     }
 
     /**
-     * Opus Posts Link
+     * Posts Link
      * Outputs the navigation structure to move between archive pages
      *
      * @package OpusPrimus
@@ -103,7 +87,7 @@ class OpusPrimusNavigation {
      * @uses    next_posts_link
      * @uses    previous_posts_link
      */
-    function opus_posts_link() {
+    function posts_link() {
         /** Add empty hook before posts link */
         do_action( 'opus_before_posts_link' );
 
@@ -120,7 +104,7 @@ class OpusPrimusNavigation {
     }
 
     /**
-     * Opus Post Link
+     * Post Link
      * Outputs the navigation structure to move between posts
      *
      * @package OpusPrimus
@@ -130,7 +114,7 @@ class OpusPrimusNavigation {
      * @uses    next_posts_link
      * @uses    previous_posts_link
      */
-    function opus_post_link() {
+    function post_link() {
         /** Add empty hook before post link */
         do_action( 'opus_before_post_link' );
 
@@ -149,7 +133,7 @@ class OpusPrimusNavigation {
 
 
     /**
-     * Opus Primus Comments Navigation
+     * Comments Navigation
      * Displays a link between pages of comments
      *
      * @package OpusPrimus
@@ -174,6 +158,17 @@ class OpusPrimusNavigation {
     }
 
 
+    /**
+     * Image Navigation
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    __
+     * @uses    do_action
+     * @uses    next_image_link
+     * @uses    previous_image_link
+     */
     function image_nav() {
         /** Add empty hook before the image navigation */
         do_action( 'opus_before_image_nav' );
@@ -190,7 +185,7 @@ class OpusPrimusNavigation {
     }
 
     /**
-     * Opus Primus Primary Menu
+     * Primary Menu
      * Primary navigation menu
      *
      * @package OpusPrimus
@@ -201,7 +196,7 @@ class OpusPrimusNavigation {
      * @uses    do_action
      * @uses    wp_nav_menu
      */
-    function opus_primus_primary_menu( $primary_menu_args = '' ) {
+    function primary_menu( $primary_menu_args = '' ) {
         /** Add empty hook before the primary menu */
         do_action( 'opus_before_primary_menu' );
 
@@ -209,7 +204,7 @@ class OpusPrimusNavigation {
         $defaults = array(
             'theme_location'    => 'primary',
             'menu_class'        => 'nav-menu primary',
-            'fallback_cb'       => array( $this, 'opus_primus_list_pages' ),
+            'fallback_cb'       => array( $this, 'list_pages' ),
         );
         $primary_menu_args = wp_parse_args( (array) $defaults, $primary_menu_args );
         wp_nav_menu( $primary_menu_args );
@@ -219,7 +214,7 @@ class OpusPrimusNavigation {
     }
 
     /**
-     * Opus Primus Secondary Menu
+     * Secondary Menu
      * Secondary navigation menu
      *
      * @package OpusPrimus
@@ -230,7 +225,7 @@ class OpusPrimusNavigation {
      * @uses    do_action
      * @uses    wp_nav_menu
      */
-    function opus_primus_secondary_menu( $secondary_menu_args = '' ) {
+    function secondary_menu( $secondary_menu_args = '' ) {
         /** Add empty hook before the secondary menu */
         do_action( 'opus_before_secondary_menu' );
 
@@ -238,7 +233,7 @@ class OpusPrimusNavigation {
         $defaults = array(
             'theme_location'    => 'primary',
             'menu_class'        => 'nav-menu secondary',
-            'fallback_cb'       => array( $this, 'opus_primus_list_pages' ),
+            'fallback_cb'       => array( $this, 'list_pages' ),
         );
         $secondary_menu_args = wp_parse_args( (array) $defaults, $secondary_menu_args );
         wp_nav_menu( $secondary_menu_args );
@@ -248,7 +243,7 @@ class OpusPrimusNavigation {
     }
 
     /**
-     * Opus Primus List Pages
+     * List Pages
      * Callback function for the wp_nav_menu call; accepts wp_nav_menu arguments
      * passed through the callback function.
      *
@@ -262,7 +257,7 @@ class OpusPrimusNavigation {
      * @uses    wp_page_menu
      * @uses    wp_parse_args
      */
-    function opus_primus_list_pages( $page_menu_args ) {
+    function list_pages( $page_menu_args ) {
         $defaults = array(
             'title_li'  => '',
         );
@@ -273,7 +268,7 @@ class OpusPrimusNavigation {
     }
 
     /**
-     * Opus Primus Search Menu
+     * Search Menu
      * Search results navigation menu
      *
      * @package OpusPrimus
@@ -285,7 +280,7 @@ class OpusPrimusNavigation {
      * @uses    search_menu
      * @uses    wp_nav_menu
      */
-    function opus_primus_search_menu( $search_menu_args = '' ) {
+    function search_menu( $search_menu_args = '' ) {
         /** Add empty hook before the search menu */
         do_action( 'opus_before_search_menu' );
 
@@ -294,7 +289,7 @@ class OpusPrimusNavigation {
             'theme_location'    => 'search',
             'container'         => 'li',
             'menu_class'        => 'nav search',
-            'fallback_cb'       => array( $this, 'opus_primus_search_page_menu' ),
+            'fallback_cb'       => array( $this, 'search_page_menu' ),
         );
         $search_menu_args = wp_parse_args( (array) $defaults, $search_menu_args );
         printf( '<ul class="featured search pages"><li><span class="title">%1$s</span>', __( 'Featured Pages:', 'opusprimus' ) );
@@ -306,7 +301,7 @@ class OpusPrimusNavigation {
     }
 
     /**
-     * Opus Primus Search Page Menu
+     * Search Page Menu
      * Callback function for the menu
      *
      * @package OpusPrimus
@@ -317,7 +312,7 @@ class OpusPrimusNavigation {
      * @uses    wp_page_menu
      * @uses    wp_parse_args
      */
-    function opus_primus_search_page_menu( $list_args = '' ) {
+    function search_page_menu( $list_args = '' ) {
         $defaults = array(
             'depth'     => 1,
             'show_home' => true,
