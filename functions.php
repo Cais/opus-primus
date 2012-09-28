@@ -53,8 +53,6 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
      */
     function opus_primus_enqueue_scripts() {
         /** Enqueue scripts */
-        /** Enqueue ProtoFluid for testing purposes */
-        wp_enqueue_script( 'protoFluid', OPUS_JS . 'protoFluid3.02.js', array( 'jquery' ), '3.02' );
         /** Enqueue FitVids with jQuery dependency */
         wp_enqueue_script( 'fitVids', OPUS_JS . 'jquery.fitvids.js', array( 'jquery' ), '1.0', 'true' );
         /** Enqueue FitText with jQuery dependency */
