@@ -671,8 +671,7 @@ class OpusPrimusStructures {
 
         /** Create the text art */
         $post_coda = '* * * * *';
-        printf( '<div class="post-coda">%1$s</div>', apply_filters( 'post_coda', $post_coda )  );
-        echo '<hr />';
+        printf( '<div class="post-coda">%1$s</div>', apply_filters( 'opus_post_coda', $post_coda )  );
 
         /** Add empty hook after the post coda */
         do_action( 'opus_after_post_coda' );
