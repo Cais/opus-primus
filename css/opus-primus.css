@@ -866,7 +866,7 @@ ul.featured li ul.nav div.nav {
 }
 
 /** Featured Image */
-a.featured-thumbnail + div.post-content { float: left; }
+/* a.featured-thumbnail + div.post-content { float: left; } */
 
 /** End: General Images ----------------------------------------------------- */
 
