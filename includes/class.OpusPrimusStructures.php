@@ -37,6 +37,8 @@ class OpusPrimusStructures {
     function __construct() {
         /** Add classes to the body tag */
         add_filter( 'body_class', array( $this, 'body_classes' ) );
+        /** Restructure the browser title */
+        add_filter( 'wp_title', array( $this, 'browser_title' ), 10, 3 );
     }
 
     /**
@@ -79,7 +81,6 @@ class OpusPrimusStructures {
         }
 
         return $layout;
-
     }
 
     /**
@@ -119,7 +120,6 @@ class OpusPrimusStructures {
         }
 
         return $layout;
-
     }
 
     /**
@@ -160,6 +160,45 @@ class OpusPrimusStructures {
 
         /** Return the classes for use with the `body_class` filter */
         return apply_filters( 'opus_primus_body_classes', $classes );
+    }
+
+    /**
+     * Browser Title
+     * Utilizes the `wp_title` filter to add text to the default output
+     *
+     * @package     OpusPrimus
+     * @since       0.1
+     *
+     * @internal    Originally author by Edward Caissie
+     * @link        https://gist.github.com/1410493
+     *
+     * @param       string $old_title - default title text
+     * @param       string $sep - separator character
+     * @param       string $sep_location - left|right - separator placement in relationship to title
+     *
+     * @uses        get_bloginfo - name, description
+     * @uses        is_home
+     * @uses        is_front_page
+     *
+     * @return      string - new title text
+     */
+    function browser_title( $old_title, $sep, $sep_location ) {
+        global $page, $paged;
+        /** Set initial title text */
+        $opus_title_text = $old_title . get_bloginfo( 'name' );
+        /** Add wrapping spaces to separator character */
+        $sep = ' ' . $sep . ' ';
+
+        /** Add the blog description (tagline) for the home/front page */
+        $site_tagline = get_bloginfo( 'description', 'display' );
+        if ( $site_tagline && ( is_home() || is_front_page() ) )
+            $opus_title_text .= "$sep$site_tagline";
+
+        /** Add a page number if necessary */
+        if ( $paged >= 2 || $page >= 2 )
+            $opus_title_text .= $sep . sprintf( __( 'Page %s', 'opusprimus' ), max( $paged, $page ) );
+
+        return $opus_title_text;
     }
 
     /**
