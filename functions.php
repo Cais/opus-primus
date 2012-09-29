@@ -161,9 +161,9 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 }
 add_action( 'after_setup_theme', 'opus_primus_theme_setup' );
 
-if ( ! function_exists( 'opus_enqueue_comment_reply' ) ) {
+if ( ! function_exists( 'opus_primus_enqueue_comment_reply' ) ) {
     /**
-     * Enqueue Comment Reply Script
+     * Enqueue Comment Reply
      * If the page being viewed is a single post/page; and, comments are open;
      * and, threaded comments are turned on then enqueue the built-in
      * comment-reply
@@ -177,13 +177,13 @@ if ( ! function_exists( 'opus_enqueue_comment_reply' ) ) {
      * @uses    get_option
      * @uses    wp_enqueue_script
      */
-    function opus_enqueue_comment_reply() {
+    function opus_primus_enqueue_comment_reply() {
         if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
             wp_enqueue_script( 'comment-reply' );
         }
     }
 }
-add_action( 'comment_form_before', 'opus_enqueue_comment_reply' );
+add_action( 'comment_form_before', 'opus_primus_enqueue_comment_reply' );
 
 if ( ! function_exists( 'opus_primus_title' ) ) {
     /**
