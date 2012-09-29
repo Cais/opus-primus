@@ -161,48 +161,6 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 }
 add_action( 'after_setup_theme', 'opus_primus_theme_setup' );
 
-if ( ! function_exists( 'opus_primus_body_classes' ) ) {
-    /**
-     * Opus Primus Body Classes
-     * A collection of classes added to the HTML body tag for various purposes
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @param   $classes - existing body classes
-     *
-     * @uses    (global) $content_width
-     * @uses    is_active_sidebar
-     *
-     * @return  string - specific class based on active columns
-     */
-    function opus_primus_body_classes( $classes ) {
-        /** Theme Layout */
-        /** Test if all widget areas are inactive for one-column layout */
-        if ( ! ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) || is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
-            $classes[] = 'one-column';
-        }
-        /** Test if the first-sidebar or second-sidebar is active by testing their component widget areas for a two column layout */
-        if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
-            && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
-                && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) ) {
-            $classes[] = 'two-column';
-        } elseif( ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) )
-            && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
-                && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) ) {
-            $classes[] = 'two-column';
-        }
-        /** Test if at least one widget area in each sidebar area is active for a three-column layout */
-        if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) ) && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
-            $classes[] = 'three-column';
-        }
-
-        /** Return the classes for use with the `body_class` filter */
-        return apply_filters( 'opus_primus_body_classes', $classes );
-    }
-}
-add_filter( 'body_class', 'opus_primus_body_classes' );
-
 if ( ! function_exists( 'opus_enqueue_comment_reply' ) ) {
     /**
      * Enqueue Comment Reply Script
