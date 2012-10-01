@@ -52,6 +52,7 @@
  * === Post-Format: Image ===
  * === Post-Format: Quote ===
  * === Post-Format: Status ===
+ * === Post-Format: Link ===
  *
  * === Footer ===
  *
@@ -1023,11 +1024,14 @@ blockquote + div.sharing {
 /** End: Post-Format: Status ------------------------------------------------ */
 
 /** === Post-Format: Link === ----------------------------------------------- */
+div.post.format-link .post-content a {
+    font-size: 18px;
+}
 .link-symbol:before {
-    content: '\221E \0020'; /** Infinity Symbol + space - uses CSS hex value */
+    content: '\221E \0020'; /** Infinity Symbol + space - uses CSS hex values */
 }
 .link-symbol:after {
-    content: '\0020 \221E'; /** space + Infinity Symbol - uses CSS hex value */
+    content: '\0020 \221E'; /** space + Infinity Symbol - uses CSS hex values */
 }
 /** End: Post-Format: Link -------------------------------------------------- */
 
