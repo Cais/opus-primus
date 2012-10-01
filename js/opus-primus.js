@@ -43,4 +43,6 @@ jQuery( document ).ready( function( $ ) {
     $( '.single .attached-image img, span.archive-image img' ).addClass( 'image-shadow' );
     /** Wrap the comment reply link text in a button */
     $( 'div.reply a' ).wrapInner( '<button class="reply-button" />' );
+    /** Wrap post-format:link anchors with link-symbol class */
+    $( 'div.post.format-link .post-content a').wrapInner( '<span class="link-symbol" />' );
 } );

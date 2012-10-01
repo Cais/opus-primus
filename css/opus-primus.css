@@ -1022,6 +1022,15 @@ blockquote + div.sharing {
 }
 /** End: Post-Format: Status ------------------------------------------------ */
 
+/** === Post-Format: Link === ----------------------------------------------- */
+.link-symbol:before {
+    content: '\221E \0020'; /** Infinity Symbol + space - uses CSS hex value */
+}
+.link-symbol:after {
+    content: '\0020 \221E'; /** space + Infinity Symbol - uses CSS hex value */
+}
+/** End: Post-Format: Link -------------------------------------------------- */
+
 /** === Footer === ---------------------------------------------------------- */
 h6#site-generator {
     border-top: 1px solid #e0e0e0;
