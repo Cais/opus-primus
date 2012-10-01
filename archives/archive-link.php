@@ -47,7 +47,7 @@ global $opus_structure, $opus_nav; ?>
     ) );
     $opus_structure->post_title();
     $opus_structure->comments_link();
-    $opus_structure->post_excerpt();
+    $opus_structure->post_content();
     $opus_structure->status_update();
     $opus_nav->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
     $opus_structure->meta_tags();
