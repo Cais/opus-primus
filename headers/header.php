@@ -32,36 +32,33 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
-
-global $opus_nav; ?>
-
+?>
 <header>
-
     <hgroup>
         <?php
         /** Add empty hook before site title */
-        do_action( 'opus_primus_before_site_title' );
-        ?>
-
+        do_action( 'opus_primus_before_site_title' ); ?>
         <h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+        <?php
+        /**
+         * Add empty hooks between the site title and description ... now we're
+         * really writing Mallory-Everest code but someone might want this.
+         */
+        do_action( 'opus_primus_after_site_title' );
+        do_action( 'opus_primus_before_site_description' ); ?>
         <h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
-
         <?php
         /** Add empty hook after site description */
         do_action( 'opus_primus_after_site_description' );
         ?>
     </hgroup>
-
     <?php
     /** Add empty hook before primary navigation */
     do_action( 'opus_primus_before_nav' ); ?>
-
     <nav>
-        <?php $opus_nav->primary_menu(); ?>
+        <?php global $opus_nav; $opus_nav->primary_menu(); ?>
     </nav>
-
     <?php
     /** Add empty hook after primary navigation */
     do_action( 'opus_primus_after_nav' ); ?>
-
 </header>
