@@ -40,9 +40,12 @@
  * Elements Requiring Clearance
  *
  * === Menu Related Elements ===
+ *
  * === Comments ===
+ *
  * === Sidebars ===
  * === Default Widgets ===
+ *
  * === 404 Layout ===
  *
  * === General Images ===
@@ -56,6 +59,9 @@
  * === Post-Format: Audio ===
  *
  * === Footer ===
+ *
+ * === Features ===
+ * === Taglines ===
  *
  * === Ain't Miss B. Haven ===
  * Jetpack
@@ -1053,6 +1059,17 @@ h6#site-generator {
     border-top: 1px solid #e0e0e0;
 }
 /** End: Footer ------------------------------------------------------------- */
+
+/** === Features === -------------------------------------------------------- */
+/** === Taglines === -------------------------------------------------------- */
+.opus-primus-post-tagline,
+.opus-primus-page-tagline {
+    font-size: 14px;
+    margin-left: 9px;
+    position: relative;
+    top: -3px;
+}
+/** End: Features ----------------------------------------------------------- */
 
 
 /** === Ain't Miss B. Haven === --------------------------------------------- */

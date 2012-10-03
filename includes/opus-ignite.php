@@ -49,9 +49,11 @@ require_once( OPUS_INC . 'class.OpusPrimusNavigation.php' );
 require_once( OPUS_INC . 'class.OpusPrimusGallery.php' );
 /** Add Images */
 require_once( OPUS_INC . 'class.OpusPrimusImages.php' );
+/** Add Meta Boxes */
+require_once( OPUS_INC . 'class.OpusPrimusMetaBoxes.php' );
 /** Add Sharing */
 require_once( OPUS_INC . 'class.OpusPrimusSocial.php' );
 
 /** Testing Purposes */
 define( 'OPUS_WIP', get_template_directory() . '/works-in-progress/' );
-require_once( OPUS_WIP . 'taglines.php' );
+// require_once( OPUS_WIP . 'taglines.php' );
