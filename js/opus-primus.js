@@ -45,4 +45,6 @@ jQuery( document ).ready( function( $ ) {
     $( 'div.reply a' ).wrapInner( '<button class="reply-button" />' );
     /** Wrap post-format:link anchors with link-symbol class */
     $( 'div.post.format-link .post-content a').wrapInner( '<span class="link-symbol" />' );
+    /** Wrap post-format:audio anchors with audio-symbol class */
+    $( 'div.post.format-audio .post-content a').wrapInner( '<span class="audio-symbol" />' );
 } );

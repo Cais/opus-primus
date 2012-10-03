@@ -53,6 +53,7 @@
  * === Post-Format: Quote ===
  * === Post-Format: Status ===
  * === Post-Format: Link ===
+ * === Post-Format: Audio ===
  *
  * === Footer ===
  *
@@ -1034,6 +1035,18 @@ div.post.format-link .post-content a {
     content: '\0020 \221E'; /** space + Infinity Symbol - uses CSS hex values */
 }
 /** End: Post-Format: Link -------------------------------------------------- */
+
+/** === Post-Format: Audio === ---------------------------------------------- */
+div.post.format-audio .post-content a {
+    font-size: 18px;
+}
+.audio-symbol:before {
+    /** content: '\1D11E \0020'; /** Musical G Clef Symbol + space - uses CSS hex values */
+}
+.audio-symbol:after {
+    /** content: '\0020 \1D11E'; /** space + Musical G Clef Symbol - uses CSS hex values */
+}
+/** End: Post-Format: Audio ------------------------------------------------- */
 
 /** === Footer === ---------------------------------------------------------- */
 h6#site-generator {
