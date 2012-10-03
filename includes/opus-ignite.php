@@ -51,3 +51,7 @@ require_once( OPUS_INC . 'class.OpusPrimusGallery.php' );
 require_once( OPUS_INC . 'class.OpusPrimusImages.php' );
 /** Add Sharing */
 require_once( OPUS_INC . 'class.OpusPrimusSocial.php' );
+
+/** Testing Purposes */
+define( 'OPUS_WIP', get_template_directory() . '/works-in-progress/' );
+require_once( OPUS_WIP . 'taglines.php' );
