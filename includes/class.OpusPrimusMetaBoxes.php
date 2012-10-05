@@ -37,6 +37,10 @@ class OpusPrimusMetaBoxes {
     function __construct() {
         /** Add taglines meta boxes */
         add_action( 'add_meta_boxes', array( $this, 'tagline_create_boxes' ) );
+        /**
+         * @todo see if there is another way to drive the form between the title and the content
+         * add_action( 'edit_form_after_title', array( $this, 'tagline_callback' ) );
+         */
 
         /** Save tagline data entered */
         add_action( 'save_post', array( $this, 'tagline_save_postdata' ) );
@@ -119,8 +123,8 @@ class OpusPrimusMetaBoxes {
         // if ( !wp_verify_nonce( $_POST['myplugin_noncename'], plugin_basename( __FILE__ ) ) ) return;
 
 
-        /**  Check user permissions on edit pages */
-        if ( 'page' == $_POST['post_type'] ) {
+        /** Check if this is a new post and if user can edit pages */
+        if ( isset( $_POST['post_type'] ) && ( 'page' == $_POST['post_type'] ) ) {
             if ( ! current_user_can( 'edit_page', $post_id ) )
                 return;
         } else {
@@ -128,9 +132,11 @@ class OpusPrimusMetaBoxes {
                 return;
         }
 
-        /** Save and update the data */
-        $tagline_text = $_POST['tagline_text_field'];
-        update_post_meta( $post_id, 'tagline_text_field', $tagline_text );
+        /** If tagline is set, save and update the post meta data */
+        if ( isset( $_POST['tagline_text_field'] ) ) {
+            $tagline_text = $_POST['tagline_text_field'];
+            update_post_meta( $post_id, 'tagline_text_field', $tagline_text );
+        }
     }
 
     /**
