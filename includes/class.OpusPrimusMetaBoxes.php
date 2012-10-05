@@ -83,12 +83,11 @@ class OpusPrimusMetaBoxes {
      * @param   $post -> ID, post_type
      *
      * @uses    get_post_meta
-     *
-     * @todo Sort out nonce for verification purposes
+     * @uses    wp_nonce_field
      */
     function tagline_callback( $post ) {
-        // Use nonce for verification
-        // wp_nonce_field( plugin_basename( __FILE__ ), 'myplugin_noncename' );
+        /** Use nonce for verification */
+        wp_nonce_field( 'opus_primus_tagline', 'opus_primus_tagline_nonce' );
 
         /** Create and display input for tagline text field */
         echo '<label for="tagline_text_field">';
@@ -107,21 +106,22 @@ class OpusPrimusMetaBoxes {
      * @param   $post_id
      *
      * @uses    (constant) DOING_AUTOSAVE
+     * @uses    check_admin_referrer
      * @uses    current_user_can
      * @uses    update_post_meta
-     *
-     * @todo Review nonce verification
      */
     function tagline_save_postdata( $post_id ) {
         /** If this is an auto save routine we do not want to do anything */
         if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
             return;
 
-        // verify this came from the our screen and with proper authorization,
-        // because save_post can be triggered at other times
-
-        // if ( !wp_verify_nonce( $_POST['myplugin_noncename'], plugin_basename( __FILE__ ) ) ) return;
-
+        /**
+         * Verify there is data being posted, and this came from the our screen
+         * and with proper authorization, because save_post can be triggered at
+         * other times.
+         */
+        if ( empty( $_POST ) || ! ( check_admin_referer( 'opus_primus_tagline', 'opus_primus_tagline_nonce' ) ) )
+            return;
 
         /** Check if this is a new post and if user can edit pages */
         if ( isset( $_POST['post_type'] ) && ( 'page' == $_POST['post_type'] ) ) {
