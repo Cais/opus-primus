@@ -56,4 +56,4 @@ require_once( OPUS_INC . 'class.OpusPrimusSocial.php' );
 
 /** Testing Purposes */
 define( 'OPUS_WIP', get_template_directory() . '/works-in-progress/' );
-// require_once( OPUS_WIP . 'taglines.php' );
+require_once( OPUS_WIP . 'plugin.tha-to-opusprimus.php' );
