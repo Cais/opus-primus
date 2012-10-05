@@ -1065,6 +1065,7 @@ h6#site-generator {
 .opus-primus-post-tagline,
 .opus-primus-page-tagline {
     font-size: 14px;
+    font-variant:small-caps;
     margin-left: 9px;
     position: relative;
     top: -3px;
