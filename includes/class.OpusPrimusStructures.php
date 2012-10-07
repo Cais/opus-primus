@@ -53,6 +53,8 @@ class OpusPrimusStructures {
      * @internal    $content_width is set based on the amount of columns being displayed and a display using the common 1024px x 768px resolution
      *
      * @return      string
+     *
+     * @todo Review $content_width settings
      */
     function layout_open() {
         global $content_width;
@@ -95,8 +97,6 @@ class OpusPrimusStructures {
      * @internal    works in conjunction with layout_open
      *
      * @return      string
-     *
-     * @todo Review $content_width settings
      */
     function layout_close() {
         $layout = '';
@@ -198,7 +198,7 @@ class OpusPrimusStructures {
         if ( $paged >= 2 || $page >= 2 )
             $opus_title_text .= $sep . sprintf( __( 'Page %s', 'opusprimus' ), max( $paged, $page ) );
 
-        return $opus_title_text;
+        return apply_filters( 'opus_browser_title', $opus_title_text );
     }
 
     /**
@@ -263,7 +263,7 @@ class OpusPrimusStructures {
         empty( $opus_no_title )
             ? $opus_no_title = '<span class="no-title"><a href="' . get_permalink() . '" title="' . get_the_excerpt() . '">' . $anchor . '</span></a>'
             : $opus_no_title = $anchor;
-        return apply_filters( 'no_title_link', $opus_no_title );
+        return apply_filters( 'opus_no_title_link', $opus_no_title );
     }
 
     /**
@@ -275,6 +275,8 @@ class OpusPrimusStructures {
      *
      * @uses    comments_popup_link
      * @uses    is_page
+     *
+     * @todo Is the output filterable?
      */
     function comments_link() {
         /** Add empty hook before comments link */
@@ -334,7 +336,7 @@ class OpusPrimusStructures {
 
         $output = '<a href="' . get_post_format_link( get_post_format() ) . '" title="' . sprintf( __( 'View the %1$s archive.' ), $title_text ) . '">' . $flag_text . '</a>';
 
-        return $output;
+        return apply_filters( 'opus_post_format_flag', $output );
     }
 
     /**
@@ -369,7 +371,7 @@ class OpusPrimusStructures {
             $output = '';
         }
 
-        return $output;
+        return apply_filters( 'opus_sticky_flag', $output );
 
     }
 
@@ -407,6 +409,8 @@ class OpusPrimusStructures {
      * @uses    post_format_flag
      * @uses    sticky_flag
      * @uses    wp_parse_args
+     *
+     * @todo Review for additional filter options
      */
     function post_byline( $byline_args = '' ) {
         /** Set defaults */
@@ -577,8 +581,8 @@ class OpusPrimusStructures {
 
         /**
          * Retrieves tag list of current post, separated by commas; if there are
-         * tags associated with the post show them, If there are no tags on for
-         * the post then do not make any references to tags.
+         * tags associated with the post show them, If there are no tags for the
+         * post do not make any references to tags.
          */
         $opus_tag_list = get_the_tag_list( '', ', ', '' );
         if ( $opus_tag_list ) {
@@ -676,6 +680,8 @@ class OpusPrimusStructures {
      * @uses    get_avatar
      * @uses    get_the_author_meta ( display_name, user_url, user_email, user_description )
      * @uses    user_can
+     *
+     * @todo Review for output filter options
      */
     function post_author() {
         /** Get and set variables */
