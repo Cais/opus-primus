@@ -35,9 +35,7 @@
 class OpusPrimusImages {
 
     /** Construct */
-    function __construct(){
-
-    }
+    function __construct(){}
 
 
     /**
@@ -77,6 +75,7 @@ class OpusPrimusImages {
      *
      * @uses    (global) $opus_image_meta
      * @uses    (global) $post
+     * @uses    apply_filters
      * @uses    do_action
      * @uses    wp_get_attachment_url
      *
@@ -102,7 +101,7 @@ class OpusPrimusImages {
                 $height . 'px' );
         }
 
-        return apply_filters( 'exif_dimensions', $dimensions );
+        return apply_filters( 'opus_exif_dimensions', $dimensions );
 
     }
 
@@ -115,6 +114,7 @@ class OpusPrimusImages {
      * @since   0.1
      *
      * @uses    (global) #opus_image_meta
+     * @uses    apply_filters
      * @uses    do_action
      * @uses    get_the_time
      *
@@ -143,7 +143,7 @@ class OpusPrimusImages {
         }
 
         /** Return Copyright string */
-        return $copyright;
+        return apply_filters( 'opus_exif_copyright', $copyright );
 
     }
 
@@ -158,6 +158,7 @@ class OpusPrimusImages {
      * @since   0.1
      *
      * @uses    (global) $opus_image_meta
+     * @uses    apply_filters
      * @uses    do_action
      * @uses    get_option
      * @uses    get_the_time
@@ -184,7 +185,7 @@ class OpusPrimusImages {
         }
 
         /** Return Timestamp string */
-        return $timestamp;
+        return apply_filters( 'opus_exif_timestamp', $timestamp );
 
     }
 
@@ -197,6 +198,7 @@ class OpusPrimusImages {
      * @since   0.1
      *
      * @uses    (global) #opus_image_meta
+     * @uses    apply_filters
      * @uses    do_action
      *
      * @return  string
@@ -218,7 +220,7 @@ class OpusPrimusImages {
         }
 
         /** Return Camera string */
-        return $camera;
+        return apply_filters( 'opus_exif_camera', $camera );
 
     }
 
@@ -231,6 +233,7 @@ class OpusPrimusImages {
      * @since   0.1
      *
      * @uses    (global) $opus_image_meta
+     * @uses    apply_filters
      * @uses    do_action
      * @uses    exif_data
      * @uses    number_format
@@ -262,7 +265,7 @@ class OpusPrimusImages {
         }
 
         /** Return Shutter string */
-        return $shutter;
+        return apply_filters( 'opus_exif_shutter', $shutter );
 
     }
 
@@ -275,6 +278,7 @@ class OpusPrimusImages {
      * @since   0.1
      *
      * @uses    (global) $opus_image_meta
+     * @uses    apply_filters
      * @uses    do_action
      *
      * @return  string
@@ -296,7 +300,7 @@ class OpusPrimusImages {
         }
 
         /** Return Aperture string */
-        return $aperture;
+        return apply_filters( 'opus_exif_aperture', $aperture );
 
     }
 
@@ -309,6 +313,7 @@ class OpusPrimusImages {
      * @since   0.1
      *
      * @uses    (global) $opus_image_meta
+     * @uses    apply_filters
      * @uses    do_action
      *
      * @return  string
@@ -330,7 +335,7 @@ class OpusPrimusImages {
         }
 
         /** Return Caption string */
-        return $exif_caption;
+        return apply_filters( 'opus_exif_caption', $exif_caption );
 
     }
 
@@ -343,6 +348,7 @@ class OpusPrimusImages {
      * @since   0.1
      *
      * @uses    (global) $opus_image_meta
+     * @uses    apply_filters
      * @uses    do_action
      * @uses    exif_data
      *
@@ -367,7 +373,7 @@ class OpusPrimusImages {
         }
 
         /** Return Focal Length string */
-        return $focal_length;
+        return apply_filters( 'opus_exif_focal_length', $focal_length );
 
     }
 
@@ -380,6 +386,7 @@ class OpusPrimusImages {
      * @since   0.1
      *
      * @uses    (global) $opus_image_meta
+     * @uses    apply_filters
      * @uses    do_action
      * @uses    exif_data
      *
@@ -402,7 +409,7 @@ class OpusPrimusImages {
         }
 
         /** Return ISO Speed */
-        return $iso_speed;
+        return apply_filters( 'opus_exif_iso_speed', $iso_speed );
 
     }
 
@@ -415,6 +422,7 @@ class OpusPrimusImages {
      * @since   0.1
      *
      * @uses    (global) $opus_image_meta
+     * @uses    apply_filters
      * @uses    do_action
      *
      * @return  string
@@ -436,7 +444,7 @@ class OpusPrimusImages {
         }
 
         /** Return Title string */
-        return $exif_title;
+        return apply_filters( 'opus_exif_title', $exif_title );
 
     }
 
@@ -448,9 +456,14 @@ class OpusPrimusImages {
      * @package OpusPrimus
      * @since   0.1
      *
+     * @uses    do_action
+     *
      * @internal see display_exif_table for tabular output
      */
     function display_exif_box() {
+        /** Add empty hook before exif box */
+        do_action( 'opus_before_exif_box' );
+
         /** Wrap the exif output in its own container */
         echo '<div class="display-exif-box">';
 
@@ -487,6 +500,9 @@ class OpusPrimusImages {
         /** Close display exif box wrapper */
         echo '</div><!-- .display-exif-box -->';
 
+        /** Add empty hook after exif box */
+        do_action( 'opus_after_exif_box' );
+
     }
 
 
@@ -497,9 +513,13 @@ class OpusPrimusImages {
      * @package OpusPrimus
      * @since   0.1
      *
+     * @uses    do_action
+     *
      * @internal see display_exif_box for box-model output
      */
-    function display_exif_table() { ?>
+    function display_exif_table() {
+        /** Add empty hook before exif table */
+        do_action( 'opus_before_exif_table' ); ?>
 
         <!-- Provide a CSS class for the exif output -->
         <table class="display-exif-table">
@@ -546,6 +566,9 @@ class OpusPrimusImages {
         </table><!-- .display-exif-table -->
 
     <?php
+    /** Add empty hook after exif table */
+    do_action( 'opus_after_exif_table' );
+
     }
 
     /**
@@ -607,6 +630,7 @@ class OpusPrimusImages {
      * @uses    wp_get_attachment_image
      *
      * @todo Sort out a better output when the image is linked rather than attached
+     * @todo Add filters to output messages
      */
     function archive_image_details( $size = 'medium' ) {
         $attachments = get_children( array(
