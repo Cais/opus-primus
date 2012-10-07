@@ -169,13 +169,16 @@ class OpusPrimusGallery {
          */
         if ( ( $images->found_posts + 1 ) > ( $secondary_images_args['images'] + 1 ) ) {
             printf( '<p class="more-images">%1$s</p>',
-                sprintf( _n(
-                    __( 'There is %2$sone more image%3$s in addition to these in the gallery.', 'opusprimus' ),
-                    __( 'There are %2$s%1$s more images%3$s in addition to these in the gallery.', 'opusprimus' ),
-                    ( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 ) ),
-                ( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 ),
-                '<a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">',
-                '</a>' ) );
+                apply_filters( 'opus_more_images_text',
+                    sprintf( _n(
+                        __( 'There is %2$sone more image%3$s in addition to these in the gallery.', 'opusprimus' ),
+                        __( 'There are %2$s%1$s more images%3$s in addition to these in the gallery.', 'opusprimus' ),
+                        ( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 ) ),
+                    ( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 ),
+                    '<a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">',
+                    '</a>' )
+                )
+            );
         }
 
         /** Add empty hook after secondary images */
