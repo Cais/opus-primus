@@ -817,7 +817,10 @@ div.second-sidebar ul li ul {
 
 /** === Default Widgets === ------------------------------------------------- */
 /** Calendar */
-table#wp-calendar { width: 98%; }
+table#wp-calendar {
+    margin: 0 auto;
+    width: 98%;
+}
 table#wp-calendar tbody tr { text-align: center; }
 table#wp-calendar tbody tr td#today { outline: 1px solid; }
 table#wp-calendar tbody tr td a { font-weight: bold; }
