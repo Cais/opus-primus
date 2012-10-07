@@ -95,12 +95,18 @@ class OpusPrimusComments {
     function before_comment_form() {
         /** Conditional check for password protected posts ... no comments for you! */
         if ( post_password_required() ) {
-            printf( '<span class="comments-password-message">' . __( 'This post is password protected. Enter the password to view comments.', 'opusprimus' ) . '</span>' );
+            printf(
+                '<span class="comments-password-message">' .
+                    apply_filters( 'opus_comments_password_required', __( 'This post is password protected. Enter the password to view comments.', 'opusprimus' ) ) .
+                '</span>' );
             return;
         }
         /** If comments are open, but there are no comments. */
         if ( ! have_comments() ) {
-            printf( '<span class="no-comments-message">' . __( 'Start a discussion ...', 'opusprimus' ) . '</span>' );
+            printf(
+                '<span class="no-comments-message">' .
+                    apply_filters( 'opus_no_comments_message', __( 'Start a discussion ...', 'opusprimus' ) ) .
+                '</span>' );
         }
     }
 
@@ -118,7 +124,11 @@ class OpusPrimusComments {
      */
     function comments_form_closed() {
         if ( ! is_page() ) {
-            printf( '<span class="comments-closed-message">' . __( 'New comments are not being accepted at this time, please feel free to contact the post author directly.', 'opusprimus' ) . '</span>' );
+            printf(
+                '<span class="comments-closed-message">' .
+                    apply_filters( 'opus_comments_form_closed' , __( 'New comments are not being accepted at this time, please feel free to contact the post author directly.', 'opusprimus' ) ) .
+                '</span>'
+            );
         }
     }
 
