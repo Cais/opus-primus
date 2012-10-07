@@ -64,7 +64,7 @@ class OpusPrimusMetaBoxes {
         global $post;
         add_meta_box(
             'opus_tagline',
-            sprintf( __( '%1$s Tagline', 'opusprimus' ), ucfirst( $post->post_type ) ),
+            apply_filters( 'opus_taglines_meta_box_title', sprintf( __( '%1$s Tagline', 'opusprimus' ), ucfirst( $post->post_type ) ) ),
             array( $this, 'tagline_callback' ),
             $post->post_type,
             'advanced',
@@ -91,7 +91,7 @@ class OpusPrimusMetaBoxes {
 
         /** Create and display input for tagline text field */
         echo '<label for="tagline_text_field">';
-            printf( __('Add custom tagline to this %1$s: ', 'opusprimus' ), $post->post_type );
+            echo apply_filters( 'opus_taglines_text_field_description', sprintf( __('Add custom tagline to this %1$s: ', 'opusprimus' ), $post->post_type ) );
         echo '</label>';
         echo '<input type="text" id="tagline_text_field" name="tagline_text_field" value="' . get_post_meta( $post->ID, 'tagline_text_field', true ) . '" size="100%" />';
     }
@@ -153,7 +153,7 @@ class OpusPrimusMetaBoxes {
     function tagline_output() {
         /** Since we are not inside the loop grab the global post object */
         global $post;
-        $tagline = apply_filters( 'opus_primus_tagline_output' , get_post_meta( $post->ID, 'tagline_text_field', true ) );
+        $tagline = apply_filters( 'opus_tagline_output_' . $post->ID, get_post_meta( $post->ID, 'tagline_text_field', true ) );
         /** Make sure there is a tagline before sending anything to the screen */
         if ( ! empty( $tagline ) ) {
             echo '<div class="opus-primus-' . $post->post_type . '-tagline">' . $tagline . '</div>';
