@@ -229,9 +229,9 @@ class OpusPrimusNavigation {
         /** Add empty hook before the secondary menu */
         do_action( 'opus_before_secondary_menu' );
 
-        /** Primary Menu */
+        /** Secondary Menu */
         $defaults = array(
-            'theme_location'    => 'primary',
+            'theme_location'    => 'secondary',
             'menu_class'        => 'nav-menu secondary',
             'fallback_cb'       => array( $this, 'list_pages' ),
         );
