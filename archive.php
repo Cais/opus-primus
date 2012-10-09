@@ -37,7 +37,11 @@
 
 /** Get the Post Structure and Navigation class variables */
 global $opus_nav, $opus_structure;
-get_header( get_post_format() ); ?>
+if ( have_posts() ) {
+    get_header( get_post_format() );
+} else {
+    get_header();
+} ?>
 
 <div class="content-wrapper cf">
 
@@ -59,11 +63,19 @@ get_header( get_post_format() ); ?>
     </div><!-- #the-loop -->
 
     <?php
-    get_sidebar( get_post_format() );
+    if ( have_posts() ) {
+        get_sidebar( get_post_format() );
+    } else {
+        get_sidebar();
+    }
 
     echo $opus_structure->layout_close(); ?>
 
 </div><!-- #content-wrapper -->
 
 <?php
-get_footer( get_post_format() );
+if ( have_posts() ) {
+    get_footer( get_post_format() );
+} else {
+    get_footer();
+}

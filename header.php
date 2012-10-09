@@ -51,7 +51,11 @@
     do_action( 'opus_primus_before_header' );
 
     /** Call header template with reference to post format */
-    get_template_part( 'headers/header', get_post_format() );
+    if ( have_posts() ) {
+        get_template_part( 'headers/header', get_post_format() );
+    } else {
+        get_template_part( 'headers/header' );
+    }
 
     /** Add empty hook after header */
     do_action( 'opus_primus_after_header' );

@@ -36,7 +36,11 @@
 do_action( 'opus_primus_before_footer' );
 
 /** Call footer template based on post format */
-get_template_part( 'footers/footer', get_post_format() );
+if ( have_posts() ) {
+    get_template_part( 'footers/footer', get_post_format() );
+} else {
+    get_template_part( 'footers/footer' );
+}
 
 /** Add empty hook at end of footer */
 do_action( 'opus_primus_before_wp_footer' );

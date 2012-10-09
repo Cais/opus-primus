@@ -230,8 +230,6 @@ class OpusPrimusStructures {
      * @uses    ($this->)replace_spaces
      *
      * @return  string - specific class based on active columns
-     *
-     * @todo Add modified post classes author
      */
     function post_classes( $classes ) {
         /** Original Post Classes */
@@ -270,29 +268,42 @@ class OpusPrimusStructures {
         if ( get_the_date() <> get_the_modified_date() ) {
             /** Year - Modified */
             $post_year = get_the_modified_date( 'Y' );
-            $classes[] = 'year-' . $post_year . '-modified';
+            $classes[] = 'modified-year-' . $post_year;
             $post_leap_year = get_the_modified_date( 'L' );
             if ( '1' == $post_leap_year )
-                $classes[] = 'leap-year-modified';
+                $classes[] = 'modified-leap-year';
             /** Month - Modified */
             $post_month_numeric = get_the_modified_date( 'm' );
-            $classes[] = 'month-' . $post_month_numeric . '-modified';
+            $classes[] = 'modified-month-' . $post_month_numeric;
             $post_month_short = get_the_modified_date( 'M' );
-            $classes[] = 'month-' . strtolower( $post_month_short ) . '-modified';
+            $classes[] = 'modified-month-' . strtolower( $post_month_short );
             $post_month_long = get_the_modified_date( 'F' );
-            $classes[] = 'month-' . strtolower( $post_month_long ) . '-modified';
+            $classes[] = 'modified-month-' . strtolower( $post_month_long );
             /** Day - Modified */
             $post_day_of_month = get_the_modified_date( 'd' );
-            $classes[] = 'day-' . $post_day_of_month . '-modified';
+            $classes[] = 'modified-day-' . $post_day_of_month;
             $post_day_of_week_short = get_the_modified_date( 'D' );
-            $classes[] = 'day-' . strtolower( $post_day_of_week_short ) . '-modified';
+            $classes[] = 'modified-day-' . strtolower( $post_day_of_week_short );
             $post_day_of_week_long = get_the_modified_date( 'l' );
-            $classes[] = 'day-' . strtolower( $post_day_of_week_long ) . '-modified';
+            $classes[] = 'modified-day-' . strtolower( $post_day_of_week_long );
             /** Time: Hour - Modified */
             $post_24_hour = get_the_modified_date( 'H' );
-            $classes[] = 'hour-' . $post_24_hour . '-modified';
+            $classes[] = 'modified-hour-' . $post_24_hour;
             $post_12_hour = get_the_modified_date( 'ha' );
-            $classes[] = 'hour-' . $post_12_hour . '-modified';
+            $classes[] = 'modified-hour-' . $post_12_hour;
+
+
+            /** @var $last_user - establish the last user */
+            global $post;
+            $last_user = '';
+            if ( $last_id = get_post_meta( $post->ID, '_edit_last', true ) ) {
+                $last_user = get_userdata( $last_id );
+            }
+            $mod_author_id = $last_user->ID;
+            $classes[] = 'modified-author-' . $mod_author_id;
+            $mod_author_display_name = $this->replace_spaces( $last_user->display_name );
+            $classes[] = 'modified-author-' . $mod_author_display_name;
+
         }
 
         /** Return the classes for use with the `post_class` hook */
@@ -1131,5 +1142,5 @@ $opus_structure = new OpusPrimusStructures();
 function opus_test() {
     echo 'BACON Test!!! PS: This works, too!<br />';
 }
-// add_action( 'opus_after_exif_dimensions', 'opus_test' );
+// add_action( 'opus_before_modified_post', 'opus_test' );
 // add_filter( 'opus_primus_credits', 'opus_test' );
