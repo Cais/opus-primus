@@ -158,6 +158,33 @@ class OpusPrimusStructures {
             $classes[] = 'three-column';
         }
 
+        /** Current Date Classes */
+        /** Year */
+        $current_year = date( 'Y' );
+        $classes[] = 'year-' . $current_year;
+        $leap_year = date( 'L' );
+        if ( '1' == $leap_year )
+            $classes[] = 'leap-year';
+        /** Month */
+        $current_month_numeric = date( 'm' );
+        $classes[] = 'month-' . $current_month_numeric;
+        $current_month_short = date( 'M' );
+        $classes[] = 'month-' . strtolower( $current_month_short );
+        $current_month_long = date( 'F' );
+        $classes[] = 'month-' . strtolower( $current_month_long );
+        /** Day */
+        $current_day_of_month = date( 'd' );
+        $classes[] = 'day-' . $current_day_of_month;
+        $current_day_of_week_short = date( 'D' );
+        $classes[] = 'day-' . strtolower( $current_day_of_week_short );
+        $current_day_of_week_long = date( 'l' );
+        $classes[] = 'day-' . strtolower( $current_day_of_week_long );
+        /** Time */
+        $current_24_hour = get_the_date( 'H' );
+        $classes[] = 'hour-' . $current_24_hour;
+        $current_12_hour = get_the_date( 'ha' );
+        $classes[] = 'hour-' . $current_12_hour;
+
         /** Return the classes for use with the `body_class` filter */
         return apply_filters( 'opus_primus_body_classes', $classes );
     }
