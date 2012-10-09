@@ -125,6 +125,30 @@ class OpusPrimusStructures {
     }
 
     /**
+     * Replace Spaces
+     * Takes a string and replaces the spaces with a single hyphen by default
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @param   string $text
+     * @param   string $replacement
+     *
+     * @return  string - class
+     */
+    function replace_spaces( $text, $replacement='-' ) {
+        /** @var $new_text - initial text set to lower case */
+        $new_text = esc_attr( strtolower( $text ) );
+        /** replace whitespace with a single space */
+        $new_text = preg_replace( '/\s\s+/', ' ', $new_text );
+        /** replace space with a hyphen to create nice CSS classes */
+        $new_text = preg_replace( '/\\040/', $replacement, $new_text );
+
+        /** Return the string with spaces replaced by the replacement variable */
+        return $new_text;
+    }
+
+    /**
      * Body Classes
      * A collection of classes added to the HTML body tag for various purposes
      *
@@ -191,9 +215,24 @@ class OpusPrimusStructures {
         return apply_filters( 'opus_primus_body_classes', $classes );
     }
 
-
+    /**
+     * Post Classes
+     * A collection of classes added to the post_class for various purposes
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @param   $classes - existing post classes
+     *
+     * @uses    get_the_author_meta
+     * @uses    get_the_date
+     * @uses    get_the_modified_date
+     * @uses    ($this->)replace_spaces
+     *
+     * @return  string - specific class based on active columns
+     */
     function post_classes( $classes ) {
-        /** Post Date Classes */
+        /** Post (Original) Classes */
         /** Year */
         $post_year = get_the_date( 'Y' );
         $classes[] = 'year-' . $post_year;
@@ -220,7 +259,13 @@ class OpusPrimusStructures {
         $post_12_hour = get_the_date( 'ha' );
         $classes[] = 'hour-' . $post_12_hour;
 
-        /** Post Date Modified Classes */
+        global $opus_author_id;
+        $classes[] = 'author-' . $opus_author_id;
+        $display_name = $this->replace_spaces( strtolower( get_the_author_meta( 'display_name', $opus_author_id ) ) );
+        $classes[] = 'author-' . $display_name;
+
+
+        /** Post Modified Classes */
         /** Year - Modified */
         $post_year = get_the_modified_date( 'Y' );
         $classes[] = 'year-' . $post_year . '-modified';
