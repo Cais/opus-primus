@@ -37,6 +37,8 @@ class OpusPrimusStructures {
     function __construct() {
         /** Add classes to the body tag */
         add_filter( 'body_class', array( $this, 'body_classes' ) );
+        /** Add classes to post tag */
+        add_filter( 'post_class', array( $this, 'post_classes' ) );
         /** Restructure the browser title */
         add_filter( 'wp_title', array( $this, 'browser_title' ), 10, 3 );
     }
@@ -179,14 +181,75 @@ class OpusPrimusStructures {
         $classes[] = 'day-' . strtolower( $current_day_of_week_short );
         $current_day_of_week_long = date( 'l' );
         $classes[] = 'day-' . strtolower( $current_day_of_week_long );
-        /** Time */
-        $current_24_hour = get_the_date( 'H' );
+        /** Time: Hour */
+        $current_24_hour = date( 'H' );
         $classes[] = 'hour-' . $current_24_hour;
-        $current_12_hour = get_the_date( 'ha' );
+        $current_12_hour = date( 'ha' );
         $classes[] = 'hour-' . $current_12_hour;
 
         /** Return the classes for use with the `body_class` filter */
         return apply_filters( 'opus_primus_body_classes', $classes );
+    }
+
+
+    function post_classes( $classes ) {
+        /** Post Date Classes */
+        /** Year */
+        $post_year = get_the_date( 'Y' );
+        $classes[] = 'year-' . $post_year;
+        $post_leap_year = get_the_date( 'L' );
+        if ( '1' == $post_leap_year )
+            $classes[] = 'leap-year';
+        /** Month */
+        $post_month_numeric = get_the_date( 'm' );
+        $classes[] = 'month-' . $post_month_numeric;
+        $post_month_short = get_the_date( 'M' );
+        $classes[] = 'month-' . strtolower( $post_month_short );
+        $post_month_long = get_the_date( 'F' );
+        $classes[] = 'month-' . strtolower( $post_month_long );
+        /** Day */
+        $post_day_of_month = get_the_date( 'd' );
+        $classes[] = 'day-' . $post_day_of_month;
+        $post_day_of_week_short = get_the_date( 'D' );
+        $classes[] = 'day-' . strtolower( $post_day_of_week_short );
+        $post_day_of_week_long = get_the_date( 'l' );
+        $classes[] = 'day-' . strtolower( $post_day_of_week_long );
+        /** Time: Hour */
+        $post_24_hour = get_the_date( 'H' );
+        $classes[] = 'hour-' . $post_24_hour;
+        $post_12_hour = get_the_date( 'ha' );
+        $classes[] = 'hour-' . $post_12_hour;
+
+        /** Post Date Modified Classes */
+        /** Year - Modified */
+        $post_year = get_the_modified_date( 'Y' );
+        $classes[] = 'year-' . $post_year . '-modified';
+        $post_leap_year = get_the_modified_date( 'L' );
+        if ( '1' == $post_leap_year )
+            $classes[] = 'leap-year-modified';
+        /** Month - Modified */
+        $post_month_numeric = get_the_modified_date( 'm' );
+        $classes[] = 'month-' . $post_month_numeric . '-modified';
+        $post_month_short = get_the_modified_date( 'M' );
+        $classes[] = 'month-' . strtolower( $post_month_short ) . '-modified';
+        $post_month_long = get_the_modified_date( 'F' );
+        $classes[] = 'month-' . strtolower( $post_month_long ) . '-modified';
+        /** Day - Modified */
+        $post_day_of_month = get_the_modified_date( 'd' );
+        $classes[] = 'day-' . $post_day_of_month . '-modified';
+        $post_day_of_week_short = get_the_modified_date( 'D' );
+        $classes[] = 'day-' . strtolower( $post_day_of_week_short ) . '-modified';
+        $post_day_of_week_long = get_the_modified_date( 'l' );
+        $classes[] = 'day-' . strtolower( $post_day_of_week_long ) . '-modified';
+        /** Time: Hour - Modified */
+        $post_24_hour = get_the_modified_date( 'H' );
+        $classes[] = 'hour-' . $post_24_hour . '-modified';
+        $post_12_hour = get_the_modified_date( 'ha' );
+        $classes[] = 'hour-' . $post_12_hour . '-modified';
+
+        /** Return the classes for use with the `post_class` hook */
+        return $classes;
+
     }
 
     /**
