@@ -230,6 +230,8 @@ class OpusPrimusStructures {
      * @uses    ($this->)replace_spaces
      *
      * @return  string - specific class based on active columns
+     *
+     * @todo Add modified post classes for date, time, author, etc.
      */
     function post_classes( $classes ) {
         /** Post (Original) Classes */
@@ -259,38 +261,10 @@ class OpusPrimusStructures {
         $post_12_hour = get_the_date( 'ha' );
         $classes[] = 'hour-' . $post_12_hour;
 
-        global $opus_author_id;
+        $opus_author_id = get_the_author_meta( 'ID' );
         $classes[] = 'author-' . $opus_author_id;
         $display_name = $this->replace_spaces( strtolower( get_the_author_meta( 'display_name', $opus_author_id ) ) );
         $classes[] = 'author-' . $display_name;
-
-
-        /** Post Modified Classes */
-        /** Year - Modified */
-        $post_year = get_the_modified_date( 'Y' );
-        $classes[] = 'year-' . $post_year . '-modified';
-        $post_leap_year = get_the_modified_date( 'L' );
-        if ( '1' == $post_leap_year )
-            $classes[] = 'leap-year-modified';
-        /** Month - Modified */
-        $post_month_numeric = get_the_modified_date( 'm' );
-        $classes[] = 'month-' . $post_month_numeric . '-modified';
-        $post_month_short = get_the_modified_date( 'M' );
-        $classes[] = 'month-' . strtolower( $post_month_short ) . '-modified';
-        $post_month_long = get_the_modified_date( 'F' );
-        $classes[] = 'month-' . strtolower( $post_month_long ) . '-modified';
-        /** Day - Modified */
-        $post_day_of_month = get_the_modified_date( 'd' );
-        $classes[] = 'day-' . $post_day_of_month . '-modified';
-        $post_day_of_week_short = get_the_modified_date( 'D' );
-        $classes[] = 'day-' . strtolower( $post_day_of_week_short ) . '-modified';
-        $post_day_of_week_long = get_the_modified_date( 'l' );
-        $classes[] = 'day-' . strtolower( $post_day_of_week_long ) . '-modified';
-        /** Time: Hour - Modified */
-        $post_24_hour = get_the_modified_date( 'H' );
-        $classes[] = 'hour-' . $post_24_hour . '-modified';
-        $post_12_hour = get_the_modified_date( 'ha' );
-        $classes[] = 'hour-' . $post_12_hour . '-modified';
 
         /** Return the classes for use with the `post_class` hook */
         return $classes;
