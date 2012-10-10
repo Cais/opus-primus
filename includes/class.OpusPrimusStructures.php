@@ -662,7 +662,7 @@ class OpusPrimusStructures {
          * the last user is not in the database then the modifications should
          * not be noted ( per developer prerogative ).
          */
-        if ( ( ! empty( $last_user ) ) && ( $opus_author_id !== $last_user->ID ) ) {
+        if ( ( ! empty( $last_user ) ) && ( $opus_author_id <> $last_id ) ) {
             $mod_author_phrase .= __( 'Last modified by %1$s %2$s on %3$s at %4$s.', 'opusprimus' );
             $mod_author_avatar = get_avatar( $last_user->user_email, $line_height );
 
@@ -828,7 +828,7 @@ class OpusPrimusStructures {
      * @uses    get_the_author_meta ( display_name, user_url, user_email, user_description )
      * @uses    user_can
      */
-    function post_author() {
+    function post_author( $show_mod_author = 'true' ) {
         /** Get and set variables */
         global $opus_author_id;
         if ( ! isset( $opus_author_id ) )
@@ -881,6 +881,62 @@ class OpusPrimusStructures {
                 <?php } ?>
             </ul>
         </div>
+
+        <?php
+        /** Modified Author Details */
+        /** Get the post global to use with finding the last user */
+        global $post;
+        /** @var $last_user - establish the last user */
+        $last_user = '';
+        /** @var $last_id - set as the last user ID */
+        if ( $last_id = get_post_meta( $post->ID, '_edit_last', true ) ) {
+            $last_user = get_userdata( $last_id );
+        }
+        if ( ( get_the_date() <> get_the_modified_date() ) && ( $opus_author_id <> $last_id )&& $show_mod_author ) {
+            $opus_author_display_name   = get_the_author_meta( 'display_name', $last_id );
+            $opus_author_url            = get_the_author_meta( 'user_url', $last_id );
+            $opus_author_email          = get_the_author_meta( 'user_email', $last_id );
+            $opus_author_desc           = get_the_author_meta( 'user_description', $last_id ); ?>
+
+            <div class="author details <?php
+                /** Add class as related to the user role (see 'Role:' drop-down in User options) */
+                if ( user_can( $last_id, 'administrator' ) ) {
+                    echo 'administrator';
+                } elseif ( user_can( $last_id, 'editor' ) ) {
+                    echo 'editor';
+                } elseif ( user_can( $last_id, 'contributor' ) ) {
+                    echo 'contributor';
+                } elseif ( user_can( $last_id, 'subscriber' ) ) {
+                    echo 'subscriber';
+                } else {
+                    echo 'guest';
+                } ?>">
+                <h2>
+                    <?php
+                    if ( ! empty( $last_id ) )
+                        echo get_avatar( $last_id );
+                    printf( __( 'About %1$s', 'opusprimus' ), $last_user->display_name ); ?>
+                </h2>
+                <ul>
+                    <?php
+                    if ( ! empty( $opus_author_url ) ) { ?>
+                        <li>
+                            <?php
+                            printf( __( 'Visit the web site of %1$s or email %2$s.', 'opusprimus' ),
+                                '<a href="' . $opus_author_url . '">' . $opus_author_display_name . '</a>',
+                                '<a href="mailto:' .  $opus_author_email . '">' . $opus_author_display_name . '</a>'
+                            ); ?>
+                        </li>
+                        <?php }
+                    if ( ! empty( $opus_author_desc ) ) { ?>
+                        <li>
+                            <?php printf( __( 'Biography: %1$s', 'opusprimus' ), $opus_author_desc ); ?>
+                        </li>
+                        <?php } ?>
+                </ul>
+            </div>
+        <?php } ?>
+
 
         <?php
         /** Add empty hook after post author details */
