@@ -28,8 +28,6 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
- *
- * @todo Address "Placeholder" elements
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -111,7 +109,7 @@ address {
     line-height: 18px;
 }
 
-big { /** Placeholder */ }
+big { font-size: 200%; }
 
 /* - Blockquote tags */
 blockquote {
@@ -437,7 +435,7 @@ img {
     vertical-align: middle;
 }
 
-kbd { /** Placeholder */ }
+kbd { font-family: monospace, sans-serif; }
 
 /** - Lists */
 /** -- unordered, ordered */
@@ -536,7 +534,7 @@ table {
     background-color: transparent;
 }
 
-tt { /** Placeholder */ }
+tt { font-family: monospace, sans-serif; }
 
 /** Elements Requiring Clearance */
 /** Micro Clearfix ---------------------------------------------------------- */
