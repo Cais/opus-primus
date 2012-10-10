@@ -266,6 +266,7 @@ class OpusPrimusStructures {
 
         /** Modified Post Classes */
         if ( get_the_date() <> get_the_modified_date() ) {
+            $classes[] = 'modified';
             /** Year - Modified */
             $post_year = get_the_modified_date( 'Y' );
             $classes[] = 'modified-year-' . $post_year;
