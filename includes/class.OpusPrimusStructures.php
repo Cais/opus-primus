@@ -827,6 +827,8 @@ class OpusPrimusStructures {
      * @uses    get_avatar
      * @uses    get_the_author_meta ( display_name, user_url, user_email, user_description )
      * @uses    user_can
+     *
+     * @todo Optimize repetitive code for displaying author blocks ... use a function with a passed author_id variable
      */
     function post_author( $show_mod_author = 'true' ) {
         /** Get and set variables */
