@@ -31,9 +31,6 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
- *
- * @todo clean up layout code
- * @todo review CSS container names && clean up 'opus-primus.css' as needed
  */
 
 global $post, $opus_nav, $opus_structure, $opus_image;
@@ -62,7 +59,7 @@ get_header( 'image' ); ?>
                         '<a href="' . get_permalink( $post->post_parent ) . '">' . get_the_title( $post->post_parent ) . '</a>'
                     );
 
-                    $opus_structure->post_byline( array( 'show_mod_author' => true, 'anchor' => 'Displayed' ) );
+                    $opus_structure->post_byline( array( 'show_mod_author' => true, 'anchor' => __( 'Displayed', 'opusprimus' ) ) );
                     $opus_nav->image_nav();
 
                     /** Image Title from media library */

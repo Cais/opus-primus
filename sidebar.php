@@ -30,8 +30,7 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @todo Remove / comment out test code
- * @todo Review potential of additional widget area(s)
+ * @todo Remove test code
  */ ?>
 
 <div class="first-sidebar">
@@ -41,7 +40,7 @@
         if ( is_active_sidebar( 'first-widget' ) ) :
             dynamic_sidebar( 'first-widget' );
         else :
-            echo '<div class="test-text">' . 'Test: First Widget Area<br />' . '</div>';
+            // echo '<div class="test-text">' . 'Test: First Widget Area<br />' . '</div>';
         endif; ?>
     </ul><!-- #sidebar-one -->
 
@@ -50,7 +49,7 @@
         if ( is_active_sidebar( 'second-widget' ) ) :
             dynamic_sidebar( 'second-widget' );
         else :
-            echo '<div class="test-text">' . 'Test: Second Widget Area<br />' . '</div>';
+            // echo '<div class="test-text">' . 'Test: Second Widget Area<br />' . '</div>';
         endif; ?>
     </ul><!-- .sidebar-two -->
 
@@ -63,7 +62,7 @@
         if ( is_active_sidebar( 'third-widget' ) ) :
             dynamic_sidebar( 'third-widget' );
         else :
-            echo '<div class="test-text">' . 'Test: Third Widget Area<br />' . '</div>';
+            // echo '<div class="test-text">' . 'Test: Third Widget Area<br />' . '</div>';
         endif; ?>
     </ul><!-- #sidebar-three -->
 
@@ -72,7 +71,7 @@
         if ( is_active_sidebar( 'fourth-widget' ) ) :
             dynamic_sidebar( 'fourth-widget' );
         else :
-            echo '<div class="test-text">' . 'Test: Fourth Widget Area<br />' . '</div>';
+            // echo '<div class="test-text">' . 'Test: Fourth Widget Area<br />' . '</div>';
         endif; ?>
     </ul><!-- .sidebar-four -->
 

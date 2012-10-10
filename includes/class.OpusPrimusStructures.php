@@ -425,8 +425,6 @@ class OpusPrimusStructures {
      *
      * @uses    comments_popup_link
      * @uses    is_page
-     *
-     * @todo Is the output filterable?
      */
     function comments_link() {
         /** Add empty hook before comments link */
@@ -663,7 +661,6 @@ class OpusPrimusStructures {
          * If the last user is not in the database an error will occur, and if
          * the last user is not in the database then the modifications should
          * not be noted ( per developer prerogative ).
-         * @todo review as additional use-cases arise
          */
         if ( ( ! empty( $last_user ) ) && ( $opus_author_id !== $last_user->ID ) ) {
             $mod_author_phrase .= __( 'Last modified by %1$s %2$s on %3$s at %4$s.', 'opusprimus' );
@@ -830,8 +827,6 @@ class OpusPrimusStructures {
      * @uses    get_avatar
      * @uses    get_the_author_meta ( display_name, user_url, user_email, user_description )
      * @uses    user_can
-     *
-     * @todo Review for output filter options
      */
     function post_author() {
         /** Get and set variables */
@@ -1083,9 +1078,8 @@ class OpusPrimusStructures {
      *
      * @param   bool $show
      * @param   bool $by_author
-     * @return  mixed|null|void
      *
-     * @todo set param as options
+     * @return  mixed|null|void
      */
     function copyright( $show = true, $by_author = true ){
         if ( false == $show ) {
