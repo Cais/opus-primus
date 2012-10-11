@@ -843,8 +843,17 @@ class OpusPrimusStructures {
         /** Add empty hook before post author section */
         do_action( 'opus_post_author_top' );
 
+        /** Add empty hook before first author details */
+        do_action( 'opus_before_author_details' );
+
         /** Output author details */
-        $this->author_details( $opus_author_id );
+        echo '<div class="first-author-details">';
+            $this->author_details( $opus_author_id );
+            $this->author_coda();
+        echo '</div>';
+
+        /** Add empty hook after first author details */
+        do_action( 'opus_after_author_details' );
 
         /** Modified Author Details */
         /** @var $last_id - set last user ID */
@@ -855,8 +864,18 @@ class OpusPrimusStructures {
          * set to true
          */
         if ( ( get_the_date() <> get_the_modified_date() ) && ( $opus_author_id <> $last_id )&& $show_mod_author ) {
+
+            /** Add empty hook before modified author details */
+            do_action( 'opus_before_modified_author_details' );
+
             /** Output author details based on the last one to edit the post */
-            $this->author_details( $last_id );
+            echo '<div class="modified-author-details">';
+                $this->author_details( $last_id );
+            echo '</div>';
+
+            /** Add empty hook after modified author details */
+            do_action( 'opus_after_modified_author_details' );
+
         }
 
         /** Add empty hook after post author section */
@@ -878,6 +897,9 @@ class OpusPrimusStructures {
      * @uses    get_avatar
      * @uses    get_the_author_meta
      * @uses    user_can
+     *
+     * @todo Add more defining classes to specifically note the author, such as: ID, display name, etc.
+     * @todo Add wrapper classes for orphaned text strings
      */
     function author_details( $author_id ){
         /** Collect details from the author's profile */
@@ -937,6 +959,31 @@ class OpusPrimusStructures {
         return;
 
     }
+
+    /**
+     * Author Coda
+     * Adds text art after the author details to signify the end of the output
+     * block
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    apply_filters
+     * @uses    do_action
+     */
+    function author_coda(){
+        /** Add empty hook before post coda */
+        do_action( 'opus_before_author_coda' );
+
+        /** Create the text art */
+        $author_coda = '* * * * *';
+        printf( '<div class="author-coda">%1$s</div>', apply_filters( 'opus_author_coda', $author_coda )  );
+
+        /** Add empty hook after the post coda */
+        do_action( 'opus_after_author_coda' );
+
+    }
+
 
     /**
      * Post Coda
