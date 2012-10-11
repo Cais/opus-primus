@@ -744,9 +744,9 @@ ul.trackbacks-list {
 p.comment-form-author,
 p.comment-form-email,
 p.comment-form-url {
-    float: left;
+    /** float: left; */
     padding-left: 5px;
-    padding-right: 10px;
+    /** padding-right: 10px; */
 }
 
 p.comment-form-comment {
@@ -761,23 +761,23 @@ form#commentform span.required {
 
 p.comment-notes span.required {
     position: relative;
-    top: 8px;
+    /** top: 8px; */
 }
 p.comment-form-author span.required {
     position: relative;
-    left: 40px;
-    top: -20px;
+    /** left: 40px; */
+    /** top: -20px; */
 }
 
 p.comment-form-email span.required {
     position: relative;
-    left: 38px;
-    top: -20px;
+    /** left: 38px; */
+    /** top: -20px; */
 }
 
 p.comment-form-author input#author,
 p.comment-form-email input#email {
-    margin-left: -10px;
+    /** margin-left: -10px; */
 }
 
 p.comment-form-comment {
