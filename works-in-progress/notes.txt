@@ -1,0 +1,3 @@
+NOTES.TXT
+=========
+A free-form scratchpad for ideas and other notes related to the project.
