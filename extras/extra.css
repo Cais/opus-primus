@@ -2,6 +2,4 @@
 
 
 /** This will find an embedded iframe and limit its width to 300px */
-span[class^="embed-"] iframe {
-    max-width: 300px;
-}
+span[class^="embed-"] iframe { max-width: 300px; }

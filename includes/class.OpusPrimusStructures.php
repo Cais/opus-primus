@@ -823,126 +823,118 @@ class OpusPrimusStructures {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    do_action
-     * @uses    get_avatar
-     * @uses    get_the_author_meta ( display_name, user_url, user_email, user_description )
-     * @uses    user_can
+     * @param   $show_mod_author - boolean - default: true
      *
-     * @todo Optimize repetitive code for displaying author blocks ... use a function with a passed author_id variable
+     * @uses    (global) $opus_author_id
+     * @uses    (global) $post - object (ID)
+     * @uses    do_action
+     * @uses    get_post_meta
+     * @uses    get_the_date
+     * @uses    get_the_modified_date
+     * @uses    author_details
      */
     function post_author( $show_mod_author = 'true' ) {
-        /** Get and set variables */
-        global $opus_author_id;
-        if ( ! isset( $opus_author_id ) )
+        /** Get global variables */
+        global $opus_author_id, $post;
+        if ( ! isset( $opus_author_id ) ) {
             $opus_author_id = '';
-        $opus_author_display_name   = get_the_author_meta( 'display_name', $opus_author_id );
-        $opus_author_url            = get_the_author_meta( 'user_url', $opus_author_id );
-        $opus_author_email          = get_the_author_meta( 'user_email', $opus_author_id );
-        $opus_author_desc           = get_the_author_meta( 'user_description', $opus_author_id );
+        }
 
-        /** Add empty hook before post author details */
-        do_action( 'opus_before_post_author' );
+        /** Add empty hook before post author section */
+        do_action( 'opus_post_author_top' );
 
-        /** Author details */ ?>
+        /** Output author details */
+        $this->author_details( $opus_author_id );
+
+        /** Modified Author Details */
+        /** @var $last_id - set last user ID */
+        $last_id = get_post_meta( $post->ID, '_edit_last', true );
+        /**
+         * If the modified dates are different; and, the modified author is not
+         * the same as the original author; and, showing the modified author is
+         * set to true
+         */
+        if ( ( get_the_date() <> get_the_modified_date() ) && ( $opus_author_id <> $last_id )&& $show_mod_author ) {
+            /** Output author details based on the last one to edit the post */
+            $this->author_details( $last_id );
+        }
+
+        /** Add empty hook after post author section */
+        do_action( 'opus_post_author_bottom' );
+
+    }
+
+    /**
+     * Author Details
+     * Takes the passed author ID parameter and creates / collects various
+     * details to be used when outputting author information, by default,
+     * at the end of the post or page single view.
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @param   $author_id
+     *
+     * @uses    get_avatar
+     * @uses    get_the_author_meta
+     * @uses    user_can
+     */
+    function author_details( $author_id ){
+        /** Collect details from the author's profile */
+        $author_display_name   = get_the_author_meta( 'display_name', $author_id );
+        $author_url            = get_the_author_meta( 'user_url', $author_id );
+        $author_email          = get_the_author_meta( 'user_email', $author_id );
+        $author_desc           = get_the_author_meta( 'user_description', $author_id );
+
+        /** Add empty hook before author details */
+        do_action( 'opus_before_author_details' ); ?>
+
         <div class="author details <?php
-            /** Pay homage to the first administrator ... do not forget a trailing space */
-            if ( $opus_author_id == '1' ) echo 'administrator-prime ';
             /** Add class as related to the user role (see 'Role:' drop-down in User options) */
-            if ( user_can( $opus_author_id, 'administrator' ) ) {
+            if ( user_can( $author_id, 'administrator' ) ) {
                 echo 'administrator';
-            } elseif ( user_can( $opus_author_id, 'editor' ) ) {
+            } elseif ( user_can( $author_id, 'editor' ) ) {
                 echo 'editor';
-            } elseif ( user_can( $opus_author_id, 'contributor' ) ) {
+            } elseif ( user_can( $author_id, 'contributor' ) ) {
                 echo 'contributor';
-            } elseif ( user_can( $opus_author_id, 'subscriber' ) ) {
+            } elseif ( user_can( $author_id, 'subscriber' ) ) {
                 echo 'subscriber';
             } else {
                 echo 'guest';
             } ?>">
             <h2>
                 <?php
-                if ( ! empty( $opus_author_id ) )
-                    echo get_avatar( $opus_author_id );
-                    printf( __( 'About %1$s', 'opusprimus' ), $opus_author_display_name ); ?>
+                /** Sanity check - an author id should always be present */
+                if ( ! empty( $author_id ) )
+                    echo get_avatar( $author_id );
+                printf( __( 'About %1$s', 'opusprimus' ), $author_display_name ); ?>
             </h2>
             <ul>
                 <?php
-                if ( ! empty( $opus_author_url ) ) { ?>
+                /** Check for the author URL */
+                if ( ! empty( $author_url ) ) { ?>
                     <li>
                         <?php
                         printf( __( 'Visit the web site of %1$s or email %2$s.', 'opusprimus' ),
-                            '<a href="' . $opus_author_url . '">' . $opus_author_display_name . '</a>',
-                            '<a href="mailto:' .  $opus_author_email . '">' . $opus_author_display_name . '</a>'
+                            '<a href="' . $author_url . '">' . $author_display_name . '</a>',
+                            '<a href="mailto:' .  $author_email . '">' . $author_display_name . '</a>'
                         ); ?>
                     </li>
                 <?php }
-                if ( ! empty( $opus_author_desc ) ) { ?>
+                /** Check for the author bio */
+                if ( ! empty( $author_desc ) ) { ?>
                     <li>
-                        <?php printf( __( 'Biography: %1$s', 'opusprimus' ), $opus_author_desc ); ?>
+                        <?php printf( __( 'Biography: %1$s', 'opusprimus' ), $author_desc ); ?>
                     </li>
                 <?php } ?>
             </ul>
         </div>
 
         <?php
-        /** Modified Author Details */
-        /** Get the post global to use with finding the last user */
-        global $post;
-        /** @var $last_user - establish the last user */
-        $last_user = '';
-        /** @var $last_id - set as the last user ID */
-        if ( $last_id = get_post_meta( $post->ID, '_edit_last', true ) ) {
-            $last_user = get_userdata( $last_id );
-        }
-        if ( ( get_the_date() <> get_the_modified_date() ) && ( $opus_author_id <> $last_id )&& $show_mod_author ) {
-            $opus_author_display_name   = get_the_author_meta( 'display_name', $last_id );
-            $opus_author_url            = get_the_author_meta( 'user_url', $last_id );
-            $opus_author_email          = get_the_author_meta( 'user_email', $last_id );
-            $opus_author_desc           = get_the_author_meta( 'user_description', $last_id ); ?>
+        /** Add empty hook after author details */
+        do_action( 'opus_after_author_details' );
 
-            <div class="author details <?php
-                /** Add class as related to the user role (see 'Role:' drop-down in User options) */
-                if ( user_can( $last_id, 'administrator' ) ) {
-                    echo 'administrator';
-                } elseif ( user_can( $last_id, 'editor' ) ) {
-                    echo 'editor';
-                } elseif ( user_can( $last_id, 'contributor' ) ) {
-                    echo 'contributor';
-                } elseif ( user_can( $last_id, 'subscriber' ) ) {
-                    echo 'subscriber';
-                } else {
-                    echo 'guest';
-                } ?>">
-                <h2>
-                    <?php
-                    if ( ! empty( $last_id ) )
-                        echo get_avatar( $last_id );
-                    printf( __( 'About %1$s', 'opusprimus' ), $last_user->display_name ); ?>
-                </h2>
-                <ul>
-                    <?php
-                    if ( ! empty( $opus_author_url ) ) { ?>
-                        <li>
-                            <?php
-                            printf( __( 'Visit the web site of %1$s or email %2$s.', 'opusprimus' ),
-                                '<a href="' . $opus_author_url . '">' . $opus_author_display_name . '</a>',
-                                '<a href="mailto:' .  $opus_author_email . '">' . $opus_author_display_name . '</a>'
-                            ); ?>
-                        </li>
-                        <?php }
-                    if ( ! empty( $opus_author_desc ) ) { ?>
-                        <li>
-                            <?php printf( __( 'Biography: %1$s', 'opusprimus' ), $opus_author_desc ); ?>
-                        </li>
-                        <?php } ?>
-                </ul>
-            </div>
-        <?php } ?>
-
-
-        <?php
-        /** Add empty hook after post author details */
-        do_action( 'opus_after_post_author' );
+        return;
 
     }
 
