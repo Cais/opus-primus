@@ -849,8 +849,8 @@ class OpusPrimusStructures {
         /** Output author details */
         echo '<div class="first-author-details">';
             $this->author_details( $opus_author_id );
-            $this->author_coda();
         echo '</div>';
+        $this->author_coda();
 
         /** Add empty hook after first author details */
         do_action( 'opus_after_author_details' );
@@ -976,7 +976,7 @@ class OpusPrimusStructures {
         do_action( 'opus_before_author_coda' );
 
         /** Create the text art */
-        $author_coda = '* * * * *';
+        $author_coda = '|=|=|=|=|';
         printf( '<div class="author-coda">%1$s</div>', apply_filters( 'opus_author_coda', $author_coda )  );
 
         /** Add empty hook after the post coda */
