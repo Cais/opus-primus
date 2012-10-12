@@ -902,8 +902,6 @@ class OpusPrimusStructures {
      * @uses    get_avatar
      * @uses    get_the_author_meta
      * @uses    user_can
-     *
-     * @todo Add wrapper classes for orphaned text strings
      */
     function author_details( $author_id ){
         /** Collect details from the author's profile */
@@ -935,7 +933,7 @@ class OpusPrimusStructures {
                 /** Sanity check - an author id should always be present */
                 if ( ! empty( $author_id ) )
                     echo get_avatar( $author_id );
-                printf( __( 'About %1$s', 'opusprimus' ), $author_display_name ); ?>
+                printf( '<span class="opus-author-about">' . __( 'About %1$s', 'opusprimus' ) . '</span>', $author_display_name ); ?>
             </h2>
             <ul>
                 <?php
@@ -943,7 +941,7 @@ class OpusPrimusStructures {
                 if ( ! empty( $author_url ) ) { ?>
                     <li>
                         <?php
-                        printf( __( 'Visit the web site of %1$s or email %2$s.', 'opusprimus' ),
+                        printf( '<span class="opus-author-contact">' . __( 'Visit the web site of %1$s or email %2$s.', 'opusprimus' ) . '</span>',
                             '<a href="' . $author_url . '">' . $author_display_name . '</a>',
                             '<a href="mailto:' .  $author_email . '">' . $author_display_name . '</a>'
                         ); ?>
@@ -952,7 +950,7 @@ class OpusPrimusStructures {
                 /** Check for the author bio */
                 if ( ! empty( $author_desc ) ) { ?>
                     <li>
-                        <?php printf( __( 'Biography: %1$s', 'opusprimus' ), $author_desc ); ?>
+                        <?php printf( '<span class="opus-author-biography">' . __( 'Biography: %1$s', 'opusprimus' ) . '</span>', $author_desc ); ?>
                     </li>
                 <?php } ?>
             </ul>

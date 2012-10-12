@@ -34,6 +34,8 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @todo Add author template ... use the post_author / author details method(s)?
  */
 
 global $opus_nav, $opus_structure;
