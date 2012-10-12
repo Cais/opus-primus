@@ -868,15 +868,14 @@ class OpusPrimusStructures {
          * set to true
          */
         if ( ( get_the_date() <> get_the_modified_date() ) && ( $opus_author_id <> $last_id )&& $show_mod_author ) {
-
             /** Add empty hook before modified author details */
             do_action( 'opus_before_modified_author_details' );
 
             /** Output author details based on the last one to edit the post */
             echo '<div class="modified-author-details">';
-                _e( apply_filters(
-                    'opus_modified_author_details_text',
-                    '<div class="modified-author-details-text">' . __( 'Modified by:', 'opusprimus' ) . '</div>' )
+                printf(
+                    '<div class="modified-author-details-text">%1$s</div>',
+                    apply_filters( 'opus_modified_author_by_text', __( 'Modified by:', 'opusprimus' ) )
                 );
                 $this->author_details( $last_id );
             echo '</div>';
@@ -884,7 +883,6 @@ class OpusPrimusStructures {
 
             /** Add empty hook after modified author details */
             do_action( 'opus_after_modified_author_details' );
-
         }
 
         /** Add empty hook after post author section */
@@ -992,7 +990,6 @@ class OpusPrimusStructures {
 
     }
 
-
     /**
      * Post Coda
      * Adds text art after post content to signify the end of the post
@@ -1042,7 +1039,7 @@ class OpusPrimusStructures {
         </h2>
 
         <?php
-        printf( '<p class="no-results">%1$s</p>', __( 'No results were found. Please feel free to search again.', 'opusprimus' ) );
+        printf( '<p class="no-results">%1$s</p>', __( 'No results were found, would you like to try another search ...', 'opusprimus' ) );
         get_search_form();
 
         printf( '<p class="no-results">%1$s</p>', __( '... or try one of the links below.', 'opusprimus' ) );
@@ -1163,7 +1160,6 @@ class OpusPrimusStructures {
 
     }
 
-
     /**
      * Copyright
      * Returns copyright year(s) as defined by the dates found in published
@@ -1240,7 +1236,8 @@ $opus_structure = new OpusPrimusStructures();
 
 /** Testing ... testing ... testing ... */
 function opus_test() {
-    echo 'BACON Test!!! PS: This works, too!<br />';
+    return 'BACON Test!!! PS: This works, too!<br />';
 }
 // add_action( 'opus_before_modified_post', 'opus_test' );
-// add_filter( 'opus_modified_author_details_text', 'opus_test' );
+// add_filter( 'opus_modified_author_by_text', 'opus_test' );
+// add_filter( 'opus_author_coda', 'opus_test' );
