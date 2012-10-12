@@ -870,6 +870,10 @@ class OpusPrimusStructures {
 
             /** Output author details based on the last one to edit the post */
             echo '<div class="modified-author-details">';
+                _e( apply_filters(
+                    'opus_modified_author_details_text',
+                    '<div class="modified-author-details-text">' . __( 'Modified by:', 'opusprimus' ) . '</div>' )
+                );
                 $this->author_details( $last_id );
             echo '</div>';
             $this->author_coda();
@@ -899,7 +903,6 @@ class OpusPrimusStructures {
      * @uses    get_the_author_meta
      * @uses    user_can
      *
-     * @todo Add more defining classes to specifically note the author, such as: ID, display name, etc.
      * @todo Add wrapper classes for orphaned text strings
      */
     function author_details( $author_id ){
@@ -912,7 +915,7 @@ class OpusPrimusStructures {
         /** Add empty hook before author details */
         do_action( 'opus_before_author_details' ); ?>
 
-        <div class="author details <?php
+        <div class="author-details <?php
             /** Add class as related to the user role (see 'Role:' drop-down in User options) */
             if ( user_can( $author_id, 'administrator' ) ) {
                 echo 'administrator';
@@ -924,7 +927,9 @@ class OpusPrimusStructures {
                 echo 'subscriber';
             } else {
                 echo 'guest';
-            } ?>">
+            };
+            echo ' author-' . $author_id;
+            echo ' author-' . $this->replace_spaces( $author_display_name );  ?>">
             <h2>
                 <?php
                 /** Sanity check - an author id should always be present */
@@ -1236,4 +1241,4 @@ function opus_test() {
     echo 'BACON Test!!! PS: This works, too!<br />';
 }
 // add_action( 'opus_before_modified_post', 'opus_test' );
-// add_filter( 'opus_primus_credits', 'opus_test' );
+// add_filter( 'opus_modified_author_details_text', 'opus_test' );
