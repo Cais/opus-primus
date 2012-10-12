@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/opus-primus.css" afterPath="$PROJECT_DIR$/css/opus-primus.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,7 +25,52 @@
     <favorites_list name="opus-primus" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="class.OpusPrimusStructures.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="821" column="0" selection-start="32777" selection-end="32777" vertical-scroll-proportion="0.14663461">
+              <folding>
+                <element signature="e#1218#1585#0" expanded="false" />
+                <element signature="e#1591#2094#0" expanded="false" />
+                <element signature="e#2099#3998#0" expanded="false" />
+                <element signature="e#4004#4356#0" expanded="false" />
+                <element signature="e#4361#6112#0" expanded="false" />
+                <element signature="e#6118#6393#0" expanded="false" />
+                <element signature="e#6398#6940#0" expanded="false" />
+                <element signature="e#6946#7348#0" expanded="false" />
+                <element signature="e#7353#10176#0" expanded="false" />
+                <element signature="e#10182#10620#0" expanded="false" />
+                <element signature="e#10625#14434#0" expanded="false" />
+                <element signature="e#14440#15115#0" expanded="false" />
+                <element signature="e#15120#15955#0" expanded="false" />
+                <element signature="e#15961#16294#0" expanded="false" />
+                <element signature="e#16299#17125#0" expanded="false" />
+                <element signature="e#17131#17726#0" expanded="false" />
+                <element signature="e#17731#18148#0" expanded="false" />
+                <element signature="e#18154#18372#0" expanded="false" />
+                <element signature="e#18377#19499#0" expanded="false" />
+                <element signature="e#19505#19914#0" expanded="false" />
+                <element signature="e#19919#20539#0" expanded="false" />
+                <element signature="e#20545#20922#0" expanded="false" />
+                <element signature="e#20927#21619#0" expanded="false" />
+                <element signature="e#21625#23166#0" expanded="false" />
+                <element signature="e#23171#25362#0" expanded="false" />
+                <element signature="e#25368#25933#0" expanded="false" />
+                <element signature="e#25938#29078#0" expanded="false" />
+                <element signature="e#29084#29647#0" expanded="false" />
+                <element signature="e#29652#30949#0" expanded="false" />
+                <element signature="e#30955#31639#0" expanded="false" />
+                <element signature="e#31644#32308#0" expanded="false" />
+                <element signature="e#32314#32489#0" expanded="false" />
+                <element signature="e#32494#32775#0" expanded="false" />
+                <element signature="e#32781#33337#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -35,6 +78,7 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_CHANGES_POLICY" value="SHELVE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -111,16 +155,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -153,6 +187,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -171,15 +233,15 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../WordPress/wp-content/themes/twentytwelve" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="293" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="967" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="967" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="967" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="293" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="291" />
-    <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig" serverName="EAC" serverId="58604bab-3161-4ee6-bc6f-2a357fa717ae">
     <servers>
@@ -339,14 +401,14 @@
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="59791a67-7e89-437b-b6d2-d013c0025a62" server_name="EAC">
-      <method />
-    </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
       <JSDebuggerConfigurationSettings>
         <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="59791a67-7e89-437b-b6d2-d013c0025a62" server_name="EAC">
       <method />
     </configuration>
     <list size="0" />
@@ -1217,7 +1279,11 @@
       <created>1350048883775</created>
       <updated>1350048883775</updated>
     </task>
-    <option name="localTasksCounter" value="211" />
+    <task id="LOCAL-00211" summary="Wrap orphaned text strings in spans for easier CSS targeting; add miscellaneous filters">
+      <created>1350055838258</created>
+      <updated>1350055838258</updated>
+    </task>
+    <option name="localTasksCounter" value="212" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1254,26 +1320,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35965848" sideWeight="0.671875" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36392742" sideWeight="0.6707589" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1314,7 +1380,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add more specific author-details classes; add &quot;Modified by:&quot; text for modifying author" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wrap orphaned text strings in spans for easier CSS targeting; add miscellaneous filters" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1327,7 +1393,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Add infinity symbol (and space) before and after links in post-format: link templates" />
     <MESSAGE value="Change post-format: link archive to use content versus excerpt" />
     <MESSAGE value="Add extra (Opus Plugin Tagline)" />
     <MESSAGE value="Created a WIP folder for works-in-progress; added 'taglines' to WIP" />
@@ -1352,6 +1417,7 @@
     <MESSAGE value="Corrected comment form field layouts" />
     <MESSAGE value="Add author coda and simple styles" />
     <MESSAGE value="Add more specific author-details classes; add &quot;Modified by:&quot; text for modifying author" />
+    <MESSAGE value="Wrap orphaned text strings in spans for easier CSS targeting; add miscellaneous filters" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1422,29 +1488,55 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1241" column="3" selection-start="48850" selection-end="48850" vertical-scroll-proportion="0.87740386">
-          <folding>
-            <marker date="1350055673141" expanded="true" signature="37234:37443" placeholder="..." />
-            <marker date="1350055673141" expanded="true" signature="37380:37443" placeholder="..." />
-            <marker date="1350055673141" expanded="true" signature="37960:37999" placeholder="..." />
-            <marker date="1350055673141" expanded="true" signature="40255:40286" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="905" column="29" selection-start="18408" selection-end="18408" vertical-scroll-proportion="0.13662457">
-          <folding />
-        </state>
+        <state line="905" column="29" selection-start="18408" selection-end="18408" vertical-scroll-proportion="0.13662457" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="80" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.7443787">
-          <folding />
+        <state line="37" column="80" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.7443787" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="821" column="0" selection-start="32777" selection-end="32777" vertical-scroll-proportion="0.14663461">
+          <folding>
+            <element signature="e#1218#1585#0" expanded="false" />
+            <element signature="e#1591#2094#0" expanded="false" />
+            <element signature="e#2099#3998#0" expanded="false" />
+            <element signature="e#4004#4356#0" expanded="false" />
+            <element signature="e#4361#6112#0" expanded="false" />
+            <element signature="e#6118#6393#0" expanded="false" />
+            <element signature="e#6398#6940#0" expanded="false" />
+            <element signature="e#6946#7348#0" expanded="false" />
+            <element signature="e#7353#10176#0" expanded="false" />
+            <element signature="e#10182#10620#0" expanded="false" />
+            <element signature="e#10625#14434#0" expanded="false" />
+            <element signature="e#14440#15115#0" expanded="false" />
+            <element signature="e#15120#15955#0" expanded="false" />
+            <element signature="e#15961#16294#0" expanded="false" />
+            <element signature="e#16299#17125#0" expanded="false" />
+            <element signature="e#17131#17726#0" expanded="false" />
+            <element signature="e#17731#18148#0" expanded="false" />
+            <element signature="e#18154#18372#0" expanded="false" />
+            <element signature="e#18377#19499#0" expanded="false" />
+            <element signature="e#19505#19914#0" expanded="false" />
+            <element signature="e#19919#20539#0" expanded="false" />
+            <element signature="e#20545#20922#0" expanded="false" />
+            <element signature="e#20927#21619#0" expanded="false" />
+            <element signature="e#21625#23166#0" expanded="false" />
+            <element signature="e#23171#25362#0" expanded="false" />
+            <element signature="e#25368#25933#0" expanded="false" />
+            <element signature="e#25938#29078#0" expanded="false" />
+            <element signature="e#29084#29647#0" expanded="false" />
+            <element signature="e#29652#30949#0" expanded="false" />
+            <element signature="e#30955#31639#0" expanded="false" />
+            <element signature="e#31644#32308#0" expanded="false" />
+            <element signature="e#32314#32489#0" expanded="false" />
+            <element signature="e#32494#32775#0" expanded="false" />
+            <element signature="e#32781#33337#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

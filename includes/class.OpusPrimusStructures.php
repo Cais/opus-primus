@@ -237,8 +237,9 @@ class OpusPrimusStructures {
         $post_year = get_the_date( 'Y' );
         $classes[] = 'year-' . $post_year;
         $post_leap_year = get_the_date( 'L' );
-        if ( '1' == $post_leap_year )
+        if ( '1' == $post_leap_year ) {
             $classes[] = 'leap-year';
+        }
         /** Month */
         $post_month_numeric = get_the_date( 'm' );
         $classes[] = 'month-' . $post_month_numeric;
@@ -266,13 +267,14 @@ class OpusPrimusStructures {
 
         /** Modified Post Classes */
         if ( get_the_date() <> get_the_modified_date() ) {
-            $classes[] = 'modified';
+            $classes[] = 'modified-post';
             /** Year - Modified */
             $post_year = get_the_modified_date( 'Y' );
             $classes[] = 'modified-year-' . $post_year;
             $post_leap_year = get_the_modified_date( 'L' );
-            if ( '1' == $post_leap_year )
+            if ( '1' == $post_leap_year ) {
                 $classes[] = 'modified-leap-year';
+            }
             /** Month - Modified */
             $post_month_numeric = get_the_modified_date( 'm' );
             $classes[] = 'modified-month-' . $post_month_numeric;
@@ -293,7 +295,6 @@ class OpusPrimusStructures {
             $post_12_hour = get_the_modified_date( 'ha' );
             $classes[] = 'modified-hour-' . $post_12_hour;
 
-
             /** @var $last_user - establish the last user */
             global $post;
             $last_user = '';
@@ -304,7 +305,6 @@ class OpusPrimusStructures {
             $classes[] = 'modified-author-' . $mod_author_id;
             $mod_author_display_name = $this->replace_spaces( $last_user->display_name );
             $classes[] = 'modified-author-' . $mod_author_display_name;
-
         }
 
         /** Return the classes for use with the `post_class` hook */
@@ -341,12 +341,14 @@ class OpusPrimusStructures {
 
         /** Add the blog description (tagline) for the home/front page */
         $site_tagline = get_bloginfo( 'description', 'display' );
-        if ( $site_tagline && ( is_home() || is_front_page() ) )
+        if ( $site_tagline && ( is_home() || is_front_page() ) ) {
             $opus_title_text .= "$sep$site_tagline";
+        }
 
         /** Add a page number if necessary */
-        if ( $paged >= 2 || $page >= 2 )
+        if ( $paged >= 2 || $page >= 2 ) {
             $opus_title_text .= $sep . sprintf( __( 'Page %s', 'opusprimus' ), max( $paged, $page ) );
+        }
 
         return apply_filters( 'opus_browser_title', $opus_title_text );
     }
@@ -372,10 +374,12 @@ class OpusPrimusStructures {
         do_action( 'opus_before_post_title' );
 
         /** Set `the_title` parameters */
-        if ( empty( $before ) )
+        if ( empty( $before ) ) {
             $before = '<h2 class="post-title">';
-        if ( empty( $after ) )
+        }
+        if ( empty( $after ) ) {
             $after = '</h2>';
+        }
 
         /** Wrap the title in an anchor tag and provide a nice tool tip */ ?>
         <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ) ) ); ?>">
@@ -507,7 +511,7 @@ class OpusPrimusStructures {
 
         if ( '' == $sticky_text ) {
             $sticky_text = __( 'Featured', 'opusprimus' );
-            $sticky_text = apply_filters( 'sticky_flag', $sticky_text );
+            $sticky_text = apply_filters( 'opus_default_sticky_flag', $sticky_text );
         }
         if ( is_sticky() ) {
             $output = '<a href="' . get_permalink() . '" title="' . sprintf( __( 'Go to %1$s post', 'opusprimus' ), strtolower( $sticky_text ) ) . '">'
@@ -578,7 +582,7 @@ class OpusPrimusStructures {
         do_action( 'opus_before_post_byline' );
 
         /** @var string $opus_post_byline - create byline details string */
-        $opus_post_byline = __( '%1$s on %2$s at %3$s by %4$s', 'opusprimus' );
+        $opus_post_byline = apply_filters( 'opus_post_byline_details', __( '%1$s on %2$s at %3$s by %4$s', 'opusprimus' ) );
         /**
          * Output post byline (date, time, and author) and open the CSS wrapper
          */
@@ -663,7 +667,7 @@ class OpusPrimusStructures {
          * not be noted ( per developer prerogative ).
          */
         if ( ( ! empty( $last_user ) ) && ( $opus_author_id <> $last_id ) ) {
-            $mod_author_phrase .= __( 'Last modified by %1$s %2$s on %3$s at %4$s.', 'opusprimus' );
+            $mod_author_phrase .= apply_filters( 'opus_mod_different_author_phrase', __( 'Last modified by %1$s %2$s on %3$s at %4$s.', 'opusprimus' ) );
             $mod_author_avatar = get_avatar( $last_user->user_email, $line_height );
 
             /**
@@ -673,7 +677,7 @@ class OpusPrimusStructures {
             do_action( 'opus_before_modified_post' );
 
         } else {
-            $mod_author_phrase .= __( 'and modified on %3$s at %4$s.', 'opusprimus' );
+            $mod_author_phrase .= apply_filters( 'opus_mod_same_author_phrase', __( 'and modified on %3$s at %4$s.', 'opusprimus' ) );
             $mod_author_avatar = '';
         }
 
