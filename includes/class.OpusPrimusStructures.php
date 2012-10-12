@@ -872,6 +872,7 @@ class OpusPrimusStructures {
             echo '<div class="modified-author-details">';
                 $this->author_details( $last_id );
             echo '</div>';
+            $this->author_coda();
 
             /** Add empty hook after modified author details */
             do_action( 'opus_after_modified_author_details' );
