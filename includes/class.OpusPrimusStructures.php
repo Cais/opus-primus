@@ -189,8 +189,9 @@ class OpusPrimusStructures {
         $current_year = date( 'Y' );
         $classes[] = 'year-' . $current_year;
         $leap_year = date( 'L' );
-        if ( '1' == $leap_year )
+        if ( '1' == $leap_year ) {
             $classes[] = 'leap-year';
+        }
         /** Month */
         $current_month_numeric = date( 'm' );
         $classes[] = 'month-' . $current_month_numeric;
@@ -538,9 +539,10 @@ class OpusPrimusStructures {
      *
      * @param   array|string $byline_args - function controls
      *
-     * @internal    @param   string $anchor ( default = Posted )
-     * @internal    @param   string $show_mod_author ( default = false )
-     * @internal    @param   string $tempus ( default = date ) - date|time
+     * @internal    @param string $anchor ( default = Posted )
+     * @internal    @param string $show_mod_author ( default = false )
+     * @internal    @param string $sticky_flag ( default = '' )
+     * @internal    @param string $tempus ( default = date ) - date|time
      *
      * @example     post_byline( array( 'anchor' => 'Written', 'tempus' => 'time' ) )
      * @internal    This example will use the word "Written" as the anchor text
@@ -629,7 +631,9 @@ class OpusPrimusStructures {
      *
      * @param   string $tempus - date|time ( default = date )
      *
+     * @uses    (global) $opus_author_id
      * @uses    (global) $post
+     * @uses    apply_filters
      * @uses    do_action
      * @uses    get_post_meta
      * @uses    get_the_date
@@ -780,15 +784,17 @@ class OpusPrimusStructures {
         /** Add empty hook before the content */
         do_action( 'opus_before_the_content' );
 
+        /** Check if there the more_link_text parameter has been set */
         if ( empty( $more_link_text ) ) {
             $more_link_text = __( 'Continue reading ... ', 'opusprimus' ) . the_title( '', '', false );
         }
+        /** Check if there the stripteaser parameter has been set */
         if ( empty( $stripteaser ) ) {
             $stripteaser = '';
         }
 
+        /** Wrap the post content in its own container */
         echo '<div class="post-content">';
-            /** The post excerpt */
             the_content( $more_link_text, $stripteaser );
         echo '</div>';
 
@@ -811,8 +817,10 @@ class OpusPrimusStructures {
         /** Add empty hook before the excerpt */
         do_action( 'opus_before_the_excerpt' );
 
-        /** The post excerpt */
-        the_excerpt();
+        /** Wrap the post excerpt in its own CSS container */
+        echo '<div class="post-excerpt">';
+            the_excerpt();
+        echo '</div>';
 
         /** Add empty hook after the excerpt */
         do_action( 'opus_after_the_excerpt' );
@@ -830,7 +838,7 @@ class OpusPrimusStructures {
      * @param   $show_mod_author - boolean - default: true
      *
      * @uses    (global) $opus_author_id
-     * @uses    (global) $post - object (ID)
+     * @uses    (global) $post
      * @uses    do_action
      * @uses    get_post_meta
      * @uses    get_the_date
