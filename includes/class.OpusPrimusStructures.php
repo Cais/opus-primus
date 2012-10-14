@@ -844,6 +844,8 @@ class OpusPrimusStructures {
      * @uses    get_the_date
      * @uses    get_the_modified_date
      * @uses    author_details
+     *
+     * @todo see `author_details`, will require additional parameters in this method to build the url/email options logic
      */
     function post_author( $show_mod_author = 'true' ) {
         /** Get global variables */
@@ -912,6 +914,8 @@ class OpusPrimusStructures {
      * @uses    get_avatar
      * @uses    get_the_author_meta
      * @uses    user_can
+     *
+     * @todo Build in logic to allow for choices of not showing the author url and/or email
      */
     function author_details( $author_id ){
         /** Collect details from the author's profile */
