@@ -50,7 +50,12 @@ global $opus_nav, $opus_structure, $opus_image;
     $opus_structure->meta_tags();
     $opus_structure->post_coda();
     if ( is_single() ) {
-        $opus_structure->post_author();
+        $opus_structure->post_author( array(
+            'show_mod_author'   => true,
+            'show_author_url'   => true,
+            'show_author_email' => true,
+            'show_author_desc'  => true,
+        ) );
     } ?>
 
 </div><!-- .post -->

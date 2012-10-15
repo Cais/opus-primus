@@ -49,7 +49,12 @@ get_header( 'page' ); ?>
                         $opus_structure->post_title();
                         $opus_structure->post_content();
                         $opus_structure->post_byline( array( 'show_mod_author' => true ) );
-                        $opus_structure->post_author(); ?>
+                        $opus_structure->post_author( array(
+                            'show_mod_author'   => true,
+                            'show_author_url'   => true,
+                            'show_author_email' => true,
+                            'show_author_desc'  => true,
+                        ) ); ?>
                     </div><!-- .post -->
                 <?php
                 endwhile;

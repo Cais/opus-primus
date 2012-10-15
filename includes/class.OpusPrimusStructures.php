@@ -835,7 +835,11 @@ class OpusPrimusStructures {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @param   $show_mod_author - boolean - default: true
+     * @param   $post_author_args
+     * @internal @param show_mod_author
+     * @internal @param show_mod_url
+     * @internal @param show_mod_email
+     * @internal @param show_mod_desc
      *
      * @uses    (global) $opus_author_id
      * @uses    (global) $post
@@ -844,10 +848,17 @@ class OpusPrimusStructures {
      * @uses    get_the_date
      * @uses    get_the_modified_date
      * @uses    author_details
-     *
-     * @todo see `author_details`, will require additional parameters in this method to build the url/email options logic
      */
-    function post_author( $show_mod_author = 'true' ) {
+    function post_author( $post_author_args ) {
+        /** Defaults */
+        $defaults = array(
+            'show_mod_author'   => true,
+            'show_author_url'   => true,
+            'show_author_email' => true,
+            'show_author_desc'  => true
+        );
+        $post_author_args = wp_parse_args( (array) $post_author_args, $defaults );
+
         /** Get global variables */
         global $opus_author_id, $post;
         if ( ! isset( $opus_author_id ) ) {
@@ -862,7 +873,7 @@ class OpusPrimusStructures {
 
         /** Output author details */
         echo '<div class="first-author-details">';
-            $this->author_details( $opus_author_id );
+            $this->author_details( $opus_author_id, $post_author_args['show_author_url'], $post_author_args['show_author_email'], $post_author_args['show_author_desc'] );
         echo '</div>';
         $this->author_coda();
 
@@ -877,7 +888,7 @@ class OpusPrimusStructures {
          * the same as the original author; and, showing the modified author is
          * set to true
          */
-        if ( ( get_the_date() <> get_the_modified_date() ) && ( $opus_author_id <> $last_id )&& $show_mod_author ) {
+        if ( ( get_the_date() <> get_the_modified_date() ) && ( $opus_author_id <> $last_id )&& $post_author_args['show_mod_author'] ) {
             /** Add empty hook before modified author details */
             do_action( 'opus_before_modified_author_details' );
 
@@ -887,7 +898,7 @@ class OpusPrimusStructures {
                     '<div class="modified-author-details-text">%1$s</div>',
                     apply_filters( 'opus_modified_author_by_text', __( 'Modified by:', 'opusprimus' ) )
                 );
-                $this->author_details( $last_id );
+                $this->author_details( $last_id, $post_author_args['show_author_url'], $post_author_args['show_author_email'], $post_author_args['show_author_desc'] );
             echo '</div>';
             $this->author_coda();
 
@@ -910,14 +921,15 @@ class OpusPrimusStructures {
      * @since   0.1
      *
      * @param   $author_id
+     * @param   $show_author_url
+     * @param   $show_author_email
+     * @param   $show_author_desc
      *
      * @uses    get_avatar
      * @uses    get_the_author_meta
      * @uses    user_can
-     *
-     * @todo Build in logic to allow for choices of not showing the author url and/or email
      */
-    function author_details( $author_id ){
+    function author_details( $author_id, $show_author_url, $show_author_email, $show_author_desc ){
         /** Collect details from the author's profile */
         $author_display_name   = get_the_author_meta( 'display_name', $author_id );
         $author_url            = get_the_author_meta( 'user_url', $author_id );
@@ -951,18 +963,45 @@ class OpusPrimusStructures {
             </h2>
             <ul>
                 <?php
-                /** Check for the author URL */
-                if ( ! empty( $author_url ) ) { ?>
+                /** Check for the author URL; if show Author URL is true; and, show Author email is true */
+                if ( ! empty( $author_url ) && $show_author_url && $show_author_email ) { ?>
                     <li>
                         <?php
                         printf( '<span class="opus-author-contact">' . __( 'Visit the web site of %1$s or email %2$s.', 'opusprimus' ) . '</span>',
-                            '<a href="' . $author_url . '">' . $author_display_name . '</a>',
-                            '<a href="mailto:' .  $author_email . '">' . $author_display_name . '</a>'
+                            '<a class="opus-author-url" href="' . $author_url . '">' . $author_display_name . '</a>',
+                            '<a class="opus-author-email" href="mailto:' .  $author_email . '">' . $author_display_name . '</a>'
+                        ); ?>
+                    </li>
+                <?php
+                /** Check for the author URL; show Author URL is true; and, show Author email is false */
+                } elseif ( ! empty( $author_url ) && $show_author_url && ! $show_author_email ) { ?>
+                    <li>
+                        <?php
+                        printf( '<span class="opus-author-contact">' . __( 'Visit the web site of %1$s.', 'opusprimus' ) . '</span>',
+                            '<a class="opus-author-url" href="' . $author_url . '">' . $author_display_name . '</a>'
+                        ); ?>
+                    </li>
+                <?php
+                /** Check for the author URL; show Author URL is false; and, show Author email is true */
+                } elseif ( ! empty( $author_url ) && ! $show_author_url && $show_author_email ) { ?>
+                    <li>
+                        <?php
+                        printf( '<span class="opus-author-contact">' . __( 'Email %1$s.', 'opusprimus' ) . '</span>',
+                            '<a class="opus-author-email" href="mailto:' .  $author_email . '">' . $author_display_name . '</a>'
+                        ); ?>
+                    </li>
+                <?php
+                /** The last option available in this logic chain: no Author URL and show Author email is true */
+                } elseif ( $show_author_email ) { ?>
+                    <li>
+                        <?php
+                        printf( '<span class="opus-author-contact">' . __( 'Email %1$s.', 'opusprimus' ) . '</span>',
+                            '<a class="opus-author-email" href="mailto:' .  $author_email . '">' . $author_display_name . '</a>'
                         ); ?>
                     </li>
                 <?php }
-                /** Check for the author bio */
-                if ( ! empty( $author_desc ) ) { ?>
+                /** Check for the author bio; and, if show Author Desc is true */
+                if ( ! empty( $author_desc ) && $show_author_desc ) { ?>
                     <li>
                         <?php printf( '<span class="opus-author-biography">' . __( 'Biography: %1$s', 'opusprimus' ) . '</span>', $author_desc ); ?>
                     </li>
