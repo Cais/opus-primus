@@ -141,8 +141,6 @@ class OpusPrimusAuthors {
      * @uses    user_can
      */
     function author_details( $author_id, $show_author_url, $show_author_email, $show_author_desc ){
-        /** Call the structure class to use replace spaces */
-        global $opus_structure;
         /** Collect details from the author's profile */
         $author_display_name   = get_the_author_meta( 'display_name', $author_id );
         $author_url            = get_the_author_meta( 'user_url', $author_id );
@@ -243,6 +241,10 @@ class OpusPrimusAuthors {
         } else {
             echo 'guest';
         };
+        /** Check if this is the first user */
+        if ( ( $author_id ) == '1' ) {
+            echo ' administrator-prime';
+        }
         echo ' author-' . $author_id;
         echo ' author-' . $opus_structure->replace_spaces( get_the_author_meta( 'display_name', $author_id ) );
     }

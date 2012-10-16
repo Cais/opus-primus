@@ -1124,7 +1124,11 @@
       <created>1350416300740</created>
       <updated>1350416300740</updated>
     </task>
-    <option name="localTasksCounter" value="199" />
+    <task id="LOCAL-00199" summary="Created `author_classes` method to provide better readability in the `author_details` method.">
+      <created>1350417578396</created>
+      <updated>1350417578396</updated>
+    </task>
+    <option name="localTasksCounter" value="200" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1221,7 +1225,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Posts and Authors classes; refactor Structures class to move appropriate code to new classes; move comment_links method to Comments class ... refactored files as required." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created `author_classes` method to provide better readability in the `author_details` method." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1234,7 +1238,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Re-factor header templates to include the complete &lt;header&gt; container; change container #opus to #opus-primus (no effect)" />
     <MESSAGE value="Code formatting; Twitter oEmbed CSS" />
     <MESSAGE value="Move 'post_coda'" />
     <MESSAGE value="Moved `body_classes` function from 'functions.php' to the Structures class" />
@@ -1259,6 +1262,7 @@
     <MESSAGE value="Add post author details logic to show only those set to true (default)" />
     <MESSAGE value="Added author template" />
     <MESSAGE value="Add Posts and Authors classes; refactor Structures class to move appropriate code to new classes; move comment_links method to Comments class ... refactored files as required." />
+    <MESSAGE value="Created `author_classes` method to provide better readability in the `author_details` method." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1385,7 +1389,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="0" selection-start="4303" selection-end="4303" vertical-scroll-proportion="-1.4946746">
+        <state line="243" column="43" selection-start="10166" selection-end="10166" vertical-scroll-proportion="0.63431954">
           <folding>
             <element signature="e#6#1162#0" expanded="true" />
           </folding>
