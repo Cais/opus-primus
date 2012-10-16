@@ -84,7 +84,7 @@ class OpusPrimusAuthors {
 
         /** Output author details */
         echo '<div class="first-author-details">';
-        $this->author_details( $opus_author_id, $post_author_args['show_author_url'], $post_author_args['show_author_email'], $post_author_args['show_author_desc'] );
+            $this->author_details( $opus_author_id, $post_author_args['show_author_url'], $post_author_args['show_author_email'], $post_author_args['show_author_desc'] );
         echo '</div>';
         $this->author_coda();
 
@@ -105,12 +105,12 @@ class OpusPrimusAuthors {
 
             /** Output author details based on the last one to edit the post */
             echo '<div class="modified-author-details">';
-            printf(
-                '<div class="modified-author-details-text">%1$s</div>',
-                apply_filters( 'opus_modified_author_by_text', __( 'Modified by:', 'opusprimus' ) )
-            );
-            $this->author_details( $last_id, $post_author_args['show_author_url'], $post_author_args['show_author_email'], $post_author_args['show_author_desc'] );
-            echo '</div>';
+                printf(
+                    '<div class="modified-author-details-text">%1$s</div>',
+                    apply_filters( 'opus_modified_author_by_text', __( 'Modified by:', 'opusprimus' ) )
+                );
+                $this->author_details( $last_id, $post_author_args['show_author_url'], $post_author_args['show_author_email'], $post_author_args['show_author_desc'] );
+                echo '</div>';
             $this->author_coda();
 
             /** Add empty hook after modified author details */
@@ -152,21 +152,7 @@ class OpusPrimusAuthors {
         /** Add empty hook before author details */
         do_action( 'opus_before_author_details' ); ?>
 
-        <div class="author-details <?php
-            /** Add class as related to the user role (see 'Role:' drop-down in User options) */
-            if ( user_can( $author_id, 'administrator' ) ) {
-                echo 'administrator';
-            } elseif ( user_can( $author_id, 'editor' ) ) {
-                echo 'editor';
-            } elseif ( user_can( $author_id, 'contributor' ) ) {
-                echo 'contributor';
-            } elseif ( user_can( $author_id, 'subscriber' ) ) {
-                echo 'subscriber';
-            } else {
-                echo 'guest';
-            };
-            echo ' author-' . $author_id;
-            echo ' author-' . $opus_structure->replace_spaces( $author_display_name );  ?>">
+        <div class="author-details <?php $this->author_classes( $author_id ); ?>">
             <h2>
                 <?php
                 /** Sanity check - an author id should always be present */
@@ -228,6 +214,37 @@ class OpusPrimusAuthors {
 
         return;
 
+    }
+
+    /**
+     * Author Classes
+     * Additional author classes related to the use and their capabilities
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @param   $author_id
+     *
+     * @uses    get_the_author_meta
+     * @uses    replace_spaces
+     */
+    function author_classes( $author_id ) {
+        /** Call the structure class to use replace spaces */
+        global $opus_structure;
+        /** Add class as related to the user role (see 'Role:' drop-down in User options) */
+        if ( user_can( $author_id, 'administrator' ) ) {
+            echo 'administrator';
+        } elseif ( user_can( $author_id, 'editor' ) ) {
+            echo 'editor';
+        } elseif ( user_can( $author_id, 'contributor' ) ) {
+            echo 'contributor';
+        } elseif ( user_can( $author_id, 'subscriber' ) ) {
+            echo 'subscriber';
+        } else {
+            echo 'guest';
+        };
+        echo ' author-' . $author_id;
+        echo ' author-' . $opus_structure->replace_spaces( get_the_author_meta( 'display_name', $author_id ) );
     }
 
     /**

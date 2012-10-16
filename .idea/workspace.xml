@@ -2,35 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/archive-aside.php" afterPath="$PROJECT_DIR$/archives/archive-aside.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/archive-audio.php" afterPath="$PROJECT_DIR$/archives/archive-audio.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/archive-chat.php" afterPath="$PROJECT_DIR$/archives/archive-chat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/archive-gallery.php" afterPath="$PROJECT_DIR$/archives/archive-gallery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/archive-image.php" afterPath="$PROJECT_DIR$/archives/archive-image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/archive-link.php" afterPath="$PROJECT_DIR$/archives/archive-link.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/archive-quote.php" afterPath="$PROJECT_DIR$/archives/archive-quote.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/archive-status.php" afterPath="$PROJECT_DIR$/archives/archive-status.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/archive-video.php" afterPath="$PROJECT_DIR$/archives/archive-video.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/archive.php" afterPath="$PROJECT_DIR$/archives/archive.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/author.php" afterPath="$PROJECT_DIR$/author.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image.php" afterPath="$PROJECT_DIR$/image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/opus-ignite.php" afterPath="$PROJECT_DIR$/includes/opus-ignite.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loops/opus-primus-aside.php" afterPath="$PROJECT_DIR$/loops/opus-primus-aside.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loops/opus-primus-audio.php" afterPath="$PROJECT_DIR$/loops/opus-primus-audio.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loops/opus-primus-chat.php" afterPath="$PROJECT_DIR$/loops/opus-primus-chat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loops/opus-primus-gallery.php" afterPath="$PROJECT_DIR$/loops/opus-primus-gallery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loops/opus-primus-image.php" afterPath="$PROJECT_DIR$/loops/opus-primus-image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loops/opus-primus-link.php" afterPath="$PROJECT_DIR$/loops/opus-primus-link.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loops/opus-primus-quote.php" afterPath="$PROJECT_DIR$/loops/opus-primus-quote.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loops/opus-primus-status.php" afterPath="$PROJECT_DIR$/loops/opus-primus-status.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loops/opus-primus-video.php" afterPath="$PROJECT_DIR$/loops/opus-primus-video.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loops/opus-primus.php" afterPath="$PROJECT_DIR$/loops/opus-primus.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page.php" afterPath="$PROJECT_DIR$/page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,8 +52,8 @@
         <option value="$PROJECT_DIR$/loops/opus-primus.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
         <option value="$PROJECT_DIR$/author.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" />
         <option value="$PROJECT_DIR$/includes/opus-ignite.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" />
       </list>
     </option>
   </component>
@@ -1147,7 +1120,11 @@
       <created>1350330477183</created>
       <updated>1350330477183</updated>
     </task>
-    <option name="localTasksCounter" value="198" />
+    <task id="LOCAL-00198" summary="Add Posts and Authors classes; refactor Structures class to move appropriate code to new classes; move comment_links method to Comments class ... refactored files as required.">
+      <created>1350416300740</created>
+      <updated>1350416300740</updated>
+    </task>
+    <option name="localTasksCounter" value="199" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1186,6 +1163,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32589287" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32681563" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32589287" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1197,9 +1175,8 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282123" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22411953" sideWeight="0.671875" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22411953" sideWeight="0.67410713" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32589287" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1399,19 +1376,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="227" column="55" selection-start="9892" selection-end="9892" vertical-scroll-proportion="0.27573964">
-          <folding>
-            <element signature="e#6#1162#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/author.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="91" selection-start="1819" selection-end="1819" vertical-scroll-proportion="0.38224852">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="0" selection-start="4303" selection-end="4303" vertical-scroll-proportion="-1.4946746">
+          <folding>
+            <element signature="e#6#1162#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
