@@ -1,7 +1,7 @@
 <?php
 /**
  * Opus Primus Comments
- * Comments related functions attached to hooks
+ * Comments related functions
  *
  * @package     OpusPrimus
  * @since       0.1
@@ -130,6 +130,47 @@ class OpusPrimusComments {
                 '</span>'
             );
         }
+    }
+
+    /**
+     * Comments Link
+     * Displays amount of approved comments the post or page has
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    comments_popup_link
+     * @uses    is_page
+     */
+    function comments_link() {
+        /** Add empty hook before comments link */
+        do_action( 'opus_before_comments_link' );
+
+        echo '<h5 class="comments-link">';
+        if ( ! post_password_required() && comments_open() ) {
+            if ( is_page() ) {
+                comments_popup_link(
+                    __( 'There are no comments.', 'opusprimus' ),
+                    __( 'There is 1 comment.', 'opusprimus' ),
+                    __( 'There are % comments.', 'opusprimus' ),
+                    'comments-link',
+                    ''
+                );
+            } else {
+                comments_popup_link(
+                    __( 'There are no comments.', 'opusprimus' ),
+                    __( 'There is 1 comment.', 'opusprimus' ),
+                    __( 'There are % comments.', 'opusprimus' ),
+                    'comments-link',
+                    __( 'Comments are closed.', 'opusprimus' )
+                );
+            }
+        }
+        echo '</h5><!-- .comments-link -->';
+
+        /** Add empty hook after comments link */
+        do_action( 'opus_after_comments_link' );
+
     }
 
 }

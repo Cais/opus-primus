@@ -31,8 +31,8 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-/** Pull in the appropriate globals */
-global $opus_nav, $opus_structure;
+/** Call the class variables */
+global $opus_structure, $opus_authors, $opus_nav;
 /** @var $current_author - current author data an as object */
 $current_author = ( get_query_var( 'author_name ' ) ) ? get_user_by( 'id', get_query_var( 'author_name' ) ) : get_userdata( get_query_var( 'author' ) );
 /** @var $current_author_id - the author ID */
@@ -47,7 +47,7 @@ get_header( get_post_format() ); ?>
     <div class="the-loop">
         <!-- The Author Details block - inserted above the content -->
         <div class="opus-author-header">
-            <?php $opus_structure->author_details( $current_author_id, true, true, true ); ?>
+            <?php $opus_authors->author_details( $current_author_id, true, true, true ); ?>
         </div>
 
         <?php

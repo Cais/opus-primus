@@ -34,22 +34,22 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-/** Get the Post Structure and Navigation class variables */
-global $opus_structure, $opus_nav; ?>
+/** Get the class variables */
+global $opus_post, $opus_comments, $opus_nav; ?>
 
 <div <?php post_class(); ?>>
 
     <?php
-    $opus_structure->post_byline( array(
+    $opus_post->post_byline( array(
         'tempus'        => 'time',
         'anchor'        => 'Said',
         'sticky_flag'   => 'Noteworthy'
     ) );
-    $opus_structure->post_title();
-    $opus_structure->comments_link();
-    $opus_structure->post_excerpt();
+    $opus_post->post_title();
+    $opus_comments->comments_link();
+    $opus_post->post_excerpt();
     $opus_nav->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
-    $opus_structure->meta_tags();
-    $opus_structure->post_coda(); ?>
+    $opus_post->meta_tags();
+    $opus_post->post_coda(); ?>
 
 </div><!-- .post -->

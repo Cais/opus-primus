@@ -36,26 +36,26 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-/** Get the Post Structure, Navigation, and Gallery class variables */
+/** Get the class variables */
 
-global $opus_structure, $opus_nav, $opus_image;?>
+global $opus_post, $opus_comments, $opus_nav, $opus_image;?>
 
 <div <?php post_class(); ?>>
 
     <?php
-    $opus_structure->post_byline( array(
+    $opus_post->post_byline( array(
         'tempus'        => 'time',
         'anchor'        => 'Displayed',
         'sticky_flag'   => 'Matted'
     ) );
-    $opus_structure->post_title();
-    $opus_structure->comments_link();
+    $opus_post->post_title();
+    $opus_comments->comments_link();
 
     $opus_image->archive_image_details();
 
-    $opus_structure->post_excerpt();
+    $opus_post->post_excerpt();
     $opus_nav->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
-    $opus_structure->meta_tags();
-    $opus_structure->post_coda(); ?>
+    $opus_post->meta_tags();
+    $opus_post->post_coda(); ?>
 
 </div><!-- .post -->

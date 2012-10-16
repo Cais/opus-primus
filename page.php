@@ -31,7 +31,8 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-global $opus_nav, $opus_structure;
+/** Call the class variables */
+global $opus_structure, $opus_post, $opus_authors, $opus_nav;
 get_header( 'page' ); ?>
 
 <div class="content-wrapper cf">
@@ -46,10 +47,10 @@ get_header( 'page' ); ?>
                     the_post(); ?>
                     <div <?php post_class(); ?>>
                         <?php
-                        $opus_structure->post_title();
-                        $opus_structure->post_content();
-                        $opus_structure->post_byline( array( 'show_mod_author' => true ) );
-                        $opus_structure->post_author( array(
+                        $opus_post->post_title();
+                        $opus_post->post_content();
+                        $opus_post->post_byline( array( 'show_mod_author' => true ) );
+                        $opus_authors->post_author( array(
                             'show_mod_author'   => true,
                             'show_author_url'   => true,
                             'show_author_email' => true,

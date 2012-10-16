@@ -32,25 +32,25 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-/** Call the Post Structure and Navigation class variables */
-global $opus_nav, $opus_structure, $opus_image;
+/** Call the class variables */
+global $opus_post, $opus_comments, $opus_nav, $opus_image, $opus_authors;
 
 /** Display the post */ ?>
 <div <?php post_class(); ?>>
 
     <?php
-    $opus_structure->post_byline( array( 'show_mod_author' => true ) );
-    $opus_structure->post_title();
+    $opus_post->post_byline( array( 'show_mod_author' => true ) );
+    $opus_post->post_title();
     if ( ! is_single() ) {
-        $opus_structure->comments_link();
+        $opus_comments->comments_link();
     }
     $opus_image->featured_thumbnail();
-    $opus_structure->post_content();
+    $opus_post->post_content();
     $opus_nav->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
-    $opus_structure->meta_tags();
-    $opus_structure->post_coda();
+    $opus_post->meta_tags();
+    $opus_post->post_coda();
     if ( is_single() ) {
-        $opus_structure->post_author( array(
+        $opus_authors->post_author( array(
             'show_mod_author'   => true,
             'show_author_url'   => true,
             'show_author_email' => true,

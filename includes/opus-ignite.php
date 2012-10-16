@@ -41,8 +41,12 @@ define( 'OPUS_CSS', get_template_directory_uri() . '/css/' );
 require_once( OPUS_INC . 'class.OpusPrimusComments.php' );
 /** Add Archives */
 require_once( OPUS_INC . 'class.OpusPrimusArchives.php' );
-/** Add Post Structures */
+/** Add Structures */
 require_once( OPUS_INC . 'class.OpusPrimusStructures.php' );
+/** Add Posts */
+require_once( OPUS_INC . 'class.OpusPrimusPosts.php' );
+/** Add Authors */
+require_once( OPUS_INC . 'class.OpusPrimusAuthors.php' );
 /** Add Navigation */
 require_once( OPUS_INC . 'class.OpusPrimusNavigation.php' );
 /** Add Gallery */

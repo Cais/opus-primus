@@ -33,7 +33,7 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-global $post, $opus_nav, $opus_structure, $opus_image;
+global $post, $opus_nav, $opus_structure, $opus_post, $opus_image;
 get_header( 'image' ); ?>
 
 <div class="content-wrapper cf">
@@ -59,25 +59,25 @@ get_header( 'image' ); ?>
                         '<a href="' . get_permalink( $post->post_parent ) . '">' . get_the_title( $post->post_parent ) . '</a>'
                     );
 
-                    $opus_structure->post_byline( array( 'show_mod_author' => true, 'anchor' => __( 'Displayed', 'opusprimus' ) ) );
+                    $opus_post->post_byline( array( 'show_mod_author' => true, 'anchor' => __( 'Displayed', 'opusprimus' ) ) );
                     $opus_nav->image_nav();
 
                     /** Image Title from media library */
                     $opus_image->image_title();
                     /** Image Caption from media library */
-                    $opus_structure->post_excerpt();
+                    $opus_post->post_excerpt();
 
                     /** Show the image with link to original */
                     $size = 'large';
                     echo '<div class="attached-image"><a href="' . wp_get_attachment_url( $post->ID ) . '">' . wp_get_attachment_image( $post->ID, $size ) . '</a></div>';
 
                     /** Image Description from media library */
-                    $opus_structure->post_content();
+                    $opus_post->post_content();
 
                     /** Image meta data */
                     $opus_image->display_exif_table();
 
-                    $opus_structure->post_coda();
+                    $opus_post->post_coda();
 
                     comments_template(); ?>
 
