@@ -35,7 +35,7 @@
  */
 
 /** Get the class variables */
-global $opus_structure, $opus_post, $opus_comments, $opus_nav; ?>
+global $opus_post, $opus_comments, $opus_nav; ?>
 
 <div <?php post_class(); ?>>
 
@@ -48,7 +48,7 @@ global $opus_structure, $opus_post, $opus_comments, $opus_nav; ?>
     $opus_post->post_title();
     $opus_comments->comments_link();
     $opus_post->post_excerpt();
-    $opus_structure->status_update();
+    $opus_post->status_update();
     $opus_nav->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
     $opus_post->meta_tags();
     $opus_post->post_coda(); ?>

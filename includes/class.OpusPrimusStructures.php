@@ -320,47 +320,6 @@ class OpusPrimusStructures {
     }
 
     /**
-     * Status Update
-     * Displays the human time difference based on how long ago the post was
-     * updated
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @param   string $update_text
-     * @param   int $time_ago - measured in seconds, default equals one week
-     *
-     * @uses    do_action
-     * @uses    get_the_modified_time
-     * @uses    get_the_time
-     * @uses    human_time_diff
-     *
-     * @internal Used with Post-Format: Status
-     */
-    function status_update( $update_text = 'Updated', $time_ago = 604800 ){
-        /** Add empty hook before status update output */
-        do_action( 'opus_before_status_update' );
-
-        /** @var int $time_diff - initialize as zero  */
-        $time_diff = 0;
-        /** Check if the post has been modified and get how long ago that was */
-        if ( get_the_modified_time( 'U' ) != get_the_time( 'U' ) ) {
-            $time_diff = get_the_modified_time( 'U' ) - get_the_time( 'U' );
-        }
-
-        /** Compare time difference between modification and actual post */
-        if ( ( $time_diff > $time_ago ) && ( $time_diff < 31449600 ) ) {
-            printf( __( '<div class="opus-status-update">%1$s %2$s ago.</div>', 'opusprimus' ), $update_text, human_time_diff( get_the_modified_time( 'U' ), current_time( 'timestamp' ) ) );
-        } elseif ( $time_diff >= 31449600 ) {
-            _e( '<div class="opus-status-update">Updated over a year ago.</div>', 'opusprimus' );
-        }
-
-        /** Add empty hook after status update output */
-        do_action( 'opus_after_status_update' );
-
-    }
-
-    /**
      * Credits
      * Displays the current theme name and its parent if one exists. Provides
      * links to the Parent-Theme (Opus Primus), to the Child-Theme (if it

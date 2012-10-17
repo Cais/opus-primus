@@ -50,7 +50,7 @@ global $opus_structure, $opus_post, $opus_comments, $opus_nav, $opus_image, $opu
     }
     $opus_image->featured_thumbnail();
     $opus_post->post_content();
-    $opus_structure->status_update();
+    $opus_post->status_update();
     $opus_nav->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
     $opus_post->meta_tags();
     $opus_post->post_coda();
