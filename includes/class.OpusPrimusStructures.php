@@ -232,10 +232,17 @@ class OpusPrimusStructures {
      * @uses        is_home
      * @uses        is_front_page
      *
-     * @return      string - new title text
+     * @return      string - original title|new title
      */
     function browser_title( $old_title, $sep, $sep_location ) {
+        /** Call the page globals for setting page number */
         global $page, $paged;
+
+        /** Check if this is in a feed; if so, return the title as is */
+        if ( is_feed() ) {
+            return $old_title;
+        }
+
         /** Set initial title text */
         $opus_title_text = $old_title . get_bloginfo( 'name' );
         /** Add wrapping spaces to separator character */
