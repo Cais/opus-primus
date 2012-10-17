@@ -1,7 +1,7 @@
 <?php
 /**
- * Opus Primus Post Structures
- * Controls for the organization and layout of the site and its content.
+ * Opus Primus Authors
+ * Controls for the organization and layout of the author sections of the site.
  *
  * @package     OpusPrimus
  * @since       0.1
@@ -70,7 +70,7 @@ class OpusPrimusAuthors {
         );
         $post_author_args = wp_parse_args( (array) $post_author_args, $defaults );
 
-        /** Get global variables */
+        /** Get global variables for the author ID and the post object */
         global $opus_author_id, $post;
         if ( ! isset( $opus_author_id ) ) {
             $opus_author_id = '';
@@ -154,13 +154,17 @@ class OpusPrimusAuthors {
             <h2>
                 <?php
                 /** Sanity check - an author id should always be present */
-                if ( ! empty( $author_id ) )
+                if ( ! empty( $author_id ) ) {
                     echo get_avatar( $author_id );
+                }
                 printf( '<span class="opus-author-about">' . __( 'About %1$s', 'opusprimus' ) . '</span>', $author_display_name ); ?>
             </h2>
             <ul>
                 <?php
-                /** Check for the author URL; if show Author URL is true; and, show Author email is true */
+                /**
+                 * Check for the author URL; if show Author URL is true; and,
+                 * show Author email is true
+                 */
                 if ( ! empty( $author_url ) && $show_author_url && $show_author_email ) { ?>
                     <li>
                         <?php
@@ -170,7 +174,10 @@ class OpusPrimusAuthors {
                         ); ?>
                     </li>
                     <?php
-                    /** Check for the author URL; show Author URL is true; and, show Author email is false */
+                    /**
+                     * Check for the author URL; show Author URL is true; and,
+                     * show Author email is false
+                     */
                 } elseif ( ! empty( $author_url ) && $show_author_url && ! $show_author_email ) { ?>
                     <li>
                         <?php
@@ -179,7 +186,10 @@ class OpusPrimusAuthors {
                         ); ?>
                     </li>
                     <?php
-                    /** Check for the author URL; show Author URL is false; and, show Author email is true */
+                    /**
+                     * Check for the author URL; show Author URL is false; and,
+                     * show Author email is true
+                     */
                 } elseif ( ! empty( $author_url ) && ! $show_author_url && $show_author_email ) { ?>
                     <li>
                         <?php
@@ -188,7 +198,10 @@ class OpusPrimusAuthors {
                         ); ?>
                     </li>
                     <?php
-                    /** The last option available in this logic chain: no Author URL and show Author email is true */
+                    /**
+                     * The last option available in this logic chain: no Author
+                     * URL and show Author email is true
+                     */
                 } elseif ( $show_author_email ) { ?>
                     <li>
                         <?php
@@ -197,7 +210,9 @@ class OpusPrimusAuthors {
                         ); ?>
                     </li>
                     <?php }
-                /** Check for the author bio; and, if show Author Desc is true */
+                /**
+                 * Check for the author bio; and, if show Author Desc is true
+                 */
                 if ( ! empty( $author_desc ) && $show_author_desc ) { ?>
                     <li>
                         <?php printf( '<span class="opus-author-biography">' . __( 'Biography: %1$s', 'opusprimus' ) . '</span>', $author_desc ); ?>
@@ -229,7 +244,10 @@ class OpusPrimusAuthors {
     function author_classes( $author_id ) {
         /** Call the structure class to use replace spaces */
         global $opus_structure;
-        /** Add class as related to the user role (see 'Role:' drop-down in User options) */
+        /**
+         * Add class as related to the user role
+         * - see 'Role:' drop-down in User options
+         */
         if ( user_can( $author_id, 'administrator' ) ) {
             echo 'administrator';
         } elseif ( user_can( $author_id, 'editor' ) ) {
