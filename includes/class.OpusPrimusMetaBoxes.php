@@ -47,7 +47,6 @@ class OpusPrimusMetaBoxes {
 
         /** Send tagline to screen after post title */
         add_action( 'opus_after_post_title', array( $this, 'tagline_output' ) );
-        add_action( 'opus_after_image_title', array( $this, 'tagline_output' ) );
     }
 
     /**
@@ -63,15 +62,18 @@ class OpusPrimusMetaBoxes {
      */
     function tagline_create_boxes() {
         global $post;
-        add_meta_box(
-            'opus_tagline',
-            apply_filters( 'opus_taglines_meta_box_title', sprintf( __( '%1$s Tagline', 'opusprimus' ), ucfirst( $post->post_type ) ) ),
-            array( $this, 'tagline_callback' ),
-            $post->post_type,
-            'advanced',
-            'default',
-            null
-        );
+        /** May not work with attachments */
+        if ( 'attachment' <> $post->post_type ) {
+            add_meta_box(
+                'opus_tagline',
+                apply_filters( 'opus_taglines_meta_box_title', sprintf( __( '%1$s Tagline', 'opusprimus' ), ucfirst( $post->post_type ) ) ),
+                array( $this, 'tagline_callback' ),
+                $post->post_type,
+                'advanced',
+                'default',
+                null
+            );
+        }
     }
 
     /**

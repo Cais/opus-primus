@@ -59,6 +59,8 @@ get_header( 'image' ); ?>
                         '<a href="' . get_permalink( $post->post_parent ) . '">' . get_the_title( $post->post_parent ) . '</a>'
                     );
 
+                    // var_dump( $post );
+
                     $opus_post->post_byline( array( 'show_mod_author' => true, 'anchor' => __( 'Displayed', 'opusprimus' ) ) );
                     $opus_nav->image_nav();
 
