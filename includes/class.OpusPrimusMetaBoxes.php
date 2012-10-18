@@ -47,6 +47,7 @@ class OpusPrimusMetaBoxes {
 
         /** Send tagline to screen after post title */
         add_action( 'opus_after_post_title', array( $this, 'tagline_output' ) );
+        add_action( 'opus_after_image_title', array( $this, 'tagline_output' ) );
     }
 
     /**
