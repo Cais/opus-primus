@@ -41,9 +41,22 @@ get_header( '404' ); ?>
     <div class="the-loop">
 
         <?php
-        echo '<h1>This is the 404 page!</h1>';
+        printf( '<h1 class="opus_404_title_text">%1$s</h1>', __( 'This is the 404 error page!', 'opusprimus' ) );
+        printf( '<p class="opus_404_message_text">%1$s</p>', __( 'Something seems to have gone bust.', 'opusprimus' ) );
+
+        printf( '<p class="opus_404_posts_text">%1$s</p>', __( 'Were you looking for a recent post?', 'opusprimus' ) );
+        /** Use the_widget to display a list of recent posts */
+        the_widget (
+            'WP_Widget_Recent_Posts',
+            $instance = array(
+                'title'     => __( '', 'opusprimus' ),
+                'number'    => '5',
+                'show_date' => true
+            )
+        );
 
         /** Display links to archives */
+        printf( '<p class="opus_404_category_text">%1$s</p>', __( 'Maybe you looking for one these categories ...', 'opusprimus' ) );
         /** Display a list of categories to choose from */
         $opus_archive->categories_archive( array(
             'orderby'       => 'count',
@@ -53,6 +66,8 @@ get_header( '404' ); ?>
             'title_li'      => '<span class="title">' . __( 'Top 10 Categories by Post Count:', 'opusprimus' ) . '</span>',
             'number'        => 10,
         ) );
+
+        printf( '<p class="opus_404_tag_text">%1$s</p>', __( '... or maybe you are interested in one of these tags?', 'opusprimus' ) );
         /** Display a list of tags to choose from */
         $opus_archive->archive_cloud( array(
             'taxonomy'  => 'post_tag',

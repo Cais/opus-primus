@@ -860,6 +860,20 @@ ul.nav.search li {
 ul.featured li ul.nav div.nav {
     margin-bottom: 0;
 }
+
+.error404 div.widget_recent_entries {
+    margin: 0 0 9px 25px;
+}
+.error404 div.widget_recent_entries h2.widgettitle {
+    padding-left: 10px;
+}
+.error404 div.widget_recent_entries ul {
+    list-style-type: none;
+}
+
+.error404 div.widget_recent_entries ul li span.post-date:before {
+    content: '- ';
+}
 /** End: 404 Layout --------------------------------------------------------- */
 
 /** === General Archives === ------------------------------------------------ */
