@@ -1,5 +1,6 @@
 /**
- * Opus Primus JavaScripts
+ * Opus Primus General jQuery Scripts
+ * Contains mostly one-line jQuery calls within one main script
  *
  * @package     OpusPrimus
  * @since       0.1
