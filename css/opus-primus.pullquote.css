@@ -31,21 +31,13 @@
  */
 
 span.pullquote {
-    /** Set the block apart with a background color */
-    background-color: #d3d3d3;
-    /** Wrap the block in a border */
-    border: 1px solid #000000;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    padding: 5px;
-    /** Float the block to the side and set a maximum size */
+    border-bottom: 5px solid #eeeeee;
+    border-top: 5px solid #eeeeee;
     float: right;
-    max-width: 25%;
-    /** Style the text */
-    font-family: 'Merienda', 'Comic Sans MS', cursive;
-    font-size: 200%;
-    font-style: italic;
-    font-weight: lighter;
-    line-height: 125%;
+    font-family: "Merienda", cursive;
+    font-size: 18px;
+    line-height: 24px;
+    margin-left: 10px;
+    padding: 10px 0 10px 15px;
+    width: 25%;
 }

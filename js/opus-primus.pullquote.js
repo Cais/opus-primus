@@ -33,10 +33,16 @@
 jQuery( document ).ready( function( $ ) {
 /** Note: $() will work as an alias for jQuery() inside of this function */
 /** Use fitText to display status update message across post */
-    $( 'span.pq').each( function() {
-        var quote=$(this).clone();
-        quote.removeClass( 'pq' );
-        quote.addClass( 'pullquote' );
-        $(this).before( quote );
+    $( 'span.pq' ).each( function() {
+        var $parentParagraph = $(this).parent( 'p' );
+        $parentParagraph.css( 'position', 'relative' );
+        $(this).clone()
+            .addClass( 'pullquote' )
+            .prependTo( $parentParagraph );
     } );
 } );
+
+// var quote=$(this).clone();
+// quote.removeClass( 'pq' );
+// quote.addClass( 'pullquote' );
+// $(this).before( quote );
