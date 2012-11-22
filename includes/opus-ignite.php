@@ -36,6 +36,7 @@
 define( 'OPUS_INC', get_template_directory() . '/includes/' );
 define( 'OPUS_JS', get_template_directory_uri() . '/js/' );
 define( 'OPUS_CSS', get_template_directory_uri() . '/css/' );
+define( 'OPUS_EXT', get_template_directory() . '/extensions/' );
 
 /** Add Comments Hooks */
 require_once( OPUS_INC . 'class.OpusPrimusComments.php' );
@@ -57,6 +58,9 @@ require_once( OPUS_INC . 'class.OpusPrimusImages.php' );
 require_once( OPUS_INC . 'class.OpusPrimusMetaBoxes.php' );
 /** Add Sharing */
 require_once( OPUS_INC . 'class.OpusPrimusSocial.php' );
+
+/** Add Extensions */
+require_once( OPUS_EXT . 'extensions.php' );
 
 /** Testing Purposes */
 define( 'OPUS_WIP', get_template_directory() . '/works-in-progress/' );

@@ -59,11 +59,11 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
         wp_enqueue_script( 'fitText', OPUS_JS . 'jquery.fittext.js', array( 'jquery' ), '1.0', 'true' );
         /** Enqueue Opus Primus JavaScripts which will enqueue jQuery as a dependency */
         wp_enqueue_script( 'opus-primus', OPUS_JS . 'opus-primus.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
-        wp_enqueue_script( 'opus-primus-pullquote', OPUS_JS . 'opus-primus.pullquote.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
+        // wp_enqueue_script( 'opus-primus-pullquote', OPUS_JS . 'opus-primus.pullquote.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
         /** Enqueue Theme Stylesheets */
         wp_enqueue_style( 'Opus-Primus-Layout', OPUS_CSS . 'opus-primus-layout.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
         wp_enqueue_style( 'Opus-Primus', OPUS_CSS . 'opus-primus.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
-        wp_enqueue_style( 'Opus-Primus-PullQuote', OPUS_CSS . 'opus-primus.pullquote.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
+        // wp_enqueue_style( 'Opus-Primus-PullQuote', OPUS_CSS . 'opus-primus.pullquote.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
         wp_enqueue_style( 'Opus-Primus-Media-Queries', OPUS_CSS . 'media-queries.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
         // wp_enqueue_style( 'Opus-Primus-Responsive-Layout', OPUS_CSS . 'responsive-layout.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
         /** Enqueue custom stylesheet after to maintain expected specificity */

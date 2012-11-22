@@ -1,5 +1,7 @@
+<?php
 /**
- * Opus Primus Pull Quote Stylesheet for Opus Primus
+ * Extensions
+ * Includes all of the current extensions
  *
  * @package     OpusPrimus
  * @since       0.1
@@ -30,18 +32,5 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-span.pullquote {
-    border-bottom: 5px solid #eeeeee;
-    border-top: 5px solid #eeeeee;
-    float: right;
-    font-family: "Merienda", cursive;
-    font-size: 18px;
-    line-height: 24px;
-    margin-left: 10px;
-    padding: 10px 0 10px 15px;
-    width: 30%;
-}
-
-span.pq cite {
-    display: none;
-}
+/** Add Pull Quotes */
+require_once( OPUS_EXT . 'pullquotes/class.OpusPrimusPullQuotes.php' );
