@@ -57,7 +57,7 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
         wp_enqueue_script( 'fitVids', OPUS_JS . 'jquery.fitvids.js', array( 'jquery' ), '1.0', 'true' );
         /** Enqueue FitText with jQuery dependency */
         wp_enqueue_script( 'fitText', OPUS_JS . 'jquery.fittext.js', array( 'jquery' ), '1.0', 'true' );
-        /** Enqueue Opus Primus JavaScripta which will enqueue jQuery as a dependency */
+        /** Enqueue Opus Primus JavaScripts which will enqueue jQuery as a dependency */
         wp_enqueue_script( 'opus-primus', OPUS_JS . 'opus-primus.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
         wp_enqueue_script( 'opus-primus-pullquote', OPUS_JS . 'opus-primus.pullquote.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
         /** Enqueue Theme Stylesheets */
