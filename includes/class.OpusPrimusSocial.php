@@ -30,21 +30,67 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @date    November 29, 2012
  */
 
 class OpusPrimusSocial {
-    /** Construct */
-    function __construct() {}
+    /**
+     * Constructor
+     *
+     * @package Opus_Primus
+     * @since   0.1
+     *
+     * @uses    add_action
+     * @uses    add_filter
+     */
+    function __construct() {
+        /** Add Google+ Contact Method */
+        add_filter( 'user_contactmethods', array( $this, 'google_plus_contact_method' ) );
+
+        /** Add Google+ Header Meta */
+        add_action( 'wp_head', array( $this, 'google_plus_header_meta' ) );
+    }
 
     /**
-     * Google+ Share
-     * @todo Look at using wp_enqueue on this
+     * Google+ Contact Method
+     * Add a Google+ ID field to the user contact method details
+     *
+     * @package Opus_Primus
+     * @since   0.1
+     *
+     * @param $contactmethods
+     *
+     * @return object
      */
-    function google_plus_share() {
-        echo '
-            <script src="https://apis.google.com/js/plusone.js"></script>
-            <g:plus action="share" annotation="bubble"></g:plus>
-            ';
+    function google_plus_contact_method( $contactmethods ) {
+        if ( ! isset( $contactmethods['google_plus'] ) ) {
+            $contactmethods['google_plus'] = 'Google+ ID (only)';
+        }
+        return $contactmethods;
+    }
+
+    /**
+     * Google+ Header Meta
+     * Add meta details to header of single view posts if the Google+ ID is set
+     * in the user details. Only requires the Google+ ID number.
+     *
+     * @package Opus_Primus
+     * @since   0.1
+     *
+     * @uses    get_current_user_id
+     * @uses    get_the_author_meta
+     * @uses    is_singular
+     *
+     * @internal Google+ ID template: https://plus.google.com/u/0/<$google_plus>/
+     */
+    function google_plus_header_meta() {
+        if ( is_singular() ) {
+            $google_plus = get_the_author_meta( 'google_plus', get_current_user_id() );
+            if ( $google_plus ) {
+                echo '<link rel="author" href="https://plus.google.com/u/0/' . $google_plus . '/" />' . "\n";
+            }
+        }
     }
 }
 $opus_shares = new OpusPrimusSocial();
