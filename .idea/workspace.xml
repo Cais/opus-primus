@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusSocial.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusSocial.php" />
     </list>
     <ignored path="opus-primus.iws" />
@@ -29,7 +30,7 @@
       <file leaf-file-name="class.OpusPrimusSocial.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusSocial.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="8" selection-start="2887" selection-end="2887" vertical-scroll-proportion="0.82078314">
+            <state line="140" column="69" selection-start="4584" selection-end="4584" vertical-scroll-proportion="0.6415663">
               <folding>
                 <element signature="e#6#1174#0" expanded="true" />
               </folding>
@@ -40,7 +41,7 @@
       <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="11.769231">
+            <state line="34" column="33" selection-start="1169" selection-end="1169" vertical-scroll-proportion="-12.423077">
               <folding>
                 <element signature="e#6#1134#0" expanded="true" />
               </folding>
@@ -61,7 +62,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/loops/opus-primus-link.php" />
         <option value="$PROJECT_DIR$/loops/opus-primus-quote.php" />
         <option value="$PROJECT_DIR$/loops/opus-primus-status.php" />
         <option value="$PROJECT_DIR$/loops/opus-primus-video.php" />
@@ -76,6 +76,7 @@
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/css/opus-primus.pullquote.css" />
         <option value="$PROJECT_DIR$/js/opus-primus.pullquote.js" />
+        <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusSocial.php" />
       </list>
     </option>
@@ -1169,7 +1170,11 @@
       <created>1354208723493</created>
       <updated>1354208723493</updated>
     </task>
-    <option name="localTasksCounter" value="200" />
+    <task id="LOCAL-00200" summary="* Rename opus_shares global to opus_social">
+      <created>1354209612547</created>
+      <updated>1354209612547</updated>
+    </task>
+    <option name="localTasksCounter" value="201" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1266,7 +1271,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Add Google+ ID to user profile&#10;* Add meta details to &quot;singular&quot; posts&#10;* Remove Google share code form Social class (never used)" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Rename opus_shares global to opus_social" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1279,7 +1284,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Move 'post_coda'" />
     <MESSAGE value="Moved `body_classes` function from 'functions.php' to the Structures class" />
     <MESSAGE value="Refactor comment-reply function name to `opus_primus_comment_reply_script`" />
     <MESSAGE value="Move browser title restructure functions from 'functions' to Structures class" />
@@ -1304,6 +1308,7 @@
     <MESSAGE value="Added 'pullquote' JavaScript and stylesheet" />
     <MESSAGE value="Add Google+ ID to user profile and appropriate meta details to &quot;singular&quot; posts" />
     <MESSAGE value="* Add Google+ ID to user profile&#10;* Add meta details to &quot;singular&quot; posts&#10;* Remove Google share code form Social class (never used)" />
+    <MESSAGE value="* Rename opus_shares global to opus_social" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1383,7 +1388,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="11.769231">
+        <state line="34" column="33" selection-start="1169" selection-end="1169" vertical-scroll-proportion="-12.423077">
           <folding>
             <element signature="e#6#1134#0" expanded="true" />
           </folding>
@@ -1392,7 +1397,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusSocial.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="8" selection-start="2887" selection-end="2887" vertical-scroll-proportion="0.82078314">
+        <state line="140" column="69" selection-start="4584" selection-end="4584" vertical-scroll-proportion="0.6415663">
           <folding>
             <element signature="e#6#1174#0" expanded="true" />
           </folding>

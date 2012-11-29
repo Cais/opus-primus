@@ -50,6 +50,9 @@ class OpusPrimusSocial {
 
         /** Add Google+ Header Meta */
         add_action( 'wp_head', array( $this, 'google_plus_header_meta' ) );
+
+        /** Add Open Source Basics */
+        add_action( 'wp_head', array( $this, 'open_graph_basics' ) );
     }
 
     /**
@@ -90,6 +93,56 @@ class OpusPrimusSocial {
             if ( $google_plus ) {
                 echo '<link rel="author" href="https://plus.google.com/u/0/' . $google_plus . '/" />' . "\n";
             }
+        }
+    }
+
+    /**
+     * Open Graph Basics
+     * This will fetch the post title, excerpt, URL and thumbnail image and use
+     * them as Open Graph metadata
+     *
+     * @package Opus_Primus
+     * @since   0.1
+     *
+     * @uses    (global) $post - ID
+     * @uses    get_the_title
+     * @uses    get_permalink
+     * @uses    get_the_excerpt
+     * @uses    has_post_thumbnail
+     * @uses    wp_get_attachment_image_src
+     * @uses    get_post_thumbnail_id
+     *
+     * @todo Expand to include content types related to post formats
+     */
+    function open_graph_basics() {
+        if ( is_singular() ) {
+            global $post;
+            $output =       '<meta property="og:type" content="article" />' . "\n";
+            $output .=      '<meta property="og:title" content="' . esc_attr( get_the_title() ) . '" />' . "\n";
+            $output .=      '<meta property="og:url" content="' . get_permalink() . '" />' . "\n";
+            $output .=      '<meta property="og:description" content="' . esc_attr( get_the_excerpt() ) . '" />' . "\n";
+            if ( has_post_thumbnail() ) {
+                $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+                $output .=  '<meta property="og:image" content="' . $image[0] . '" />' . "\n";
+            }
+            echo $output;
+        }
+    }
+
+    /**
+     * Open Graph HTML Prefix
+     * Add an appropriate prefix to the HTML tag
+     *
+     * @package Opus_Primus
+     * @since   0.1
+     *
+     * @uses    is_singular
+     *
+     * @todo Expand to include content types related to post formats?
+     */
+    function open_graph_html_prefix() {
+        if ( is_singular() ) {
+            echo 'prefix="og: http://ogp.me/ns#"';
         }
     }
 }
