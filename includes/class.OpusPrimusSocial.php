@@ -53,6 +53,22 @@ class OpusPrimusSocial {
 
         /** Add Open Source Basics */
         add_action( 'wp_head', array( $this, 'open_graph_basics' ) );
+
+        /** Remove Jetpack Open Graph Tags */
+        // add_action( 'init', array( $this, 'remove_jetpack_open_graph_tags' ) );
+    }
+
+
+    /**
+     * Remove Jetpack Open Graph Tags
+     *
+     * @package Opus_Primus
+     * @since   0.1
+     *
+     * @uses    remove_action
+     */
+    function remove_jetpack_open_graph_tags() {
+        remove_action( 'wp_head', 'jetpack_og_tags' );
     }
 
     /**
@@ -99,7 +115,8 @@ class OpusPrimusSocial {
     /**
      * Open Graph Basics
      * This will fetch the post title, excerpt, URL and thumbnail image and use
-     * them as Open Graph metadata
+     * them as Open Graph metadata if the JetPack plugin Open Graph Tags have
+     * not been added to the site.
      *
      * @package Opus_Primus
      * @since   0.1
@@ -115,17 +132,19 @@ class OpusPrimusSocial {
      * @todo Expand to include content types related to post formats
      */
     function open_graph_basics() {
-        if ( is_singular() ) {
-            global $post;
-            $output =       '<meta property="og:type" content="article" />' . "\n";
-            $output .=      '<meta property="og:title" content="' . esc_attr( get_the_title() ) . '" />' . "\n";
-            $output .=      '<meta property="og:url" content="' . get_permalink() . '" />' . "\n";
-            $output .=      '<meta property="og:description" content="' . esc_attr( get_the_excerpt() ) . '" />' . "\n";
-            if ( has_post_thumbnail() ) {
-                $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
-                $output .=  '<meta property="og:image" content="' . $image[0] . '" />' . "\n";
+        if ( ! has_action( 'wp_head', 'jetpack_og_tags' ) ) {
+            if ( is_singular() ) {
+                global $post;
+                $output =       '<meta property="og:type" content="article" />' . "\n";
+                $output .=      '<meta property="og:title" content="' . esc_attr( get_the_title() ) . '" />' . "\n";
+                $output .=      '<meta property="og:url" content="' . get_permalink() . '" />' . "\n";
+                $output .=      '<meta property="og:description" content="' . esc_attr( get_the_excerpt() ) . '" />' . "\n";
+                if ( has_post_thumbnail() ) {
+                    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+                    $output .=  '<meta property="og:image" content="' . $image[0] . '" />' . "\n";
+                }
+                echo $output;
             }
-            echo $output;
         }
     }
 
