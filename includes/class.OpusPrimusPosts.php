@@ -503,6 +503,8 @@ class OpusPrimusPosts {
      * @uses    get_the_tag_list
      * @uses    no_title_link
      * @uses    the_title_attribute
+     *
+     * @todo 'Posted' is used for all post-formats ... should reflect the same word / phrase as the post_byline
      */
     function meta_tags( $anchor = 'Posted' ) {
         /** Add empty hook before meta tags */
