@@ -454,6 +454,37 @@ class OpusPrimusPosts {
     }
 
     /**
+     * Uncategorized
+     * Returns true if there is only one category assigned to the post and it is
+     * the WordPress default "Uncategorized". Renaming the default category will
+     * avoid this function being used.
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @internal Must be called inside the_Loop
+     *
+     * @uses    get_the_category
+     * @uses    get_the_category_by_ID
+     *
+     * @return bool
+     */
+    function uncategorized() {
+        if ( 'uncategorized' == strtolower( get_the_category_by_ID( 1 ) ) ) {
+            /** @var $all_categories - create array object of all post categories */
+            $all_categories = get_the_category();
+            /**
+             * Conditional check for a single category found at index 0
+             * Check if second array element is empty found at index 1
+             */
+            if ( empty ( $all_categories[1] ) ) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
      * Meta Tags
      * Prints HTML with meta information for the current post (category, tags
      * and permalink) - inspired by TwentyTen
@@ -483,10 +514,14 @@ class OpusPrimusPosts {
          * post do not make any references to tags.
          */
         $opus_tag_list = get_the_tag_list( '', ', ', '' );
-        if ( $opus_tag_list ) {
+        if ( ( $opus_tag_list ) && ( ! $this->uncategorized() ) ) {
             $opus_posted_in = __( '%1$s in %2$s and tagged %3$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark.', 'opusprimus' );
-        } else {
+        } elseif ( ( $opus_tag_list ) && ( $this->uncategorized() ) ) {
+            $opus_posted_in = __( '%1$s and tagged %3$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark.', 'opusprimus' );
+        } elseif ( ( ! $opus_tag_list ) && ( ! $this->uncategorized() ) ) {
             $opus_posted_in = __( '%1$s in %2$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark.', 'opusprimus' );
+        } else {
+            $opus_posted_in = __( 'Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark.', 'opusprimus' );
         }
         /**
          * Prints the "opus_posted_in" string, replacing the placeholders
