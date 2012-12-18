@@ -44,7 +44,7 @@ global $opus_structure, $opus_post, $opus_comments, $opus_nav, $opus_image, $opu
     $opus_post->post_byline( array(
         'show_mod_author'   => true,
         'anchor'            => $anchor,
-        'sticky_flag'       => 'Watch'
+        'sticky_flag'       => __( 'Watch', 'opusprimus' )
     ) );
     $opus_post->post_title();
     if ( ! is_single() ) {

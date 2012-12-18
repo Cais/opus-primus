@@ -39,10 +39,12 @@ global $opus_post, $opus_comments, $opus_nav, $opus_image, $opus_authors;
 <div <?php post_class(); ?>>
 
     <?php
+    /** @var $anchor - set value for use in post_byline and meta_tags */
+    $anchor = __( 'Played', 'opusprimus' );
     $opus_post->post_byline( array(
         'show_mod_author'   => true,
-        'anchor'            => 'Played',
-        'sticky_flag'       => 'Listen'
+        'anchor'            => $anchor,
+        'sticky_flag'       => __( 'Listen', 'opusprimus' )
     ) );
     $opus_post->post_title();
     if ( ! is_single() ) {
@@ -51,7 +53,7 @@ global $opus_post, $opus_comments, $opus_nav, $opus_image, $opus_authors;
     $opus_image->featured_thumbnail();
     $opus_post->post_content();
     $opus_nav->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
-    $opus_post->meta_tags( $anchor = __( 'Played', 'opusprimus' ) );
+    $opus_post->meta_tags( $anchor );
     $opus_post->post_coda();
     if ( is_single() ) {
         $opus_authors->post_author( array(

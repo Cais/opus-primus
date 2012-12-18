@@ -48,7 +48,7 @@ if ( ! is_single() ) {
     $opus_post->post_byline( array(
         'show_mod_author'   => true,
         'anchor'            => $anchor,
-        'sticky_flag'       => 'Exhibition'
+        'sticky_flag'       => __( 'Exhibition', 'opusprimus' )
     ) );
     $opus_post->post_title();
     if ( ! is_single() ) {

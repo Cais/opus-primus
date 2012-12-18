@@ -44,7 +44,7 @@ global $opus_post, $opus_comments, $opus_nav, $opus_image, $opus_authors;
     $opus_post->post_byline( array(
         'show_mod_author'   => true,
         'anchor'            => $anchor,
-        'sticky_flag'       => 'Exclaimed'
+        'sticky_flag'       => __( 'Exclaimed', 'opusprimus' )
     ) );
     $opus_post->post_title();
     if ( ! is_single() ) {

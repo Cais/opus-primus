@@ -39,6 +39,7 @@ global $opus_post, $opus_comments, $opus_nav, $opus_image, $opus_authors;
 <div <?php post_class(); ?>>
 
     <?php
+    /** @var $anchor - set value for use in meta_tags (post_byline default) */
     $anchor = __( 'Posted', 'opusprimus' );
     $opus_post->post_byline( array( 'show_mod_author' => true ) );
     $opus_post->post_title();
