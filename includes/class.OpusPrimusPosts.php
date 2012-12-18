@@ -489,12 +489,12 @@ class OpusPrimusPosts {
      * Prints HTML with meta information for the current post (category, tags
      * and permalink) - inspired by TwentyTen
      *
-     * @package     OpusPrimus
-     * @since       0.1
+     * @package OpusPrimus
+     * @since   0.1
      *
-     * @internal    REQUIRES use within the_Loop
+     * @internal REQUIRES use within the_Loop
      *
-     * @param       string $anchor ( default = Posted )
+     * @param   string $anchor ( default = Posted ) - passed from the loops
      *
      * @uses    do_action
      * @uses    get_permalink
@@ -503,10 +503,8 @@ class OpusPrimusPosts {
      * @uses    get_the_tag_list
      * @uses    no_title_link
      * @uses    the_title_attribute
-     *
-     * @todo 'Posted' is used for all post-formats ... should reflect the same word / phrase as the post_byline
      */
-    function meta_tags( $anchor = 'Posted' ) {
+    function meta_tags( $anchor ) {
         /** Add empty hook before meta tags */
         do_action( 'opus_before_meta_tags' );
 

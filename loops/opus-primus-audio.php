@@ -51,7 +51,7 @@ global $opus_post, $opus_comments, $opus_nav, $opus_image, $opus_authors;
     $opus_image->featured_thumbnail();
     $opus_post->post_content();
     $opus_nav->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
-    $opus_post->meta_tags();
+    $opus_post->meta_tags( $anchor = __( 'Played', 'opusprimus' ) );
     $opus_post->post_coda();
     if ( is_single() ) {
         $opus_authors->post_author( array(

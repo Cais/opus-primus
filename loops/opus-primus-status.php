@@ -39,9 +39,11 @@ global $opus_structure, $opus_post, $opus_comments, $opus_nav, $opus_image, $opu
 <div <?php post_class(); ?>>
 
     <?php
+    /** @var $anchor - set value for use in post_byline and meta_tags */
+    $anchor = __( 'Updated', 'opusprimus' );
     $opus_post->post_byline( array(
         'show_mod_author'   => true,
-        'anchor'            => 'Updated',
+        'anchor'            => $anchor,
         'sticky_flag'       => 'Breaking News',
     ) );
     $opus_post->post_title();
@@ -52,7 +54,7 @@ global $opus_structure, $opus_post, $opus_comments, $opus_nav, $opus_image, $opu
     $opus_post->post_content();
     $opus_post->status_update();
     $opus_nav->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
-    $opus_post->meta_tags();
+    $opus_post->meta_tags( $anchor );
     $opus_post->post_coda();
     if ( is_single() ) {
         $opus_authors->post_author( array(
