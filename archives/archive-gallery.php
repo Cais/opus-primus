@@ -43,10 +43,12 @@ global $opus_post, $opus_comments, $opus_nav, $opus_gallery; ?>
 <div <?php post_class(); ?>>
 
     <?php
+    /** @var $anchor - set value for use in post_byline and meta_tags */
+    $anchor = __( 'Displayed', 'opusprimus' );
     $opus_post->post_byline( array(
         'tempus'        => 'time',
-        'anchor'        => 'Displayed',
-        'sticky_flag'   => 'Exhibited'
+        'anchor'        => $anchor,
+        'sticky_flag'   => __( 'Exhibited', 'opusprimus' )
     ) );
     $opus_post->post_title();
     $opus_comments->comments_link();
@@ -55,7 +57,7 @@ global $opus_post, $opus_comments, $opus_nav, $opus_gallery; ?>
 
     $opus_post->post_excerpt();
     $opus_nav->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
-    $opus_post->meta_tags();
+    $opus_post->meta_tags( $anchor );
     $opus_post->post_coda(); ?>
 
 </div><!-- .post -->

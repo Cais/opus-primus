@@ -40,15 +40,18 @@ global $opus_structure, $opus_post, $opus_comments, $opus_nav; ?>
 <div <?php post_class(); ?>>
 
     <?php
+    /** @var $anchor - set value for use in post_byline and meta_tags */
+    $anchor = __( 'Recited', 'opusprimus' );
     $opus_post->post_byline( array(
         'tempus'        => 'time',
-        'sticky_flag'   => 'Proclaimed'
+        'anchor'        => $anchor,
+        'sticky_flag'   => __( 'Proclaimed', 'opusprimus' )
     ) );
     $opus_post->post_title();
     $opus_comments->comments_link();
     $opus_post->post_content();
     $opus_nav->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
-    $opus_post->meta_tags();
+    $opus_post->meta_tags( $anchor );
     $opus_post->post_coda(); ?>
 
 </div><!-- .post -->

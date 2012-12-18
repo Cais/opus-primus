@@ -40,17 +40,19 @@ global $opus_post, $opus_comments, $opus_nav; ?>
 <div <?php post_class(); ?>>
 
     <?php
+    /** @var $anchor - set value for use in post_byline and meta_tags */
+    $anchor = __( 'Played', 'opusprimus' );
     $opus_post->post_byline( array(
         'tempus'        => 'time',
-        'anchor'        => 'Played',
-        'sticky_flag'   => 'Listen'
+        'anchor'        => $anchor,
+        'sticky_flag'   => __( 'Listen', 'opusprimus' )
     ) );
     $opus_post->post_title();
     $opus_comments->comments_link();
     $opus_post->post_excerpt();
     $opus_post->status_update();
     $opus_nav->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
-    $opus_post->meta_tags();
+    $opus_post->meta_tags( $anchor );
     $opus_post->post_coda(); ?>
 
 </div><!-- .post -->

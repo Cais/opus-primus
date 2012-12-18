@@ -41,12 +41,14 @@ global $opus_structure, $opus_post, $opus_comments, $opus_nav; ?>
 <div <?php post_class(); ?>>
 
     <?php
+    /** @var $anchor - set value for use in meta_tags (post_byline default) */
+    $anchor = __( 'Posted', 'opusprimus' );
     $opus_post->post_byline( array( 'tempus' => 'time' ) );
     $opus_post->post_title();
     $opus_comments->comments_link();
     $opus_post->post_excerpt();
     $opus_nav->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
-    $opus_post->meta_tags();
+    $opus_post->meta_tags( $anchor );
     $opus_post->post_coda(); ?>
 
 </div><!-- .post -->
