@@ -463,21 +463,24 @@ class OpusPrimusPosts {
      * @since   0.1
      *
      * @internal Must be called inside the_Loop
+     * @internal This works because the default category is ID 1 and the default
+     * objects returned are in ID order.
+     * @internal used for conditional test in meta_tags method
      *
      * @uses    get_the_category
-     * @uses    get_the_category_by_ID
      *
      * @return bool
      */
     function uncategorized() {
-        if ( 'uncategorized' == strtolower( get_the_category_by_ID( 1 ) ) ) {
-            /** @var $all_categories - create array object of all post categories */
-            $all_categories = get_the_category();
-            /**
-             * Conditional check for a single category found at index 0
-             * Check if second array element is empty found at index 1
-             */
-            if ( empty ( $all_categories[1] ) ) {
+        /** @var $post_categories - holds all of the post category objects */
+        $post_categories = get_the_category();
+        /**
+         * If the first category object is 'uncategorized' and there is no
+         * second category by checking if the second object is empty then
+         * return true ... else return false
+         */
+        if ( 'uncategorized' == $post_categories[0]->slug ) {
+            if ( empty( $post_categories[1]->slug ) ) {
                 return true;
             }
         }
@@ -503,6 +506,8 @@ class OpusPrimusPosts {
      * @uses    get_the_tag_list
      * @uses    no_title_link
      * @uses    the_title_attribute
+     *
+     * @uses    OpusPrimusPosts::uncategorized
      */
     function meta_tags( $anchor ) {
         /** Add empty hook before meta tags */
@@ -514,10 +519,14 @@ class OpusPrimusPosts {
          * post do not make any references to tags.
          */
         $opus_tag_list = get_the_tag_list( '', ', ', '' );
-        if ( $opus_tag_list ) {
+        if ( ( $opus_tag_list ) && ( ! $this->uncategorized() ) ) {
             $opus_posted_in = __( '%1$s in %2$s and tagged %3$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark.', 'opusprimus' );
-        } else {
+        } elseif ( ( $opus_tag_list ) && ( $this->uncategorized() ) ) {
+            $opus_posted_in = __( '%1$s and tagged %3$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark.', 'opusprimus' );
+        } elseif ( ( ! $opus_tag_list ) && ( ! $this->uncategorized() ) ) {
             $opus_posted_in = __( '%1$s in %2$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark.', 'opusprimus' );
+        } else {
+            $opus_posted_in = __( 'Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark.', 'opusprimus' );
         }
         /**
          * Prints the "opus_posted_in" string, replacing the placeholders
