@@ -3,16 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/archive-aside.php" afterPath="$PROJECT_DIR$/archives/archive-aside.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/archive-audio.php" afterPath="$PROJECT_DIR$/archives/archive-audio.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/archive-chat.php" afterPath="$PROJECT_DIR$/archives/archive-chat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/archive-gallery.php" afterPath="$PROJECT_DIR$/archives/archive-gallery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/archive-image.php" afterPath="$PROJECT_DIR$/archives/archive-image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/archive-link.php" afterPath="$PROJECT_DIR$/archives/archive-link.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/archive-quote.php" afterPath="$PROJECT_DIR$/archives/archive-quote.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/archive-status.php" afterPath="$PROJECT_DIR$/archives/archive-status.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/archive-video.php" afterPath="$PROJECT_DIR$/archives/archive-video.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/archive.php" afterPath="$PROJECT_DIR$/archives/archive.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +25,17 @@
     <favorites_list name="opus-primus" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="class.OpusPrimusPosts.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPosts.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="521" column="8" selection-start="20032" selection-end="20032" vertical-scroll-proportion="0.39938557">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -47,22 +48,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/loops/opus-primus-image.php" />
-        <option value="$PROJECT_DIR$/loops/opus-primus-link.php" />
-        <option value="$PROJECT_DIR$/loops/opus-primus-quote.php" />
-        <option value="$PROJECT_DIR$/loops/opus-primus-status.php" />
-        <option value="$PROJECT_DIR$/loops/opus-primus-video.php" />
         <option value="$PROJECT_DIR$/loops/opus-primus.php" />
-        <option value="$PROJECT_DIR$/archives/archive-aside.php" />
-        <option value="$PROJECT_DIR$/archives/archive-audio.php" />
-        <option value="$PROJECT_DIR$/archives/archive-chat.php" />
-        <option value="$PROJECT_DIR$/archives/archive-gallery.php" />
-        <option value="$PROJECT_DIR$/archives/archive-image.php" />
-        <option value="$PROJECT_DIR$/archives/archive-link.php" />
-        <option value="$PROJECT_DIR$/archives/archive-quote.php" />
-        <option value="$PROJECT_DIR$/archives/archive-status.php" />
-        <option value="$PROJECT_DIR$/archives/archive-video.php" />
-        <option value="$PROJECT_DIR$/archives/archive.php" />
+        <option value="$PROJECT_DIR$/page.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
+        <option value="$PROJECT_DIR$/author.php" />
+        <option value="$PROJECT_DIR$/css/style.less" />
+        <option value="$PROJECT_DIR$/404.php" />
+        <option value="$PROJECT_DIR$/css/opus-primus.css" />
+        <option value="$PROJECT_DIR$/js/opus-primus.js" />
+        <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/css/opus-primus.pullquote.css" />
+        <option value="$PROJECT_DIR$/js/opus-primus.pullquote.js" />
+        <option value="$PROJECT_DIR$/header.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusMetaBoxes.php" />
+        <option value="$PROJECT_DIR$/includes/opus-ignite.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusSocial.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
       </list>
     </option>
   </component>
@@ -70,8 +71,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -155,25 +156,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="loops" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="archives" />
+              <option name="myItemId" value="includes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -193,7 +176,7 @@
     <property name="options.lastSelected" value="web.server" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../wp-includes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../BNS-Projects/wp-content/plugins/jetpack" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="293" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="967" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="967" />
@@ -205,9 +188,9 @@
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
-  <component name="PublishConfig" serverName="EAC" serverId="58604bab-3161-4ee6-bc6f-2a357fa717ae">
+  <component name="PublishConfig" serverName="EAC" serverId="49d3d71f-45d4-4cc9-afe0-18cde1ab960e">
     <servers>
-      <server id="58604bab-3161-4ee6-bc6f-2a357fa717ae">
+      <server id="49d3d71f-45d4-4cc9-afe0-18cde1ab960e">
         <serverdata>
           <mappings>
             <mapping deploy="/wp-content/themes/opus-primus" local="$PROJECT_DIR$" web="/wp-content/themes/opus-primus" />
@@ -217,14 +200,14 @@
           <excludedPaths>
             <ExcludedPath>
               <option name="local" value="true" />
-              <option name="path" value="C:\wamp\www\Opus-Primus\wp-admin" />
+              <option name="path" value="C:\wamp\www\Opus_Primus\wp-admin" />
             </ExcludedPath>
             <ExcludedPath>
               <option name="path" value="/wp-admin" />
             </ExcludedPath>
             <ExcludedPath>
               <option name="local" value="true" />
-              <option name="path" value="C:\wamp\www\Opus-Primus\wp-includes" />
+              <option name="path" value="C:\wamp\www\Opus_Primus\wp-includes" />
             </ExcludedPath>
             <ExcludedPath>
               <option name="path" value="/wp-includes" />
@@ -232,18 +215,21 @@
           </excludedPaths>
         </serverdata>
       </server>
-      <server id="59043c0b-0a12-4ec5-adfc-651bc9aa7a6b">
+      <server id="6b0785ca-7579-439f-a28a-ceb868e827a9">
+        <serverdata />
+      </server>
+      <server id="c9a4dbd7-cef9-4541-8d7b-6db8fc96f95b">
         <serverdata />
       </server>
     </servers>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\Opus_Primus\wp-content\themes\opus-primus\css" />
       <recent name="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\headers" />
       <recent name="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus" />
       <recent name="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\includes" />
       <recent name="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\fonts" />
-      <recent name="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\js" />
@@ -1089,31 +1075,27 @@
       <created>1350319862076</created>
       <updated>1350319862076</updated>
     </task>
-    <task id="LOCAL-00197" summary="Comments, Documentation, and Typos">
-      <created>1353617291932</created>
-      <updated>1353617291933</updated>
+    <task id="LOCAL-00197" summary="Add recent posts to 404 page results and some additional text with styling.">
+      <created>1350863167970</created>
+      <updated>1350863167970</updated>
     </task>
-    <task id="LOCAL-00198" summary="Add Pull Quotes as an Extension">
-      <created>1353619485197</created>
-      <updated>1353619485197</updated>
+    <task id="LOCAL-00198" summary="Added 'pullquote' JavaScript and stylesheet">
+      <created>1353273371745</created>
+      <updated>1353273371745</updated>
     </task>
-    <task id="LOCAL-00199" summary="Added `uncategorized` to test for use of the default category named as &quot;Uncategorized&quot; and not display it if it is the only category used for a post; minor CSS adjustment (border-top) added to `p.meta-tags`">
-      <created>1355762026727</created>
-      <updated>1355762026727</updated>
+    <task id="LOCAL-00199" summary="* Add Google+ ID to user profile&#10;* Add meta details to &quot;singular&quot; posts&#10;* Remove Google share code form Social class (never used)">
+      <created>1354208723493</created>
+      <updated>1354208723493</updated>
     </task>
-    <task id="LOCAL-00200" summary="Added todo - sort out Posted always being used in meta-tags output">
-      <created>1355763035595</created>
-      <updated>1355763035595</updated>
+    <task id="LOCAL-00200" summary="* Rename opus_shares global to opus_social">
+      <created>1354209612547</created>
+      <updated>1354209612547</updated>
     </task>
-    <task id="LOCAL-00201" summary="Fixed non-matching $anchor values used in post_byline and meta_tags">
-      <created>1355864019215</created>
-      <updated>1355864019215</updated>
+    <task id="LOCAL-00201" summary="* Add Open Graph basic support (to be expanded)">
+      <created>1354214872084</created>
+      <updated>1354214872084</updated>
     </task>
-    <task id="LOCAL-00202" summary="i18n updates to 'sticky_flag' and documentation updates">
-      <created>1355864384943</created>
-      <updated>1355864384943</updated>
-    </task>
-    <option name="localTasksCounter" value="203" />
+    <option name="localTasksCounter" value="202" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1149,27 +1131,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32589287" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272727" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32587412" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282123" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20811099" sideWeight="0.671875" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25096524" sideWeight="0.67412585" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282123" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282123" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.325419" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32447553" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.325419" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32447553" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1210,7 +1192,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="i18n updates to 'sticky_flag' and documentation updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Add Open Graph basic support (to be expanded)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1242,125 +1224,103 @@
     <MESSAGE value="Code comments and additional code formatting" />
     <MESSAGE value="Added Search CSS styles" />
     <MESSAGE value="Add post author details logic to show only those set to true (default)" />
-    <MESSAGE value="Comments, Documentation, and Typos" />
-    <MESSAGE value="Add Pull Quotes as an Extension" />
-    <MESSAGE value="Added `uncategorized` to test for use of the default category named as &quot;Uncategorized&quot; and not display it if it is the only category used for a post; minor CSS adjustment (border-top) added to `p.meta-tags`" />
-    <MESSAGE value="Added todo - sort out Posted always being used in meta-tags output" />
-    <MESSAGE value="Fixed non-matching $anchor values used in post_byline and meta_tags" />
-    <MESSAGE value="i18n updates to 'sticky_flag' and documentation updates" />
+    <MESSAGE value="Add recent posts to 404 page results and some additional text with styling." />
+    <MESSAGE value="Added 'pullquote' JavaScript and stylesheet" />
+    <MESSAGE value="Add Google+ ID to user profile and appropriate meta details to &quot;singular&quot; posts" />
+    <MESSAGE value="* Add Google+ ID to user profile&#10;* Add meta details to &quot;singular&quot; posts&#10;* Remove Google share code form Social class (never used)" />
+    <MESSAGE value="* Rename opus_shares global to opus_social" />
+    <MESSAGE value="* Add Open Graph basic support (to be expanded)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/archives/archive-chat.php">
+    <entry file="file://$PROJECT_DIR$/css/style.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="37" selection-start="1871" selection-end="1871" vertical-scroll-proportion="0.4224852">
+        <state line="181" column="23" selection-start="6077" selection-end="6077" vertical-scroll-proportion="0.8277858" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../wp-includes/default-widgets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="557" column="94" selection-start="22566" selection-end="22566" vertical-scroll-proportion="-19.615385" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/404.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="23" selection-start="1932" selection-end="1932" vertical-scroll-proportion="-10.461538" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="14" selection-start="271" selection-end="271" vertical-scroll-proportion="0.026113672" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/author.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="50" selection-start="2194" selection-end="2194" vertical-scroll-proportion="0.6415663" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/opus-primus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="63" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="131" column="8" selection-start="3021" selection-end="3021" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/opus-primus.pullquote.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="53" selection-start="993" selection-end="993" vertical-scroll-proportion="0.28550723" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/opus-primus.pullquote.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="27" selection-start="1475" selection-end="1475" vertical-scroll-proportion="0.8521739" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="33" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.07680723" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusMetaBoxes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="51" selection-start="2513" selection-end="2513" vertical-scroll-proportion="0.8356375" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="213" column="81" selection-start="10075" selection-end="10075" vertical-scroll-proportion="0.026113672" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusSocial.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="35" selection-start="3599" selection-end="3599" vertical-scroll-proportion="0.02560241">
+          <folding>
+            <element signature="e#6#1174#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/opus-ignite.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="1426" selection-end="1426" vertical-scroll-proportion="0.15512048">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loops/opus-primus-chat.php">
+    <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1318" selection-end="1443" vertical-scroll-proportion="0.24142012">
+        <state line="65" column="85" selection-start="2878" selection-end="2878" vertical-scroll-proportion="0.026113672">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/archives/archive-gallery.php">
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPosts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="37" selection-start="2022" selection-end="2022" vertical-scroll-proportion="0.48284024">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loops/opus-primus-gallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="1400" selection-end="1530" vertical-scroll-proportion="0.16568047">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/archives/archive-image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="37" selection-start="1999" selection-end="1999" vertical-scroll-proportion="0.48284024">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loops/opus-primus-image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1308" selection-end="1438" vertical-scroll-proportion="0.24142012">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loops/opus-primus-link.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="1401" selection-end="1401" vertical-scroll-proportion="0.22130178">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/archives/archive-link.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="37" selection-start="1870" selection-end="1870" vertical-scroll-proportion="0.4224852">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/archives/archive-quote.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="4" selection-start="1888" selection-end="1888" vertical-scroll-proportion="0.4224852">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loops/opus-primus-quote.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1320" selection-end="1448" vertical-scroll-proportion="0.24142012">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loops/opus-primus-status.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1326" selection-end="1454" vertical-scroll-proportion="0.24142012">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/archives/archive-video.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="54" selection-start="1612" selection-end="1612" vertical-scroll-proportion="0.2816568">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loops/opus-primus-video.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1337" selection-end="1463" vertical-scroll-proportion="0.24142012">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/archives/archive-status.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="37" selection-start="1879" selection-end="1879" vertical-scroll-proportion="0.4224852">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loops/opus-primus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1298" selection-end="1431" vertical-scroll-proportion="-7.8461537">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/archives/archive.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="37" selection-start="1840" selection-end="1840" vertical-scroll-proportion="0.32189348">
+        <state line="521" column="8" selection-start="20032" selection-end="20032" vertical-scroll-proportion="0.39938557">
           <folding />
         </state>
       </provider>

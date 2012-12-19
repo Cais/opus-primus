@@ -514,14 +514,10 @@ class OpusPrimusPosts {
          * post do not make any references to tags.
          */
         $opus_tag_list = get_the_tag_list( '', ', ', '' );
-        if ( ( $opus_tag_list ) && ( ! $this->uncategorized() ) ) {
+        if ( $opus_tag_list ) {
             $opus_posted_in = __( '%1$s in %2$s and tagged %3$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark.', 'opusprimus' );
-        } elseif ( ( $opus_tag_list ) && ( $this->uncategorized() ) ) {
-            $opus_posted_in = __( '%1$s and tagged %3$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark.', 'opusprimus' );
-        } elseif ( ( ! $opus_tag_list ) && ( ! $this->uncategorized() ) ) {
-            $opus_posted_in = __( '%1$s in %2$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark.', 'opusprimus' );
         } else {
-            $opus_posted_in = __( 'Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark.', 'opusprimus' );
+            $opus_posted_in = __( '%1$s in %2$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark.', 'opusprimus' );
         }
         /**
          * Prints the "opus_posted_in" string, replacing the placeholders
