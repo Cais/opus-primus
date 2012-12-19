@@ -506,8 +506,7 @@ class OpusPrimusPosts {
      * @uses    get_the_tag_list
      * @uses    no_title_link
      * @uses    the_title_attribute
-     *
-     * @uses    OpusPrimusPosts::uncategorized
+     * @uses    uncategorized
      */
     function meta_tags( $anchor ) {
         /** Add empty hook before meta tags */

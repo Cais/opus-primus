@@ -29,7 +29,7 @@
       <file leaf-file-name="class.OpusPrimusPosts.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPosts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="467" column="25" selection-start="18103" selection-end="18103" vertical-scroll-proportion="0.32104453">
+            <state line="507" column="35" selection-start="19358" selection-end="19358" vertical-scroll-proportion="0.37327188">
               <folding />
             </state>
           </provider>
@@ -1174,7 +1174,11 @@
       <created>1355878373848</created>
       <updated>1355878373848</updated>
     </task>
-    <option name="localTasksCounter" value="203" />
+    <task id="LOCAL-00203" summary="Added 'uncategorized' conditional display (again)">
+      <created>1355883164290</created>
+      <updated>1355883164290</updated>
+    </task>
+    <option name="localTasksCounter" value="204" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1271,7 +1275,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reverted 'uncategorized' code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added 'uncategorized' conditional display (again)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1284,7 +1288,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Move browser title restructure functions from 'functions' to Structures class" />
     <MESSAGE value="Increase font size of link anchor text in post-format: link" />
     <MESSAGE value="Remove 'plugin.tagline.php'" />
     <MESSAGE value="Add audio-symbol class wrapper for anchor elements in post-format: audio" />
@@ -1309,6 +1312,7 @@
     <MESSAGE value="* Rename opus_shares global to opus_social" />
     <MESSAGE value="* Add Open Graph basic support (to be expanded)" />
     <MESSAGE value="Reverted 'uncategorized' code" />
+    <MESSAGE value="Added 'uncategorized' conditional display (again)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1399,7 +1403,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPosts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="467" column="25" selection-start="18103" selection-end="18103" vertical-scroll-proportion="0.32104453">
+        <state line="507" column="35" selection-start="19358" selection-end="19358" vertical-scroll-proportion="0.37327188">
           <folding />
         </state>
       </provider>
