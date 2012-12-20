@@ -60,7 +60,7 @@ get_header( 'page' ); ?>
                 <?php
                 endwhile;
             else:
-                $opus_structure->search_results();
+                $opus_structure->no_search_results();
             endif;
 
             comments_template(); ?>

@@ -263,13 +263,14 @@ class OpusPrimusStructures {
     }
 
     /**
-     * Search Results
+     * No Search Results
      * Outputs message if no posts are found by 'the_Loop' query
      *
      * @package OpusPrimus
      * @since   0.1
      *
      * @uses    $opus_archive ( global )
+     * @uses    apply_filters
      * @uses    do_action
      * @uses    esc_html
      * @uses    get_search_form
@@ -278,20 +279,33 @@ class OpusPrimusStructures {
      *
      * @todo Add custom searchform.php
      */
-    function search_results(){
+    function no_search_results(){
         /** Add empty hook before no posts results from the_loop query */
         do_action( 'opus_before_search_results' );
 
         /** No results from the_loop query */ ?>
         <h2 class="post-title">
-            <?php printf( __( 'Search Results for: %s', 'opus' ), '<span class="search-results">' . esc_html( get_search_query() ) . '</span>' ); ?>
+            <?php
+            printf( __( 'Search Results for: %s', 'opus' ),
+                apply_filters(
+                    'opus_primus_search_results_for_text',
+                    '<span class="search-results">' . esc_html( get_search_query() ) . '</span>'
+                ) ); ?>
         </h2>
 
         <?php
-        printf( '<p class="no-results">%1$s</p>', __( 'No results were found, would you like to try another search ...', 'opusprimus' ) );
+        printf( '<p class="no-results">%1$s</p>',
+            apply_filters(
+                'opus_primus_no_results_text',
+                __( 'No results were found, would you like to try another search ...', 'opusprimus' )
+            ) );
         get_search_form();
 
-        printf( '<p class="no-results">%1$s</p>', __( '... or try one of the links below.', 'opusprimus' ) );
+        printf( '<p class="no-results">%1$s</p>',
+            apply_filters(
+                'opus_primus_no_results_links_text',
+                __( '... or try one of the links below.', 'opusprimus' )
+            ) );
 
         /** Get the class variables */
         global $opus_archive, $opus_nav;
@@ -301,7 +315,7 @@ class OpusPrimusStructures {
             'order'         => 'desc',
             'show_count'    => 1,
             'hierarchical'  => 0,
-            'title_li'      => '<span class="title">' . __( 'Top 10 Categories by Post Count:', 'opusprimus' ) . '</span>',
+            'title_li'      => sprintf( '<span class="title">%1$s</span>', apply_filters( 'opus_primus_category_archives_title', __( 'Top 10 Categories by Post Count:', 'opusprimus' ) ) ),
             'number'        => 10,
         ) );
         /** Display a list of tags to choose from */
@@ -449,3 +463,4 @@ function opus_test() {
 // add_action( 'opus_before_modified_post', 'opus_test' );
 // add_filter( 'opus_modified_author_by_text', 'opus_test' );
 // add_filter( 'opus_author_coda', 'opus_test' );
+// add_filter( 'opus_primus_category_archives_title', 'opus_test' );

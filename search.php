@@ -47,7 +47,7 @@ get_header( 'search' ); ?>
                 get_template_part( 'loops/opus-primus', get_post_format() );
             endwhile;
         else:
-            $opus_structure->search_results();
+            $opus_structure->no_search_results();
         endif;
         $opus_nav->posts_link(); ?>
 

@@ -56,7 +56,7 @@ if ( have_posts() ) {
                 get_template_part( 'archives/archive', get_post_format() );
             endwhile;
         else:
-            $opus_structure->search_results();
+            $opus_structure->no_search_results();
         endif;
         $opus_nav->posts_link(); ?>
 

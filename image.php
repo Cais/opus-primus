@@ -88,7 +88,7 @@ get_header( 'image' ); ?>
             <?php
             endwhile;
         else:
-            $opus_structure->search_results();
+            $opus_structure->no_search_results();
         endif; ?>
 
     </div><!-- #the-loop -->
