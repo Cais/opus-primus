@@ -239,6 +239,18 @@ function opus_primus_widgets() {
     ) );
 
     register_sidebar( array(
+        'name'          => __( 'Before Loop Widget Area', 'opusprimus' ),
+        'id'            => 'before-loop',
+        'description'   => __( 'This widget area displays just before the_Loop begins on all templates (index, archive, author, image, page, search, and single).', 'opusprimus' ),
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'After Loop Widget Area', 'opusprimus' ),
+        'id'            => 'after-loop',
+        'description'   => __( 'This widget area displays just after the_Loop ends on all templates (index, archive, author, image, page, search, and single).', 'opusprimus' ),
+    ) );
+
+    register_sidebar( array(
         'name'  => __( 'First Footer Widget Area', 'opusprimus' ),
         'id'    => 'footer-left',
         'description'   => __( 'This widget area appears in the footer on the left side of the theme.', 'opusprimus' ),

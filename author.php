@@ -51,6 +51,9 @@ get_header( get_post_format() ); ?>
         </div>
 
         <?php
+        /** Add before loop sidebar */
+        if ( is_active_sidebar( 'before-loop' ) ) { dynamic_sidebar( 'before-loop' ); }
+        /** the_Loop begins */
         if ( have_posts() ):
             while ( have_posts() ):
                 the_post();
@@ -59,7 +62,10 @@ get_header( get_post_format() ); ?>
         else:
             $opus_structure->no_search_results();
         endif;
-        $opus_nav->posts_link(); ?>
+        $opus_nav->posts_link();
+        /** the_Loop ends */
+        /** Add after loop sidebar */
+        if ( is_active_sidebar( 'after-loop' ) ) { dynamic_sidebar( 'after-loop' ); } ?>
 
     </div><!-- #the-loop -->
 

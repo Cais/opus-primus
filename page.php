@@ -42,28 +42,34 @@ get_header( 'page' ); ?>
     <div class="the-loop">
 
         <?php
+        /** Add before loop sidebar */
+        if ( is_active_sidebar( 'before-loop' ) ) { dynamic_sidebar( 'before-loop' ); }
+        /** the_Loop begins */
         if ( have_posts() ):
-                while ( have_posts() ):
-                    the_post(); ?>
-                    <div <?php post_class(); ?>>
-                        <?php
-                        $opus_post->post_title();
-                        $opus_post->post_content();
-                        $opus_post->post_byline( array( 'show_mod_author' => true ) );
-                        $opus_authors->post_author( array(
-                            'show_mod_author'   => true,
-                            'show_author_url'   => true,
-                            'show_author_email' => true,
-                            'show_author_desc'  => true,
-                        ) ); ?>
-                    </div><!-- .post -->
-                <?php
-                endwhile;
-            else:
-                $opus_structure->no_search_results();
-            endif;
+            while ( have_posts() ):
+                the_post(); ?>
+                <div <?php post_class(); ?>>
+                    <?php
+                    $opus_post->post_title();
+                    $opus_post->post_content();
+                    $opus_post->post_byline( array( 'show_mod_author' => true ) );
+                    $opus_authors->post_author( array(
+                        'show_mod_author'   => true,
+                        'show_author_url'   => true,
+                        'show_author_email' => true,
+                        'show_author_desc'  => true,
+                    ) ); ?>
+                </div><!-- .post -->
+            <?php
+            endwhile;
+        else:
+            $opus_structure->no_search_results();
+        endif;
+        /** the_Loop ends */
+        /** Add after loop sidebar */
+        if ( is_active_sidebar( 'after-loop' ) ) { dynamic_sidebar( 'after-loop' ); } ?>
 
-            comments_template(); ?>
+        comments_template(); ?>
 
     </div><!-- #the-loop -->
 
