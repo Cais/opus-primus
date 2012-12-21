@@ -54,7 +54,8 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
     function opus_primus_enqueue_scripts() {
         /** Enqueue scripts */
         /** Enqueue FitVids with jQuery dependency */
-        wp_enqueue_script( 'fitVids', OPUS_JS . 'jquery.fitvids.js', array( 'jquery' ), '1.0', 'true' );
+        /** Temporary(?) drop of FitVids script functionality */
+        // wp_enqueue_script( 'fitVids', OPUS_JS . 'jquery.fitvids.js', array( 'jquery' ), '1.0', 'true' );
         /** Enqueue FitText with jQuery dependency */
         wp_enqueue_script( 'fitText', OPUS_JS . 'jquery.fittext.js', array( 'jquery' ), '1.0', 'true' );
         /** Enqueue Opus Primus JavaScripts which will enqueue jQuery as a dependency */
