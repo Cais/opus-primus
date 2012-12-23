@@ -33,12 +33,12 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-global $post, $opus_nav, $opus_structure, $opus_post, $opus_image;
+global $post, $opus_navigation, $opus_structures, $opus_posts, $opus_images;
 get_header( 'image' ); ?>
 
 <div class="content-wrapper cf">
 
-    <?php echo $opus_structure->layout_open(); ?>
+    <?php echo $opus_structures->layout_open(); ?>
 
     <div class="the-loop">
 
@@ -46,7 +46,7 @@ get_header( 'image' ); ?>
         /** Add before loop sidebar */
         if ( is_active_sidebar( 'before-loop' ) ) { dynamic_sidebar( 'before-loop' ); }
 
-        $opus_nav->post_link();
+        $opus_navigation->post_link();
 
         /** the_Loop begins */
         if ( have_posts() ):
@@ -66,25 +66,25 @@ get_header( 'image' ); ?>
 
                     // var_dump( $post );
 
-                    $opus_post->post_byline( array( 'show_mod_author' => true, 'anchor' => __( 'Displayed', 'opusprimus' ) ) );
-                    $opus_nav->image_nav();
+                    $opus_posts->post_byline( array( 'show_mod_author' => true, 'anchor' => __( 'Displayed', 'opusprimus' ) ) );
+                    $opus_navigation->image_nav();
 
                     /** Image Title from media library */
-                    $opus_image->image_title();
+                    $opus_images->image_title();
                     /** Image Caption from media library */
-                    $opus_post->post_excerpt();
+                    $opus_posts->post_excerpt();
 
                     /** Show the image with link to original */
                     $size = 'large';
                     echo '<div class="attached-image"><a href="' . wp_get_attachment_url( $post->ID ) . '">' . wp_get_attachment_image( $post->ID, $size ) . '</a></div>';
 
                     /** Image Description from media library */
-                    $opus_post->post_content();
+                    $opus_posts->post_content();
 
                     /** Image meta data */
-                    $opus_image->display_exif_table();
+                    $opus_images->display_exif_table();
 
-                    $opus_post->post_coda();
+                    $opus_posts->post_coda();
 
                     comments_template(); ?>
 
@@ -93,7 +93,7 @@ get_header( 'image' ); ?>
             <?php
             endwhile;
         else:
-            $opus_structure->no_search_results();
+            $opus_structures->no_search_results();
         endif;
         /** the_Loop ends */
         /** Add after loop sidebar */
@@ -104,7 +104,7 @@ get_header( 'image' ); ?>
     <?php
     get_sidebar( 'image' );
 
-    echo $opus_structure->layout_close(); ?>
+    echo $opus_structures->layout_close(); ?>
 
 </div><!-- #content-wrapper -->
 

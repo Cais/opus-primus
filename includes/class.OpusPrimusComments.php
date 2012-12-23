@@ -48,6 +48,8 @@ class OpusPrimusComments {
      * @package OpusPrimus
      * @since   0.1
      *
+     * @uses    $comment (global)
+     *
      * @param   array $classes
      * @return  array $classes - original array plus additional role and user-id
      */

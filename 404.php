@@ -32,12 +32,12 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-global $opus_archive, $opus_structure;
+global $opus_archives, $opus_structures;
 get_header( '404' ); ?>
 
 <div class="content-wrapper cf">
 
-    <?php echo $opus_structure->layout_open(); ?>
+    <?php echo $opus_structures->layout_open(); ?>
     <div class="the-loop">
 
         <?php
@@ -58,7 +58,7 @@ get_header( '404' ); ?>
         /** Display links to archives */
         printf( '<p class="opus_404_category_text">%1$s</p>', __( 'Maybe you looking for one these categories ...', 'opusprimus' ) );
         /** Display a list of categories to choose from */
-        $opus_archive->categories_archive( array(
+        $opus_archives->categories_archive( array(
             'orderby'       => 'count',
             'order'         => 'desc',
             'show_count'    => 1,
@@ -69,7 +69,7 @@ get_header( '404' ); ?>
 
         printf( '<p class="opus_404_tag_text">%1$s</p>', __( '... or maybe you are interested in one of these tags?', 'opusprimus' ) );
         /** Display a list of tags to choose from */
-        $opus_archive->archive_cloud( array(
+        $opus_archives->archive_cloud( array(
             'taxonomy'  => 'post_tag',
             'orderby'   => 'count',
             'order'     => 'DESC',
@@ -80,7 +80,7 @@ get_header( '404' ); ?>
 
     <?php
     get_sidebar( '404' );
-    echo $opus_structure->layout_close(); ?>
+    echo $opus_structures->layout_close(); ?>
 
 </div><!-- #content-wrapper -->
 

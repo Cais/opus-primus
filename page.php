@@ -32,12 +32,12 @@
  */
 
 /** Call the class variables */
-global $opus_structure, $opus_post, $opus_authors, $opus_nav;
+global $opus_structures, $opus_posts, $opus_authors, $opus_navigation;
 get_header( 'page' ); ?>
 
 <div class="content-wrapper cf">
 
-    <?php echo $opus_structure->layout_open(); ?>
+    <?php echo $opus_structures->layout_open(); ?>
 
     <div class="the-loop">
 
@@ -50,9 +50,9 @@ get_header( 'page' ); ?>
                 the_post(); ?>
                 <div <?php post_class(); ?>>
                     <?php
-                    $opus_post->post_title();
-                    $opus_post->post_content();
-                    $opus_post->post_byline( array( 'show_mod_author' => true ) );
+                    $opus_posts->post_title();
+                    $opus_posts->post_content();
+                    $opus_posts->post_byline( array( 'show_mod_author' => true ) );
                     $opus_authors->post_author( array(
                         'show_mod_author'   => true,
                         'show_author_url'   => true,
@@ -63,7 +63,7 @@ get_header( 'page' ); ?>
             <?php
             endwhile;
         else:
-            $opus_structure->no_search_results();
+            $opus_structures->no_search_results();
         endif;
         /** the_Loop ends */
         /** Add after loop sidebar */
@@ -76,7 +76,7 @@ get_header( 'page' ); ?>
     <?php
     get_sidebar( 'page' );
 
-    echo $opus_structure->layout_close(); ?>
+    echo $opus_structures->layout_close(); ?>
 
 </div><!-- #content-wrapper -->
 

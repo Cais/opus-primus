@@ -57,7 +57,7 @@ class OpusPrimusPosts {
      */
     function post_classes( $classes ) {
         /** Call the structure class to use replace spaces */
-        global $opus_structure;
+        global $opus_structures;
         /** Original Post Classes */
         /** Year */
         $post_year = get_the_date( 'Y' );
@@ -88,7 +88,7 @@ class OpusPrimusPosts {
         /** Author */
         $opus_author_id = get_the_author_meta( 'ID' );
         $classes[] = 'author-' . $opus_author_id;
-        $display_name = $opus_structure->replace_spaces( strtolower( get_the_author_meta( 'display_name', $opus_author_id ) ) );
+        $display_name = $opus_structures->replace_spaces( strtolower( get_the_author_meta( 'display_name', $opus_author_id ) ) );
         $classes[] = 'author-' . $display_name;
 
         /** Modified Post Classes */
@@ -129,7 +129,7 @@ class OpusPrimusPosts {
             }
             $mod_author_id = $last_user->ID;
             $classes[] = 'modified-author-' . $mod_author_id;
-            $mod_author_display_name = $opus_structure->replace_spaces( $last_user->display_name );
+            $mod_author_display_name = $opus_structures->replace_spaces( $last_user->display_name );
             $classes[] = 'modified-author-' . $mod_author_display_name;
         }
 
@@ -374,8 +374,8 @@ class OpusPrimusPosts {
      *
      * @param   string $tempus - date|time ( default = date )
      *
-     * @uses    (global) $opus_author_id
-     * @uses    (global) $post
+     * @uses    $opus_author_id (global)
+     * @uses    $post (global)
      * @uses    apply_filters
      * @uses    do_action
      * @uses    get_post_meta
@@ -674,4 +674,4 @@ class OpusPrimusPosts {
     }
 
 }
-$opus_post = new OpusPrimusPosts();
+$opus_posts = new OpusPrimusPosts();

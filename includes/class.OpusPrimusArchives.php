@@ -181,4 +181,4 @@ class OpusPrimusArchives {
     }
 
 }
-$opus_archive = new OpusPrimusArchives();
+$opus_archives = new OpusPrimusArchives();

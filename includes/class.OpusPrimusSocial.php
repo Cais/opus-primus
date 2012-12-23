@@ -121,7 +121,7 @@ class OpusPrimusSocial {
      * @package Opus_Primus
      * @since   0.1
      *
-     * @uses    (global) $post - ID
+     * @uses    $post (global) - ID
      * @uses    get_the_title
      * @uses    get_permalink
      * @uses    get_the_excerpt

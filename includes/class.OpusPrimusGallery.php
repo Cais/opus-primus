@@ -49,7 +49,7 @@ class OpusPrimusGallery {
      *
      * @param   string $size - thumbnail|medium|large|full (default WordPress image sizes)
      *
-     * @uses    (global) $opus_thumb_id
+     * @uses    $opus_thumb_id (global)
      * @uses    do_action
      * @uses    get_children
      * @uses    get_permalink

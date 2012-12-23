@@ -35,24 +35,24 @@
  */
 
 /** Get the class variables */
-global $opus_post, $opus_comments, $opus_nav; ?>
+global $opus_posts, $opus_comments, $opus_navigation; ?>
 
 <div <?php post_class(); ?>>
 
     <?php
     /** @var $anchor - set value for use in post_byline and meta_tags */
     $anchor = __( 'Updated', 'opusprimus' );
-    $opus_post->post_byline( array(
+    $opus_posts->post_byline( array(
         'tempus'        => 'time',
         'anchor'        => $anchor,
         'sticky_flag'   => __( 'Newsworthy', 'opusprimus' )
     ) );
-    $opus_post->post_title();
+    $opus_posts->post_title();
     $opus_comments->comments_link();
-    $opus_post->post_excerpt();
-    $opus_post->status_update();
-    $opus_nav->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
-    $opus_post->meta_tags( $anchor );
-    $opus_post->post_coda(); ?>
+    $opus_posts->post_excerpt();
+    $opus_posts->status_update();
+    $opus_navigation->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
+    $opus_posts->meta_tags( $anchor );
+    $opus_posts->post_coda(); ?>
 
 </div><!-- .post -->

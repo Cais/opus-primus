@@ -325,4 +325,4 @@ class OpusPrimusNavigation {
     }
 
 }
-$opus_nav = new OpusPrimusNavigation();
+$opus_navigation = new OpusPrimusNavigation();

@@ -52,8 +52,8 @@ class OpusPrimusAuthors {
      * @internal @param show_mod_email
      * @internal @param show_mod_desc
      *
-     * @uses    (global) $opus_author_id
-     * @uses    (global) $post
+     * @uses    $opus_author_id (global)
+     * @uses    $post (global)
      * @uses    do_action
      * @uses    get_post_meta
      * @uses    get_the_date
@@ -243,7 +243,7 @@ class OpusPrimusAuthors {
      */
     function author_classes( $author_id ) {
         /** Call the structure class to use replace spaces */
-        global $opus_structure;
+        global $opus_structures;
         /**
          * Add class as related to the user role
          * - see 'Role:' drop-down in User options
@@ -264,7 +264,7 @@ class OpusPrimusAuthors {
             echo ' administrator-prime';
         }
         echo ' author-' . $author_id;
-        echo ' author-' . $opus_structure->replace_spaces( get_the_author_meta( 'display_name', $author_id ) );
+        echo ' author-' . $opus_structures->replace_spaces( get_the_author_meta( 'display_name', $author_id ) );
     }
 
     /**

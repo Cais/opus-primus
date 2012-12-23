@@ -46,7 +46,7 @@ class OpusPrimusImages {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    (global) $opus_image_data
+     * @uses    $opus_image_data (global)
      * @uses    wp_get_attachment_metadata
      *
      * @return object|null
@@ -73,8 +73,8 @@ class OpusPrimusImages {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    (global) $opus_image_meta
-     * @uses    (global) $post
+     * @uses    $opus_image_meta (global)
+     * @uses    $post (global)
      * @uses    apply_filters
      * @uses    do_action
      * @uses    wp_get_attachment_url
@@ -113,7 +113,7 @@ class OpusPrimusImages {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    (global) #opus_image_meta
+     * @uses    $opus_image_meta (global)
      * @uses    apply_filters
      * @uses    do_action
      * @uses    get_the_time
@@ -157,7 +157,7 @@ class OpusPrimusImages {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    (global) $opus_image_meta
+     * @uses    $opus_image_meta (global)
      * @uses    apply_filters
      * @uses    do_action
      * @uses    get_option
@@ -197,7 +197,7 @@ class OpusPrimusImages {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    (global) #opus_image_meta
+     * @uses    $opus_image_meta (global)
      * @uses    apply_filters
      * @uses    do_action
      *
@@ -232,7 +232,7 @@ class OpusPrimusImages {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    (global) $opus_image_meta
+     * @uses    $opus_image_meta (global)
      * @uses    apply_filters
      * @uses    do_action
      * @uses    exif_data
@@ -277,7 +277,7 @@ class OpusPrimusImages {
      * @package OpuysPrimus
      * @since   0.1
      *
-     * @uses    (global) $opus_image_meta
+     * @uses    $opus_image_meta (global)
      * @uses    apply_filters
      * @uses    do_action
      *
@@ -312,7 +312,7 @@ class OpusPrimusImages {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    (global) $opus_image_meta
+     * @uses    $opus_image_meta (global)
      * @uses    apply_filters
      * @uses    do_action
      *
@@ -347,7 +347,7 @@ class OpusPrimusImages {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    (global) $opus_image_meta
+     * @uses    $opus_image_meta (global)
      * @uses    apply_filters
      * @uses    do_action
      * @uses    exif_data
@@ -385,7 +385,7 @@ class OpusPrimusImages {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    (global) $opus_image_meta
+     * @uses    $opus_image_meta (global)
      * @uses    apply_filters
      * @uses    do_action
      * @uses    exif_data
@@ -421,7 +421,7 @@ class OpusPrimusImages {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    (global) $opus_image_meta
+     * @uses    $opus_image_meta (global)
      * @uses    apply_filters
      * @uses    do_action
      *
@@ -705,4 +705,4 @@ class OpusPrimusImages {
     }
 
 }
-$opus_image = new OpusPrimusImages();
+$opus_images = new OpusPrimusImages();

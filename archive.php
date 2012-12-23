@@ -36,7 +36,7 @@
  */
 
 /** Get the Post Structure and Navigation class variables */
-global $opus_nav, $opus_structure;
+global $opus_navigation, $opus_structures;
 if ( have_posts() ) {
     get_header( get_post_format() );
 } else {
@@ -45,7 +45,7 @@ if ( have_posts() ) {
 
 <div class="content-wrapper cf">
 
-    <?php echo $opus_structure->layout_open(); ?>
+    <?php echo $opus_structures->layout_open(); ?>
 
     <div class="the-loop">
 
@@ -59,9 +59,9 @@ if ( have_posts() ) {
                 get_template_part( 'archives/archive', get_post_format() );
             endwhile;
         else:
-            $opus_structure->no_search_results();
+            $opus_structures->no_search_results();
         endif;
-        $opus_nav->posts_link();
+        $opus_navigation->posts_link();
         /** the_Loop ends */
         /** Add after loop sidebar */
         if ( is_active_sidebar( 'after-loop' ) ) { dynamic_sidebar( 'after-loop' ); } ?>
@@ -75,7 +75,7 @@ if ( have_posts() ) {
         get_sidebar();
     }
 
-    echo $opus_structure->layout_close(); ?>
+    echo $opus_structures->layout_close(); ?>
 
 </div><!-- #content-wrapper -->
 

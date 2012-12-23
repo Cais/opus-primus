@@ -38,26 +38,26 @@
 
 /** Get the class variables */
 
-global $opus_post, $opus_comments, $opus_nav, $opus_gallery; ?>
+global $opus_posts, $opus_comments, $opus_navigation, $opus_gallery; ?>
 
 <div <?php post_class(); ?>>
 
     <?php
     /** @var $anchor - set value for use in post_byline and meta_tags */
     $anchor = __( 'Displayed', 'opusprimus' );
-    $opus_post->post_byline( array(
+    $opus_posts->post_byline( array(
         'tempus'        => 'time',
         'anchor'        => $anchor,
         'sticky_flag'   => __( 'Exhibited', 'opusprimus' )
     ) );
-    $opus_post->post_title();
+    $opus_posts->post_title();
     $opus_comments->comments_link();
 
     $opus_gallery->featured_image( $size = 'medium' );
 
-    $opus_post->post_excerpt();
-    $opus_nav->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
-    $opus_post->meta_tags( $anchor );
-    $opus_post->post_coda(); ?>
+    $opus_posts->post_excerpt();
+    $opus_navigation->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
+    $opus_posts->meta_tags( $anchor );
+    $opus_posts->post_coda(); ?>
 
 </div><!-- .post -->

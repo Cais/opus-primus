@@ -48,7 +48,9 @@ class OpusPrimusStructures {
      * @package     OpusPrimus
      * @since       0.1
      *
+     * @uses        $content_width (global)
      * @uses        is_active_sidebar
+     *
      * @internal    works in conjunction with layout_close
      * @internal    $content_width is set based on the amount of columns being displayed and a display using the common 1024px x 768px resolution
      *
@@ -92,7 +94,7 @@ class OpusPrimusStructures {
      * @package     OpusPrimus
      * @since       0.1
      *
-     * @uses        (global) $content_width
+     * @uses        $content_width (global)
      * @uses        is_active_sidebar
      * @internal    works in conjunction with layout_open
      *
@@ -155,7 +157,7 @@ class OpusPrimusStructures {
      *
      * @param   $classes - existing body classes
      *
-     * @uses    (global) $content_width
+     * @uses    $content_width (global)
      * @uses    apply_filters
      * @uses    is_active_sidebar
      *
@@ -269,7 +271,7 @@ class OpusPrimusStructures {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    $opus_archive ( global )
+     * @uses    $opus_archives (global)
      * @uses    apply_filters
      * @uses    do_action
      * @uses    esc_html
@@ -308,9 +310,9 @@ class OpusPrimusStructures {
             ) );
 
         /** Get the class variables */
-        global $opus_archive, $opus_nav;
+        global $opus_archives, $opus_navigation;
         /** Display a list of categories to choose from */
-        $opus_archive->categories_archive( array(
+        $opus_archives->categories_archive( array(
             'orderby'       => 'count',
             'order'         => 'desc',
             'show_count'    => 1,
@@ -319,14 +321,14 @@ class OpusPrimusStructures {
             'number'        => 10,
         ) );
         /** Display a list of tags to choose from */
-        $opus_archive->archive_cloud( array(
+        $opus_archives->archive_cloud( array(
             'taxonomy'  => 'post_tag',
             'orderby'   => 'count',
             'order'     => 'DESC',
             'number'    => 10,
         ) );
         /** Display a list of pages to choose from */
-        $opus_nav->search_menu();
+        $opus_navigation->search_menu();
 
         /** Add empty hook after no posts results from the_loop query */
         do_action( 'opus_after_search_results' );
@@ -454,7 +456,7 @@ class OpusPrimusStructures {
     }
 
 }
-$opus_structure = new OpusPrimusStructures();
+$opus_structures = new OpusPrimusStructures();
 
 /** Testing ... testing ... testing ... */
 function opus_test() {

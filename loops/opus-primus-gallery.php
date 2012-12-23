@@ -33,7 +33,7 @@
  */
 
 /** Call the class variables */
-global $opus_post, $opus_comments, $opus_nav, $opus_gallery, $opus_authors;
+global $opus_posts, $opus_comments, $opus_navigation, $opus_gallery, $opus_authors;
 
 if ( ! is_single() ) {
     add_filter('post_gallery', 'opus_primus_return_blank' );
@@ -45,12 +45,12 @@ if ( ! is_single() ) {
     <?php
     /** @var $anchor - set value for use in post_byline and meta_tags */
     $anchor = __( 'Displayed', 'opusprimus' );
-    $opus_post->post_byline( array(
+    $opus_posts->post_byline( array(
         'show_mod_author'   => true,
         'anchor'            => $anchor,
         'sticky_flag'       => __( 'Exhibition', 'opusprimus' )
     ) );
-    $opus_post->post_title();
+    $opus_posts->post_title();
     if ( ! is_single() ) {
         $opus_comments->comments_link();
     } ?>
@@ -67,10 +67,10 @@ if ( ! is_single() ) {
     <?php
     endif;
 
-    $opus_post->post_content();
-    $opus_nav->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
-    $opus_post->meta_tags( $anchor );
-    $opus_post->post_coda();
+    $opus_posts->post_content();
+    $opus_navigation->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
+    $opus_posts->meta_tags( $anchor );
+    $opus_posts->post_coda();
     if ( is_single() ) {
         $opus_authors->post_author( array(
             'show_mod_author'   => true,

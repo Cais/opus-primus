@@ -36,7 +36,7 @@
 <!-- Show the comments -->
 <!-- Inspired by http://digwp.com/2010/02/separate-comments-pingbacks-trackbacks/ -->
 <div class="comments-wrapper">
-    <?php if ( have_comments() ) : global $wp_query, $opus_nav; ?>
+    <?php if ( have_comments() ) : global $wp_query, $opus_navigation; ?>
 
     <h2 id="all-comments"><?php comments_number( __( 'No Responses', 'opusprimus' ), __( 'One Response', 'opusprimus' ), __( '% Responses', 'opusprimus' ) ); ?></h2>
 
@@ -47,7 +47,7 @@
         <ul class="comments-list">
             <?php wp_list_comments( 'type=comment' ); ?>
         </ul>
-        <?php $opus_nav->comments_navigation();
+        <?php $opus_navigation->comments_navigation();
     }
 
     if ( ! empty( $comments_by_type['pingback'] ) ) { ?>
@@ -63,7 +63,7 @@
         <ul class="pingbacks-list">
             <?php wp_list_comments( 'type=pingback' ); ?>
         </ul>
-        <?php $opus_nav->comments_navigation();
+        <?php $opus_navigation->comments_navigation();
     }
 
     if ( ! empty( $comments_by_type['trackback'] ) ) { ?>
@@ -79,7 +79,7 @@
         <ul class="trackbacks-list">
             <?php wp_list_comments( 'type=trackback' ); ?>
         </ul>
-        <?php $opus_nav->comments_navigation();
+        <?php $opus_navigation->comments_navigation();
     }
 
 endif;

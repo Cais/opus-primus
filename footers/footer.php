@@ -40,11 +40,11 @@
     </div>
 
     <h6 id="site-generator">
-        <?php global $opus_structure; echo $opus_structure->credits(); ?>
+        <?php global $opus_structures; echo $opus_structures->credits(); ?>
     </h6>
 
     <h6 id="site-copyright">
-        <?php echo $opus_structure->copyright(); ?>
+        <?php echo $opus_structures->copyright(); ?>
     </h6>
 
 </footer>

@@ -31,12 +31,12 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-global $opus_nav, $opus_structure;
+global $opus_navigation, $opus_structures;
 get_header( get_post_format() ); ?>
 
 <div class="content-wrapper cf">
 
-    <?php echo $opus_structure->layout_open(); ?>
+    <?php echo $opus_structures->layout_open(); ?>
 
     <div class="the-loop">
 
@@ -50,9 +50,9 @@ get_header( get_post_format() ); ?>
                 get_template_part( 'loops/opus-primus', get_post_format() );
             endwhile;
         else:
-            $opus_structure->no_search_results();
+            $opus_structures->no_search_results();
         endif;
-        $opus_nav->post_link();
+        $opus_navigation->post_link();
         /** the_Loop ends */
         /** Add after loop sidebar */
         if ( is_active_sidebar( 'after-loop' ) ) { dynamic_sidebar( 'after-loop' ); } ?>
@@ -62,7 +62,7 @@ get_header( get_post_format() ); ?>
     <?php
     get_sidebar( get_post_format() );
 
-    echo $opus_structure->layout_close(); ?>
+    echo $opus_structures->layout_close(); ?>
 
 </div><!-- #content-wrapper -->
 

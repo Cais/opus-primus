@@ -56,7 +56,7 @@ class OpusPrimusMetaBoxes {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    (global) $post: post_type
+     * @uses    $post (global) - post_type
      * @uses    add_meta_box
      * @internal used with action hook add_meta_boxes
      */
@@ -137,7 +137,7 @@ class OpusPrimusMetaBoxes {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    (global) $post: ID, post_type
+     * @uses    $post (global) - ID, post_type
      * @uses    apply_filters
      * @uses    get_post_meta
      */
@@ -152,4 +152,4 @@ class OpusPrimusMetaBoxes {
     }
 
 }
-$opus_boxes = new OpusPrimusMetaBoxes();
+$opus_meta_boxes = new OpusPrimusMetaBoxes();

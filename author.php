@@ -32,7 +32,7 @@
  */
 
 /** Call the class variables */
-global $opus_structure, $opus_authors, $opus_nav;
+global $opus_structures, $opus_authors, $opus_navigation;
 /** @var $current_author - current author data an as object */
 $current_author = ( get_query_var( 'author_name ' ) ) ? get_user_by( 'id', get_query_var( 'author_name' ) ) : get_userdata( get_query_var( 'author' ) );
 /** @var $current_author_id - the author ID */
@@ -42,7 +42,7 @@ get_header( get_post_format() ); ?>
 
 <div class="content-wrapper cf">
 
-    <?php echo $opus_structure->layout_open(); ?>
+    <?php echo $opus_structures->layout_open(); ?>
 
     <div class="the-loop">
         <!-- The Author Details block - inserted above the content -->
@@ -60,9 +60,9 @@ get_header( get_post_format() ); ?>
                 get_template_part( 'loops/opus-primus', get_post_format() );
             endwhile;
         else:
-            $opus_structure->no_search_results();
+            $opus_structures->no_search_results();
         endif;
-        $opus_nav->posts_link();
+        $opus_navigation->posts_link();
         /** the_Loop ends */
         /** Add after loop sidebar */
         if ( is_active_sidebar( 'after-loop' ) ) { dynamic_sidebar( 'after-loop' ); } ?>
@@ -72,7 +72,7 @@ get_header( get_post_format() ); ?>
     <?php
     get_sidebar();
 
-    echo $opus_structure->layout_close(); ?>
+    echo $opus_structures->layout_close(); ?>
 
 </div><!-- #content-wrapper -->
 

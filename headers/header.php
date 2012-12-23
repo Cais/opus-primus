@@ -65,7 +65,7 @@
     do_action( 'opus_primus_before_nav' ); ?>
 
     <nav>
-        <?php global $opus_nav; $opus_nav->primary_menu(); ?>
+        <?php global $opus_navigation; $opus_navigation->primary_menu(); ?>
     </nav>
 
     <?php

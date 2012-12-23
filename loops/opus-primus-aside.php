@@ -33,7 +33,7 @@
  */
 
 /** Call the class variables */
-global $opus_post, $opus_comments, $opus_nav, $opus_image, $opus_authors;
+global $opus_posts, $opus_comments, $opus_navigation, $opus_images, $opus_authors;
 
 /** Display the post */ ?>
 <div <?php post_class(); ?>>
@@ -41,20 +41,20 @@ global $opus_post, $opus_comments, $opus_nav, $opus_image, $opus_authors;
     <?php
     /** @var $anchor - set value for use in post_byline and meta_tags */
     $anchor = __( 'Said', 'opusprimus' );
-    $opus_post->post_byline( array(
+    $opus_posts->post_byline( array(
         'show_mod_author'   => true,
         'anchor'            => $anchor,
         'sticky_flag'       => __( 'Important', 'opusprimus' )
     ) );
-    $opus_post->post_title();
+    $opus_posts->post_title();
     if ( ! is_single() ) {
         $opus_comments->comments_link();
     }
-    $opus_image->featured_thumbnail();
-    $opus_post->post_content();
-    $opus_nav->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
-    $opus_post->meta_tags( $anchor );
-    $opus_post->post_coda();
+    $opus_images->featured_thumbnail();
+    $opus_posts->post_content();
+    $opus_navigation->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
+    $opus_posts->meta_tags( $anchor );
+    $opus_posts->post_coda();
     if ( is_single() ) {
         $opus_authors->post_author( array(
             'show_mod_author'   => true,
