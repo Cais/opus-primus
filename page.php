@@ -67,7 +67,7 @@ get_header( 'page' ); ?>
         endif;
         /** the_Loop ends */
         /** Add after loop sidebar */
-        if ( is_active_sidebar( 'after-loop' ) ) { dynamic_sidebar( 'after-loop' ); } ?>
+        if ( is_active_sidebar( 'after-loop' ) ) { dynamic_sidebar( 'after-loop' ); }
 
         comments_template(); ?>
 
