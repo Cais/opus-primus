@@ -52,7 +52,7 @@ class OpusPrimusAuthors {
      * @internal @param show_mod_email
      * @internal @param show_mod_desc
      *
-     * @uses    $opus_author_id (global)
+     * @uses    $opus_author_id (global) - from OpusPrimusPosts::post_byline
      * @uses    $post (global)
      * @uses    do_action
      * @uses    get_post_meta
@@ -135,7 +135,7 @@ class OpusPrimusAuthors {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @param   $author_id
+     * @param   $author_id - from OpusPrimusAuthors::post_author
      * @param   $show_author_url
      * @param   $show_author_email
      * @param   $show_author_desc
