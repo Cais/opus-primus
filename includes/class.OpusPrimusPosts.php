@@ -434,7 +434,11 @@ class OpusPrimusPosts {
                 /** @var $mod_author_phrase string */
                 printf( '<span class="author-modified-time">' . $mod_author_phrase . '</span>',
                     $mod_author_avatar,
-                    '<a href="' . home_url( '?author=' . $last_user->ID ) . '">' . $last_user->display_name . '</a>',
+                    sprintf( '<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
+                        home_url( '?author=' . $last_user->ID ),
+                        esc_attr( sprintf( __( 'View all posts by %1$s', 'opusprimus' ), $last_user->display_name ) ),
+                        $last_user->display_name
+                    ),
                     get_the_modified_date( get_option( 'date_format' ) ),
                     get_the_modified_time( get_option( 'time_format' ) ) );
             }
@@ -442,7 +446,11 @@ class OpusPrimusPosts {
             if ( get_the_date() <> get_the_modified_date() ) {
                 printf( '<span class="author-modified-date">' . $mod_author_phrase . '</span>',
                     $mod_author_avatar,
-                    '<a href="' . home_url( '?author=' . $last_user->ID ) . '">' . $last_user->display_name . '</a>',
+                    sprintf( '<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
+                        home_url( '?author=' . $last_user->ID ),
+                        esc_attr( sprintf( __( 'View all posts by %1$s', 'opusprimus' ), $last_user->display_name ) ),
+                        $last_user->display_name
+                    ),
                     get_the_modified_date( get_option( 'date_format' ) ),
                     get_the_modified_time( get_option( 'time_format' ) ) );
             }

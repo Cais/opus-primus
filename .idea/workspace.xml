@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/opus-primus.css" afterPath="$PROJECT_DIR$/css/opus-primus.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,12 +35,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="class.OpusPrimusAuthors.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="class.OpusPrimusAuthors.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="54" selection-start="2696" selection-end="2696" vertical-scroll-proportion="0.1827957">
+            <state line="167" column="26" selection-start="6429" selection-end="6429" vertical-scroll-proportion="-12.884615">
               <folding>
                 <element signature="e#6#1161#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class.OpusPrimusPosts.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPosts.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="448" column="0" selection-start="17472" selection-end="17472" vertical-scroll-proportion="0.6344086">
+              <folding>
+                <element signature="e#6#1152#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -65,7 +75,6 @@
         <option value="$PROJECT_DIR$/loops/opus-primus-aside.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" />
         <option value="$PROJECT_DIR$/loops/opus-primus.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusSocial.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" />
@@ -76,6 +85,7 @@
         <option value="$PROJECT_DIR$/page.php" />
         <option value="$PROJECT_DIR$/css/opus-primus.css" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
       </list>
     </option>
   </component>
@@ -1195,7 +1205,11 @@
       <created>1356227897475</created>
       <updated>1356227897475</updated>
     </task>
-    <option name="localTasksCounter" value="206" />
+    <task id="LOCAL-00206" summary="Clean up and CSS modifications to better display author details">
+      <created>1356232948441</created>
+      <updated>1356232948441</updated>
+    </task>
+    <option name="localTasksCounter" value="207" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1292,7 +1306,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed misplaced ending PHP symbol" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clean up and CSS modifications to better display author details" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1305,7 +1319,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Add audio-symbol class wrapper for anchor elements in post-format: audio" />
     <MESSAGE value="Added conditional isset tests on the $post indices being used to save with; fixes new post/page errors" />
     <MESSAGE value="Fix first and last day of week border issue if they are noted as &quot;today&quot;" />
     <MESSAGE value="Add filters to comment messages" />
@@ -1330,6 +1343,7 @@
     <MESSAGE value="Added 'uncategorized' conditional display (again)" />
     <MESSAGE value="Documentation updates and class refactoring for easier naming convention follow-through" />
     <MESSAGE value="Fixed misplaced ending PHP symbol" />
+    <MESSAGE value="Clean up and CSS modifications to better display author details" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1419,15 +1433,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPosts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-15.198156">
-          <folding>
-            <element signature="e#6#1152#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/page.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1444,9 +1449,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="54" selection-start="2696" selection-end="2696" vertical-scroll-proportion="0.1827957">
+        <state line="167" column="26" selection-start="6429" selection-end="6429" vertical-scroll-proportion="-12.884615">
           <folding>
             <element signature="e#6#1161#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPosts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="448" column="0" selection-start="17472" selection-end="17472" vertical-scroll-proportion="0.6344086">
+          <folding>
+            <element signature="e#6#1152#0" expanded="true" />
           </folding>
         </state>
       </provider>
