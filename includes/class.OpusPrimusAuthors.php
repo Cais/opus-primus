@@ -142,6 +142,7 @@ class OpusPrimusAuthors {
      *
      * @uses    get_avatar
      * @uses    get_the_author_meta
+     * @uses    home_url
      * @uses    user_can
      */
     function author_details( $author_id, $show_author_url, $show_author_email, $show_author_desc ){
@@ -161,7 +162,11 @@ class OpusPrimusAuthors {
                 if ( ! empty( $author_id ) ) {
                     echo get_avatar( $author_id );
                 }
-                printf( '<span class="opus-author-about">' . __( 'About %1$s', 'opusprimus' ) . '</span>', $author_display_name ); ?>
+                printf( '<span class="opus-author-about">' . __( 'About %1$s', 'opusprimus' ) . '</span>',
+                    sprintf( '<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
+                        home_url( '/?author=' . $author_id ),
+                        esc_attr( sprintf( __( 'View all posts by %1$s', 'opusprimus' ), $author_display_name ) ),
+                        $author_display_name ) ); ?>
             </h2>
             <ul>
                 <?php

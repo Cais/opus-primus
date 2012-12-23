@@ -336,11 +336,7 @@ class OpusPrimusPosts {
             $this->no_title_link( $byline_args['anchor'] ),
             get_the_date( get_option( 'date_format' ) ),
             get_the_time( get_option( 'time_format' ) ),
-            sprintf( '<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
-                get_author_posts_url( $opus_author_id ),
-                esc_attr( sprintf( __( 'View all posts by %1$s', 'opusprimus' ), get_the_author() ) ),
-                get_the_author()
-            )
+            $this->author_posts_link()
         );
 
         /**
@@ -362,6 +358,27 @@ class OpusPrimusPosts {
         /** Add empty hook after post by line */
         do_action( 'opus_after_post_byline' );
 
+    }
+
+    /**
+     * Author Posts Link
+     * Displays URL to author archive
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    get_author_posts_url
+     * @uses    get_the_author_meta
+     * @uses    get_the_author
+     *
+     * @return  string - URL to author archive
+     */
+    function author_posts_link() {
+        return sprintf( '<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
+            get_author_posts_url( get_the_author_meta( 'ID' ) ),
+            esc_attr( sprintf( __( 'View all posts by %1$s', 'opusprimus' ), get_the_author() ) ),
+            get_the_author()
+        );
     }
 
     /**
@@ -434,11 +451,7 @@ class OpusPrimusPosts {
                 /** @var $mod_author_phrase string */
                 printf( '<span class="author-modified-time">' . $mod_author_phrase . '</span>',
                     $mod_author_avatar,
-                    sprintf( '<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
-                        home_url( '?author=' . $last_user->ID ),
-                        esc_attr( sprintf( __( 'View all posts by %1$s', 'opusprimus' ), $last_user->display_name ) ),
-                        $last_user->display_name
-                    ),
+                    $this->modified_author_posts_link( $last_user ),
                     get_the_modified_date( get_option( 'date_format' ) ),
                     get_the_modified_time( get_option( 'time_format' ) ) );
             }
@@ -446,11 +459,7 @@ class OpusPrimusPosts {
             if ( get_the_date() <> get_the_modified_date() ) {
                 printf( '<span class="author-modified-date">' . $mod_author_phrase . '</span>',
                     $mod_author_avatar,
-                    sprintf( '<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
-                        home_url( '?author=' . $last_user->ID ),
-                        esc_attr( sprintf( __( 'View all posts by %1$s', 'opusprimus' ), $last_user->display_name ) ),
-                        $last_user->display_name
-                    ),
+                    $this->modified_author_posts_link( $last_user ),
                     get_the_modified_date( get_option( 'date_format' ) ),
                     get_the_modified_time( get_option( 'time_format' ) ) );
             }
@@ -459,6 +468,27 @@ class OpusPrimusPosts {
         /** Add empty hook after modified post author */
         do_action( 'opus_after_modified_post' );
 
+    }
+
+    /**
+     * Modified Author Posts Link
+     * Creates link to the modified author's post archive
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    home_url
+     *
+     * @param   $last_user - passed from OpusPrimusPosts::modified_post
+     *
+     * @return  string - URL to author archive
+     */
+    function modified_author_posts_link( $last_user ) {
+        return sprintf( '<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
+            home_url( '?author=' . $last_user->ID ),
+            esc_attr( sprintf( __( 'View all posts by %1$s', 'opusprimus' ), $last_user->display_name ) ),
+            $last_user->display_name
+        );
     }
 
     /**
