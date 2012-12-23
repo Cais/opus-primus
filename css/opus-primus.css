@@ -932,8 +932,17 @@ img {
 /** End: Attachment: Image -------------------------------------------------- */
 
 /** === Authors === --------------------------------------------------------- */
+div.author-details h2 {
+    padding: 5px 0;
+}
+
+.first-author-details-text,
 .modified-author-details-text {
     font-variant: small-caps;
+}
+
+span.opus-author-about {
+    padding-left: 5px;
 }
 /** End: Authors ------------------------------------------------------------ */
 

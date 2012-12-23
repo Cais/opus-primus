@@ -84,6 +84,10 @@ class OpusPrimusAuthors {
 
         /** Output author details */
         echo '<div class="first-author-details">';
+            printf(
+                '<div class="first-author-details-text">%1$s</div>',
+                apply_filters( 'opus_first_author_by_text', __( 'Author:', 'opusprimus' ) )
+            );
             $this->author_details( $opus_author_id, $post_author_args['show_author_url'], $post_author_args['show_author_email'], $post_author_args['show_author_desc'] );
         echo '</div>';
         $this->author_coda();
@@ -110,7 +114,7 @@ class OpusPrimusAuthors {
                     apply_filters( 'opus_modified_author_by_text', __( 'Modified by:', 'opusprimus' ) )
                 );
                 $this->author_details( $last_id, $post_author_args['show_author_url'], $post_author_args['show_author_email'], $post_author_args['show_author_desc'] );
-                echo '</div>';
+            echo '</div>';
             $this->author_coda();
 
             /** Add empty hook after modified author details */
