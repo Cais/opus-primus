@@ -1,5 +1,5 @@
 === Opus Primus readme.txt ===
-* Last revised May 9, 2012
+* Last revised January 2, 2013
 
 == Contents ==
 * Copyright
@@ -9,7 +9,7 @@
 * Notes
 
 == Copyright ==
-Copyright (c) 2012, Opus Primus
+Copyright (c) 2012-2013, Opus Primus
 
 This file is part of Opus Primus.
 
@@ -32,6 +32,9 @@ this program; if not, write to:
 
 The license for this software can also likely be found here:
 http://www.gnu.org/licenses/gpl-2.0.html
+
+Note: Opus Primus file Copyright years start with the first year of use and are
+amended with subsequent years based on file modification as the case may be.
 
 == Licenses ==
 All items are licensed under the GNU General Public License v2; or, as the case
