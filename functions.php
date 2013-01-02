@@ -94,7 +94,9 @@ function opus_primus_LESS() {
     /** Add JavaScript to compile LESS on the fly */
     wp_enqueue_script( 'less-1.3', OPUS_JS . 'less-1.3.0.min.js', '', '1.3.0' );
 }
-/** @todo Comment out LESS implementation? */
+/**
+ * @todo Comment out LESS implementation?
+ */
 add_action( 'wp_enqueue_scripts', 'opus_primus_LESS' );
 
 if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
@@ -249,6 +251,24 @@ function opus_primus_widgets() {
         'name'          => __( 'After Loop Widget Area', 'opusprimus' ),
         'id'            => 'after-loop',
         'description'   => __( 'This widget area displays just after the_Loop ends on all templates (index, archive, author, image, page, search, and single).', 'opusprimus' ),
+    ) );
+
+    register_sidebar( array(
+        'name'  => __( 'First Header Widget Area', 'opusprimus' ),
+        'id'    => 'header-left',
+        'description'   => __( 'This widget area appears in the header above the menu on the left side of the theme.', 'opusprimus' ),
+    ) );
+
+    register_sidebar( array(
+        'name'  => __( 'Second Header Widget Area', 'opusprimus' ),
+        'id'    => 'header-middle',
+        'description'   => __( 'This widget area appears in the header above the menu in the middle of the theme.', 'opusprimus' ),
+    ) );
+
+    register_sidebar( array(
+        'name'  => __( 'Third Header Widget Area', 'opusprimus' ),
+        'id'    => 'header-right',
+        'description'   => __( 'This widget area appears in the header above the menu on the right side of the theme.', 'opusprimus' ),
     ) );
 
     register_sidebar( array(

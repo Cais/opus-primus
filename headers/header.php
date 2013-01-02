@@ -60,6 +60,10 @@
 
     </hgroup>
 
+    <div id="header-widgets">
+        <?php get_sidebar( 'header' ); ?>
+    </div>
+
     <?php
     /** Add empty hook before primary navigation */
     do_action( 'opus_primus_before_nav' ); ?>

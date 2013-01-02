@@ -313,7 +313,61 @@
     left: 2%;               /** page left padding */
 }
 
-/** Footer Layout ----------------------------------------------------------- */
+/** Header Widget Layout ----------------------------------------------------------- */
+.header-widget-area {
+    position: relative; /** This fixes the IE7 overflow hidden bug */
+    clear: both;
+    float: left;
+    width: 100%;        /** Width of whole section */
+    overflow: hidden;   /** This chops off any overhanging divs */
+}
+
+#header-sidebar-two,
+#header-sidebar-one,
+#header-sidebar-three {
+    float: left;
+    position: relative;
+    /**
+     * No left and right padding on columns, we just make them narrower instead
+     * only padding top and bottom is included here, make it whatever value you
+     * need.
+     */
+    padding: 0 0 1em 0;
+    overflow: hidden;
+}
+/** 3 Column settings */
+.three-columns-header ul {
+    margin: 0 0 9px;        /** Remove default left margin */
+}
+.three-columns-header {
+    /** background: #eee;       /** Right column background colour */
+}
+.three-columns-header .column-middle {
+    right: 33%;             /** Width of the right column */
+    /** background: #fff;       /** Center column background colour */
+}
+.three-columns-header .column-left {
+    right: 33%;             /** Width of the middle column */
+    /** background: #f4f4f4;    /** Left column background colour */
+}
+.three-columns-header #header-sidebar-two {
+    width: 31%;             /** Width of center column content (column width minus padding on either side) */
+    left: 101%;             /** 100% plus left padding of center column */
+}
+.three-columns-header #header-sidebar-one {
+    width: 31%;             /** Width of left column content (column width minus padding on either side) */
+    left: 36%;              /** Width of (right column) plus (center column left and right padding) plus (left column left padding) */
+}
+.three-columns-header #header-sidebar-three {
+    width: 31%;             /** Width of right column content (column width minus padding on either side) */
+    left: 72%;              /** Please make note of the brackets here:
+        (100% - left column width)
+        plus (center column left and right padding)
+        plus (left column left and right padding)
+        plus (right column left padding) */
+}
+
+/** Footer Widget Layout ----------------------------------------------------------- */
 .footer-widget-area {
     position: relative; /** This fixes the IE7 overflow hidden bug */
     clear: both;
