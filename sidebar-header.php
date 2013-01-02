@@ -7,7 +7,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012, Opus Primus
+ * @copyright   Copyright (c) 2012-2013, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -30,8 +30,6 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
- *
- * @todo Remove test code
  */
 
 /** Add empty hook before Sidebar-Header */
@@ -47,29 +45,23 @@ if ( is_active_sidebar( 'header-middle' ) || is_active_sidebar( 'header-left' ) 
 
                     <ul id="header-sidebar-two">
                         <?php
-                        if ( is_active_sidebar( 'header-middle' ) ) :
+                        if ( is_active_sidebar( 'header-middle' ) ) {
                             dynamic_sidebar( 'header-middle' );
-                        else :
-                            // echo '<div class="test-text">' . 'Test: Header Middle Widget AreaHamburger fatback andouille, ball tip bacon t-bone turkey tenderloin. Ball tip shank pig, t-bone turducken prosciutto ground round rump bacon pork chop short loin turkey. Pancetta ball tip salami, hamburger t-bone capicola turkey ham hock pork belly tri-tip. Biltong bresaola tail, shoulder sausage turkey cow pork chop fatback. Turkey pork pig bacon short loin meatloaf, chicken ham hock flank andouille tenderloin shank rump filet mignon. Shoulder frankfurter shankle pancetta. Jowl andouille short ribs swine venison, pork loin pork chop meatball jerky filet mignon shoulder tenderloin chicken pork.<br />' . '</div>';
-                        endif; ?>
+                        } ?>
                     </ul><!-- #header-sidebar-two -->
 
                     <ul id="header-sidebar-one">
                         <?php
-                        if ( is_active_sidebar( 'header-left' ) ) :
+                        if ( is_active_sidebar( 'header-left' ) ) {
                             dynamic_sidebar( 'header-left' );
-                        else :
-                            // echo '<div class="test-text">' . 'BACON Test: Header Left Widget AreaHamburger fatback andouille, ball tip bacon t-bone turkey tenderloin. Ball tip shank pig, t-bone turducken prosciutto ground round rump bacon pork chop short loin turkey. Pancetta ball tip salami, hamburger t-bone capicola turkey ham hock pork belly tri-tip. Biltong bresaola tail, shoulder sausage turkey cow pork chop fatback. Turkey pork pig bacon short loin meatloaf, chicken ham hock flank andouille tenderloin shank rump filet mignon. Shoulder frankfurter shankle pancetta. Jowl andouille short ribs swine venison, pork loin pork chop meatball jerky filet mignon shoulder tenderloin chicken pork.<br />' . '</div>';
-                        endif; ?>
+                        } ?>
                     </ul><!-- #header-sidebar-one -->
 
                     <ul id="header-sidebar-three">
                         <?php
-                        if ( is_active_sidebar( 'header-right' ) ) :
+                        if ( is_active_sidebar( 'header-right' ) ) {
                             dynamic_sidebar( 'header-right' );
-                        else :
-                            // echo '<div class="test-text">' . 'Test: Header Right Widget AreaHamburger fatback andouille, ball tip bacon t-bone turkey tenderloin. Ball tip shank pig, t-bone turducken prosciutto ground round rump bacon pork chop short loin turkey. Pancetta ball tip salami, hamburger t-bone capicola turkey ham hock pork belly tri-tip. Biltong bresaola tail, shoulder sausage turkey cow pork chop fatback. Turkey pork pig bacon short loin meatloaf, chicken ham hock flank andouille tenderloin shank rump filet mignon. Shoulder frankfurter shankle pancetta. Jowl andouille short ribs swine venison, pork loin pork chop meatball jerky filet mignon shoulder tenderloin chicken pork.<br />' . '</div>';
-                        endif; ?>
+                        } ?>
                     </ul><!-- #header-sidebar-three -->
 
                 </div><!-- .column-left -->
