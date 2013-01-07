@@ -220,25 +220,25 @@ function opus_primus_widgets() {
     register_sidebar( array(
         'name'          => __( 'First Widget Area', 'opusprimus' ),
         'id'            => 'first-widget',
-        'description'   => __( 'This widget area is in “Sidebar Area One”. If no widget areas are active, the web site will be one column. If the Third and/or Fourth widget area is active in addition to this one, the web site will display three columns with this area in the left sidebar.', 'opusprimus' ),
+        'description'   => __( 'This widget area is in “Sidebar Area One”. If no sidebar widget areas are active, the web site will be one column. If the Third and/or Fourth widget area is active in addition to this one, the web site will display three columns with this area in the left sidebar.', 'opusprimus' ),
     ) );
 
     register_sidebar( array(
         'name'          => __( 'Second Widget Area', 'opusprimus' ),
         'id'            => 'second-widget',
-        'description'   => __( 'This widget area is in “Sidebar Area One”. If no widget areas are active, the web site will be one column. If the Third and/or Fourth widget area is active in addition to this one, the web site will display three columns with this area in the left sidebar.', 'opusprimus' ),
+        'description'   => __( 'This widget area is in “Sidebar Area One”. If no sidebar widget areas are active, the web site will be one column. If the Third and/or Fourth widget area is active in addition to this one, the web site will display three columns with this area in the left sidebar.', 'opusprimus' ),
     ) );
 
     register_sidebar( array(
         'name'          => __( 'Third Widget Area', 'opusprimus' ),
         'id'            => 'third-widget',
-        'description'   => __( 'This widget area is in “Sidebar Area Two”. If no widget areas are active, the web site will be one column. If the First and/or Second widget area is active in addition to this one, the web site will display three columns with this area in the right sidebar.', 'opusprimus' ),
+        'description'   => __( 'This widget area is in “Sidebar Area Two”. If no sidebar widget areas are active, the web site will be one column. If the First and/or Second widget area is active in addition to this one, the web site will display three columns with this area in the right sidebar.', 'opusprimus' ),
     ) );
 
     register_sidebar( array(
         'name'          => __( 'Fourth Widget Area', 'opusprimus' ),
         'id'            => 'fourth-widget',
-        'description'   => __( 'This widget area is in “Sidebar Area Two”. If no widget areas are active, the web site will be one column. If the First and/or Second widget area is active in addition to this one, the web site will display three columns with this area in the right sidebar.', 'opusprimus' ),
+        'description'   => __( 'This widget area is in “Sidebar Area Two”. If no sidebar widget areas are active, the web site will be one column. If the First and/or Second widget area is active in addition to this one, the web site will display three columns with this area in the right sidebar.', 'opusprimus' ),
     ) );
 
     register_sidebar( array(
