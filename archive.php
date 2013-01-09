@@ -52,17 +52,10 @@ if ( have_posts() ) {
         <?php
         /** Add before loop sidebar */
         if ( is_active_sidebar( 'before-loop' ) ) { dynamic_sidebar( 'before-loop' ); }
-        /** the_Loop begins */
-        if ( have_posts() ):
-            while ( have_posts() ):
-                the_post();
-                get_template_part( 'archives/archive', get_post_format() );
-            endwhile;
-        else:
-            $opus_structures->no_search_results();
-        endif;
-        $opus_navigation->posts_link();
-        /** the_Loop ends */
+
+        /** the_Loop structure in its most basic form */
+        $opus_structures->the_loop();
+
         /** Add after loop sidebar */
         if ( is_active_sidebar( 'after-loop' ) ) { dynamic_sidebar( 'after-loop' ); } ?>
 

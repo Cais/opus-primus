@@ -264,6 +264,36 @@ class OpusPrimusStructures {
         return apply_filters( 'opus_browser_title', $opus_title_text );
     }
 
+
+    /**
+     * the_Loop
+     * The most basic structure for the posts loop
+     *
+     * @package Opus_primus
+     * @since   0.1
+     *
+     * @uses    $opus_navigation (global)
+     * @uses    have_posts
+     * @uses    the_post
+     * @uses    get_template_part
+     * @uses    get_post_format
+     */
+    function the_loop() {
+        /** the_Loop begins */
+        if ( have_posts() ):
+            while ( have_posts() ):
+                the_post();
+                get_template_part( 'loops/opus-primus', get_post_format() );
+            endwhile;
+        else:
+            $this->no_search_results();
+        endif;
+        global $opus_navigation;
+        $opus_navigation->posts_link();
+        /** the_Loop ends */
+    }
+
+
     /**
      * No Search Results
      * Outputs message if no posts are found by 'the_Loop' query
