@@ -11,7 +11,7 @@
  * @internal    REQUIRED    WordPress 3.4
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012, Opus Primus
+ * @copyright   Copyright (c) 2012-2013, Opus Primus
  *
  * This file is part of Opus Primus.
  *
