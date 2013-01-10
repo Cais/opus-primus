@@ -7,7 +7,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012, Opus Primus
+ * @copyright   Copyright (c) 2012-2013, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -51,19 +51,19 @@ class OpusPrimusPullQuotes {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    (constant) OPUS_CSS
-     * @uses    (constant) OPUS_JS
      * @uses    wp_enqueue_script
      * @uses    wp_enqueue_style
      *
      * @internal    jQuery is enqueued as a dependency
      */
     function scripts_and_styles() {
-        /** Enqueue scripts */
+        /** Enqueue Scripts */
         /** Enqueue Opus Primus JavaScripts which will enqueue jQuery as a dependency */
-        wp_enqueue_script( 'opus-primus-pullquote', OPUS_JS . 'opus-primus.pullquote.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
+        wp_enqueue_script( 'opus-primus-pullquote', OPUS_EXT_URI .'pullquotes/opus-primus.pullquote.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
+
+        /** Enqueue Styles */
         /** Enqueue Theme Stylesheets */
-        wp_enqueue_style( 'Opus-Primus-PullQuote', OPUS_CSS . 'opus-primus.pullquote.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
+        wp_enqueue_style( 'Opus-Primus-PullQuote', OPUS_EXT_URI . 'pullquotes/opus-primus.pullquote.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
     }
 
     /**

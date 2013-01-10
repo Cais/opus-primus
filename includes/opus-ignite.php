@@ -37,6 +37,7 @@ define( 'OPUS_INC', get_template_directory() . '/includes/' );
 define( 'OPUS_JS', get_template_directory_uri() . '/js/' );
 define( 'OPUS_CSS', get_template_directory_uri() . '/css/' );
 define( 'OPUS_EXT', get_template_directory() . '/extensions/' );
+define( 'OPUS_EXT_URI', get_template_directory_uri() . '/extensions/' );
 
 /** Add Comments Hooks */
 require_once( OPUS_INC . 'class.OpusPrimusComments.php' );

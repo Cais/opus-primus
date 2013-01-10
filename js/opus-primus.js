@@ -6,7 +6,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012, Opus Primus
+ * @copyright   Copyright (c) 2012-2013, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -33,19 +33,23 @@
 
 jQuery( document ).ready( function( $ ) {
     /** Note: $() will work as an alias for jQuery() inside of this function */
+
     /** Use fitText to display status update message across post */
     $( '.post.format-status div.opus-status-update' ).fitText( 1.50 );
     $( '.archive.term-post-format-status div.opus-status-update' ).fitText( 1.50 );
-    /** Use fitVids to make video more responsive */
-    // $( 'div.post-content' ).fitVids();
+
     /** Add a drop shadow to make gallery images pop */
     $( '.format-gallery img.wp-post-image, .format-gallery img.attachment-thumbnail, .format-gallery .featured-image img' ).addClass( 'image-shadow' );
+
     /** Add a drop shadow to single attached images */
     $( '.single .attached-image img, span.archive-image img' ).addClass( 'image-shadow' );
+
     /** Wrap the comment reply link text in a button */
     $( 'div.reply a' ).wrapInner( '<button class="reply-button" />' );
+
     /** Wrap post-format:link anchors with link-symbol class */
     $( 'div.post.format-link .post-content a').wrapInner( '<span class="link-symbol" />' );
+
     /** Wrap post-format:audio anchors with audio-symbol class */
     $( 'div.post.format-audio .post-content a').wrapInner( '<span class="audio-symbol" />' );
 } );
