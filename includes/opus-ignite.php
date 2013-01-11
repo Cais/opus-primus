@@ -39,6 +39,9 @@ define( 'OPUS_CSS',     get_template_directory_uri()    . '/css/' );
 define( 'OPUS_EXT',     get_template_directory()        . '/extensions/' );
 define( 'OPUS_EXT_URI', get_template_directory_uri()    . '/extensions/' );
 
+/** Add Widgets */
+require_once( OPUS_INC . 'widgets.php' );
+
 /** Load the classes - in order or appearance/dependency */
 /** Add Navigation */
 require_once( OPUS_INC . 'class.OpusPrimusNavigation.php' );

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="Revert">
+    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/opus-ignite.php" afterPath="$PROJECT_DIR$/includes/opus-ignite.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/widgets.php" afterPath="$PROJECT_DIR$/includes/widgets.php" />
     </list>
     <ignored path="opus-primus.iws" />
@@ -51,9 +52,9 @@
         <option value="$PROJECT_DIR$/extensions/pullquotes/class.OpusPrimusPullQuotes.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" />
         <option value="$PROJECT_DIR$/widgets.php" />
-        <option value="$PROJECT_DIR$/includes/opus-ignite.php" />
         <option value="$PROJECT_DIR$/js/less-1.3.0.min.js" />
         <option value="$PROJECT_DIR$/includes/widgets.php" />
+        <option value="$PROJECT_DIR$/includes/opus-ignite.php" />
         <option value="$PROJECT_DIR$/functions.php" />
       </list>
     </option>
@@ -1176,7 +1177,11 @@
       <created>1357924211177</created>
       <updated>1357924211177</updated>
     </task>
-    <option name="localTasksCounter" value="217" />
+    <task id="LOCAL-00217" summary="Revert &quot;widget&quot; code move ... works local but not live?!">
+      <created>1357925378041</created>
+      <updated>1357925378041</updated>
+    </task>
+    <option name="localTasksCounter" value="218" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1273,7 +1278,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated LESS script to 1.3.3; removed old LESS &quot;resource&quot;; minor refactoring of code/documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;widget&quot; code move ... works local but not live?!" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1286,7 +1291,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Modified author coda, again ..." />
     <MESSAGE value="Modified author coda, again ... and again" />
     <MESSAGE value="Code comments and additional code formatting" />
     <MESSAGE value="Added Search CSS styles" />
@@ -1311,6 +1315,7 @@
     <MESSAGE value="Refactor `opus-ignite` to load classes in order of appearance/dependency" />
     <MESSAGE value="Move widget definitions into new file 'includes\widgets.php'; call with `locate_template` from 'functions.php'" />
     <MESSAGE value="Updated LESS script to 1.3.3; removed old LESS &quot;resource&quot;; minor refactoring of code/documentation" />
+    <MESSAGE value="Revert &quot;widget&quot; code move ... works local but not live?!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1401,13 +1406,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/opus-ignite.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/less-1.3.3.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1424,17 +1422,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/widgets.php">
+    <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="3" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.64378697">
+        <state line="37" column="16" selection-start="1207" selection-end="1207" vertical-scroll-proportion="-3.9230769">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
+    <entry file="file://$PROJECT_DIR$/includes/opus-ignite.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="177" column="56" selection-start="6774" selection-end="6774" vertical-scroll-proportion="0.020432692">
+        <state line="42" column="41" selection-start="1605" selection-end="1605" vertical-scroll-proportion="0.22130178">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/widgets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="141" column="52" selection-start="6508" selection-end="6508" vertical-scroll-proportion="2.8810096">
+          <folding>
+            <element signature="e#6#1130#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
