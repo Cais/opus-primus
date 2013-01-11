@@ -36,7 +36,7 @@
  */
 
 /** Get the Post Structure and Navigation class variables */
-global $opus_navigation, $opus_structures;
+global $opus_structures;
 if ( have_posts() ) {
     get_header( get_post_format() );
 } else {

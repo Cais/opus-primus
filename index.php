@@ -38,7 +38,7 @@
  * @todo Add author template ... use the post_author / author details method(s)?
  */
 
-global $opus_navigation, $opus_structures;
+global $opus_structures;
 get_header( get_post_format() ); ?>
 
 <div class="content-wrapper cf">

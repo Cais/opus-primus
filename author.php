@@ -32,7 +32,7 @@
  */
 
 /** Call the class variables */
-global $opus_structures, $opus_authors, $opus_navigation;
+global $opus_structures, $opus_authors;
 /** @var $current_author - current author data an as object */
 $current_author = ( get_query_var( 'author_name ' ) ) ? get_user_by( 'id', get_query_var( 'author_name' ) ) : get_userdata( get_query_var( 'author' ) );
 /** @var $current_author_id - the author ID */

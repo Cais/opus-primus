@@ -31,8 +31,8 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
- */
-?>
+ */ ?>
+
 <header>
 
     <hgroup>
@@ -55,8 +55,7 @@
 
         <?php
         /** Add empty hook after site description */
-        do_action( 'opus_primus_after_site_description' );
-        ?>
+        do_action( 'opus_primus_after_site_description' ); ?>
 
     </hgroup>
 

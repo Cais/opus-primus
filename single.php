@@ -31,7 +31,7 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-global $opus_navigation, $opus_structures;
+global $opus_structures;
 get_header( get_post_format() ); ?>
 
 <div class="content-wrapper cf">

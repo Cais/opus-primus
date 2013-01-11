@@ -6,7 +6,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012, Opus Primus
+ * @copyright   Copyright (c) 2012-2013, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -32,7 +32,7 @@
  */
 
 /** Call the class variables */
-global $opus_structures, $opus_posts, $opus_authors, $opus_navigation;
+global $opus_structures, $opus_posts, $opus_authors;
 get_header( 'page' ); ?>
 
 <div class="content-wrapper cf">
@@ -44,6 +44,7 @@ get_header( 'page' ); ?>
         <?php
         /** Add before loop sidebar */
         if ( is_active_sidebar( 'before-loop' ) ) { dynamic_sidebar( 'before-loop' ); }
+
         /** the_Loop begins */
         if ( have_posts() ):
             while ( have_posts() ):
@@ -66,6 +67,7 @@ get_header( 'page' ); ?>
             $opus_structures->no_search_results();
         endif;
         /** the_Loop ends */
+
         /** Add after loop sidebar */
         if ( is_active_sidebar( 'after-loop' ) ) { dynamic_sidebar( 'after-loop' ); }
 
