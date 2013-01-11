@@ -43,6 +43,8 @@ define( 'OPUS_EXT_URI', get_template_directory_uri()    . '/extensions/' );
 require_once( OPUS_INC . 'widgets.php' );
 
 /** Load the classes - in order or appearance/dependency */
+/** Add Global Defaults */
+require_once( OPUS_INC . 'class.OpusPrimusDefaults.php' );
 /** Add Navigation */
 require_once( OPUS_INC . 'class.OpusPrimusNavigation.php' );
 /** Add Structures */

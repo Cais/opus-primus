@@ -35,7 +35,7 @@
  */
 
 /** Call the class variables */
-global $opus_posts, $opus_comments, $opus_navigation, $opus_images, $opus_authors;
+global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_images, $opus_authors;
 
 /** Display the post */ ?>
 <div <?php post_class(); ?>>
@@ -43,7 +43,7 @@ global $opus_posts, $opus_comments, $opus_navigation, $opus_images, $opus_author
     <?php
     /** @var $anchor - set value for use in meta_tags (post_byline default) */
     $anchor = __( 'Posted', 'opusprimus' );
-    $opus_posts->post_byline( array( 'show_mod_author' => true ) );
+    $opus_posts->post_byline( array( 'show_mod_author' => $opus_defaults->show_mod_author() ) );
     $opus_posts->post_title();
     if ( ! is_single() ) {
         $opus_comments->comments_link();
@@ -59,10 +59,10 @@ global $opus_posts, $opus_comments, $opus_navigation, $opus_images, $opus_author
          * as easily read and used as an example when modifying the code
          */
         $opus_authors->post_author( array(
-            'show_mod_author'   => true,
-            'show_author_url'   => true,
-            'show_author_email' => true,
-            'show_author_desc'  => true,
+            'show_mod_author'   => $opus_defaults->show_mod_author(),
+            'show_author_url'   => $opus_defaults->show_author_url(),
+            'show_author_email' => $opus_defaults->show_author_email(),
+            'show_author_desc'  => $opus_defaults->show_author_desc(),
         ) );
     } ?>
 
