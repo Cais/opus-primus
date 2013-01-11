@@ -7,7 +7,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012, Opus Primus
+ * @copyright   Copyright (c) 2012-2013, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -33,11 +33,11 @@
  */
 
 /** Set CONSTANTS */
-define( 'OPUS_INC', get_template_directory() . '/includes/' );
-define( 'OPUS_JS', get_template_directory_uri() . '/js/' );
-define( 'OPUS_CSS', get_template_directory_uri() . '/css/' );
-define( 'OPUS_EXT', get_template_directory() . '/extensions/' );
-define( 'OPUS_EXT_URI', get_template_directory_uri() . '/extensions/' );
+define( 'OPUS_INC',     get_template_directory()        . '/includes/' );
+define( 'OPUS_JS',      get_template_directory_uri()    . '/js/' );
+define( 'OPUS_CSS',     get_template_directory_uri()    . '/css/' );
+define( 'OPUS_EXT',     get_template_directory()        . '/extensions/' );
+define( 'OPUS_EXT_URI', get_template_directory_uri()    . '/extensions/' );
 
 /** Add Comments Hooks */
 require_once( OPUS_INC . 'class.OpusPrimusComments.php' );
@@ -57,8 +57,6 @@ require_once( OPUS_INC . 'class.OpusPrimusGallery.php' );
 require_once( OPUS_INC . 'class.OpusPrimusImages.php' );
 /** Add Meta Boxes */
 require_once( OPUS_INC . 'class.OpusPrimusMetaBoxes.php' );
-/** Add Sharing */
-require_once( OPUS_INC . 'class.OpusPrimusSocial.php' );
 
 /** Add Extensions */
 require_once( OPUS_EXT . 'extensions.php' );
