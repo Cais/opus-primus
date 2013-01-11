@@ -39,24 +39,25 @@ define( 'OPUS_CSS',     get_template_directory_uri()    . '/css/' );
 define( 'OPUS_EXT',     get_template_directory()        . '/extensions/' );
 define( 'OPUS_EXT_URI', get_template_directory_uri()    . '/extensions/' );
 
-/** Add Comments Hooks */
-require_once( OPUS_INC . 'class.OpusPrimusComments.php' );
-/** Add Archives */
-require_once( OPUS_INC . 'class.OpusPrimusArchives.php' );
+/** Load the classes - in order or appearance/dependency */
+/** Add Navigation */
+require_once( OPUS_INC . 'class.OpusPrimusNavigation.php' );
 /** Add Structures */
 require_once( OPUS_INC . 'class.OpusPrimusStructures.php' );
 /** Add Posts */
 require_once( OPUS_INC . 'class.OpusPrimusPosts.php' );
-/** Add Authors */
-require_once( OPUS_INC . 'class.OpusPrimusAuthors.php' );
-/** Add Navigation */
-require_once( OPUS_INC . 'class.OpusPrimusNavigation.php' );
-/** Add Gallery */
-require_once( OPUS_INC . 'class.OpusPrimusGallery.php' );
-/** Add Images */
-require_once( OPUS_INC . 'class.OpusPrimusImages.php' );
 /** Add Meta Boxes */
 require_once( OPUS_INC . 'class.OpusPrimusMetaBoxes.php' );
+/** Add Comments Hooks */
+require_once( OPUS_INC . 'class.OpusPrimusComments.php' );
+/** Add Images */
+require_once( OPUS_INC . 'class.OpusPrimusImages.php' );
+/** Add Gallery */
+require_once( OPUS_INC . 'class.OpusPrimusGallery.php' );
+/** Add Authors */
+require_once( OPUS_INC . 'class.OpusPrimusAuthors.php' );
+/** Add Archives */
+require_once( OPUS_INC . 'class.OpusPrimusArchives.php' );
 
 /** Add Extensions */
 require_once( OPUS_EXT . 'extensions.php' );
