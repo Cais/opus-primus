@@ -34,8 +34,14 @@
 
 if ( ! class_exists( 'OpusPrimusDefaults' ) ) {
     /**
-     * The easiest method to use this in a Child-Theme would be to copy the
-     * entire OpusPrimusDefaults class then change the defaults as needed.
+     * The easiest method to use this in a Child-Theme would be:
+     * - Copy the entire OpusPrimusDefaults class
+     * - Copy the $opus_defaults line
+     * - Put both into the Child-Theme's 'functions.php' file
+     * - Then change the defaults as needed
+     *
+     * Note the conditional wrapper will allow the Child-Theme version of the
+     * class to be used while this version is ignored.
      *
      * Also to note, each default can be "toggled" by adding an exclamation mark
      * (programmatic not) in front of the instance of the method call.
