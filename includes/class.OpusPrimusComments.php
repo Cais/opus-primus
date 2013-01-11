@@ -7,7 +7,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012, Opus Primus
+ * @copyright   Copyright (c) 2012-2013, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -36,9 +36,30 @@ class OpusPrimusComments {
     /** Constructor */
     function __construct(){
         /** Apply filters and actions */
+        add_action( 'comment_form_before', array( $this, 'enqueue_comment_reply' ) );
         add_filter( 'comment_class', array( $this, 'comment_author_class' ) );
         add_action( 'comment_form_before', array( $this, 'before_comment_form' ) );
         add_action( 'comment_form_comments_closed', array( $this ,'comments_form_closed' ) );
+    }
+
+    /**
+     * Enqueue Comment Reply
+     * If the page being viewed is a single post/page; and, comments are open;
+     * and, threaded comments are turned on then enqueue the built-in
+     * comment-reply script.
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    is_singular
+     * @uses    comments_open
+     * @uses    get_option
+     * @uses    wp_enqueue_script
+     */
+    function enqueue_comment_reply() {
+        if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+            wp_enqueue_script( 'comment-reply' );
+        }
     }
 
     /**
