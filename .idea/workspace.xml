@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/widgets.php" />
+    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="Updated LESS script to 1.3.3; removed old LESS &quot;resource&quot;; minor refactoring of code/documentation">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/less-1.3.3.min.js" />
+      <change type="DELETED" beforePath="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\js\less-1.3.0.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\resources\less.js\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\resources\less.js\less-1.3.0.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
     </list>
@@ -26,26 +29,7 @@
     <favorites_list name="opus-primus" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/functions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="172" column="78" selection-start="6710" selection-end="6710" vertical-scroll-proportion="0.79881656">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="widgets.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/widgets.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -58,7 +42,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/works-in-progress/notes.txt" />
         <option value="$PROJECT_DIR$/archive.php" />
         <option value="$PROJECT_DIR$/author.php" />
         <option value="$PROJECT_DIR$/single.php" />
@@ -71,8 +54,9 @@
         <option value="$PROJECT_DIR$/js/opus-primus.js" />
         <option value="$PROJECT_DIR$/extensions/pullquotes/class.OpusPrimusPullQuotes.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" />
-        <option value="$PROJECT_DIR$/includes/opus-ignite.php" />
         <option value="$PROJECT_DIR$/widgets.php" />
+        <option value="$PROJECT_DIR$/includes/opus-ignite.php" />
+        <option value="$PROJECT_DIR$/js/less-1.3.0.min.js" />
         <option value="$PROJECT_DIR$/functions.php" />
       </list>
     </option>
@@ -139,42 +123,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loops" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1223,7 +1171,11 @@
       <created>1357916381191</created>
       <updated>1357916381192</updated>
     </task>
-    <option name="localTasksCounter" value="215" />
+    <task id="LOCAL-00215" summary="Move widget definitions into new file 'includes\widgets.php'; call with `locate_template` from 'functions.php'">
+      <created>1357918836154</created>
+      <updated>1357918836155</updated>
+    </task>
+    <option name="localTasksCounter" value="216" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1260,7 +1212,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32589287" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1273,7 +1225,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2588047" sideWeight="0.67522323" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2588047" sideWeight="0.67522323" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1320,7 +1272,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor `opus-ignite` to load classes in order of appearance/dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move widget definitions into new file 'includes\widgets.php'; call with `locate_template` from 'functions.php'" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1333,7 +1285,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Remove nonce verification causing conflicts" />
     <MESSAGE value="Add modified author classes; add sanity checks to make sure there are posts when calling the archive templates" />
     <MESSAGE value="Modified author coda, again ..." />
     <MESSAGE value="Modified author coda, again ... and again" />
@@ -1358,27 +1309,12 @@
     <MESSAGE value="Fix JavaScript issue with calling fitVids when not implemented ... can you say dumb-ass?!" />
     <MESSAGE value="Moved &quot;threaded comments&quot; script call into Comments class" />
     <MESSAGE value="Refactor `opus-ignite` to load classes in order of appearance/dependency" />
+    <MESSAGE value="Move widget definitions into new file 'includes\widgets.php'; call with `locate_template` from 'functions.php'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="254" column="8" selection-start="10558" selection-end="10558" vertical-scroll-proportion="0.3526627">
-          <folding>
-            <element signature="e#6#1161#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sidebar-footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/footers/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1453,13 +1389,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/opus-ignite.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1545" selection-end="1545" vertical-scroll-proportion="-6.5384617">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/archive.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="0" selection-start="0" selection-end="1284" vertical-scroll-proportion="-23.538462">
@@ -1478,9 +1407,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/includes/opus-ignite.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/less-1.3.3.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="78" selection-start="6710" selection-end="6710" vertical-scroll-proportion="0.79881656">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

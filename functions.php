@@ -77,7 +77,7 @@ add_action( 'wp_enqueue_scripts', 'opus_primus_enqueue_scripts' );
 
 /**
  * Opus Primus LESS
- * Add LESS stylesheet and javascript
+ * Add LESS stylesheet and JavaScript
  *
  * @package OpusPrimus
  * @since   0.1
@@ -87,12 +87,12 @@ add_action( 'wp_enqueue_scripts', 'opus_primus_enqueue_scripts' );
  * @uses    wp_enqueue_script
  */
 function opus_primus_LESS() {
-    /** Add LESS link - cannot enqueue due to rel requirement */
+    /** Add LESS link - cannot enqueue due to "rel" requirement */
     printf ( '<link rel="stylesheet/less" type="text/css" href="%1$s">', OPUS_CSS . 'style.less' );
     /** Print new line - head section will be easier to read */
     printf ( "\n" );
     /** Add JavaScript to compile LESS on the fly */
-    wp_enqueue_script( 'less-1.3', OPUS_JS . 'less-1.3.0.min.js', '', '1.3.0' );
+    wp_enqueue_script( 'less-1.3.3', OPUS_JS . 'less-1.3.3.min.js', '', '1.3.3' );
 }
 /**
  * @todo Comment out LESS implementation?
@@ -109,7 +109,14 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
      * @since   0.1
      *
      * @uses    add_editor_style
-     * @uses    add_theme_support - adds: automatic-feed-links; custom-background; post-formats; post-thumbnails
+     * @uses    add_theme_support: automatic-feed-links
+     * @uses    add_theme_support: custom-background
+     * @uses    add_theme_support: post-formats
+     * @uses    add_theme_support: post-thumbnails
+     * @uses    load_theme_textdomain
+     * @uses    get_locale
+     * @uses    get_template_directory
+     * @uses    get_template_directory_uri
      * @uses    register_nav_menus
      */
     function opus_primus_theme_setup() {
@@ -122,7 +129,7 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
         /** This theme allows users to set a custom background */
         add_theme_support( 'custom-background', array(
                 'default-color' => 'ffffff',
-                /* 'default-image' => get_stylesheet_directory_uri() . '/images/background.png' */
+                /** 'default-image' => get_stylesheet_directory_uri() . '/images/background.png' */
             ) );
         /** Add support for ALL post-formats */
         add_theme_support( 'post-formats', array(
@@ -147,14 +154,6 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
         /**
          * Make theme available for translation
          * Translations can be filed in the /languages/ directory
-         *
-         * @package OpusPrimus
-         * @since   0.1
-         *
-         * @uses    load_theme_textdomain
-         * @uses    get_locale
-         * @uses    get_template_directory
-         * @uses    get_template_directory_uri
          */
         load_theme_textdomain( 'opusprimus', get_template_directory() . '/languages' );
         $locale = get_locale();
