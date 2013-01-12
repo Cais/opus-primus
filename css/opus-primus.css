@@ -60,6 +60,7 @@
  * === Post-Format: Status ===
  * === Post-Format: Link ===
  * === Post-Format: Audio ===
+ * === Post-Format: Chat ===
  *
  * === Footer ===
  *
@@ -1008,7 +1009,7 @@ td.archive-image-excerpt {
 /** === Post-Format: Quote === ---------------------------------------------- */
 @font-face {
     font-family: 'Merienda';
-    src: url('../fonts/Merienda.ttf') format('truetype');
+    src: url('../fonts/Merienda/Merienda.ttf') format('truetype');
 }
 
 .format-quote blockquote {
@@ -1093,6 +1094,23 @@ div.post.format-audio .post-content a {
     /** content: '\0020 \1D11E'; /** space + Musical G Clef Symbol - uses CSS hex values */
 }
 /** End: Post-Format: Audio ------------------------------------------------- */
+
+/** === Post-Format: Chat === ----------------------------------------------- */
+@font-face {
+    font-family: 'Underwood-Champion';
+    src: url('../fonts/Underwood-Champion/underwood_champion.ttf') format('truetype');
+}
+
+.format-chat .post-content {
+    font-family: 'Underwood-Champion', monospace, serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 33.75px;
+    margin: 0 auto;
+    padding: 0 5px;
+}
+/** End: Post-Format: Chat -------------------------------------------------- */
+
 
 /** === Footer === ---------------------------------------------------------- */
 h6#site-generator {

@@ -1,5 +1,5 @@
 === Opus Primus readme.txt ===
-* Last revised January 2, 2013
+* Last revised January 12, 2013
 
 == Contents ==
 * Copyright
@@ -56,6 +56,11 @@ Copyright 2011, released under the WTFPL license - http://sam.zoy.org/wtfpl/
 Copyright (c) 2011, Eduardo Tunni (http://www.tipo.net.ar), with Reserved Font Name "Merienda"
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is available with a FAQ at: http://scripts.sil.org/OFL
+
+* Font: Underwood Champion
+Copyright (c) 2009, Vic Fieger (http://www.vicfieger.com/)
+The Vic Fieger fonts are freeware, to be downloaded and used by anyone who wants them for free.
+This license can also be found at this permalink: http://www.fontsquirrel.com/license/Underwood-Champion
 
 This above may not be construed as overriding any item with a previously written
 and applied license, stated or not, which will take precedence over anything
