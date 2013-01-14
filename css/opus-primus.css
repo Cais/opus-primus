@@ -690,6 +690,11 @@ ul.nav-menu ul.sub-menu li, ul.nav-menu ul.children li, ul.nav-menu ul, ul.nav-m
 /** End: Menu Related Elements ---------------------------------------------- */
 
 /** === Post Elements === --------------------------------------------------- */
+/** Post Content ------------------------------------------------------------ */
+div.post-content {
+    padding-bottom: 5px;
+}
+
 /** Codas ------------------------------------------------------------------- */
 .author-coda {
     border-bottom: 1px solid #d3d3d3;
@@ -1150,6 +1155,12 @@ h6#site-generator {
 /** === Ain't Miss B. Haven === --------------------------------------------- */
 /** Jetpack (WP Stats) - smiley face */
 img#wpstats { display: none; }
+
+/** Jetpack Notifications? */
+p.comment-subscription-form {
+    clear: both;
+    margin: 0;
+}
 
 /** Make sure Twitter embeds are not fixed width */
 .post-content .twitter-tweet-rendered {
