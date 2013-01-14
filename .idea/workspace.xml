@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="Removed class OpusPrimusSocial (probably served better by plugins)">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/Underwood-Champion/underwood_champion.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/Underwood-Champion/Vic Fieger License.txt" />
-      <change type="MOVED" beforePath="C:\wamp\www\Opus_Primus\wp-content\themes\opus-primus\fonts\Merienda-OFL.txt" afterPath="$PROJECT_DIR$/fonts/Merienda/Merienda-OFL.txt" />
-      <change type="MOVED" beforePath="C:\wamp\www\Opus_Primus\wp-content\themes\opus-primus\fonts\Merienda.ttf" afterPath="$PROJECT_DIR$/fonts/Merienda/Merienda.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Cais.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Cais.xml" />
+    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="* Use JavaScript to add a class to the code box used with `form-allowed-tags` class&#10;* Add CSS to use new JavaScript added class&#10;* Code formatting and organization of Comments class to separate the actions and filters from the other methods">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comments.php" afterPath="$PROJECT_DIR$/comments.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/opus-primus.css" afterPath="$PROJECT_DIR$/css/opus-primus.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/opus-primus.js" afterPath="$PROJECT_DIR$/js/opus-primus.js" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,8 +41,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/extensions/pullquotes/class.OpusPrimusPullQuotes.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusArchives.php" />
         <option value="$PROJECT_DIR$/includes/opus-ignite.php" />
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" />
@@ -57,9 +52,11 @@
         <option value="$PROJECT_DIR$/single.php" />
         <option value="$PROJECT_DIR$/headers/header.php" />
         <option value="$PROJECT_DIR$/functions.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" />
-        <option value="$PROJECT_DIR$/css/opus-primus.css" />
         <option value="$PROJECT_DIR$/readme.txt" />
+        <option value="$PROJECT_DIR$/comments.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" />
+        <option value="$PROJECT_DIR$/js/opus-primus.js" />
+        <option value="$PROJECT_DIR$/css/opus-primus.css" />
       </list>
     </option>
   </component>
@@ -193,15 +190,6 @@
           </excludedPaths>
         </serverdata>
       </server>
-      <server id="24948ea9-6063-4f15-a8f5-32ce38640199">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/wp-content/themes/opus-primus" local="$PROJECT_DIR$" web="/wp-content/themes/opus-primus" />
-            <mapping deploy="/wp-admin" local="$PROJECT_DIR$/../../../wp-admin" web="/wp-admin" />
-            <mapping deploy="/wp-includes" local="$PROJECT_DIR$/../../../wp-includes" web="/wp-includes" />
-          </mappings>
-        </serverdata>
-      </server>
       <server id="49d3d71f-45d4-4cc9-afe0-18cde1ab960e">
         <serverdata>
           <mappings>
@@ -226,9 +214,6 @@
             </ExcludedPath>
           </excludedPaths>
         </serverdata>
-      </server>
-      <server id="a1c30bba-6abc-485a-9644-cef31ec9126b">
-        <serverdata />
       </server>
       <server id="a8dc18c8-200c-4b30-8c3d-2e0536e613b8">
         <serverdata>
@@ -255,9 +240,6 @@
           </excludedPaths>
         </serverdata>
       </server>
-      <server id="c9a4dbd7-cef9-4541-8d7b-6db8fc96f95b">
-        <serverdata />
-      </server>
       <server id="e062263c-0104-40be-879a-bee05ee1990d">
         <serverdata>
           <mappings>
@@ -282,12 +264,6 @@
             </ExcludedPath>
           </excludedPaths>
         </serverdata>
-      </server>
-      <server id="ea4e8b6e-3953-42b6-ba16-8b4e90a092c1">
-        <serverdata />
-      </server>
-      <server id="edf9a167-7d35-4dca-915b-6a984d051d01">
-        <serverdata />
       </server>
     </servers>
   </component>
@@ -1212,7 +1188,11 @@
       <created>1357862498350</created>
       <updated>1357862498350</updated>
     </task>
-    <option name="localTasksCounter" value="214" />
+    <task id="LOCAL-00214" summary="* Added Underwood Champion font for use with the Post-Format: Chat&#10;* Re-organized the fonts folder&#10;* Added CSS for Post-Format: Chat&#10;* Updated 'readme' with Underwood Champion attribution / license">
+      <created>1358018344706</created>
+      <updated>1358018344706</updated>
+    </task>
+    <option name="localTasksCounter" value="215" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1253,11 +1233,11 @@
     <layout>
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32447553" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32587412" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272727" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26640928" sideWeight="0.6755245" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27413127" sideWeight="0.6755245" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -1309,7 +1289,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed class OpusPrimusSocial (probably served better by plugins)" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Added Underwood Champion font for use with the Post-Format: Chat&#10;* Re-organized the fonts folder&#10;* Added CSS for Post-Format: Chat&#10;* Updated 'readme' with Underwood Champion attribution / license" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1322,7 +1302,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Correct typos in secondary menu" />
     <MESSAGE value="Remove nonce verification causing conflicts" />
     <MESSAGE value="Add modified author classes; add sanity checks to make sure there are posts when calling the archive templates" />
     <MESSAGE value="Modified author coda, again ..." />
@@ -1347,38 +1326,12 @@
     <MESSAGE value="Updated Copyright year on edited files to 2012-2013 from 2012 only" />
     <MESSAGE value="Fix JavaScript issue with calling fitVids when not implemented ... can you say dumb-ass?!" />
     <MESSAGE value="Removed class OpusPrimusSocial (probably served better by plugins)" />
+    <MESSAGE value="* Added Underwood Champion font for use with the Post-Format: Chat&#10;* Re-organized the fonts folder&#10;* Added CSS for Post-Format: Chat&#10;* Updated 'readme' with Underwood Champion attribution / license" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/footers/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/archive.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="7" selection-start="1353" selection-end="1353" vertical-scroll-proportion="-2.6153846" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="-0.65384614">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="8" selection-start="2308" selection-end="2308" vertical-scroll-proportion="-20.26923" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/single.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="7" selection-start="1091" selection-end="1091" vertical-scroll-proportion="-1.9615384" />
@@ -1399,45 +1352,80 @@
         <state line="40" column="0" selection-start="1544" selection-end="1544" vertical-scroll-proportion="0.23042169" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusComments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="96" selection-start="521" selection-end="521" vertical-scroll-proportion="0.1827957" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="190" column="61" selection-start="7243" selection-end="7243" vertical-scroll-proportion="0.67895544" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/headers/header.php">
+    <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/headers/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loops/opus-primus-quote.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="-0.65384614">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/opus-primus.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="55" column="0" selection-start="2310" selection-end="2310" vertical-scroll-proportion="0.8995569">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1109" column="19" selection-start="23755" selection-end="23755" vertical-scroll-proportion="6.824638">
+        <state line="821" column="3" selection-start="15983" selection-end="15983" vertical-scroll-proportion="1.124812">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loops/opus-primus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusComments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="25" selection-start="529" selection-end="529" vertical-scroll-proportion="-1.4546851">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="4" selection-start="1088" selection-end="1088" vertical-scroll-proportion="-0.6451613">
           <folding />
         </state>
       </provider>

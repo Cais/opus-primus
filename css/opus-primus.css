@@ -799,11 +799,27 @@ p.comment-form-comment textarea#comment {
     width: 96%;
 }
 
+/** Move the `form-allowed-tags` code box to beneath the notification text */
+code.form-allowed-tags-code-box {
+    float: left;
+    width: 96%;
+}
+
+/** Place the "Post Comment" button on the right side of the content */
+form#commentform p.form-submit input#submit {
+    float: right;
+}
+/** Align the "post Comment" button with the comment textarea */
+p.form-allowed-tags + p.form-submit {
+    margin: 10px;
+    width: 96%;
+}
+
 .comment div.reply {
     text-align: right;
 }
 
-/* Hack to hide the reply button ... */
+/** Do not display the reply button on trackbacks and pingbacks */
 .pingback .reply,
 .trackback .reply {
     display: none;

@@ -6,7 +6,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012, Opus Primus
+ * @copyright   Copyright (c) 2012-2013, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -31,12 +31,15 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
  * @todo Review general commentary look and feel ... make more unique to OP
- */ ?>
+ */
+
+/** Call the global variables needed */
+global $wp_query, $opus_navigation; ?>
 
 <!-- Show the comments -->
 <!-- Inspired by http://digwp.com/2010/02/separate-comments-pingbacks-trackbacks/ -->
 <div class="comments-wrapper">
-    <?php if ( have_comments() ) : global $wp_query, $opus_navigation; ?>
+    <?php if ( have_comments() ) : ?>
 
     <h2 id="all-comments"><?php comments_number( __( 'No Responses', 'opusprimus' ), __( 'One Response', 'opusprimus' ), __( '% Responses', 'opusprimus' ) ); ?></h2>
 

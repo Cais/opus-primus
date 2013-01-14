@@ -52,4 +52,7 @@ jQuery( document ).ready( function( $ ) {
 
     /** Wrap post-format:audio anchors with audio-symbol class */
     $( 'div.post.format-audio .post-content a').wrapInner( '<span class="audio-symbol" />' );
+
+    /** Add a class to the form-allowed-tags code box */
+    $( 'p.form-allowed-tags code' ).addClass( "form-allowed-tags-code-box" );
 } );

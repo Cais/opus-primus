@@ -35,12 +35,16 @@
 class OpusPrimusComments {
     /** Constructor */
     function __construct(){
-        /** Apply filters and actions */
+        /** Add comment actions */
         add_action( 'comment_form_before', array( $this, 'enqueue_comment_reply' ) );
-        add_filter( 'comment_class', array( $this, 'comment_author_class' ) );
         add_action( 'comment_form_before', array( $this, 'before_comment_form' ) );
         add_action( 'comment_form_comments_closed', array( $this ,'comments_form_closed' ) );
+
+        /** Add comment filters */
+        add_filter( 'comment_class', array( $this, 'comment_author_class' ) );
     }
+
+    /** ---- Action and Filter Methods ---- */
 
     /**
      * Enqueue Comment Reply
@@ -60,45 +64,6 @@ class OpusPrimusComments {
         if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
             wp_enqueue_script( 'comment-reply' );
         }
-    }
-
-    /**
-     * Comment Author Class
-     * Add classes to the comments based on the author
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @uses    $comment (global)
-     *
-     * @param   array $classes
-     * @return  array $classes - original array plus additional role and user-id
-     */
-    function comment_author_class( $classes ) {
-        global $comment;
-        /** Add classes based on user role */
-        if ( user_can( $comment->user_id, 'administrator' ) ) {
-            $classes[] = 'administrator';
-        } elseif ( user_can( $comment->user_id, 'editor' ) ) {
-            $classes[] = 'editor';
-        } elseif ( user_can( $comment->user_id, 'contributor' ) ) {
-            $classes[] = 'contributor';
-        } elseif ( user_can( $comment->user_id, 'subscriber' ) ) {
-            $classes[] = 'subscriber';
-        } else {
-            $classes[] = 'guest';
-        }
-        /** Add user ID based classes */
-        if ( $comment->user_id == 1 ) {
-            /** Administrator 'Prime' => first registered user ID */
-            $userid = "administrator-prime user-id-1";
-        } else {
-            /** All other users - NB: user-id-0 -> non-registered user */
-            $userid = "user-id-" . ( $comment->user_id );
-        }
-        $classes[] = $userid;
-
-        return $classes;
     }
 
     /**
@@ -156,6 +121,49 @@ class OpusPrimusComments {
     }
 
     /**
+     * Comment Author Class
+     * Add additional classes to the comment based on the author
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    $comment (global)
+     * @uses    user_can
+     *
+     * @param   array $classes
+     *
+     * @return  array $classes - original array plus additional role and user-id
+     */
+    function comment_author_class( $classes ) {
+        global $comment;
+        /** Add classes based on user role */
+        if ( user_can( $comment->user_id, 'administrator' ) ) {
+            $classes[] = 'administrator';
+        } elseif ( user_can( $comment->user_id, 'editor' ) ) {
+            $classes[] = 'editor';
+        } elseif ( user_can( $comment->user_id, 'contributor' ) ) {
+            $classes[] = 'contributor';
+        } elseif ( user_can( $comment->user_id, 'subscriber' ) ) {
+            $classes[] = 'subscriber';
+        } else {
+            $classes[] = 'guest';
+        }
+        /** Add user ID based classes */
+        if ( $comment->user_id == 1 ) {
+            /** Administrator 'Prime' => first registered user ID */
+            $userid = "administrator-prime user-id-1";
+        } else {
+            /** All other users - NB: user-id-0 -> non-registered user */
+            $userid = "user-id-" . ( $comment->user_id );
+        }
+        $classes[] = $userid;
+
+        return $classes;
+    }
+
+    /** ---- Additional Methods ---- */
+
+    /**
      * Comments Link
      * Displays amount of approved comments the post or page has
      *
@@ -173,7 +181,7 @@ class OpusPrimusComments {
         if ( ! post_password_required() && comments_open() ) {
             if ( is_page() ) {
                 comments_popup_link(
-                    __( 'There are no comments.', 'opusprimus' ),
+                    __( 'There are no comments for this page.', 'opusprimus' ),
                     __( 'There is 1 comment.', 'opusprimus' ),
                     __( 'There are % comments.', 'opusprimus' ),
                     'comments-link',
@@ -181,7 +189,7 @@ class OpusPrimusComments {
                 );
             } else {
                 comments_popup_link(
-                    __( 'There are no comments.', 'opusprimus' ),
+                    __( 'There are no comments for this post.', 'opusprimus' ),
                     __( 'There is 1 comment.', 'opusprimus' ),
                     __( 'There are % comments.', 'opusprimus' ),
                     'comments-link',
