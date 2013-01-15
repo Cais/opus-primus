@@ -36,7 +36,55 @@ class OpusPrimusGallery {
 
     /** Construct */
     function __construct() {
+        /** Testing ... */
+        add_action( 'opus_after_post_byline', array( $this, 'get_gallery_attr_ids' ));
+    }
 
+    /**
+     * Get Gallery Shortcode Attribute ids
+     * Using the shortcode regex find the attributes for the gallery shortcode
+     * and identify the values used in the ids parameter. If the ids parameter
+     * is used then store the values in an array ... and carry on ...
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    get_shortcode_regex
+     * @uses    get_the_content
+     * @uses    shortcode_parse_atts
+     */
+    function get_gallery_attr_ids() {
+
+        /** @var $pattern - holds the regex patterns used to check shortcodes */
+        $pattern = get_shortcode_regex();
+
+        /** Find shortcodes being used in post */
+        preg_match( "/$pattern/s", get_the_content(), $match );
+        /** Find the gallery shortcode usages */
+        if ( 'gallery' == $match[2] ) {
+
+            /** @var $attrs - holds the gallery shortcode parameters used */
+            $attrs = shortcode_parse_atts( $match[3] );
+
+            /** @var $images - array of image ids used */
+            $images = isset( $attrs['ids'] ) ? explode( ',', $attrs['ids'] ) : false;
+
+            /** If there is no images carry on ... otherwise do something  */
+            if ( $images ) {
+                foreach( $images as $image ) {
+                    /** Testing ... */
+                    // echo 'There are images: ' . $image . '<br />';
+                }
+                $total_ids = count( $images );
+                /** Testing ... */
+                // echo 'There are ' . $total_ids . ' images.';
+
+
+
+            }
+
+
+        }
     }
 
     /**
