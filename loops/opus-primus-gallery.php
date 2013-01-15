@@ -35,10 +35,6 @@
 /** Call the class variables */
 global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_gallery, $opus_authors;
 
-if ( ! is_single() ) {
-    add_filter('post_gallery', 'opus_primus_return_blank' );
-}
-
 /** Display the post */ ?>
 <div <?php post_class(); ?>>
 

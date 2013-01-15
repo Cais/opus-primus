@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="* Refactor to test conditional `is_single` within the `secondary_images` method">
+    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loops/opus-primus-gallery.php" afterPath="$PROJECT_DIR$/loops/opus-primus-gallery.php" />
@@ -30,10 +30,8 @@
       <file leaf-file-name="opus-primus-gallery.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loops/opus-primus-gallery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="1184" selection-end="1184" vertical-scroll-proportion="-22.884615">
-              <folding>
-                <element signature="e#6#1150#0" expanded="true" />
-              </folding>
+            <state line="37" column="0" selection-start="1285" selection-end="1285" vertical-scroll-proportion="-3.9230769">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -41,7 +39,7 @@
       <file leaf-file-name="class.OpusPrimusGallery.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusGallery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="173" column="27" selection-start="6544" selection-end="6544" vertical-scroll-proportion="0.48918268">
+            <state line="156" column="56" selection-start="5821" selection-end="5821" vertical-scroll-proportion="0.36778846">
               <folding>
                 <element signature="e#6#1135#0" expanded="true" />
               </folding>
@@ -1213,7 +1211,11 @@
       <created>1358185104423</created>
       <updated>1358185104423</updated>
     </task>
-    <option name="localTasksCounter" value="217" />
+    <task id="LOCAL-00217" summary="* Refactor to test conditional `is_single` within the `secondary_images` method; documentation updates">
+      <created>1358266710332</created>
+      <updated>1358266710332</updated>
+    </task>
+    <option name="localTasksCounter" value="218" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1310,7 +1312,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Update theme tags" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Refactor to test conditional `is_single` within the `secondary_images` method; documentation updates" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1323,7 +1325,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Modified author coda, again ..." />
     <MESSAGE value="Modified author coda, again ... and again" />
     <MESSAGE value="Code comments and additional code formatting" />
     <MESSAGE value="Added Search CSS styles" />
@@ -1348,6 +1349,7 @@
     <MESSAGE value="* Added Underwood Champion font for use with the Post-Format: Chat&#10;* Re-organized the fonts folder&#10;* Added CSS for Post-Format: Chat&#10;* Updated 'readme' with Underwood Champion attribution / license" />
     <MESSAGE value="* Use JavaScript to add a class to the code box used with `form-allowed-tags` class&#10;* Add CSS to use new JavaScript added class&#10;* Code formatting and organization of Comments class to separate the actions and filters from the other methods" />
     <MESSAGE value="* Update theme tags" />
+    <MESSAGE value="* Refactor to test conditional `is_single` within the `secondary_images` method; documentation updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1435,16 +1437,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/loops/opus-primus-gallery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1184" selection-end="1184" vertical-scroll-proportion="-22.884615">
-          <folding>
-            <element signature="e#6#1150#0" expanded="true" />
-          </folding>
+        <state line="37" column="0" selection-start="1285" selection-end="1285" vertical-scroll-proportion="-3.9230769">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusGallery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="173" column="27" selection-start="6544" selection-end="6544" vertical-scroll-proportion="0.48918268">
+        <state line="156" column="56" selection-start="5821" selection-end="5821" vertical-scroll-proportion="0.36778846">
           <folding>
             <element signature="e#6#1135#0" expanded="true" />
           </folding>

@@ -153,6 +153,14 @@ class OpusPrimusGallery {
         ) );
 
         /**
+         * Do not display default category if not in single view and when there
+         * are secondary images found (from attachments)
+         */
+        if ( ! is_single() && ( $images->found_posts > 0 ) ) {
+            add_filter('post_gallery', 'opus_primus_return_blank' );
+        }
+
+        /**
          * @var $size - standard WordPress image size; thumbnail in this case
          * as the intent is to use these images as additional from gallery
          */
