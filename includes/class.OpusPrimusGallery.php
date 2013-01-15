@@ -7,7 +7,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012, Opus Primus
+ * @copyright   Copyright (c) 2012-2013, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -158,27 +158,34 @@ class OpusPrimusGallery {
          */
         $size = 'thumbnail';
 
-        foreach ( $images->posts as $image ) {
-            echo '<a href="' . get_permalink( $image->ID ) . '">' . wp_get_attachment_image( $image->ID, $size ) . '</a>';
-        }
+        /** Only display when not in single view */
+        if ( ! is_single() ) {
+            /**
+             * Cycle through images and display them linked to their permalink
+             */
+            foreach ( $images->posts as $image ) {
+                echo '<a href="' . get_permalink( $image->ID ) . '">' . wp_get_attachment_image( $image->ID, $size ) . '</a>';
+            }
 
-        /**
-         * Display a message indicating if more images are in the gallery than
-         * what are displayed in the post stream. If more images are in the
-         * gallery the text showing how many more will link to the single post.
-         */
-        if ( ( $images->found_posts + 1 ) > ( $secondary_images_args['images'] + 1 ) ) {
-            printf( '<p class="more-images">%1$s</p>',
-                apply_filters( 'opus_more_images_text',
-                    sprintf( _n(
-                        __( 'There is %2$sone more image%3$s in addition to these in the gallery.', 'opusprimus' ),
-                        __( 'There are %2$s%1$s more images%3$s in addition to these in the gallery.', 'opusprimus' ),
-                        ( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 ) ),
-                    ( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 ),
-                    '<a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">',
-                    '</a>' )
-                )
-            );
+            /**
+             * Display a message indicating if more images are in the gallery
+             * than what are displayed in the post stream. If more images are
+             * in the gallery the text showing how many more will link to the
+             * single post.
+             */
+            if ( ( $images->found_posts + 1 ) > ( $secondary_images_args['images'] + 1 ) ) {
+                printf( '<p class="more-images">%1$s</p>',
+                    apply_filters( 'opus_more_images_text',
+                        sprintf( _n(
+                            __( 'There is %2$sone more image%3$s in addition to these in the gallery.', 'opusprimus' ),
+                            __( 'There are %2$s%1$s more images%3$s in addition to these in the gallery.', 'opusprimus' ),
+                            ( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 ) ),
+                        ( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 ),
+                        '<a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">',
+                        '</a>' )
+                    )
+                );
+            }
         }
 
         /** Add empty hook after secondary images */

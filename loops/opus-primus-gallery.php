@@ -59,14 +59,11 @@ if ( ! is_single() ) {
         <?php $opus_gallery->featured_image(); ?>
     </div>
 
-    <?php if ( ! is_single() ) : ?>
     <div class="gallery-secondary-images">
         <?php $opus_gallery->secondary_images(); ?>
     </div>
 
     <?php
-    endif;
-
     $opus_posts->post_content();
     $opus_navigation->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
     $opus_posts->meta_tags( $anchor );
