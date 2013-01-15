@@ -153,7 +153,7 @@ class OpusPrimusGallery {
         ) );
 
         /**
-         * Do not display default category if not in single view and when there
+         * Do not display default gallery if not in single view and when there
          * are secondary images found (from attachments)
          */
         if ( ! is_single() && ( $images->found_posts > 0 ) ) {
