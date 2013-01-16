@@ -38,7 +38,7 @@ class OpusPrimusGallery {
     function __construct() {}
 
     /**
-     * Get Gallery Shortcode Attribute ids
+     * Get Gallery Shortcode Attribute Featured ids
      * Using the shortcode regex find the attributes for the gallery shortcode
      * and identify the values used in the ids parameter. If the ids parameter
      * is used then store the values in an array ... and carry on ...
@@ -79,12 +79,25 @@ class OpusPrimusGallery {
 
         }
 
-        /**
-         * Not likely to ever see this line but lets make the return Gods happy.
-         */
+        /** Keeping the return Gods happy - won't likely ever get here. */
         return null;
     }
 
+    /**
+     * Get Gallery Shortcode Attribute Secondary ids
+     * Using the shortcode regex find the attributes for the gallery shortcode
+     * and identify the values used in the ids parameter. If the ids parameter
+     * is used then store the values in an array ... and carry on ...
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    get_shortcode_regex
+     * @uses    get_the_content
+     * @uses    shortcode_parse_atts
+     *
+     * @return  null|int - array index value
+     */
     function get_gallery_attr_secondary_ids() {
 
         /** @var $pattern - holds the regex pattern used to check shortcode */
@@ -115,19 +128,20 @@ class OpusPrimusGallery {
                         $string .= intval($image) . ',';
                     }
                 }
-                $string = substr( $string, 0, strlen( $string ) - 1 );
-                $cleaned = explode( ',', $string );
-                return $cleaned;
+                /**
+                 * @var $string - cleaned version of string to be returned
+                 * @internal Used as 'post__in' parameter value when no images
+                 * are attached to the post
+                 */
+                $string = explode( ',', substr( $string, 0, strlen( $string ) - 1 ) );
+                return $string;
             }
 
         }
 
-        /**
-         * Not likely to ever see this line but lets make the return Gods happy.
-         */
+        /** Keeping the return Gods happy - won't likely ever get here. */
         return null;
     }
-
 
     /**
      * Opus Primus Featured Image
@@ -249,6 +263,7 @@ class OpusPrimusGallery {
         /** Add empty hook before secondary images */
         do_action( 'opus_before_secondary_images' );
 
+        /** @var $images - object to hold images attached to post */
         $images = new WP_Query( array(
             'post_parent'               => get_the_ID(),
             'post_status'               => 'inherit',
@@ -261,7 +276,7 @@ class OpusPrimusGallery {
             'update_post_term_cache'    => false,
         ) );
 
-        /** No images attached to post, rerun query using actual "ids" values */
+        /** No images attached to post? Rerun query using actual "ids" values */
         if ( 0 == $images->found_posts ) {
             $images = new WP_Query( array(
                 'post__in'                  => $this->get_gallery_attr_secondary_ids(),
