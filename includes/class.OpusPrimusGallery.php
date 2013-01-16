@@ -30,17 +30,12 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
- *
- * @todo Fix output position ... return vs. echo issue?
  */
 
 class OpusPrimusGallery {
 
     /** Construct */
-    function __construct() {
-        /** Testing ... */
-        // add_action( 'opus_after_post_byline', array( $this, 'get_gallery_sec_attr_ids' ));
-    }
+    function __construct() {}
 
     /**
      * Get Gallery Shortcode Attribute ids
@@ -57,7 +52,7 @@ class OpusPrimusGallery {
      *
      * @return  null|int - array index value
      */
-    function get_gallery_attr_ids() {
+    function get_gallery_attr_featured_ids() {
 
         /** @var $pattern - holds the regex pattern used to check shortcode */
         $pattern = get_shortcode_regex();
@@ -74,9 +69,9 @@ class OpusPrimusGallery {
             $images = isset( $attrs['ids'] ) ? explode( ',', $attrs['ids'] ) : false;
 
             /**
-             * If there are no images carry on; otherwise, if this is for the
-             * Featured Image return the first image index [0] as this is what
-             * the end-user would have chosen first as well.
+             * If there are no images carry on; otherwise, return the first
+             * image index [0] as this is what the end-user would have chosen
+             * first as well.
              */
             if ( $images ) {
                 return $images[0];
@@ -90,7 +85,7 @@ class OpusPrimusGallery {
         return null;
     }
 
-    function get_gallery_sec_attr_ids() {
+    function get_gallery_attr_secondary_ids() {
 
         /** @var $pattern - holds the regex pattern used to check shortcode */
         $pattern = get_shortcode_regex();
@@ -106,14 +101,21 @@ class OpusPrimusGallery {
             /** @var $images - array of image ids used */
             $images = isset( $attrs['ids'] ) ? explode( ',', $attrs['ids'] ) : false;
 
+            /**
+             * If there are no images carry on; otherwise, return the "ids"
+             * parameter values (less the featured image "ids" value) in a
+             * string to be used as the array elements for the query when no
+             * images are attached to the post.
+             */
             if ( $images ) {
-                // var_dump($images);
                 $string = '';
                 foreach ($images as $image) {
-                    $string .= intval($image) . ',';
+                    /** If image has the featured image "ids" do not include */
+                    if ( intval( $image ) <> intval( $this->get_gallery_attr_featured_ids() ) ) {
+                        $string .= intval($image) . ',';
+                    }
                 }
                 $string = substr( $string, 0, strlen( $string ) - 1 );
-                // echo 'The string is: ' . $string;
                 $cleaned = explode( ',', $string );
                 return $cleaned;
             }
@@ -153,61 +155,65 @@ class OpusPrimusGallery {
     function featured_image( $size = 'large' ) {
         global $opus_thumb_id;
 
-        /** Add empty hook before featured image */
-        do_action( 'opus_before_featured_image' );
+        /** Show Featured Image when not in single view */
+        if ( ! is_single() ) {
 
-        /**
-         * @var $size - standard WordPress image size; large as the intent is
-         * to use as the featured image for gallery posts
-         */
-        if ( has_post_thumbnail() ) {
-            /** use the thumbnail ("featured image") */
-            /** @var $opus_thumb_id int|string */
-            $opus_thumb_id = get_post_thumbnail_id();
-            if ( ! is_single() ) {
-                echo '<p class="featured-image"><a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">';
-                the_post_thumbnail( $size );
-                echo '</a></p>';
+            /** Add empty hook before featured image */
+            do_action( 'opus_before_featured_image' );
+
+            /**
+             * @var $size - standard WordPress image size; large as the intent is
+             * to use as the featured image for gallery posts
+             */
+            if ( has_post_thumbnail() ) {
+                /** use the thumbnail ("featured image") */
+                /** @var $opus_thumb_id int|string */
+                $opus_thumb_id = get_post_thumbnail_id();
+                if ( ! is_single() ) {
+                    echo '<p class="featured-image"><a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">';
+                    the_post_thumbnail( $size );
+                    echo '</a></p>';
+                } else {
+                    the_post_thumbnail( $size );
+                }
             } else {
-                the_post_thumbnail( $size );
-            }
-        } else {
-            $attachments = get_children( array(
-                    'post_parent'       => get_the_ID(),
-                    'post_status'       => 'inherit',
-                    'post_type'         => 'attachment',
-                    'post_mime_type'    => 'image',
-                    'order'             => 'ASC',
-                    'orderby'           => 'menu_order ID',
-                    'numberposts'       => 1
-                ) );
+                $attachments = get_children( array(
+                        'post_parent'       => get_the_ID(),
+                        'post_status'       => 'inherit',
+                        'post_type'         => 'attachment',
+                        'post_mime_type'    => 'image',
+                        'order'             => 'ASC',
+                        'orderby'           => 'menu_order ID',
+                        'numberposts'       => 1
+                    ) );
 
-            foreach ( $attachments as $opus_thumb_id => $attachment ) {
-                if ( ! is_single() ) {
-                    echo '<p class="featured-image"><a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">'
-                        . wp_get_attachment_image( $opus_thumb_id, $size )
-                        . '</a></p>';
-                } else {
-                    echo wp_get_attachment_image( $opus_thumb_id, $size );
+                foreach ( $attachments as $opus_thumb_id => $attachment ) {
+                    if ( ! is_single() ) {
+                        echo '<p class="featured-image"><a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">'
+                            . wp_get_attachment_image( $opus_thumb_id, $size )
+                            . '</a></p>';
+                    } else {
+                        echo wp_get_attachment_image( $opus_thumb_id, $size );
+                    }
                 }
-            }
 
-            /** If there are no attachments then use a random image from the gallery */
-            if ( empty( $attachments ) ) {
-                $opus_thumb_id = intval( $this->get_gallery_attr_ids() );
-                if ( ! is_single() ) {
-                    echo '<p class="featured-image"><a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">'
-                        . wp_get_attachment_image( $opus_thumb_id, $size )
-                        . '</a></p>';
-                } else {
-                    echo wp_get_attachment_image( $opus_thumb_id, $size );
+                /** If there are no attachments then use a random image from the gallery */
+                if ( empty( $attachments ) ) {
+                    $opus_thumb_id = intval( $this->get_gallery_attr_featured_ids() );
+                    if ( ! is_single() ) {
+                        echo '<p class="featured-image"><a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">'
+                            . wp_get_attachment_image( $opus_thumb_id, $size )
+                            . '</a></p>';
+                    } else {
+                        echo wp_get_attachment_image( $opus_thumb_id, $size );
+                    }
                 }
+
             }
 
+            /** Add empty hook after featured image */
+            do_action( 'opus_after_featured_image' );
         }
-
-        /** Add empty hook after featured image */
-        do_action( 'opus_after_featured_image' );
 
     }
 
@@ -255,11 +261,10 @@ class OpusPrimusGallery {
             'update_post_term_cache'    => false,
         ) );
 
+        /** No images attached to post, rerun query using actual "ids" values */
         if ( 0 == $images->found_posts ) {
             $images = new WP_Query( array(
-                // 'post__in'                  => array( 946, 880, 619, 611, 544, 543 ), // ECE
-                // 'post__in'                  => array( 911, 896, 867, 534, 866, 543 ), // mCais
-                'post__in'                  => $this->get_gallery_sec_attr_ids(),
+                'post__in'                  => $this->get_gallery_attr_secondary_ids(),
                 'post_status'               => 'inherit',
                 'post_type'                 => 'attachment',
                 'post_mime_type'            => 'image',
@@ -269,18 +274,10 @@ class OpusPrimusGallery {
                 'post__not_in'              => array( $opus_thumb_id ),
                 'update_post_term_cache'    => false,
             ) );
-
-            /** Testing */
-            // var_dump( $this->get_gallery_sec_attr_ids() );
-            // var_dump($images);
-
         }
 
-        /**
-         * Do not display default gallery if not in single view and when there
-         * are secondary images found (from attachments)
-         */
-        if ( ! is_single() && ( $images->found_posts > 0 ) ) {
+        /** Do not display default gallery if not in single view */
+        if ( ! is_single() ) {
             add_filter('post_gallery', 'opus_primus_return_blank' );
         }
 
