@@ -39,52 +39,56 @@ global $wp_query, $opus_navigation; ?>
 <!-- Show the comments -->
 <!-- Inspired by http://digwp.com/2010/02/separate-comments-pingbacks-trackbacks/ -->
 <div class="comments-wrapper">
-    <?php if ( have_comments() ) : ?>
+    <?php if ( have_comments() ) { ?>
 
-    <h2 id="all-comments"><?php comments_number( __( 'No Responses', 'opusprimus' ), __( 'One Response', 'opusprimus' ), __( '% Responses', 'opusprimus' ) ); ?></h2>
+        <h2 id="all-comments">
+            <?php comments_number( __( 'No Responses', 'opusprimus' ), __( 'One Response', 'opusprimus' ), __( '% Responses', 'opusprimus' ) ); ?>
+        </h2><!-- #all-comments -->
 
-    <?php if ( ! empty( $comments_by_type['comment'] ) ) { ?>
-        <h3 id="comments">
-            <?php printf( __( '%1$s Comments', 'opusprimus' ), count( $wp_query->comments_by_type['comment'] ) ); ?>
-        </h3>
-        <ul class="comments-list">
-            <?php wp_list_comments( 'type=comment' ); ?>
-        </ul>
-        <?php $opus_navigation->comments_navigation();
-    }
+        <?php if ( ! empty( $comments_by_type['comment'] ) ) { ?>
+            <h3 id="comments">
+                <?php printf( __( '%1$s Comments', 'opusprimus' ), count( $wp_query->comments_by_type['comment'] ) ); ?>
+            </h3><!-- #comments -->
+            <ul class="comments-list">
+                <?php wp_list_comments( 'type=comment' ); ?>
+            </ul><!-- comments-list -->
+            <?php $opus_navigation->comments_navigation();
+        } /** End if - comments by type - comment */
 
-    if ( ! empty( $comments_by_type['pingback'] ) ) { ?>
-        <h3 id="pingbacks">
-            <?php printf(
-            _n(
-                __( '%1$s Pingback', 'opusprimus' ),
-                __( '%1$s Pingbacks', 'opusprimus' ),
-                count( $wp_query->comments_by_type['pingback'] ) ),
-            count( $wp_query->comments_by_type['pingback'] )
-        ); ?>
-        </h3>
-        <ul class="pingbacks-list">
-            <?php wp_list_comments( 'type=pingback' ); ?>
-        </ul>
-        <?php $opus_navigation->comments_navigation();
-    }
+        if ( ! empty( $comments_by_type['pingback'] ) ) { ?>
+            <h3 id="pingbacks">
+                <?php printf(
+                _n(
+                    __( '%1$s Pingback', 'opusprimus' ),
+                    __( '%1$s Pingbacks', 'opusprimus' ),
+                    count( $wp_query->comments_by_type['pingback'] ) ),
+                count( $wp_query->comments_by_type['pingback'] )
+                ); ?>
+            </h3><!-- #pingbacks -->
+            <ul class="pingbacks-list">
+                <?php wp_list_comments( 'type=pingback' ); ?>
+            </ul><!-- pingbacks-list -->
+            <?php $opus_navigation->comments_navigation();
+        } /** End if - comments by type - pingback */
 
-    if ( ! empty( $comments_by_type['trackback'] ) ) { ?>
-        <h3 id="trackbacks">
-            <?php printf(
-            _n(
-                __( '%1$s Trackback', 'opusprimus' ),
-                __( '%1$s Trackbacks', 'opusprimus' ),
-                count( $wp_query->comments_by_type['trackback'] ) ),
-            count( $wp_query->comments_by_type['trackback'] )
-        ); ?>
-        </h3>
-        <ul class="trackbacks-list">
-            <?php wp_list_comments( 'type=trackback' ); ?>
-        </ul>
-        <?php $opus_navigation->comments_navigation();
-    }
+        if ( ! empty( $comments_by_type['trackback'] ) ) { ?>
+            <h3 id="trackbacks">
+                <?php printf(
+                _n(
+                    __( '%1$s Trackback', 'opusprimus' ),
+                    __( '%1$s Trackbacks', 'opusprimus' ),
+                    count( $wp_query->comments_by_type['trackback'] ) ),
+                count( $wp_query->comments_by_type['trackback'] )
+                ); ?>
+            </h3><!-- #trackbacks -->
+            <ul class="trackbacks-list">
+                <?php wp_list_comments( 'type=trackback' ); ?>
+            </ul><!-- trackbacks-list -->
+            <?php $opus_navigation->comments_navigation();
+        } /** End if - comments by type - trackback */
 
-endif;
+    } /** End if - have comments */
+
     comment_form(); ?>
+
 </div><!-- .comments-wrapper -->

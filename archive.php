@@ -41,7 +41,7 @@ if ( have_posts() ) {
     get_header( get_post_format() );
 } else {
     get_header();
-} ?>
+} /** End if - have posts */ ?>
 
 <div class="content-wrapper cf">
 
@@ -66,7 +66,7 @@ if ( have_posts() ) {
         get_sidebar( get_post_format() );
     } else {
         get_sidebar();
-    }
+    } /** End if - have posts */
 
     echo $opus_structures->layout_close(); ?>
 
@@ -77,4 +77,4 @@ if ( have_posts() ) {
     get_footer( get_post_format() );
 } else {
     get_footer();
-}
+} /** End if - have posts */

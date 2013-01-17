@@ -7,7 +7,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012, Opus Primus
+ * @copyright   Copyright (c) 2012-2013, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -38,22 +38,25 @@ get_header( 'search' ); ?>
 <div class="content-wrapper cf">
 
     <?php echo $opus_structures->layout_open(); ?>
+
     <div class="the-loop">
 
         <?php
         /** Add before loop sidebar */
         if ( is_active_sidebar( 'before-loop' ) ) { dynamic_sidebar( 'before-loop' ); }
-        /** the_Loop begins */
-        if ( have_posts() ):
-            while ( have_posts() ):
+
+        /** the_Loop - Starts */
+        if ( have_posts() ) {
+            while ( have_posts() ) {
                 the_post();
                 get_template_part( 'loops/opus-primus', get_post_format() );
-            endwhile;
-        else:
+            } /** End while - have posts */
+        } else {
             $opus_structures->no_search_results();
-        endif;
+        } /** End if - have posts */
         $opus_navigation->posts_link();
-        /** the_Loop ends */
+        /** the_Loop - Ends */
+
         /** Add after loop sidebar */
         if ( is_active_sidebar( 'after-loop' ) ) { dynamic_sidebar( 'after-loop' ); } ?>
 
@@ -61,6 +64,7 @@ get_header( 'search' ); ?>
 
     <?php
     get_sidebar( 'search' );
+
     echo $opus_structures->layout_close(); ?>
 
 </div><!-- #content-wrapper -->

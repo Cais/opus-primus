@@ -45,9 +45,9 @@ get_header( 'page' ); ?>
         /** Add before loop sidebar */
         if ( is_active_sidebar( 'before-loop' ) ) { dynamic_sidebar( 'before-loop' ); }
 
-        /** the_Loop begins */
-        if ( have_posts() ):
-            while ( have_posts() ):
+        /** the_Loop - Starts */
+        if ( have_posts() ) {
+            while ( have_posts() ) {
                 the_post(); ?>
                 <div <?php post_class(); ?>>
                     <?php
@@ -60,17 +60,18 @@ get_header( 'page' ); ?>
                         'show_author_email' => true,
                         'show_author_desc'  => true,
                     ) ); ?>
-                </div><!-- .post -->
+                </div><!-- post classes -->
             <?php
-            endwhile;
-        else:
+            } /** End while - have posts */
+        } else {
             $opus_structures->no_search_results();
-        endif;
-        /** the_Loop ends */
+        } /** End if - have posts */
+        /** the_Loop - Ends */
 
         /** Add after loop sidebar */
         if ( is_active_sidebar( 'after-loop' ) ) { dynamic_sidebar( 'after-loop' ); }
 
+        /** Start comments section */
         comments_template(); ?>
 
     </div><!-- #the-loop -->

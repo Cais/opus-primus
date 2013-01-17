@@ -35,7 +35,7 @@
 do_action( 'opus_primus_before_sidebar_footer' );
 
 /** Only resolve public facing space if there is an active footer widget area. */
-if ( is_active_sidebar( 'footer-middle' ) || is_active_sidebar( 'footer-left' ) || is_active_sidebar( 'footer-right' ) ) : ?>
+if ( is_active_sidebar( 'footer-middle' ) || is_active_sidebar( 'footer-left' ) || is_active_sidebar( 'footer-right' ) ) { ?>
 
     <div id="footer-sidebar">
         <div class="footer-widget-area three-columns-footer">
@@ -43,24 +43,15 @@ if ( is_active_sidebar( 'footer-middle' ) || is_active_sidebar( 'footer-left' ) 
                 <div class="column-left">
 
                     <ul id="footer-sidebar-two">
-                        <?php
-                        if ( is_active_sidebar( 'footer-middle' ) ) {
-                            dynamic_sidebar( 'footer-middle' );
-                        } ?>
+                        <?php if ( is_active_sidebar( 'footer-middle' ) ) { dynamic_sidebar( 'footer-middle' ); } ?>
                     </ul><!-- #footer-sidebar-two -->
 
                     <ul id="footer-sidebar-one">
-                        <?php
-                        if ( is_active_sidebar( 'footer-left' ) ) {
-                            dynamic_sidebar( 'footer-left' );
-                        } ?>
+                        <?php if ( is_active_sidebar( 'footer-left' ) ) { dynamic_sidebar( 'footer-left' ); } ?>
                     </ul><!-- #footer-sidebar-one -->
 
                     <ul id="footer-sidebar-three">
-                        <?php
-                        if ( is_active_sidebar( 'footer-right' ) ) {
-                            dynamic_sidebar( 'footer-right' );
-                        } ?>
+                        <?php if ( is_active_sidebar( 'footer-right' ) ) { dynamic_sidebar( 'footer-right' ); } ?>
                     </ul><!-- #footer-sidebar-three -->
 
                 </div><!-- .column-left -->
@@ -69,7 +60,7 @@ if ( is_active_sidebar( 'footer-middle' ) || is_active_sidebar( 'footer-left' ) 
     </div><!-- #footer-sidebar -->
 
 <?php
-endif;
+} /** End if - is active sidebar */
 
 /** Add empty hook after Sidebar-Footer */
 do_action( 'opus_primus_after_sidebar_footer' );

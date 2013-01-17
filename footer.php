@@ -7,7 +7,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012, Opus Primus
+ * @copyright   Copyright (c) 2012-2013, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -40,7 +40,7 @@ if ( have_posts() ) {
     get_template_part( 'footers/footer', get_post_format() );
 } else {
     get_template_part( 'footers/footer' );
-}
+} /** End if - have posts */
 
 /** Add empty hook at end of footer */
 do_action( 'opus_primus_before_wp_footer' );

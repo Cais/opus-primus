@@ -36,7 +36,7 @@
 do_action( 'opus_primus_before_sidebar_header' );
 
 /** Only resolve public facing space if there is an active header widget area. */
-if ( is_active_sidebar( 'header-middle' ) || is_active_sidebar( 'header-left' ) || is_active_sidebar( 'header-right' ) ) : ?>
+if ( is_active_sidebar( 'header-middle' ) || is_active_sidebar( 'header-left' ) || is_active_sidebar( 'header-right' ) ) { ?>
 
     <div id="header-sidebar">
         <div class="header-widget-area three-columns-header">
@@ -44,24 +44,15 @@ if ( is_active_sidebar( 'header-middle' ) || is_active_sidebar( 'header-left' ) 
                 <div class="column-left">
 
                     <ul id="header-sidebar-two">
-                        <?php
-                        if ( is_active_sidebar( 'header-middle' ) ) {
-                            dynamic_sidebar( 'header-middle' );
-                        } ?>
+                        <?php if ( is_active_sidebar( 'header-middle' ) ) { dynamic_sidebar( 'header-middle' ); } ?>
                     </ul><!-- #header-sidebar-two -->
 
                     <ul id="header-sidebar-one">
-                        <?php
-                        if ( is_active_sidebar( 'header-left' ) ) {
-                            dynamic_sidebar( 'header-left' );
-                        } ?>
+                        <?php if ( is_active_sidebar( 'header-left' ) ) { dynamic_sidebar( 'header-left' ); } ?>
                     </ul><!-- #header-sidebar-one -->
 
                     <ul id="header-sidebar-three">
-                        <?php
-                        if ( is_active_sidebar( 'header-right' ) ) {
-                            dynamic_sidebar( 'header-right' );
-                        } ?>
+                        <?php if ( is_active_sidebar( 'header-right' ) ) { dynamic_sidebar( 'header-right' ); } ?>
                     </ul><!-- #header-sidebar-three -->
 
                 </div><!-- .column-left -->
@@ -70,7 +61,7 @@ if ( is_active_sidebar( 'header-middle' ) || is_active_sidebar( 'header-left' ) 
     </div><!-- #header-sidebar -->
 
 <?php
-endif;
+} /** End if - is active sidebar */
 
 /** Add empty hook after Sidebar-Header */
 do_action( 'opus_primus_after_sidebar_header' );

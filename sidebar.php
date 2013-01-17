@@ -6,7 +6,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012, Opus Primus
+ * @copyright   Copyright (c) 2012-2013, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -29,50 +29,28 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
- *
- * @todo Remove test code
  */ ?>
 
 <div class="first-sidebar">
 
     <ul id="sidebar-one">
-        <?php
-        if ( is_active_sidebar( 'first-widget' ) ) :
-            dynamic_sidebar( 'first-widget' );
-        else :
-            // echo '<div class="test-text">' . 'Test: First Widget Area<br />' . '</div>';
-        endif; ?>
+        <?php if ( is_active_sidebar( 'first-widget' ) ) { dynamic_sidebar( 'first-widget' ); } ?>
     </ul><!-- #sidebar-one -->
 
     <ul id="sidebar-two">
-        <?php
-        if ( is_active_sidebar( 'second-widget' ) ) :
-            dynamic_sidebar( 'second-widget' );
-        else :
-            // echo '<div class="test-text">' . 'Test: Second Widget Area<br />' . '</div>';
-        endif; ?>
-    </ul><!-- .sidebar-two -->
+        <?php if ( is_active_sidebar( 'second-widget' ) ) { dynamic_sidebar( 'second-widget' ); } ?>
+    </ul><!-- #sidebar-two -->
 
 </div><!-- #first-sidebar -->
 
 <div class="second-sidebar">
 
     <ul id="sidebar-three">
-        <?php
-        if ( is_active_sidebar( 'third-widget' ) ) :
-            dynamic_sidebar( 'third-widget' );
-        else :
-            // echo '<div class="test-text">' . 'Test: Third Widget Area<br />' . '</div>';
-        endif; ?>
+        <?php if ( is_active_sidebar( 'third-widget' ) ) { dynamic_sidebar( 'third-widget' ); } ?>
     </ul><!-- #sidebar-three -->
 
     <ul id="sidebar-four">
-        <?php
-        if ( is_active_sidebar( 'fourth-widget' ) ) :
-            dynamic_sidebar( 'fourth-widget' );
-        else :
-            // echo '<div class="test-text">' . 'Test: Fourth Widget Area<br />' . '</div>';
-        endif; ?>
-    </ul><!-- .sidebar-four -->
+        <?php if ( is_active_sidebar( 'fourth-widget' ) ) { dynamic_sidebar( 'fourth-widget' ); } ?>
+    </ul><!-- #sidebar-four -->
 
 </div><!-- #second-sidebar -->

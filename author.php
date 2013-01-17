@@ -48,7 +48,7 @@ get_header( get_post_format() ); ?>
         <!-- The Author Details block - inserted above the content -->
         <div class="opus-author-header">
             <?php $opus_authors->author_details( $current_author_id, true, true, true ); ?>
-        </div>
+        </div><!-- opus-author-header -->
 
         <?php
         /** Add before loop sidebar */

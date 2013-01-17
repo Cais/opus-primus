@@ -76,9 +76,9 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
         /** Enqueue custom stylesheet after to maintain expected specificity */
         if ( is_readable( OPUS_CSS . 'opus-primus-custom-style.css' ) ) {
             wp_enqueue_style( 'Opus-Primus-Custom-Style', OPUS_CSS . 'opus-primus-custom-style.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
-        }
-    }
-}
+        } /** End if - is readable */
+    } /** End function - opus primus enqueue scripts */
+} /** End if - function exists - opus primus enqueue scripts */
 add_action( 'wp_enqueue_scripts', 'opus_primus_enqueue_scripts' );
 
 /**
@@ -91,6 +91,8 @@ add_action( 'wp_enqueue_scripts', 'opus_primus_enqueue_scripts' );
  * @uses    (constant) OPUS_CSS
  * @uses    (constant) OPUS_JS
  * @uses    wp_enqueue_script
+ *
+ * @todo Comment out LESS implementation?
  */
 function opus_primus_LESS() {
     /** Add LESS link - cannot enqueue due to "rel" requirement */
@@ -99,10 +101,7 @@ function opus_primus_LESS() {
     printf ( "\n" );
     /** Add JavaScript to compile LESS on the fly */
     wp_enqueue_script( 'less-1.3.3', OPUS_JS . 'less-1.3.3.min.js', '', '1.3.3' );
-}
-/**
- * @todo Comment out LESS implementation?
- */
+} /** End function - opus primus LESS */
 add_action( 'wp_enqueue_scripts', 'opus_primus_LESS' );
 
 if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
@@ -164,11 +163,12 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
         load_theme_textdomain( 'opusprimus', get_template_directory() . '/languages' );
         $locale = get_locale();
         $locale_file = get_template_directory_uri() . "/languages/$locale.php";
-        if ( is_readable( $locale_file ) )
+        if ( is_readable( $locale_file ) ) {
             /** @noinspection PhpIncludeInspection */
             require_once( $locale_file );
-    }
-}
+        } /** End if - is readable */
+    } /** End function - opus primus theme setup */
+} /** End if - function exists - opus primus theme setup */
 add_action( 'after_setup_theme', 'opus_primus_theme_setup' );
 
 /**

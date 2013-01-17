@@ -55,7 +55,7 @@
         get_template_part( 'headers/header', get_post_format() );
     } else {
         get_template_part( 'headers/header' );
-    }
+    } /** End if - have posts */
 
     /** Add empty hook after header */
     do_action( 'opus_primus_after_header' );

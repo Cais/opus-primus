@@ -8,7 +8,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012, Opus Primus
+ * @copyright   Copyright (c) 2012-2013, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -48,9 +48,9 @@ get_header( 'image' ); ?>
 
         $opus_navigation->post_link();
 
-        /** the_Loop begins */
-        if ( have_posts() ):
-            while ( have_posts() ):
+        /** the_Loop - Start */
+        if ( have_posts() ) {
+            while ( have_posts() ) {
                 the_post();
 
                 /** Display the post */ ?>
@@ -64,13 +64,12 @@ get_header( 'image' ); ?>
                         '<a href="' . get_permalink( $post->post_parent ) . '">' . get_the_title( $post->post_parent ) . '</a>'
                     );
 
-                    // var_dump( $post );
-
                     $opus_posts->post_byline( array( 'show_mod_author' => true, 'anchor' => __( 'Displayed', 'opusprimus' ) ) );
                     $opus_navigation->image_nav();
 
                     /** Image Title from media library */
                     $opus_images->image_title();
+
                     /** Image Caption from media library */
                     $opus_posts->post_excerpt();
 
@@ -84,18 +83,21 @@ get_header( 'image' ); ?>
                     /** Image meta data */
                     $opus_images->display_exif_table();
 
+                    /** End of Post */
                     $opus_posts->post_coda();
 
+                    /** Start comments section */
                     comments_template(); ?>
 
-                </div><!-- .post -->
+                </div><!-- post classes -->
 
             <?php
-            endwhile;
-        else:
+            } /** End while - have posts */
+        } else {
             $opus_structures->no_search_results();
-        endif;
-        /** the_Loop ends */
+        } /** End if - have posts */
+        /** the_Loop - End */
+
         /** Add after loop sidebar */
         if ( is_active_sidebar( 'after-loop' ) ) { dynamic_sidebar( 'after-loop' ); } ?>
 
