@@ -56,6 +56,9 @@ if ( ! class_exists( 'OpusPrimusDefaults' ) ) {
         function show_author_email() { return true; }
         function show_author_desc() { return true; }
 
-    }
+    } /** End Opus Primus Defaults class */
+
+    /** @var $opus_defaults - new instance of class */
     $opus_defaults = new OpusPrimusDefaults();
-}
+
+} /** End if - class exists */

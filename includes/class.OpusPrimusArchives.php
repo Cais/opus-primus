@@ -34,9 +34,7 @@
 
 class OpusPrimusArchives {
     /** Construct */
-    function __construct() {
-
-    }
+    function __construct() {}
 
     /**
      * Opus Primus Top 10 Categories Archive

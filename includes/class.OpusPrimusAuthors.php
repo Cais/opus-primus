@@ -34,9 +34,7 @@
 
 class OpusPrimusAuthors {
     /** Constructor */
-    function __construct() {
-
-    }
+    function __construct() {}
 
     /**
      * Post Author
