@@ -59,6 +59,7 @@ class OpusPrimusGallery {
 
         /** Find any shortcode being used in post */
         preg_match( "/$pattern/s", get_the_content(), $match );
+
         /** Find the gallery shortcode usages */
         if ( 'gallery' == $match[2] ) {
 
@@ -75,13 +76,14 @@ class OpusPrimusGallery {
              */
             if ( $images ) {
                 return $images[0];
-            }
+            } /** End if - images */
 
-        }
+        } /** End if - gallery match */
 
         /** Keeping the return Gods happy - won't likely ever get here. */
         return null;
-    }
+
+    } /** End function - get gallery attr featured ids */
 
     /**
      * Get Gallery Shortcode Attribute Secondary ids
@@ -105,6 +107,7 @@ class OpusPrimusGallery {
 
         /** Find any shortcode being used in post */
         preg_match( "/$pattern/s", get_the_content(), $match );
+
         /** Find the gallery shortcode usages */
         if ( 'gallery' == $match[2] ) {
 
@@ -121,27 +124,34 @@ class OpusPrimusGallery {
              * images are attached to the post.
              */
             if ( $images ) {
+                /** @var $string - initialize string to empty */
                 $string = '';
+
+                /** Loop through images getting their ids value */
                 foreach ($images as $image) {
                     /** If image has the featured image "ids" do not include */
                     if ( intval( $image ) <> intval( $this->get_gallery_attr_featured_ids() ) ) {
                         $string .= intval($image) . ',';
-                    }
-                }
+                    } /** End if - image vs featured */
+                } /** End foreach - images */
+
                 /**
                  * @var $string - cleaned version of string to be returned
                  * @internal Used as 'post__in' parameter value when no images
                  * are attached to the post
                  */
                 $string = explode( ',', substr( $string, 0, strlen( $string ) - 1 ) );
-                return $string;
-            }
 
-        }
+                return $string;
+
+            } /** End if - images */
+
+        } /** End if - gallery match */
 
         /** Keeping the return Gods happy - won't likely ever get here. */
         return null;
-    }
+
+    } /** End function - get gallery attr secondary ids */
 
     /**
      * Opus Primus Featured Image
@@ -189,7 +199,7 @@ class OpusPrimusGallery {
                     echo '</a></p>';
                 } else {
                     the_post_thumbnail( $size );
-                }
+                } /** End if - not is single */
             } else {
                 $attachments = get_children( array(
                         'post_parent'       => get_the_ID(),
@@ -208,8 +218,8 @@ class OpusPrimusGallery {
                             . '</a></p>';
                     } else {
                         echo wp_get_attachment_image( $opus_thumb_id, $size );
-                    }
-                }
+                    } /** End if - not is single */
+                } /** End foreach - attachments */
 
                 /** If there are no attachments then use a random image from the gallery */
                 if ( empty( $attachments ) ) {
@@ -220,16 +230,17 @@ class OpusPrimusGallery {
                             . '</a></p>';
                     } else {
                         echo wp_get_attachment_image( $opus_thumb_id, $size );
-                    }
-                }
+                    } /** End if - not is single */
+                } /** End if - empty */
 
-            }
+            } /** End if - has post thumbnail */
 
             /** Add empty hook after featured image */
             do_action( 'opus_after_featured_image' );
-        }
 
-    }
+        } /** End if - not is single */
+
+    } /** End function - featured image */
 
     /**
      * Opus Primus Secondary Images
@@ -289,12 +300,12 @@ class OpusPrimusGallery {
                 'post__not_in'              => array( $opus_thumb_id ),
                 'update_post_term_cache'    => false,
             ) );
-        }
+        } /** End if - no images */
 
         /** Do not display default gallery if not in single view */
         if ( ! is_single() ) {
             add_filter('post_gallery', 'opus_primus_return_blank' );
-        }
+        } /** End if - not is single */
 
         /**
          * @var $size - standard WordPress image size; thumbnail in this case
@@ -309,7 +320,7 @@ class OpusPrimusGallery {
              */
             foreach ( $images->posts as $image ) {
                 echo '<a href="' . get_permalink( $image->ID ) . '">' . wp_get_attachment_image( $image->ID, $size ) . '</a>';
-            }
+            } /** End foreach - images */
 
             /**
              * Display a message indicating if more images are in the gallery
@@ -329,13 +340,15 @@ class OpusPrimusGallery {
                         '</a>' )
                     )
                 );
-            }
-        }
+            } /** End if - images found */
+        } /** End if - not is single */
 
         /** Add empty hook after secondary images */
         do_action( 'opus_after_secondary_images' );
 
-    }
+    } /** End function - secondary images */
 
-}
+} /** End Opus Primus Gallery class */
+
+/** @var $opus_gallery - new instance of class */
 $opus_gallery = new OpusPrimusGallery();
