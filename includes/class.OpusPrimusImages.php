@@ -597,10 +597,12 @@ class OpusPrimusImages {
         do_action( 'opus_before_image_title' );
 
         /** Set `the_title` parameters */
-        if ( empty( $before ) )
+        if ( empty( $before ) ) {
             $before = '<h2 class="image-title">';
-        if ( empty( $after ) )
+        } /** End if - before */
+        if ( empty( $after ) ) {
             $after = '</h2>';
+        } /** End if - after */
 
         /** Wrap the title in an anchor tag and provide a nice tool tip */
         if ( ! is_attachment() ) { ?>
@@ -609,12 +611,12 @@ class OpusPrimusImages {
             </a>
         <?php } else {
             the_title( $before, $after, $echo );
-        }
+        } /** End if - not is attachment */
 
         /** Add empty hook after the image title */
         do_action( 'opus_after_image_title' );
 
-    }
+    } /** End function - image title */
 
 
     /**
@@ -635,6 +637,7 @@ class OpusPrimusImages {
      *
      * @todo Sort out a better output when the image is linked rather than attached
      * @todo Add filters to output messages
+     * @todo Review output when using image that is not attached to post (or linked)
      */
     function archive_image_details( $size = 'medium' ) {
         $attachments = get_children( array(
@@ -655,7 +658,7 @@ class OpusPrimusImages {
             $archive_image_title = $attachment->post_title;
             $archive_image_excerpt = $attachment->post_excerpt;
             $archive_image_content = $attachment->post_content;
-        } ?>
+        } /** End foreach - attachments */ ?>
 
         <table>
             <thead>
@@ -663,22 +666,26 @@ class OpusPrimusImages {
                     <?php
                     if ( ! empty( $archive_image_title ) ) {
                         printf( '<span class="archive-image-title">' . __( 'Image Title: %1$s', 'opusprimus' )  . '</span>', $archive_image_title );
-                    } /** End if */ ?>
+                    } /** End if - not empty title */ ?>
                 </th></tr>
             </thead><!-- End table header -->
-            <tr>
-                <td class="archive-image"><?php if ( ! is_single() ) echo $archive_image; ?></td>
-            </tr>
-            <tr>
-                <?php
-                if ( ! empty( $archive_image_excerpt ) )
-                    printf( '<td class="archive-image-excerpt">' . __( 'Image Caption: %1$s', 'opusprimus' )  . '</td>', $archive_image_excerpt ); ?>
-            </tr>
-            <tr>
-                <?php
-                if ( ! empty( $archive_image_content ) )
-                    printf( '<td class="archive-image-content">' . __( 'Image Description: %1$s', 'opusprimus' )  . '</td>', $archive_image_content ); ?>
-            </tr>
+            <tbody>
+                <tr>
+                    <td class="archive-image"><?php if ( ! is_single() ) echo $archive_image; ?></td>
+                </tr>
+                <tr>
+                    <?php
+                    if ( ! empty( $archive_image_excerpt ) ) {
+                        printf( '<td class="archive-image-excerpt">' . __( 'Image Caption: %1$s', 'opusprimus' )  . '</td>', $archive_image_excerpt );
+                    } /** End if - not empty excerpt */ ?>
+                </tr>
+                <tr>
+                    <?php
+                    if ( ! empty( $archive_image_content ) ) {
+                        printf( '<td class="archive-image-content">' . __( 'Image Description: %1$s', 'opusprimus' )  . '</td>', $archive_image_content );
+                    } /** End if - not empty content */ ?>
+                </tr>
+            </tbody><!-- End table body -->
         </table><!-- End table -->
 
     <?php
@@ -707,8 +714,8 @@ class OpusPrimusImages {
             echo '<a class="featured-thumbnail" href="' . $large_image_url[0] . '" title="' . the_title_attribute( 'echo=0' ) . '" >';
                 the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) );
             echo '</a>';
-        }
-    }
+        } /** End if - has post thumbnail and not is single */
+    } /** End function - featured thumbnail */
 
 } /** End of Opus Primus Images class */
 
