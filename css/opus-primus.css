@@ -843,6 +843,27 @@ div.second-sidebar ul li ul {
     list-style: disc inside none;
     margin: 0 0 0 25px;
 }
+
+/** Set all sidebar background colors to transparent */
+.three-columns,
+.three-columns .column-middle,
+.three-columns .column-left { background-color: transparent; }
+
+.blog-style,
+.blog-style .column-middle,
+.blog-style .column-left { background-color: transparent; }
+
+.left-menu,
+.left-menu .column-left { background-color: transparent; }
+
+.right-sidebar,
+.right-sidebar .column-left { background-color: transparent; }
+
+.doublepage,
+.doublepage .column-left { background-color: transparent; }
+
+.full-page { background-color: transparent; }
+
 /** End: Sidebars ----------------------------------------------------------- */
 
 /** === Default Widgets === ------------------------------------------------- */
