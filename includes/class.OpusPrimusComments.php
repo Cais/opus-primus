@@ -42,7 +42,7 @@ class OpusPrimusComments {
 
         /** Add comment filters */
         add_filter( 'comment_class', array( $this, 'comment_author_class' ) );
-    }
+    } /** End function - construct */
 
     /** ---- Action and Filter Methods ---- */
 
@@ -63,8 +63,8 @@ class OpusPrimusComments {
     function enqueue_comment_reply() {
         if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
             wp_enqueue_script( 'comment-reply' );
-        }
-    }
+        } /** End if - is singular */
+    } /** End function - enqueue comment reply */
 
     /**
      * Before Comment Form
@@ -74,6 +74,7 @@ class OpusPrimusComments {
      * @since   0.1
      *
      * @uses    _e
+     * @uses    apply_filters
      * @uses    have_comments
      * @uses    post_password_required
      *
@@ -88,15 +89,16 @@ class OpusPrimusComments {
                     apply_filters( 'opus_comments_password_required', __( 'This post is password protected. Enter the password to view comments.', 'opusprimus' ) ) .
                 '</span>' );
             return;
-        }
+        } /** End if - post password required */
+
         /** If comments are open, but there are no comments. */
         if ( ! have_comments() ) {
             printf(
                 '<span class="no-comments-message">' .
                     apply_filters( 'opus_no_comments_message', __( 'Start a discussion ...', 'opusprimus' ) ) .
                 '</span>' );
-        }
-    }
+        } /** End if - not have comments */
+    } /** End function - before comment form */
 
     /**
      * Comments Form Closed
@@ -106,6 +108,7 @@ class OpusPrimusComments {
      * @since   0.1
      *
      * @uses    _e
+     * @uses    apply_filters
      * @uses    is_page
      *
      * @internal used with comment_form_comments_closed hook
@@ -117,8 +120,8 @@ class OpusPrimusComments {
                     apply_filters( 'opus_comments_form_closed' , __( 'New comments are not being accepted at this time, please feel free to contact the post author directly.', 'opusprimus' ) ) .
                 '</span>'
             );
-        }
-    }
+        } /** End if - not is page */
+    } /** End function - comments form closed */
 
     /**
      * Comment Author Class
@@ -147,7 +150,8 @@ class OpusPrimusComments {
             $classes[] = 'subscriber';
         } else {
             $classes[] = 'guest';
-        }
+        } /** End if - user can */
+
         /** Add user ID based classes */
         if ( $comment->user_id == 1 ) {
             /** Administrator 'Prime' => first registered user ID */
@@ -155,11 +159,11 @@ class OpusPrimusComments {
         } else {
             /** All other users - NB: user-id-0 -> non-registered user */
             $userid = "user-id-" . ( $comment->user_id );
-        }
+        } /** End if - user id */
         $classes[] = $userid;
 
         return $classes;
-    }
+    } /** End function - comment author class */
 
     /** ---- Additional Methods ---- */
 
@@ -170,8 +174,10 @@ class OpusPrimusComments {
      * @package OpusPrimus
      * @since   0.1
      *
+     * @uses    comments_open
      * @uses    comments_popup_link
      * @uses    is_page
+     * @uses    post_password_required
      */
     function comments_link() {
         /** Add empty hook before comments link */
@@ -195,15 +201,16 @@ class OpusPrimusComments {
                     'comments-link',
                     __( 'Comments are closed.', 'opusprimus' )
                 );
-            }
-        }
+            } /** End if - is page */
+        } /** End if - not post password required */
         echo '</h5><!-- .comments-link -->';
 
         /** Add empty hook after comments link */
         do_action( 'opus_after_comments_link' );
 
-    }
+    } /** End function - comments link */
 
-}
+} /** End class Opus Primus Comments */
+
+/** @var $opus_comments - new instance of class */
 $opus_comments = new OpusPrimusComments();
-/** End OpusPrimusComments class */
