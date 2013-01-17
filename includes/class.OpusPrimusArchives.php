@@ -7,7 +7,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012, Opus Primus
+ * @copyright   Copyright (c) 2012-2013, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -66,13 +66,15 @@ class OpusPrimusArchives {
             'number'        => 10,
         );
         $category_top_10_args = wp_parse_args( (array) $category_top_10_args, $defaults );
+
         echo '<div class="archive category list top10 cf"><ul>';
             wp_list_categories( $category_top_10_args );
-        echo '</ul></div>';
+        echo '</ul></div><!-- archive.category.list.top10 -->';
 
         /** Add empty hook after category archive */
         do_action( 'opus_after_category_archive' );
-    }
+
+    } /** End function top 10 categories archive */
 
     /**
      * Opus Primus Category Archive
@@ -103,13 +105,15 @@ class OpusPrimusArchives {
             'title_li'      => __( 'All Categories:', 'opusprimus' ),
         );
         $category_args = wp_parse_args( (array) $category_args, $defaults );
+
         echo '<ul class="archive category list cf">';
             wp_list_categories( $category_args );
-        echo '</ul>';
+        echo '</ul><!-- .archive.category.list -->';
 
         /** Add empty hook after category archive */
         do_action( 'opus_after_category_archive' );
-    }
+
+    } /** End function categories archive */
 
     /**
      * Opus Primus Archive Cloud
@@ -152,19 +156,21 @@ class OpusPrimusArchives {
         if ( isset( $cloud_args['number'] ) && ( 'DESC' == $cloud_args['order'] ) ) {
             $cloud_classes .= 'top' . $cloud_args['number'];
             $cloud_title = sprintf( __( 'The Top %1$s Tags Cloud:', 'opusprimus' ), $cloud_args['number'] );
-        }
+        } /** End if - isset */
 
         /** If a cloud class has been created then make sure to add a space before so it will be properly added to the class list */
         if ( ! empty( $cloud_classes ) ) {
             $cloud_classes = ' ' . $cloud_classes;
-        }
+        } /** End if not empty */
 
         /** Default title */
-        if ( empty( $cloud_title ) )
+        if ( empty( $cloud_title ) ) {
             $cloud_title = __( 'The Cloud:', 'opusprimus' );
+        } /** End if empty */
 
-        if ( isset( $cloud_args['format'] ) && ( 'flat' == $cloud_args['format'] ) )
+        if ( isset( $cloud_args['format'] ) && ( 'flat' == $cloud_args['format'] ) ) {
             $cloud_title .= '<br />';
+        } /** End if isset */
 
         /**
          * Output the cloud with a title wrapped in an element with dynamic
@@ -174,11 +180,14 @@ class OpusPrimusArchives {
             echo '<li><span class="title">' . $cloud_title . '</span>';
                 wp_tag_cloud( $cloud_args );
             echo '</li>';
-        echo '</ul>';
+        echo '</ul><!-- .archive.cloud.list -->';
 
         /** Add empty hook after archive cloud */
         do_action( 'opus_after_archive_cloud' );
-    }
 
-}
+    } /** End function archive cloud */
+
+} /** End Class Opus Primus Archives */
+
+/** @var $opus_archives - new instance of class */
 $opus_archives = new OpusPrimusArchives();
