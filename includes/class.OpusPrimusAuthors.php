@@ -74,7 +74,7 @@ class OpusPrimusAuthors {
         global $opus_author_id, $post;
         if ( ! isset( $opus_author_id ) ) {
             $opus_author_id = '';
-        }
+        } /** End if - isset */
 
         /** Add empty hook before post author section */
         do_action( 'opus_post_author_top' );
@@ -85,11 +85,11 @@ class OpusPrimusAuthors {
         /** Output author details */
         echo '<div class="first-author-details">';
             printf(
-                '<div class="first-author-details-text">%1$s</div>',
+                '<div class="first-author-details-text">%1$s</div><!-- .first-author-details-text -->',
                 apply_filters( 'opus_first_author_by_text', __( 'Author:', 'opusprimus' ) )
             );
             $this->author_details( $opus_author_id, $post_author_args['show_author_url'], $post_author_args['show_author_email'], $post_author_args['show_author_desc'] );
-        echo '</div>';
+        echo '</div><!-- .first-author-details -->';
         $this->author_coda();
 
         /** Add empty hook after first author details */
@@ -110,21 +110,21 @@ class OpusPrimusAuthors {
             /** Output author details based on the last one to edit the post */
             echo '<div class="modified-author-details">';
                 printf(
-                    '<div class="modified-author-details-text">%1$s</div>',
+                    '<div class="modified-author-details-text">%1$s</div><!-- modified-author-details-text -->',
                     apply_filters( 'opus_modified_author_by_text', __( 'Modified by:', 'opusprimus' ) )
                 );
                 $this->author_details( $last_id, $post_author_args['show_author_url'], $post_author_args['show_author_email'], $post_author_args['show_author_desc'] );
-            echo '</div>';
+            echo '</div><!-- .modified-author-details -->';
             $this->author_coda();
 
             /** Add empty hook after modified author details */
             do_action( 'opus_after_modified_author_details' );
-        }
+        } /** End if - date vs. modified date */
 
         /** Add empty hook after post author section */
         do_action( 'opus_post_author_bottom' );
 
-    }
+    } /** End function - post author */
 
     /**
      * Author Details
@@ -167,7 +167,7 @@ class OpusPrimusAuthors {
                         home_url( '/?author=' . $author_id ),
                         esc_attr( sprintf( __( 'View all posts by %1$s', 'opusprimus' ), $author_display_name ) ),
                         $author_display_name ) ); ?>
-            </h2>
+            </h2><!--  -->
             <ul>
                 <?php
                 /**
@@ -182,11 +182,11 @@ class OpusPrimusAuthors {
                             '<a class="opus-author-email" href="mailto:' .  $author_email . '">' . $author_display_name . '</a>'
                         ); ?>
                     </li>
-                    <?php
-                    /**
-                     * Check for the author URL; show Author URL is true; and,
-                     * show Author email is false
-                     */
+                <?php
+                /**
+                 * Check for the author URL; show Author URL is true; and,
+                 * show Author email is false
+                 */
                 } elseif ( ! empty( $author_url ) && $show_author_url && ! $show_author_email ) { ?>
                     <li>
                         <?php
@@ -194,11 +194,11 @@ class OpusPrimusAuthors {
                             '<a class="opus-author-url" href="' . $author_url . '">' . $author_display_name . '</a>'
                         ); ?>
                     </li>
-                    <?php
-                    /**
-                     * Check for the author URL; show Author URL is false; and,
-                     * show Author email is true
-                     */
+                <?php
+                /**
+                 * Check for the author URL; show Author URL is false; and,
+                 * show Author email is true
+                 */
                 } elseif ( ! empty( $author_url ) && ! $show_author_url && $show_author_email ) { ?>
                     <li>
                         <?php
@@ -206,11 +206,11 @@ class OpusPrimusAuthors {
                             '<a class="opus-author-email" href="mailto:' .  $author_email . '">' . $author_display_name . '</a>'
                         ); ?>
                     </li>
-                    <?php
-                    /**
-                     * The last option available in this logic chain: no Author
-                     * URL and show Author email is true
-                     */
+                <?php
+                /**
+                 * The last option available in this logic chain: no Author
+                 * URL and show Author email is true
+                 */
                 } elseif ( $show_author_email ) { ?>
                     <li>
                         <?php
@@ -218,7 +218,7 @@ class OpusPrimusAuthors {
                             '<a class="opus-author-email" href="mailto:' .  $author_email . '">' . $author_display_name . '</a>'
                         ); ?>
                     </li>
-                    <?php }
+                <?php } /** End if - show author details */
                 /**
                  * Check for the author bio; and, if show Author Desc is true
                  */
@@ -226,9 +226,9 @@ class OpusPrimusAuthors {
                     <li>
                         <?php printf( '<span class="opus-author-biography">' . __( 'Biography: %1$s', 'opusprimus' ) . '</span>', $author_desc ); ?>
                     </li>
-                    <?php } ?>
-            </ul>
-        </div>
+                <?php } /** End if - not empty */ ?>
+            </ul><!--  -->
+        </div><!-- author details -->
 
         <?php
         /** Add empty hook after author details */
@@ -236,7 +236,7 @@ class OpusPrimusAuthors {
 
         return;
 
-    }
+    } /** End function - author details */
 
     /**
      * Author Classes
@@ -267,14 +267,14 @@ class OpusPrimusAuthors {
             echo 'subscriber';
         } else {
             echo 'guest';
-        };
+        } /** End if - user can */
         /** Check if this is the first user */
         if ( ( $author_id ) == '1' ) {
             echo ' administrator-prime';
-        }
+        } /** End if - author id */
         echo ' author-' . $author_id;
         echo ' author-' . $opus_structures->replace_spaces( get_the_author_meta( 'display_name', $author_id ) );
-    }
+    } /** End function  - author classes */
 
     /**
      * Author Coda
@@ -298,7 +298,9 @@ class OpusPrimusAuthors {
         /** Add empty hook after the post coda */
         do_action( 'opus_after_author_coda' );
 
-    }
+    } /** End function  - author coda */
 
-}
+} /** End of Class Opus Primus Authors */
+
+/** @var $opus_authors - new instance of class */
 $opus_authors = new OpusPrimusAuthors();
