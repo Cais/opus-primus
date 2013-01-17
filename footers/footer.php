@@ -8,7 +8,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012, Opus Primus
+ * @copyright   Copyright (c) 2012-2013, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -37,14 +37,14 @@
 
     <div id="footer-widgets">
         <?php get_sidebar( 'footer' ); ?>
-    </div>
+    </div><!-- #footer-widgets -->
 
     <h6 id="site-generator">
         <?php global $opus_structures; echo $opus_structures->credits(); ?>
-    </h6>
+    </h6><!-- #site-generator -->
 
     <h6 id="site-copyright">
         <?php echo $opus_structures->copyright(); ?>
-    </h6>
+    </h6><!-- #site-copyright -->
 
-</footer>
+</footer><!-- End footer section -->

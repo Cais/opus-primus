@@ -41,7 +41,11 @@
         /** Add empty hook before site title */
         do_action( 'opus_primus_before_site_title' ); ?>
 
-        <h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+        <h1 id="site-title">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                <?php bloginfo( 'name' ); ?>
+            </a>
+        </h1><!-- #site-title -->
 
         <?php
         /**
@@ -51,17 +55,19 @@
         do_action( 'opus_primus_after_site_title' );
         do_action( 'opus_primus_before_site_description' ); ?>
 
-        <h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
+        <h2 id="site-description">
+            <?php bloginfo( 'description' ); ?>
+        </h2><!-- #site-description -->
 
         <?php
         /** Add empty hook after site description */
         do_action( 'opus_primus_after_site_description' ); ?>
 
-    </hgroup>
+    </hgroup><!-- End header group section -->
 
     <div id="header-widgets">
         <?php get_sidebar( 'header' ); ?>
-    </div>
+    </div><!-- #header-widgets -->
 
     <?php
     /** Add empty hook before primary navigation */
@@ -69,10 +75,10 @@
 
     <nav>
         <?php global $opus_navigation; $opus_navigation->primary_menu(); ?>
-    </nav>
+    </nav><!-- End navigation section -->
 
     <?php
     /** Add empty hook after primary navigation */
     do_action( 'opus_primus_after_nav' ); ?>
 
-</header>
+</header><!-- End header section -->
