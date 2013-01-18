@@ -7,7 +7,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012, Opus Primus
+ * @copyright   Copyright (c) 2012-2013, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -37,7 +37,9 @@ class OpusPrimusPosts {
     function __construct() {
         /** Add classes to post tag */
         add_filter( 'post_class', array( $this, 'post_classes' ) );
-    }
+
+    } /** End function - construct */
+
 
     /**
      * Post Classes
@@ -48,16 +50,19 @@ class OpusPrimusPosts {
      *
      * @param   $classes - existing post classes
      *
+     * @uses    OpusPrimusStructures::replace_spaces
+     * @uses    get_post_meta
      * @uses    get_the_author_meta
      * @uses    get_the_date
      * @uses    get_the_modified_date
-     * @uses    ($this->)replace_spaces
+     * @uses    get_userdata
      *
      * @return  string - specific class based on active columns
      */
     function post_classes( $classes ) {
         /** Call the structure class to use replace spaces */
         global $opus_structures;
+
         /** Original Post Classes */
         /** Year */
         $post_year = get_the_date( 'Y' );
@@ -65,7 +70,8 @@ class OpusPrimusPosts {
         $post_leap_year = get_the_date( 'L' );
         if ( '1' == $post_leap_year ) {
             $classes[] = 'leap-year';
-        }
+        } /** End if - leap year */
+
         /** Month */
         $post_month_numeric = get_the_date( 'm' );
         $classes[] = 'month-' . $post_month_numeric;
@@ -73,6 +79,7 @@ class OpusPrimusPosts {
         $classes[] = 'month-' . strtolower( $post_month_short );
         $post_month_long = get_the_date( 'F' );
         $classes[] = 'month-' . strtolower( $post_month_long );
+
         /** Day */
         $post_day_of_month = get_the_date( 'd' );
         $classes[] = 'day-' . $post_day_of_month;
@@ -80,11 +87,13 @@ class OpusPrimusPosts {
         $classes[] = 'day-' . strtolower( $post_day_of_week_short );
         $post_day_of_week_long = get_the_date( 'l' );
         $classes[] = 'day-' . strtolower( $post_day_of_week_long );
+
         /** Time: Hour */
         $post_24_hour = get_the_date( 'H' );
         $classes[] = 'hour-' . $post_24_hour;
         $post_12_hour = get_the_date( 'ha' );
         $classes[] = 'hour-' . $post_12_hour;
+
         /** Author */
         $opus_author_id = get_the_author_meta( 'ID' );
         $classes[] = 'author-' . $opus_author_id;
@@ -94,13 +103,15 @@ class OpusPrimusPosts {
         /** Modified Post Classes */
         if ( get_the_date() <> get_the_modified_date() ) {
             $classes[] = 'modified-post';
+
             /** Year - Modified */
             $post_year = get_the_modified_date( 'Y' );
             $classes[] = 'modified-year-' . $post_year;
             $post_leap_year = get_the_modified_date( 'L' );
             if ( '1' == $post_leap_year ) {
                 $classes[] = 'modified-leap-year';
-            }
+            } /** End if - leap year */
+
             /** Month - Modified */
             $post_month_numeric = get_the_modified_date( 'm' );
             $classes[] = 'modified-month-' . $post_month_numeric;
@@ -108,6 +119,7 @@ class OpusPrimusPosts {
             $classes[] = 'modified-month-' . strtolower( $post_month_short );
             $post_month_long = get_the_modified_date( 'F' );
             $classes[] = 'modified-month-' . strtolower( $post_month_long );
+
             /** Day - Modified */
             $post_day_of_month = get_the_modified_date( 'd' );
             $classes[] = 'modified-day-' . $post_day_of_month;
@@ -115,18 +127,21 @@ class OpusPrimusPosts {
             $classes[] = 'modified-day-' . strtolower( $post_day_of_week_short );
             $post_day_of_week_long = get_the_modified_date( 'l' );
             $classes[] = 'modified-day-' . strtolower( $post_day_of_week_long );
+
             /** Time: Hour - Modified */
             $post_24_hour = get_the_modified_date( 'H' );
             $classes[] = 'modified-hour-' . $post_24_hour;
             $post_12_hour = get_the_modified_date( 'ha' );
             $classes[] = 'modified-hour-' . $post_12_hour;
 
-            /** @var $last_user - establish the last user */
             global $post;
+            /** @var $last_user - establish the last user */
             $last_user = '';
             if ( $last_id = get_post_meta( $post->ID, '_edit_last', true ) ) {
                 $last_user = get_userdata( $last_id );
-            }
+            } /** End if - last id */
+
+            /** @var $mod_author_id - ID of the last user */
             $mod_author_id = $last_user->ID;
             $classes[] = 'modified-author-' . $mod_author_id;
             $mod_author_display_name = $opus_structures->replace_spaces( $last_user->display_name );
@@ -136,7 +151,8 @@ class OpusPrimusPosts {
         /** Return the classes for use with the `post_class` hook */
         return $classes;
 
-    }
+    } /** End function - post classes */
+
 
     /**
      * Post Title
@@ -161,10 +177,10 @@ class OpusPrimusPosts {
         /** Set `the_title` parameters */
         if ( empty( $before ) ) {
             $before = '<h2 class="post-title">';
-        }
+        } /** End if - before */
         if ( empty( $after ) ) {
             $after = '</h2>';
-        }
+        } /** End if - after */
 
         /** Wrap the title in an anchor tag and provide a nice tool tip */ ?>
         <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ) ) ); ?>">
@@ -175,11 +191,11 @@ class OpusPrimusPosts {
         /** Add empty hook after the post title */
         do_action( 'opus_after_post_title' );
 
-    }
+    } /** End function - post title */
+
 
     /**
      * No Title Link
-     *
      * This returns a URL to the post using the anchor text 'Posted' in the meta
      * details with the post excerpt as the URL title; or, returns the word
      * 'Posted' if the post title exists
@@ -202,8 +218,11 @@ class OpusPrimusPosts {
         empty( $opus_no_title )
             ? $opus_no_title = '<span class="no-title"><a href="' . get_permalink() . '" title="' . get_the_excerpt() . '">' . $anchor . '</span></a>'
             : $opus_no_title = $anchor;
+
         return apply_filters( 'opus_no_title_link', $opus_no_title );
-    }
+
+    } /** End function - no title link */
+
 
     /**
      * Post Format Flag
@@ -220,7 +239,6 @@ class OpusPrimusPosts {
      * @return  string - link to the post-format specific archive
      */
     function post_format_flag() {
-
         /** @var $flag_text - post-format */
         $flag_text = get_post_format_string( get_post_format() );
         $title_text = $flag_text;
@@ -228,12 +246,15 @@ class OpusPrimusPosts {
             return null;
         } else {
             $flag_text = '<button><span class="post-format-flag">' . $flag_text . '</span></button>';
-        }
+        } /** End if - flag text */
 
+        /** @var $output - the post format type linked to its archive */
         $output = '<a href="' . get_post_format_link( get_post_format() ) . '" title="' . sprintf( __( 'View the %1$s archive.' ), $title_text ) . '">' . $flag_text . '</a>';
 
         return apply_filters( 'opus_post_format_flag', $output );
-    }
+
+    } /** End function - post format flag */
+
 
     /**
      * Sticky Flag
@@ -256,7 +277,8 @@ class OpusPrimusPosts {
         if ( '' == $sticky_text ) {
             $sticky_text = __( 'Featured', 'opusprimus' );
             $sticky_text = apply_filters( 'opus_default_sticky_flag', $sticky_text );
-        }
+        } /** End if - sticky text */
+
         if ( is_sticky() ) {
             $output = '<a href="' . get_permalink() . '" title="' . sprintf( __( 'Go to %1$s post', 'opusprimus' ), strtolower( $sticky_text ) ) . '">'
                 . '<button><span class="sticky-flag-text">'
@@ -265,11 +287,12 @@ class OpusPrimusPosts {
                 . '</a>';
         } else {
             $output = '';
-        }
+        } /** End if - is sticky */
 
         return apply_filters( 'opus_sticky_flag', $output );
 
-    }
+    } /** End function - sticky flag */
+
 
     /**
      * Post Byline
@@ -332,33 +355,34 @@ class OpusPrimusPosts {
          * Output post byline (date, time, and author) and open the CSS wrapper
          */
         echo '<div class="meta-byline">';
-        printf( $opus_post_byline,
-            $this->no_title_link( $byline_args['anchor'] ),
-            get_the_date( get_option( 'date_format' ) ),
-            get_the_time( get_option( 'time_format' ) ),
-            $this->author_posts_link()
-        );
+            printf( $opus_post_byline,
+                $this->no_title_link( $byline_args['anchor'] ),
+                get_the_date( get_option( 'date_format' ) ),
+                get_the_time( get_option( 'time_format' ) ),
+                $this->author_posts_link()
+            );
 
-        /**
-         * Show modified post author if set to true or if the time span is
-         * measured in hours
-         */
-        if ( $byline_args['show_mod_author'] || ( 'time' == $byline_args['tempus'] ) ) {
-            $this->modified_post( $byline_args['tempus'] );
-        }
+            /**
+             * Show modified post author if set to true or if the time span is
+             * measured in hours
+             */
+            if ( $byline_args['show_mod_author'] || ( 'time' == $byline_args['tempus'] ) ) {
+                $this->modified_post( $byline_args['tempus'] );
+            } /** End if - byline args */
 
-        /** Add a sticky note flag to the byline */
-        echo $this->sticky_flag( $byline_args['sticky_flag'] );
-        /** Add a post-format flag to the byline */
-        echo $this->post_format_flag();
+            /** Add a sticky note flag to the byline */
+            echo $this->sticky_flag( $byline_args['sticky_flag'] );
+            /** Add a post-format flag to the byline */
+            echo $this->post_format_flag();
 
         /** Close CSS wrapper for the post byline */
-        echo '</div>';
+        echo '</div><!-- .meta-byline -->';
 
         /** Add empty hook after post by line */
         do_action( 'opus_after_post_byline' );
 
-    }
+    } /** End function - post byline */
+
 
     /**
      * Author Posts Link
@@ -379,7 +403,8 @@ class OpusPrimusPosts {
             esc_attr( sprintf( __( 'View all posts by %1$s', 'opusprimus' ), get_the_author() ) ),
             get_the_author()
         );
-    }
+    } /** End function - author posts link */
+
 
     /**
      * Modified Post
@@ -411,7 +436,7 @@ class OpusPrimusPosts {
         $last_user = '';
         if ( $last_id = get_post_meta( $post->ID, '_edit_last', true ) ) {
             $last_user = get_userdata( $last_id );
-        }
+        } /** End if - last id */
 
         /**
          * @var $line_height - set value for use with `get_avatar`
@@ -443,7 +468,7 @@ class OpusPrimusPosts {
         } else {
             $mod_author_phrase .= apply_filters( 'opus_mod_same_author_phrase', __( 'and modified on %3$s at %4$s.', 'opusprimus' ) );
             $mod_author_avatar = '';
-        }
+        } /** End if - not empty last user */
 
         /** Check if there is a time difference from the original post date */
         if ( 'time' == $tempus ) {
@@ -454,7 +479,7 @@ class OpusPrimusPosts {
                     $this->modified_author_posts_link( $last_user ),
                     get_the_modified_date( get_option( 'date_format' ) ),
                     get_the_modified_time( get_option( 'time_format' ) ) );
-            }
+            } /** End if - get the time */
         } else {
             if ( get_the_date() <> get_the_modified_date() ) {
                 printf( '<span class="author-modified-date">' . $mod_author_phrase . '</span>',
@@ -462,13 +487,14 @@ class OpusPrimusPosts {
                     $this->modified_author_posts_link( $last_user ),
                     get_the_modified_date( get_option( 'date_format' ) ),
                     get_the_modified_time( get_option( 'time_format' ) ) );
-            }
-        }
+            } /** End if - get the date */
+        } /** End if - time */
 
         /** Add empty hook after modified post author */
         do_action( 'opus_after_modified_post' );
 
-    }
+    } /** End function - modified post */
+
 
     /**
      * Modified Author Posts Link
@@ -489,7 +515,8 @@ class OpusPrimusPosts {
             esc_attr( sprintf( __( 'View all posts by %1$s', 'opusprimus' ), $last_user->display_name ) ),
             $last_user->display_name
         );
-    }
+    } /** End function - modified posts link */
+
 
     /**
      * Uncategorized
@@ -520,10 +547,13 @@ class OpusPrimusPosts {
         if ( 'uncategorized' == $post_categories[0]->slug ) {
             if ( empty( $post_categories[1]->slug ) ) {
                 return true;
-            }
-        }
+            } /** End if - empty */
+        } /** End if - uncategorized */
+
         return false;
-    }
+
+    } /** End function - uncategorized */
+
 
     /**
      * Meta Tags
@@ -556,6 +586,7 @@ class OpusPrimusPosts {
          * post do not make any references to tags.
          */
         $opus_tag_list = get_the_tag_list( '', ', ', '' );
+
         if ( ( $opus_tag_list ) && ( ! $this->uncategorized() ) ) {
             $opus_posted_in = __( '%1$s in %2$s and tagged %3$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark.', 'opusprimus' );
         } elseif ( ( $opus_tag_list ) && ( $this->uncategorized() ) ) {
@@ -564,10 +595,9 @@ class OpusPrimusPosts {
             $opus_posted_in = __( '%1$s in %2$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark.', 'opusprimus' );
         } else {
             $opus_posted_in = __( 'Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark.', 'opusprimus' );
-        }
-        /**
-         * Prints the "opus_posted_in" string, replacing the placeholders
-         */
+        } /** End if - tag list */
+
+        /** Prints the "opus_posted_in" string, replacing the placeholders */
         printf( '<p class="meta-tags">' . $opus_posted_in . '</p>',
             $this->no_title_link( $anchor ),
             get_the_category_list( ', ' ),
@@ -579,7 +609,8 @@ class OpusPrimusPosts {
         /** Add empty hook after meta tags */
         do_action( 'opus_after_meta_tags' );
 
-    }
+    } /** End function - meta tags */
+
 
     /**
      * Status Update
@@ -608,19 +639,20 @@ class OpusPrimusPosts {
         /** Check if the post has been modified and get how long ago that was */
         if ( get_the_modified_time( 'U' ) != get_the_time( 'U' ) ) {
             $time_diff = get_the_modified_time( 'U' ) - get_the_time( 'U' );
-        }
+        } /** End if - get the modified time */
 
         /** Compare time difference between modification and actual post */
         if ( ( $time_diff > $time_ago ) && ( $time_diff < 31449600 ) ) {
             printf( __( '<div class="opus-status-update">%1$s %2$s ago.</div>', 'opusprimus' ), $update_text, human_time_diff( get_the_modified_time( 'U' ), current_time( 'timestamp' ) ) );
         } elseif ( $time_diff >= 31449600 ) {
             _e( '<div class="opus-status-update">Updated over a year ago.</div>', 'opusprimus' );
-        }
+        } /** End if - time diff */
 
         /** Add empty hook after status update output */
         do_action( 'opus_after_status_update' );
 
-    }
+    } /** End function - status update */
+
 
     /**
      * Post Content
@@ -648,21 +680,23 @@ class OpusPrimusPosts {
         /** Check if there the more_link_text parameter has been set */
         if ( empty( $more_link_text ) ) {
             $more_link_text = __( 'Continue reading ... ', 'opusprimus' ) . the_title( '', '', false );
-        }
+        } /** End if - empty - more link text */
+
         /** Check if there the stripteaser parameter has been set */
         if ( empty( $stripteaser ) ) {
             $stripteaser = '';
-        }
+        } /** End if - empty - stripteaser */
 
         /** Wrap the post content in its own container */
         echo '<div class="post-content">';
-        the_content( $more_link_text, $stripteaser );
-        echo '</div>';
+            the_content( $more_link_text, $stripteaser );
+        echo '</div><!-- .post-content -->';
 
         /** Add empty hook after the content */
         do_action( 'opus_after_the_content' );
 
-    }
+    } /** End function - post content */
+
 
     /**
      * Post Excerpt
@@ -680,13 +714,14 @@ class OpusPrimusPosts {
 
         /** Wrap the post excerpt in its own CSS container */
         echo '<div class="post-excerpt">';
-        the_excerpt();
-        echo '</div>';
+            the_excerpt();
+        echo '</div><!-- .post-excerpt -->';
 
         /** Add empty hook after the excerpt */
         do_action( 'opus_after_the_excerpt' );
 
-    }
+    } /** End function - post excerpt */
+
 
     /**
      * Post Coda
@@ -709,7 +744,9 @@ class OpusPrimusPosts {
         /** Add empty hook after the post coda */
         do_action( 'opus_after_post_coda' );
 
-    }
+    } /** End function - post coda */
 
-}
+} /** End Opus Primus Posts class */
+
+/** @var $opus_posts - new instance of class */
 $opus_posts = new OpusPrimusPosts();
