@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loops/opus-primus-status.php" afterPath="$PROJECT_DIR$/loops/opus-primus-status.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loops/opus-primus-video.php" afterPath="$PROJECT_DIR$/loops/opus-primus-video.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,11 +71,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="opus-primus-status.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="opus-primus-status.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loops/opus-primus-status.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="opus-primus-video.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/loops/opus-primus-video.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#6#1159#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,7 +104,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusMetaBoxes.php" />
@@ -109,6 +119,7 @@
         <option value="$PROJECT_DIR$/loops/opus-primus-link.php" />
         <option value="$PROJECT_DIR$/loops/opus-primus-quote.php" />
         <option value="$PROJECT_DIR$/loops/opus-primus-status.php" />
+        <option value="$PROJECT_DIR$/loops/opus-primus-video.php" />
       </list>
     </option>
   </component>
@@ -1253,7 +1264,11 @@
       <created>1358477546722</created>
       <updated>1358477546722</updated>
     </task>
-    <option name="localTasksCounter" value="237" />
+    <task id="LOCAL-00237" summary="* Add block termination comments (loop - status)">
+      <created>1358477600213</created>
+      <updated>1358477600213</updated>
+    </task>
+    <option name="localTasksCounter" value="238" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1350,7 +1365,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Add block termination comments (loop - quote)" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Add block termination comments (loop - status)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1363,7 +1378,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Extracted the_Loop (most basic form) into a new Structures class method and replaced where appropriate in standard template files." />
     <MESSAGE value="Updated Copyright year on edited files to 2012-2013 from 2012 only" />
     <MESSAGE value="Fix JavaScript issue with calling fitVids when not implemented ... can you say dumb-ass?!" />
     <MESSAGE value="Removed class OpusPrimusSocial (probably served better by plugins)" />
@@ -1388,20 +1402,12 @@
     <MESSAGE value="* Add block termination comments (loop - image)" />
     <MESSAGE value="* Add block termination comments (loop - link)" />
     <MESSAGE value="* Add block termination comments (loop - quote)" />
+    <MESSAGE value="* Add block termination comments (loop - status)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusGallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="245" column="4" selection-start="9755" selection-end="9755" vertical-scroll-proportion="-2.0552995">
-          <folding>
-            <element signature="e#6#1135#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusImages.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1508,6 +1514,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loops/opus-primus-video.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#6#1159#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
