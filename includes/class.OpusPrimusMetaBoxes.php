@@ -37,17 +37,13 @@ class OpusPrimusMetaBoxes {
     function __construct() {
         /** Add taglines meta boxes */
         add_action( 'add_meta_boxes', array( $this, 'tagline_create_boxes' ) );
-        /**
-         * @todo see if there is another way to drive the form between the title and the content
-         * add_action( 'edit_form_after_title', array( $this, 'tagline_callback' ) );
-         */
 
         /** Save tagline data entered */
         add_action( 'save_post', array( $this, 'tagline_save_postdata' ) );
 
         /** Send tagline to screen after post title */
         add_action( 'opus_after_post_title', array( $this, 'tagline_output' ) );
-    }
+    } /** End function - construct */
 
     /**
      * Create Tagline Boxes
@@ -73,8 +69,9 @@ class OpusPrimusMetaBoxes {
                 'default',
                 null
             );
-        }
-    }
+        } /** End if - attachment */
+    } /** End function - tagline create boxes */
+
 
     /**
      * Tagline Callback
@@ -93,7 +90,8 @@ class OpusPrimusMetaBoxes {
             echo apply_filters( 'opus_taglines_text_field_description', sprintf( __('Add custom tagline to this %1$s: ', 'opusprimus' ), $post->post_type ) );
         echo '</label>';
         echo '<input type="text" id="tagline_text_field" name="tagline_text_field" value="' . get_post_meta( $post->ID, 'tagline_text_field', true ) . '" size="100%" />';
-    }
+    } /** End function - tagline callback */
+
 
     /**
      * Tagline Save Postdata
@@ -111,24 +109,29 @@ class OpusPrimusMetaBoxes {
      */
     function tagline_save_postdata( $post_id ) {
         /** If this is an auto save routine we do not want to do anything */
-        if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
+        if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
             return;
+        } /** End if - DOING AUTOSAVE */
 
         /** Check if this is a new post and if user can edit pages */
         if ( isset( $_POST['post_type'] ) && ( 'page' == $_POST['post_type'] ) ) {
-            if ( ! current_user_can( 'edit_page', $post_id ) )
+            if ( ! current_user_can( 'edit_page', $post_id ) ) {
                 return;
+            } /** End if - not current user can */
         } else {
-            if ( ! current_user_can( 'edit_post', $post_id ) )
+            if ( ! current_user_can( 'edit_post', $post_id ) ) {
                 return;
-        }
+            } /** End if - not current user can */
+        } /** End if - isset */
 
         /** If tagline is set, save and update the post meta data */
         if ( isset( $_POST['tagline_text_field'] ) ) {
             $tagline_text = $_POST['tagline_text_field'];
             update_post_meta( $post_id, 'tagline_text_field', $tagline_text );
-        }
-    }
+        } /** End if - isset */
+
+    } /** End function - tagline save postdata */
+
 
     /**
      * Tagline Output
@@ -145,11 +148,15 @@ class OpusPrimusMetaBoxes {
         /** Since we are not inside the loop grab the global post object */
         global $post;
         $tagline = apply_filters( 'opus_tagline_output_' . $post->ID, get_post_meta( $post->ID, 'tagline_text_field', true ) );
+
         /** Make sure there is a tagline before sending anything to the screen */
         if ( ! empty( $tagline ) ) {
             echo '<div class="opus-primus-' . $post->post_type . '-tagline">' . $tagline . '</div>';
-        }
-    }
+        } /** End if - not empty */
 
-}
+    } /** End function - tagline output */
+
+} /** End Opus Primus Meta Boxes class */
+
+/** @var $opus_meta_boxes - new instance of class */
 $opus_meta_boxes = new OpusPrimusMetaBoxes();
