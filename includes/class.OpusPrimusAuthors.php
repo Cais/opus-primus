@@ -124,6 +124,7 @@ class OpusPrimusAuthors {
 
     } /** End function - post author */
 
+
     /**
      * Author Details
      * Takes the passed author ID parameter and creates / collects various
@@ -236,6 +237,7 @@ class OpusPrimusAuthors {
 
     } /** End function - author details */
 
+
     /**
      * Author Classes
      * Additional author classes related to the use and their capabilities
@@ -272,7 +274,9 @@ class OpusPrimusAuthors {
         } /** End if - author id */
         echo ' author-' . $author_id;
         echo ' author-' . $opus_structures->replace_spaces( get_the_author_meta( 'display_name', $author_id ) );
+
     } /** End function  - author classes */
+
 
     /**
      * Author Coda

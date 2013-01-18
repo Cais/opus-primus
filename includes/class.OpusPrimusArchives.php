@@ -74,6 +74,7 @@ class OpusPrimusArchives {
 
     } /** End function top 10 categories archive */
 
+
     /**
      * Opus Primus Category Archive
      * Displays all of the categories with links to their respective category
@@ -112,6 +113,7 @@ class OpusPrimusArchives {
         do_action( 'opus_after_category_archive' );
 
     } /** End function categories archive */
+
 
     /**
      * Opus Primus Archive Cloud

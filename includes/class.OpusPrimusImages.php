@@ -37,7 +37,6 @@ class OpusPrimusImages {
     /** Construct */
     function __construct(){}
 
-
     /**
      * Opus Primus EXIF Data
      * Returns an object containing the EXIF data found in an image if it exists
@@ -566,7 +565,6 @@ class OpusPrimusImages {
                 } /** End if */ ?>
             </tbody><!-- End table body -->
             <tfoot></tfoot>
-            <!-- Close display exif table -->
         </table><!-- .display-exif-table -->
 
         <?php
@@ -574,6 +572,7 @@ class OpusPrimusImages {
         do_action( 'opus_after_exif_table' );
 
     } /** End function - exif table */
+
 
     /**
      * Opus Primus Image Title

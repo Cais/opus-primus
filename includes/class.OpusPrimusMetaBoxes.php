@@ -43,7 +43,9 @@ class OpusPrimusMetaBoxes {
 
         /** Send tagline to screen after post title */
         add_action( 'opus_after_post_title', array( $this, 'tagline_output' ) );
+
     } /** End function - construct */
+
 
     /**
      * Create Tagline Boxes
@@ -58,6 +60,7 @@ class OpusPrimusMetaBoxes {
      */
     function tagline_create_boxes() {
         global $post;
+
         /** May not work with attachments */
         if ( 'attachment' <> $post->post_type ) {
             add_meta_box(
@@ -70,6 +73,7 @@ class OpusPrimusMetaBoxes {
                 null
             );
         } /** End if - attachment */
+
     } /** End function - tagline create boxes */
 
 
@@ -90,6 +94,7 @@ class OpusPrimusMetaBoxes {
             echo apply_filters( 'opus_taglines_text_field_description', sprintf( __('Add custom tagline to this %1$s: ', 'opusprimus' ), $post->post_type ) );
         echo '</label>';
         echo '<input type="text" id="tagline_text_field" name="tagline_text_field" value="' . get_post_meta( $post->ID, 'tagline_text_field', true ) . '" size="100%" />';
+
     } /** End function - tagline callback */
 
 

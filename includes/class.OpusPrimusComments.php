@@ -64,7 +64,9 @@ class OpusPrimusComments {
         if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
             wp_enqueue_script( 'comment-reply' );
         } /** End if - is singular */
+
     } /** End function - enqueue comment reply */
+
 
     /**
      * Before Comment Form
@@ -98,7 +100,9 @@ class OpusPrimusComments {
                     apply_filters( 'opus_no_comments_message', __( 'Start a discussion ...', 'opusprimus' ) ) .
                 '</span>' );
         } /** End if - not have comments */
+
     } /** End function - before comment form */
+
 
     /**
      * Comments Form Closed
@@ -121,7 +125,9 @@ class OpusPrimusComments {
                 '</span>'
             );
         } /** End if - not is page */
+
     } /** End function - comments form closed */
+
 
     /**
      * Comment Author Class
@@ -163,6 +169,7 @@ class OpusPrimusComments {
         $classes[] = $userid;
 
         return $classes;
+
     } /** End function - comment author class */
 
     /** ---- Additional Methods ---- */

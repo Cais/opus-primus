@@ -158,6 +158,7 @@ class OpusPrimusNavigation {
         <?php
         /** Add empty hook after comments link */
         do_action( 'opus_after_comments_link' );
+
     } /** End function - comments navigation */
 
 

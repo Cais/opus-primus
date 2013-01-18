@@ -85,6 +85,7 @@ class OpusPrimusGallery {
 
     } /** End function - get gallery attr featured ids */
 
+
     /**
      * Get Gallery Shortcode Attribute Secondary ids
      * Using the shortcode regex find the attributes for the gallery shortcode
@@ -152,6 +153,7 @@ class OpusPrimusGallery {
         return null;
 
     } /** End function - get gallery attr secondary ids */
+
 
     /**
      * Opus Primus Featured Image
@@ -241,6 +243,7 @@ class OpusPrimusGallery {
         } /** End if - not is single */
 
     } /** End function - featured image */
+
 
     /**
      * Opus Primus Secondary Images
