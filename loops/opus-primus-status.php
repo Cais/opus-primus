@@ -49,7 +49,7 @@ global $opus_defaults, $opus_structures, $opus_posts, $opus_comments, $opus_navi
     $opus_posts->post_title();
     if ( ! is_single() ) {
         $opus_comments->comments_link();
-    }
+    } /** End if - not is single */
     $opus_images->featured_thumbnail();
     $opus_posts->post_content();
     $opus_posts->status_update();
@@ -63,8 +63,8 @@ global $opus_defaults, $opus_structures, $opus_posts, $opus_comments, $opus_navi
             'show_author_email' => $opus_defaults->show_author_email(),
             'show_author_desc'  => $opus_defaults->show_author_desc(),
         ) );
-    } ?>
+    } /** End if - is single */ ?>
 
-</div><!-- .post -->
+</div><!-- post classes -->
 <?php
 comments_template( '/comments.php', true );
