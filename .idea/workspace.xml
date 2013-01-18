@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loops/opus-primus-image.php" afterPath="$PROJECT_DIR$/loops/opus-primus-image.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1210,7 +1209,11 @@
       <created>1358477377252</created>
       <updated>1358477377252</updated>
     </task>
-    <option name="localTasksCounter" value="233" />
+    <task id="LOCAL-00233" summary="* Add block termination comments (loop - gallery)">
+      <created>1358477423502</created>
+      <updated>1358477423502</updated>
+    </task>
+    <option name="localTasksCounter" value="234" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
