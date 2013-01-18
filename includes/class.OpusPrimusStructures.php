@@ -39,7 +39,9 @@ class OpusPrimusStructures {
         add_filter( 'body_class', array( $this, 'body_classes' ) );
         /** Restructure the browser title */
         add_filter( 'wp_title', array( $this, 'browser_title' ), 10, 3 );
-    }
+
+    } /** End function - construct */
+
 
     /**
      * Layout - Open
@@ -60,12 +62,16 @@ class OpusPrimusStructures {
      */
     function layout_open() {
         global $content_width;
+
+        /** @var $layout - initialize variable as empty */
         $layout = '';
+
         /** Test if all widget areas are inactive for one-column layout */
         if ( ! ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) || is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
             $layout = '<div class="column-mask full-page">';
             $content_width = 990;
-        }
+        } /** End if - not is active sidebar */
+
         /** Test if the first-sidebar or second-sidebar is active by testing their component widget areas for a two column layout */
         if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
             && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
@@ -77,15 +83,18 @@ class OpusPrimusStructures {
                 && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) ) {
             $layout = '<div class="column-mask right-sidebar"><div class="column-left">';
             $content_width = 700;
-        }
+        } /** End if - is active sidebar */
+
         /** Test if at least one widget area in each sidebar area is active for a three-column layout */
         if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) ) && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
             $layout = '<div class="column-mask blog-style"><div class="column-middle"><div class="column-left">';
             $content_width = 450;
-        }
+        } /** End if - is active sidebar */
 
         return $layout;
-    }
+
+    } /** End function - layout open */
+
 
     /**
      * Layout - Close
@@ -101,11 +110,14 @@ class OpusPrimusStructures {
      * @return      string
      */
     function layout_close() {
+        /** @var $layout - initialize variable as empty */
         $layout = '';
+
         /** Test if all widget areas are inactive for one-column layout */
         if ( ! ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) || is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
             $layout = '</div><!-- .column-mask .full-page -->';
-        }
+        } /** End if - not is active sidebar */
+
         /** Test if the first-sidebar or second-sidebar is active by testing their component widget areas for a two column layout */
         if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
             && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
@@ -115,14 +127,17 @@ class OpusPrimusStructures {
             && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
                 && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) ) {
             $layout = '</div><!-- .column-mask .right-sidebar --></div><!--.column-left -->';
-        }
+        } /** End if - is active sidebar */
+
         /** Test if at least one widget area in each sidebar area is active for a three-column layout */
         if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) ) && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
             $layout = '</div><!-- .column-mask .blog-style --></div><!-- .column-middle --></div><!-- .column-left -->';
-        }
+        } /** End if - is active sidebar */
 
         return $layout;
-    }
+
+    } /** End function - layout close */
+
 
     /**
      * Replace Spaces
@@ -146,7 +161,9 @@ class OpusPrimusStructures {
 
         /** Return the string with spaces replaced by the replacement variable */
         return $new_text;
-    }
+
+    } /** End function - replace spaces */
+
 
     /**
      * Body Classes
@@ -168,7 +185,8 @@ class OpusPrimusStructures {
         /** Test if all widget areas are inactive for one-column layout */
         if ( ! ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) || is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
             $classes[] = 'one-column';
-        }
+        } /** End if - not is active sidebar */
+
         /** Test if the first-sidebar or second-sidebar is active by testing their component widget areas for a two column layout */
         if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
             && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
@@ -178,11 +196,12 @@ class OpusPrimusStructures {
             && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
                 && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) ) {
             $classes[] = 'two-column';
-        }
+        } /** End if - is active sidebar */
+
         /** Test if at least one widget area in each sidebar area is active for a three-column layout */
         if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) ) && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
             $classes[] = 'three-column';
-        }
+        } /** End if - is active sidebar */
 
         /** Current Date Classes */
         /** Year */
@@ -191,7 +210,8 @@ class OpusPrimusStructures {
         $leap_year = date( 'L' );
         if ( '1' == $leap_year ) {
             $classes[] = 'leap-year';
-        }
+        } /** End if - leap year */
+
         /** Month */
         $current_month_numeric = date( 'm' );
         $classes[] = 'month-' . $current_month_numeric;
@@ -199,6 +219,7 @@ class OpusPrimusStructures {
         $classes[] = 'month-' . strtolower( $current_month_short );
         $current_month_long = date( 'F' );
         $classes[] = 'month-' . strtolower( $current_month_long );
+
         /** Day */
         $current_day_of_month = date( 'd' );
         $classes[] = 'day-' . $current_day_of_month;
@@ -206,6 +227,7 @@ class OpusPrimusStructures {
         $classes[] = 'day-' . strtolower( $current_day_of_week_short );
         $current_day_of_week_long = date( 'l' );
         $classes[] = 'day-' . strtolower( $current_day_of_week_long );
+
         /** Time: Hour */
         $current_24_hour = date( 'H' );
         $classes[] = 'hour-' . $current_24_hour;
@@ -214,7 +236,9 @@ class OpusPrimusStructures {
 
         /** Return the classes for use with the `body_class` filter */
         return apply_filters( 'opus_primus_body_classes', $classes );
-    }
+
+    } /** End function - body classes */
+
 
     /**
      * Browser Title
@@ -243,7 +267,7 @@ class OpusPrimusStructures {
         /** Check if this is in a feed; if so, return the title as is */
         if ( is_feed() ) {
             return $old_title;
-        }
+        } /** End if - is feed */
 
         /** Set initial title text */
         $opus_title_text = $old_title . get_bloginfo( 'name' );
@@ -254,15 +278,16 @@ class OpusPrimusStructures {
         $site_tagline = get_bloginfo( 'description', 'display' );
         if ( $site_tagline && ( is_home() || is_front_page() ) ) {
             $opus_title_text .= "$sep$site_tagline";
-        }
+        } /** End if - site tagline */
 
         /** Add a page number if necessary */
         if ( $paged >= 2 || $page >= 2 ) {
             $opus_title_text .= $sep . sprintf( __( 'Page %s', 'opusprimus' ), max( $paged, $page ) );
-        }
+        } /** End if - paged */
 
         return apply_filters( 'opus_browser_title', $opus_title_text );
-    }
+
+    } /** End function - browser title */
 
 
     /**
@@ -273,25 +298,29 @@ class OpusPrimusStructures {
      * @since   0.1
      *
      * @uses    $opus_navigation (global)
-     * @uses    have_posts
-     * @uses    the_post
      * @uses    get_template_part
      * @uses    get_post_format
+     * @uses    have_posts
+     * @uses    no_search_results
+     * @uses    posts_link
+     * @uses    the_post
      */
     function the_loop() {
         /** the_Loop begins */
-        if ( have_posts() ):
-            while ( have_posts() ):
+        if ( have_posts() ) {
+            while ( have_posts() ) {
                 the_post();
                 get_template_part( 'loops/opus-primus', get_post_format() );
-            endwhile;
-        else:
+            } /** End while - have posts */
+        } else {
             $this->no_search_results();
-        endif;
+        } /** End if - have posts */
+
         global $opus_navigation;
         $opus_navigation->posts_link();
         /** the_Loop ends */
-    }
+
+    } /** End function - the loop */
 
 
     /**
@@ -302,11 +331,15 @@ class OpusPrimusStructures {
      * @since   0.1
      *
      * @uses    $opus_archives (global)
+     * @uses    $opus_navigation (global)
      * @uses    apply_filters
+     * @uses    archive_cloud
+     * @uses    categories_archives
      * @uses    do_action
      * @uses    esc_html
      * @uses    get_search_form
      * @uses    get_search_query
+     * @uses    search_menu
      * @uses    top_10_categories_archive
      *
      * @todo Add custom searchform.php
@@ -323,7 +356,7 @@ class OpusPrimusStructures {
                     'opus_primus_search_results_for_text',
                     '<span class="search-results">' . esc_html( get_search_query() ) . '</span>'
                 ) ); ?>
-        </h2>
+        </h2><!-- .post-title -->
 
         <?php
         printf( '<p class="no-results">%1$s</p>',
@@ -341,6 +374,7 @@ class OpusPrimusStructures {
 
         /** Get the class variables */
         global $opus_archives, $opus_navigation;
+
         /** Display a list of categories to choose from */
         $opus_archives->categories_archive( array(
             'orderby'       => 'count',
@@ -350,6 +384,7 @@ class OpusPrimusStructures {
             'title_li'      => sprintf( '<span class="title">%1$s</span>', apply_filters( 'opus_primus_category_archives_title', __( 'Top 10 Categories by Post Count:', 'opusprimus' ) ) ),
             'number'        => 10,
         ) );
+
         /** Display a list of tags to choose from */
         $opus_archives->archive_cloud( array(
             'taxonomy'  => 'post_tag',
@@ -357,13 +392,15 @@ class OpusPrimusStructures {
             'order'     => 'DESC',
             'number'    => 10,
         ) );
+
         /** Display a list of pages to choose from */
         $opus_navigation->search_menu();
 
         /** Add empty hook after no posts results from the_loop query */
         do_action( 'opus_after_search_results' );
 
-    }
+    } /** End function - no search results */
+
 
     /**
      * Credits
@@ -388,8 +425,11 @@ class OpusPrimusStructures {
     function credits( $show = true ) {
         if ( false == $show ) {
             return null;
-        }
+        } /** End if - show */
+
+        /** @var $active_theme_data - save the theme date for later use */
         $active_theme_data = wp_get_theme();
+
         if ( is_child_theme() ) {
             $parent_theme_data = $active_theme_data->parent();
             $credits = sprintf(
@@ -408,11 +448,12 @@ class OpusPrimusStructures {
                 '<span id="parent-theme"><a href="' . esc_url( $active_theme_data->get( 'ThemeURI' ) ) . '" title="' . esc_attr( $active_theme_data->get( 'Description' ) ) . '">' . $active_theme_data->get( 'Name' ) . '</a></span>',
                 '<span id="wordpress-link"><a href="http://wordpress.org/" title="' . esc_attr__( 'Semantic Personal Publishing Platform', 'opusprimus' ) . '" rel="generator">WordPress</a></span>'
             );
-        }
+        } /** End if - is child theme */
 
         return apply_filters( 'opus_primus_credits', $credits );
 
-    }
+    } /** End function - credits */
+
 
     /**
      * Copyright
@@ -439,7 +480,7 @@ class OpusPrimusStructures {
     function copyright( $show = true, $by_author = true ){
         if ( false == $show ) {
             return null;
-        }
+        } /** End if - show */
 
         /** @var $output - initialize output variable to empty */
         $output = '';
@@ -455,7 +496,7 @@ class OpusPrimusStructures {
         $first_post_year = substr( $first_post_date, 0, 4 );
         if ( $first_post_year == '' ) {
             $first_post_year = date( 'Y' );
-        }
+        } /** End if - first post year */
 
         /** Add to output string */
         if ( $first_post_year == date( 'Y' ) ) {
@@ -463,7 +504,7 @@ class OpusPrimusStructures {
             $output .= sprintf( __( 'Copyright &copy; %1$s', 'opusprimus' ), date( 'Y' ) );
         } else {
             $output .= sprintf( __( 'Copyright &copy; %1$s-%2$s', 'opusprimus' ), $first_post_year, date( 'Y' ) );
-        }
+        } /** End if - first post year */
 
         /**
          * Append content owner.
@@ -477,15 +518,18 @@ class OpusPrimusStructures {
             $output .= ' <a href="' . $author_url . '" title="' . esc_attr( sprintf( __( 'To the web site of %1$s', 'opusprimus' ), $author ) ) . '" rel="author">' . $author .'</a>';
         } else {
             $output .= ' <a href="' . home_url( '/' ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" rel="home">' . get_bloginfo( 'name', 'display' ) .'</a>';
-        }
+        } /** End if - is single */
+
         /** Append usage terms */
         $output .= ' ' . __( 'All Rights Reserved.', 'opusprimus' );
 
         return apply_filters( 'opus_primus_copyright', $output );
 
-    }
+    } /** End function - copyright */
 
-}
+} /** End Opus Primus Structures class */
+
+/** @var $opus_structures - new instance of class */
 $opus_structures = new OpusPrimusStructures();
 
 /** Testing ... testing ... testing ... */
