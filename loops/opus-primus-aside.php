@@ -49,7 +49,7 @@ global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_imag
     $opus_posts->post_title();
     if ( ! is_single() ) {
         $opus_comments->comments_link();
-    }
+    } /** End if - not is single */
     $opus_images->featured_thumbnail();
     $opus_posts->post_content();
     $opus_navigation->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
@@ -62,7 +62,7 @@ global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_imag
             'show_author_email' => $opus_defaults->show_author_email(),
             'show_author_desc'  => $opus_defaults->show_author_desc(),
         ) );
-    } ?>
+    } /** End if - is single */ ?>
 
 </div><!-- .post -->
 <?php
