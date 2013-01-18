@@ -7,7 +7,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012, Opus Primus
+ * @copyright   Copyright (c) 2012-2013, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -47,7 +47,7 @@ global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_imag
     $opus_posts->post_title();
     if ( ! is_single() ) {
         $opus_comments->comments_link();
-    }
+    } /** End if - not is single */
     $opus_images->featured_thumbnail();
     $opus_posts->post_content();
     $opus_navigation->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
@@ -64,8 +64,8 @@ global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_imag
             'show_author_email' => $opus_defaults->show_author_email(),
             'show_author_desc'  => $opus_defaults->show_author_desc(),
         ) );
-    } ?>
+    } /** End if - is single */ ?>
 
-</div><!-- .post -->
+</div><!-- post classes -->
 <?php
 comments_template( '/comments.php', true );
