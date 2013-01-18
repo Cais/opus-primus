@@ -138,5 +138,7 @@ function opus_primus_widgets() {
         'id'    => 'footer-right',
         'description'   => __( 'This widget area appears in the footer on the right side of the theme.', 'opusprimus' ),
     ) );
-}
+
+} /** End function - opus primus widgets */
+
 add_action( 'widgets_init', 'opus_primus_widgets' );
