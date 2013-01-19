@@ -59,11 +59,11 @@ class OpusPrimusPullQuotes {
     function scripts_and_styles() {
         /** Enqueue Scripts */
         /** Enqueue Opus Primus JavaScripts which will enqueue jQuery as a dependency */
-        wp_enqueue_script( 'opus-primus-pullquote', OPUS_EXT_URI .'pullquotes/opus-primus.pullquote.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
+        wp_enqueue_script( 'opus-primus-pullquote', OPUS_STANZAS_URI .'pullquotes/opus-primus.pullquote.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
 
         /** Enqueue Styles */
         /** Enqueue Theme Stylesheets */
-        wp_enqueue_style( 'Opus-Primus-PullQuote', OPUS_EXT_URI . 'pullquotes/opus-primus.pullquote.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
+        wp_enqueue_style( 'Opus-Primus-PullQuote', OPUS_STANZAS_URI . 'pullquotes/opus-primus.pullquote.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
     }
 
     /**

@@ -33,11 +33,11 @@
  */
 
 /** Set CONSTANTS */
-define( 'OPUS_INC',     get_template_directory()        . '/includes/' );
-define( 'OPUS_JS',      get_template_directory_uri()    . '/js/' );
-define( 'OPUS_CSS',     get_template_directory_uri()    . '/css/' );
-define( 'OPUS_EXT',     get_template_directory()        . '/extensions/' );
-define( 'OPUS_EXT_URI', get_template_directory_uri()    . '/extensions/' );
+define( 'OPUS_INC',         get_template_directory()        . '/includes/' );
+define( 'OPUS_JS',          get_template_directory_uri()    . '/js/' );
+define( 'OPUS_CSS',         get_template_directory_uri()    . '/css/' );
+define( 'OPUS_STANZAS',     get_template_directory()        . '/stanzas/' );
+define( 'OPUS_STANZAS_URI', get_template_directory_uri()    . '/stanzas/' );
 
 /** Add Widgets */
 require_once( OPUS_INC . 'widgets.php' );
@@ -64,8 +64,8 @@ require_once( OPUS_INC . 'class.OpusPrimusAuthors.php' );
 /** Add Archives */
 require_once( OPUS_INC . 'class.OpusPrimusArchives.php' );
 
-/** Add Extensions */
-require_once( OPUS_EXT . 'extensions.php' );
+/** Add Stanzas */
+require_once( OPUS_STANZAS . 'stanzas.php' );
 
 /** Testing Purposes */
 define( 'OPUS_WIP', get_template_directory() . '/works-in-progress/' );

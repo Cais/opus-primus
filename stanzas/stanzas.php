@@ -33,4 +33,4 @@
  */
 
 /** Add Pull Quotes */
-require_once( OPUS_EXT . 'pullquotes/class.OpusPrimusPullQuotes.php' );
+require_once( OPUS_STANZAS . 'pullquotes/class.OpusPrimusPullQuotes.php' );
