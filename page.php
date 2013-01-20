@@ -72,7 +72,7 @@ get_header( 'page' ); ?>
         if ( is_active_sidebar( 'after-loop' ) ) { dynamic_sidebar( 'after-loop' ); }
 
         /** Start comments section */
-        comments_template(); ?>
+        comments_template( '/comments.php', true ); ?>
 
     </div><!-- #the-loop -->
 
