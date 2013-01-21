@@ -1,5 +1,5 @@
 === Opus Primus readme.txt ===
-* Last revised January 12, 2013
+* Last revised January 21, 2013
 
 == Contents ==
 * Copyright
@@ -44,13 +44,9 @@ may be, individually noted below.
 version is used. Licensed as Public Domain
 - for more information see http://necolas.github.com/normalize.css/
 
-* less-1.3.0.js is a project by Alexis Sellier. A minimized version is used.
+* less-1.3.3.js is a project by Alexis Sellier. A minimized version is used.
 Licensed under Apache v2.0
 - for more information see https://github.com/cloudhead/less.js
-
-* FitVids is a project by Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com.
-Copyright 2011, released under the WTFPL license - http://sam.zoy.org/wtfpl/
-- for more information see https://github.com/davatron5000/FitVids.js
 
 * Font: Merienda One
 Copyright (c) 2011, Eduardo Tunni (http://www.tipo.net.ar), with Reserved Font Name "Merienda"
@@ -85,8 +81,8 @@ one, two, or three columns depending on which sidebar widget areas are active.
 There are four(4) widget areas built into two sidebar areas.
 
 The following will show how, if active, they affect the layout:
-- Full Page (one-column): no active widget areas
-- Two-Column: widget areas active only in one sidebar area
+- Full Page (one-column): no active sidebar widget areas
+- Two-Column: widget areas active in only one sidebar area
 - Three-Column: at least one widget area active in each sidebar area
 
 == Notes ==

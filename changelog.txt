@@ -1,0 +1,12 @@
+=== Opus Primus ===
+== Version 0.1 ==
+* Initial release
+
+= Current Internet Browsers Reviewed =
+* Apple Safari
+* Firefox
+* Google Chrome
+* Internet Explorer
+* Opera
+
+/** ------------------------------------------------------------------------- */
