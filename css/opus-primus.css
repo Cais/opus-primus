@@ -725,6 +725,9 @@ form#searchform label.screen-reader-text {
     display: none;
     margin: 0;
 }
+ul.featured-search-pages {
+    list-style: none;
+}
 /** End: Search ------------------------------------------------------------- */
 
 /** === Comments === -------------------------------------------------------- */

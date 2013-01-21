@@ -310,7 +310,7 @@ class OpusPrimusNavigation {
         );
         $search_menu_args = wp_parse_args( (array) $defaults, $search_menu_args );
 
-        printf( '<ul class="featured-search-pages"><li><span class="title">%1$s</span>', __( 'Featured Pages:', 'opusprimus' ) );
+        printf( '<ul class="featured search pages"><li><span class="title">%1$s</span>', __( 'Featured Pages:', 'opusprimus' ) );
             wp_nav_menu( $search_menu_args );
         echo '</li></ul><!-- .featured-search-pages -->';
 
