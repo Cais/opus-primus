@@ -161,7 +161,7 @@ class OpusPrimusAuthors {
                 if ( ! empty( $author_id ) ) {
                     echo get_avatar( $author_id );
                 }
-                printf( '<span class="opus-author-about">' . __( 'About %1$s', 'opusprimus' ) . '</span>',
+                printf( '<span class="opus-author-about">%1$s</span>',
                     sprintf( '<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
                         home_url( '/?author=' . $author_id ),
                         esc_attr( sprintf( __( 'View all posts by %1$s', 'opusprimus' ), $author_display_name ) ),
