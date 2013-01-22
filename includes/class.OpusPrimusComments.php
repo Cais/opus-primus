@@ -97,7 +97,7 @@ class OpusPrimusComments {
         if ( ! have_comments() ) {
             printf(
                 '<span class="no-comments-message">' .
-                    apply_filters( 'opus_no_comments_message', __( 'Start a discussion ...', 'opusprimus' ) ) .
+                    apply_filters( 'opus_no_comments_message', __( 'Click here to start a discussion ...', 'opusprimus' ) ) .
                 '</span>' );
         } /** End if - not have comments */
 

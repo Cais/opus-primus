@@ -731,6 +731,11 @@ ul.featured-search-pages {
 /** End: Search ------------------------------------------------------------- */
 
 /** === Comments === -------------------------------------------------------- */
+/** Initial comments-toggle.js class state */
+div#respond.closed {
+    display: none;
+}
+
 .comments-wrapper ul.comments-list,
 .comments-wrapper ul.comments-list li.comment ul.children,
 .comments-wrapper ul.pingbacks-list,
