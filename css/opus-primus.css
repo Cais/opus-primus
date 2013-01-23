@@ -67,6 +67,8 @@
  * === Features ===
  * === Taglines ===
  *
+ * === Miscellaneous ===
+ *
  * === Ain't Miss B. Haven ===
  * Jetpack
  * Twitter oEmbed
@@ -1180,6 +1182,9 @@ h6#site-generator {
 }
 /** End: Features ----------------------------------------------------------- */
 
+/** === Miscellaneous === --------------------------------------------------- */
+.question-mark { cursor: help; }
+/** End: Miscellaneous ------------------------------------------------------ */
 
 /** === Ain't Miss B. Haven === --------------------------------------------- */
 /** Jetpack (WP Stats) - smiley face */

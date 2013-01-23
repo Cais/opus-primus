@@ -36,7 +36,10 @@
 jQuery( document ).ready( function( $ ) {
     /** Note: $() will work as an alias for jQuery() inside of this function */
     $( document ).ready( function() {
-        $( 'span.no-comments-message + div#respond' ).addClass( "closed" );
+        /** Add Question Mark cursor as a visual aid */
+        $( 'span.no-comments-message' ).addClass( 'question-mark' );
+        /** Start toggle class as closed then use click function to change */
+        $( 'span.no-comments-message + div#respond' ).addClass( 'closed' );
         $( 'span.no-comments-message' ).click( function() {
             $( 'span.no-comments-message + div#respond' ).toggleClass( "open" ).toggleClass( "closed" );
         } );
