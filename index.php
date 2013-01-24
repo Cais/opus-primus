@@ -43,7 +43,9 @@ get_header( get_post_format() ); ?>
 
 <div class="content-wrapper cf">
 
-    <?php echo $opus_structures->layout_open(); ?>
+    <?php
+    /** Open the necessary layout CSS classes */
+    echo $opus_structures->layout_open(); ?>
 
     <div class="the-loop">
 
@@ -62,6 +64,7 @@ get_header( get_post_format() ); ?>
     <?php
     get_sidebar( get_post_format() );
 
+    /** Close the classes written by the layout_open call */
     echo $opus_structures->layout_close(); ?>
 
 </div><!-- #content-wrapper -->

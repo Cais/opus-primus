@@ -37,6 +37,158 @@ class OpusPrimusImages {
     /** Construct */
     function __construct(){}
 
+
+    /**
+     * Opus Primus Featured Thumbnail
+     * Adds the featured image / post thumbnail to the post if not in the single
+     * view
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    get_post_thumbnail_id
+     * @uses    has_post_thumbnail
+     * @uses    is_single
+     * @uses    the_post_thumbnail
+     * @uses    the_title_attribute
+     *
+     * @todo clean up and have link display attachment archive
+     */
+    function featured_thumbnail() {
+        if ( has_post_thumbnail() && ! is_single() ) {
+            $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
+            echo '<a class="featured-thumbnail" href="' . $large_image_url[0] . '" title="' . the_title_attribute( 'echo=0' ) . '" >';
+            the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) );
+            echo '</a>';
+        } /** End if - has post thumbnail and not is single */
+    } /** End function - featured thumbnail */
+
+
+    /**
+     * Opus Primus Display EXIF Box
+     * Outputs the EXIF data using a box-model (read: div container)
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    do_action
+     *
+     * @internal see display_exif_table for tabular output
+     */
+    function display_exif_box() {
+        /** Add empty hook before exif box */
+        do_action( 'opus_before_exif_box' );
+
+        /** Wrap the exif output in its own container */
+        echo '<div class="display-exif-box">';
+
+        /** If the exif value is set display it */
+        if ( $this->exif_dimensions() ) {
+            printf( '<p class="exif-dimensions">%1$s</p>', $this->exif_dimensions() );
+        } /** End if */
+        if ( $this->exif_copyright() ) {
+            printf( '<p class="exif-copyright">' . __( 'Copyright: %1$s', 'opusprimus' ) . '</p>', $this->exif_copyright() );
+        } /** End if */
+        if ( $this->exif_timestamp() ) {
+            printf( '<p class="exif-timestamp">' . __( 'Uploaded: %1$s', 'opusprimus' ) . '</p>', $this->exif_timestamp() );
+        } /** End if */
+        if ( $this->exif_camera() ) {
+            printf( '<p class="exif-camera">' . __( 'Camera: %1$s', 'opusprimus' ) . '</p>', $this->exif_camera() );
+        } /** End if */
+        if ( $this->exif_shutter() ) {
+            printf( '<p class="exif-shutter">' . __( 'Shutter Speed: %1$s', 'opusprimus' ) . '</p>', $this->exif_shutter() );
+        } /** End if */
+        if ( $this->exif_aperture() ) {
+            printf( '<p class="exif-aperture">' . __( 'Aperture: F%1$s', 'opusprimus' ) . '</p>', $this->exif_aperture() );
+        } /** End if */
+        if ( $this->exif_caption() ) {
+            printf( '<p class="exif-caption">' . __( 'Caption: %1$s', 'opusprimus' ) . '</p>', $this->exif_caption() );
+        } /** End if */
+        if ( $this->exif_focal_length() ) {
+            printf( '<p class="exif-focal-length>"' . __( 'Focal Length: %1$s', 'opusprimus' ) . '</p>', $this->exif_focal_length() );
+        } /** End if */
+        if ( $this->exif_iso_speed() ) {
+            printf( '<p class="exif-iso-speed">' . __( 'ISO Speed: %1$s', 'opusprimus' ) . '</p>', $this->exif_iso_speed() );
+        } /** End if */
+        if ( $this->exif_title() ) {
+            printf( '<p class="exif-title">' . __( 'Title: %1$s', 'opusprimus' ) . '</p>', $this->exif_title() );
+        } /** End if */
+
+        /** Close display exif box wrapper */
+        echo '</div><!-- .display-exif-box -->';
+
+        /** Add empty hook after exif box */
+        do_action( 'opus_after_exif_box' );
+
+    } /** End function - exif box */
+
+
+    /**
+     * Opus Primus Display EXIF Table
+     * Outputs the EXIF data using a table-model
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    do_action
+     *
+     * @internal see display_exif_box for box-model output
+     */
+    function display_exif_table() {
+        /** Add empty hook before exif table */
+        do_action( 'opus_before_exif_table' ); ?>
+
+    <!-- Provide a CSS class for the exif output -->
+    <table class="display-exif-table">
+        <thead>
+        <tr>
+            <th><?php _e( 'Image Details', 'opusprimus' ); ?></th>
+        </tr>
+        </thead><!-- End table header -->
+        <tbody>
+            <?php
+            /** If the exif value is set display it */
+            if ( $this->exif_dimensions() ) {
+                echo '<tr><td class="exif-dimensions">' . __( 'Dimensions', 'opusprimus' ) . '</td><td>' . $this->exif_dimensions() . '</td></tr>';
+            } /** End if */
+            if ( $this->exif_copyright() ) {
+                echo '<tr><td class="exif-copyright">' . __( 'Copyright', 'opusprimus' ) . '</td><td>' . $this->exif_copyright() . '</td></tr>';
+            } /** End if */
+            if ( $this->exif_timestamp() ) {
+                echo '<tr><td class="exif-timestamp">' . __( 'Uploaded', 'opusprimus' ) . '</td><td>' . $this->exif_timestamp() . '</td></tr>';
+            } /** End if */
+            if ( $this->exif_camera() ) {
+                echo '<tr><td class="exif-camera">' . __( 'Camera', 'opusprimus' ) . '</td><td>' . $this->exif_camera() . '</td></tr>';
+            } /** End if */
+            if ( $this->exif_shutter() ) {
+                echo '<tr><td class="exif-shutter">' . __( 'Shutter Speed', 'opusprimus' ) . '</td><td>' . $this->exif_shutter() . '</td></tr>';
+            } /** End if */
+            if ( $this->exif_aperture() ) {
+                echo '<tr><td class="exif-aperture">' . __( 'Aperture', 'opusprimus' ) . '</td><td>' . 'F' . $this->exif_aperture() . '</td></tr>';
+            } /** End if */
+            if ( $this->exif_caption() ) {
+                echo '<tr><td class="exif-caption">' . __( 'Caption', 'opusprimus' ) . '</td><td>' . $this->exif_caption() . '</td></tr>';
+            } /** End if */
+            if ( $this->exif_focal_length() ) {
+                echo '<tr><td class="exif-focal-length">' . __( 'Focal Length', 'opusprimus' ) . '</td><td>' . $this->exif_focal_length() . '</td></tr>';
+            } /** End if */
+            if ( $this->exif_iso_speed() ) {
+                echo '<tr><td class="exif-iso-speed">' . __( 'ISO Speed', 'opusprimus' ) . '</td><td>' . $this->exif_iso_speed() . '</td></tr>';
+            } /** End if */
+            if ( $this->exif_title() ) {
+                echo '<tr><td class="exif-title">' . __( 'Title', 'opusprimus' ) . '</td><td>' . $this->exif_title() . '</td></tr>';
+            } /** End if */ ?>
+        </tbody><!-- End table body -->
+        <tfoot></tfoot>
+    </table><!-- .display-exif-table -->
+
+    <?php
+        /** Add empty hook after exif table */
+        do_action( 'opus_after_exif_table' );
+
+    } /** End function - exif table */
+
+
     /**
      * Opus Primus EXIF Data
      * Returns an object containing the EXIF data found in an image if it exists
@@ -449,129 +601,7 @@ class OpusPrimusImages {
     } /** End function - exif title */
 
 
-    /**
-     * Opus Primus Display EXIF Box
-     * Outputs the EXIF data using a box-model (read: div container)
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @uses    do_action
-     *
-     * @internal see display_exif_table for tabular output
-     */
-    function display_exif_box() {
-        /** Add empty hook before exif box */
-        do_action( 'opus_before_exif_box' );
-
-        /** Wrap the exif output in its own container */
-        echo '<div class="display-exif-box">';
-
-            /** If the exif value is set display it */
-            if ( $this->exif_dimensions() ) {
-                printf( '<p class="exif-dimensions">%1$s</p>', $this->exif_dimensions() );
-            } /** End if */
-            if ( $this->exif_copyright() ) {
-                printf( '<p class="exif-copyright">' . __( 'Copyright: %1$s', 'opusprimus' ) . '</p>', $this->exif_copyright() );
-            } /** End if */
-            if ( $this->exif_timestamp() ) {
-                printf( '<p class="exif-timestamp">' . __( 'Uploaded: %1$s', 'opusprimus' ) . '</p>', $this->exif_timestamp() );
-            } /** End if */
-            if ( $this->exif_camera() ) {
-                printf( '<p class="exif-camera">' . __( 'Camera: %1$s', 'opusprimus' ) . '</p>', $this->exif_camera() );
-            } /** End if */
-            if ( $this->exif_shutter() ) {
-                printf( '<p class="exif-shutter">' . __( 'Shutter Speed: %1$s', 'opusprimus' ) . '</p>', $this->exif_shutter() );
-            } /** End if */
-            if ( $this->exif_aperture() ) {
-                printf( '<p class="exif-aperture">' . __( 'Aperture: F%1$s', 'opusprimus' ) . '</p>', $this->exif_aperture() );
-            } /** End if */
-            if ( $this->exif_caption() ) {
-                printf( '<p class="exif-caption">' . __( 'Caption: %1$s', 'opusprimus' ) . '</p>', $this->exif_caption() );
-            } /** End if */
-            if ( $this->exif_focal_length() ) {
-                printf( '<p class="exif-focal-length>"' . __( 'Focal Length: %1$s', 'opusprimus' ) . '</p>', $this->exif_focal_length() );
-            } /** End if */
-            if ( $this->exif_iso_speed() ) {
-                printf( '<p class="exif-iso-speed">' . __( 'ISO Speed: %1$s', 'opusprimus' ) . '</p>', $this->exif_iso_speed() );
-            } /** End if */
-            if ( $this->exif_title() ) {
-                printf( '<p class="exif-title">' . __( 'Title: %1$s', 'opusprimus' ) . '</p>', $this->exif_title() );
-            } /** End if */
-
-        /** Close display exif box wrapper */
-        echo '</div><!-- .display-exif-box -->';
-
-        /** Add empty hook after exif box */
-        do_action( 'opus_after_exif_box' );
-
-    } /** End function - exif box */
-
-
-    /**
-     * Opus Primus Display EXIF Table
-     * Outputs the EXIF data using a table-model
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @uses    do_action
-     *
-     * @internal see display_exif_box for box-model output
-     */
-    function display_exif_table() {
-        /** Add empty hook before exif table */
-        do_action( 'opus_before_exif_table' ); ?>
-
-        <!-- Provide a CSS class for the exif output -->
-        <table class="display-exif-table">
-            <thead>
-                <tr>
-                    <th><?php _e( 'Image Details', 'opusprimus' ); ?></th>
-                </tr>
-            </thead><!-- End table header -->
-            <tbody>
-                <?php
-                /** If the exif value is set display it */
-                if ( $this->exif_dimensions() ) {
-                    echo '<tr><td class="exif-dimensions">' . __( 'Dimensions', 'opusprimus' ) . '</td><td>' . $this->exif_dimensions() . '</td></tr>';
-                } /** End if */
-                if ( $this->exif_copyright() ) {
-                    echo '<tr><td class="exif-copyright">' . __( 'Copyright', 'opusprimus' ) . '</td><td>' . $this->exif_copyright() . '</td></tr>';
-                } /** End if */
-                if ( $this->exif_timestamp() ) {
-                    echo '<tr><td class="exif-timestamp">' . __( 'Uploaded', 'opusprimus' ) . '</td><td>' . $this->exif_timestamp() . '</td></tr>';
-                } /** End if */
-                if ( $this->exif_camera() ) {
-                    echo '<tr><td class="exif-camera">' . __( 'Camera', 'opusprimus' ) . '</td><td>' . $this->exif_camera() . '</td></tr>';
-                } /** End if */
-                if ( $this->exif_shutter() ) {
-                    echo '<tr><td class="exif-shutter">' . __( 'Shutter Speed', 'opusprimus' ) . '</td><td>' . $this->exif_shutter() . '</td></tr>';
-                } /** End if */
-                if ( $this->exif_aperture() ) {
-                    echo '<tr><td class="exif-aperture">' . __( 'Aperture', 'opusprimus' ) . '</td><td>' . 'F' . $this->exif_aperture() . '</td></tr>';
-                } /** End if */
-                if ( $this->exif_caption() ) {
-                    echo '<tr><td class="exif-caption">' . __( 'Caption', 'opusprimus' ) . '</td><td>' . $this->exif_caption() . '</td></tr>';
-                } /** End if */
-                if ( $this->exif_focal_length() ) {
-                    echo '<tr><td class="exif-focal-length">' . __( 'Focal Length', 'opusprimus' ) . '</td><td>' . $this->exif_focal_length() . '</td></tr>';
-                } /** End if */
-                if ( $this->exif_iso_speed() ) {
-                    echo '<tr><td class="exif-iso-speed">' . __( 'ISO Speed', 'opusprimus' ) . '</td><td>' . $this->exif_iso_speed() . '</td></tr>';
-                } /** End if */
-                if ( $this->exif_title() ) {
-                    echo '<tr><td class="exif-title">' . __( 'Title', 'opusprimus' ) . '</td><td>' . $this->exif_title() . '</td></tr>';
-                } /** End if */ ?>
-            </tbody><!-- End table body -->
-            <tfoot></tfoot>
-        </table><!-- .display-exif-table -->
-
-        <?php
-        /** Add empty hook after exif table */
-        do_action( 'opus_after_exif_table' );
-
-    } /** End function - exif table */
+    /** -- To be reordered below this line ---------------------------------- */
 
 
     /**
@@ -690,31 +720,6 @@ class OpusPrimusImages {
     <?php
     } /** End function - archive image details */
 
-
-    /**
-     * Opus Primus Featured Thumbnail
-     * Adds the featured image / post thumbnail to the post if not in the single
-     * view
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @uses    get_post_thumbnail_id
-     * @uses    has_post_thumbnail
-     * @uses    is_single
-     * @uses    the_post_thumbnail
-     * @uses    the_title_attribute
-     *
-     * @todo clean up and have link display attachment archive
-     */
-    function featured_thumbnail() {
-        if ( has_post_thumbnail() && ! is_single() ) {
-            $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
-            echo '<a class="featured-thumbnail" href="' . $large_image_url[0] . '" title="' . the_title_attribute( 'echo=0' ) . '" >';
-                the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) );
-            echo '</a>';
-        } /** End if - has post thumbnail and not is single */
-    } /** End function - featured thumbnail */
 
 } /** End of Opus Primus Images class */
 

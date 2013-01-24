@@ -36,44 +36,6 @@ class OpusPrimusArchives {
     /** Construct */
     function __construct() {}
 
-    /**
-     * Opus Primus Top 10 Categories Archive
-     * Displays the top 10 categories by post count as links to the category
-     * archive page. Uses a specific set of `wp_list_categories` parameters that
-     * can be overloaded with other parameters.
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @param   array|string $category_top_10_args
-     *
-     * @uses    wp_list_categories
-     * @uses    wp_parse_args
-     */
-    function top_10_categories_archive( $category_top_10_args = '' ) {
-        /** Add empty hook before category archive */
-        do_action( 'opus_before_category_archive' );
-
-        /** @var $defaults - Set initial parameters */
-        $defaults = array(
-            'orderby'       => 'count',
-            'order'         => 'desc',
-            'show_count'    => 1,
-            'hierarchical'  => 0,
-            'title_li'      => '<span class="title">' . __( 'Top 10 Categories by post count:', 'opusprimus' ) . '</span>',
-            'number'        => 10,
-        );
-        $category_top_10_args = wp_parse_args( (array) $category_top_10_args, $defaults );
-
-        echo '<div class="archive category list top10 cf"><ul>';
-            wp_list_categories( $category_top_10_args );
-        echo '</ul></div><!-- archive.category.list.top10 -->';
-
-        /** Add empty hook after category archive */
-        do_action( 'opus_after_category_archive' );
-
-    } /** End function top 10 categories archive */
-
 
     /**
      * Opus Primus Category Archive
@@ -186,6 +148,49 @@ class OpusPrimusArchives {
         do_action( 'opus_after_archive_cloud' );
 
     } /** End function archive cloud */
+
+
+    /** -- To be reordered below this line ---------------------------------- */
+
+
+    /**
+     * Opus Primus Top 10 Categories Archive
+     * Displays the top 10 categories by post count as links to the category
+     * archive page. Uses a specific set of `wp_list_categories` parameters that
+     * can be overloaded with other parameters.
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @param   array|string $category_top_10_args
+     *
+     * @uses    wp_list_categories
+     * @uses    wp_parse_args
+     */
+    function top_10_categories_archive( $category_top_10_args = '' ) {
+        /** Add empty hook before category archive */
+        do_action( 'opus_before_category_archive' );
+
+        /** @var $defaults - Set initial parameters */
+        $defaults = array(
+            'orderby'       => 'count',
+            'order'         => 'desc',
+            'show_count'    => 1,
+            'hierarchical'  => 0,
+            'title_li'      => '<span class="title">' . __( 'Top 10 Categories by post count:', 'opusprimus' ) . '</span>',
+            'number'        => 10,
+        );
+        $category_top_10_args = wp_parse_args( (array) $category_top_10_args, $defaults );
+
+        echo '<div class="archive category list top10 cf"><ul>';
+            wp_list_categories( $category_top_10_args );
+        echo '</ul></div><!-- archive.category.list.top10 -->';
+
+        /** Add empty hook after category archive */
+        do_action( 'opus_after_category_archive' );
+
+    } /** End function top 10 categories archive */
+
 
 } /** End Class Opus Primus Archives */
 

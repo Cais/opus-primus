@@ -35,12 +35,137 @@
 class OpusPrimusStructures {
     /** Construct */
     function __construct() {
-        /** Add classes to the body tag */
-        add_filter( 'body_class', array( $this, 'body_classes' ) );
         /** Restructure the browser title */
         add_filter( 'wp_title', array( $this, 'browser_title' ), 10, 3 );
+        /** Add classes to the body tag */
+        add_filter( 'body_class', array( $this, 'body_classes' ) );
 
     } /** End function - construct */
+
+
+    /**
+     * Browser Title
+     * Utilizes the `wp_title` filter to add text to the default output
+     *
+     * @package     OpusPrimus
+     * @since       0.1
+     *
+     * @internal    Originally author by Edward Caissie
+     * @link        https://gist.github.com/1410493
+     *
+     * @param       string $old_title - default title text
+     * @param       string $sep - separator character
+     * @param       string $sep_location - left|right - separator placement in relationship to title
+     *
+     * @uses        get_bloginfo - name, description
+     * @uses        is_home
+     * @uses        is_front_page
+     *
+     * @return      string - original title|new title
+     */
+    function browser_title( $old_title, $sep, $sep_location ) {
+        /** Call the page globals for setting page number */
+        global $page, $paged;
+
+        /** Check if this is in a feed; if so, return the title as is */
+        if ( is_feed() ) {
+            return $old_title;
+        } /** End if - is feed */
+
+        /** Set initial title text */
+        $opus_title_text = $old_title . get_bloginfo( 'name' );
+        /** Add wrapping spaces to separator character */
+        $sep = ' ' . $sep . ' ';
+
+        /** Add the blog description (tagline) for the home/front page */
+        $site_tagline = get_bloginfo( 'description', 'display' );
+        if ( $site_tagline && ( is_home() || is_front_page() ) ) {
+            $opus_title_text .= "$sep$site_tagline";
+        } /** End if - site tagline */
+
+        /** Add a page number if necessary */
+        if ( $paged >= 2 || $page >= 2 ) {
+            $opus_title_text .= $sep . sprintf( __( 'Page %s', 'opusprimus' ), max( $paged, $page ) );
+        } /** End if - paged */
+
+        return apply_filters( 'opus_browser_title', $opus_title_text );
+
+    } /** End function - browser title */
+
+
+    /**
+     * Body Classes
+     * A collection of classes added to the HTML body tag for various purposes
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @param   $classes - existing body classes
+     *
+     * @uses    $content_width (global)
+     * @uses    apply_filters
+     * @uses    is_active_sidebar
+     *
+     * @return  string - specific class based on active columns
+     */
+    function body_classes( $classes ) {
+        /** Theme Layout */
+        /** Test if all widget areas are inactive for one-column layout */
+        if ( ! ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) || is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
+            $classes[] = 'one-column';
+        } /** End if - not is active sidebar */
+
+        /** Test if the first-sidebar or second-sidebar is active by testing their component widget areas for a two column layout */
+        if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
+            && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
+                && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) ) {
+            $classes[] = 'two-column';
+        } elseif( ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) )
+            && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
+                && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) ) {
+            $classes[] = 'two-column';
+        } /** End if - is active sidebar */
+
+        /** Test if at least one widget area in each sidebar area is active for a three-column layout */
+        if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) ) && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
+            $classes[] = 'three-column';
+        } /** End if - is active sidebar */
+
+        /** Current Date Classes */
+        /** Year */
+        $current_year = date( 'Y' );
+        $classes[] = 'year-' . $current_year;
+        $leap_year = date( 'L' );
+        if ( '1' == $leap_year ) {
+            $classes[] = 'leap-year';
+        } /** End if - leap year */
+
+        /** Month */
+        $current_month_numeric = date( 'm' );
+        $classes[] = 'month-' . $current_month_numeric;
+        $current_month_short = date( 'M' );
+        $classes[] = 'month-' . strtolower( $current_month_short );
+        $current_month_long = date( 'F' );
+        $classes[] = 'month-' . strtolower( $current_month_long );
+
+        /** Day */
+        $current_day_of_month = date( 'd' );
+        $classes[] = 'day-' . $current_day_of_month;
+        $current_day_of_week_short = date( 'D' );
+        $classes[] = 'day-' . strtolower( $current_day_of_week_short );
+        $current_day_of_week_long = date( 'l' );
+        $classes[] = 'day-' . strtolower( $current_day_of_week_long );
+
+        /** Time: Hour */
+        $current_24_hour = date( 'H' );
+        $classes[] = 'hour-' . $current_24_hour;
+        $current_12_hour = date( 'ha' );
+        $classes[] = 'hour-' . $current_12_hour;
+
+        /** Return the classes for use with the `body_class` filter */
+        return apply_filters( 'opus_primus_body_classes', $classes );
+
+    } /** End function - body classes */
 
 
     /**
@@ -54,7 +179,8 @@ class OpusPrimusStructures {
      * @uses        is_active_sidebar
      *
      * @internal    works in conjunction with layout_close
-     * @internal    $content_width is set based on the amount of columns being displayed and a display using the common 1024px x 768px resolution
+     * @internal    $content_width is set based on the amount of columns being
+     * displayed and a display using the common 1024px x 768px resolution
      *
      * @return      string
      *
@@ -140,157 +266,6 @@ class OpusPrimusStructures {
 
 
     /**
-     * Replace Spaces
-     * Takes a string and replaces the spaces with a single hyphen by default
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @param   string $text
-     * @param   string $replacement
-     *
-     * @return  string - class
-     */
-    function replace_spaces( $text, $replacement='-' ) {
-        /** @var $new_text - initial text set to lower case */
-        $new_text = esc_attr( strtolower( $text ) );
-        /** replace whitespace with a single space */
-        $new_text = preg_replace( '/\s\s+/', ' ', $new_text );
-        /** replace space with a hyphen to create nice CSS classes */
-        $new_text = preg_replace( '/\\040/', $replacement, $new_text );
-
-        /** Return the string with spaces replaced by the replacement variable */
-        return $new_text;
-
-    } /** End function - replace spaces */
-
-
-    /**
-     * Body Classes
-     * A collection of classes added to the HTML body tag for various purposes
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @param   $classes - existing body classes
-     *
-     * @uses    $content_width (global)
-     * @uses    apply_filters
-     * @uses    is_active_sidebar
-     *
-     * @return  string - specific class based on active columns
-     */
-    function body_classes( $classes ) {
-        /** Theme Layout */
-        /** Test if all widget areas are inactive for one-column layout */
-        if ( ! ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) || is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
-            $classes[] = 'one-column';
-        } /** End if - not is active sidebar */
-
-        /** Test if the first-sidebar or second-sidebar is active by testing their component widget areas for a two column layout */
-        if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
-            && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
-                && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) ) {
-            $classes[] = 'two-column';
-        } elseif( ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) )
-            && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
-                && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) ) {
-            $classes[] = 'two-column';
-        } /** End if - is active sidebar */
-
-        /** Test if at least one widget area in each sidebar area is active for a three-column layout */
-        if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) ) && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
-            $classes[] = 'three-column';
-        } /** End if - is active sidebar */
-
-        /** Current Date Classes */
-        /** Year */
-        $current_year = date( 'Y' );
-        $classes[] = 'year-' . $current_year;
-        $leap_year = date( 'L' );
-        if ( '1' == $leap_year ) {
-            $classes[] = 'leap-year';
-        } /** End if - leap year */
-
-        /** Month */
-        $current_month_numeric = date( 'm' );
-        $classes[] = 'month-' . $current_month_numeric;
-        $current_month_short = date( 'M' );
-        $classes[] = 'month-' . strtolower( $current_month_short );
-        $current_month_long = date( 'F' );
-        $classes[] = 'month-' . strtolower( $current_month_long );
-
-        /** Day */
-        $current_day_of_month = date( 'd' );
-        $classes[] = 'day-' . $current_day_of_month;
-        $current_day_of_week_short = date( 'D' );
-        $classes[] = 'day-' . strtolower( $current_day_of_week_short );
-        $current_day_of_week_long = date( 'l' );
-        $classes[] = 'day-' . strtolower( $current_day_of_week_long );
-
-        /** Time: Hour */
-        $current_24_hour = date( 'H' );
-        $classes[] = 'hour-' . $current_24_hour;
-        $current_12_hour = date( 'ha' );
-        $classes[] = 'hour-' . $current_12_hour;
-
-        /** Return the classes for use with the `body_class` filter */
-        return apply_filters( 'opus_primus_body_classes', $classes );
-
-    } /** End function - body classes */
-
-
-    /**
-     * Browser Title
-     * Utilizes the `wp_title` filter to add text to the default output
-     *
-     * @package     OpusPrimus
-     * @since       0.1
-     *
-     * @internal    Originally author by Edward Caissie
-     * @link        https://gist.github.com/1410493
-     *
-     * @param       string $old_title - default title text
-     * @param       string $sep - separator character
-     * @param       string $sep_location - left|right - separator placement in relationship to title
-     *
-     * @uses        get_bloginfo - name, description
-     * @uses        is_home
-     * @uses        is_front_page
-     *
-     * @return      string - original title|new title
-     */
-    function browser_title( $old_title, $sep, $sep_location ) {
-        /** Call the page globals for setting page number */
-        global $page, $paged;
-
-        /** Check if this is in a feed; if so, return the title as is */
-        if ( is_feed() ) {
-            return $old_title;
-        } /** End if - is feed */
-
-        /** Set initial title text */
-        $opus_title_text = $old_title . get_bloginfo( 'name' );
-        /** Add wrapping spaces to separator character */
-        $sep = ' ' . $sep . ' ';
-
-        /** Add the blog description (tagline) for the home/front page */
-        $site_tagline = get_bloginfo( 'description', 'display' );
-        if ( $site_tagline && ( is_home() || is_front_page() ) ) {
-            $opus_title_text .= "$sep$site_tagline";
-        } /** End if - site tagline */
-
-        /** Add a page number if necessary */
-        if ( $paged >= 2 || $page >= 2 ) {
-            $opus_title_text .= $sep . sprintf( __( 'Page %s', 'opusprimus' ), max( $paged, $page ) );
-        } /** End if - paged */
-
-        return apply_filters( 'opus_browser_title', $opus_title_text );
-
-    } /** End function - browser title */
-
-
-    /**
      * the_Loop
      * The most basic structure for the posts loop
      *
@@ -324,82 +299,29 @@ class OpusPrimusStructures {
 
 
     /**
-     * No Search Results
-     * Outputs message if no posts are found by 'the_Loop' query
+     * Replace Spaces
+     * Takes a string and replaces the spaces with a single hyphen by default
      *
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    $opus_archives (global)
-     * @uses    $opus_navigation (global)
-     * @uses    apply_filters
-     * @uses    archive_cloud
-     * @uses    categories_archives
-     * @uses    do_action
-     * @uses    esc_html
-     * @uses    get_search_form
-     * @uses    get_search_query
-     * @uses    search_menu
-     * @uses    top_10_categories_archive
+     * @param   string $text
+     * @param   string $replacement
      *
-     * @todo Add custom searchform.php
+     * @return  string - class
      */
-    function no_search_results(){
-        /** Add empty hook before no posts results from the_loop query */
-        do_action( 'opus_before_search_results' );
+    function replace_spaces( $text, $replacement='-' ) {
+        /** @var $new_text - initial text set to lower case */
+        $new_text = esc_attr( strtolower( $text ) );
+        /** replace whitespace with a single space */
+        $new_text = preg_replace( '/\s\s+/', ' ', $new_text );
+        /** replace space with a hyphen to create nice CSS classes */
+        $new_text = preg_replace( '/\\040/', $replacement, $new_text );
 
-        /** No results from the_loop query */ ?>
-        <h2 class="post-title">
-            <?php
-            printf( __( 'Search Results for: %s', 'opus' ),
-                apply_filters(
-                    'opus_primus_search_results_for_text',
-                    '<span class="search-results">' . esc_html( get_search_query() ) . '</span>'
-                ) ); ?>
-        </h2><!-- .post-title -->
+        /** Return the string with spaces replaced by the replacement variable */
+        return $new_text;
 
-        <?php
-        printf( '<p class="no-results">%1$s</p>',
-            apply_filters(
-                'opus_primus_no_results_text',
-                __( 'No results were found, would you like to try another search ...', 'opusprimus' )
-            ) );
-        get_search_form();
-
-        printf( '<p class="no-results">%1$s</p>',
-            apply_filters(
-                'opus_primus_no_results_links_text',
-                __( '... or try one of the links below.', 'opusprimus' )
-            ) );
-
-        /** Get the class variables */
-        global $opus_archives, $opus_navigation;
-
-        /** Display a list of categories to choose from */
-        $opus_archives->categories_archive( array(
-            'orderby'       => 'count',
-            'order'         => 'desc',
-            'show_count'    => 1,
-            'hierarchical'  => 0,
-            'title_li'      => sprintf( '<span class="title">%1$s</span>', apply_filters( 'opus_primus_category_archives_title', __( 'Top 10 Categories by Post Count:', 'opusprimus' ) ) ),
-            'number'        => 10,
-        ) );
-
-        /** Display a list of tags to choose from */
-        $opus_archives->archive_cloud( array(
-            'taxonomy'  => 'post_tag',
-            'orderby'   => 'count',
-            'order'     => 'DESC',
-            'number'    => 10,
-        ) );
-
-        /** Display a list of pages to choose from */
-        $opus_navigation->search_menu();
-
-        /** Add empty hook after no posts results from the_loop query */
-        do_action( 'opus_after_search_results' );
-
-    } /** End function - no search results */
+    } /** End function - replace spaces */
 
 
     /**
@@ -526,6 +448,86 @@ class OpusPrimusStructures {
         return apply_filters( 'opus_primus_copyright', $output );
 
     } /** End function - copyright */
+
+
+    /**
+     * No Search Results
+     * Outputs message if no posts are found by 'the_Loop' query
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    $opus_archives (global)
+     * @uses    $opus_navigation (global)
+     * @uses    apply_filters
+     * @uses    archive_cloud
+     * @uses    categories_archives
+     * @uses    do_action
+     * @uses    esc_html
+     * @uses    get_search_form
+     * @uses    get_search_query
+     * @uses    search_menu
+     * @uses    top_10_categories_archive
+     *
+     * @todo Add custom searchform.php
+     */
+    function no_search_results(){
+        /** Add empty hook before no posts results from the_loop query */
+        do_action( 'opus_before_search_results' );
+
+        /** No results from the_loop query */ ?>
+        <h2 class="post-title">
+            <?php
+            printf( __( 'Search Results for: %s', 'opus' ),
+                apply_filters(
+                    'opus_primus_search_results_for_text',
+                    '<span class="search-results">' . esc_html( get_search_query() ) . '</span>'
+                ) ); ?>
+        </h2><!-- .post-title -->
+
+        <?php
+        printf( '<p class="no-results">%1$s</p>',
+            apply_filters(
+                'opus_primus_no_results_text',
+                __( 'No results were found, would you like to try another search ...', 'opusprimus' )
+            ) );
+        get_search_form();
+
+        printf( '<p class="no-results">%1$s</p>',
+            apply_filters(
+                'opus_primus_no_results_links_text',
+                __( '... or try one of the links below.', 'opusprimus' )
+            ) );
+
+        /** Get the class variables */
+        global $opus_archives, $opus_navigation;
+
+        /** Display a list of categories to choose from */
+        $opus_archives->categories_archive( array(
+            'orderby'       => 'count',
+            'order'         => 'desc',
+            'show_count'    => 1,
+            'hierarchical'  => 0,
+            'title_li'      => sprintf( '<span class="title">%1$s</span>', apply_filters( 'opus_primus_category_archives_title', __( 'Top 10 Categories by Post Count:', 'opusprimus' ) ) ),
+            'number'        => 10,
+        ) );
+
+        /** Display a list of tags to choose from */
+        $opus_archives->archive_cloud( array(
+            'taxonomy'  => 'post_tag',
+            'orderby'   => 'count',
+            'order'     => 'DESC',
+            'number'    => 10,
+        ) );
+
+        /** Display a list of pages to choose from */
+        $opus_navigation->search_menu();
+
+        /** Add empty hook after no posts results from the_loop query */
+        do_action( 'opus_after_search_results' );
+
+    } /** End function - no search results */
+
 
 } /** End Opus Primus Structures class */
 

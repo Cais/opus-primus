@@ -36,6 +36,7 @@ class OpusPrimusAuthors {
     /** Constructor */
     function __construct() {}
 
+
     /**
      * Post Author
      * Outputs the author details: web address, email, and biography from the
@@ -82,11 +83,11 @@ class OpusPrimusAuthors {
 
         /** Output author details */
         echo '<div class="first-author-details">';
-            printf(
-                '<div class="first-author-details-text">%1$s</div><!-- .first-author-details-text -->',
-                apply_filters( 'opus_first_author_by_text', __( 'Author:', 'opusprimus' ) )
-            );
-            $this->author_details( $opus_author_id, $post_author_args['show_author_url'], $post_author_args['show_author_email'], $post_author_args['show_author_desc'] );
+        printf(
+            '<div class="first-author-details-text">%1$s</div><!-- .first-author-details-text -->',
+            apply_filters( 'opus_first_author_by_text', __( 'Author:', 'opusprimus' ) )
+        );
+        $this->author_details( $opus_author_id, $post_author_args['show_author_url'], $post_author_args['show_author_email'], $post_author_args['show_author_desc'] );
         echo '</div><!-- .first-author-details -->';
         $this->author_coda();
 
@@ -107,11 +108,11 @@ class OpusPrimusAuthors {
 
             /** Output author details based on the last one to edit the post */
             echo '<div class="modified-author-details">';
-                printf(
-                    '<div class="modified-author-details-text">%1$s</div><!-- modified-author-details-text -->',
-                    apply_filters( 'opus_modified_author_by_text', __( 'Modified by:', 'opusprimus' ) )
-                );
-                $this->author_details( $last_id, $post_author_args['show_author_url'], $post_author_args['show_author_email'], $post_author_args['show_author_desc'] );
+            printf(
+                '<div class="modified-author-details-text">%1$s</div><!-- modified-author-details-text -->',
+                apply_filters( 'opus_modified_author_by_text', __( 'Modified by:', 'opusprimus' ) )
+            );
+            $this->author_details( $last_id, $post_author_args['show_author_url'], $post_author_args['show_author_email'], $post_author_args['show_author_desc'] );
             echo '</div><!-- .modified-author-details -->';
             $this->author_coda();
 
@@ -181,11 +182,11 @@ class OpusPrimusAuthors {
                             '<a class="opus-author-email" href="mailto:' .  $author_email . '">' . $author_display_name . '</a>'
                         ); ?>
                     </li>
-                <?php
-                /**
-                 * Check for the author URL; show Author URL is true; and,
-                 * show Author email is false
-                 */
+                    <?php
+                    /**
+                     * Check for the author URL; show Author URL is true; and,
+                     * show Author email is false
+                     */
                 } elseif ( ! empty( $author_url ) && $show_author_url && ! $show_author_email ) { ?>
                     <li>
                         <?php
@@ -193,11 +194,11 @@ class OpusPrimusAuthors {
                             '<a class="opus-author-url" href="' . $author_url . '">' . $author_display_name . '</a>'
                         ); ?>
                     </li>
-                <?php
-                /**
-                 * Check for the author URL; show Author URL is false; and,
-                 * show Author email is true
-                 */
+                    <?php
+                    /**
+                     * Check for the author URL; show Author URL is false; and,
+                     * show Author email is true
+                     */
                 } elseif ( ! empty( $author_url ) && ! $show_author_url && $show_author_email ) { ?>
                     <li>
                         <?php
@@ -205,11 +206,11 @@ class OpusPrimusAuthors {
                             '<a class="opus-author-email" href="mailto:' .  $author_email . '">' . $author_display_name . '</a>'
                         ); ?>
                     </li>
-                <?php
-                /**
-                 * The last option available in this logic chain: no Author
-                 * URL and show Author email is true
-                 */
+                    <?php
+                    /**
+                     * The last option available in this logic chain: no Author
+                     * URL and show Author email is true
+                     */
                 } elseif ( $show_author_email ) { ?>
                     <li>
                         <?php
@@ -217,7 +218,7 @@ class OpusPrimusAuthors {
                             '<a class="opus-author-email" href="mailto:' .  $author_email . '">' . $author_display_name . '</a>'
                         ); ?>
                     </li>
-                <?php } /** End if - show author details */
+                    <?php } /** End if - show author details */
                 /**
                  * Check for the author bio; and, if show Author Desc is true
                  */
@@ -225,11 +226,11 @@ class OpusPrimusAuthors {
                     <li>
                         <?php printf( '<span class="opus-author-biography">' . __( 'Biography: %1$s', 'opusprimus' ) . '</span>', $author_desc ); ?>
                     </li>
-                <?php } /** End if - not empty */ ?>
+                    <?php } /** End if - not empty */ ?>
             </ul><!--  -->
         </div><!-- author details -->
 
-        <?php
+    <?php
         /** Add empty hook after author details */
         do_action( 'opus_after_author_details' );
 
@@ -301,6 +302,7 @@ class OpusPrimusAuthors {
         do_action( 'opus_after_author_coda' );
 
     } /** End function  - author coda */
+
 
 } /** End of Class Opus Primus Authors */
 

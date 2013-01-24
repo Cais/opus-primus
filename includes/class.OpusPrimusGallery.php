@@ -37,6 +37,10 @@ class OpusPrimusGallery {
     /** Construct */
     function __construct() {}
 
+
+    /** -- To be reordered below this line ---------------------------------- */
+
+
     /**
      * Get Gallery Shortcode Attribute Featured ids
      * Using the shortcode regex find the attributes for the gallery shortcode
