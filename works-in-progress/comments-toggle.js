@@ -36,6 +36,13 @@
 jQuery( document ).ready( function( $ ) {
     /** Note: $() will work as an alias for jQuery() inside of this function */
     $( document ).ready( function() {
+        /** Add id to link to from index page */
+        $( '.comments-wrapper' ).attr( 'id', 'comments-toggle-respond' );
+
+        // var linkage = $('a.comments-link').attr('href').replace('#respond','#comments-toggle-respond');
+        // alert (linkage);
+        $('a.comments-link').attr('href').replace('#respond','#comments-toggle-respond');
+
         /** Add Question Mark cursor as a visual aid */
         $( 'span.no-comments-message' ).addClass( 'question-mark' );
         /** Start toggle class as closed then use click function to change */
