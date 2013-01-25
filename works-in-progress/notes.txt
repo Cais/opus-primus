@@ -2,16 +2,8 @@ NOTES.TXT
 =========
 A free-form scratchpad for ideas and other notes related to the project.
 
-Implement the following to allow for Custom Post Types (in all loops)?
-                if ( get_post_type() == 'post' ) {
-                    get_template_part( 'loops/opus-primus', get_post_format() );
-                } else {
-                    get_template_part( 'loops/opus-primus', get_post_type() );
-                }
-
 * Comments Toggle JavaScript / jQuery
 - see comments-toggle.js
 - use with (in functions or Comments class?):
     /** Enqueue Comments Toggle JavaScript which will enqueue jQuery as a dependency */
     wp_enqueue_script( 'opus-primus-comments-toggle', OPUS_JS . 'comments-toggle.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
-
