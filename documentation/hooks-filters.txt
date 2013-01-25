@@ -47,10 +47,10 @@
 
 = class.OpusPrimusStructures.php =
 * opus_browser_title
-* opus_primus_body_classes
-* opus_primus_credits
-* opus_primus_copyright
-* opus_primus_search_results_for_text
-* opus_primus_no_results_text
-* opus_primus_no_results_links_text
-* opus_primus_category_archives_title
+* opus_body_classes
+* opus_credits
+* opus_copyright
+* opus_search_results_for_text
+* opus_no_results_text
+* opus_no_results_links_text
+* opus_category_archives_title

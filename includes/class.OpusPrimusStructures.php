@@ -163,7 +163,7 @@ class OpusPrimusStructures {
         $classes[] = 'hour-' . $current_12_hour;
 
         /** Return the classes for use with the `body_class` filter */
-        return apply_filters( 'opus_primus_body_classes', $classes );
+        return apply_filters( 'opus_body_classes', $classes );
 
     } /** End function - body classes */
 
@@ -269,7 +269,7 @@ class OpusPrimusStructures {
      * the_Loop
      * The most basic structure for the posts loop
      *
-     * @package Opus_primus
+     * @package OpusPrimus
      * @since   0.1
      *
      * @uses    $opus_navigation (global)
@@ -372,7 +372,7 @@ class OpusPrimusStructures {
             );
         } /** End if - is child theme */
 
-        return apply_filters( 'opus_primus_credits', $credits );
+        return apply_filters( 'opus_credits', $credits );
 
     } /** End function - credits */
 
@@ -386,7 +386,7 @@ class OpusPrimusStructures {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @internal $output can be filtered via the `opus_primus_copyright` hook
+     * @internal $output can be filtered via the `opus_copyright` hook
      *
      * @uses    apply_filters
      * @uses    get_bloginfo
@@ -445,7 +445,7 @@ class OpusPrimusStructures {
         /** Append usage terms */
         $output .= ' ' . __( 'All Rights Reserved.', 'opusprimus' );
 
-        return apply_filters( 'opus_primus_copyright', $output );
+        return apply_filters( 'opus_copyright', $output );
 
     } /** End function - copyright */
 
@@ -480,7 +480,7 @@ class OpusPrimusStructures {
             <?php
             printf( __( 'Search Results for: %s', 'opus' ),
                 apply_filters(
-                    'opus_primus_search_results_for_text',
+                    'opus_search_results_for_text',
                     '<span class="search-results">' . esc_html( get_search_query() ) . '</span>'
                 ) ); ?>
         </h2><!-- .post-title -->
@@ -488,14 +488,14 @@ class OpusPrimusStructures {
         <?php
         printf( '<p class="no-results">%1$s</p>',
             apply_filters(
-                'opus_primus_no_results_text',
+                'opus_no_results_text',
                 __( 'No results were found, would you like to try another search ...', 'opusprimus' )
             ) );
         get_search_form();
 
         printf( '<p class="no-results">%1$s</p>',
             apply_filters(
-                'opus_primus_no_results_links_text',
+                'opus_no_results_links_text',
                 __( '... or try one of the links below.', 'opusprimus' )
             ) );
 
@@ -508,7 +508,7 @@ class OpusPrimusStructures {
             'order'         => 'desc',
             'show_count'    => 1,
             'hierarchical'  => 0,
-            'title_li'      => sprintf( '<span class="title">%1$s</span>', apply_filters( 'opus_primus_category_archives_title', __( 'Top 10 Categories by Post Count:', 'opusprimus' ) ) ),
+            'title_li'      => sprintf( '<span class="title">%1$s</span>', apply_filters( 'opus_category_archives_title', __( 'Top 10 Categories by Post Count:', 'opusprimus' ) ) ),
             'number'        => 10,
         ) );
 
@@ -541,4 +541,4 @@ function opus_test() {
 // add_action( 'opus_before_modified_post', 'opus_test' );
 // add_filter( 'opus_modified_author_by_text', 'opus_test' );
 // add_filter( 'opus_author_coda', 'opus_test' );
-// add_filter( 'opus_primus_category_archives_title', 'opus_test' );
+// add_filter( 'opus_category_archives_title', 'opus_test' );
