@@ -196,6 +196,61 @@ class OpusPrimusNavigation {
 
 
     /**
+     * Image Navigation
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    __
+     * @uses    do_action
+     * @uses    next_image_link
+     * @uses    previous_image_link
+     */
+    function image_nav() {
+        /** Add empty hook before the image navigation */
+        do_action( 'opus_before_image_nav' );
+
+        /** Add navigation links between pictures in the gallery */
+        echo '<div class="opus-image-navigation cf">';
+        echo previous_image_link( false, '<span class="left">' . __( 'Previous Photo', 'opusprimus' ) . '</span>' );
+        echo next_image_link( false, '<span class="right">' . __( 'Next Photo', 'opusprimus' ) . '</span>' );
+        echo '</div><!-- .opus-image-navigation -->';
+
+        /** Add empty hook after the image navigation */
+        do_action( 'opus_after_image_nav' );
+
+    } /** End function - image nav */
+
+
+    /**
+     * Posts Link
+     * Outputs the navigation structure to move between archive pages
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    do_action
+     * @uses    next_posts_link
+     * @uses    previous_posts_link
+     */
+    function posts_link() {
+        /** Add empty hook before posts link */
+        do_action( 'opus_before_posts_link' );
+
+        /** Posts link navigation */ ?>
+    <p class="navigation posts-link cf">
+        <span class="right"><?php next_posts_link(); ?></span>
+        <span class="left"><?php previous_posts_link(); ?></span>
+    </p>
+
+    <?php
+        /** Add empty hook after posts link */
+        do_action( 'opus_after_posts_link' );
+
+    } /** End function - posts link */
+
+
+    /**
      * Search Menu
      * Search results navigation menu
      *
@@ -259,62 +314,9 @@ class OpusPrimusNavigation {
     } /** End function - search page menu */
 
 
-    /** -- To be reordered below this line ---------------------------------- */
-
-
     /**
-     * Posts Link
-     * Outputs the navigation structure to move between archive pages
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @uses    do_action
-     * @uses    next_posts_link
-     * @uses    previous_posts_link
+     * @todo Review below this line --------------------------------------------
      */
-    function posts_link() {
-        /** Add empty hook before posts link */
-        do_action( 'opus_before_posts_link' );
-
-        /** Posts link navigation */ ?>
-        <p class="navigation posts-link cf">
-            <span class="right"><?php next_posts_link(); ?></span>
-            <span class="left"><?php previous_posts_link(); ?></span>
-        </p>
-
-        <?php
-        /** Add empty hook after posts link */
-        do_action( 'opus_after_posts_link' );
-
-    } /** End function - posts link */
-
-
-    /**
-     * Image Navigation
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @uses    __
-     * @uses    do_action
-     * @uses    next_image_link
-     * @uses    previous_image_link
-     */
-    function image_nav() {
-        /** Add empty hook before the image navigation */
-        do_action( 'opus_before_image_nav' );
-
-        /** Add navigation links between pictures in the gallery */
-        echo '<div class="opus-image-navigation cf">';
-            echo previous_image_link( false, '<span class="left">' . __( 'Previous Photo', 'opusprimus' ) . '</span>' );
-            echo next_image_link( false, '<span class="right">' . __( 'Next Photo', 'opusprimus' ) . '</span>' );
-        echo '</div><!-- .opus-image-navigation -->';
-
-        /** Add empty hook after the image navigation */
-        do_action( 'opus_after_image_nav' );
-
-    } /** End function - image nav */
 
 
     /**
