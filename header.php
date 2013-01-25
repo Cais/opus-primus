@@ -48,7 +48,7 @@
 <div id="opus-primus">
     <?php
     /** Add empty hook before header */
-    do_action( 'opus_primus_before_header' );
+    do_action( 'opus_before_header' );
 
     /** Call header template with reference to post format */
     if ( have_posts() ) {
@@ -58,4 +58,4 @@
     } /** End if - have posts */
 
     /** Add empty hook after header */
-    do_action( 'opus_primus_after_header' );
+    do_action( 'opus_after_header' );

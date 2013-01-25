@@ -33,7 +33,7 @@
  */
 
 /** Add empty hook at beginning of footer */
-do_action( 'opus_primus_before_footer' );
+do_action( 'opus_before_footer' );
 
 /** Call footer template based on post format */
 if ( have_posts() ) {
@@ -43,7 +43,7 @@ if ( have_posts() ) {
 } /** End if - have posts */
 
 /** Add empty hook at end of footer */
-do_action( 'opus_primus_before_wp_footer' );
+do_action( 'opus_before_wp_footer' );
 
 /**
  * `wp_footer` is placed inside the #opus-primus element to provide a container

@@ -6,29 +6,29 @@
 === Actions ===
 == \ ==
 = footer.php =
-* opus_primus_before_footer
-* opus_primus_before_wp_footer
+* opus_before_footer
+* opus_before_wp_footer
 
 = header.php =
-* opus_primus_before_header
-* opus_primus_after_header
+* opus_before_header
+* opus_after_header
 
 = sidebar-footer.php =
-* opus_primus_before_sidebar_footer
-* opus_primus_after_sidebar_footer
+* opus_before_sidebar_footer
+* opus_after_sidebar_footer
 
 = sidebar-header.php =
-* opus_primus_before_sidebar_header
-* opus_primus_after_sidebar_header
+* opus_before_sidebar_header
+* opus_after_sidebar_header
 
 == \headers ==
 = header.php =
-* opus_primus_before_site_title
-* opus_primus_after_site_title
-* opus_primus_before_site_description
-* opus_primus_after_site_description
-* opus_primus_before_nav
-* opus_primus_after_nav
+* opus_before_site_title
+* opus_after_site_title
+* opus_before_site_description
+* opus_after_site_description
+* opus_before_nav
+* opus_after_nav
 
 == \includes ==
 = class.OpusPrimusArchives.php =

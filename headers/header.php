@@ -39,7 +39,7 @@
 
         <?php
         /** Add empty hook before site title */
-        do_action( 'opus_primus_before_site_title' ); ?>
+        do_action( 'opus_before_site_title' ); ?>
 
         <h1 id="site-title">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
@@ -52,8 +52,8 @@
          * Add empty hooks between the site title and description ... now we're
          * really writing Mallory-Everest code but someone might want this.
          */
-        do_action( 'opus_primus_after_site_title' );
-        do_action( 'opus_primus_before_site_description' ); ?>
+        do_action( 'opus_after_site_title' );
+        do_action( 'opus_before_site_description' ); ?>
 
         <h2 id="site-description">
             <?php bloginfo( 'description' ); ?>
@@ -61,7 +61,7 @@
 
         <?php
         /** Add empty hook after site description */
-        do_action( 'opus_primus_after_site_description' ); ?>
+        do_action( 'opus_after_site_description' ); ?>
 
     </hgroup><!-- End header group section -->
 
@@ -71,7 +71,7 @@
 
     <?php
     /** Add empty hook before primary navigation */
-    do_action( 'opus_primus_before_nav' ); ?>
+    do_action( 'opus_before_nav' ); ?>
 
     <nav>
         <?php global $opus_navigation; $opus_navigation->primary_menu(); ?>
@@ -79,6 +79,6 @@
 
     <?php
     /** Add empty hook after primary navigation */
-    do_action( 'opus_primus_after_nav' ); ?>
+    do_action( 'opus_after_nav' ); ?>
 
 </header><!-- End header section -->

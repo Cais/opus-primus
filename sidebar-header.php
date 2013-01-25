@@ -33,7 +33,7 @@
  */
 
 /** Add empty hook before Sidebar-Header */
-do_action( 'opus_primus_before_sidebar_header' );
+do_action( 'opus_before_sidebar_header' );
 
 /** Only resolve public facing space if there is an active header widget area. */
 if ( is_active_sidebar( 'header-middle' ) || is_active_sidebar( 'header-left' ) || is_active_sidebar( 'header-right' ) ) { ?>
@@ -64,4 +64,4 @@ if ( is_active_sidebar( 'header-middle' ) || is_active_sidebar( 'header-left' ) 
 } /** End if - is active sidebar */
 
 /** Add empty hook after Sidebar-Header */
-do_action( 'opus_primus_after_sidebar_header' );
+do_action( 'opus_after_sidebar_header' );
