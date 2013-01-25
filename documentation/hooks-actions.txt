@@ -1,0 +1,115 @@
+==== Hooks: Actions ====
+* Listing by File
+* Sorted Alphabetically
+* In Order of Appearance
+
+=== Actions ===
+== \ ==
+= footer.php =
+* opus_primus_before_footer
+* opus_primus_before_wp_footer
+
+= header.php =
+* opus_primus_before_header
+* opus_primus_after_header
+
+= sidebar-footer.php =
+* opus_primus_before_sidebar_footer
+* opus_primus_after_sidebar_footer
+
+= sidebar-header.php =
+* opus_primus_before_sidebar_header
+* opus_primus_after_sidebar_header
+
+== \headers ==
+= header.php =
+* opus_primus_before_site_title
+* opus_primus_after_site_title
+* opus_primus_before_site_description
+* opus_primus_after_site_description
+* opus_primus_before_nav
+* opus_primus_after_nav
+
+== \includes ==
+= class.OpusPrimusArchives.php =
+* opus_before_category_archive
+* opus_after_category_archive
+* opus_before_archive_cloud
+* opus_after_archive_cloud
+
+= class.OpusPrimusAuthors.php =
+* opus_post_author_top
+* opus_before_author_details
+* opus_after_author_details
+* opus_before_modified_author_details
+* opus_after_modified_author_details
+* opus_before_author_coda
+* opus_after_author_coda
+
+= class.OpusPrimusComments.php =
+* opus_before_comments_link
+* opus_after_comments_link
+
+= class.OpusPrimusGallery.php =
+* opus_before_featured_image
+* opus_after_featured_image
+* opus_before_secondary_images
+* opus_after_secondary_images
+
+= class.OpusPrimusImages.php =
+* opus_before_exif_box
+* opus_after_exif_box
+* opus_before_exif_table
+* opus_after_exif_table
+* opus_before_exif_dimensions
+* opus_before_exif_copyright
+* opus_before_exif_timestamp
+* opus_before_exif_camera
+* opus_before_exif_shutter
+* opus_before_exif_aperture
+* opus_before_exif_caption
+* opus_before_exif_focal_length
+* opus_before_exif_iso_speed
+* opus_before_exif_title
+* opus_before_image_title
+* opus_after_image_title
+
+= class.OpusPrimusNavigation.php =
+* opus_before_primary_menu
+* opus_after_primary_menu
+* opus_before_links_pages
+* opus_after_links_pages
+* opus_before_comments_link
+* opus_after_comments_link
+* opus_before_post_link
+* opus_after_post_link
+* opus_before_image_nav
+* opus_after_image_nav
+* opus_before_posts_link
+* opus_after_posts_link
+* opus_before_search_menu
+* opus_after_search_menu
+* opus_before_secondary_menu
+* opus_after_secondary_menu
+
+= class.OpusPrimusPosts.php =
+* opus_before_post_byline
+* opus_after_post_byline
+* opus_before_modified_post
+* opus_after_modified_post
+* opus_before_post_title
+* opus_after_post_title
+* opus_before_the_content
+* opus_after_the_content
+* opus_before_the_excerpt
+* opus_after_the_excerpt
+* opus_before_status_update
+* opus_after_status_update
+* opus_before_meta_tags
+* opus_after_meta_tags
+* opus_before_post_coda
+* opus_after_post_coda
+
+= class.OpusPrimusStructures.php =
+* opus_before_search_results
+* opus_after_search_results

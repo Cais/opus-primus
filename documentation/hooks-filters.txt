@@ -1,0 +1,56 @@
+==== Hooks: Filters ====
+* Listing by File
+* Sorted Alphabetically
+* In Order of Appearance
+
+=== Filters ===
+== \includes ==
+= class.OpusPrimusAuthors.php =
+* opus_first_author_by_text
+* opus_modified_author_by_text
+* opus_author_coda
+
+= class.OpusPrimusComments.php =
+* opus_comments_password_required
+* opus_no_comments_message
+* opus_comments_form_closed
+
+= class.OpusPrimusGallery.php =
+* opus_more_images_text
+
+= class.OpusPrimusImages.php =
+* opus_exif_dimensions
+* opus_exif_copyright
+* opus_exif_timestamp
+* opus_exif_camera
+* opus_exif_shutter
+* opus_exif_aperture
+* opus_exif_caption
+* opus_exif_focal_length
+* opus_exif_iso_speed
+* opus_exif_title
+
+= class.OpusPrimusMetaBoxes.php =
+* opus_taglines_meta_box_title
+* opus_taglines_text_field_description
+* opus_tagline_output
+
+= class.OpusPrimusPosts.php =
+* opus_post_byline_details
+* opus_no_title_link
+* opus_mod_different_author_phrase
+* opus_mod_same_author_phrase
+* opus_default_sticky_flag
+* opus_sticky_flag
+* opus_post_format_flag
+* opus_post_coda
+
+= class.OpusPrimusStructures.php =
+* opus_browser_title
+* opus_primus_body_classes
+* opus_primus_credits
+* opus_primus_copyright
+* opus_primus_search_results_for_text
+* opus_primus_no_results_text
+* opus_primus_no_results_links_text
+* opus_primus_category_archives_title
