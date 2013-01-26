@@ -136,5 +136,7 @@
 * opus_after_post_coda
 
 = class.OpusPrimusStructures.php =
+* opus_before_get_template_part
+* opus_after_get_template_part
 * opus_before_search_results
 * opus_after_search_results

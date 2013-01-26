@@ -285,7 +285,15 @@ class OpusPrimusStructures {
         if ( have_posts() ) {
             while ( have_posts() ) {
                 the_post();
+
+                /** Add empty hook before get_template_part */
+                do_action( 'opus_before_get_template_part' );
+
                 get_template_part( 'loops/opus-primus', get_post_format() );
+
+                /** Add empty hook after get_template_part */
+                do_action( 'opus_after_get_template_part' );
+
             } /** End while - have posts */
         } else {
             $this->no_search_results();
