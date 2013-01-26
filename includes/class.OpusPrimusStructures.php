@@ -543,10 +543,15 @@ class OpusPrimusStructures {
 $opus_structures = new OpusPrimusStructures();
 
 /** Testing ... testing ... testing ... */
-function opus_test() {
+function get_opus_test() {
     return 'BACON Test!!! PS: This works, too!<br />';
 }
+function opus_test() {
+    echo get_opus_test();
+}
 // add_action( 'opus_before_modified_post', 'opus_test' );
-// add_filter( 'opus_modified_author_by_text', 'opus_test' );
-// add_filter( 'opus_author_coda', 'opus_test' );
-// add_filter( 'opus_category_archives_title', 'opus_test' );
+// add_action( 'opus_before_get_template_part', 'opus_test' );
+
+// add_filter( 'opus_modified_author_by_text', 'get_opus_test' );
+// add_filter( 'opus_author_coda', 'get_opus_test' );
+// add_filter( 'opus_category_archives_title', 'get_opus_test' );
