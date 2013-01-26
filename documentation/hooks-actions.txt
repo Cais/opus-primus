@@ -2,9 +2,22 @@
 * Listing by File
 * Sorted Alphabetically
 * In Order of Appearance
+* Last revised January 26, 2013
 
 === Actions ===
 == \ ==
+= 404.php =
+* opus_before_the_loop
+* opus_after_the_loop
+
+= archive.php =
+* opus_before_the_loop
+* opus_after_the_loop
+
+= author.php =
+* opus_before_the_loop
+* opus_after_the_loop
+
 = footer.php =
 * opus_before_footer
 * opus_before_wp_footer
@@ -13,6 +26,14 @@
 * opus_before_header
 * opus_after_header
 
+= index.php =
+* opus_before_the_loop
+* opus_after_the_loop
+
+= page.php =
+* opus_before_the_loop
+* opus_after_the_loop
+
 = sidebar-footer.php =
 * opus_before_sidebar_footer
 * opus_after_sidebar_footer
@@ -20,6 +41,10 @@
 = sidebar-header.php =
 * opus_before_sidebar_header
 * opus_after_sidebar_header
+
+= single.php =
+* opus_before_the_loop
+* opus_after_the_loop
 
 == \headers ==
 = header.php =

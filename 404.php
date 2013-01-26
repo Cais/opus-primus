@@ -37,7 +37,13 @@ get_header( '404' ); ?>
 
 <div class="content-wrapper cf">
 
-    <?php echo $opus_structures->layout_open(); ?>
+    <?php
+    /** Open the necessary layout CSS classes */
+    echo $opus_structures->layout_open();
+
+    /** Add empty action before the_Loop */
+    do_action( 'opus_before_the_loop' ); ?>
+
     <div class="the-loop">
 
         <?php
@@ -79,7 +85,12 @@ get_header( '404' ); ?>
     </div><!-- #the-loop -->
 
     <?php
+    /** Add empty action after the_Loop */
+    do_action( 'opus_after_the_loop' );
+
     get_sidebar( '404' );
+
+    /** Close the classes written by the layout_open call */
     echo $opus_structures->layout_close(); ?>
 
 </div><!-- #content-wrapper -->

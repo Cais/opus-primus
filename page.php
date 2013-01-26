@@ -37,7 +37,12 @@ get_header( 'page' ); ?>
 
 <div class="content-wrapper cf">
 
-    <?php echo $opus_structures->layout_open(); ?>
+    <?php
+    /** Open the necessary layout CSS classes */
+    echo $opus_structures->layout_open();
+
+    /** Add empty hook before the_Loop */
+    do_action( 'opus_before_the_loop' ); ?>
 
     <div class="the-loop">
 
@@ -77,8 +82,12 @@ get_header( 'page' ); ?>
     </div><!-- #the-loop -->
 
     <?php
+    /** Add empty hook after the_loop */
+    do_action( 'opus_after_the_loop' );
+
     get_sidebar( 'page' );
 
+    /** Close the classes written by the layout_open call */
     echo $opus_structures->layout_close(); ?>
 
 </div><!-- #content-wrapper -->

@@ -36,7 +36,12 @@ get_header( get_post_format() ); ?>
 
 <div class="content-wrapper cf">
 
-    <?php echo $opus_structures->layout_open(); ?>
+    <?php
+    /** Open the necessary layout CSS classes */
+    echo $opus_structures->layout_open();
+
+    /** Add empty action before the_Loop */
+    do_action( 'opus_before_the_loop' ); ?>
 
     <div class="the-loop">
 
@@ -53,8 +58,12 @@ get_header( get_post_format() ); ?>
     </div><!-- #the-loop -->
 
     <?php
+    /** Add empty action after the_Loop */
+    do_action( 'opus_after_the_loop' );
+
     get_sidebar( get_post_format() );
 
+    /** Close the classes written by the layout_open call */
     echo $opus_structures->layout_close(); ?>
 
 </div><!-- #content-wrapper -->

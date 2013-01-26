@@ -45,7 +45,12 @@ if ( have_posts() ) {
 
 <div class="content-wrapper cf">
 
-    <?php echo $opus_structures->layout_open(); ?>
+    <?php
+    /** Open the necessary layout CSS classes */
+    echo $opus_structures->layout_open();
+
+    /** Add empty action before the_Loop */
+    do_action( 'opus_before_the_loop' ); ?>
 
     <div class="the-loop">
 
@@ -62,12 +67,16 @@ if ( have_posts() ) {
     </div><!-- #the-loop -->
 
     <?php
+    /** Add empty action after the_Loop */
+    do_action( 'opus_after_the_loop' );
+
     if ( have_posts() ) {
         get_sidebar( get_post_format() );
     } else {
         get_sidebar();
     } /** End if - have posts */
 
+    /** Close the classes written by the layout_open call */
     echo $opus_structures->layout_close(); ?>
 
 </div><!-- #content-wrapper -->
