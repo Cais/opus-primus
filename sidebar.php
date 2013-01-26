@@ -29,7 +29,13 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
- */ ?>
+ */
+
+/** Add empty hook before sidebars */
+do_action( 'opus_before_sidebars' );
+
+/** Add empty hook before first sidebar */
+do_action( 'opus_before_first_sidebar' ); ?>
 
 <div class="first-sidebar">
 
@@ -43,6 +49,13 @@
 
 </div><!-- #first-sidebar -->
 
+<?php
+/** Add empty hook after first sidebar */
+do_action( 'opus_after_first_sidebar' );
+
+/** Add empty hook before second sidebar */
+do_action( 'opus_before_second_sidebar' ); ?>
+
 <div class="second-sidebar">
 
     <ul id="sidebar-three">
@@ -54,3 +67,10 @@
     </ul><!-- #sidebar-four -->
 
 </div><!-- #second-sidebar -->
+
+<?php
+/** Add empty hook after second sidebar */
+do_action( 'opus_after_second_sidebar' );
+
+/** Add empty hook after sidebars */
+do_action( 'opus_after_sidebars' );

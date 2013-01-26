@@ -34,6 +34,14 @@
 * opus_before_the_loop
 * opus_after_the_loop
 
+= sidebar.php =
+* opus_before_sidebars
+* opus_before_first_sidebar
+* opus_after_first_sidebar
+* opus_before_second_sidebar
+* opus_after_second_sidebar
+* opus_after_sidebars
+
 = sidebar-footer.php =
 * opus_before_sidebar_footer
 * opus_after_sidebar_footer
