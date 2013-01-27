@@ -47,10 +47,21 @@ get_header( '404' ); ?>
     <div class="the-loop">
 
         <?php
-        printf( '<h1 class="opus_404_title_text">%1$s</h1>', __( 'This is the 404 error page!', 'opusprimus' ) );
-        printf( '<p class="opus_404_message_text">%1$s</p>', __( 'Something seems to have gone bust.', 'opusprimus' ) );
+        printf( '<h1 class="opus_404_title_text">%1$s</h1>',
+            apply_filters( 'opus_404_title_text', __( 'Something seems to have gone bust ...', 'opusprimus' ) )
+        );
 
-        printf( '<p class="opus_404_posts_text">%1$s</p>', __( 'Were you looking for a recent post?', 'opusprimus' ) );
+        /** Use action hook to add image - see Structures class for hook call */
+        do_action( 'opus_404_image' );
+
+        printf( '<p class="opus_404_message_text">%1$s</p>',
+            apply_filters( 'opus_404_message_text' , __( 'This is the 404 error page; we seemed to have lost what you are looking for.', 'opusprimus' ) )
+        );
+
+        printf( '<p class="opus_404_posts_text">%1$s</p>',
+            apply_filters( 'opus_404_posts_text', __( 'Were you looking for a recent post?', 'opusprimus' ) )
+        );
+
         /** Use the_widget to display a list of recent posts */
         the_widget (
             'WP_Widget_Recent_Posts',
@@ -62,7 +73,10 @@ get_header( '404' ); ?>
         );
 
         /** Display links to archives */
-        printf( '<p class="opus_404_category_text">%1$s</p>', __( 'Maybe you looking for one these categories ...', 'opusprimus' ) );
+        printf( '<p class="opus_404_category_text">%1$s</p>',
+            apply_filters( 'opus_404_category_text', __( 'Maybe you looking for one these categories ...', 'opusprimus' ) )
+        );
+
         /** Display a list of categories to choose from */
         $opus_archives->categories_archive( array(
             'orderby'       => 'count',
@@ -73,7 +87,10 @@ get_header( '404' ); ?>
             'number'        => 10,
         ) );
 
-        printf( '<p class="opus_404_tag_text">%1$s</p>', __( '... or maybe you are interested in one of these tags?', 'opusprimus' ) );
+        printf( '<p class="opus_404_tag_text">%1$s</p>',
+            apply_filters( 'opus_404_tag_text', __( '... or maybe you are interested in one of these tags?', 'opusprimus' ) )
+        );
+
         /** Display a list of tags to choose from */
         $opus_archives->archive_cloud( array(
             'taxonomy'  => 'post_tag',

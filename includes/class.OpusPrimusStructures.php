@@ -40,6 +40,9 @@ class OpusPrimusStructures {
         /** Add classes to the body tag */
         add_filter( 'body_class', array( $this, 'body_classes' ) );
 
+        /** Hooks into the 404 page image placeholder action hook */
+        add_action( 'opus_404_image', array( $this, 'show_bust_image' ) );
+
     } /** End function - construct */
 
 
@@ -535,6 +538,34 @@ class OpusPrimusStructures {
         do_action( 'opus_after_search_results' );
 
     } /** End function - no search results */
+
+
+    /**
+     * Bust Image
+     * Returns the url for the image used on the 404 page
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    get_template_directory_uri
+     *
+     * @return string - URL of image
+     */
+    function bust_image() {
+        $bust_image_location = OPUS_IMAGES . 'broken_beethoven.png';
+        return '<img src="' . $bust_image_location  . '" />';
+    }
+
+    /**
+     * Show Bust Image
+     * Writes the bust image url to the screen
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     */
+    function show_bust_image() {
+        echo $this->bust_image();
+    }
 
 
 } /** End Opus Primus Structures class */

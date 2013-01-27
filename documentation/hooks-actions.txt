@@ -2,12 +2,13 @@
 * Listing by File
 * Sorted Alphabetically
 * In Order of Appearance
-* Last revised January 26, 2013
+* Last revised January 27, 2013
 
 === Actions ===
 == \ ==
 = 404.php =
 * opus_before_the_loop
+* opus_404_image
 * opus_after_the_loop
 
 = archive.php =

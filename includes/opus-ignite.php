@@ -36,6 +36,7 @@
 define( 'OPUS_INC',         get_template_directory()        . '/includes/' );
 define( 'OPUS_JS',          get_template_directory_uri()    . '/js/' );
 define( 'OPUS_CSS',         get_template_directory_uri()    . '/css/' );
+define( 'OPUS_IMAGES',      get_template_directory_uri()    . '/images/' );
 define( 'OPUS_STANZAS',     get_template_directory()        . '/stanzas/' );
 define( 'OPUS_STANZAS_URI', get_template_directory_uri()    . '/stanzas/' );
 

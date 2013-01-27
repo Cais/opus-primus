@@ -2,9 +2,17 @@
 * Listing by File
 * Sorted Alphabetically
 * In Order of Appearance
-* Last revised January 25, 2013
+* Last revised January 27, 2013
 
 === Filters ===
+== \ ==
+= 404.php =
+* opus_404_title_text
+* opus_404_message_text
+* opus_404_posts_text
+* opus_404_category_text
+* opus_404_tag_text
+
 == \includes ==
 = class.OpusPrimusAuthors.php =
 * opus_first_author_by_text
