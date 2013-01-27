@@ -37,11 +37,7 @@
 
 /** Get the Post Structure and Navigation class variables */
 global $opus_structures;
-if ( have_posts() ) {
-    get_header( get_post_format() );
-} else {
-    get_header();
-} /** End if - have posts */ ?>
+get_header( 'archive' ); ?>
 
 <div class="content-wrapper cf">
 
@@ -70,11 +66,7 @@ if ( have_posts() ) {
     /** Add empty action after the_Loop */
     do_action( 'opus_after_the_loop' );
 
-    if ( have_posts() ) {
-        get_sidebar( get_post_format() );
-    } else {
-        get_sidebar();
-    } /** End if - have posts */
+    get_sidebar( 'archive' );
 
     /** Close the classes written by the layout_open call */
     echo $opus_structures->layout_close(); ?>
@@ -82,8 +74,4 @@ if ( have_posts() ) {
 </div><!-- #content-wrapper -->
 
 <?php
-if ( have_posts() ) {
-    get_footer( get_post_format() );
-} else {
-    get_footer();
-} /** End if - have posts */
+get_footer( 'archive' );
