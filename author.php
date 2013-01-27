@@ -38,7 +38,7 @@ $current_author = ( get_query_var( 'author_name ' ) ) ? get_user_by( 'id', get_q
 /** @var $current_author_id - the author ID */
 $current_author_id = $current_author->ID;
 
-get_header( get_post_format() ); ?>
+get_header( 'author' ); ?>
 
 <div class="content-wrapper cf">
 
@@ -72,7 +72,7 @@ get_header( get_post_format() ); ?>
     /** Add empty action after the_Loop */
     do_action( 'opus_after_the_loop' );
 
-    get_sidebar();
+    get_sidebar( 'author' );
 
     /** Close the classes written by the layout_open call */
     echo $opus_structures->layout_close(); ?>
@@ -80,4 +80,4 @@ get_header( get_post_format() ); ?>
 </div><!-- #content-wrapper -->
 
 <?php
-get_footer( get_post_format() );
+get_footer( 'author' );
