@@ -61,7 +61,16 @@
 
         <?php
         /** Add empty hook after site description */
-        do_action( 'opus_after_site_description' ); ?>
+        do_action( 'opus_after_site_description' );
+
+        /** Add empty hook before custom header image */
+        do_action( 'opus_before_custom_header_image' );
+
+        global $opus_structures;
+        $opus_structures->show_custom_header_image();
+
+        /** Add empty hook after custom header image */
+        do_action( 'opus_after_custom_header_image' ); ?>
 
     </hgroup><!-- End header group section -->
 

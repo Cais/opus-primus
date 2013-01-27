@@ -61,6 +61,8 @@
 * opus_after_site_title
 * opus_before_site_description
 * opus_after_site_description
+* opus_before_custom_header_image
+* opus_after_custom_header_image
 * opus_before_nav
 * opus_after_nav
 

@@ -149,6 +149,24 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
             'video'
         ) );
 
+        /** @var $opus_custom_header_support - holds custom header parameters */
+        $opus_custom_header_support = array(
+            /**
+             * There is no default image in use.
+             * If you were to add one, use %s as a placeholder for the theme
+             * template directory URI.
+             */
+            'default-image' => '',
+            /** Support flexible heights. */
+            'flex-height'   => true,
+            /** Support flexible widths */
+            'flex-width'    => true,
+            /** Do not support text inside the header image. */
+            'header-text'   => false,
+        );
+        /** Add support for Custom Header images */
+        add_theme_support( 'custom-header', $opus_custom_header_support );
+
         /** Add custom menu support (Primary and Secondary) */
         register_nav_menus( array(
             'primary'   => 'Primary (Parent-Theme) Menu',

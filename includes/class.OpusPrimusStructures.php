@@ -172,6 +172,39 @@ class OpusPrimusStructures {
 
 
     /**
+     * Custom Header Image
+     * Returns the string to display the custom header image.
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    get_header_image
+     *
+     * @return string
+     */
+    function custom_header_image() {
+        $header_image = '<img class="opus-custom-header" src="' . get_header_image() . '" alt="" />';
+        return $header_image;
+    }
+
+
+    /**
+     * Show Custom Header Image
+     * Writes to the screen the URL return by custom_header_image
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    get_header_image
+     */
+    function show_custom_header_image() {
+        if ( get_header_image() ) {
+            echo $this->custom_header_image();
+        }
+    }
+
+
+    /**
      * Layout - Open
      * Adds appropriate CSS containers depending on the layout structure.
      *
@@ -573,16 +606,24 @@ class OpusPrimusStructures {
 /** @var $opus_structures - new instance of class */
 $opus_structures = new OpusPrimusStructures();
 
+
+/** ------------------------------------------------------------------------- */
 /** Testing ... testing ... testing ... */
-function get_opus_test() {
+function opus_test() {
     return 'BACON Test!!! PS: This works, too!<br />';
 }
-function opus_test() {
-    echo get_opus_test();
+function show_opus_test() {
+    echo opus_test();
 }
-// add_action( 'opus_before_modified_post', 'opus_test' );
-// add_action( 'opus_before_get_template_part', 'opus_test' );
 
-// add_filter( 'opus_modified_author_by_text', 'get_opus_test' );
-// add_filter( 'opus_author_coda', 'get_opus_test' );
-// add_filter( 'opus_category_archives_title', 'get_opus_test' );
+/**
+ * @todo Review as needed - no harm / no foul to leave in code as references
+ *
+ * Un-comment the following for testing purposes
+ */
+// add_action( 'opus_before_modified_post', 'show_opus_test' );
+// add_action( 'opus_before_get_template_part', 'show_opus_test' );
+
+// add_filter( 'opus_modified_author_by_text', 'opus_test' );
+// add_filter( 'opus_author_coda', 'opus_test' );
+// add_filter( 'opus_category_archives_title', 'opus_test' );
