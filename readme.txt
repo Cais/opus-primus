@@ -1,5 +1,5 @@
 === Opus Primus readme.txt ===
-* Last revised January 21, 2013
+* Last revised January 27, 2013
 
 == Contents ==
 * Copyright
@@ -65,6 +65,14 @@ written here.
 == Screenshots ==
 
 == Basic FAQ ==
+Q: Is Opus Primus designed to be responsive to multiple screen sizes?
+In a word, no. Although the theme does include some minimal CSS specifically
+geared towards being responsive to multiple screen sizes the ideal method we
+recommend at this time is to take advantage of one of the many quality plugins
+available from the WordPress Extend Plugins repository to handle these requests.
+Please note, we intend to continue in our efforts to provide an inclusive method
+of managing these requests in future versions.
+
 Q: How do I modify an existing function from one of the classes?
 Most WordPress functions included with the theme will have their own filter,
 otherwise it would be recommended to extend the class and overload the theme
