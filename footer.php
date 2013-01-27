@@ -36,7 +36,7 @@
 do_action( 'opus_before_footer' );
 
 /** Call footer template based on post format */
-if ( have_posts() ) {
+if ( is_singular() ) {
     get_template_part( 'footers/footer', get_post_format() );
 } else {
     get_template_part( 'footers/footer' );

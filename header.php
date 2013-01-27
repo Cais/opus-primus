@@ -51,7 +51,7 @@
     do_action( 'opus_before_header' );
 
     /** Call header template with reference to post format */
-    if ( have_posts() ) {
+    if ( is_singular() ) {
         get_template_part( 'headers/header', get_post_format() );
     } else {
         get_template_part( 'headers/header' );
