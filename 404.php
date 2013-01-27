@@ -74,7 +74,7 @@ get_header( '404' ); ?>
 
         /** Display links to archives */
         printf( '<p class="opus_404_category_text">%1$s</p>',
-            apply_filters( 'opus_404_category_text', __( 'Maybe you looking for one these categories ...', 'opusprimus' ) )
+            apply_filters( 'opus_404_category_text', __( 'Maybe you were looking for one these categories ...', 'opusprimus' ) )
         );
 
         /** Display a list of categories to choose from */
