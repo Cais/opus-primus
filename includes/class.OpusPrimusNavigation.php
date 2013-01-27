@@ -314,19 +314,20 @@ class OpusPrimusNavigation {
     } /** End function - search page menu */
 
 
-    /**
-     * @todo Review below this line --------------------------------------------
-     */
+    /** --- Future Usage ---------------------------------------------------- */
 
 
     /**
      * Secondary Menu
-     * Secondary navigation menu
+     * Secondary navigation menu pre-configured and available for use in
+     * Child-Themes or as part of other customizations and/or modifications.
      *
      * @package OpusPrimus
      * @since   0.1
      *
      * @param   string|array $secondary_menu_args
+     *
+     * @internal Not used with the Parent-Theme by default
      *
      * @uses    do_action
      * @uses    wp_nav_menu

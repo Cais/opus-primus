@@ -151,8 +151,8 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 
         /** Add custom menu support (Primary and Secondary) */
         register_nav_menus( array(
-            'primary'   => 'Primary Menu',
-            'secondary' => 'Secondary Menu',
+            'primary'   => 'Primary (Parent-Theme) Menu',
+            'secondary' => 'Secondary Menu (not used in Parent-Theme)',
             'search'    => 'Search Results Menu',
         ) );
 
