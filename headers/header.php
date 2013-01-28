@@ -37,32 +37,37 @@
 
     <hgroup>
 
+        <div id="header-text">
+
+            <?php
+            /** Add empty hook before site title */
+            do_action( 'opus_before_site_title' ); ?>
+
+            <h1 id="site-title">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                    <?php bloginfo( 'name' ); ?>
+                </a>
+            </h1><!-- #site-title -->
+
+            <?php
+            /**
+             * Add empty hooks between the site title and description ... now we're
+             * really writing Mallory-Everest code but someone might want this.
+             */
+            do_action( 'opus_after_site_title' );
+            do_action( 'opus_before_site_description' ); ?>
+
+            <h2 id="site-description">
+                <?php bloginfo( 'description' ); ?>
+            </h2><!-- #site-description -->
+
+            <?php
+            /** Add empty hook after site description */
+            do_action( 'opus_after_site_description' ); ?>
+
+        </div><!-- #header-text -->
+
         <?php
-        /** Add empty hook before site title */
-        do_action( 'opus_before_site_title' ); ?>
-
-        <h1 id="site-title">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                <?php bloginfo( 'name' ); ?>
-            </a>
-        </h1><!-- #site-title -->
-
-        <?php
-        /**
-         * Add empty hooks between the site title and description ... now we're
-         * really writing Mallory-Everest code but someone might want this.
-         */
-        do_action( 'opus_after_site_title' );
-        do_action( 'opus_before_site_description' ); ?>
-
-        <h2 id="site-description">
-            <?php bloginfo( 'description' ); ?>
-        </h2><!-- #site-description -->
-
-        <?php
-        /** Add empty hook after site description */
-        do_action( 'opus_after_site_description' );
-
         /** Add empty hook before custom header image */
         do_action( 'opus_before_custom_header_image' );
 
