@@ -56,6 +56,7 @@
  * === Post-Format ===
  * === Post-Format: Gallery ===
  * === Post-Format: Image ===
+ * === Post-Format: Video ===
  * === Post-Format: Quote ===
  * === Post-Format: Status ===
  * === Post-Format: Link ===
@@ -1057,6 +1058,9 @@ td.archive-image-excerpt {
     padding-top: 4px;
 }
 /** End: Post-Format: Image ------------------------------------------------- */
+
+/** === Post-Format: Video === ---------------------------------------------- */
+/** End: Post-Format: Video ------------------------------------------------- */
 
 /** === Post-Format: Quote === ---------------------------------------------- */
 @font-face {
