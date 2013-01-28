@@ -1139,6 +1139,10 @@ div.post.format-link .post-content a {
 div.post.format-audio .post-content a {
     font-size: 18px;
 }
+.format-audio p iframe {
+    width: 100% !important;
+}
+
 .audio-symbol:before {
     /** content: '\1D11E \0020'; /** Musical G Clef Symbol + space - uses CSS hex values */
 }
