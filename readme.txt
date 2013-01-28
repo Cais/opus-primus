@@ -1,5 +1,5 @@
 === Opus Primus readme.txt ===
-* Last revised January 27, 2013
+* Last revised January 28, 2013
 
 == Contents ==
 * Copyright
@@ -65,6 +65,13 @@ written here.
 == Screenshots ==
 
 == Basic FAQ ==
+Q: Why are there blank areas in my menu?
+Although not always the case, it has been shown that if you have a page without
+a title and you are using a menu created by the default settings (read: not a
+custom menu) you may experience a "blank" area in your menu (usually at the
+beginning). This has been noted on the WordPress core trac ticket "Empty Page
+Title Not Handled in Menu System" https://core.trac.wordpress.org/ticket/23254
+
 Q: Is Opus Primus designed to be responsive to multiple screen sizes?
 In a word, no. Although the theme does include some minimal CSS specifically
 geared towards being responsive to multiple screen sizes the ideal method we
