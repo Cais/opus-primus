@@ -37,9 +37,9 @@ jQuery( document ).ready( function( $ ) {
 
     /** Get the initial width and height values */
     var embed_width;
-    embed_width = $('.format-video .post-content p embed').attr('width');
+    embed_width = $('.format-video embed').attr('width');
     var embed_height;
-    embed_height = $('.format-video .post-content p embed').attr('height');
+    embed_height = $('.format-video embed').attr('height');
 
     /**
      * Find the ration between the height and the width to recalculate the
@@ -49,19 +49,19 @@ jQuery( document ).ready( function( $ ) {
     embed_ratio = embed_height / embed_width;
 
     /** Change the embedded video to use the full width of the post content */
-    $('.format-video .post-content p embed').attr('width','100%');
+    $('.format-video embed').attr('width','100%');
 
     /** Get the new width value as a number and replace the 100% value */
     var new_width;
-    new_width = $('.format-video .post-content p embed').width();
-    $('.format-video .post-content p embed').attr('width', new_width );
+    new_width = $('.format-video embed').width();
+    $('.format-video embed').attr('width', new_width );
 
     /**
-     * Calculate the new height by multiplying the new width times the orininal
+     * Calculate the new height by multiplying the new width times the original
      * ratio. Then change the embedded video height to the new height.
      */
     var new_height;
     new_height =  new_width * embed_ratio;
-    $('.format-video .post-content p embed').attr('height', new_height);
+    $('.format-video embed').attr('height', new_height);
 
 } );
