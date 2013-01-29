@@ -37,9 +37,9 @@ do_action( 'opus_before_footer' );
 
 /** Call footer template based on post format */
 if ( is_singular() ) {
-    get_template_part( 'footers/footer', get_post_format() );
+    get_template_part( 'opus-primus-footer', get_post_format() );
 } else {
-    get_template_part( 'footers/footer' );
+    get_template_part( 'opus-primus-footer' );
 } /** End if - have posts */
 
 /** Add empty hook at end of footer */
