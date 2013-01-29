@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
+      <change type="MOVED" beforePath="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\loops\opus-primus-aside.php" afterPath="$PROJECT_DIR$/opus-primus-aside.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\loops\opus-primus-audio.php" afterPath="$PROJECT_DIR$/opus-primus-audio.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\loops\opus-primus-chat.php" afterPath="$PROJECT_DIR$/opus-primus-chat.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\loops\opus-primus-gallery.php" afterPath="$PROJECT_DIR$/opus-primus-gallery.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\loops\opus-primus-image.php" afterPath="$PROJECT_DIR$/opus-primus-image.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\loops\opus-primus-link.php" afterPath="$PROJECT_DIR$/opus-primus-link.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\loops\opus-primus-quote.php" afterPath="$PROJECT_DIR$/opus-primus-quote.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\loops\opus-primus-status.php" afterPath="$PROJECT_DIR$/opus-primus-status.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\loops\opus-primus-video.php" afterPath="$PROJECT_DIR$/opus-primus-video.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\loops\opus-primus.php" afterPath="$PROJECT_DIR$/opus-primus.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/opus-primus-full-size-video.js" afterPath="$PROJECT_DIR$/js/opus-primus-full-size-video.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,17 +35,7 @@
     <favorites_list name="opus-primus" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="opus-primus-full-size-video.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/opus-primus-full-size-video.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -48,22 +48,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/author.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/archive.php" />
         <option value="$PROJECT_DIR$/header.php" />
-        <option value="$PROJECT_DIR$/footer.php" />
-        <option value="$PROJECT_DIR$/includes/opus-ignite.php" />
-        <option value="$PROJECT_DIR$/documentation/hooks-filters.txt" />
-        <option value="$PROJECT_DIR$/404.php" />
-        <option value="$PROJECT_DIR$/readme.txt" />
-        <option value="$PROJECT_DIR$/changelog.txt" />
-        <option value="$PROJECT_DIR$/functions.php" />
-        <option value="$PROJECT_DIR$/documentation/hooks-actions.txt" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
-        <option value="$PROJECT_DIR$/style.css" />
+        <option value="$PROJECT_DIR$/sidebar-footer.php" />
+        <option value="$PROJECT_DIR$/sidebar-header.php" />
         <option value="$PROJECT_DIR$/headers/header.php" />
+        <option value="$PROJECT_DIR$/documentation/hooks-actions.txt" />
+        <option value="$PROJECT_DIR$/documentation/hooks-filters.txt" />
+        <option value="$PROJECT_DIR$/readme.txt" />
+        <option value="$PROJECT_DIR$/js/change_content_width_defaults.js" />
+        <option value="$PROJECT_DIR$/js/opus-primus.js" />
+        <option value="$PROJECT_DIR$/js/opus_primus_content_widths.js" />
+        <option value="$PROJECT_DIR$/loops/opus-primus-audio.php" />
+        <option value="$PROJECT_DIR$/js/test.js" />
+        <option value="$PROJECT_DIR$/css/opus-primus.css" />
+        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/js/opus-primus-full-size-video.js" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
       </list>
     </option>
   </component>
@@ -71,8 +71,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1616" />
-    <option name="height" value="876" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -132,24 +132,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -167,7 +149,7 @@
     <property name="options.lastSelected" value="web.server" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wpfa" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../website/wp-content/plugins/bns-corner-logo" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="293" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="967" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="967" />
@@ -179,107 +161,19 @@
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
-  <component name="PublishConfig" serverName="EAC" serverId="49d3d71f-45d4-4cc9-afe0-18cde1ab960e">
+  <component name="PublishConfig" serverName="EAC" serverId="58604bab-3161-4ee6-bc6f-2a357fa717ae">
     <servers>
-      <server id="239aa8fb-f286-4a7d-942b-5468cdb1d69b">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/wpthemes/wp-content/themes/opus-primus" local="$PROJECT_DIR$" web="/wpthemes/wp-content/themes/opus-primus" />
-            <mapping deploy="/wpthemes/wp-admin" local="$PROJECT_DIR$/../../../wp-admin" web="/wpthemes/wp-admin" />
-            <mapping deploy="/wpthemes/wp-includes" local="$PROJECT_DIR$/../../../wp-includes" web="/wpthemes/wp-includes" />
-          </mappings>
-          <excludedPaths>
-            <ExcludedPath>
-              <option name="local" value="true" />
-              <option name="path" value="C:\wamp\www\Opus_Primus\wp-admin" />
-            </ExcludedPath>
-            <ExcludedPath>
-              <option name="path" value="/wpthemes/wp-admin" />
-            </ExcludedPath>
-            <ExcludedPath>
-              <option name="local" value="true" />
-              <option name="path" value="C:\wamp\www\Opus_Primus\wp-includes" />
-            </ExcludedPath>
-            <ExcludedPath>
-              <option name="path" value="/wpthemes/wp-includes" />
-            </ExcludedPath>
-          </excludedPaths>
-        </serverdata>
-      </server>
       <server id="49d3d71f-45d4-4cc9-afe0-18cde1ab960e">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/wp-content/themes/opus-primus" local="$PROJECT_DIR$" web="/wp-content/themes/opus-primus" />
-            <mapping deploy="/wp-admin" local="$PROJECT_DIR$/../../../wp-admin" web="/wp-admin" />
-            <mapping deploy="/wp-includes" local="$PROJECT_DIR$/../../../wp-includes" web="/wp-includes" />
-          </mappings>
-          <excludedPaths>
-            <ExcludedPath>
-              <option name="local" value="true" />
-              <option name="path" value="C:\wamp\www\Opus_Primus\wp-admin" />
-            </ExcludedPath>
-            <ExcludedPath>
-              <option name="path" value="/wp-admin" />
-            </ExcludedPath>
-            <ExcludedPath>
-              <option name="local" value="true" />
-              <option name="path" value="C:\wamp\www\Opus_Primus\wp-includes" />
-            </ExcludedPath>
-            <ExcludedPath>
-              <option name="path" value="/wp-includes" />
-            </ExcludedPath>
-          </excludedPaths>
-        </serverdata>
+        <serverdata />
       </server>
-      <server id="9bf43f02-b2e0-4176-8a1f-2cce73661cfc">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/wp-content/themes/opus-primus" local="$PROJECT_DIR$" web="/wp-content/themes/opus-primus" />
-            <mapping deploy="/wp-admin" local="$PROJECT_DIR$/../../../wp-admin" web="/wp-admin" />
-            <mapping deploy="/wp-includes" local="$PROJECT_DIR$/../../../wp-includes" web="/wp-includes" />
-          </mappings>
-          <excludedPaths>
-            <ExcludedPath>
-              <option name="local" value="true" />
-              <option name="path" value="C:\wamp\www\Opus_Primus\wp-admin" />
-            </ExcludedPath>
-            <ExcludedPath>
-              <option name="path" value="/wp-admin" />
-            </ExcludedPath>
-            <ExcludedPath>
-              <option name="local" value="true" />
-              <option name="path" value="C:\wamp\www\Opus_Primus\wp-includes" />
-            </ExcludedPath>
-            <ExcludedPath>
-              <option name="path" value="/wp-includes" />
-            </ExcludedPath>
-          </excludedPaths>
-        </serverdata>
+      <server id="6a9ab3aa-2ae8-4a81-a8ee-406b637fa015">
+        <serverdata />
       </server>
-      <server id="f22a4b3c-3e9d-4d89-9d29-cd056ef8c0df">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/wp-content/themes/opus-primus" local="$PROJECT_DIR$" web="/wp-content/themes/opus-primus" />
-            <mapping deploy="/wp-admin" local="$PROJECT_DIR$/../../../wp-admin" web="/wp-admin" />
-            <mapping deploy="/wp-includes" local="$PROJECT_DIR$/../../../wp-includes" web="/wp-includes" />
-          </mappings>
-          <excludedPaths>
-            <ExcludedPath>
-              <option name="local" value="true" />
-              <option name="path" value="C:\wamp\www\Opus_Primus\wp-admin" />
-            </ExcludedPath>
-            <ExcludedPath>
-              <option name="path" value="/wp-admin" />
-            </ExcludedPath>
-            <ExcludedPath>
-              <option name="local" value="true" />
-              <option name="path" value="C:\wamp\www\Opus_Primus\wp-includes" />
-            </ExcludedPath>
-            <ExcludedPath>
-              <option name="path" value="/wp-includes" />
-            </ExcludedPath>
-          </excludedPaths>
-        </serverdata>
+      <server id="8f5db7c9-b10b-4af5-9d24-07767ca42df9">
+        <serverdata />
+      </server>
+      <server id="e519054c-ee03-437d-a808-bfa70abc7f51">
+        <serverdata />
       </server>
     </servers>
   </component>
@@ -292,11 +186,11 @@
       <recent name="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp\www\Opus_Primus\wp-content\themes\opus-primus" />
-      <recent name="C:\wamp\www\Opus_Primus\wp-content\themes\opus-primus\fonts\Merienda" />
-      <recent name="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\extensions\pullquotes" />
-      <recent name="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\js" />
       <recent name="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus" />
+      <recent name="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\works-in-progress" />
+      <recent name="C:\wamp\www\Opus_Primus\wp-content\themes\opus-primus\fonts\Merienda" />
+      <recent name="C:\wamp\www\Opus_Primus\wp-content\themes\opus-primus" />
+      <recent name="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\extensions\pullquotes" />
     </key>
   </component>
   <component name="RunManager">
@@ -1304,77 +1198,77 @@
       <created>1358477650168</created>
       <updated>1358477650168</updated>
     </task>
-    <task id="LOCAL-00239" summary="* Add block termination comments (loop)">
-      <created>1358477773689</created>
-      <updated>1358477773689</updated>
+    <task id="LOCAL-00239" summary="* Update 'readme.txt' to reflect removal of fitVids and amended layout FAQ&#10;* Added 'changelog.txt' in preparation for release and version number updates">
+      <created>1358786074303</created>
+      <updated>1358786074303</updated>
     </task>
-    <task id="LOCAL-00240" summary="* Change Extensions to Stanzas ... might rename it to something else but this is at least better suited to the theme">
-      <created>1358562675360</created>
-      <updated>1358562675361</updated>
+    <task id="LOCAL-00240" summary="* Update normalize.css to version 2.1">
+      <created>1358795836385</created>
+      <updated>1358795836385</updated>
     </task>
-    <task id="LOCAL-00241" summary="* Added revision date to hooks-*.txt files&#10;* Added before and after `opus_*_the_loop` action hooks">
-      <created>1359240227306</created>
-      <updated>1359240227306</updated>
+    <task id="LOCAL-00241" summary="* Remove preceding &quot;About&quot; from author details">
+      <created>1358797662578</created>
+      <updated>1358797662578</updated>
     </task>
-    <task id="LOCAL-00242" summary="* Added before and after `opus_*_get_template_part` action hooks">
-      <created>1359241156515</created>
-      <updated>1359241156515</updated>
+    <task id="LOCAL-00242" summary="* Fix search results Featured Pages display">
+      <created>1358798659082</created>
+      <updated>1358798659082</updated>
     </task>
-    <task id="LOCAL-00243" summary="* Added more test functions">
-      <created>1359241972741</created>
-      <updated>1359241972741</updated>
+    <task id="LOCAL-00243" summary="Removed resources folder as files / code are maintained in other areas, or no longer in use.">
+      <created>1358862911441</created>
+      <updated>1358862911441</updated>
     </task>
-    <task id="LOCAL-00244" summary="* Add wrapping empty hooks around sidebars">
-      <created>1359243141945</created>
-      <updated>1359243141946</updated>
+    <task id="LOCAL-00244" summary="Add comments toggle script and required code / CSS">
+      <created>1358889772490</created>
+      <updated>1358889772490</updated>
     </task>
-    <task id="LOCAL-00245" summary="* Remove 'top_10' categories function (not used)">
-      <created>1359305818744</created>
-      <updated>1359305818744</updated>
+    <task id="LOCAL-00245" summary="Tweaked comments-toggle with additional CSS">
+      <created>1358975124179</created>
+      <updated>1358975124180</updated>
     </task>
-    <task id="LOCAL-00246" summary="* Updated registered menu names to better reflect their usage within the Administration panels&#10;* Documented the Secondary Nav Menu is not used by default">
-      <created>1359307909290</created>
-      <updated>1359307909290</updated>
+    <task id="LOCAL-00246" summary="* Move comments-toggle script to WIP (needs more testing)">
+      <created>1359039997189</created>
+      <updated>1359039997189</updated>
     </task>
-    <task id="LOCAL-00247" summary="* Change header, footer, and sidebar calls to 'author' suffix rather than empty or `get_template_part`">
-      <created>1359308259080</created>
-      <updated>1359308259080</updated>
+    <task id="LOCAL-00247" summary="Code formatting and re-ordering of methods in classes to a first appearance order.">
+      <created>1359061199264</created>
+      <updated>1359061199264</updated>
     </task>
-    <task id="LOCAL-00248" summary="* Fix header, sidebar, and footer calls to more logically correct template structures">
-      <created>1359308834056</created>
-      <updated>1359308834057</updated>
+    <task id="LOCAL-00248" summary="Code formatting and re-ordering of methods in classes to a first appearance order (99%)">
+      <created>1359125457822</created>
+      <updated>1359125457838</updated>
     </task>
-    <task id="LOCAL-00249" summary="* Use `is_singular` in place of `have_posts` for condition Post Format checks">
-      <created>1359312711549</created>
-      <updated>1359312711549</updated>
+    <task id="LOCAL-00249" summary="Clean up WIP files">
+      <created>1359132187284</created>
+      <updated>1359132187284</updated>
     </task>
-    <task id="LOCAL-00250" summary="* Added new constant OPUS_IMAGES defining the images directory&#10;* Refactored the 404 page to add a bit more life&#10;* Added new hooks to the 404 page and updated the documentation&#10;* Added new functions to Structures to be used with the 404 page">
-      <created>1359319851582</created>
-      <updated>1359319851582</updated>
+    <task id="LOCAL-00250" summary="Add documentation text files: 'hooks-actions.txt' and 'hooks-filters.txt'">
+      <created>1359135224255</created>
+      <updated>1359135224255</updated>
     </task>
-    <task id="LOCAL-00251" summary="Grammar ... at least it wasn't Kelsey.">
-      <created>1359320096505</created>
-      <updated>1359320096505</updated>
+    <task id="LOCAL-00251" summary="Make action hook names consistent using `opus_` as their prefix">
+      <created>1359135637579</created>
+      <updated>1359135637579</updated>
     </task>
-    <task id="LOCAL-00252" summary="Updated version compatibility; FAQ regarding responsive design; added Copyright to changelog">
-      <created>1359321308135</created>
-      <updated>1359321308135</updated>
+    <task id="LOCAL-00252" summary="Updated FAQ with question: Why are there blank areas in my menu?">
+      <created>1359386152214</created>
+      <updated>1359386152214</updated>
     </task>
-    <task id="LOCAL-00253" summary="Update theme description">
-      <created>1359323419644</created>
-      <updated>1359323419644</updated>
+    <task id="LOCAL-00253" summary="Add new script 'opus-primus-content-width.js' to better manage $content_width values">
+      <created>1359391757472</created>
+      <updated>1359391757473</updated>
     </task>
-    <task id="LOCAL-00254" summary="* add_theme_support( 'custom-header' )&#10;* Add additional wrapping hooks for the custom header image&#10;* Documentation updates to testing function at end of Structures">
-      <created>1359328841109</created>
-      <updated>1359328841109</updated>
+    <task id="LOCAL-00254" summary="Revert - Add new script 'opus-primus-content-width.js' to better manage $content_width values (Not working ... not gonna happen, yet).">
+      <created>1359393172546</created>
+      <updated>1359393172546</updated>
     </task>
-    <task id="LOCAL-00255" summary="Updated theme tags (per WordPress approved list)">
-      <created>1359329308565</created>
-      <updated>1359329308565</updated>
+    <task id="LOCAL-00255" summary="Add CSS to force iframe / oEmbed to 100% width in Post-Format: Audio">
+      <created>1359395446511</created>
+      <updated>1359395446526</updated>
     </task>
-    <task id="LOCAL-00256" summary="Add iframe video handling">
-      <created>1359422785505</created>
-      <updated>1359422785505</updated>
+    <task id="LOCAL-00256" summary="Add jQuery script to make embedded videos full width and maintain height aspect correctly! Boo-Yah!!">
+      <created>1359403662010</created>
+      <updated>1359403662010</updated>
     </task>
     <option name="localTasksCounter" value="257" />
     <servers>
@@ -1412,27 +1306,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32447553" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32587412" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3247768" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272727" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32587412" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32818532" sideWeight="0.6755245" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18089648" sideWeight="0.67633927" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32447553" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32307693" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3236607" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1473,7 +1367,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add iframe video handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add jQuery script to make embedded videos full width and maintain height aspect correctly! Boo-Yah!!" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1493,105 +1387,117 @@
     <MESSAGE value="* Add block termination comments (loop - link)" />
     <MESSAGE value="* Add block termination comments (loop - quote)" />
     <MESSAGE value="* Add block termination comments (loop - status)" />
-    <MESSAGE value="* Add block termination comments (loop)" />
-    <MESSAGE value="* Change Extensions to Stanzas ... might rename it to something else but this is at least better suited to the theme" />
-    <MESSAGE value="* Added revision date to hooks-*.txt files&#10;* Added before and after `opus_*_the_loop` action hooks" />
-    <MESSAGE value="* Added before and after `opus_*_get_template_part` action hooks" />
-    <MESSAGE value="* Added more test functions" />
-    <MESSAGE value="* Add wrapping empty hooks around sidebars" />
-    <MESSAGE value="* Remove 'top_10' categories function (not used)" />
-    <MESSAGE value="* Updated registered menu names to better reflect their usage within the Administration panels&#10;* Documented the Secondary Nav Menu is not used by default" />
-    <MESSAGE value="* Change header, footer, and sidebar calls to 'author' suffix rather than empty or `get_template_part`" />
-    <MESSAGE value="* Fix header, sidebar, and footer calls to more logically correct template structures" />
-    <MESSAGE value="* Use `is_singular` in place of `have_posts` for condition Post Format checks" />
-    <MESSAGE value="* Added new constant OPUS_IMAGES defining the images directory&#10;* Refactored the 404 page to add a bit more life&#10;* Added new hooks to the 404 page and updated the documentation&#10;* Added new functions to Structures to be used with the 404 page" />
-    <MESSAGE value="Grammar ... at least it wasn't Kelsey." />
-    <MESSAGE value="Updated version compatibility; FAQ regarding responsive design; added Copyright to changelog" />
-    <MESSAGE value="Update theme description" />
-    <MESSAGE value="* add_theme_support( 'custom-header' )&#10;* Add additional wrapping hooks for the custom header image&#10;* Documentation updates to testing function at end of Structures" />
-    <MESSAGE value="Updated theme tags (per WordPress approved list)" />
-    <MESSAGE value="Add iframe video handling" />
+    <MESSAGE value="* Update 'readme.txt' to reflect removal of fitVids and amended layout FAQ&#10;* Added 'changelog.txt' in preparation for release and version number updates" />
+    <MESSAGE value="* Update normalize.css to version 2.1" />
+    <MESSAGE value="* Remove preceding &quot;About&quot; from author details" />
+    <MESSAGE value="* Fix search results Featured Pages display" />
+    <MESSAGE value="Removed resources folder as files / code are maintained in other areas, or no longer in use." />
+    <MESSAGE value="Add comments toggle script and required code / CSS" />
+    <MESSAGE value="Tweaked comments-toggle with additional CSS" />
+    <MESSAGE value="* Move comments-toggle script to WIP (needs more testing)" />
+    <MESSAGE value="Code formatting and re-ordering of methods in classes to a first appearance order." />
+    <MESSAGE value="Code formatting and re-ordering of methods in classes to a first appearance order (99%)" />
+    <MESSAGE value="Clean up WIP files" />
+    <MESSAGE value="Add documentation text files: 'hooks-actions.txt' and 'hooks-filters.txt'" />
+    <MESSAGE value="Make action hook names consistent using `opus_` as their prefix" />
+    <MESSAGE value="Updated FAQ with question: Why are there blank areas in my menu?" />
+    <MESSAGE value="Add new script 'opus-primus-content-width.js' to better manage $content_width values" />
+    <MESSAGE value="Revert - Add new script 'opus-primus-content-width.js' to better manage $content_width values (Not working ... not gonna happen, yet)." />
+    <MESSAGE value="Add CSS to force iframe / oEmbed to 100% width in Post-Format: Audio" />
+    <MESSAGE value="Add jQuery script to make embedded videos full width and maintain height aspect correctly! Boo-Yah!!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/footer.php">
+    <entry file="file://$PROJECT_DIR$/sidebar-footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="17" selection-start="2514" selection-end="2514" vertical-scroll-proportion="0.70414203" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidebar-header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/documentation/hooks-actions.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/documentation/hooks-filters.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="25" selection-start="117" selection-end="117" vertical-scroll-proportion="0.09855072" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/opus-ignite.php">
-      <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/404.php">
+    <entry file="file://$PROJECT_DIR$/page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="73" selection-start="2684" selection-end="2684" vertical-scroll-proportion="0.78341013" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changelog.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="26" selection-start="1874" selection-end="1874" vertical-scroll-proportion="0.86374134" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../wp-includes/theme.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1334" column="80" selection-start="40878" selection-end="40883" vertical-scroll-proportion="0.33164558" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../wp-admin/custom-header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="475" column="36" selection-start="14458" selection-end="14458" vertical-scroll-proportion="0.6267281" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="0" selection-start="5972" selection-end="5972" vertical-scroll-proportion="-0.41013825" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/documentation/hooks-actions.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="12" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.6898551" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="619" column="76" selection-start="24115" selection-end="24115" vertical-scroll-proportion="0.8172043" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="367" selection-end="367" vertical-scroll-proportion="0.22599705" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.24733728">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/headers/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="13" selection-start="2315" selection-end="2315" vertical-scroll-proportion="0.6528418" />
+        <state line="51" column="185" selection-start="1686" selection-end="1686" vertical-scroll-proportion="0.38224852" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../wp-includes/class-oembed.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="83" selection-start="3317" selection-end="3317" vertical-scroll-proportion="-7.286267" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opus-primus-audio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="45" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.09189189">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/opus-primus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="0" selection-start="2264" selection-end="2264" vertical-scroll-proportion="0.6840237">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1062" column="0" selection-start="22225" selection-end="22225" vertical-scroll-proportion="0.8013777" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/opus-primus-full-size-video.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="4" selection-start="2370" selection-end="2370" vertical-scroll-proportion="0.8828932" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opus-primus-aside.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="327" column="36" selection-start="13358" selection-end="13358" vertical-scroll-proportion="0.34735578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
