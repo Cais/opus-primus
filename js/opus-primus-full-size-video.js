@@ -1,7 +1,7 @@
 /**
  * Opus Primus Full Size Embedded Video
  * Over writes the $content_width value and adjust the height value of an
- * embedded video to fill the post content area
+ * embed / iframe video to fill the post content area
  *
  * @package     OpusPrimus
  * @since       0.1
@@ -37,9 +37,9 @@ jQuery( document ).ready( function( $ ) {
 
     /** Get the initial width and height values */
     var embed_width;
-    embed_width = $('.format-video embed').attr('width');
+    embed_width = $('.format-video embed, .format-video iframe').attr('width');
     var embed_height;
-    embed_height = $('.format-video embed').attr('height');
+    embed_height = $('.format-video embed, .format-video iframe').attr('height');
 
     /**
      * Find the ration between the height and the width to recalculate the
@@ -48,20 +48,22 @@ jQuery( document ).ready( function( $ ) {
     var embed_ratio;
     embed_ratio = embed_height / embed_width;
 
-    /** Change the embedded video to use the full width of the post content */
-    $('.format-video embed').attr('width','100%');
+    /**
+     * Change the embed / iframe video to use the full width of the post content
+     */
+    $('.format-video embed, .format-video iframe').attr('width','100%');
 
     /** Get the new width value as a number and replace the 100% value */
     var new_width;
-    new_width = $('.format-video embed').width();
-    $('.format-video embed').attr('width', new_width );
+    new_width = $('.format-video embed, .format-video iframe').width();
+    $('.format-video embed, .format-video iframe').attr('width', new_width );
 
     /**
      * Calculate the new height by multiplying the new width times the original
-     * ratio. Then change the embedded video height to the new height.
+     * ratio. Then change the embed / iframe video height to the new height.
      */
     var new_height;
     new_height =  new_width * embed_ratio;
-    $('.format-video embed').attr('height', new_height);
+    $('.format-video embed, .format-video iframe').attr('height', new_height);
 
 } );
