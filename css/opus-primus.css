@@ -1206,7 +1206,7 @@ p.comment-subscription-form {
 
 /** Make sure Twitter embeds are not fixed width */
 .post-content .twitter-tweet-rendered {
-    max-width: 100% !important;
+    width: 100% !important;
 }
 
 /** End: Ain't Miss B. Haven === -------------------------------------------- */
