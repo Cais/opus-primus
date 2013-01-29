@@ -343,6 +343,47 @@ class OpusPrimusStructures {
 
 
     /**
+     * the_Loop Archives
+     * The most basic structure for the posts loop
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    $opus_navigation (global)
+     * @uses    get_template_part
+     * @uses    get_post_format
+     * @uses    have_posts
+     * @uses    no_search_results
+     * @uses    posts_link
+     * @uses    the_post
+     */
+    function the_loop_archives() {
+        /** the_Loop begins */
+        if ( have_posts() ) {
+            while ( have_posts() ) {
+                the_post();
+
+                /** Add empty hook before get_template_part */
+                do_action( 'opus_before_get_template_part' );
+
+                get_template_part( 'archives/archive', get_post_format() );
+
+                /** Add empty hook after get_template_part */
+                do_action( 'opus_after_get_template_part' );
+
+            } /** End while - have posts */
+        } else {
+            $this->no_search_results();
+        } /** End if - have posts */
+
+        global $opus_navigation;
+        $opus_navigation->posts_link();
+        /** the_Loop ends */
+
+    } /** End function - the loop archives */
+
+
+    /**
      * Replace Spaces
      * Takes a string and replaces the spaces with a single hyphen by default
      *

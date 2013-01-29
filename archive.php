@@ -54,8 +54,8 @@ get_header( 'archive' ); ?>
         /** Add before loop sidebar */
         if ( is_active_sidebar( 'before-loop' ) ) { dynamic_sidebar( 'before-loop' ); }
 
-        /** the_Loop structure in its most basic form */
-        $opus_structures->the_loop();
+        /** the_Loop structure for archives in its most basic form */
+        $opus_structures->the_loop_archives();
 
         /** Add after loop sidebar */
         if ( is_active_sidebar( 'after-loop' ) ) { dynamic_sidebar( 'after-loop' ); } ?>
