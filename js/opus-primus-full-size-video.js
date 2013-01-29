@@ -35,9 +35,11 @@
 jQuery( document ).ready( function( $ ) {
     /** Note: $() will work as an alias for jQuery() inside of this function */
 
+    var video_selector = $('.format-video embed, .format-video iframe');
+
     /** Get the initial width and height values */
-    var embed_width = $('.format-video embed, .format-video iframe').attr('width');
-    var embed_height = $('.format-video embed, .format-video iframe').attr('height');
+    var embed_width = video_selector.attr('width');
+    var embed_height = video_selector.attr('height');
 
     /**
      * Find the ration between the height and the width to recalculate the
@@ -48,17 +50,17 @@ jQuery( document ).ready( function( $ ) {
     /**
      * Change the embed / iframe video to use the full width of the post content
      */
-    $('.format-video embed, .format-video iframe').attr('width','100%');
+    video_selector.attr('width','100%');
 
     /** Get the new width value as a number and replace the 100% value */
-    var new_width = $('.format-video embed, .format-video iframe').width();
-    $('.format-video embed, .format-video iframe').attr('width', new_width );
+    var new_width = video_selector.width();
+    video_selector.attr('width', new_width );
 
     /**
      * Calculate the new height by multiplying the new width times the original
      * ratio. Then change the embed / iframe video height to the new height.
      */
     var new_height =  new_width * embed_ratio;
-    $('.format-video embed, .format-video iframe').attr('height', new_height);
+    video_selector.attr('height', new_height);
 
 } );
