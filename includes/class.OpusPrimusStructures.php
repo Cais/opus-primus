@@ -366,7 +366,7 @@ class OpusPrimusStructures {
                 /** Add empty hook before get_template_part */
                 do_action( 'opus_before_get_template_part' );
 
-                get_template_part( 'archives/archive', get_post_format() );
+                get_template_part( 'opus-primus-archive', get_post_format() );
 
                 /** Add empty hook after get_template_part */
                 do_action( 'opus_after_get_template_part' );
