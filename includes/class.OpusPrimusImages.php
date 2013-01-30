@@ -678,7 +678,9 @@ class OpusPrimusImages {
             'orderby'           => 'menu_order ID',
             'numberposts'       => 1
         ) );
+        /** @var $archive_image - initial value (when there is no attachment) */
         $archive_image = '<p class="archive-image">' . __( 'The Image archive looks much better if the image is set as an attachment of the post.', 'opusprimus' ) . '</p>';
+        /** @var $archive_image_title, $archive_image_excerpt, $archive_image_content - initialized as an empty string */
         $archive_image_title = $archive_image_excerpt = $archive_image_content = '';
         foreach ( $attachments as $opus_thumb_id => $attachment ) {
             $archive_image = '<span class="archive-image"><a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">'
