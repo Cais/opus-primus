@@ -751,7 +751,9 @@ class OpusPrimusImages {
         global $post;
         preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
 
-        $output = '<img src="' . $matches[1][0] . '" alt="" />';
+        $image_url = $matches[1][0];
+
+        $output = '<img src="' . $image_url . '" alt="" />';
 
         return $output;
 
