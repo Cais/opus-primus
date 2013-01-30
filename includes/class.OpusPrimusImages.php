@@ -664,9 +664,10 @@ class OpusPrimusImages {
      * @uses    the_title_attribute
      * @uses    wp_get_attachment_image
      *
-     * @todo Sort out a better output when the image is linked rather than attached
      * @todo Add filters to output messages
      * @todo Review output when using image that is not attached to post (or linked)
+     * @todo Address $archive_image message(s) once `first_linked_image` is sorted out
+     * @todo Address CSS aesthetics on images not attached ... or find a way to display the post excerpt details (much better choice!)
      */
     function archive_image_details( $size = 'medium' ) {
         $attachments = get_children( array(
@@ -678,14 +679,18 @@ class OpusPrimusImages {
             'orderby'           => 'menu_order ID',
             'numberposts'       => 1
         ) );
+
         /** @var $archive_image - initial value (when there is no attachment) */
         $archive_image = '<p class="archive-image">' . __( 'The Image archive looks much better if the image is set as an attachment of the post.', 'opusprimus' ) . '</p>';
         /** @var $archive_image_title, $archive_image_excerpt, $archive_image_content - initialized as an empty string */
         $archive_image_title = $archive_image_excerpt = $archive_image_content = '';
+
+        if ( empty( $attachments ) ) {
+            $archive_image = $this->first_linked_image();
+        } /** End if - empty attachments */
+
         foreach ( $attachments as $opus_thumb_id => $attachment ) {
-            $archive_image = '<span class="archive-image"><a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">'
-                . wp_get_attachment_image( $opus_thumb_id, $size )
-                . '</a></span>';
+            $archive_image = wp_get_attachment_image( $opus_thumb_id, $size );
             $archive_image_title = $attachment->post_title;
             $archive_image_excerpt = $attachment->post_excerpt;
             $archive_image_content = $attachment->post_content;
@@ -702,7 +707,14 @@ class OpusPrimusImages {
             </thead><!-- End table header -->
             <tbody>
                 <tr>
-                    <td class="archive-image"><?php if ( ! is_single() ) echo $archive_image; ?></td>
+                    <td class="archive-image">
+                        <?php
+                        if ( ! is_single() ) {
+                            echo '<span class="archive-image"><a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">'
+                                . $archive_image
+                                . '</a></span>';
+                        } /** End if - not is single */ ?>
+                    </td>
                 </tr>
                 <tr>
                     <?php
@@ -721,6 +733,41 @@ class OpusPrimusImages {
 
     <?php
     } /** End function - archive image details */
+
+
+    /**
+     * First Linked Image
+     * Finds the first image in the post and returns it
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @internal Inspired by http://css-tricks.com/snippets/wordpress/get-the-first-image-from-a-post/
+     *
+     * @todo Return the same image "size" used in the "attachment" as found in the Post-Format: Image archive
+     */
+    function first_linked_image() {
+
+        global $post;
+        preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+
+        $output = '<img src="' . $matches[1][0] . '" alt="" />';
+
+        return $output;
+
+    } /** End function - first linked image */
+
+
+    /**
+     * Show First Linked Image
+     * Displays the output returned by `first_linked_image`
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     */
+    function show_first_linked_image() {
+        echo $this->first_linked_image();
+    } /** End function - show first linked image */
 
 
 } /** End of Opus Primus Images class */
