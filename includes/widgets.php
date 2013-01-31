@@ -34,7 +34,7 @@
 
 /**
  * Opus Primus Widgets
- * Register Widget areas
+ * Register widget area definitions
  * - Three (3) in the "Header"
  * - One (1) above the "Content"
  * - One (1) below the "Content"

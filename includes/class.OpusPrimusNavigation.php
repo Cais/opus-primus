@@ -154,12 +154,12 @@ class OpusPrimusNavigation {
         /** Add empty hook before comments link */
         do_action( 'opus_before_comments_link' ); ?>
 
-    <p class="navigation comment-link cf">
-        <span class="left"><?php previous_comments_link() ?></span>
-        <span class="right"><?php next_comments_link() ?></span>
-    </p>
+        <p class="navigation comment-link cf">
+            <span class="left"><?php previous_comments_link() ?></span>
+            <span class="right"><?php next_comments_link() ?></span>
+        </p>
 
-    <?php
+        <?php
         /** Add empty hook after comments link */
         do_action( 'opus_after_comments_link' );
 
@@ -212,8 +212,8 @@ class OpusPrimusNavigation {
 
         /** Add navigation links between pictures in the gallery */
         echo '<div class="opus-image-navigation cf">';
-        echo previous_image_link( false, '<span class="left">' . __( 'Previous Photo', 'opusprimus' ) . '</span>' );
-        echo next_image_link( false, '<span class="right">' . __( 'Next Photo', 'opusprimus' ) . '</span>' );
+            echo previous_image_link( false, '<span class="left">' . __( 'Previous Photo', 'opusprimus' ) . '</span>' );
+            echo next_image_link( false, '<span class="right">' . __( 'Next Photo', 'opusprimus' ) . '</span>' );
         echo '</div><!-- .opus-image-navigation -->';
 
         /** Add empty hook after the image navigation */
@@ -238,12 +238,12 @@ class OpusPrimusNavigation {
         do_action( 'opus_before_posts_link' );
 
         /** Posts link navigation */ ?>
-    <p class="navigation posts-link cf">
-        <span class="right"><?php next_posts_link(); ?></span>
-        <span class="left"><?php previous_posts_link(); ?></span>
-    </p>
+        <p class="navigation posts-link cf">
+            <span class="right"><?php next_posts_link(); ?></span>
+            <span class="left"><?php previous_posts_link(); ?></span>
+        </p>
 
-    <?php
+        <?php
         /** Add empty hook after posts link */
         do_action( 'opus_after_posts_link' );
 
@@ -278,7 +278,7 @@ class OpusPrimusNavigation {
         $search_menu_args = wp_parse_args( (array) $defaults, $search_menu_args );
 
         printf( '<ul class="featured search pages"><li><span class="title">%1$s</span>', __( 'Featured Pages:', 'opusprimus' ) );
-        wp_nav_menu( $search_menu_args );
+            wp_nav_menu( $search_menu_args );
         echo '</li></ul><!-- .featured-search-pages -->';
 
         /** Add empty hook after the search menu */
@@ -306,9 +306,9 @@ class OpusPrimusNavigation {
         );
         $list_args = wp_parse_args( (array) $defaults, $list_args ); ?>
 
-    <ul class="nav search">
-        <?php wp_page_menu( $list_args ); ?>
-    </ul><!-- .nav.search -->
+        <ul class="nav search">
+            <?php wp_page_menu( $list_args ); ?>
+        </ul><!-- .nav.search -->
 
     <?php
     } /** End function - search page menu */

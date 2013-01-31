@@ -507,11 +507,11 @@ class OpusPrimusPosts {
         } /** End if - after */
 
         /** Wrap the title in an anchor tag and provide a nice tool tip */ ?>
-    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ) ) ); ?>">
-        <?php the_title( $before, $after, $echo ); ?>
-    </a>
+        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ) ) ); ?>">
+            <?php the_title( $before, $after, $echo ); ?>
+        </a>
 
-    <?php
+        <?php
         /** Add empty hook after the post title */
         do_action( 'opus_after_post_title' );
 

@@ -80,7 +80,7 @@ class OpusPrimusGallery {
                 $opus_thumb_id = get_post_thumbnail_id();
                 if ( ! is_single() ) {
                     echo '<p class="featured-image"><a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">';
-                    the_post_thumbnail( $size );
+                        the_post_thumbnail( $size );
                     echo '</a></p>';
                 } else {
                     the_post_thumbnail( $size );

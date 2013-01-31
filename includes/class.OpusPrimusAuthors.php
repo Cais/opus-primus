@@ -83,11 +83,11 @@ class OpusPrimusAuthors {
 
         /** Output author details */
         echo '<div class="first-author-details">';
-        printf(
-            '<div class="first-author-details-text">%1$s</div><!-- .first-author-details-text -->',
-            apply_filters( 'opus_first_author_by_text', __( 'Author:', 'opusprimus' ) )
-        );
-        $this->author_details( $opus_author_id, $post_author_args['show_author_url'], $post_author_args['show_author_email'], $post_author_args['show_author_desc'] );
+            printf(
+                '<div class="first-author-details-text">%1$s</div><!-- .first-author-details-text -->',
+                apply_filters( 'opus_first_author_by_text', __( 'Author:', 'opusprimus' ) )
+            );
+            $this->author_details( $opus_author_id, $post_author_args['show_author_url'], $post_author_args['show_author_email'], $post_author_args['show_author_desc'] );
         echo '</div><!-- .first-author-details -->';
         $this->author_coda();
 
@@ -108,11 +108,11 @@ class OpusPrimusAuthors {
 
             /** Output author details based on the last one to edit the post */
             echo '<div class="modified-author-details">';
-            printf(
-                '<div class="modified-author-details-text">%1$s</div><!-- modified-author-details-text -->',
-                apply_filters( 'opus_modified_author_by_text', __( 'Modified by:', 'opusprimus' ) )
-            );
-            $this->author_details( $last_id, $post_author_args['show_author_url'], $post_author_args['show_author_email'], $post_author_args['show_author_desc'] );
+                printf(
+                    '<div class="modified-author-details-text">%1$s</div><!-- modified-author-details-text -->',
+                    apply_filters( 'opus_modified_author_by_text', __( 'Modified by:', 'opusprimus' ) )
+                );
+                $this->author_details( $last_id, $post_author_args['show_author_url'], $post_author_args['show_author_email'], $post_author_args['show_author_desc'] );
             echo '</div><!-- .modified-author-details -->';
             $this->author_coda();
 
@@ -144,6 +144,8 @@ class OpusPrimusAuthors {
      * @uses    get_the_author_meta
      * @uses    home_url
      * @uses    user_can
+     *
+     * @todo Add class to h2, ul, li elements?
      */
     function author_details( $author_id, $show_author_url, $show_author_email, $show_author_desc ){
         /** Collect details from the author's profile */
@@ -161,7 +163,7 @@ class OpusPrimusAuthors {
                 /** Sanity check - an author id should always be present */
                 if ( ! empty( $author_id ) ) {
                     echo get_avatar( $author_id );
-                }
+                } /** End if - not empty author id */
                 printf( '<span class="opus-author-about">%1$s</span>',
                     sprintf( '<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
                         home_url( '/?author=' . $author_id ),

@@ -58,7 +58,7 @@ class OpusPrimusImages {
         if ( has_post_thumbnail() && ! is_single() ) {
             $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
             echo '<a class="featured-thumbnail" href="' . $large_image_url[0] . '" title="' . the_title_attribute( 'echo=0' ) . '" >';
-            the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) );
+                the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) );
             echo '</a>';
         } /** End if - has post thumbnail and not is single */
     } /** End function - featured thumbnail */
@@ -753,7 +753,7 @@ class OpusPrimusImages {
 
         $image_url = $matches[1][0];
 
-        $output = '<img src="' . $image_url . '" alt="" />';
+        $output = '<img class="linked-image" src="' . $image_url . '" alt="" />';
 
         return $output;
 

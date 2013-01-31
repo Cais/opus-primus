@@ -116,7 +116,7 @@ class OpusPrimusArchives {
 
         /** Top 'number' of displayed tags set */
         if ( isset( $cloud_args['number'] ) && ( 'DESC' == $cloud_args['order'] ) ) {
-            $cloud_classes .= 'top' . $cloud_args['number'];
+            $cloud_classes .= 'top-' . $cloud_args['number'];
             $cloud_title = sprintf( __( 'The Top %1$s Tags Cloud:', 'opusprimus' ), $cloud_args['number'] );
         } /** End if - isset */
 
