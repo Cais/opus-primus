@@ -1059,8 +1059,9 @@ td.archive-image-excerpt {
 }
 
 .archive img.linked-image {
-    width: 50%;
     height: auto;
+    margin-bottom: 10px;
+    width: 50%;
 }
 /** End: Post-Format: Image ------------------------------------------------- */
 
