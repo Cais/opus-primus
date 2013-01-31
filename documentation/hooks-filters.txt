@@ -38,6 +38,7 @@
 * opus_exif_focal_length
 * opus_exif_iso_speed
 * opus_exif_title
+* opus_linked_image_filter
 
 = class.OpusPrimusMetaBoxes.php =
 * opus_taglines_meta_box_title

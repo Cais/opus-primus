@@ -665,7 +665,6 @@ class OpusPrimusImages {
      * @uses    wp_get_attachment_image
      *
      * @todo Add filters to output messages
-     * @todo Review output when using image that is not attached to post (or linked)
      * @todo Address $archive_image message(s) once `first_linked_image` is sorted out
      * @todo Address CSS aesthetics on images not attached ... or find a way to display the post excerpt details (much better choice!)
      */
@@ -713,6 +712,9 @@ class OpusPrimusImages {
                             echo '<span class="archive-image"><a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">'
                                 . $archive_image
                                 . '</a></span>';
+                            if ( empty( $attachments ) ) {
+                                printf( '<br /><span class="linked-image-message">%1$s</span>', apply_filters( 'opus_linked_image_message', __( 'This is a linked image.', 'opusprimus' ) ) );
+                            } /** End if - empty attachments */
                         } /** End if - not is single */ ?>
                     </td>
                 </tr>
