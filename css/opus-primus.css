@@ -1057,6 +1057,11 @@ td.archive-image-excerpt {
 .archive table + p {
     padding-top: 4px;
 }
+
+.archive img.linked-image {
+    width: 50%;
+    height: auto;
+}
 /** End: Post-Format: Image ------------------------------------------------- */
 
 /** === Post-Format: Video === ---------------------------------------------- */
