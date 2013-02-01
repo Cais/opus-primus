@@ -42,6 +42,8 @@ class OpusPrimusStructures {
 
         /** Hooks into the 404 page image placeholder action hook */
         add_action( 'opus_404_image', array( $this, 'show_bust_image' ) );
+        /** Add Support Comment to footer area */
+        add_action( 'wp_footer', array( $this, 'support_comment' ) );
 
     } /** End function - construct */
 
@@ -640,6 +642,27 @@ class OpusPrimusStructures {
     function show_bust_image() {
         echo $this->bust_image();
     }
+
+
+    /**
+     * Support Comment
+     * Writes an HTML comment with the theme version meant to be used as a
+     * reference for support and assistance.
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    wp_get_theme
+     */
+    function support_comment() {
+
+        $comment = "\n";
+        $comment .= '<!-- The following comment is meant to serve as a reference only -->' . "\n";
+        $comment .= '<!-- Opus Primus version ' . wp_get_theme()->get( 'Version' ) . ' -->' . "\n";
+
+        echo $comment;
+
+    } /** End function - support comment */
 
 
 } /** End Opus Primus Structures class */
