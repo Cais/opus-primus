@@ -65,6 +65,8 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
         wp_enqueue_script( 'opus-primus', OPUS_JS . 'opus-primus.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
         /** Enqueue Opus Primus Full Size Video which will enqueue jQuery as a dependency */
         wp_enqueue_script( 'opus-primus-full-size-video', OPUS_JS . 'opus-primus-full-size-video.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
+        /** Enqueue Opus Primus Header Image Position which will enqueue jQuery as a dependency */
+        wp_enqueue_script( 'opus-primus-header-image-position', OPUS_JS . 'opus-primus-header-image-position.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
 
         /** Enqueue Theme Stylesheets */
         /** Theme Layouts */
