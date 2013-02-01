@@ -44,7 +44,7 @@ jQuery( document ).ready( function( $ ) {
      * Compare widths - if the image is great than half of its parent container
      * then center the header image and the header text (via the site-* ids)
      */
-    if ( container_width * 0.50 > image_width ) {
+    if ( container_width * 0.50 < image_width ) {
         $('h1#site-title, h2#site-description').css('text-align','center');
         image_selector.addClass('aligncenter');
     } /** End if - conditional width */
