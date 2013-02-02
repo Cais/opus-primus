@@ -468,7 +468,9 @@ class OpusPrimusStructures {
      * Copyright
      * Returns copyright year(s) as defined by the dates found in published
      * posts. Recognized the site (via its title) as the copyright holder and
-     * notes the terms of the copyright.
+     * notes the terms of the copyright. By default the author of the page or
+     * the post is specifically noted as the copyright holder in the single
+     * view of the page or post.
      *
      * @package OpusPrimus
      * @since   0.1
