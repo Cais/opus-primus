@@ -713,7 +713,9 @@ class OpusPrimusImages {
                                 . $archive_image
                                 . '</a></span>';
                             if ( empty( $attachments ) ) {
-                                printf( '<br /><span class="linked-image-message">%1$s</span>', apply_filters( 'opus_linked_image_message', __( 'This is a linked image.', 'opusprimus' ) ) );
+                                printf( '<div class="linked-image-message">%1$s</div>',
+                                    apply_filters( 'opus_linked_image_message', __( 'This is a linked image.', 'opusprimus' ) )
+                                );
                             } /** End if - empty attachments */
                         } /** End if - not is single */ ?>
                     </td>

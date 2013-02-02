@@ -47,8 +47,12 @@ jQuery( document ).ready( function( $ ) {
     /** Wrap the comment reply link text in a button */
     $( 'div.reply a' ).wrapInner( '<button class="reply-button" />' );
 
-    /** Wrap post-format:link anchors with link-symbol class */
-    $( 'div.post.format-link .post-content a').wrapInner( '<span class="link-symbol" />' );
+    /**
+     * Wrap specific anchors with link-symbol class; CSS will provide symbol
+     * - Post-Format: Link
+     * - Linked Image Message
+     */
+    $( 'div.post.format-link .post-content a, div.linked-image-message').wrapInner( '<span class="link-symbol" />' );
 
     /** Wrap post-format:audio anchors with audio-symbol class */
     $( 'div.post.format-audio .post-content a').wrapInner( '<span class="audio-symbol" />' );
