@@ -620,7 +620,9 @@ class OpusPrimusPosts {
         if ( ( $time_diff > $time_ago ) && ( $time_diff < 31449600 ) ) {
             printf( __( '<div class="opus-status-update">%1$s %2$s ago.</div>', 'opusprimus' ), $update_text, human_time_diff( get_the_modified_time( 'U' ), current_time( 'timestamp' ) ) );
         } elseif ( $time_diff >= 31449600 ) {
-            _e( '<div class="opus-status-update">Updated over a year ago.</div>', 'opusprimus' );
+            printf( '<div class="opus-status-update">%1$s</div>',
+                apply_filters( 'opus_status_update_over_year', __( 'Updated over a year ago.', 'opusprimus' ) )
+            );
         } /** End if - time diff */
 
         /** Add empty hook after status update output */

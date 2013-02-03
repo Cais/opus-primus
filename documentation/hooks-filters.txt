@@ -53,6 +53,7 @@
 * opus_default_sticky_flag
 * opus_sticky_flag
 * opus_post_format_flag
+* opus_status_update_over_year
 * opus_post_coda
 
 = class.OpusPrimusStructures.php =
