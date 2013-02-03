@@ -626,12 +626,19 @@ class OpusPrimusPosts {
         $time_diff = 0;
         /** Check if the post has been modified and get how long ago that was */
         if ( get_the_modified_time( 'U' ) != get_the_time( 'U' ) ) {
-            $time_diff = time() - get_the_modified_time( 'U' );
+            $time_diff = current_time( 'timestamp' ) - get_the_modified_time( 'U' );
         } /** End if - get the modified time */
 
         /** Compare time difference between modification and actual post */
         if ( ( $time_diff > $time_ago ) && ( $time_diff < 31449600 ) ) {
-            printf( __( '<div class="opus-status-update">%1$s %2$s ago.</div>', 'opusprimus' ), $update_text, human_time_diff( get_the_modified_time( 'U' ), current_time( 'timestamp' ) ) );
+            printf( '<div class="opus-status-update">%1$s</div>',
+                apply_filters( 'opus_status_update',
+                    sprintf( __( '%1$s %2$s ago.', 'opusprimus' ),
+                        $update_text,
+                        human_time_diff( get_the_modified_time( 'U' ), current_time( 'timestamp' ) )
+                    )
+                )
+            );
         } elseif ( $time_diff >= 31449600 ) {
             printf( '<div class="opus-status-update">%1$s</div>',
                 apply_filters( 'opus_status_update_over_year', $update_text . ' ' . __( 'over a year ago.', 'opusprimus' ) )
