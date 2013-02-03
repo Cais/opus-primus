@@ -613,7 +613,7 @@ class OpusPrimusPosts {
         $time_diff = 0;
         /** Check if the post has been modified and get how long ago that was */
         if ( get_the_modified_time( 'U' ) != get_the_time( 'U' ) ) {
-            $time_diff = get_the_modified_time( 'U' ) - get_the_time( 'U' );
+            $time_diff = time() - get_the_modified_time( 'U' );
         } /** End if - get the modified time */
 
         /** Compare time difference between modification and actual post */
