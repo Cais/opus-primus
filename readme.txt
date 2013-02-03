@@ -1,5 +1,5 @@
 === Opus Primus readme.txt ===
-* Last revised January 28, 2013
+* Last revised February 3, 2013
 
 == Contents ==
 * Copyright
@@ -65,6 +65,14 @@ written here.
 == Screenshots ==
 
 == Basic FAQ ==
+Q: Where are the menu locations, and how are they used?
+There are three menu locations defined in Opus Primus.
+* The Primary Menu, located at the top of the page above the main content area.
+* The Secondary Menu, no location is set by default; the menu has been pre-
+defined for uses as the case may be, for example, page templates or Child-Themes
+* The Search Results Menu, located at the bottom of the content area when there
+are no search results returned, especially in the case of a "404" error be sent.
+
 Q: Why are there blank areas in my menu?
 Although not always the case, it has been shown that if you have a page without
 a title and you are using a menu created by the default settings (read: not a
@@ -108,3 +116,7 @@ This being the case, the following widths will be used:
 - one-column: 990px
 - two-column: 700px
 - three-column: 450px
+
+2. Default Menu depth levels may be of concern in some cases. As it stands, the
+default menus are not restricted to any specific depth except the Search Results
+Menu which is restricted to a single level only when a custom menu is not used.
