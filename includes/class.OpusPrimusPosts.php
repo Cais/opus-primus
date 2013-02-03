@@ -598,6 +598,8 @@ class OpusPrimusPosts {
      * @param   string $update_text
      * @param   int $time_ago - measured in seconds, default equals one week
      *
+     * @uses    apply_filters
+     * @uses    current_time
      * @uses    do_action
      * @uses    get_the_modified_time
      * @uses    get_the_time
@@ -605,7 +607,18 @@ class OpusPrimusPosts {
      *
      * @internal Used with Post-Format: Status
      */
-    function status_update( $update_text = 'Updated', $time_ago = 604800 ){
+    function status_update( $update_text = '', $time_ago = 604800 ){
+
+        /**
+         * Set the default text if the update text is not passed to the function
+         * and/or allow it to be filtered
+         */
+        if ( empty( $update_text ) ) {
+            $update_text = sprintf( '<span class="status-update-text">%1$s</span>',
+                apply_filters( 'opus_status_update_text', __( 'Updated again', 'opusprimus' ) )
+            );
+        } /** End if - empty update text */
+
         /** Add empty hook before status update output */
         do_action( 'opus_before_status_update' );
 
@@ -621,7 +634,7 @@ class OpusPrimusPosts {
             printf( __( '<div class="opus-status-update">%1$s %2$s ago.</div>', 'opusprimus' ), $update_text, human_time_diff( get_the_modified_time( 'U' ), current_time( 'timestamp' ) ) );
         } elseif ( $time_diff >= 31449600 ) {
             printf( '<div class="opus-status-update">%1$s</div>',
-                apply_filters( 'opus_status_update_over_year', __( 'Updated over a year ago.', 'opusprimus' ) )
+                apply_filters( 'opus_status_update_over_year', $update_text . ' ' . __( 'over a year ago.', 'opusprimus' ) )
             );
         } /** End if - time diff */
 

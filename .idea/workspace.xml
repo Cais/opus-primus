@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documentation/hooks-filters.txt" afterPath="$PROJECT_DIR$/documentation/hooks-filters.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +30,7 @@
       <file leaf-file-name="class.OpusPrimusPosts.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPosts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="623" column="0" selection-start="23343" selection-end="23343" vertical-scroll-proportion="0.6605223">
+            <state line="619" column="35" selection-start="22908" selection-end="22908" vertical-scroll-proportion="0.34715822">
               <folding />
             </state>
           </provider>
@@ -37,7 +39,7 @@
       <file leaf-file-name="hooks-filters.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/documentation/hooks-filters.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="30" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.0">
+            <state line="55" column="25" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -70,8 +72,8 @@
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
         <option value="$PROJECT_DIR$/opus-primus-footer.php" />
         <option value="$PROJECT_DIR$/readme.txt" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
         <option value="$PROJECT_DIR$/documentation/hooks-filters.txt" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
       </list>
     </option>
   </component>
@@ -1475,7 +1477,11 @@
       <created>1359928124251</created>
       <updated>1359928124252</updated>
     </task>
-    <option name="localTasksCounter" value="277" />
+    <task id="LOCAL-00277" summary="Added new filter for status update over a year">
+      <created>1359928130031</created>
+      <updated>1359928130031</updated>
+    </task>
+    <option name="localTasksCounter" value="278" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1706,14 +1712,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/documentation/hooks-filters.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="30" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.0">
+        <state line="55" column="25" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPosts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="623" column="0" selection-start="23343" selection-end="23343" vertical-scroll-proportion="0.6605223">
+        <state line="619" column="35" selection-start="22908" selection-end="22908" vertical-scroll-proportion="0.34715822">
           <folding />
         </state>
       </provider>
