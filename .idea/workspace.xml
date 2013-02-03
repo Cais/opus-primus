@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documentation/hooks-filters.txt" afterPath="$PROJECT_DIR$/documentation/hooks-filters.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1473,7 +1471,11 @@
       <created>1359927251614</created>
       <updated>1359927251614</updated>
     </task>
-    <option name="localTasksCounter" value="276" />
+    <task id="LOCAL-00276" summary="Added new filter for status update over a year">
+      <created>1359928124251</created>
+      <updated>1359928124252</updated>
+    </task>
+    <option name="localTasksCounter" value="277" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1570,7 +1572,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use correct `time` function to return correct value" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new filter for status update over a year" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1583,7 +1585,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Make action hook names consistent using `opus_` as their prefix" />
     <MESSAGE value="Updated FAQ with question: Why are there blank areas in my menu?" />
     <MESSAGE value="Add new script 'opus-primus-content-width.js' to better manage $content_width values" />
     <MESSAGE value="Revert - Add new script 'opus-primus-content-width.js' to better manage $content_width values (Not working ... not gonna happen, yet)." />
@@ -1608,6 +1609,7 @@
     <MESSAGE value="Added documentation to `copyright` specifying the default is to give credit to the post/page author as the copyright holder." />
     <MESSAGE value="Update 'readme' with Menu location FAQ and menu depth explanation." />
     <MESSAGE value="Use correct `time` function to return correct value" />
+    <MESSAGE value="Added new filter for status update over a year" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
