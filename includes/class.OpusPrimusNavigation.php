@@ -99,13 +99,13 @@ class OpusPrimusNavigation {
 
 
     /**
-     * Link Pages
+     * Multiple Pages Link
      * Outputs the navigation structure to move between multiple pages from the
      * same post. All parameters used by `wp_link_pages` can be passed through
      * the function.
      *
      * @link    http://codex.wordpress.org/Function_Reference/wp_link_pages
-     * @example link_pages( array( 'before' => '<p class="navigation link-pages cf">', 'after' => '</p>' ) );
+     * @example multiple_pages_link( array( 'before' => '<p class="navigation link-pages cf">', 'after' => '</p>' ) );
      * @internal The above example will output the `wp_link_pages` output in a
      * wrapper consisting of a `p` tag with `classes`
      *
@@ -119,7 +119,7 @@ class OpusPrimusNavigation {
      * @uses    wp_link_pages
      * @uses    wp_parse_args
      */
-    function link_pages( $link_pages_args = '', $preface = '' ) {
+    function multiple_pages_link( $link_pages_args = '', $preface = '' ) {
         /** @var $defaults - initial values */
         $defaults = array(
             'before'    => '<p class="navigation opus-link-pages cf">' . '<span class="opus-link-pages-preface">' . $preface . '</span>',

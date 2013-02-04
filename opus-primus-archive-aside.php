@@ -50,7 +50,7 @@ global $opus_posts, $opus_comments, $opus_navigation; ?>
     $opus_posts->post_title();
     $opus_comments->comments_link();
     $opus_posts->post_excerpt();
-    $opus_navigation->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
+    $opus_navigation->multiple_pages_link( array(), $preface = __( 'Pages:', 'opusprimus' ) );
     $opus_posts->meta_tags( $anchor );
     $opus_posts->post_coda(); ?>
 

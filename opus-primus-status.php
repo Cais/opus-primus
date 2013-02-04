@@ -53,7 +53,7 @@ global $opus_defaults, $opus_structures, $opus_posts, $opus_comments, $opus_navi
     $opus_images->featured_thumbnail();
     $opus_posts->post_content();
     $opus_posts->status_update();
-    $opus_navigation->link_pages( array(), $preface = __( 'Pages:', 'opusprimus' ) );
+    $opus_navigation->multiple_pages_link( array(), $preface = __( 'Pages:', 'opusprimus' ) );
     $opus_posts->meta_tags( $anchor );
     $opus_posts->post_coda();
     if ( is_single() ) {
