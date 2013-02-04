@@ -471,7 +471,7 @@ class OpusPrimusPosts {
         } /** End if - flag text */
 
         /** @var $output - the post format type linked to its archive */
-        $output = '<a href="' . get_post_format_link( get_post_format() ) . '" title="' . sprintf( __( 'View the %1$s archive.' ), $title_text ) . '">' . $flag_text . '</a>';
+        $output = '<a href="' . get_post_format_link( get_post_format() ) . '" title="' . sprintf( __( 'View the %1$s archive.', 'opusprimus' ), $title_text ) . '">' . $flag_text . '</a>';
 
         return apply_filters( 'opus_post_format_flag', $output );
 
