@@ -33,11 +33,17 @@
  */
 
 global $opus_archives, $opus_structures;
-get_header( '404' ); ?>
+get_header( '404' );
+
+/** Add empty hook before content */
+do_action( 'opus_before_content' ); ?>
 
 <div class="content-wrapper cf">
 
     <?php
+    /** Add empty hook at top of the content */
+    do_action( 'opus_content_top' );
+
     /** Open the necessary layout CSS classes */
     echo $opus_structures->layout_open();
 
@@ -108,9 +114,15 @@ get_header( '404' ); ?>
     get_sidebar( '404' );
 
     /** Close the classes written by the layout_open call */
-    echo $opus_structures->layout_close(); ?>
+    echo $opus_structures->layout_close();
+
+    /** Add empty hook at the bottom of the content */
+    do_action( 'opus_content_bottom' ); ?>
 
 </div><!-- #content-wrapper -->
 
 <?php
+/** Add empty hook after the content */
+do_action( 'opus_after_content' );
+
 get_footer( '404' );

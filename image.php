@@ -34,11 +34,19 @@
  */
 
 global $post, $opus_navigation, $opus_structures, $opus_posts, $opus_images;
-get_header( 'image' ); ?>
+get_header( 'image' );
+
+/** Add empty hook before content */
+do_action( 'opus_before_content' ); ?>
 
 <div class="content-wrapper cf">
 
-    <?php echo $opus_structures->layout_open(); ?>
+    <?php
+    /** Add empty hook at top of the content */
+    do_action( 'opus_content_top' );
+
+    /** Open the necessary layout CSS classes */
+    echo $opus_structures->layout_open(); ?>
 
     <div class="the-loop">
 
@@ -106,9 +114,15 @@ get_header( 'image' ); ?>
     <?php
     get_sidebar( 'image' );
 
-    echo $opus_structures->layout_close(); ?>
+    echo $opus_structures->layout_close();
+
+    /** Add empty hook at the bottom of the content */
+    do_action( 'opus_content_bottom' ); ?>
 
 </div><!-- #content-wrapper -->
 
 <?php
+/** Add empty hook after the content */
+do_action( 'opus_after_content' );
+
 get_footer( 'image' );
