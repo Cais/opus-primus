@@ -1,5 +1,5 @@
-NOTES.TXT
-=========
+README.TXT
+==========
 A free-form scratchpad for ideas and other notes related to the project.
 
 * Comments Toggle JavaScript / jQuery
