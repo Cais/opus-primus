@@ -67,5 +67,6 @@ global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_imag
     } /** End if - is single */ ?>
 
 </div><!-- post classes -->
+
 <?php
-comments_template( '/comments.php', true );
+$opus_comments->wrapped_comments_template();

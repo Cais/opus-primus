@@ -35,6 +35,8 @@
 
 <footer>
 
+    <?php do_action( 'opus_footer_top' ); ?>
+
     <div id="footer-widgets">
         <?php get_sidebar( 'footer' ); ?>
     </div><!-- #footer-widgets -->
@@ -46,5 +48,7 @@
     <h6 id="site-copyright">
         <?php echo $opus_structures->copyright(); ?>
     </h6><!-- #site-copyright -->
+
+    <?php do_action( 'opus_footer_bottom' ); ?>
 
 </footer><!-- End footer section -->

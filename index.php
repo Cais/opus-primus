@@ -37,11 +37,15 @@
  */
 
 global $opus_structures;
-get_header(); ?>
+get_header();
+
+do_action( 'opus_before_content' ); ?>
 
 <div class="content-wrapper cf">
 
     <?php
+    do_action( 'opus_content_top' );
+
     /** Open the necessary layout CSS classes */
     echo $opus_structures->layout_open();
 
@@ -69,9 +73,13 @@ get_header(); ?>
     get_sidebar();
 
     /** Close the classes written by the layout_open call */
-    echo $opus_structures->layout_close(); ?>
+    echo $opus_structures->layout_close();
+
+    do_action( 'opus_content_bottom' ); ?>
 
 </div><!-- #content-wrapper -->
 
 <?php
+do_action( 'opus_after_content' );
+
 get_footer();

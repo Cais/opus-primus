@@ -2,7 +2,7 @@
 * Listing by File
 * Sorted Alphabetically
 * In Order of Appearance
-* Last revised January 27, 2013
+* Last revised February 4, 2013
 
 === Actions ===
 == \ ==
@@ -22,14 +22,27 @@
 = footer.php =
 * opus_before_footer
 * opus_before_wp_footer
+* opus_body_bottom
 
 = header.php =
+* opus_before_html
+* opus_head_top
+* opus_head_bottom
+* opus_body_top
 * opus_before_header
 * opus_after_header
 
 = index.php =
+* opus_before_content
+* opus_content_top
 * opus_before_the_loop
 * opus_after_the_loop
+* opus_content_bottom
+* opus_after_content
+
+= opus-primus-footer.php =
+* opus_footer_top
+* opus_footer_bottom
 
 = page.php =
 * opus_before_the_loop
@@ -57,6 +70,7 @@
 
 == \headers ==
 = header.php =
+* opus_header_top
 * opus_before_site_title
 * opus_after_site_title
 * opus_before_site_description
@@ -65,6 +79,7 @@
 * opus_after_custom_header_image
 * opus_before_nav
 * opus_after_nav
+* opus_header_bottom
 
 == \includes ==
 = class.OpusPrimusArchives.php =
@@ -85,6 +100,8 @@
 = class.OpusPrimusComments.php =
 * opus_before_comments_link
 * opus_after_comments_link
+* opus_before_comments
+* opus_after_comments
 
 = class.OpusPrimusGallery.php =
 * opus_before_featured_image

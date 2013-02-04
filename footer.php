@@ -45,6 +45,9 @@ if ( is_singular() ) {
 /** Add empty hook at end of footer */
 do_action( 'opus_before_wp_footer' );
 
+/** Add empty hook bottom before call to wp_footer */
+do_action( 'opus_body_bottom' );
+
 /**
  * `wp_footer` is placed inside the #opus-primus element to provide a container
  * for styling content displayed in the footer by other code constructs such as

@@ -217,6 +217,27 @@ class OpusPrimusComments {
 
     } /** End function - comments link */
 
+
+    /**
+     * Wrapped Comments Template
+     * Wraps the comments_template call in action hooks
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    do_action
+     * @uses    comments_template
+     */
+    function wrapped_comments_template() {
+        /** Add empty hook before comments */
+        do_action( 'opus_before_comments' );
+
+        comments_template( '/comments.php', true );
+
+        /** Add empty hook after comments */
+        do_action( 'opus_after_comments' );
+    }
+
 } /** End class Opus Primus Comments */
 
 /** @var $opus_comments - new instance of class */

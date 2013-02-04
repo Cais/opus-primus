@@ -35,6 +35,8 @@
 
 <header>
 
+    <?php do_action( 'opus_header_top' ); ?>
+
     <hgroup>
 
         <div class="masthead">
@@ -97,6 +99,8 @@
 
     <?php
     /** Add empty hook after primary navigation */
-    do_action( 'opus_after_nav' ); ?>
+    do_action( 'opus_after_nav' );
+
+    do_action( 'opus_header_bottom' ); ?>
 
 </header><!-- End header section -->

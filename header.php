@@ -33,19 +33,24 @@
  */ ?>
 
 <!DOCTYPE html>
+<?php do_action( 'opus_before_html' ); ?>
 <html <?php language_attributes(); ?>>
 <head>
+    <?php do_action( 'opus_head_top' ); ?>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width">
     <title><?php wp_title( '|', true, 'right' ); ?></title>
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-    <?php wp_head(); ?>
+    <?php
+    do_action( 'opus_head_bottom' );
+    wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="opus-primus">
+<?php do_action( 'opus_body_top' ); ?>
+<div id="opus-primus"><!-- Unique theme identifier -->
     <?php
     /** Add empty hook before header */
     do_action( 'opus_before_header' );
