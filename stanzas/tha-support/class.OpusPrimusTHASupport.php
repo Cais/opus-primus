@@ -1,13 +1,13 @@
 <?php
 /**
- * Stanzas
- * Includes all of the current stanzas aka extensions
+ * Opus Primus THA Support
+ * Support for the Theme Hook Alliance system of action hooks
  *
  * @package     OpusPrimus
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2013, Opus Primus
+ * @copyright   Copyright (c) 2013, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -32,8 +32,6 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-/** Add Pull Quotes */
-require_once( OPUS_STANZAS . 'pullquotes/class.OpusPrimusPullQuotes.php' );
+class OpusPrimusTHASupport {
 
-/** Add THA Support */
-require_once( OPUS_STANZAS . 'tha-support/class.OpusPrimusTHASupport.com' );
+}
