@@ -34,3 +34,6 @@
 
 /** Add Pull Quotes */
 require_once( OPUS_STANZAS . 'pullquotes/class.OpusPrimusPullQuotes.php' );
+
+/** Add Theme Hook Alliance Support */
+require_once( OPUS_STANZAS . 'tha/tha-support.php' );
