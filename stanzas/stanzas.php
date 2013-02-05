@@ -36,4 +36,4 @@
 require_once( OPUS_STANZAS . 'pullquotes/class.OpusPrimusPullQuotes.php' );
 
 /** Add THA Support */
-require_once( OPUS_STANZAS . 'tha-support/class.OpusPrimusTHASupport.com' );
+// require_once( OPUS_STANZAS . 'tha-support/class.OpusPrimusTHASupport.php' );
