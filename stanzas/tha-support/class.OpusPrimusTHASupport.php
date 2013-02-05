@@ -34,4 +34,32 @@
 
 class OpusPrimusTHASupport {
 
+    /** Constructor */
+    function __construct() {
+
+        /** Pull in the main THA Theme Hooks file */
+        require_once( OPUS_STANZAS_URI . 'tha-support/tha-theme-hooks.php' );
+
+    }
+
+
+    /**
+     * THA in Opus Primus
+     * Match up hooks in THA to existing hooks in Opus Primus then use
+     * function to hook into ???
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    do_action
+     *
+     * @internal Directly related to THA v1.0
+     */
+    function tha_in_opusprimus() {
+
+        /** Add all hooks */
+
+
+    }
+
 }
