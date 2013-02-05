@@ -42,21 +42,21 @@ require_once( OPUS_STANZAS . 'tha/tha-theme-hooks.php' );
  */
 
 /** HTML <html> hook */
-do_action( 'tha_html_before' );
+add_action( 'opus_before_html', 'tha_html_before' );
 
 /** HTML <body> hooks */
-do_action( 'tha_body_top' );
-do_action( 'tha_body_bottom' );
+add_action( 'opus_body_top', 'tha_body_top' );
+add_action( 'opus_body_bottom', 'tha_body_bottom' );
 
 /** HTML <head> hooks */
-do_action( 'tha_head_top' );
-do_action( 'tha_head_bottom' );
+add_action( 'opus_head_top', 'tha_head_top' );
+add_action( 'opus_head_bottom', 'tha_head_bottom' );
 
 /** Semantic <header> hooks */
-do_action( 'tha_header_before' );
-do_action( 'tha_header_after' );
-do_action( 'tha_header_top' );
-do_action( 'tha_header_bottom' );
+add_action( 'opus_before_header', 'tha_header_before' );
+add_action( 'opus_after_header', 'tha_header_after' );
+add_action( 'opus_header_top', 'tha_header_top' );
+add_action( 'opus_header_bottom', 'tha_header_bottom' );
 
 /** Semantic <content> hooks */
 do_action( 'tha_content_before' );
