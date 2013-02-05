@@ -689,7 +689,6 @@ function show_opus_test() {
  */
 // add_action( 'opus_before_modified_post', 'show_opus_test' );
 // add_action( 'opus_before_get_template_part', 'show_opus_test' );
-// add_action( 'tha_content_top', 'opus_test' );
 
 // add_filter( 'opus_modified_author_by_text', 'opus_test' );
 // add_filter( 'opus_author_coda', 'opus_test' );
