@@ -35,7 +35,42 @@
 class OpusPrimusImages {
 
     /** Construct */
-    function __construct(){}
+    function __construct() {
+
+        /** Restore Image Title */
+        add_filter( 'media_send_to_editor', 'restore_image_title', 15, 2 );
+
+    }
+
+
+    /**
+     * Restore Image Title
+     * Adds the image title (attachment post title) to the HTML IMG element if
+     * it does not exist - a WordPress 3.5 issue
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    get_post
+     *
+     * @param   $html
+     * @param   $id
+     *
+     * @return  mixed
+     *
+     * @todo Review if this needs to be adjusted / removed / enhanced ...
+     */
+    function restore_image_title( $html, $id ) {
+        /** @var $attachment - get the attachment object */
+        $attachment = get_post( $id );
+        /** Check if there is a title */
+        if ( strpos( $html, "title=" ) ) {
+            return $html;
+        } else {
+            $title = esc_attr( $attachment->post_title );
+            return str_replace( '<img', '<img title="' . $title . '" '  , $html );
+        } /** End if - strpos html */
+    } /** End function - restore image title */
 
 
     /**
