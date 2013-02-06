@@ -36,10 +36,7 @@
 /** Grab the THA theme hooks file */
 require_once( OPUS_STANZAS . 'tha/tha-theme-hooks.php' );
 
-/**
- * @todo Change all of the do_action calls to add_action calls with the appropriate opus_* hooks
- * @example add_action( 'opus_*', 'tha_*' );
- */
+/** @example add_action( 'opus_*', 'tha_*' ); */
 
 /** HTML <html> hook */
 add_action( 'opus_before_html', 'tha_html_before' );
