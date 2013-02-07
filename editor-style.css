@@ -1,0 +1,489 @@
+/**
+ * Editor Stylesheet for Opus Primus
+ *
+ * @package     OpusPrimus
+ * @since       0.1
+ *
+ * @author      Opus Primus <in.opus.primus@gmail.com>
+ * @copyright   Copyright (c) 2013, Opus Primus
+ *
+ * This file is part of Opus Primus.
+ *
+ * Opus Primus is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 2, as published by the
+ * Free Software Foundation.
+ *
+ * You may NOT assume that you can use any other version of the GPL.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, write to:
+ *
+ *      Free Software Foundation, Inc.
+ *      51 Franklin St, Fifth Floor
+ *      Boston, MA  02110-1301  USA
+ *
+ * The license for this software can also likely be found here:
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+@import url('style.css');
+
+/*-- Begin TinyMCE --*/
+html .mceContentBody {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #333333;
+}
+
+/** HTML Elements - Listed Alphabetically */
+a {
+    color: #0088cc;
+    text-decoration: none;
+}
+a:hover {
+    color: #005580;
+    text-decoration: underline;
+}
+a:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+abbr[title],
+acronym[title] {
+    cursor: help;
+    border-bottom: 1px dotted #999999;
+}
+
+address {
+    display: block;
+    margin-bottom: 18px;
+    font-style: normal;
+    line-height: 18px;
+}
+
+big { font-size: 200%; }
+
+/* - Blockquote tags */
+blockquote {
+    padding: 0 0 0 15px;
+    margin: 0 0 18px;
+    border-left: 5px solid #eeeeee;
+}
+blockquote p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22.5px;
+}
+blockquote small {
+    display: block;
+    line-height: 18px;
+    color: #999999;
+}
+blockquote small:before {
+    content: '\2014 \00A0';
+}
+blockquote:before,
+blockquote:after {
+    content: "";
+}
+cite {
+    font-style: normal;
+}
+cite:before {
+    content: "~";
+}
+/** - End: Blockquote tags */
+
+code,
+pre {
+    padding: 0 3px 2px;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: 12px;
+    color: #333333;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+code {
+    padding: 2px 4px;
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+}
+
+em {
+    font-style: italic;
+}
+
+/** - H tags */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: inherit;
+    font-weight: bold;
+    color: inherit;
+    text-rendering: optimizelegibility;
+}
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+    font-weight: normal;
+    color: #999999;
+}
+h1 {
+    font-size: 30px;
+    line-height: 36px;
+}
+h1 small {
+    font-size: 18px;
+}
+h2 {
+    font-size: 24px;
+    line-height: 36px;
+}
+h2 small {
+    font-size: 18px;
+}
+h3 {
+    font-size: 18px;
+    line-height: 27px;
+}
+h3 small {
+    font-size: 14px;
+}
+h4,
+h5,
+h6 {
+    line-height: 18px;
+}
+h4 {
+    font-size: 14px;
+}
+h4 small {
+    font-size: 12px;
+}
+h5 {
+    font-size: 12px;
+}
+h6 {
+    font-size: 11px;
+    color: #999999;
+    text-transform: uppercase;
+}
+/** - End: H tags */
+
+hr {
+    border: 0;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #ffffff;
+    margin: 18px 0;
+}
+
+hr.pre-post-link-navigation {
+    margin: 9px;
+}
+
+img {
+    max-width: 97%;
+    vertical-align: middle;
+}
+
+kbd { font-family: monospace, sans-serif; }
+
+/** - Lists */
+/** -- unordered, ordered */
+ul,
+ol {
+    padding: 0;
+    margin: 0 0 9px 25px;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+    margin-bottom: 0;
+}
+ul {
+    list-style: disc;
+}
+ol {
+    list-style: decimal;
+}
+li {
+    line-height: 18px;
+}
+/** -- definition */
+dl {
+    margin-bottom: 18px;
+}
+dt,
+dd {
+    line-height: 18px;
+}
+dt {
+    font-weight: bold;
+    line-height: 17px;
+}
+dd {
+    margin-left: 9px;
+}
+/** - End: Lists */
+
+p {
+    margin: 0 0 9px;
+}
+p small {
+    font-size: 11px;
+    color: #999999;
+}
+
+pre {
+    display: block;
+    padding: 8.5px;
+    margin: 0 0 9px;
+    font-size: 12.025px;
+    line-height: 18px;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre;
+    white-space: pre-wrap;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+pre code {
+    padding: 0;
+    color: inherit;
+    background-color: transparent;
+    border: 0;
+}
+
+select { width: 98%; }
+
+small {
+    font-size: 100%;
+}
+
+sub,
+sup {
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+sub {
+    bottom: -0.25em;
+}
+sup {
+    top: -0.5em;
+}
+
+table {
+    max-width: 100%;
+    background-color: transparent;
+}
+
+tt { font-family: monospace, sans-serif; }
+
+/** End: Baselines ---------------------------------------------------------- */
+
+/** === General Images === -------------------------------------------------- */
+.gallery-item img { height: auto; }
+
+.image-shadow {
+    -moz-box-shadow: 3px 3px 4px #000;
+    -webkit-box-shadow: 3px 3px 4px #000;
+    box-shadow: 3px 3px 4px #000;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+
+/** End: General Images ----------------------------------------------------- */
+
+/** === Attachment: Image === ----------------------------------------------- */
+h2#attachment-notice {
+    text-align: center;
+}
+div.the-loop div.attached-image,
+div.exif-dimensions {
+    text-align: center;
+}
+
+div.display-exif-box p {
+    margin: 0;
+}
+
+table.display-exif-table tbody tr td {
+    padding-right: 10px;
+}
+
+.wp-caption,
+.wp-caption img {
+    max-width: 99%;
+}
+
+img {
+    height: auto;
+}
+/** End: Attachment: Image -------------------------------------------------- */
+
+/** === Post Formats === ---------------------------------------------------- */
+
+/** === Post-Format: Gallery === -------------------------------------------- */
+.format-gallery img.wp-post-image,
+.format-gallery img.attachment-thumbnail {
+    border: medium double #000000;
+}
+.gallery-featured-image,
+.gallery-secondary-images {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.gallery-featured-image img {
+    height: auto;
+}
+
+.gallery-secondary-images a {
+    margin: 2%;
+}
+
+.gallery-secondary-images p.more-images a {
+    margin: 0;
+}
+
+p.more-images,
+.gallery-caption {
+    padding-top: 4px;
+}
+/** End: Post-Format: Gallery ----------------------------------------------- */
+
+/** === Post-Format: Image === ---------------------------------------------- */
+div.post.format-image h2.image-title {
+    text-align: center;
+}
+div.image-media-details {
+    margin: 0 auto;
+    width: 60%;
+}
+
+div.attached-image + div.post-content {
+    padding-top: 10px;
+}
+/** End: Post-Format: Image ------------------------------------------------- */
+
+/** === Post-Format: Video === ---------------------------------------------- */
+/** End: Post-Format: Video ------------------------------------------------- */
+
+/** === Post-Format: Quote === ---------------------------------------------- */
+@font-face {
+    font-family: 'Merienda';
+    src: url('../fonts/Merienda/Merienda.ttf') format('truetype');
+}
+
+.format-quote blockquote {
+    border: none;
+}
+
+.format-quote blockquote p {
+    font-family: 'Merienda', courrier, serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 33.75px;
+    margin: 0 auto;
+    padding: 0 5px;
+    text-align: justify;
+}
+
+.single .format-quote blockquote p {
+    font-size: 48px;
+    line-height: 67.5px;
+}
+
+/** End: Post-Format: Quote ------------------------------------------------- */
+
+/** === Post-Format: Status === --------------------------------------------- */
+.post.format-status div.opus-status-update {
+    filter: alpha(opacity=10);
+    line-height: 0;
+    opacity: 0.1;
+    text-align: center;
+    zoom: 1;
+}
+
+.transparent {
+    zoom: 1;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+/** End: Post-Format: Status ------------------------------------------------ */
+
+/** === Post-Format: Link === ----------------------------------------------- */
+div.post.format-link .post-content a {
+    font-size: 18px;
+}
+.link-symbol:before {
+    content: '\221E \0020'; /** Infinity Symbol + space - uses CSS hex values */
+}
+.link-symbol:after {
+    content: '\0020 \221E'; /** space + Infinity Symbol - uses CSS hex values */
+}
+/** End: Post-Format: Link -------------------------------------------------- */
+
+/** === Post-Format: Audio === ---------------------------------------------- */
+div.post.format-audio .post-content a {
+    font-size: 18px;
+}
+.format-audio p iframe {
+    width: 100% !important;
+}
+
+.audio-symbol:before {
+    /** content: '\1D11E \0020'; /** Musical G Clef Symbol + space - uses CSS hex values */
+}
+.audio-symbol:after {
+    /** content: '\0020 \1D11E'; /** space + Musical G Clef Symbol - uses CSS hex values */
+}
+/** End: Post-Format: Audio ------------------------------------------------- */
+
+/** === Post-Format: Chat === ----------------------------------------------- */
+@font-face {
+    font-family: 'Underwood-Champion';
+    src: url('../fonts/Underwood-Champion/underwood_champion.ttf') format('truetype');
+}
+
+.format-chat .post-content {
+    font-family: 'Underwood-Champion', monospace, serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 33.75px;
+    margin: 0 auto;
+    padding: 0 5px;
+}
+/** End: Post-Format: Chat -------------------------------------------------- */
+
+/** Make sure Twitter embeds are not fixed width */
+.post-content .twitter-tweet-rendered {
+    width: 100% !important;
+}
