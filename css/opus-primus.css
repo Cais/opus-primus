@@ -85,8 +85,8 @@ body {
 body {
     margin: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 15px; /** Changed from 13px */
+    line-height: 21px; /** Changed from 18px */
     color: #333333;
 }
 
@@ -156,7 +156,7 @@ code,
 pre {
     padding: 0 3px 2px;
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-    font-size: 12px;
+    font-size: 13px; /** Changed from 12px */
     color: #333333;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -196,9 +196,9 @@ input,
 button,
 select,
 textarea {
-    font-size: 13px;
+    font-size: 15px; /** Changed from 13px */
     font-weight: normal;
-    line-height: 18px;
+    line-height: 21px; /** Changed from 18px */
 }
 input,
 button,
@@ -410,7 +410,7 @@ h3 small {
 h4,
 h5,
 h6 {
-    line-height: 18px;
+    line-height: 21px; /** Changed from 18px */
 }
 h4 {
     font-size: 14px;
@@ -693,6 +693,11 @@ ul.nav-menu ul.sub-menu li, ul.nav-menu ul.children li, ul.nav-menu ul, ul.nav-m
 /** End: Menu Related Elements ---------------------------------------------- */
 
 /** === Post Elements === --------------------------------------------------- */
+/** Meta Byline ------------------------------------------------------------- */
+.meta-byline {
+    font-size: 13px;
+}
+
 /** Post Content ------------------------------------------------------------ */
 div.post-content {
     padding-bottom: 5px;
