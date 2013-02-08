@@ -83,6 +83,7 @@ class OpusPrimusImages {
      *
      * @uses    get_post_thumbnail_id
      * @uses    has_post_thumbnail
+     * @uses    is_page
      * @uses    is_single
      * @uses    the_post_thumbnail
      * @uses    the_title_attribute
@@ -93,7 +94,11 @@ class OpusPrimusImages {
         if ( has_post_thumbnail() && ! is_single() ) {
             $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
             echo '<a class="featured-thumbnail" href="' . $large_image_url[0] . '" title="' . the_title_attribute( 'echo=0' ) . '" >';
-                the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) );
+                if ( is_page() ) {
+                    the_post_thumbnail( 'thumbnail', array( 'class' => 'alignright' ) );
+                } else {
+                    the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) );
+                } /** End if - is page */
             echo '</a>';
         } /** End if - has post thumbnail and not is single */
     } /** End function - featured thumbnail */

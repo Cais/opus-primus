@@ -32,7 +32,7 @@
  */
 
 /** Call the class variables */
-global $opus_structures, $opus_posts, $opus_authors;
+global $opus_structures, $opus_posts, $opus_images, $opus_authors;
 get_header( 'page' );
 
 /** Add empty hook before content */
@@ -63,6 +63,7 @@ do_action( 'opus_before_content' ); ?>
                 <div <?php post_class(); ?>>
                     <?php
                     $opus_posts->post_title();
+                    $opus_images->featured_thumbnail();
                     $opus_posts->post_content();
                     $opus_posts->post_byline( array( 'show_mod_author' => true ) );
                     $opus_authors->post_author( array(
