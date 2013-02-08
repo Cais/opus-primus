@@ -46,7 +46,10 @@ do_action( 'opus_before_content' ); ?>
     do_action( 'opus_content_top' );
 
     /** Open the necessary layout CSS classes */
-    echo $opus_structures->layout_open(); ?>
+    echo $opus_structures->layout_open();
+
+    /** Add empty action before the_Loop */
+    do_action( 'opus_before_the_loop' ); ?>
 
     <div class="the-loop">
 
@@ -112,6 +115,9 @@ do_action( 'opus_before_content' ); ?>
     </div><!-- #the-loop -->
 
     <?php
+    /** Add empty action after the_Loop */
+    do_action( 'opus_after_the_loop' );
+
     get_sidebar( 'image' );
 
     echo $opus_structures->layout_close();
