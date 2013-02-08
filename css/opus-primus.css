@@ -1123,10 +1123,10 @@ blockquote + div.sharing {
 /** End: Post-Format: Quote ------------------------------------------------- */
 
 /** === Post-Format: Status === --------------------------------------------- */
-.post.format-status div.opus-status-update {
-    filter: alpha(opacity=10);
+.post.format-status span.opus-status-update {
+    filter: alpha(opacity=50);
     line-height: 0;
-    opacity: 0.1;
+    opacity: 0.5;
     text-align: center;
     zoom: 1;
 }

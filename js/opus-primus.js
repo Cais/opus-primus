@@ -34,10 +34,6 @@
 jQuery( document ).ready( function( $ ) {
     /** Note: $() will work as an alias for jQuery() inside of this function */
 
-    /** Use fitText to display status update message across post */
-    $( '.post.format-status div.opus-status-update' ).fitText( 1.50 );
-    $( '.archive.term-post-format-status div.opus-status-update' ).fitText( 1.50 );
-
     /** Add a drop shadow to make gallery images pop */
     $( '.format-gallery img.wp-post-image, .format-gallery img.attachment-thumbnail, .format-gallery .featured-image img' ).addClass( 'image-shadow' );
 

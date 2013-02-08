@@ -606,6 +606,8 @@ class OpusPrimusPosts {
      * @uses    human_time_diff
      *
      * @internal Used with Post-Format: Status
+     *
+     * @return  null|string
      */
     function status_update( $update_text = '', $time_ago = 604800 ){
 
@@ -619,8 +621,7 @@ class OpusPrimusPosts {
             );
         } /** End if - empty update text */
 
-        /** Add empty hook before status update output */
-        do_action( 'opus_before_status_update' );
+        $output = '';
 
         /** @var int $time_diff - initialize as zero  */
         $time_diff = 0;
@@ -631,7 +632,7 @@ class OpusPrimusPosts {
 
         /** Compare time difference between modification and actual post */
         if ( ( $time_diff > $time_ago ) && ( $time_diff < 31449600 ) ) {
-            printf( '<div class="opus-status-update">%1$s</div>',
+            $output = sprintf( '<span class="opus-status-update">%1$s</span>',
                 apply_filters( 'opus_status_update',
                     sprintf( __( '%1$s %2$s ago.', 'opusprimus' ),
                         $update_text,
@@ -640,15 +641,40 @@ class OpusPrimusPosts {
                 )
             );
         } elseif ( $time_diff >= 31449600 ) {
-            printf( '<div class="opus-status-update">%1$s</div>',
+            $output = sprintf( '<span class="opus-status-update">%1$s</span>',
                 apply_filters( 'opus_status_update_over_year', $update_text . ' ' . __( 'over a year ago.', 'opusprimus' ) )
             );
         } /** End if - time diff */
 
+        if ( 'status' == get_post_format() ) {
+            return $output;
+        } else {
+            return null;
+        } /** End if - format is status */
+
+    } /** End function - status update */
+
+
+    /**
+     * Show Status Update
+     * Used to display the status update outside of the post Meta Tags
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    do_action
+     */
+    function show_status_update() {
+
+        /** Add empty hook before status update output */
+        do_action( 'opus_before_status_update' );
+
+        echo $this->status_update();
+
         /** Add empty hook after status update output */
         do_action( 'opus_after_status_update' );
 
-    } /** End function - status update */
+    } /** End function - show status update */
 
 
     /**
@@ -684,13 +710,13 @@ class OpusPrimusPosts {
         $opus_tag_list = get_the_tag_list( '', ', ', '' );
 
         if ( ( $opus_tag_list ) && ( ! $this->uncategorized() ) ) {
-            $opus_posted_in = __( '%1$s in %2$s and tagged %3$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark.', 'opusprimus' );
+            $opus_posted_in = __( '%1$s in %2$s and tagged %3$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark. %6$s', 'opusprimus' );
         } elseif ( ( $opus_tag_list ) && ( $this->uncategorized() ) ) {
-            $opus_posted_in = __( '%1$s and tagged %3$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark.', 'opusprimus' );
+            $opus_posted_in = __( '%1$s and tagged %3$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark. %6$s', 'opusprimus' );
         } elseif ( ( ! $opus_tag_list ) && ( ! $this->uncategorized() ) ) {
-            $opus_posted_in = __( '%1$s in %2$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark.', 'opusprimus' );
+            $opus_posted_in = __( '%1$s in %2$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark. %6$s', 'opusprimus' );
         } else {
-            $opus_posted_in = __( 'Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark.', 'opusprimus' );
+            $opus_posted_in = __( 'Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark. %6$s', 'opusprimus' );
         } /** End if - tag list */
 
         /** Prints the "opus_posted_in" string, replacing the placeholders */
@@ -699,7 +725,8 @@ class OpusPrimusPosts {
             get_the_category_list( ', ' ),
             $opus_tag_list,
             get_permalink(),
-            the_title_attribute( 'echo=0' )
+            the_title_attribute( 'echo=0' ),
+            $this->status_update()
         );
 
         /** Add empty hook after meta tags */
