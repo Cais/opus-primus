@@ -58,6 +58,11 @@ Copyright (c) 2009, Vic Fieger (http://www.vicfieger.com/)
 The Vic Fieger fonts are freeware, to be downloaded and used by anyone who wants them for free.
 This license can also be found at this permalink: http://www.fontsquirrel.com/license/Underwood-Champion
 
+* Theme Hook Alliance
+Licensed as GNU General Public License, v2 (or newer)
+The details of the copyright and license of this work may be found internal to
+the relevant files found under ..\stanzas\tha\ or at this website: https://github.com/zamoose/themehookalliance
+
 This above may not be construed as overriding any item with a previously written
 and applied license, stated or not, which will take precedence over anything
 written here.
