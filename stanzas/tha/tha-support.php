@@ -33,54 +33,59 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-/** Grab the THA theme hooks file */
-require_once( OPUS_STANZAS . 'tha/tha-theme-hooks.php' );
+/** Sanity check - make sure the hooks file exists before adding the bridges */
+if ( file_exists( OPUS_STANZAS . 'tha/tha-theme-hooks.php' ) ) {
 
-/** @example add_action( 'opus_*', 'tha_*' ); */
+    /** Grab the THA theme hooks file */
+    require_once( OPUS_STANZAS . 'tha/tha-theme-hooks.php' );
 
-/** HTML <html> hook */
-add_action( 'opus_before_html', 'tha_html_before' );
+    /** @example add_action( 'opus_*', 'tha_*' ); */
 
-/** HTML <body> hooks */
-add_action( 'opus_body_top', 'tha_body_top' );
-add_action( 'opus_body_bottom', 'tha_body_bottom' );
+    /** HTML <html> hook */
+    add_action( 'opus_before_html', 'tha_html_before' );
 
-/** HTML <head> hooks */
-add_action( 'opus_head_top', 'tha_head_top' );
-add_action( 'opus_head_bottom', 'tha_head_bottom' );
+    /** HTML <body> hooks */
+    add_action( 'opus_body_top', 'tha_body_top' );
+    add_action( 'opus_body_bottom', 'tha_body_bottom' );
 
-/** Semantic <header> hooks */
-add_action( 'opus_before_header', 'tha_header_before' );
-add_action( 'opus_after_header', 'tha_header_after' );
-add_action( 'opus_header_top', 'tha_header_top' );
-add_action( 'opus_header_bottom', 'tha_header_bottom' );
+    /** HTML <head> hooks */
+    add_action( 'opus_head_top', 'tha_head_top' );
+    add_action( 'opus_head_bottom', 'tha_head_bottom' );
 
-/** Semantic <content> hooks */
-add_action( 'opus_before_content', 'tha_content_before' );
-add_action( 'opus_after_content', 'tha_content_after' );
-add_action( 'opus_content_top', 'tha_content_top' );
-add_action( 'opus_content_bottom', 'tha_content_bottom' );
+    /** Semantic <header> hooks */
+    add_action( 'opus_before_header', 'tha_header_before' );
+    add_action( 'opus_after_header', 'tha_header_after' );
+    add_action( 'opus_header_top', 'tha_header_top' );
+    add_action( 'opus_header_bottom', 'tha_header_bottom' );
 
-/** Semantic <entry> hooks */
-add_action( 'opus_before_the_loop', 'tha_entry_before' );
-add_action( 'opus_after_the_loop', 'tha_entry_after' );
-add_action( 'opus_before_get_template_part', 'tha_entry_top' );
-add_action( 'opus_before_get_template_part', 'tha_entry_bottom' );
+    /** Semantic <content> hooks */
+    add_action( 'opus_before_content', 'tha_content_before' );
+    add_action( 'opus_after_content', 'tha_content_after' );
+    add_action( 'opus_content_top', 'tha_content_top' );
+    add_action( 'opus_content_bottom', 'tha_content_bottom' );
 
-/** Comments block hooks */
-add_action( 'opus_before_comments', 'tha_comments_before' );
-add_action( 'opus_after_comments', 'tha_comments_after' );
+    /** Semantic <entry> hooks */
+    add_action( 'opus_before_the_loop', 'tha_entry_before' );
+    add_action( 'opus_after_the_loop', 'tha_entry_after' );
+    add_action( 'opus_before_get_template_part', 'tha_entry_top' );
+    add_action( 'opus_before_get_template_part', 'tha_entry_bottom' );
 
-/** Semantic <sidebar> hooks */
-add_action( 'opus_before_sidebars', 'tha_sidebars_before' );
-add_action( 'opus_after_sidebars', 'tha_sidebars_after' );
-add_action( 'opus_before_first_sidebar', 'tha_sidebar_top' );
-add_action( 'opus_after_first_sidebar', 'tha_sidebar_bottom' );
-add_action( 'opus_before_second_sidebar', 'tha_sidebar_top' );
-add_action( 'opus_after_second_sidebar', 'tha_sidebar_bottom' );
+    /** Comments block hooks */
+    add_action( 'opus_before_comments', 'tha_comments_before' );
+    add_action( 'opus_after_comments', 'tha_comments_after' );
 
-/** Semantic <footer> hooks */
-add_action( 'opus_before_footer', 'tha_footer_before' );
-add_action( 'opus_after_footer', 'tha_footer_after' );
-add_action( 'opus_footer_top', 'tha_footer_top' );
-add_action( 'opus_footer_bottom', 'tha_footer_bottom' );
+    /** Semantic <sidebar> hooks */
+    add_action( 'opus_before_sidebars', 'tha_sidebars_before' );
+    add_action( 'opus_after_sidebars', 'tha_sidebars_after' );
+    add_action( 'opus_before_first_sidebar', 'tha_sidebar_top' );
+    add_action( 'opus_after_first_sidebar', 'tha_sidebar_bottom' );
+    add_action( 'opus_before_second_sidebar', 'tha_sidebar_top' );
+    add_action( 'opus_after_second_sidebar', 'tha_sidebar_bottom' );
+
+    /** Semantic <footer> hooks */
+    add_action( 'opus_before_footer', 'tha_footer_before' );
+    add_action( 'opus_after_footer', 'tha_footer_after' );
+    add_action( 'opus_footer_top', 'tha_footer_top' );
+    add_action( 'opus_footer_bottom', 'tha_footer_bottom' );
+
+} /** End if - file exists */
