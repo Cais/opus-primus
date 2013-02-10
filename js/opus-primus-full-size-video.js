@@ -42,8 +42,8 @@ jQuery( document ).ready( function( $ ) {
     var embed_height = video_selector.attr('height');
 
     /**
-     * Find the ration between the height and the width to recalculate the
-     * height of the embedded video
+     * Find the ratio between the height and the width to recalculate the height
+     * of the embedded video
      */
     var embed_ratio = embed_height / embed_width;
 
