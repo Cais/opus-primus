@@ -1,0 +1,22 @@
+=== Theme Version Guidelines ===
+* Last revised February 10, 2013
+* The Opus Primus theme will be referred to as the "project"
+* Classes, Methods and Functions will be referred to as "code"
+
+== Over-All Theme Version ==
+* The Over-All Theme Version may be referenced as OA Version
+
+
+== Function / Class / Method Versions ==
+* Included in the relevant code header block will be found an @since reference
+which will indicate when the code was introduced to the project. This reference
+will be the next relevant Over-All Version. In the case of the initial project
+release all @since references will be set to version 0.1
+* Updates to individual code blocks will have an @version reference added to
+the code header block and be the next relevant Over-All Version. Also, an @date
+reference will be added directly below the @version and be recorded as the date
+the code was written.
+
+
+== Text Files ==
+* All text files will use their "Last Revised" date as their version reference
