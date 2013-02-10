@@ -1,7 +1,7 @@
 === Opus Primus changelog.txt ===
 Please note, the Opus Primus copyright can be found at the end of this file.
 
-== Version 0.1 ==
+== Version 1.0 ==
 * Initial release
 
 = Current Internet Browsers Reviewed =
