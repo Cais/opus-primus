@@ -1,4 +1,5 @@
 ==== Hooks: Filters ====
+
 * Listing by File
 * Sorted Alphabetically
 * In Order of Appearance
@@ -7,27 +8,36 @@
 === Filters ===
 == \ ==
 = 404.php =
+
 * opus_404_title_text
 * opus_404_message_text
 * opus_404_posts_text
 * opus_404_category_text
 * opus_404_tag_text
 
+
 == \includes ==
 = class.OpusPrimusAuthors.php =
+
 * opus_first_author_by_text
 * opus_modified_author_by_text
 * opus_author_coda
 
+
 = class.OpusPrimusComments.php =
+
 * opus_comments_password_required
 * opus_no_comments_message
 * opus_comments_form_closed
 
+
 = class.OpusPrimusGallery.php =
+
 * opus_more_images_text
 
+
 = class.OpusPrimusImages.php =
+
 * opus_exif_dimensions
 * opus_exif_copyright
 * opus_exif_timestamp
@@ -40,12 +50,16 @@
 * opus_exif_title
 * opus_linked_image_filter
 
+
 = class.OpusPrimusMetaBoxes.php =
+
 * opus_taglines_meta_box_title
 * opus_taglines_text_field_description
 * opus_tagline_output
 
+
 = class.OpusPrimusPosts.php =
+
 * opus_post_byline_details
 * opus_no_title_link
 * opus_mod_different_author_phrase
@@ -58,7 +72,9 @@
 * opus_status_update_over_year
 * opus_post_coda
 
+
 = class.OpusPrimusStructures.php =
+
 * opus_browser_title
 * opus_body_classes
 * opus_credits

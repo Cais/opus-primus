@@ -1,13 +1,61 @@
-=== Theme Version Guidelines ===
+==== Theme Version Guidelines ====
+
 * Last revised February 10, 2013
 * The Opus Primus theme will be referred to as the "project"
 * Classes, Methods and Functions will be referred to as "code"
 
+
 == Over-All Theme Version ==
-* The Over-All Theme Version may be referenced as OA Version
+= WordPress Extend Themes Repository Usage =
+
+* The Over-All Theme Version may also be referenced as the current theme Version
+* The project initial public release will start at Version 1.0
+* The Version number will be formatted using a Major.Minor.Patch template. Where
+if the Patch value is zero (0) it will be excluded.
+* The theme Version will be found in the 'style.css' header block and in the
+'index.php' main documentation block.
+* The Patch value will be incremented if modifications to the project are made
+to correct an issue and/or do not change the overall project functionality.
+* The Minor value will be incremented (and the Patch value reset to zero) if
+modifications are made that do change the project functionality but not its
+backward compatibility to previous versions of the project.
+* The Major value will be incremented (and the Minor value reset to zero) if
+modifications are made that do change the project functionality and change the
+backward compatibility of the project with the WordPress core functionality.
+
+= GitHub Repository Usage =
+
+* The project will also be maintained at https://github.com/opus-primus
+* The project will be available from the GitHub repository as a means to allow
+other developers to contribute to its code.
+* The above 'WordPress Extend Themes Repository Usage' guidelines will apply
+* Once a Version of the project has been submitted to the WordPress Extend
+Themes Repository for review the next modification made to the project will
+immediately require (at a minimum) the Patch value of the Version be increased.
+* Optionally this Patch value may be appended with an 'alpha', 'beta', or 'RCx'
+suffix to indicate the modifications may be reverted and/or are being tested.
+* The use of the 'alpha' suffix indicates the code is untested and may simply
+fail outright. It is not recommended to use this Version of the project unless
+one is very familiar with the code and how to debug any errors that are found.
+* The use of the 'beta' suffix indicates the modification is being tested or has
+been tested but still requires additional work. This Version of the project is
+most likely viable but to be used with caution. This is the logical increment of
+the 'alpha' suffix if no additional code modifications are added to the project.
+* An 'RCx' where 'x' is an incremented value starting at the number one (1)
+indicates: the modification are tested; no relevant issue with the modifications
+has been reported; and, final review before inclusion with the project is being
+made. This is the logical increment of the 'beta' suffix if no additional code
+modifications are added to the project.
+* The 'RCx' will be incremented if there is an issue reported and additional
+specific modifications are required to the code that initially require the Patch
+value be incremented.
+* If at any time during the Version suffix is required to be removed due to
+additional code being added to the project not related to the initial Patch
+value increase, the Patch value will be required to be incremented.
 
 
 == Function / Class / Method Versions ==
+
 * Included in the relevant code header block will be found an @since reference
 which will indicate when the code was introduced to the project. This reference
 will be the next relevant Over-All Version. In the case of the initial project
@@ -16,7 +64,17 @@ release all @since references will be set to version 0.1
 the code header block and be the next relevant Over-All Version. Also, an @date
 reference will be added directly below the @version and be recorded as the date
 the code was written.
+* Up to two @version references should be found in each code header block as the
+case may be applied.
+* Changes in documentation will not affect the @version reference of the code
+header block but would require a Patch value increment in the project Version.
 
 
 == Text Files ==
+
 * All text files will use their "Last Revised" date as their version reference
+
+
+** --------------------------------------------------------------------------- *
+
+NB: Inspired by the documentation found at http://semver.org/

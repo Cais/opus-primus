@@ -1,15 +1,19 @@
 === Theme Support ===
+
 Last revised February 10, 2013
 
 == Internet Addresses ==
+
 * WordPress:        http://wordpress.org/extend/themes/opus-primus
 * Home:             http://opusprimus.com
 
 == Email Addresses ==
+
 * Home:             in.opus.primus@gmail.com
 * Lead Developer:   edward.caissie@gmail.com
 
 == Helpful Advise and Information ==
+
 * Install the BNS Support plugin and copy its output into your support request
 (http://wordpress.org/extend/plugins/bns-support)
 * List steps to reproduce the issue

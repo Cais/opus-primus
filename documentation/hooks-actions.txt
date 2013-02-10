@@ -1,30 +1,41 @@
 ==== Hooks: Actions ====
+
 * Listing by File
 * Sorted Alphabetically
 * In Order of Appearance
 * Last revised February 4, 2013
 
+
 === Actions ===
 == \ ==
 = 404.php =
+
 * opus_before_the_loop
 * opus_404_image
 * opus_after_the_loop
 
+
 = archive.php =
+
 * opus_before_the_loop
 * opus_after_the_loop
+
 
 = author.php =
+
 * opus_before_the_loop
 * opus_after_the_loop
 
+
 = footer.php =
+
 * opus_before_footer
 * opus_before_wp_footer
 * opus_body_bottom
 
+
 = header.php =
+
 * opus_before_html
 * opus_head_top
 * opus_head_bottom
@@ -32,7 +43,9 @@
 * opus_before_header
 * opus_after_header
 
+
 = index.php =
+
 * opus_before_content
 * opus_content_top
 * opus_before_the_loop
@@ -40,15 +53,21 @@
 * opus_content_bottom
 * opus_after_content
 
+
 = opus-primus-footer.php =
+
 * opus_footer_top
 * opus_footer_bottom
 
+
 = page.php =
+
 * opus_before_the_loop
 * opus_after_the_loop
 
+
 = sidebar.php =
+
 * opus_before_sidebars
 * opus_before_first_sidebar
 * opus_after_first_sidebar
@@ -56,20 +75,28 @@
 * opus_after_second_sidebar
 * opus_after_sidebars
 
+
 = sidebar-footer.php =
+
 * opus_before_sidebar_footer
 * opus_after_sidebar_footer
 
+
 = sidebar-header.php =
+
 * opus_before_sidebar_header
 * opus_after_sidebar_header
 
+
 = single.php =
+
 * opus_before_the_loop
 * opus_after_the_loop
 
+
 == \headers ==
 = header.php =
+
 * opus_header_top
 * opus_before_site_title
 * opus_after_site_title
@@ -81,14 +108,18 @@
 * opus_after_nav
 * opus_header_bottom
 
+
 == \includes ==
 = class.OpusPrimusArchives.php =
+
 * opus_before_category_archive
 * opus_after_category_archive
 * opus_before_archive_cloud
 * opus_after_archive_cloud
 
+
 = class.OpusPrimusAuthors.php =
+
 * opus_post_author_top
 * opus_before_author_details
 * opus_after_author_details
@@ -97,19 +128,25 @@
 * opus_before_author_coda
 * opus_after_author_coda
 
+
 = class.OpusPrimusComments.php =
+
 * opus_before_comments_link
 * opus_after_comments_link
 * opus_before_comments
 * opus_after_comments
 
+
 = class.OpusPrimusGallery.php =
+
 * opus_before_featured_image
 * opus_after_featured_image
 * opus_before_secondary_images
 * opus_after_secondary_images
 
+
 = class.OpusPrimusImages.php =
+
 * opus_before_exif_box
 * opus_after_exif_box
 * opus_before_exif_table
@@ -127,7 +164,9 @@
 * opus_before_image_title
 * opus_after_image_title
 
+
 = class.OpusPrimusNavigation.php =
+
 * opus_before_primary_menu
 * opus_after_primary_menu
 * opus_before_links_pages
@@ -145,7 +184,9 @@
 * opus_before_secondary_menu
 * opus_after_secondary_menu
 
+
 = class.OpusPrimusPosts.php =
+
 * opus_before_post_byline
 * opus_after_post_byline
 * opus_before_modified_post
@@ -163,7 +204,9 @@
 * opus_before_post_coda
 * opus_after_post_coda
 
+
 = class.OpusPrimusStructures.php =
+
 * opus_before_get_template_part
 * opus_after_get_template_part
 * opus_before_search_results
