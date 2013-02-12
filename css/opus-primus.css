@@ -28,6 +28,10 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version 1.0.1
+ * @date    February 12, 2013
+ * Center top level menu items only - better aesthetics with short page titles
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -565,6 +569,12 @@ nav div.nav ul li {
     float: left;
     list-style-type: none;
     padding: 10px;
+}
+
+/** Center only the top level menu items */
+nav > ul.nav-menu > li.page_item > a,
+.nav-menu > li.menu-item > a {
+    text-align: center;
 }
 
 /* === MENU === */

@@ -1,8 +1,8 @@
 === Opus Primus changelog.txt ===
 Please note, the Opus Primus copyright can be found at the end of this file.
 
-== Version 1.0 ==
-* Initial release
+== Version 1.0.1 ==
+* Center top level menu items only - better aesthetics with short page titles
 
 = Current Internet Browsers Reviewed =
 * Apple Safari
@@ -10,6 +10,11 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Google Chrome
 * Internet Explorer
 * Opera
+
+/** ------------------------------------------------------------------------- */
+
+== Version 1.0 ==
+* Initial release - February 2013
 
 /** ------------------------------------------------------------------------- */
 
