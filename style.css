@@ -5,8 +5,8 @@ Description: A WordPress Framework Theme ... the first work. It works first. Des
 Version: 1.0.1
 Author: Edward Caissie
 Author URI: http://edwardcaissie.com/
-Version Required: 3.4
-Version Tested Up To: 3.5.1
+WordPress Required Version: 3.4
+WordPress Tested Version: 3.5.1
 Tags: black, white, gray, light, one-column, two-columns, three-columns, right-sidebar, flexible-width, custom-background, custom-header, custom-menu, featured-images, flexible-header, post-formats, sticky-post, threaded-comments, translation-ready
 License: GNU General Public License v2
 License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
@@ -42,6 +42,11 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version 1.0.1
+ * @date    February 14, 2013
+ * Changed header details to use 'WordPress Required Version' and 'WordPress
+ * Tested Version' to reflect WordPress core trac ticket #16868
  */
 
 /** Table of Contents ------------------------------------------------------- */
