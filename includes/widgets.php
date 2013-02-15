@@ -41,26 +41,26 @@
  * - Three (3) in the "Footer"
  * - Four (4) in the "Sidebar"
  *
- * @package     OpusPrimus
- * @since       0.1
+ * @package OpusPrimus
+ * @since   0.1
  *
- * @uses        register_sidebar
+ * @uses    register_sidebar
  *
- * @internal    Widget areas appear in the same order they are defined in the
+ * @internal Widget areas appear in the same order they are defined in the
  * WordPress Appearance > Widgets Administration Panel
- * @internal    Relies on the default widget structure
+ * @internal Relies on the default widget structure
  *
- * @example     'name' => sprintf( __('Sidebar %d'), $i ),
- * @example     'id' => "sidebar-$i",
- * @example     'description' => '',
- * @example     'class' => '',
- * @example     'before_widget' => '<li id="%1$s" class="widget %2$s">',
- * @example     'after_widget' => "</li>\n",
- * @example     'before_title' => '<h2 class="widgettitle">',
- * @example     'after_title' => "</h2>\n",
+ * @example 'name' => sprintf( __('Sidebar %d'), $i ),
+ * @example 'id' => "sidebar-$i",
+ * @example 'description' => '',
+ * @example 'class' => '',
+ * @example 'before_widget' => '<li id="%1$s" class="widget %2$s">',
+ * @example 'after_widget' => "</li>\n",
+ * @example 'before_title' => '<h2 class="widgettitle">',
+ * @example 'after_title' => "</h2>\n",
  *
- * @version     1.0.1
- * @date        February 14, 2013
+ * @version 1.0.1
+ * @date    February 14, 2013
  * Modify the widget descriptions in the First, Second, Third, and Fourth Widget
  * Areas to better explain their relative position and when to expect them to be
  * displayed.
