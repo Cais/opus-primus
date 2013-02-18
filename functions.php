@@ -66,7 +66,7 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
         /** Enqueue Opus Primus Header Image Position (if there is a header image) which will enqueue jQuery as a dependency */
         if ( get_header_image() ) {
             wp_enqueue_script( 'opus-primus-header-image-position', OPUS_JS . 'opus-primus-header-image-position.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
-        }
+        } /** End if - get header image */
 
         /** Enqueue Theme Stylesheets */
         /** Theme Layouts */

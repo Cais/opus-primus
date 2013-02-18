@@ -40,7 +40,7 @@ if ( is_singular() ) {
     get_template_part( 'opus-primus-footer', get_post_format() );
 } else {
     get_template_part( 'opus-primus-footer' );
-} /** End if - have posts */
+} /** End if - is singular */
 
 /** Add empty hook at end of footer */
 do_action( 'opus_before_wp_footer' );
