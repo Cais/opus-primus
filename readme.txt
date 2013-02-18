@@ -1,5 +1,5 @@
 === Opus Primus readme.txt ===
-* Last revised February 3, 2013
+* Last revised February 18, 2013
 
 == Contents ==
 * Copyright
@@ -7,6 +7,7 @@
 * Screenshots
 * Basic FAQ
 * Notes
+* Review Tickets
 
 == Copyright ==
 Copyright (c) 2012-2013, Opus Primus
@@ -125,3 +126,6 @@ This being the case, the following widths will be used:
 2. Default Menu depth levels may be of concern in some cases. As it stands, the
 default menus are not restricted to any specific depth except the Search Results
 Menu which is restricted to a single level only when a custom menu is not used.
+
+== Review Tickets ==
+* http://themes.trac.wordpress.org/ticket/11106 - Version 1.0, February 2013
