@@ -1,8 +1,8 @@
 ==== Theme Version Guidelines ====
 
-* Last revised February 10, 2013
-* The Opus Primus theme will be referred to as the "project"
-* Classes, Methods and Functions will be referred to as "code"
+* Last revised February 18, 2013
+* The Opus Primus theme, in general, will be referred to as the "project"
+* Classes, methods, functions etc. will be referred to as "code" or "the code"
 
 
 == Over-All Theme Version ==
@@ -29,6 +29,9 @@ backward compatibility of the project with the WordPress core functionality.
 * The project will be available from the GitHub repository as a means to allow
 other developers to contribute to its code.
 * The above 'WordPress Extend Themes Repository Usage' guidelines will apply
+first and foremost. These additional guidelines are meant to extend the above
+WordPress Extend Themes Repository Usage guidelines and applied to versions of
+the project hosted at GitHub.
 * Once a Version of the project has been submitted to the WordPress Extend
 Themes Repository for review the next modification made to the project will
 immediately require (at a minimum) the Patch value of the Version be increased.
