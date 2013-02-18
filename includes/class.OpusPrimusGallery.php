@@ -30,6 +30,10 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version 1.0.1
+ * @date    February 18, 2013
+ * Re-order methods: alphabetical
  */
 
 class OpusPrimusGallery {
@@ -178,6 +182,75 @@ class OpusPrimusGallery {
 
 
     /**
+     * Get Gallery Shortcode Attribute Secondary ids
+     * Using the shortcode regex find the attributes for the gallery shortcode
+     * and identify the values used in the ids parameter. If the ids parameter
+     * is used then store the values in an array ... and carry on ...
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    get_shortcode_regex
+     * @uses    get_the_content
+     * @uses    shortcode_parse_atts
+     *
+     * @return  null|int - array index value
+     */
+    function get_gallery_attr_secondary_ids() {
+
+        /** @var $pattern - holds the regex pattern used to check shortcode */
+        $pattern = get_shortcode_regex();
+
+        /** Find any shortcode being used in post */
+        preg_match( "/$pattern/s", get_the_content(), $match );
+
+        /** Find the gallery shortcode usages */
+        if ( 'gallery' == $match[2] ) {
+
+            /** @var $attrs - holds the gallery shortcode parameters used */
+            $attrs = shortcode_parse_atts( $match[3] );
+
+            /** @var $images - array of image ids used */
+            $images = isset( $attrs['ids'] ) ? explode( ',', $attrs['ids'] ) : false;
+
+            /**
+             * If there are no images carry on; otherwise, return the "ids"
+             * parameter values (less the featured image "ids" value) in a
+             * string to be used as the array elements for the query when no
+             * images are attached to the post.
+             */
+            if ( $images ) {
+                /** @var $string - initialize string to empty */
+                $string = '';
+
+                /** Loop through images getting their ids value */
+                foreach ($images as $image) {
+                    /** If image has the featured image "ids" do not include */
+                    if ( intval( $image ) <> intval( $this->get_gallery_attr_featured_ids() ) ) {
+                        $string .= intval($image) . ',';
+                    } /** End if - image vs featured */
+                } /** End foreach - images */
+
+                /**
+                 * @var $string - cleaned version of string to be returned
+                 * @internal Used as 'post__in' parameter value when no images
+                 * are attached to the post
+                 */
+                $string = explode( ',', substr( $string, 0, strlen( $string ) - 1 ) );
+
+                return $string;
+
+            } /** End if - images */
+
+        } /** End if - gallery match */
+
+        /** Keeping the return Gods happy - won't likely ever get here. */
+        return null;
+
+    } /** End function - get gallery attr secondary ids */
+
+
+    /**
      * Opus Primus Secondary Images
      * Displays additional images from the gallery while excluding the image
      * with ID = $opus_thumb_id
@@ -282,75 +355,6 @@ class OpusPrimusGallery {
         do_action( 'opus_after_secondary_images' );
 
     } /** End function - secondary images */
-
-
-    /**
-     * Get Gallery Shortcode Attribute Secondary ids
-     * Using the shortcode regex find the attributes for the gallery shortcode
-     * and identify the values used in the ids parameter. If the ids parameter
-     * is used then store the values in an array ... and carry on ...
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @uses    get_shortcode_regex
-     * @uses    get_the_content
-     * @uses    shortcode_parse_atts
-     *
-     * @return  null|int - array index value
-     */
-    function get_gallery_attr_secondary_ids() {
-
-        /** @var $pattern - holds the regex pattern used to check shortcode */
-        $pattern = get_shortcode_regex();
-
-        /** Find any shortcode being used in post */
-        preg_match( "/$pattern/s", get_the_content(), $match );
-
-        /** Find the gallery shortcode usages */
-        if ( 'gallery' == $match[2] ) {
-
-            /** @var $attrs - holds the gallery shortcode parameters used */
-            $attrs = shortcode_parse_atts( $match[3] );
-
-            /** @var $images - array of image ids used */
-            $images = isset( $attrs['ids'] ) ? explode( ',', $attrs['ids'] ) : false;
-
-            /**
-             * If there are no images carry on; otherwise, return the "ids"
-             * parameter values (less the featured image "ids" value) in a
-             * string to be used as the array elements for the query when no
-             * images are attached to the post.
-             */
-            if ( $images ) {
-                /** @var $string - initialize string to empty */
-                $string = '';
-
-                /** Loop through images getting their ids value */
-                foreach ($images as $image) {
-                    /** If image has the featured image "ids" do not include */
-                    if ( intval( $image ) <> intval( $this->get_gallery_attr_featured_ids() ) ) {
-                        $string .= intval($image) . ',';
-                    } /** End if - image vs featured */
-                } /** End foreach - images */
-
-                /**
-                 * @var $string - cleaned version of string to be returned
-                 * @internal Used as 'post__in' parameter value when no images
-                 * are attached to the post
-                 */
-                $string = explode( ',', substr( $string, 0, strlen( $string ) - 1 ) );
-
-                return $string;
-
-            } /** End if - images */
-
-        } /** End if - gallery match */
-
-        /** Keeping the return Gods happy - won't likely ever get here. */
-        return null;
-
-    } /** End function - get gallery attr secondary ids */
 
 
 } /** End Opus Primus Gallery class */

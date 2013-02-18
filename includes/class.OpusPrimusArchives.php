@@ -30,51 +30,15 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version 1.0.1
+ * @date    February 18, 2013
+ * Re-order methods: action and filter calls by request order, then alphabetical
  */
 
 class OpusPrimusArchives {
     /** Construct */
     function __construct() {}
-
-
-    /**
-     * Opus Primus Category Archive
-     * Displays all of the categories with links to their respective category
-     * archive page using `wp_list_categories` and all of its parameters.
-     *
-     * @link    http://codex.wordpress.org/Function_Reference/wp_list_categories
-     * @example categories_archive( array( 'number' => 12 ) );
-     * @internal The above example will use the default parameters but limit the output to 12 items
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @param   array|string $category_args
-     *
-     * @uses    wp_list_categories
-     * @uses    wp_parse_args
-     */
-    function categories_archive( $category_args = '' ) {
-        /** Add empty hook before category archive */
-        do_action( 'opus_before_category_archive' );
-
-        /** @var $defaults - set the default parameters */
-        $defaults = array(
-            'orderby'       => 'name',
-            'order'         => 'ASC',
-            'hierarchical'  => 0,
-            'title_li'      => __( 'All Categories:', 'opusprimus' ),
-        );
-        $category_args = wp_parse_args( (array) $category_args, $defaults );
-
-        echo '<ul class="archive category list cf">';
-            wp_list_categories( $category_args );
-        echo '</ul><!-- .archive.category.list -->';
-
-        /** Add empty hook after category archive */
-        do_action( 'opus_after_category_archive' );
-
-    } /** End function categories archive */
 
 
     /**
@@ -139,9 +103,9 @@ class OpusPrimusArchives {
          * classes.
          */
         printf( '<ul class="archive cloud list cf%1$s">', $cloud_classes );
-            echo '<li><span class="title">' . $cloud_title . '</span>';
-                wp_tag_cloud( $cloud_args );
-            echo '</li>';
+        echo '<li><span class="title">' . $cloud_title . '</span>';
+        wp_tag_cloud( $cloud_args );
+        echo '</li>';
         echo '</ul><!-- .archive.cloud.list -->';
 
         /** Add empty hook after archive cloud */
@@ -150,7 +114,48 @@ class OpusPrimusArchives {
     } /** End function archive cloud */
 
 
+    /**
+     * Opus Primus Category Archive
+     * Displays all of the categories with links to their respective category
+     * archive page using `wp_list_categories` and all of its parameters.
+     *
+     * @link    http://codex.wordpress.org/Function_Reference/wp_list_categories
+     * @example categories_archive( array( 'number' => 12 ) );
+     * @internal The above example will use the default parameters but limit the output to 12 items
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @param   array|string $category_args
+     *
+     * @uses    wp_list_categories
+     * @uses    wp_parse_args
+     */
+    function categories_archive( $category_args = '' ) {
+        /** Add empty hook before category archive */
+        do_action( 'opus_before_category_archive' );
+
+        /** @var $defaults - set the default parameters */
+        $defaults = array(
+            'orderby'       => 'name',
+            'order'         => 'ASC',
+            'hierarchical'  => 0,
+            'title_li'      => __( 'All Categories:', 'opusprimus' ),
+        );
+        $category_args = wp_parse_args( (array) $category_args, $defaults );
+
+        echo '<ul class="archive category list cf">';
+            wp_list_categories( $category_args );
+        echo '</ul><!-- .archive.category.list -->';
+
+        /** Add empty hook after category archive */
+        do_action( 'opus_after_category_archive' );
+
+    } /** End function categories archive */
+
+
 } /** End Class Opus Primus Archives */
+
 
 /** @var $opus_archives - new instance of class */
 $opus_archives = new OpusPrimusArchives();

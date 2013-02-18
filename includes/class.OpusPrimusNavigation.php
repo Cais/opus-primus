@@ -31,6 +31,10 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version 1.0.1
+ * @date    February 18, 2013
+ * Re-order methods: alphabetical
  */
 
 class OpusPrimusNavigation {
@@ -38,36 +42,30 @@ class OpusPrimusNavigation {
     function __construct() {}
 
     /**
-     * Primary Menu
-     * Primary navigation menu
+     * Comments Navigation
+     * Displays a link between pages of comments
      *
      * @package OpusPrimus
      * @since   0.1
      *
-     * @param   string|array $primary_menu_args
-     *
      * @uses    do_action
-     * @uses    wp_nav_menu
-     * @uses    wp_parse_args
+     * @uses    next_comments_link
+     * @uses    previous_comments_link
      */
-    function primary_menu( $primary_menu_args = '' ) {
-        /** Add empty hook before the primary menu */
-        do_action( 'opus_before_primary_menu' );
+    function comments_navigation() {
+        /** Add empty hook before comments link */
+        do_action( 'opus_before_comments_link' ); ?>
 
-        /** Primary Menu */
-        $defaults = array(
-            'theme_location'    => 'primary',
-            'menu_class'        => 'nav-menu primary',
-            'fallback_cb'       => array( $this, 'list_pages' ),
-        );
-        $primary_menu_args = wp_parse_args( (array) $defaults, $primary_menu_args );
+    <p class="navigation comment-link cf">
+        <span class="left"><?php previous_comments_link() ?></span>
+        <span class="right"><?php next_comments_link() ?></span>
+    </p>
 
-        wp_nav_menu( $primary_menu_args );
+    <?php
+        /** Add empty hook after comments link */
+        do_action( 'opus_after_comments_link' );
 
-        /** Add empty hook after the primary menu */
-        do_action( 'opus_after_primary_menu' );
-
-    } /** End function - primary menu */
+    } /** End function - comments navigation */
 
 
     /**
@@ -96,6 +94,33 @@ class OpusPrimusNavigation {
         echo '</ul><!-- .nav-menu -->';
 
     } /** End function - list pages */
+
+
+    /**
+     * Image Navigation
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    __
+     * @uses    do_action
+     * @uses    next_image_link
+     * @uses    previous_image_link
+     */
+    function image_nav() {
+        /** Add empty hook before the image navigation */
+        do_action( 'opus_before_image_nav' );
+
+        /** Add navigation links between pictures in the gallery */
+        echo '<div class="opus-image-navigation cf">';
+        echo previous_image_link( false, '<span class="left">' . __( 'Previous Photo', 'opusprimus' ) . '</span>' );
+        echo next_image_link( false, '<span class="right">' . __( 'Next Photo', 'opusprimus' ) . '</span>' );
+        echo '</div><!-- .opus-image-navigation -->';
+
+        /** Add empty hook after the image navigation */
+        do_action( 'opus_after_image_nav' );
+
+    } /** End function - image nav */
 
 
     /**
@@ -140,33 +165,6 @@ class OpusPrimusNavigation {
 
 
     /**
-     * Comments Navigation
-     * Displays a link between pages of comments
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @uses    do_action
-     * @uses    next_comments_link
-     * @uses    previous_comments_link
-     */
-    function comments_navigation() {
-        /** Add empty hook before comments link */
-        do_action( 'opus_before_comments_link' ); ?>
-
-        <p class="navigation comment-link cf">
-            <span class="left"><?php previous_comments_link() ?></span>
-            <span class="right"><?php next_comments_link() ?></span>
-        </p>
-
-        <?php
-        /** Add empty hook after comments link */
-        do_action( 'opus_after_comments_link' );
-
-    } /** End function - comments navigation */
-
-
-    /**
      * Post Link
      * Outputs the navigation structure to move between posts
      *
@@ -196,33 +194,6 @@ class OpusPrimusNavigation {
 
 
     /**
-     * Image Navigation
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @uses    __
-     * @uses    do_action
-     * @uses    next_image_link
-     * @uses    previous_image_link
-     */
-    function image_nav() {
-        /** Add empty hook before the image navigation */
-        do_action( 'opus_before_image_nav' );
-
-        /** Add navigation links between pictures in the gallery */
-        echo '<div class="opus-image-navigation cf">';
-            echo previous_image_link( false, '<span class="left">' . __( 'Previous Photo', 'opusprimus' ) . '</span>' );
-            echo next_image_link( false, '<span class="right">' . __( 'Next Photo', 'opusprimus' ) . '</span>' );
-        echo '</div><!-- .opus-image-navigation -->';
-
-        /** Add empty hook after the image navigation */
-        do_action( 'opus_after_image_nav' );
-
-    } /** End function - image nav */
-
-
-    /**
      * Posts Link
      * Outputs the navigation structure to move between archive pages
      *
@@ -248,6 +219,39 @@ class OpusPrimusNavigation {
         do_action( 'opus_after_posts_link' );
 
     } /** End function - posts link */
+
+
+    /**
+     * Primary Menu
+     * Primary navigation menu
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @param   string|array $primary_menu_args
+     *
+     * @uses    do_action
+     * @uses    wp_nav_menu
+     * @uses    wp_parse_args
+     */
+    function primary_menu( $primary_menu_args = '' ) {
+        /** Add empty hook before the primary menu */
+        do_action( 'opus_before_primary_menu' );
+
+        /** Primary Menu */
+        $defaults = array(
+            'theme_location'    => 'primary',
+            'menu_class'        => 'nav-menu primary',
+            'fallback_cb'       => array( $this, 'list_pages' ),
+        );
+        $primary_menu_args = wp_parse_args( (array) $defaults, $primary_menu_args );
+
+        wp_nav_menu( $primary_menu_args );
+
+        /** Add empty hook after the primary menu */
+        do_action( 'opus_after_primary_menu' );
+
+    } /** End function - primary menu */
 
 
     /**

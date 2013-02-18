@@ -30,6 +30,10 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version 1.0.1
+ * @date    February 18, 2013
+ * Re-order methods: action and filter calls by request order, then alphabetical
  */
 
 class OpusPrimusImages {
@@ -40,7 +44,10 @@ class OpusPrimusImages {
         /** Restore Image Title */
         add_filter( 'media_send_to_editor', 'restore_image_title', 15, 2 );
 
-    }
+    } /** End function - constructor */
+
+
+    /** ---- Action and Filter Methods ---- */
 
 
     /**
@@ -73,35 +80,98 @@ class OpusPrimusImages {
     } /** End function - restore image title */
 
 
+    /** ---- Additional Methods ---- */
+
+
     /**
-     * Opus Primus Featured Thumbnail
-     * Adds the featured image / post thumbnail to the post if not in the single
-     * view
+     * Opus Primus Archive Image Details
+     * Outputs details of the attached image, if they exist
      *
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    get_post_thumbnail_id
-     * @uses    has_post_thumbnail
-     * @uses    is_page
-     * @uses    is_single
-     * @uses    the_post_thumbnail
-     * @uses    the_title_attribute
+     * @param   string $size - standard WordPress post_thumbnail sizes / or custom defined sizes can be used
      *
-     * @todo clean up and have link display attachment archive
+     * @uses    get_children
+     * @uses    get_permalink
+     * @uses    get_the_ID
+     * @uses    is_single
+     * @uses    the_title_attribute
+     * @uses    wp_get_attachment_image
+     *
+     * @todo Add filters to output messages
+     * @todo Address $archive_image message(s) once `first_linked_image` is sorted out
+     * @todo Address CSS aesthetics on images not attached ... or find a way to display the post excerpt details (much better choice!)
      */
-    function featured_thumbnail() {
-        if ( has_post_thumbnail() && ! is_single() ) {
-            $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
-            echo '<a class="featured-thumbnail" href="' . $large_image_url[0] . '" title="' . the_title_attribute( 'echo=0' ) . '" >';
-                if ( is_page() ) {
-                    the_post_thumbnail( 'thumbnail', array( 'class' => 'alignright' ) );
-                } else {
-                    the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) );
-                } /** End if - is page */
-            echo '</a>';
-        } /** End if - has post thumbnail and not is single */
-    } /** End function - featured thumbnail */
+    function archive_image_details( $size = 'medium' ) {
+        $attachments = get_children( array(
+            'post_parent'       => get_the_ID(),
+            'post_status'       => 'inherit',
+            'post_type'         => 'attachment',
+            'post_mime_type'    => 'image',
+            'order'             => 'ASC',
+            'orderby'           => 'menu_order ID',
+            'numberposts'       => 1
+        ) );
+
+        /** @var $archive_image - initial value (when there is no attachment) */
+        $archive_image = '<p class="archive-image">' . __( 'The Image archive looks much better if the image is set as an attachment of the post.', 'opusprimus' ) . '</p>';
+        /** @var $archive_image_title, $archive_image_excerpt, $archive_image_content - initialized as an empty string */
+        $archive_image_title = $archive_image_excerpt = $archive_image_content = '';
+
+        if ( empty( $attachments ) ) {
+            $archive_image = $this->first_linked_image();
+        } /** End if - empty attachments */
+
+        foreach ( $attachments as $opus_thumb_id => $attachment ) {
+            $archive_image = wp_get_attachment_image( $opus_thumb_id, $size );
+            $archive_image_title = $attachment->post_title;
+            $archive_image_excerpt = $attachment->post_excerpt;
+            $archive_image_content = $attachment->post_content;
+        } /** End foreach - attachments */ ?>
+
+    <table>
+        <thead>
+        <tr><th>
+            <?php
+            if ( ! empty( $archive_image_title ) ) {
+                printf( '<span class="archive-image-title">' . __( 'Image Title: %1$s', 'opusprimus' )  . '</span>', $archive_image_title );
+            } /** End if - not empty title */ ?>
+        </th></tr>
+        </thead><!-- End table header -->
+        <tbody>
+        <tr>
+            <td class="archive-image">
+                <?php
+                if ( ! is_single() ) {
+                    echo '<span class="archive-image"><a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">'
+                        . $archive_image
+                        . '</a></span>';
+                    if ( empty( $attachments ) ) {
+                        printf( '<div class="linked-image-message">%1$s</div>',
+                            apply_filters( 'opus_linked_image_message', __( 'This is a linked image.', 'opusprimus' ) )
+                        );
+                    } /** End if - empty attachments */
+                } /** End if - not is single */ ?>
+            </td>
+        </tr>
+        <tr>
+            <?php
+            if ( ! empty( $archive_image_excerpt ) ) {
+                printf( '<td class="archive-image-excerpt">' . __( 'Image Caption: %1$s', 'opusprimus' )  . '</td>', $archive_image_excerpt );
+            } /** End if - not empty excerpt */ ?>
+        </tr>
+        <tr>
+            <?php
+            if ( ! empty( $archive_image_content ) ) {
+                printf( '<td class="archive-image-content">' . __( 'Image Description: %1$s', 'opusprimus' )  . '</td>', $archive_image_content );
+            } /** End if - not empty content */ ?>
+        </tr>
+        </tbody><!-- End table body -->
+    </table><!-- End table -->
+
+    <?php
+    } /** End function - archive image details */
 
 
     /**
@@ -230,6 +300,153 @@ class OpusPrimusImages {
 
 
     /**
+     * Opus Primus EXIF Aperture
+     * Outputs the aperture details from the EXIF data
+     *
+     * @package OpuysPrimus
+     * @since   0.1
+     *
+     * @uses    $opus_image_meta (global)
+     * @uses    apply_filters
+     * @uses    do_action
+     *
+     * @return  string
+     */
+    function exif_aperture() {
+        /** Get the image meta object */
+        global $opus_image_meta;
+        $this->exif_data();
+
+        /** Add empty hook before EXIF aperture */
+        do_action( 'opus_before_exif_aperture' );
+
+        /** @var $aperture - initialize aperture string */
+        $aperture = '';
+
+        /** Aperture Setting */
+        if ( $opus_image_meta['image_meta']['aperture'] ) {
+            $aperture .= $opus_image_meta['image_meta']['aperture'];
+        } /** End if - aperture */
+
+        /** Return Aperture string */
+        return apply_filters( 'opus_exif_aperture', $aperture );
+
+    } /** End function - exif aperture */
+
+
+    /**
+     * Opus Primus EXIF Camera
+     * Outputs camera details from EXIF data
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    $opus_image_meta (global)
+     * @uses    apply_filters
+     * @uses    do_action
+     *
+     * @return  string
+     */
+    function exif_camera() {
+        /** Get the image meta object */
+        global $opus_image_meta;
+        $this->exif_data();
+
+        /** Add empty hook before EXIF camera */
+        do_action( 'opus_before_exif_camera' );
+
+        /** @var $camera - initialize camera string */
+        $camera = '';
+
+        /** Camera details */
+        if ( $opus_image_meta['image_meta']['camera'] ) {
+            $camera .= $opus_image_meta['image_meta']['camera'];
+        } /** End if - camera */
+
+        /** Return Camera string */
+        return apply_filters( 'opus_exif_camera', $camera );
+
+    } /** End function - exif camera */
+
+
+    /**
+     * Opus Primus EXIF Caption
+     * Outputs the image caption from the EXIF data
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    $opus_image_meta (global)
+     * @uses    apply_filters
+     * @uses    do_action
+     *
+     * @return  string
+     */
+    function exif_caption() {
+        /** Get the image meta object */
+        global $opus_image_meta;
+        $this->exif_data();
+
+        /** Add empty hook before EXIF caption */
+        do_action( 'opus_before_exif_caption' );
+
+        /** @var $exif_caption - initialize EXIF caption string */
+        $exif_caption = '';
+
+        /** Image caption from EXIF details */
+        if ( $opus_image_meta['image_meta']['caption'] ) {
+            $exif_caption .= $opus_image_meta['image_meta']['caption'];
+        } /** End if - caption */
+
+        /** Return Caption string */
+        return apply_filters( 'opus_exif_caption', $exif_caption );
+
+    } /** End function - exif caption */
+
+
+    /**
+     * Opus Primus EXIF Copyright
+     * Outputs a string containing the author and copyright text
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    $opus_image_meta (global)
+     * @uses    apply_filters
+     * @uses    do_action
+     * @uses    get_the_time
+     *
+     * @return  string
+     */
+    function exif_copyright() {
+        /** Get the image meta object */
+        global $opus_image_meta;
+        $this->exif_data();
+
+        /** Add empty hook before EXIF copyright */
+        do_action( 'opus_before_exif_copyright' );
+
+        /** @var $copyright - initialize the copyright string */
+        $copyright = '';
+
+        /** Author Credit with Copyright details */
+        if ( $opus_image_meta['image_meta']['credit'] ) {
+            $copyright .= $opus_image_meta['image_meta']['credit'];
+        } /** End if - credit */
+        if ( $opus_image_meta['image_meta']['credit'] && $opus_image_meta['image_meta']['copyright'] ) {
+            $copyright .= ' ';
+        } /** End if - credit & copyright */
+        if ( $opus_image_meta['image_meta']['copyright'] ) {
+            $copyright .= sprintf( __( '&copy; %1$s %2$s', 'opusprimus' ), get_the_time( 'Y' ), $opus_image_meta['image_meta']['copyright'] );
+        } /** End if - copyright */
+
+        /** Return Copyright string */
+        return apply_filters( 'opus_exif_copyright', $copyright );
+
+    } /** End function - exif copyright */
+
+
+    /**
      * Opus Primus EXIF Data
      * Returns an object containing the EXIF data found in an image if it exists
      * otherwise it returns null.
@@ -296,240 +513,6 @@ class OpusPrimusImages {
         return apply_filters( 'opus_exif_dimensions', $dimensions );
 
     } /** End function - exif dimensions */
-
-
-    /**
-     * Opus Primus EXIF Copyright
-     * Outputs a string containing the author and copyright text
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @uses    $opus_image_meta (global)
-     * @uses    apply_filters
-     * @uses    do_action
-     * @uses    get_the_time
-     *
-     * @return  string
-     */
-    function exif_copyright() {
-        /** Get the image meta object */
-        global $opus_image_meta;
-        $this->exif_data();
-
-        /** Add empty hook before EXIF copyright */
-        do_action( 'opus_before_exif_copyright' );
-
-        /** @var $copyright - initialize the copyright string */
-        $copyright = '';
-
-        /** Author Credit with Copyright details */
-        if ( $opus_image_meta['image_meta']['credit'] ) {
-            $copyright .= $opus_image_meta['image_meta']['credit'];
-        } /** End if - credit */
-        if ( $opus_image_meta['image_meta']['credit'] && $opus_image_meta['image_meta']['copyright'] ) {
-            $copyright .= ' ';
-        } /** End if - credit & copyright */
-        if ( $opus_image_meta['image_meta']['copyright'] ) {
-            $copyright .= sprintf( __( '&copy; %1$s %2$s', 'opusprimus' ), get_the_time( 'Y' ), $opus_image_meta['image_meta']['copyright'] );
-        } /** End if - copyright */
-
-        /** Return Copyright string */
-        return apply_filters( 'opus_exif_copyright', $copyright );
-
-    } /** End function - exif copyright */
-
-
-    /**
-     * Opus Primus EXIF Timestamp
-     * Outputs the timestamp including date and time as found in the image meta
-     * data formatted per Settings > General as found in the Administration
-     * panels (aka Dashboard)
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @uses    $opus_image_meta (global)
-     * @uses    apply_filters
-     * @uses    do_action
-     * @uses    get_option
-     * @uses    get_the_time
-     *
-     * @return  string
-     */
-    function exif_timestamp() {
-        /** Get the image meta object */
-        global $opus_image_meta;
-        $this->exif_data();
-
-        /** Add empty hook before EXIF timestamp */
-        do_action( 'opus_before_exif_timestamp' );
-
-        /** @var $timestamp - initialize the timestamp string */
-        $timestamp = '';
-
-        /** Creation timestamp in end-user settings format */
-        if ( $opus_image_meta['image_meta']['created_timestamp'] ) {
-            $timestamp .= sprintf( __( '%1$s @ %2$s', 'opusprimus' ),
-                get_the_time( get_option( 'date_format' ), $opus_image_meta['image_meta']['created_timestamp'] ),
-                get_the_time ( get_option( 'time_format' ), $opus_image_meta['image_meta']['created_timestamp'] )
-            );
-        } /** End if - timestamp */
-
-        /** Return Timestamp string */
-        return apply_filters( 'opus_exif_timestamp', $timestamp );
-
-    } /** End function - exif timestamp */
-
-
-    /**
-     * Opus Primus EXIF Camera
-     * Outputs camera details from EXIF data
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @uses    $opus_image_meta (global)
-     * @uses    apply_filters
-     * @uses    do_action
-     *
-     * @return  string
-     */
-    function exif_camera() {
-        /** Get the image meta object */
-        global $opus_image_meta;
-        $this->exif_data();
-
-        /** Add empty hook before EXIF camera */
-        do_action( 'opus_before_exif_camera' );
-
-        /** @var $camera - initialize camera string */
-        $camera = '';
-
-        /** Camera details */
-        if ( $opus_image_meta['image_meta']['camera'] ) {
-            $camera .= $opus_image_meta['image_meta']['camera'];
-        } /** End if - camera */
-
-        /** Return Camera string */
-        return apply_filters( 'opus_exif_camera', $camera );
-
-    } /** End function - exif camera */
-
-
-    /**
-     * Opus Primus EXIF Shutter Speed
-     * Outputs the Shutter speed from the EXIF data
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @uses    $opus_image_meta (global)
-     * @uses    apply_filters
-     * @uses    do_action
-     * @uses    exif_data
-     * @uses    number_format
-     */
-    function exif_shutter() {
-        /** Get the image meta object */
-        global $opus_image_meta;
-        $this->exif_data();
-
-        /** Add empty hook before EXIF shutter */
-        do_action( 'opus_before_exif_shutter' );
-
-        /** @var $shutter - initialize shutter string */
-        $shutter = '';
-
-        /** Shutter speed */
-        if ( $opus_image_meta['image_meta']['shutter_speed'] ) {
-            /** Shutter Speed Handler - "sec" is used as the short-form for time measured in seconds */
-            if ( ( 1 / $opus_image_meta['image_meta']['shutter_speed'] ) > 1 ) {
-                $shutter .= "1/";
-                if ( number_format( ( 1 / $opus_image_meta['image_meta']['shutter_speed'] ), 1 ) ==  number_format( ( 1 / $opus_image_meta['image_meta']['shutter_speed'] ), 0 ) ) {
-                    $shutter .= number_format( ( 1 / $opus_image_meta['image_meta']['shutter_speed'] ), 0, '.', '' ) . ' ' . __( 'sec', 'opusprimus' );
-                } else {
-                    $shutter .= number_format( ( 1 / $opus_image_meta['image_meta']['shutter_speed'] ), 1, '.', '' ) . ' ' . __( 'sec', 'opusprimus' );
-                }
-            } else {
-                $shutter .= $opus_image_meta['image_meta']['shutter_speed'] . ' ' . __( 'sec', 'opusprimus' );
-            } /** End if - calculated shutter speed */
-        } /** End if - shutter speed */
-
-        /** Return Shutter string */
-        return apply_filters( 'opus_exif_shutter', $shutter );
-
-    } /** End function - exif shutter */
-
-
-    /**
-     * Opus Primus EXIF Aperture
-     * Outputs the aperture details from the EXIF data
-     *
-     * @package OpuysPrimus
-     * @since   0.1
-     *
-     * @uses    $opus_image_meta (global)
-     * @uses    apply_filters
-     * @uses    do_action
-     *
-     * @return  string
-     */
-    function exif_aperture() {
-        /** Get the image meta object */
-        global $opus_image_meta;
-        $this->exif_data();
-
-        /** Add empty hook before EXIF aperture */
-        do_action( 'opus_before_exif_aperture' );
-
-        /** @var $aperture - initialize aperture string */
-        $aperture = '';
-
-        /** Aperture Setting */
-        if ( $opus_image_meta['image_meta']['aperture'] ) {
-            $aperture .= $opus_image_meta['image_meta']['aperture'];
-        } /** End if - aperture */
-
-        /** Return Aperture string */
-        return apply_filters( 'opus_exif_aperture', $aperture );
-
-    } /** End function - exif aperture */
-
-
-    /**
-     * Opus Primus EXIF Caption
-     * Outputs the image caption from the EXIF data
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @uses    $opus_image_meta (global)
-     * @uses    apply_filters
-     * @uses    do_action
-     *
-     * @return  string
-     */
-    function exif_caption() {
-        /** Get the image meta object */
-        global $opus_image_meta;
-        $this->exif_data();
-
-        /** Add empty hook before EXIF caption */
-        do_action( 'opus_before_exif_caption' );
-
-        /** @var $exif_caption - initialize EXIF caption string */
-        $exif_caption = '';
-
-        /** Image caption from EXIF details */
-        if ( $opus_image_meta['image_meta']['caption'] ) {
-            $exif_caption .= $opus_image_meta['image_meta']['caption'];
-        } /** End if - caption */
-
-        /** Return Caption string */
-        return apply_filters( 'opus_exif_caption', $exif_caption );
-
-    } /** End function - exif caption */
 
 
     /**
@@ -607,6 +590,93 @@ class OpusPrimusImages {
 
 
     /**
+     * Opus Primus EXIF Shutter Speed
+     * Outputs the Shutter speed from the EXIF data
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    $opus_image_meta (global)
+     * @uses    apply_filters
+     * @uses    do_action
+     * @uses    exif_data
+     * @uses    number_format
+     */
+    function exif_shutter() {
+        /** Get the image meta object */
+        global $opus_image_meta;
+        $this->exif_data();
+
+        /** Add empty hook before EXIF shutter */
+        do_action( 'opus_before_exif_shutter' );
+
+        /** @var $shutter - initialize shutter string */
+        $shutter = '';
+
+        /** Shutter speed */
+        if ( $opus_image_meta['image_meta']['shutter_speed'] ) {
+            /** Shutter Speed Handler - "sec" is used as the short-form for time measured in seconds */
+            if ( ( 1 / $opus_image_meta['image_meta']['shutter_speed'] ) > 1 ) {
+                $shutter .= "1/";
+                if ( number_format( ( 1 / $opus_image_meta['image_meta']['shutter_speed'] ), 1 ) ==  number_format( ( 1 / $opus_image_meta['image_meta']['shutter_speed'] ), 0 ) ) {
+                    $shutter .= number_format( ( 1 / $opus_image_meta['image_meta']['shutter_speed'] ), 0, '.', '' ) . ' ' . __( 'sec', 'opusprimus' );
+                } else {
+                    $shutter .= number_format( ( 1 / $opus_image_meta['image_meta']['shutter_speed'] ), 1, '.', '' ) . ' ' . __( 'sec', 'opusprimus' );
+                }
+            } else {
+                $shutter .= $opus_image_meta['image_meta']['shutter_speed'] . ' ' . __( 'sec', 'opusprimus' );
+            } /** End if - calculated shutter speed */
+        } /** End if - shutter speed */
+
+        /** Return Shutter string */
+        return apply_filters( 'opus_exif_shutter', $shutter );
+
+    } /** End function - exif shutter */
+
+
+    /**
+     * Opus Primus EXIF Timestamp
+     * Outputs the timestamp including date and time as found in the image meta
+     * data formatted per Settings > General as found in the Administration
+     * panels (aka Dashboard)
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    $opus_image_meta (global)
+     * @uses    apply_filters
+     * @uses    do_action
+     * @uses    get_option
+     * @uses    get_the_time
+     *
+     * @return  string
+     */
+    function exif_timestamp() {
+        /** Get the image meta object */
+        global $opus_image_meta;
+        $this->exif_data();
+
+        /** Add empty hook before EXIF timestamp */
+        do_action( 'opus_before_exif_timestamp' );
+
+        /** @var $timestamp - initialize the timestamp string */
+        $timestamp = '';
+
+        /** Creation timestamp in end-user settings format */
+        if ( $opus_image_meta['image_meta']['created_timestamp'] ) {
+            $timestamp .= sprintf( __( '%1$s @ %2$s', 'opusprimus' ),
+                get_the_time( get_option( 'date_format' ), $opus_image_meta['image_meta']['created_timestamp'] ),
+                get_the_time ( get_option( 'time_format' ), $opus_image_meta['image_meta']['created_timestamp'] )
+            );
+        } /** End if - timestamp */
+
+        /** Return Timestamp string */
+        return apply_filters( 'opus_exif_timestamp', $timestamp );
+
+    } /** End function - exif timestamp */
+
+
+    /**
      * Opus Primus EXIF Title
      * Outputs the image title from the EXIF data
      *
@@ -641,7 +711,60 @@ class OpusPrimusImages {
     } /** End function - exif title */
 
 
-    /** -- To be reordered below this line ---------------------------------- */
+    /**
+     * Opus Primus Featured Thumbnail
+     * Adds the featured image / post thumbnail to the post if not in the single
+     * view
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    get_post_thumbnail_id
+     * @uses    has_post_thumbnail
+     * @uses    is_page
+     * @uses    is_single
+     * @uses    the_post_thumbnail
+     * @uses    the_title_attribute
+     *
+     * @todo clean up and have link display attachment archive
+     */
+    function featured_thumbnail() {
+        if ( has_post_thumbnail() && ! is_single() ) {
+            $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
+            echo '<a class="featured-thumbnail" href="' . $large_image_url[0] . '" title="' . the_title_attribute( 'echo=0' ) . '" >';
+            if ( is_page() ) {
+                the_post_thumbnail( 'thumbnail', array( 'class' => 'alignright' ) );
+            } else {
+                the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) );
+            } /** End if - is page */
+            echo '</a>';
+        } /** End if - has post thumbnail and not is single */
+    } /** End function - featured thumbnail */
+
+
+    /**
+     * First Linked Image
+     * Finds the first image in the post and returns it
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @internal Inspired by http://css-tricks.com/snippets/wordpress/get-the-first-image-from-a-post/
+     *
+     * @todo Return the same image "size" used in the "attachment" as found in the Post-Format: Image archive
+     */
+    function first_linked_image() {
+
+        global $post;
+        preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+
+        $image_url = $matches[1][0];
+
+        $output = '<img class="linked-image" src="' . $image_url . '" alt="" />';
+
+        return $output;
+
+    } /** End function - first linked image */
 
 
     /**
@@ -686,122 +809,6 @@ class OpusPrimusImages {
         do_action( 'opus_after_image_title' );
 
     } /** End function - image title */
-
-
-    /**
-     * Opus Primus Archive Image Details
-     * Outputs details of the attached image, if they exist
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @param   string $size - standard WordPress post_thumbnail sizes / or custom defined sizes can be used
-     *
-     * @uses    get_children
-     * @uses    get_permalink
-     * @uses    get_the_ID
-     * @uses    is_single
-     * @uses    the_title_attribute
-     * @uses    wp_get_attachment_image
-     *
-     * @todo Add filters to output messages
-     * @todo Address $archive_image message(s) once `first_linked_image` is sorted out
-     * @todo Address CSS aesthetics on images not attached ... or find a way to display the post excerpt details (much better choice!)
-     */
-    function archive_image_details( $size = 'medium' ) {
-        $attachments = get_children( array(
-            'post_parent'       => get_the_ID(),
-            'post_status'       => 'inherit',
-            'post_type'         => 'attachment',
-            'post_mime_type'    => 'image',
-            'order'             => 'ASC',
-            'orderby'           => 'menu_order ID',
-            'numberposts'       => 1
-        ) );
-
-        /** @var $archive_image - initial value (when there is no attachment) */
-        $archive_image = '<p class="archive-image">' . __( 'The Image archive looks much better if the image is set as an attachment of the post.', 'opusprimus' ) . '</p>';
-        /** @var $archive_image_title, $archive_image_excerpt, $archive_image_content - initialized as an empty string */
-        $archive_image_title = $archive_image_excerpt = $archive_image_content = '';
-
-        if ( empty( $attachments ) ) {
-            $archive_image = $this->first_linked_image();
-        } /** End if - empty attachments */
-
-        foreach ( $attachments as $opus_thumb_id => $attachment ) {
-            $archive_image = wp_get_attachment_image( $opus_thumb_id, $size );
-            $archive_image_title = $attachment->post_title;
-            $archive_image_excerpt = $attachment->post_excerpt;
-            $archive_image_content = $attachment->post_content;
-        } /** End foreach - attachments */ ?>
-
-        <table>
-            <thead>
-                <tr><th>
-                    <?php
-                    if ( ! empty( $archive_image_title ) ) {
-                        printf( '<span class="archive-image-title">' . __( 'Image Title: %1$s', 'opusprimus' )  . '</span>', $archive_image_title );
-                    } /** End if - not empty title */ ?>
-                </th></tr>
-            </thead><!-- End table header -->
-            <tbody>
-                <tr>
-                    <td class="archive-image">
-                        <?php
-                        if ( ! is_single() ) {
-                            echo '<span class="archive-image"><a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">'
-                                . $archive_image
-                                . '</a></span>';
-                            if ( empty( $attachments ) ) {
-                                printf( '<div class="linked-image-message">%1$s</div>',
-                                    apply_filters( 'opus_linked_image_message', __( 'This is a linked image.', 'opusprimus' ) )
-                                );
-                            } /** End if - empty attachments */
-                        } /** End if - not is single */ ?>
-                    </td>
-                </tr>
-                <tr>
-                    <?php
-                    if ( ! empty( $archive_image_excerpt ) ) {
-                        printf( '<td class="archive-image-excerpt">' . __( 'Image Caption: %1$s', 'opusprimus' )  . '</td>', $archive_image_excerpt );
-                    } /** End if - not empty excerpt */ ?>
-                </tr>
-                <tr>
-                    <?php
-                    if ( ! empty( $archive_image_content ) ) {
-                        printf( '<td class="archive-image-content">' . __( 'Image Description: %1$s', 'opusprimus' )  . '</td>', $archive_image_content );
-                    } /** End if - not empty content */ ?>
-                </tr>
-            </tbody><!-- End table body -->
-        </table><!-- End table -->
-
-    <?php
-    } /** End function - archive image details */
-
-
-    /**
-     * First Linked Image
-     * Finds the first image in the post and returns it
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @internal Inspired by http://css-tricks.com/snippets/wordpress/get-the-first-image-from-a-post/
-     *
-     * @todo Return the same image "size" used in the "attachment" as found in the Post-Format: Image archive
-     */
-    function first_linked_image() {
-
-        global $post;
-        preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-
-        $image_url = $matches[1][0];
-
-        $output = '<img class="linked-image" src="' . $image_url . '" alt="" />';
-
-        return $output;
-
-    } /** End function - first linked image */
 
 
     /**

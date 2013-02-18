@@ -30,6 +30,10 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version 1.0.1
+ * @date    February 18, 2013
+ * Re-order methods: alphabetical
  */
 
 if ( ! class_exists( 'OpusPrimusDefaults' ) ) {
@@ -51,10 +55,10 @@ if ( ! class_exists( 'OpusPrimusDefaults' ) ) {
         function __construct() {}
 
         /** Post Byline and Post Author parameters */
-        function show_mod_author() { return true; }
-        function show_author_url() { return true; }
-        function show_author_email() { return true; }
         function show_author_desc() { return true; }
+        function show_author_email() { return true; }
+        function show_author_url() { return true; }
+        function show_mod_author() { return true; }
 
     } /** End Opus Primus Defaults class */
 

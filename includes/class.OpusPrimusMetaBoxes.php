@@ -30,6 +30,10 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version 1.0.1
+ * @date    February 18, 2013
+ * Re-order methods: action and filter calls by request order, then alphabetical
  */
 
 class OpusPrimusMetaBoxes {
@@ -45,6 +49,9 @@ class OpusPrimusMetaBoxes {
         add_action( 'opus_after_post_title', array( $this, 'tagline_output' ) );
 
     } /** End function - construct */
+
+
+    /** ---- Action and Filter Methods ---- */
 
 
     /**
@@ -75,27 +82,6 @@ class OpusPrimusMetaBoxes {
         } /** End if - attachment */
 
     } /** End function - tagline create boxes */
-
-
-    /**
-     * Tagline Callback
-     * Used to display text field box on edit page
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @param   $post -> ID, post_type
-     *
-     * @uses    get_post_meta
-     */
-    function tagline_callback( $post ) {
-        /** Create and display input for tagline text field */
-        echo '<label for="tagline_text_field">';
-            echo apply_filters( 'opus_taglines_text_field_description', sprintf( __('Add custom tagline to this %1$s: ', 'opusprimus' ), $post->post_type ) );
-        echo '</label>';
-        echo '<input type="text" id="tagline_text_field" name="tagline_text_field" value="' . get_post_meta( $post->ID, 'tagline_text_field', true ) . '" size="100%" />';
-
-    } /** End function - tagline callback */
 
 
     /**
@@ -160,6 +146,30 @@ class OpusPrimusMetaBoxes {
         } /** End if - not empty */
 
     } /** End function - tagline output */
+
+
+    /** ---- Additional Methods ---- */
+
+
+    /**
+     * Tagline Callback
+     * Used to display text field box on edit page
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @param   $post -> ID, post_type
+     *
+     * @uses    get_post_meta
+     */
+    function tagline_callback( $post ) {
+        /** Create and display input for tagline text field */
+        echo '<label for="tagline_text_field">';
+        echo apply_filters( 'opus_taglines_text_field_description', sprintf( __('Add custom tagline to this %1$s: ', 'opusprimus' ), $post->post_type ) );
+        echo '</label>';
+        echo '<input type="text" id="tagline_text_field" name="tagline_text_field" value="' . get_post_meta( $post->ID, 'tagline_text_field', true ) . '" size="100%" />';
+
+    } /** End function - tagline callback */
 
 
 } /** End Opus Primus Meta Boxes class */

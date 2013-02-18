@@ -44,7 +44,9 @@ class OpusPrimusComments {
         add_filter( 'comment_class', array( $this, 'comment_author_class' ) );
     } /** End function - construct */
 
+
     /** ---- Action and Filter Methods ---- */
+
 
     /**
      * Enqueue Comment Reply
@@ -172,7 +174,9 @@ class OpusPrimusComments {
 
     } /** End function - comment author class */
 
+
     /** ---- Additional Methods ---- */
+
 
     /**
      * Comments Link
@@ -236,9 +240,11 @@ class OpusPrimusComments {
 
         /** Add empty hook after comments */
         do_action( 'opus_after_comments' );
-    }
+
+    } /** End function - wrapped comments template */
 
 } /** End class Opus Primus Comments */
+
 
 /** @var $opus_comments - new instance of class */
 $opus_comments = new OpusPrimusComments();

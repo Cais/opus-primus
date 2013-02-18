@@ -30,6 +30,10 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version 1.0.1
+ * @date    February 18, 2013
+ * Re-order methods: action and filter calls by request order, then alphabetical
  */
 
 class OpusPrimusPosts {
@@ -39,6 +43,9 @@ class OpusPrimusPosts {
         add_filter( 'post_class', array( $this, 'post_classes' ) );
 
     } /** End function - construct */
+
+
+    /** ---- Action and Filter Methods ---- */
 
 
     /**
@@ -154,124 +161,7 @@ class OpusPrimusPosts {
     } /** End function - post classes */
 
 
-    /**
-     * Post Byline
-     * Outputs post meta details consisting of a configurable anchor for post
-     * link anchor text, the date and time posted, and the post author. The post
-     * author is also linked to the author's archive page.
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @param   array|string $byline_args - function controls
-     *
-     * @internal    @param string $anchor ( default = Posted )
-     * @internal    @param string $show_mod_author ( default = false )
-     * @internal    @param string $sticky_flag ( default = '' )
-     * @internal    @param string $tempus ( default = date ) - date|time
-     *
-     * @example     post_byline( array( 'anchor' => 'Written', 'tempus' => 'time' ) )
-     * @internal    This example will use the word "Written" as the anchor text
-     * if there is no title for the post; using 'time' will show the modified
-     * post author if there is any difference in time while using the default
-     * 'date' will only show if there is a difference of more than one (1) day.
-     * Also note, 'show_mod_author' is not needed if 'tempus' is set to 'time'.
-     *
-     * @uses    do_action
-     * @uses    esc_attr
-     * @uses    get_author_posts_url
-     * @uses    get_option ( date_format, time_format )
-     * @uses    get_the_author
-     * @uses    get_the_author_meta ( ID )
-     * @uses    get_the_date
-     * @uses    get_the_time
-     * @uses    no_title_link
-     * @uses    post_format_flag
-     * @uses    sticky_flag
-     * @uses    wp_parse_args
-     *
-     * @todo Review for additional filter options
-     */
-    function post_byline( $byline_args = '' ) {
-        /** Set defaults */
-        $defaults = array(
-            'anchor'            => 'Posted',
-            'show_mod_author'   => false,
-            'sticky_flag'       => '',
-            'tempus'            => 'date',
-        );
-        $byline_args = wp_parse_args( (array) $byline_args, $defaults );
-
-        /** Grab the author ID from within the loop and globalize it for later use. */
-        global $opus_author_id;
-        $opus_author_id = get_the_author_meta( 'ID' );
-
-        /** Add empty hook before post by line */
-        do_action( 'opus_before_post_byline' );
-
-        /** @var string $opus_post_byline - create byline details string */
-        $opus_post_byline = apply_filters( 'opus_post_byline_details', __( '%1$s on %2$s at %3$s by %4$s', 'opusprimus' ) );
-        /**
-         * Output post byline (date, time, and author) and open the CSS wrapper
-         */
-        echo '<div class="meta-byline">';
-        printf( $opus_post_byline,
-            $this->no_title_link( $byline_args['anchor'] ),
-            get_the_date( get_option( 'date_format' ) ),
-            get_the_time( get_option( 'time_format' ) ),
-            $this->author_posts_link()
-        );
-
-        /**
-         * Show modified post author if set to true or if the time span is
-         * measured in hours
-         */
-        if ( $byline_args['show_mod_author'] || ( 'time' == $byline_args['tempus'] ) ) {
-            $this->modified_post( $byline_args['tempus'] );
-        } /** End if - byline args */
-
-        /** Add a sticky note flag to the byline */
-        echo $this->sticky_flag( $byline_args['sticky_flag'] );
-        /** Add a post-format flag to the byline */
-        echo $this->post_format_flag();
-
-        /** Close CSS wrapper for the post byline */
-        echo '</div><!-- .meta-byline -->';
-
-        /** Add empty hook after post by line */
-        do_action( 'opus_after_post_byline' );
-
-    } /** End function - post byline */
-
-
-    /**
-     * No Title Link
-     * This returns a URL to the post using the anchor text 'Posted' in the meta
-     * details with the post excerpt as the URL title; or, returns the word
-     * 'Posted' if the post title exists
-     *
-     * @package     OpusPrimus
-     * @since       0.1
-     *
-     * @param       string $anchor - word or phrase to use as anchor text when no title is present
-     *
-     * @uses        apply_filters
-     * @uses        get_permalink
-     * @uses        get_the_excerpt
-     * @uses        get_the_title
-     *
-     * @return      string - URL|text
-     */
-    function no_title_link( $anchor ) {
-        /** Create URL or string text */
-        $opus_no_title = get_the_title();
-        empty( $opus_no_title )
-            ? $opus_no_title = '<span class="no-title"><a href="' . get_permalink() . '" title="' . get_the_excerpt() . '">' . $anchor . '</span></a>'
-            : $opus_no_title = $anchor;
-
-        return apply_filters( 'opus_no_title_link', $opus_no_title );
-
-    } /** End function - no title link */
+    /** ---- Additional Methods ---- */
 
 
     /**
@@ -294,6 +184,86 @@ class OpusPrimusPosts {
             get_the_author()
         );
     } /** End function - author posts link */
+
+
+    /**
+     * Meta Tags
+     * Prints HTML with meta information for the current post (category, tags
+     * and permalink) - inspired by TwentyTen
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @internal REQUIRES use within the_Loop
+     *
+     * @param   string $anchor ( default = Posted ) - passed from the loops
+     *
+     * @uses    do_action
+     * @uses    get_permalink
+     * @uses    get_post_type
+     * @uses    get_the_category_list
+     * @uses    get_the_tag_list
+     * @uses    no_title_link
+     * @uses    the_title_attribute
+     * @uses    uncategorized
+     */
+    function meta_tags( $anchor ) {
+        /** Add empty hook before meta tags */
+        do_action( 'opus_before_meta_tags' );
+
+        /**
+         * Retrieves tag list of current post, separated by commas; if there are
+         * tags associated with the post show them, If there are no tags for the
+         * post do not make any references to tags.
+         */
+        $opus_tag_list = get_the_tag_list( '', ', ', '' );
+
+        if ( ( $opus_tag_list ) && ( ! $this->uncategorized() ) ) {
+            $opus_posted_in = __( '%1$s in %2$s and tagged %3$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark. %6$s', 'opusprimus' );
+        } elseif ( ( $opus_tag_list ) && ( $this->uncategorized() ) ) {
+            $opus_posted_in = __( '%1$s and tagged %3$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark. %6$s', 'opusprimus' );
+        } elseif ( ( ! $opus_tag_list ) && ( ! $this->uncategorized() ) ) {
+            $opus_posted_in = __( '%1$s in %2$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark. %6$s', 'opusprimus' );
+        } else {
+            $opus_posted_in = __( 'Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark. %6$s', 'opusprimus' );
+        } /** End if - tag list */
+
+        /** Prints the "opus_posted_in" string, replacing the placeholders */
+        printf( '<p class="meta-tags">' . $opus_posted_in . '</p>',
+            $this->no_title_link( $anchor ),
+            get_the_category_list( ', ' ),
+            $opus_tag_list,
+            get_permalink(),
+            the_title_attribute( 'echo=0' ),
+            $this->status_update()
+        );
+
+        /** Add empty hook after meta tags */
+        do_action( 'opus_after_meta_tags' );
+
+    } /** End function - meta tags */
+
+
+    /**
+     * Modified Author Posts Link
+     * Creates link to the modified author's post archive
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    home_url
+     *
+     * @param   $last_user - passed from OpusPrimusPosts::modified_post
+     *
+     * @return  string - URL to author archive
+     */
+    function modified_author_posts_link( $last_user ) {
+        return sprintf( '<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
+            home_url( '?author=' . $last_user->ID ),
+            esc_attr( sprintf( __( 'View all posts by %1$s', 'opusprimus' ), $last_user->display_name ) ),
+            $last_user->display_name
+        );
+    } /** End function - modified posts link */
 
 
     /**
@@ -387,63 +357,216 @@ class OpusPrimusPosts {
 
 
     /**
-     * Modified Author Posts Link
-     * Creates link to the modified author's post archive
+     * No Title Link
+     * This returns a URL to the post using the anchor text 'Posted' in the meta
+     * details with the post excerpt as the URL title; or, returns the word
+     * 'Posted' if the post title exists
      *
-     * @package OpusPrimus
-     * @since   0.1
+     * @package     OpusPrimus
+     * @since       0.1
      *
-     * @uses    home_url
+     * @param       string $anchor - word or phrase to use as anchor text when no title is present
      *
-     * @param   $last_user - passed from OpusPrimusPosts::modified_post
+     * @uses        apply_filters
+     * @uses        get_permalink
+     * @uses        get_the_excerpt
+     * @uses        get_the_title
      *
-     * @return  string - URL to author archive
+     * @return      string - URL|text
      */
-    function modified_author_posts_link( $last_user ) {
-        return sprintf( '<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
-            home_url( '?author=' . $last_user->ID ),
-            esc_attr( sprintf( __( 'View all posts by %1$s', 'opusprimus' ), $last_user->display_name ) ),
-            $last_user->display_name
-        );
-    } /** End function - modified posts link */
+    function no_title_link( $anchor ) {
+        /** Create URL or string text */
+        $opus_no_title = get_the_title();
+        empty( $opus_no_title )
+            ? $opus_no_title = '<span class="no-title"><a href="' . get_permalink() . '" title="' . get_the_excerpt() . '">' . $anchor . '</span></a>'
+            : $opus_no_title = $anchor;
+
+        return apply_filters( 'opus_no_title_link', $opus_no_title );
+
+    } /** End function - no title link */
 
 
     /**
-     * Sticky Flag
-     * Returns a text string as a button that links to the post, used with the
-     * "sticky" post functionality of WordPress
+     * Post Byline
+     * Outputs post meta details consisting of a configurable anchor for post
+     * link anchor text, the date and time posted, and the post author. The post
+     * author is also linked to the author's archive page.
      *
      * @package OpusPrimus
      * @since   0.1
      *
-     * @param   string $sticky_text
+     * @param   array|string $byline_args - function controls
+     *
+     * @internal    @param string $anchor ( default = Posted )
+     * @internal    @param string $show_mod_author ( default = false )
+     * @internal    @param string $sticky_flag ( default = '' )
+     * @internal    @param string $tempus ( default = date ) - date|time
+     *
+     * @example     post_byline( array( 'anchor' => 'Written', 'tempus' => 'time' ) )
+     * @internal    This example will use the word "Written" as the anchor text
+     * if there is no title for the post; using 'time' will show the modified
+     * post author if there is any difference in time while using the default
+     * 'date' will only show if there is a difference of more than one (1) day.
+     * Also note, 'show_mod_author' is not needed if 'tempus' is set to 'time'.
+     *
+     * @uses    do_action
+     * @uses    esc_attr
+     * @uses    get_author_posts_url
+     * @uses    get_option ( date_format, time_format )
+     * @uses    get_the_author
+     * @uses    get_the_author_meta ( ID )
+     * @uses    get_the_date
+     * @uses    get_the_time
+     * @uses    no_title_link
+     * @uses    post_format_flag
+     * @uses    sticky_flag
+     * @uses    wp_parse_args
+     *
+     * @todo Review for additional filter options
+     */
+    function post_byline( $byline_args = '' ) {
+        /** Set defaults */
+        $defaults = array(
+            'anchor'            => 'Posted',
+            'show_mod_author'   => false,
+            'sticky_flag'       => '',
+            'tempus'            => 'date',
+        );
+        $byline_args = wp_parse_args( (array) $byline_args, $defaults );
+
+        /** Grab the author ID from within the loop and globalize it for later use. */
+        global $opus_author_id;
+        $opus_author_id = get_the_author_meta( 'ID' );
+
+        /** Add empty hook before post by line */
+        do_action( 'opus_before_post_byline' );
+
+        /** @var string $opus_post_byline - create byline details string */
+        $opus_post_byline = apply_filters( 'opus_post_byline_details', __( '%1$s on %2$s at %3$s by %4$s', 'opusprimus' ) );
+        /**
+         * Output post byline (date, time, and author) and open the CSS wrapper
+         */
+        echo '<div class="meta-byline">';
+        printf( $opus_post_byline,
+            $this->no_title_link( $byline_args['anchor'] ),
+            get_the_date( get_option( 'date_format' ) ),
+            get_the_time( get_option( 'time_format' ) ),
+            $this->author_posts_link()
+        );
+
+        /**
+         * Show modified post author if set to true or if the time span is
+         * measured in hours
+         */
+        if ( $byline_args['show_mod_author'] || ( 'time' == $byline_args['tempus'] ) ) {
+            $this->modified_post( $byline_args['tempus'] );
+        } /** End if - byline args */
+
+        /** Add a sticky note flag to the byline */
+        echo $this->sticky_flag( $byline_args['sticky_flag'] );
+        /** Add a post-format flag to the byline */
+        echo $this->post_format_flag();
+
+        /** Close CSS wrapper for the post byline */
+        echo '</div><!-- .meta-byline -->';
+
+        /** Add empty hook after post by line */
+        do_action( 'opus_after_post_byline' );
+
+    } /** End function - post byline */
+
+
+    /**
+     * Post Coda
+     * Adds text art after post content to signify the end of the post
+     *
+     * @package OpusPrimus
+     * @since   0.1
      *
      * @uses    apply_filters
-     * @uses    is_sticky
-     * @uses    get_permalink
-     *
-     * @return  string
+     * @uses    do_action
      */
-    function sticky_flag( $sticky_text = '' ) {
+    function post_coda(){
+        /** Add empty hook before post coda */
+        do_action( 'opus_before_post_coda' );
 
-        if ( '' == $sticky_text ) {
-            $sticky_text = __( 'Featured', 'opusprimus' );
-            $sticky_text = apply_filters( 'opus_default_sticky_flag', $sticky_text );
-        } /** End if - sticky text */
+        /** Create the text art */
+        $post_coda = '* * * * *';
+        printf( '<div class="post-coda">%1$s</div>', apply_filters( 'opus_post_coda', $post_coda )  );
 
-        if ( is_sticky() ) {
-            $output = '<a href="' . get_permalink() . '" title="' . sprintf( __( 'Go to %1$s post', 'opusprimus' ), strtolower( $sticky_text ) ) . '">'
-                . '<button><span class="sticky-flag-text">'
-                . $sticky_text
-                . '</span></button>'
-                . '</a>';
-        } else {
-            $output = '';
-        } /** End if - is sticky */
+        /** Add empty hook after the post coda */
+        do_action( 'opus_after_post_coda' );
 
-        return apply_filters( 'opus_sticky_flag', $output );
+    } /** End function - post coda */
 
-    } /** End function - sticky flag */
+
+    /**
+     * Post Content
+     * Outputs `the_content` and allows for the_content parameters to be used
+     *
+     * @link    http://codex.wordpress.org/Function_Reference/the_content
+     * @example post_content( __( 'Read more of ... ', 'opusprimus' ) . the_title( '', '', false ) )
+     * @internal The above example, when the <!--more--> tag is used, will
+     * provide a link to the single view of the post with the anchor text of:
+     * "Read more of ... <the-post-title>"
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @param   string $more_link_text
+     * @param   string $stripteaser
+     *
+     * @uses    do_action
+     * @uses    the_content
+     */
+    function post_content( $more_link_text = '', $stripteaser = '' ) {
+        /** Add empty hook before the content */
+        do_action( 'opus_before_the_content' );
+
+        /** Check if there the more_link_text parameter has been set */
+        if ( empty( $more_link_text ) ) {
+            $more_link_text = __( 'Continue reading ... ', 'opusprimus' ) . the_title( '', '', false );
+        } /** End if - empty - more link text */
+
+        /** Check if there the stripteaser parameter has been set */
+        if ( empty( $stripteaser ) ) {
+            $stripteaser = '';
+        } /** End if - empty - stripteaser */
+
+        /** Wrap the post content in its own container */
+        echo '<div class="post-content">';
+        the_content( $more_link_text, $stripteaser );
+        echo '</div><!-- .post-content -->';
+
+        /** Add empty hook after the content */
+        do_action( 'opus_after_the_content' );
+
+    } /** End function - post content */
+
+
+    /**
+     * Post Excerpt
+     * Outputs `the_excerpt`
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    do_action
+     * @uses    the_excerpt
+     */
+    function post_excerpt() {
+        /** Add empty hook before the excerpt */
+        do_action( 'opus_before_the_excerpt' );
+
+        /** Wrap the post excerpt in its own CSS container */
+        echo '<div class="post-excerpt">';
+        the_excerpt();
+        echo '</div><!-- .post-excerpt -->';
+
+        /** Add empty hook after the excerpt */
+        do_action( 'opus_after_the_excerpt' );
+
+    } /** End function - post excerpt */
 
 
     /**
@@ -519,72 +642,25 @@ class OpusPrimusPosts {
 
 
     /**
-     * Post Content
-     * Outputs `the_content` and allows for the_content parameters to be used
-     *
-     * @link    http://codex.wordpress.org/Function_Reference/the_content
-     * @example post_content( __( 'Read more of ... ', 'opusprimus' ) . the_title( '', '', false ) )
-     * @internal The above example, when the <!--more--> tag is used, will
-     * provide a link to the single view of the post with the anchor text of:
-     * "Read more of ... <the-post-title>"
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @param   string $more_link_text
-     * @param   string $stripteaser
-     *
-     * @uses    do_action
-     * @uses    the_content
-     */
-    function post_content( $more_link_text = '', $stripteaser = '' ) {
-        /** Add empty hook before the content */
-        do_action( 'opus_before_the_content' );
-
-        /** Check if there the more_link_text parameter has been set */
-        if ( empty( $more_link_text ) ) {
-            $more_link_text = __( 'Continue reading ... ', 'opusprimus' ) . the_title( '', '', false );
-        } /** End if - empty - more link text */
-
-        /** Check if there the stripteaser parameter has been set */
-        if ( empty( $stripteaser ) ) {
-            $stripteaser = '';
-        } /** End if - empty - stripteaser */
-
-        /** Wrap the post content in its own container */
-        echo '<div class="post-content">';
-            the_content( $more_link_text, $stripteaser );
-        echo '</div><!-- .post-content -->';
-
-        /** Add empty hook after the content */
-        do_action( 'opus_after_the_content' );
-
-    } /** End function - post content */
-
-
-    /**
-     * Post Excerpt
-     * Outputs `the_excerpt`
+     * Show Status Update
+     * Used to display the status update outside of the post Meta Tags
      *
      * @package OpusPrimus
      * @since   0.1
      *
      * @uses    do_action
-     * @uses    the_excerpt
      */
-    function post_excerpt() {
-        /** Add empty hook before the excerpt */
-        do_action( 'opus_before_the_excerpt' );
+    function show_status_update() {
 
-        /** Wrap the post excerpt in its own CSS container */
-        echo '<div class="post-excerpt">';
-            the_excerpt();
-        echo '</div><!-- .post-excerpt -->';
+        /** Add empty hook before status update output */
+        do_action( 'opus_before_status_update' );
 
-        /** Add empty hook after the excerpt */
-        do_action( 'opus_after_the_excerpt' );
+        echo $this->status_update();
 
-    } /** End function - post excerpt */
+        /** Add empty hook after status update output */
+        do_action( 'opus_after_status_update' );
+
+    } /** End function - show status update */
 
 
     /**
@@ -656,83 +732,41 @@ class OpusPrimusPosts {
 
 
     /**
-     * Show Status Update
-     * Used to display the status update outside of the post Meta Tags
+     * Sticky Flag
+     * Returns a text string as a button that links to the post, used with the
+     * "sticky" post functionality of WordPress
      *
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    do_action
-     */
-    function show_status_update() {
-
-        /** Add empty hook before status update output */
-        do_action( 'opus_before_status_update' );
-
-        echo $this->status_update();
-
-        /** Add empty hook after status update output */
-        do_action( 'opus_after_status_update' );
-
-    } /** End function - show status update */
-
-
-    /**
-     * Meta Tags
-     * Prints HTML with meta information for the current post (category, tags
-     * and permalink) - inspired by TwentyTen
+     * @param   string $sticky_text
      *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @internal REQUIRES use within the_Loop
-     *
-     * @param   string $anchor ( default = Posted ) - passed from the loops
-     *
-     * @uses    do_action
+     * @uses    apply_filters
+     * @uses    is_sticky
      * @uses    get_permalink
-     * @uses    get_post_type
-     * @uses    get_the_category_list
-     * @uses    get_the_tag_list
-     * @uses    no_title_link
-     * @uses    the_title_attribute
-     * @uses    uncategorized
+     *
+     * @return  string
      */
-    function meta_tags( $anchor ) {
-        /** Add empty hook before meta tags */
-        do_action( 'opus_before_meta_tags' );
+    function sticky_flag( $sticky_text = '' ) {
 
-        /**
-         * Retrieves tag list of current post, separated by commas; if there are
-         * tags associated with the post show them, If there are no tags for the
-         * post do not make any references to tags.
-         */
-        $opus_tag_list = get_the_tag_list( '', ', ', '' );
+        if ( '' == $sticky_text ) {
+            $sticky_text = __( 'Featured', 'opusprimus' );
+            $sticky_text = apply_filters( 'opus_default_sticky_flag', $sticky_text );
+        } /** End if - sticky text */
 
-        if ( ( $opus_tag_list ) && ( ! $this->uncategorized() ) ) {
-            $opus_posted_in = __( '%1$s in %2$s and tagged %3$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark. %6$s', 'opusprimus' );
-        } elseif ( ( $opus_tag_list ) && ( $this->uncategorized() ) ) {
-            $opus_posted_in = __( '%1$s and tagged %3$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark. %6$s', 'opusprimus' );
-        } elseif ( ( ! $opus_tag_list ) && ( ! $this->uncategorized() ) ) {
-            $opus_posted_in = __( '%1$s in %2$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark. %6$s', 'opusprimus' );
+        if ( is_sticky() ) {
+            $output = '<a href="' . get_permalink() . '" title="' . sprintf( __( 'Go to %1$s post', 'opusprimus' ), strtolower( $sticky_text ) ) . '">'
+                . '<button><span class="sticky-flag-text">'
+                . $sticky_text
+                . '</span></button>'
+                . '</a>';
         } else {
-            $opus_posted_in = __( 'Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark. %6$s', 'opusprimus' );
-        } /** End if - tag list */
+            $output = '';
+        } /** End if - is sticky */
 
-        /** Prints the "opus_posted_in" string, replacing the placeholders */
-        printf( '<p class="meta-tags">' . $opus_posted_in . '</p>',
-            $this->no_title_link( $anchor ),
-            get_the_category_list( ', ' ),
-            $opus_tag_list,
-            get_permalink(),
-            the_title_attribute( 'echo=0' ),
-            $this->status_update()
-        );
+        return apply_filters( 'opus_sticky_flag', $output );
 
-        /** Add empty hook after meta tags */
-        do_action( 'opus_after_meta_tags' );
-
-    } /** End function - meta tags */
+    } /** End function - sticky flag */
 
 
     /**
@@ -770,30 +804,6 @@ class OpusPrimusPosts {
         return false;
 
     } /** End function - uncategorized */
-
-
-    /**
-     * Post Coda
-     * Adds text art after post content to signify the end of the post
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @uses    apply_filters
-     * @uses    do_action
-     */
-    function post_coda(){
-        /** Add empty hook before post coda */
-        do_action( 'opus_before_post_coda' );
-
-        /** Create the text art */
-        $post_coda = '* * * * *';
-        printf( '<div class="post-coda">%1$s</div>', apply_filters( 'opus_post_coda', $post_coda )  );
-
-        /** Add empty hook after the post coda */
-        do_action( 'opus_after_post_coda' );
-
-    } /** End function - post coda */
 
 
 } /** End Opus Primus Posts class */
