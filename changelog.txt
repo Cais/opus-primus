@@ -2,7 +2,17 @@
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.0.1 ==
+= Code =
+* Created new methods `the_loop_wrapped` and `the_loop_archives_wrapped`
+* Replaced `the_loop` method and surrounding code with `the_loop_wrapped`
+* Replaced `the_loop_archives` method and surrounding code with `the_loop_archives_wrapped`
+
+= CSS =
 * Center top level menu items only - better aesthetics with short page titles
+
+= Miscellaneous =
+* Fixed no comments message
+* Minor code formatting
 
 = Current Internet Browsers Reviewed =
 * Apple Safari

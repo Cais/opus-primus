@@ -84,6 +84,10 @@ class OpusPrimusComments {
      *
      * @internal used with comment_form_before hook
      * @internal NB: hook is only accessible if comments are open
+     *
+     * @version 1.0.1
+     * @date    February 19, 2013
+     * Fixed no comments message
      */
     function before_comment_form() {
         /** Conditional check for password protected posts ... no comments for you! */
@@ -99,7 +103,7 @@ class OpusPrimusComments {
         if ( ! have_comments() ) {
             printf(
                 '<span class="no-comments-message">' .
-                    apply_filters( 'opus_no_comments_message', __( 'Click here to start a discussion ...', 'opusprimus' ) ) .
+                    apply_filters( 'opus_no_comments_message', __( 'Start a discussion ...', 'opusprimus' ) ) .
                 '</span>' );
         } /** End if - not have comments */
 
