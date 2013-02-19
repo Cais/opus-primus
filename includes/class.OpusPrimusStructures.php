@@ -678,6 +678,81 @@ class OpusPrimusStructures {
     } /** End function - the loop archives */
 
 
+    /**
+     * the_Loop Wrapped
+     * Wraps the_Loop, its wrapping action hooks, and class into a tidy method
+     *
+     * @package OpusPrimus
+     * @since   1.0.1
+     *
+     * @uses    OpusPrimusStructures::the_loop
+     * @uses    do_action
+     * @uses    dynamic_sidebar
+     * @uses    is_active_sidebar
+     */
+    function the_loop_wrapped() {
+        /** Add empty action before the_Loop */
+        do_action( 'opus_before_the_loop' ); ?>
+
+        <div class="the-loop">
+
+            <?php
+            /** Add before loop sidebar */
+            if ( is_active_sidebar( 'before-loop' ) ) { dynamic_sidebar( 'before-loop' ); }
+
+            /** the_Loop structure in its most basic form */
+            $this->the_loop();
+
+            /** Add after loop sidebar */
+            if ( is_active_sidebar( 'after-loop' ) ) { dynamic_sidebar( 'after-loop' ); } ?>
+
+        </div><!-- #the-loop -->
+
+        <?php
+        /** Add empty action after the_Loop */
+        do_action( 'opus_after_the_loop' );
+
+    } /** End function - the loop wrapped */
+
+
+    /**
+     * the_Loop Archives Wrapped
+     * Wraps the_Loop (archives), its wrapping action hooks, and class into a
+     * tidy method
+     *
+     * @package OpusPrimus
+     * @since   1.0.1
+     *
+     * @uses    OpusPrimusStructures::the_loop_archives
+     * @uses    do_action
+     * @uses    dynamic_sidebar
+     * @uses    is_active_sidebar
+     */
+    function the_loop_archives_wrapped() {
+        /** Add empty action before the_Loop */
+        do_action( 'opus_before_the_loop' ); ?>
+
+        <div class="the-loop">
+
+            <?php
+            /** Add before loop sidebar */
+            if ( is_active_sidebar( 'before-loop' ) ) { dynamic_sidebar( 'before-loop' ); }
+
+            /** the_Loop structure in its most basic form */
+            $this->the_loop_archives();
+
+            /** Add after loop sidebar */
+            if ( is_active_sidebar( 'after-loop' ) ) { dynamic_sidebar( 'after-loop' ); } ?>
+
+        </div><!-- #the-loop -->
+
+        <?php
+        /** Add empty action after the_Loop */
+        do_action( 'opus_after_the_loop' );
+
+    } /** End function - the loop archives wrapped */
+
+
 } /** End Opus Primus Structures class */
 
 /** @var $opus_structures - new instance of class */

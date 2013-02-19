@@ -34,6 +34,10 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version 1.0.1
+ * @date    February 19, 2013
+ * Replace `the_loop` method and surrounding code with `the_loop_wrapped`
  */
 
 global $opus_structures;
@@ -51,27 +55,10 @@ do_action( 'opus_before_content' ); ?>
     /** Open the necessary layout CSS classes */
     echo $opus_structures->layout_open();
 
-    /** Add empty action before the_Loop */
-    do_action( 'opus_before_the_loop' ); ?>
+    /** The complete loop section */
+    $opus_structures->the_loop_wrapped();
 
-    <div class="the-loop">
-
-        <?php
-        /** Add before loop sidebar */
-        if ( is_active_sidebar( 'before-loop' ) ) { dynamic_sidebar( 'before-loop' ); }
-
-        /** the_Loop structure in its most basic form */
-        $opus_structures->the_loop();
-
-        /** Add after loop sidebar */
-        if ( is_active_sidebar( 'after-loop' ) ) { dynamic_sidebar( 'after-loop' ); } ?>
-
-    </div><!-- #the-loop -->
-
-    <?php
-    /** Add empty action after the_Loop */
-    do_action( 'opus_after_the_loop' );
-
+    /** Call the sidebar */
     get_sidebar();
 
     /** Close the classes written by the layout_open call */
