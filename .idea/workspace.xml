@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archive.php" afterPath="$PROJECT_DIR$/archive.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/single.php" afterPath="$PROJECT_DIR$/single.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page.php" afterPath="$PROJECT_DIR$/page.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,41 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="0" selection-start="1344" selection-end="1344" vertical-scroll-proportion="-20.076923">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="archive.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/archive.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="3" selection-start="1398" selection-end="1398" vertical-scroll-proportion="-25.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="page.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.18106508">
+            <state line="61" column="16" selection-start="1876" selection-end="1876" vertical-scroll-proportion="0.32189348">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="single.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/single.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="3" selection-start="1207" selection-end="1207" vertical-scroll-proportion="-22.884615">
-              <folding>
-                <element signature="e#6#1207#0" expanded="true" />
-                <marker date="1361303155257" expanded="true" signature="1376:1904" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -71,7 +38,7 @@
       <file leaf-file-name="class.OpusPrimusStructures.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="720" column="18" selection-start="27235" selection-end="27235" vertical-scroll-proportion="-10.423077">
+            <state line="672" column="39" selection-start="25892" selection-end="25892" vertical-scroll-proportion="-26.807692">
               <folding>
                 <element signature="e#1355#1881#0" expanded="false" />
                 <element signature="e#1969#2654#0" expanded="false" />
@@ -141,12 +108,7 @@
                 <element signature="e#23548#23717#0" expanded="false" />
                 <element signature="e#23594#23678#0" expanded="false" />
                 <element signature="e#23771#24131#0" expanded="false" />
-                <element signature="e#24136#24854#0" expanded="false" />
-                <element signature="e#24197#24717#0" expanded="false" />
-                <element signature="e#24231#24620#0" expanded="false" />
-                <element signature="e#24661#24717#0" expanded="false" />
                 <element signature="e#24892#25261#0" expanded="false" />
-                <element signature="e#25266#26001#0" expanded="false" />
                 <element signature="e#25336#25864#0" expanded="false" />
                 <element signature="e#25370#25767#0" expanded="false" />
                 <element signature="e#25808#25864#0" expanded="false" />
@@ -170,7 +132,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/stanzas/tha/tha-support.php" />
         <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/js/opus-primus-full-size-video.js" />
         <option value="$PROJECT_DIR$/works-in-progress/readme.txt" />
@@ -183,9 +144,10 @@
         <option value="$PROJECT_DIR$/changelog.txt" />
         <option value="$PROJECT_DIR$/includes/widgets.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
         <option value="$PROJECT_DIR$/single.php" />
         <option value="$PROJECT_DIR$/archive.php" />
+        <option value="$PROJECT_DIR$/page.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
       </list>
     </option>
   </component>
@@ -1584,7 +1546,11 @@
       <created>1360888398357</created>
       <updated>1360888398358</updated>
     </task>
-    <option name="localTasksCounter" value="298" />
+    <task id="LOCAL-00298" summary="* Replace `the_loop` method and surrounding code with `the_loop_wrapped`&#10;* Replace `the_loop_archives` method and surrounding code with `the_loop_archives_wrapped`">
+      <created>1361303519469</created>
+      <updated>1361303519469</updated>
+    </task>
+    <option name="localTasksCounter" value="299" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1623,6 +1589,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3247768" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272727" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1640,7 +1607,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3236607" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1681,7 +1647,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Modify the widget descriptions in the First, Second, Third, and Fourth Widget Areas to better explain their relative position and when to expect them to be displayed." />
+    <option name="LAST_COMMIT_MESSAGE" value="* Replace `the_loop` method and surrounding code with `the_loop_wrapped`&#10;* Replace `the_loop_archives` method and surrounding code with `the_loop_archives_wrapped`" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1694,7 +1660,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="* Hook Support Comment into footer for future reference in support issues and assistance cases." />
     <MESSAGE value="* Add 'Header Image Position' JavaScript to center custom header image when it is greater than half the site width" />
     <MESSAGE value="* &quot;Theme-Check&quot; corrections to theme-tags, pretty quotes(?!) in widgets, and a missing textdomain" />
     <MESSAGE value="* Refactor `link_pages` to `multiple_pages_link` (for Theme-Check pass)" />
@@ -1719,6 +1684,7 @@
     <MESSAGE value="Documentation adjustments to &quot;read&quot; better in a markdown manner" />
     <MESSAGE value="Set theme Version to 1.0 ... almost ready for release!" />
     <MESSAGE value="* Modify the widget descriptions in the First, Second, Third, and Fourth Widget Areas to better explain their relative position and when to expect them to be displayed." />
+    <MESSAGE value="* Replace `the_loop` method and surrounding code with `the_loop_wrapped`&#10;* Replace `the_loop_archives` method and surrounding code with `the_loop_archives_wrapped`" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1791,26 +1757,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/single.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1344" selection-end="1344" vertical-scroll-proportion="-20.076923">
+        <state line="35" column="3" selection-start="1207" selection-end="1207" vertical-scroll-proportion="0.2816568">
+          <folding>
+            <element signature="e#6#1207#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/archive.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="3" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.7846154">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/single.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="3" selection-start="1207" selection-end="1207" vertical-scroll-proportion="-22.884615">
-          <folding>
-            <element signature="e#6#1207#0" expanded="true" />
-            <marker date="1361303155257" expanded="true" signature="1376:1904" placeholder="..." />
-          </folding>
+        <state line="40" column="0" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.6177515">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="720" column="18" selection-start="27235" selection-end="27235" vertical-scroll-proportion="-10.423077">
+        <state line="672" column="39" selection-start="25892" selection-end="25892" vertical-scroll-proportion="-26.807692">
           <folding>
             <element signature="e#1355#1881#0" expanded="false" />
             <element signature="e#1969#2654#0" expanded="false" />
@@ -1880,12 +1852,7 @@
             <element signature="e#23548#23717#0" expanded="false" />
             <element signature="e#23594#23678#0" expanded="false" />
             <element signature="e#23771#24131#0" expanded="false" />
-            <element signature="e#24136#24854#0" expanded="false" />
-            <element signature="e#24197#24717#0" expanded="false" />
-            <element signature="e#24231#24620#0" expanded="false" />
-            <element signature="e#24661#24717#0" expanded="false" />
             <element signature="e#24892#25261#0" expanded="false" />
-            <element signature="e#25266#26001#0" expanded="false" />
             <element signature="e#25336#25864#0" expanded="false" />
             <element signature="e#25370#25767#0" expanded="false" />
             <element signature="e#25808#25864#0" expanded="false" />
@@ -1895,16 +1862,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/archive.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="3" selection-start="1398" selection-end="1398" vertical-scroll-proportion="-25.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.18106508">
+        <state line="61" column="16" selection-start="1876" selection-end="1876" vertical-scroll-proportion="0.32189348">
           <folding />
         </state>
       </provider>

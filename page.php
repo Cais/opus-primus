@@ -60,7 +60,9 @@ do_action( 'opus_before_content' ); ?>
         if ( have_posts() ) {
             while ( have_posts() ) {
                 the_post(); ?>
+
                 <div <?php post_class(); ?>>
+
                     <?php
                     $opus_posts->post_title();
                     $opus_images->featured_thumbnail();
@@ -72,7 +74,9 @@ do_action( 'opus_before_content' ); ?>
                         'show_author_email' => true,
                         'show_author_desc'  => true,
                     ) ); ?>
+
                 </div><!-- post classes -->
+
             <?php
             } /** End while - have posts */
         } else {
