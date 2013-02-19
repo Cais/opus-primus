@@ -56,12 +56,12 @@ class OpusPrimusNavigation {
         /** Add empty hook before comments link */
         do_action( 'opus_before_comments_link' ); ?>
 
-    <p class="navigation comment-link cf">
-        <span class="left"><?php previous_comments_link() ?></span>
-        <span class="right"><?php next_comments_link() ?></span>
-    </p>
+        <p class="navigation comment-link cf">
+            <span class="left"><?php previous_comments_link() ?></span>
+            <span class="right"><?php next_comments_link() ?></span>
+        </p>
 
-    <?php
+        <?php
         /** Add empty hook after comments link */
         do_action( 'opus_after_comments_link' );
 
@@ -113,8 +113,8 @@ class OpusPrimusNavigation {
 
         /** Add navigation links between pictures in the gallery */
         echo '<div class="opus-image-navigation cf">';
-        echo previous_image_link( false, '<span class="left">' . __( 'Previous Photo', 'opusprimus' ) . '</span>' );
-        echo next_image_link( false, '<span class="right">' . __( 'Next Photo', 'opusprimus' ) . '</span>' );
+            echo previous_image_link( false, '<span class="left">' . __( 'Previous Photo', 'opusprimus' ) . '</span>' );
+            echo next_image_link( false, '<span class="right">' . __( 'Next Photo', 'opusprimus' ) . '</span>' );
         echo '</div><!-- .opus-image-navigation -->';
 
         /** Add empty hook after the image navigation */

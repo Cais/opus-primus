@@ -447,25 +447,26 @@ class OpusPrimusPosts {
          * Output post byline (date, time, and author) and open the CSS wrapper
          */
         echo '<div class="meta-byline">';
-        printf( $opus_post_byline,
-            $this->no_title_link( $byline_args['anchor'] ),
-            get_the_date( get_option( 'date_format' ) ),
-            get_the_time( get_option( 'time_format' ) ),
-            $this->author_posts_link()
-        );
 
-        /**
-         * Show modified post author if set to true or if the time span is
-         * measured in hours
-         */
-        if ( $byline_args['show_mod_author'] || ( 'time' == $byline_args['tempus'] ) ) {
-            $this->modified_post( $byline_args['tempus'] );
-        } /** End if - byline args */
+            printf( $opus_post_byline,
+                $this->no_title_link( $byline_args['anchor'] ),
+                get_the_date( get_option( 'date_format' ) ),
+                get_the_time( get_option( 'time_format' ) ),
+                $this->author_posts_link()
+            );
 
-        /** Add a sticky note flag to the byline */
-        echo $this->sticky_flag( $byline_args['sticky_flag'] );
-        /** Add a post-format flag to the byline */
-        echo $this->post_format_flag();
+            /**
+             * Show modified post author if set to true or if the time span is
+             * measured in hours
+             */
+            if ( $byline_args['show_mod_author'] || ( 'time' == $byline_args['tempus'] ) ) {
+                $this->modified_post( $byline_args['tempus'] );
+            } /** End if - byline args */
+
+            /** Add a sticky note flag to the byline */
+            echo $this->sticky_flag( $byline_args['sticky_flag'] );
+            /** Add a post-format flag to the byline */
+            echo $this->post_format_flag();
 
         /** Close CSS wrapper for the post byline */
         echo '</div><!-- .meta-byline -->';
@@ -535,7 +536,7 @@ class OpusPrimusPosts {
 
         /** Wrap the post content in its own container */
         echo '<div class="post-content">';
-        the_content( $more_link_text, $stripteaser );
+            the_content( $more_link_text, $stripteaser );
         echo '</div><!-- .post-content -->';
 
         /** Add empty hook after the content */
@@ -560,7 +561,7 @@ class OpusPrimusPosts {
 
         /** Wrap the post excerpt in its own CSS container */
         echo '<div class="post-excerpt">';
-        the_excerpt();
+            the_excerpt();
         echo '</div><!-- .post-excerpt -->';
 
         /** Add empty hook after the excerpt */

@@ -103,9 +103,9 @@ class OpusPrimusArchives {
          * classes.
          */
         printf( '<ul class="archive cloud list cf%1$s">', $cloud_classes );
-        echo '<li><span class="title">' . $cloud_title . '</span>';
-        wp_tag_cloud( $cloud_args );
-        echo '</li>';
+            echo '<li><span class="title">' . $cloud_title . '</span>';
+                wp_tag_cloud( $cloud_args );
+            echo '</li>';
         echo '</ul><!-- .archive.cloud.list -->';
 
         /** Add empty hook after archive cloud */

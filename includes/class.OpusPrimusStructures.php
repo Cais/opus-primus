@@ -189,7 +189,7 @@ class OpusPrimusStructures {
      */
     function show_bust_image() {
         echo $this->bust_image();
-    }
+    } /** End function - show bust image */
 
 
     /**
@@ -230,7 +230,7 @@ class OpusPrimusStructures {
     function bust_image() {
         $bust_image_location = OPUS_IMAGES . 'broken_beethoven.png';
         return '<img src="' . $bust_image_location  . '" />';
-    }
+    } /** End function - bust image */
 
 
     /**
@@ -375,7 +375,7 @@ class OpusPrimusStructures {
     function custom_header_image() {
         $header_image = '<img class="opus-custom-header" src="' . get_header_image() . '" alt="" />';
         return $header_image;
-    }
+    } /** End function - custom header image */
 
 
     /**
@@ -501,16 +501,16 @@ class OpusPrimusStructures {
         do_action( 'opus_before_search_results' );
 
         /** No results from the_loop query */ ?>
-    <h2 class="post-title">
-        <?php
-        printf( __( 'Search Results for: %s', 'opus' ),
-            apply_filters(
-                'opus_search_results_for_text',
-                '<span class="search-results">' . esc_html( get_search_query() ) . '</span>'
-            ) ); ?>
-    </h2><!-- .post-title -->
+        <h2 class="post-title">
+            <?php
+            printf( __( 'Search Results for: %s', 'opus' ),
+                apply_filters(
+                    'opus_search_results_for_text',
+                    '<span class="search-results">' . esc_html( get_search_query() ) . '</span>'
+                ) ); ?>
+        </h2><!-- .post-title -->
 
-    <?php
+        <?php
         printf( '<p class="no-results">%1$s</p>',
             apply_filters(
                 'opus_no_results_text',
@@ -592,8 +592,8 @@ class OpusPrimusStructures {
     function show_custom_header_image() {
         if ( get_header_image() ) {
             echo $this->custom_header_image();
-        }
-    }
+        } /** End if - get header image */
+    } /** End function - show custom header image */
 
 
     /**

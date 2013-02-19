@@ -165,7 +165,7 @@ class OpusPrimusMetaBoxes {
     function tagline_callback( $post ) {
         /** Create and display input for tagline text field */
         echo '<label for="tagline_text_field">';
-        echo apply_filters( 'opus_taglines_text_field_description', sprintf( __('Add custom tagline to this %1$s: ', 'opusprimus' ), $post->post_type ) );
+            echo apply_filters( 'opus_taglines_text_field_description', sprintf( __('Add custom tagline to this %1$s: ', 'opusprimus' ), $post->post_type ) );
         echo '</label>';
         echo '<input type="text" id="tagline_text_field" name="tagline_text_field" value="' . get_post_meta( $post->ID, 'tagline_text_field', true ) . '" size="100%" />';
 
