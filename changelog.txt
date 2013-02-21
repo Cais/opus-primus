@@ -11,6 +11,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Center top level menu items only - better aesthetics with short page titles
 
 = Miscellaneous =
+* Updated 'theme-version-guidelines.txt' as taken from http://opusprimus.com/under-the-page/theme-version-guidelines/
 * Fixed no comments message
 * Minor code formatting
 

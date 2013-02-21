@@ -127,5 +127,11 @@ This being the case, the following widths will be used:
 default menus are not restricted to any specific depth except the Search Results
 Menu which is restricted to a single level only when a custom menu is not used.
 
+3. Future revisions of the 'theme-version-guidelines.txt' file may not
+necessarily be recorded in the changelog. The "Theme Version Guidelines" page
+found at http://opusprimus.com/under-the-page/theme-version-guidelines/ will
+be considered the most current at all times. The version of the guidelines
+included with the theme will simply be a copy of the noted page.
+
 == Review Tickets ==
 * http://themes.trac.wordpress.org/ticket/11106 - Version 1.0, February 2013
