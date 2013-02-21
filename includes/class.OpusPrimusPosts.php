@@ -34,6 +34,8 @@
  * @version 1.0.1
  * @date    February 18, 2013
  * Re-order methods: action and filter calls by request order, then alphabetical
+ * Modified action hooks to more semantic naming convention:
+ * `opus_<section>_<placement>`
  */
 
 class OpusPrimusPosts {
@@ -209,7 +211,7 @@ class OpusPrimusPosts {
      */
     function meta_tags( $anchor ) {
         /** Add empty hook before meta tags */
-        do_action( 'opus_before_meta_tags' );
+        do_action( 'opus_meta_tags_before' );
 
         /**
          * Retrieves tag list of current post, separated by commas; if there are
@@ -239,7 +241,7 @@ class OpusPrimusPosts {
         );
 
         /** Add empty hook after meta tags */
-        do_action( 'opus_after_meta_tags' );
+        do_action( 'opus_meta_tags_after' );
 
     } /** End function - meta tags */
 
@@ -323,7 +325,7 @@ class OpusPrimusPosts {
              * Add empty hook before modified post author for use when the post
              * author and the last (modified) author are different.
              */
-            do_action( 'opus_before_modified_post' );
+            do_action( 'opus_modified_post_before' );
 
         } else {
             $mod_author_phrase .= apply_filters( 'opus_mod_same_author_phrase', __( 'and modified on %3$s at %4$s.', 'opusprimus' ) );
@@ -351,7 +353,7 @@ class OpusPrimusPosts {
         } /** End if - time */
 
         /** Add empty hook after modified post author */
-        do_action( 'opus_after_modified_post' );
+        do_action( 'opus_modified_post_after' );
 
     } /** End function - modified post */
 
@@ -439,7 +441,7 @@ class OpusPrimusPosts {
         $opus_author_id = get_the_author_meta( 'ID' );
 
         /** Add empty hook before post by line */
-        do_action( 'opus_before_post_byline' );
+        do_action( 'opus_post_byline_before' );
 
         /** @var string $opus_post_byline - create byline details string */
         $opus_post_byline = apply_filters( 'opus_post_byline_details', __( '%1$s on %2$s at %3$s by %4$s', 'opusprimus' ) );
@@ -472,7 +474,7 @@ class OpusPrimusPosts {
         echo '</div><!-- .meta-byline -->';
 
         /** Add empty hook after post by line */
-        do_action( 'opus_after_post_byline' );
+        do_action( 'opus_post_byline_after' );
 
     } /** End function - post byline */
 
@@ -489,14 +491,14 @@ class OpusPrimusPosts {
      */
     function post_coda(){
         /** Add empty hook before post coda */
-        do_action( 'opus_before_post_coda' );
+        do_action( 'opus_post_coda_before' );
 
         /** Create the text art */
         $post_coda = '* * * * *';
         printf( '<div class="post-coda">%1$s</div>', apply_filters( 'opus_post_coda', $post_coda )  );
 
         /** Add empty hook after the post coda */
-        do_action( 'opus_after_post_coda' );
+        do_action( 'opus_post_coda_after' );
 
     } /** End function - post coda */
 
@@ -522,7 +524,7 @@ class OpusPrimusPosts {
      */
     function post_content( $more_link_text = '', $stripteaser = '' ) {
         /** Add empty hook before the content */
-        do_action( 'opus_before_the_content' );
+        do_action( 'opus_the_content_before' );
 
         /** Check if there the more_link_text parameter has been set */
         if ( empty( $more_link_text ) ) {
@@ -540,7 +542,7 @@ class OpusPrimusPosts {
         echo '</div><!-- .post-content -->';
 
         /** Add empty hook after the content */
-        do_action( 'opus_after_the_content' );
+        do_action( 'opus_the_content_after' );
 
     } /** End function - post content */
 
@@ -557,7 +559,7 @@ class OpusPrimusPosts {
      */
     function post_excerpt() {
         /** Add empty hook before the excerpt */
-        do_action( 'opus_before_the_excerpt' );
+        do_action( 'opus_the_excerpt_before' );
 
         /** Wrap the post excerpt in its own CSS container */
         echo '<div class="post-excerpt">';
@@ -565,7 +567,7 @@ class OpusPrimusPosts {
         echo '</div><!-- .post-excerpt -->';
 
         /** Add empty hook after the excerpt */
-        do_action( 'opus_after_the_excerpt' );
+        do_action( 'opus_the_excerpt_after' );
 
     } /** End function - post excerpt */
 
@@ -620,7 +622,7 @@ class OpusPrimusPosts {
      */
     function post_title( $before = '', $after = '', $echo = true ) {
         /** Add empty hook before the post title */
-        do_action( 'opus_before_post_title' );
+        do_action( 'opus_post_title_before' );
 
         /** Set `the_title` parameters */
         if ( empty( $before ) ) {
@@ -637,7 +639,7 @@ class OpusPrimusPosts {
 
         <?php
         /** Add empty hook after the post title */
-        do_action( 'opus_after_post_title' );
+        do_action( 'opus_post_title_after' );
 
     } /** End function - post title */
 
@@ -654,12 +656,12 @@ class OpusPrimusPosts {
     function show_status_update() {
 
         /** Add empty hook before status update output */
-        do_action( 'opus_before_status_update' );
+        do_action( 'opus_status_update_before' );
 
         echo $this->status_update();
 
         /** Add empty hook after status update output */
-        do_action( 'opus_after_status_update' );
+        do_action( 'opus_status_update_after' );
 
     } /** End function - show status update */
 
@@ -677,7 +679,6 @@ class OpusPrimusPosts {
      *
      * @uses    apply_filters
      * @uses    current_time
-     * @uses    do_action
      * @uses    get_the_modified_time
      * @uses    get_the_time
      * @uses    human_time_diff

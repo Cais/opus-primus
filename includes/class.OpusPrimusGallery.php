@@ -34,6 +34,8 @@
  * @version 1.0.1
  * @date    February 18, 2013
  * Re-order methods: alphabetical
+ * Modified action hooks to more semantic naming convention:
+ * `opus_<section>_<placement>`
  */
 
 class OpusPrimusGallery {
@@ -72,7 +74,7 @@ class OpusPrimusGallery {
         if ( ! is_single() ) {
 
             /** Add empty hook before featured image */
-            do_action( 'opus_before_featured_image' );
+            do_action( 'opus_featured_image_before' );
 
             /**
              * @var $size - standard WordPress image size; large as the intent is
@@ -125,7 +127,7 @@ class OpusPrimusGallery {
             } /** End if - has post thumbnail */
 
             /** Add empty hook after featured image */
-            do_action( 'opus_after_featured_image' );
+            do_action( 'opus_featured_image_after' );
 
         } /** End if - not is single */
 
@@ -280,7 +282,7 @@ class OpusPrimusGallery {
 
 
         /** Add empty hook before secondary images */
-        do_action( 'opus_before_secondary_images' );
+        do_action( 'opus_secondary_images_before' );
 
         /** @var $images - object to hold images attached to post */
         $images = new WP_Query( array(
@@ -352,7 +354,7 @@ class OpusPrimusGallery {
         } /** End if - not is single */
 
         /** Add empty hook after secondary images */
-        do_action( 'opus_after_secondary_images' );
+        do_action( 'opus_secondary_images_after' );
 
     } /** End function - secondary images */
 

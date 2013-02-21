@@ -34,6 +34,8 @@
  * @version 1.0.1
  * @date    February 18, 2013
  * Re-order methods: action and filter calls by request order, then alphabetical
+ * Modified action hooks to more semantic naming convention:
+ * `opus_<section>_<placement>`
  */
 
 class OpusPrimusArchives {
@@ -62,7 +64,7 @@ class OpusPrimusArchives {
      */
     function archive_cloud( $cloud_args = '' ) {
         /** Add empty hook before archive cloud */
-        do_action( 'opus_before_archive_cloud' );
+        do_action( 'opus_archive_cloud_before' );
 
         /** @var $defaults - initial values to be used as parameters */
         $defaults = array(
@@ -109,7 +111,7 @@ class OpusPrimusArchives {
         echo '</ul><!-- .archive.cloud.list -->';
 
         /** Add empty hook after archive cloud */
-        do_action( 'opus_after_archive_cloud' );
+        do_action( 'opus_archive_cloud_after' );
 
     } /** End function archive cloud */
 
@@ -133,7 +135,7 @@ class OpusPrimusArchives {
      */
     function categories_archive( $category_args = '' ) {
         /** Add empty hook before category archive */
-        do_action( 'opus_before_category_archive' );
+        do_action( 'opus_category_archive_before' );
 
         /** @var $defaults - set the default parameters */
         $defaults = array(
@@ -149,7 +151,7 @@ class OpusPrimusArchives {
         echo '</ul><!-- .archive.category.list -->';
 
         /** Add empty hook after category archive */
-        do_action( 'opus_after_category_archive' );
+        do_action( 'opus_category_archive_after' );
 
     } /** End function categories archive */
 

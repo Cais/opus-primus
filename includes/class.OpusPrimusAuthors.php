@@ -34,6 +34,8 @@
  * @version 1.0.1
  * @date    February 18, 2013
  * Re-order methods: alphabetical
+ * Modified action hooks to more semantic naming convention:
+ * `opus_<section>_<placement>`
  */
 
 class OpusPrimusAuthors {
@@ -94,14 +96,14 @@ class OpusPrimusAuthors {
      */
     function author_coda(){
         /** Add empty hook before post coda */
-        do_action( 'opus_before_author_coda' );
+        do_action( 'opus_author_coda_before' );
 
         /** Create the text art */
         $author_coda = '|=|=|=|=|';
         printf( '<div class="author-coda">%1$s</div>', apply_filters( 'opus_author_coda', $author_coda )  );
 
         /** Add empty hook after the post coda */
-        do_action( 'opus_after_author_coda' );
+        do_action( 'opus_author_coda_after' );
 
     } /** End function  - author coda */
 
@@ -135,7 +137,7 @@ class OpusPrimusAuthors {
         $author_desc           = get_the_author_meta( 'user_description', $author_id );
 
         /** Add empty hook before author details */
-        do_action( 'opus_before_author_details' ); ?>
+        do_action( 'opus_author_details_before' ); ?>
 
         <div class="author-details <?php $this->author_classes( $author_id ); ?>">
             <h2>
@@ -214,7 +216,7 @@ class OpusPrimusAuthors {
 
         <?php
         /** Add empty hook after author details */
-        do_action( 'opus_after_author_details' );
+        do_action( 'opus_author_details_after' );
 
         return;
 
@@ -263,7 +265,7 @@ class OpusPrimusAuthors {
         do_action( 'opus_post_author_top' );
 
         /** Add empty hook before first author details */
-        do_action( 'opus_before_author_details' );
+        do_action( 'opus_author_details_before' );
 
         /** Output author details */
         echo '<div class="first-author-details">';
@@ -276,7 +278,7 @@ class OpusPrimusAuthors {
         $this->author_coda();
 
         /** Add empty hook after first author details */
-        do_action( 'opus_after_author_details' );
+        do_action( 'opus_author_details_after' );
 
         /** Modified Author Details */
         /** @var $last_id - set last user ID */
@@ -288,7 +290,7 @@ class OpusPrimusAuthors {
          */
         if ( ( get_the_date() <> get_the_modified_date() ) && ( $opus_author_id <> $last_id )&& $post_author_args['show_mod_author'] ) {
             /** Add empty hook before modified author details */
-            do_action( 'opus_before_modified_author_details' );
+            do_action( 'opus_modified_author_details_before' );
 
             /** Output author details based on the last one to edit the post */
             echo '<div class="modified-author-details">';
@@ -301,7 +303,7 @@ class OpusPrimusAuthors {
             $this->author_coda();
 
             /** Add empty hook after modified author details */
-            do_action( 'opus_after_modified_author_details' );
+            do_action( 'opus_modified_author_details_after' );
         } /** End if - date vs. modified date */
 
         /** Add empty hook after post author section */

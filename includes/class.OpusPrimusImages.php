@@ -34,6 +34,10 @@
  * @version 1.0.1
  * @date    February 18, 2013
  * Re-order methods: action and filter calls by request order, then alphabetical
+ * Modified action hooks to more semantic naming convention:
+ * `opus_<section>_<placement>`
+ *
+ * @todo Review adding `opus_*_after` hooks; may also require `show_*` functions
  */
 
 class OpusPrimusImages {
@@ -187,7 +191,7 @@ class OpusPrimusImages {
      */
     function display_exif_box() {
         /** Add empty hook before exif box */
-        do_action( 'opus_before_exif_box' );
+        do_action( 'opus_exif_box_before' );
 
         /** Wrap the exif output in its own container */
         echo '<div class="display-exif-box">';
@@ -228,7 +232,7 @@ class OpusPrimusImages {
         echo '</div><!-- .display-exif-box -->';
 
         /** Add empty hook after exif box */
-        do_action( 'opus_after_exif_box' );
+        do_action( 'opus_exif_box_after' );
 
     } /** End function - exif box */
 
@@ -246,7 +250,7 @@ class OpusPrimusImages {
      */
     function display_exif_table() {
         /** Add empty hook before exif table */
-        do_action( 'opus_before_exif_table' ); ?>
+        do_action( 'opus_exif_table_before' ); ?>
 
         <!-- Provide a CSS class for the exif output -->
         <table class="display-exif-table">
@@ -294,7 +298,7 @@ class OpusPrimusImages {
 
         <?php
         /** Add empty hook after exif table */
-        do_action( 'opus_after_exif_table' );
+        do_action( 'opus_exif_table_after' );
 
     } /** End function - exif table */
 
@@ -318,7 +322,7 @@ class OpusPrimusImages {
         $this->exif_data();
 
         /** Add empty hook before EXIF aperture */
-        do_action( 'opus_before_exif_aperture' );
+        do_action( 'opus_exif_aperture_before' );
 
         /** @var $aperture - initialize aperture string */
         $aperture = '';
@@ -353,7 +357,7 @@ class OpusPrimusImages {
         $this->exif_data();
 
         /** Add empty hook before EXIF camera */
-        do_action( 'opus_before_exif_camera' );
+        do_action( 'opus_exif_camera_before' );
 
         /** @var $camera - initialize camera string */
         $camera = '';
@@ -388,7 +392,7 @@ class OpusPrimusImages {
         $this->exif_data();
 
         /** Add empty hook before EXIF caption */
-        do_action( 'opus_before_exif_caption' );
+        do_action( 'opus_exif_caption_before' );
 
         /** @var $exif_caption - initialize EXIF caption string */
         $exif_caption = '';
@@ -424,7 +428,7 @@ class OpusPrimusImages {
         $this->exif_data();
 
         /** Add empty hook before EXIF copyright */
-        do_action( 'opus_before_exif_copyright' );
+        do_action( 'opus_exif_copyright_before' );
 
         /** @var $copyright - initialize the copyright string */
         $copyright = '';
@@ -496,7 +500,7 @@ class OpusPrimusImages {
         $this->exif_data();
 
         /** Add empty hook before EXIF dimension */
-        do_action( 'opus_before_exif_dimensions' );
+        do_action( 'opus_exif_dimensions_before' );
 
         $dimensions = '';
         $width = $opus_image_meta['width'];
@@ -537,7 +541,7 @@ class OpusPrimusImages {
         $this->exif_data();
 
         /** Add empty hook before EXIF focal length */
-        do_action( 'opus_before_exif_focal_length' );
+        do_action( 'opus_exif_focal_length_before' );
 
         /** @var $focal_length - initialize focal length string */
         $focal_length = '';
@@ -573,7 +577,7 @@ class OpusPrimusImages {
         $this->exif_data();
 
         /** Add empty hook before EXIF ISO speed */
-        do_action( 'opus_before_exif_iso_speed' );
+        do_action( 'opus_exif_iso_speed_before' );
 
         /** @var $iso_speed - initialize ISO Speed string */
         $iso_speed = '';
@@ -608,7 +612,7 @@ class OpusPrimusImages {
         $this->exif_data();
 
         /** Add empty hook before EXIF shutter */
-        do_action( 'opus_before_exif_shutter' );
+        do_action( 'opus_exif_shutter_before' );
 
         /** @var $shutter - initialize shutter string */
         $shutter = '';
@@ -657,7 +661,7 @@ class OpusPrimusImages {
         $this->exif_data();
 
         /** Add empty hook before EXIF timestamp */
-        do_action( 'opus_before_exif_timestamp' );
+        do_action( 'opus_exif_timestamp_before' );
 
         /** @var $timestamp - initialize the timestamp string */
         $timestamp = '';
@@ -695,7 +699,7 @@ class OpusPrimusImages {
         $this->exif_data();
 
         /** Add empty hook before EXIF Title */
-        do_action( 'opus_before_exif_title' );
+        do_action( 'opus_exif_title_before' );
 
         /** @var $exif_title - initialize EXIF Title string */
         $exif_title = '';
@@ -786,7 +790,7 @@ class OpusPrimusImages {
      */
     function image_title( $before = '', $after = '', $echo = true ) {
         /** Add empty hook before the image title */
-        do_action( 'opus_before_image_title' );
+        do_action( 'opus_image_title_before' );
 
         /** Set `the_title` parameters */
         if ( empty( $before ) ) {
@@ -806,7 +810,7 @@ class OpusPrimusImages {
         } /** End if - not is attachment */
 
         /** Add empty hook after the image title */
-        do_action( 'opus_after_image_title' );
+        do_action( 'opus_image_title_after' );
 
     } /** End function - image title */
 

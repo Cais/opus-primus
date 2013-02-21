@@ -30,6 +30,11 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version 1.0.1
+ * @date    February 21, 13
+ * Modified action hooks to more semantic naming convention:
+ * `opus_<section>_<placement>`
  */
 
 class OpusPrimusComments {
@@ -196,7 +201,7 @@ class OpusPrimusComments {
      */
     function comments_link() {
         /** Add empty hook before comments link */
-        do_action( 'opus_before_comments_link' );
+        do_action( 'opus_comments_link_before' );
 
         echo '<h5 class="comments-link">';
         if ( ! post_password_required() && comments_open() ) {
@@ -221,7 +226,7 @@ class OpusPrimusComments {
         echo '</h5><!-- .comments-link -->';
 
         /** Add empty hook after comments link */
-        do_action( 'opus_after_comments_link' );
+        do_action( 'opus_comments_link_after' );
 
     } /** End function - comments link */
 
@@ -238,12 +243,12 @@ class OpusPrimusComments {
      */
     function wrapped_comments_template() {
         /** Add empty hook before comments */
-        do_action( 'opus_before_comments' );
+        do_action( 'opus_comments_before' );
 
         comments_template( '/comments.php', true );
 
         /** Add empty hook after comments */
-        do_action( 'opus_after_comments' );
+        do_action( 'opus_comments_after' );
 
     } /** End function - wrapped comments template */
 

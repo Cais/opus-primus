@@ -35,6 +35,8 @@
  * @version 1.0.1
  * @date    February 18, 2013
  * Re-order methods: alphabetical
+ * Modified action hooks to more semantic naming convention:
+ * `opus_<section>_<placement>`
  */
 
 class OpusPrimusNavigation {
@@ -54,7 +56,7 @@ class OpusPrimusNavigation {
      */
     function comments_navigation() {
         /** Add empty hook before comments link */
-        do_action( 'opus_before_comments_link' ); ?>
+        do_action( 'opus_comments_link_before' ); ?>
 
         <p class="navigation comment-link cf">
             <span class="left"><?php previous_comments_link() ?></span>
@@ -63,7 +65,7 @@ class OpusPrimusNavigation {
 
         <?php
         /** Add empty hook after comments link */
-        do_action( 'opus_after_comments_link' );
+        do_action( 'opus_comments_link_after' );
 
     } /** End function - comments navigation */
 
@@ -109,7 +111,7 @@ class OpusPrimusNavigation {
      */
     function image_nav() {
         /** Add empty hook before the image navigation */
-        do_action( 'opus_before_image_nav' );
+        do_action( 'opus_image_nav_before' );
 
         /** Add navigation links between pictures in the gallery */
         echo '<div class="opus-image-navigation cf">';
@@ -118,7 +120,7 @@ class OpusPrimusNavigation {
         echo '</div><!-- .opus-image-navigation -->';
 
         /** Add empty hook after the image navigation */
-        do_action( 'opus_after_image_nav' );
+        do_action( 'opus_image_nav_after' );
 
     } /** End function - image nav */
 
@@ -153,13 +155,13 @@ class OpusPrimusNavigation {
         $link_pages_args = wp_parse_args( (array) $defaults, $link_pages_args );
 
         /** Add empty hook before linking pages navigation of a multi-page post */
-        do_action( 'opus_before_links_pages' );
+        do_action( 'opus_links_pages_before' );
 
         /** Linking pages navigation */
         wp_link_pages( $link_pages_args );
 
         /** Add empty hook after linking pages navigation of a multi-page post */
-        do_action( 'opus_after_link_pages' );
+        do_action( 'opus_link_pages_after' );
 
     } /** End function - link pages */
 
@@ -177,7 +179,7 @@ class OpusPrimusNavigation {
      */
     function post_link() {
         /** Add empty hook before post link */
-        do_action( 'opus_before_post_link' );
+        do_action( 'opus_post_link_before' );
 
         /** Post link navigation */ ?>
         <hr class="pre-post-link-navigation" />
@@ -188,7 +190,7 @@ class OpusPrimusNavigation {
 
         <?php
         /** Add empty hook after post link */
-        do_action( 'opus_after_post_link' );
+        do_action( 'opus_post_link_after' );
 
     } /** End function - post link */
 
@@ -206,7 +208,7 @@ class OpusPrimusNavigation {
      */
     function posts_link() {
         /** Add empty hook before posts link */
-        do_action( 'opus_before_posts_link' );
+        do_action( 'opus_posts_link_before' );
 
         /** Posts link navigation */ ?>
         <p class="navigation posts-link cf">
@@ -216,7 +218,7 @@ class OpusPrimusNavigation {
 
         <?php
         /** Add empty hook after posts link */
-        do_action( 'opus_after_posts_link' );
+        do_action( 'opus_posts_link_after' );
 
     } /** End function - posts link */
 
@@ -236,7 +238,7 @@ class OpusPrimusNavigation {
      */
     function primary_menu( $primary_menu_args = '' ) {
         /** Add empty hook before the primary menu */
-        do_action( 'opus_before_primary_menu' );
+        do_action( 'opus_primary_menu_before' );
 
         /** Primary Menu */
         $defaults = array(
@@ -249,7 +251,7 @@ class OpusPrimusNavigation {
         wp_nav_menu( $primary_menu_args );
 
         /** Add empty hook after the primary menu */
-        do_action( 'opus_after_primary_menu' );
+        do_action( 'opus_primary_menu_after' );
 
     } /** End function - primary menu */
 
@@ -270,7 +272,7 @@ class OpusPrimusNavigation {
      */
     function search_menu( $search_menu_args = '' ) {
         /** Add empty hook before the search menu */
-        do_action( 'opus_before_search_menu' );
+        do_action( 'opus_search_menu_before' );
 
         /** Search Menu */
         $defaults = array(
@@ -286,7 +288,7 @@ class OpusPrimusNavigation {
         echo '</li></ul><!-- .featured-search-pages -->';
 
         /** Add empty hook after the search menu */
-        do_action( 'opus_after_search_menu' );
+        do_action( 'opus_search_menu_after' );
 
     } /** End function - search menu */
 
@@ -339,7 +341,7 @@ class OpusPrimusNavigation {
      */
     function secondary_menu( $secondary_menu_args = '' ) {
         /** Add empty hook before the secondary menu */
-        do_action( 'opus_before_secondary_menu' );
+        do_action( 'opus_secondary_menu_before' );
 
         /** Secondary Menu */
         $defaults = array(
@@ -352,7 +354,7 @@ class OpusPrimusNavigation {
         wp_nav_menu( $secondary_menu_args );
 
         /** Add empty hook after the secondary menu */
-        do_action( 'opus_after_secondary_menu' );
+        do_action( 'opus_secondary_menu_after' );
 
     } /** End function - secondary menu */
 

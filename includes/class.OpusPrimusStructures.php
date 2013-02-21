@@ -34,6 +34,8 @@
  * @version 1.0.1
  * @date    February 18, 2013
  * Re-order methods: action and filter calls by request order, then alphabetical
+ * Modified action hooks to more semantic naming convention:
+ * `opus_<section>_<placement>`
  */
 
 class OpusPrimusStructures {
@@ -498,7 +500,7 @@ class OpusPrimusStructures {
      */
     function no_search_results(){
         /** Add empty hook before no posts results from the_loop query */
-        do_action( 'opus_before_search_results' );
+        do_action( 'opus_search_results_before' );
 
         /** No results from the_loop query */ ?>
         <h2 class="post-title">
@@ -549,7 +551,7 @@ class OpusPrimusStructures {
         $opus_navigation->search_menu();
 
         /** Add empty hook after no posts results from the_loop query */
-        do_action( 'opus_after_search_results' );
+        do_action( 'opus_search_results_after' );
 
     } /** End function - no search results */
 
@@ -618,12 +620,12 @@ class OpusPrimusStructures {
                 the_post();
 
                 /** Add empty hook before get_template_part */
-                do_action( 'opus_before_get_template_part' );
+                do_action( 'opus_get_template_part_before' );
 
                 get_template_part( 'opus-primus', get_post_format() );
 
                 /** Add empty hook after get_template_part */
-                do_action( 'opus_after_get_template_part' );
+                do_action( 'opus_get_template_part_after' );
 
             } /** End while - have posts */
         } else {
@@ -659,12 +661,12 @@ class OpusPrimusStructures {
                 the_post();
 
                 /** Add empty hook before get_template_part */
-                do_action( 'opus_before_get_template_part' );
+                do_action( 'opus_get_template_part_before' );
 
                 get_template_part( 'opus-primus-archive', get_post_format() );
 
                 /** Add empty hook after get_template_part */
-                do_action( 'opus_after_get_template_part' );
+                do_action( 'opus_get_template_part_after' );
 
             } /** End while - have posts */
         } else {
@@ -692,7 +694,7 @@ class OpusPrimusStructures {
      */
     function the_loop_wrapped() {
         /** Add empty action before the_Loop */
-        do_action( 'opus_before_the_loop' ); ?>
+        do_action( 'opus_the_loop_before' ); ?>
 
         <div class="the-loop">
 
@@ -710,7 +712,7 @@ class OpusPrimusStructures {
 
         <?php
         /** Add empty action after the_Loop */
-        do_action( 'opus_after_the_loop' );
+        do_action( 'opus_the_loop_after' );
 
     } /** End function - the loop wrapped */
 
@@ -730,7 +732,7 @@ class OpusPrimusStructures {
      */
     function the_loop_archives_wrapped() {
         /** Add empty action before the_Loop */
-        do_action( 'opus_before_the_loop' ); ?>
+        do_action( 'opus_the_loop_before' ); ?>
 
         <div class="the-loop">
 
@@ -748,7 +750,7 @@ class OpusPrimusStructures {
 
         <?php
         /** Add empty action after the_Loop */
-        do_action( 'opus_after_the_loop' );
+        do_action( 'opus_the_loop_after' );
 
     } /** End function - the loop archives wrapped */
 
