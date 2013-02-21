@@ -31,13 +31,18 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version 1.0.1
+ * @date    February 21, 13
+ * Modified action hooks to more semantic naming convention:
+ * `opus_<section>_<placement>`
  */
 
 global $post, $opus_navigation, $opus_structures, $opus_posts, $opus_images;
 get_header( 'image' );
 
 /** Add empty hook before content */
-do_action( 'opus_before_content' ); ?>
+do_action( 'opus_content_before' ); ?>
 
 <div class="content-wrapper cf">
 
@@ -49,7 +54,7 @@ do_action( 'opus_before_content' ); ?>
     echo $opus_structures->layout_open();
 
     /** Add empty action before the_Loop */
-    do_action( 'opus_before_the_loop' ); ?>
+    do_action( 'opus_the_loop_before' ); ?>
 
     <div class="the-loop">
 
@@ -116,7 +121,7 @@ do_action( 'opus_before_content' ); ?>
 
     <?php
     /** Add empty action after the_Loop */
-    do_action( 'opus_after_the_loop' );
+    do_action( 'opus_the_loop_after' );
 
     get_sidebar( 'image' );
 
@@ -129,6 +134,6 @@ do_action( 'opus_before_content' ); ?>
 
 <?php
 /** Add empty hook after the content */
-do_action( 'opus_after_content' );
+do_action( 'opus_content_after' );
 
 get_footer( 'image' );

@@ -29,13 +29,18 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version 1.0.1
+ * @date    February 21, 13
+ * Modified action hooks to more semantic naming convention:
+ * `opus_<section>_<placement>`
  */
 
 /** Add empty hook before sidebars */
-do_action( 'opus_before_sidebars' );
+do_action( 'opus_sidebars_before' );
 
 /** Add empty hook before first sidebar */
-do_action( 'opus_before_first_sidebar' ); ?>
+do_action( 'opus_first_sidebar_before' ); ?>
 
 <div class="first-sidebar">
 
@@ -51,10 +56,10 @@ do_action( 'opus_before_first_sidebar' ); ?>
 
 <?php
 /** Add empty hook after first sidebar */
-do_action( 'opus_after_first_sidebar' );
+do_action( 'opus_first_sidebar_after' );
 
 /** Add empty hook before second sidebar */
-do_action( 'opus_before_second_sidebar' ); ?>
+do_action( 'opus_second_sidebar_before' ); ?>
 
 <div class="second-sidebar">
 
@@ -70,7 +75,7 @@ do_action( 'opus_before_second_sidebar' ); ?>
 
 <?php
 /** Add empty hook after second sidebar */
-do_action( 'opus_after_second_sidebar' );
+do_action( 'opus_second_sidebar_after' );
 
 /** Add empty hook after sidebars */
-do_action( 'opus_after_sidebars' );
+do_action( 'opus_sidebars_after' );

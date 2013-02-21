@@ -5,6 +5,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 == Version 1.0.1 ==
 = Code =
 * Created new methods `the_loop_wrapped` and `the_loop_archives_wrapped`
+* Modified action hooks to more semantic naming convention: `opus_<section>_<placement>`
 * Replaced `the_loop` method and surrounding code with `the_loop_wrapped`
 * Replaced `the_loop_archives` method and surrounding code with `the_loop_archives_wrapped`
 

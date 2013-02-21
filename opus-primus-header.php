@@ -31,6 +31,11 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version 1.0.1
+ * @date    February 21, 13
+ * Modified action hooks to more semantic naming convention:
+ * `opus_<section>_<placement>`
  */ ?>
 
 <header>
@@ -45,7 +50,7 @@
 
                 <?php
                 /** Add empty hook before site title */
-                do_action( 'opus_before_site_title' ); ?>
+                do_action( 'opus_site_title_before' ); ?>
 
                 <h1 id="site-title">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
@@ -58,8 +63,8 @@
                  * Add empty hooks between the site title and description ... now we're
                  * really writing Mallory-Everest code but someone might want this.
                  */
-                do_action( 'opus_after_site_title' );
-                do_action( 'opus_before_site_description' ); ?>
+                do_action( 'opus_site_title_after' );
+                do_action( 'opus_site_description_before' ); ?>
 
                 <h2 id="site-description">
                     <?php bloginfo( 'description' ); ?>
@@ -67,19 +72,19 @@
 
                 <?php
                 /** Add empty hook after site description */
-                do_action( 'opus_after_site_description' ); ?>
+                do_action( 'opus_site_description_after' ); ?>
 
             </div><!-- #header-text -->
 
             <?php
             /** Add empty hook before custom header image */
-            do_action( 'opus_before_custom_header_image' );
+            do_action( 'opus_custom_header_image_before' );
 
             global $opus_structures;
             $opus_structures->show_custom_header_image();
 
             /** Add empty hook after custom header image */
-            do_action( 'opus_after_custom_header_image' ); ?>
+            do_action( 'opus_custom_header_image_after' ); ?>
 
         </div><!-- .masthead -->
 
@@ -91,7 +96,7 @@
 
     <?php
     /** Add empty hook before primary navigation */
-    do_action( 'opus_before_nav' ); ?>
+    do_action( 'opus_nav_before' ); ?>
 
     <nav>
         <?php global $opus_navigation; $opus_navigation->primary_menu(); ?>
@@ -99,7 +104,7 @@
 
     <?php
     /** Add empty hook after primary navigation */
-    do_action( 'opus_after_nav' );
+    do_action( 'opus_nav_after' );
 
     do_action( 'opus_header_bottom' ); ?>
 

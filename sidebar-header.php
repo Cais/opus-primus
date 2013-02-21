@@ -30,10 +30,15 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version 1.0.1
+ * @date    February 21, 13
+ * Modified action hooks to more semantic naming convention:
+ * `opus_<section>_<placement>`
  */
 
 /** Add empty hook before Sidebar-Header */
-do_action( 'opus_before_sidebar_header' );
+do_action( 'opus_sidebar_header_before' );
 
 /** Only resolve public facing space if there is an active header widget area. */
 if ( is_active_sidebar( 'header-middle' ) || is_active_sidebar( 'header-left' ) || is_active_sidebar( 'header-right' ) ) { ?>
@@ -64,4 +69,4 @@ if ( is_active_sidebar( 'header-middle' ) || is_active_sidebar( 'header-left' ) 
 } /** End if - is active sidebar */
 
 /** Add empty hook after Sidebar-Header */
-do_action( 'opus_after_sidebar_header' );
+do_action( 'opus_sidebar_header_after' );

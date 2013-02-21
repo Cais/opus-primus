@@ -38,6 +38,8 @@
  * @date    February 19, 2013
  * Replace `the_loop_archives` method and surrounding code with
  * `the_loop_archives_wrapped`
+ * Modified action hooks to more semantic naming convention:
+ * `opus_<section>_<placement>`
  */
 
 /** Get the Post Structure and Navigation class variables */
@@ -45,7 +47,7 @@ global $opus_structures;
 get_header( 'archive' );
 
 /** Add empty hook before content */
-do_action( 'opus_before_content' ); ?>
+do_action( 'opus_content_before' ); ?>
 
 <div class="content-wrapper cf">
 
@@ -72,7 +74,7 @@ do_action( 'opus_before_content' ); ?>
 
 <?php
 /** Add empty hook after the content */
-do_action( 'opus_after_content' );
+do_action( 'opus_content_after' );
 
 /** Calls the archive specific footer if it exists, else the default */
 get_footer( 'archive' );

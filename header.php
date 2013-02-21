@@ -30,10 +30,15 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version 1.0.1
+ * @date    February 21, 13
+ * Modified action hooks to more semantic naming convention:
+ * `opus_<section>_<placement>`
  */ ?>
 
 <!DOCTYPE html>
-<?php do_action( 'opus_before_html' ); ?>
+<?php do_action( 'opus_html_before' ); ?>
 <html <?php language_attributes(); ?>>
 <head>
     <?php do_action( 'opus_head_top' ); ?>
@@ -53,7 +58,7 @@
 <div id="opus-primus"><!-- Unique theme identifier -->
     <?php
     /** Add empty hook before header */
-    do_action( 'opus_before_header' );
+    do_action( 'opus_header_before' );
 
     /** Call header template with reference to post format */
     if ( is_singular() ) {
@@ -63,4 +68,4 @@
     } /** End if - have posts */
 
     /** Add empty hook after header */
-    do_action( 'opus_after_header' );
+    do_action( 'opus_header_after' );

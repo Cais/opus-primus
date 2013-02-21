@@ -30,10 +30,15 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version 1.0.1
+ * @date    February 21, 13
+ * Modified action hooks to more semantic naming convention:
+ * `opus_<section>_<placement>`
  */
 
 /** Add empty hook at beginning of footer */
-do_action( 'opus_before_footer' );
+do_action( 'opus_footer_before' );
 
 /** Call footer template based on post format */
 if ( is_singular() ) {
@@ -43,7 +48,7 @@ if ( is_singular() ) {
 } /** End if - is singular */
 
 /** Add empty hook at end of footer */
-do_action( 'opus_before_wp_footer' );
+do_action( 'opus_wp_footer_before' );
 
 /** Add empty hook bottom before call to wp_footer */
 do_action( 'opus_body_bottom' );

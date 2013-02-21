@@ -33,13 +33,15 @@
  * @version 1.0.1
  * @date    February 19, 2013
  * Replace `the_loop` method and surrounding code with `the_loop_wrapped`
+ * Modified action hooks to more semantic naming convention:
+ * `opus_<section>_<placement>`
  */
 
 global $opus_structures;
 get_header( get_post_format() );
 
 /** Add empty hook before content */
-do_action( 'opus_before_content' ); ?>
+do_action( 'opus_content_before' ); ?>
 
 <div class="content-wrapper cf">
 
@@ -66,6 +68,6 @@ do_action( 'opus_before_content' ); ?>
 
 <?php
 /** Add empty hook after the content */
-do_action( 'opus_after_content' );
+do_action( 'opus_content_after' );
 
 get_footer( get_post_format() );
