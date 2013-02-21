@@ -32,8 +32,9 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
  * @version 1.0.1
- * @date    February 18, 2013
+ * @date    February 21, 2013
  * Re-order methods: action and filter calls by request order, then alphabetical
+ * Modified action hook call to use current standard
  */
 
 class OpusPrimusMetaBoxes {
@@ -46,7 +47,7 @@ class OpusPrimusMetaBoxes {
         add_action( 'save_post', array( $this, 'tagline_save_postdata' ) );
 
         /** Send tagline to screen after post title */
-        add_action( 'opus_after_post_title', array( $this, 'tagline_output' ) );
+        add_action( 'opus_post_title_after', array( $this, 'tagline_output' ) );
 
     } /** End function - construct */
 

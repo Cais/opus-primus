@@ -32,7 +32,7 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
  * @version 1.0.1
- * @date    February 18, 2013
+ * @date    February 21, 2013
  * Re-order methods: action and filter calls by request order, then alphabetical
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`

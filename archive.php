@@ -35,7 +35,7 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
  * @version 1.0.1
- * @date    February 19, 2013
+ * @date    February 21, 2013
  * Replace `the_loop_archives` method and surrounding code with
  * `the_loop_archives_wrapped`
  * Modified action hooks to more semantic naming convention:
