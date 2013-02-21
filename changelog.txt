@@ -1,4 +1,5 @@
 === Opus Primus changelog.txt ===
+Last revised February 21, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.0.1 ==
@@ -11,9 +12,9 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Center top level menu items only - better aesthetics with short page titles
 
 = Miscellaneous =
-* Updated 'theme-version-guidelines.txt' as taken from http://opusprimus.com/under-the-page/theme-version-guidelines/
 * Fixed no comments message
 * Minor code formatting
+* Updated 'theme-version-guidelines.txt' as taken from http://opusprimus.com/under-the-page/theme-version-guidelines/
 
 = Current Internet Browsers Reviewed =
 * Apple Safari

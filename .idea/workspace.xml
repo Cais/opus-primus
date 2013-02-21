@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="* Fixed no comments message and updated 'changelog.txt'">
+    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="* Updated 'theme-version-guidelines.txt' as taken from http://opusprimus.com/under-the-page/theme-version-guidelines/">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documentation/theme-version-guidelines.txt" afterPath="$PROJECT_DIR$/documentation/theme-version-guidelines.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +26,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="theme-version-guidelines.txt" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="theme-version-guidelines.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/documentation/theme-version-guidelines.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -37,19 +35,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/readme.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="133" column="64" selection-start="6127" selection-end="6127" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="changelog.txt" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="changelog.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/changelog.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="486" selection-end="603" vertical-scroll-proportion="0.0">
+            <state line="16" column="117" selection-start="686" selection-end="686" vertical-scroll-proportion="0.31228474">
               <folding />
             </state>
           </provider>
@@ -82,8 +71,8 @@
         <option value="$PROJECT_DIR$/includes/opus-ignite.php" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/documentation/theme-version-guidelines.txt" />
-        <option value="$PROJECT_DIR$/changelog.txt" />
         <option value="$PROJECT_DIR$/readme.txt" />
+        <option value="$PROJECT_DIR$/changelog.txt" />
       </list>
     </option>
   </component>
@@ -1494,7 +1483,11 @@
       <created>1361304499909</created>
       <updated>1361304499910</updated>
     </task>
-    <option name="localTasksCounter" value="301" />
+    <task id="LOCAL-00301" summary="* Updated 'theme-version-guidelines.txt' as taken from http://opusprimus.com/under-the-page/theme-version-guidelines/">
+      <created>1361468411447</created>
+      <updated>1361468411447</updated>
+    </task>
+    <option name="localTasksCounter" value="302" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1591,7 +1584,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Fixed no comments message and updated 'changelog.txt'" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Updated 'theme-version-guidelines.txt' as taken from http://opusprimus.com/under-the-page/theme-version-guidelines/" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1604,7 +1597,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="* Refactor `link_pages` to `multiple_pages_link` (for Theme-Check pass)" />
     <MESSAGE value="* Add initial support for &quot;Theme Hook Alliance&quot; action hooks&#10;* Refactored call to comments template (added to Comments class)" />
     <MESSAGE value="* Initial class code" />
     <MESSAGE value="* More THA code ... needs significant testing" />
@@ -1629,6 +1621,7 @@
     <MESSAGE value="* Replace `the_loop` method and surrounding code with `the_loop_wrapped`&#10;* Replace `the_loop_archives` method and surrounding code with `the_loop_archives_wrapped`" />
     <MESSAGE value="* Code formatting" />
     <MESSAGE value="* Fixed no comments message and updated 'changelog.txt'" />
+    <MESSAGE value="* Updated 'theme-version-guidelines.txt' as taken from http://opusprimus.com/under-the-page/theme-version-guidelines/" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1717,13 +1710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/changelog.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="486" selection-end="603" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="133" column="64" selection-start="6127" selection-end="6127" vertical-scroll-proportion="0.0">
@@ -1734,6 +1720,13 @@
     <entry file="file://$PROJECT_DIR$/documentation/theme-version-guidelines.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changelog.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="117" selection-start="686" selection-end="686" vertical-scroll-proportion="0.31228474">
           <folding />
         </state>
       </provider>
