@@ -1,124 +1,108 @@
-==== Hooks: Actions ====
+Hooks – Actions
+Currently available: 97
 
-* Last revised February 22, 2013
+There are many action hooks available for use with Opus Primus.
+The naming convention follows this general guideline: opus-< code block >-< location, if relevant >
 
-=== Actions ===
+The following is an alphabetical listing (with the exception of the location being logically ordered):
 
-* opus_content_before
-* opus_content_after
+    opus_404_image
+    opus_archive_cloud_before
+    opus_archive_cloud_after
+    opus_author_coda_before
+    opus_author_coda_after
+    opus_author_details_before
+    opus_author_details_after
+    opus_body_top
+    opus_body_bottom
+    opus_category_archive_before
+    opus_category_archive_after
+    opus_comments_before
+    opus_comments_after
+    opus_comments_link_before
+    opus_comments_link_after
+    opus_content_before
+    opus_content_after
+    opus_content_top
+    opus_content_bottom
+    opus_exif_aperture_before
+    opus_exif_box_before
+    opus_exif_box_after
+    opus_exif_camera_before
+    opus_exif_caption_before
+    opus_exif_copyright_before
+    opus_exif_dimensions_before
+    opus_exif_focal_length_before
+    opus_exif_iso_speed_before
+    opus_exif_shutter_before
+    opus_exif_table_before
+    opus_exif_table_after
+    opus_exif_timestamp_before
+    opus_exif_title_before
+    opus_featured_image_before
+    opus_featured_image_after
+    opus_first_sidebar_before
+    opus_first_sidebar_after
+    opus_footer_before
+    opus_footer_after
+    opus_footer_top
+    opus_footer_bottom
+    opus_get_template_part_before
+    opus_get_template_part_after
+    opus_head_top
+    opus_head_bottom
+    opus_header_before
+    opus_header_after
+    opus_html_before
+    opus_image_nav_before
+    opus_image_nav_after
+    opus_image_title_before
+    opus_image_title_after
+    opus_links_pages_before
+    opus_link_pages_after
+    opus_meta_tags_before
+    opus_meta_tags_after
+    opus_modified_author_details_before
+    opus_modified_author_details_after
+    opus_modified_post_before
+    opus_modified_post_after
+    opus_post_author_top
+    opus_post_author_bottom
+    opus_post_byline_before
+    opus_post_byline_after
+    opus_post_coda_before
+    opus_post_coda_after
+    opus_post_link_before
+    opus_post_link_after
+    opus_post_title_before
+    opus_post_title_after
+    opus_posts_link_before
+    opus_posts_link_after
+    opus_primary_menu_before
+    opus_primary_menu_after
+    opus_search_menu_before
+    opus_search_menu_after
+    opus_search_results_before
+    opus_search_results_after
+    opus_second_sidebar_before
+    opus_second_sidebar_after
+    opus_secondary_images_before
+    opus_secondary_images_after
+    opus_secondary_menu_before
+    opus_secondary_menu_after
+    opus_sidebar_footer_before
+    opus_sidebar_footer_after
+    opus_sidebar_header_before
+    opus_sidebar_header_after
+    opus_sidebars_before
+    opus_sidebars_after
+    opus_status_update_before
+    opus_status_update_after
+    opus_the_excerpt_before
+    opus_the_excerpt_after
+    opus_the_loop_before
+    opus_the_loop_after
+    opus_wp_footer_before
 
-* opus_content_top
-* opus_content_bottom
-
-* opus_the_loop_before
-* opus_the_loop_after
-
-* opus_404_image
-
-* opus_footer_before
-* opus_footer_after
-* opus_wp_footer_before
-* opus_body_bottom
-
-* opus_footer_top
-* opus_footer_bottom
-
-* opus_html_before
-* opus_head_top
-* opus_head_bottom
-* opus_body_top
-* opus_header_before
-* opus_header_after
-
-* opus_sidebar_footer_before
-* opus_sidebar_footer_after
-
-* opus_sidebar_header_before
-* opus_sidebar_header_after
-
-* opus_sidebars_before
-* opus_sidebars_after
-* opus_first_sidebar_before
-* opus_first_sidebar_after
-* opus_second_sidebar_before
-* opus_second_sidebar_after
-
-* opus_archive_cloud_before
-* opus_archive_cloud_after
-* opus_category_archive_before
-* opus_category_archive_after
-
-* opus_author_coda_before
-* opus_author_coda_after
-* opus_author_details_before
-* opus_author_details_after
-* opus_post_author_top
-* opus_post_author_bottom
-* opus_author_details_before
-* opus_author_details_after
-* opus_modified_author_details_before
-* opus_modified_author_details_after
-
-* opus_comments_link_before
-* opus_comments_link_after
-* opus_comments_before
-* opus_comments_after
-
-* opus_featured_image_before
-* opus_featured_image_after
-* opus_secondary_images_before
-* opus_secondary_images_after
-
-* opus_exif_box_before
-* opus_exif_box_after
-* opus_exif_table_before
-* opus_exif_table_after
-* opus_exif_aperture_before
-* opus_exif_camera_before
-* opus_exif_caption_before
-* opus_exif_copyright_before
-* opus_exif_dimensions_before
-* opus_exif_focal_length_before
-* opus_exif_iso_speed_before
-* opus_exif_shutter_before
-* opus_exif_timestamp_before
-* opus_exif_title_before
-* opus_image_title_before
-* opus_image_title_after
-
-* opus_comments_link_before
-* opus_comments_link_after
-* opus_image_nav_before
-* opus_image_nav_after
-* opus_links_pages_before
-* opus_link_pages_after
-* opus_post_link_before
-* opus_post_link_after
-* opus_posts_link_before
-* opus_posts_link_after
-* opus_primary_menu_before
-* opus_primary_menu_after
-* opus_search_menu_before
-* opus_search_menu_after
-* opus_secondary_menu_before
-* opus_secondary_menu_after
-
-* opus_meta_tags_before
-* opus_meta_tags_after
-* opus_modified_post_before
-* opus_modified_post_after
-* opus_post_byline_before
-* opus_post_byline_after
-* opus_post_coda_before
-* opus_post_coda_after
-* opus_the_excerpt_before
-* opus_the_excerpt_after
-* opus_post_title_before
-* opus_post_title_after
-* opus_status_update_before
-* opus_status_update_after
-
-* opus_search_results_before
-* opus_search_results_after
-* opus_get_template_part_before
-* opus_get_template_part_after
+Last revised February 22, 2013
+See http://opusprimus.com/under-the-page/hooks-actions/ for more information.
