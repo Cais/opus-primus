@@ -54,7 +54,11 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php do_action( 'opus_body_top' ); ?>
+
+<?php
+/** Add empty hook at top of body */
+do_action( 'opus_body_top' ); ?>
+
 <div id="opus-primus"><!-- Unique theme identifier -->
     <?php
     /** Add empty hook before header */

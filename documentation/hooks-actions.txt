@@ -1,213 +1,124 @@
 ==== Hooks: Actions ====
 
-* Listing by File
-* Sorted Alphabetically
-* In Order of Appearance
-* Last revised February 4, 2013
-
+* Last revised February 22, 2013
 
 === Actions ===
-== \ ==
-= 404.php =
 
-* opus_before_the_loop
-* opus_404_image
-* opus_after_the_loop
+* opus_content_before
+* opus_content_after
 
-
-= archive.php =
-
-* opus_before_the_loop
-* opus_after_the_loop
-
-
-= author.php =
-
-* opus_before_the_loop
-* opus_after_the_loop
-
-
-= footer.php =
-
-* opus_before_footer
-* opus_before_wp_footer
-* opus_body_bottom
-
-
-= header.php =
-
-* opus_before_html
-* opus_head_top
-* opus_head_bottom
-* opus_body_top
-* opus_before_header
-* opus_after_header
-
-
-= index.php =
-
-* opus_before_content
 * opus_content_top
-* opus_before_the_loop
-* opus_after_the_loop
 * opus_content_bottom
-* opus_after_content
 
+* opus_the_loop_before
+* opus_the_loop_after
 
-= opus-primus-footer.php =
+* opus_404_image
+
+* opus_footer_before
+* opus_footer_after
+* opus_wp_footer_before
+* opus_body_bottom
 
 * opus_footer_top
 * opus_footer_bottom
 
+* opus_html_before
+* opus_head_top
+* opus_head_bottom
+* opus_body_top
+* opus_header_before
+* opus_header_after
 
-= page.php =
+* opus_sidebar_footer_before
+* opus_sidebar_footer_after
 
-* opus_before_the_loop
-* opus_after_the_loop
+* opus_sidebar_header_before
+* opus_sidebar_header_after
 
+* opus_sidebars_before
+* opus_sidebars_after
+* opus_first_sidebar_before
+* opus_first_sidebar_after
+* opus_second_sidebar_before
+* opus_second_sidebar_after
 
-= sidebar.php =
+* opus_archive_cloud_before
+* opus_archive_cloud_after
+* opus_category_archive_before
+* opus_category_archive_after
 
-* opus_before_sidebars
-* opus_before_first_sidebar
-* opus_after_first_sidebar
-* opus_before_second_sidebar
-* opus_after_second_sidebar
-* opus_after_sidebars
-
-
-= sidebar-footer.php =
-
-* opus_before_sidebar_footer
-* opus_after_sidebar_footer
-
-
-= sidebar-header.php =
-
-* opus_before_sidebar_header
-* opus_after_sidebar_header
-
-
-= single.php =
-
-* opus_before_the_loop
-* opus_after_the_loop
-
-
-== \headers ==
-= header.php =
-
-* opus_header_top
-* opus_before_site_title
-* opus_after_site_title
-* opus_before_site_description
-* opus_after_site_description
-* opus_before_custom_header_image
-* opus_after_custom_header_image
-* opus_before_nav
-* opus_after_nav
-* opus_header_bottom
-
-
-== \includes ==
-= class.OpusPrimusArchives.php =
-
-* opus_before_category_archive
-* opus_after_category_archive
-* opus_before_archive_cloud
-* opus_after_archive_cloud
-
-
-= class.OpusPrimusAuthors.php =
-
+* opus_author_coda_before
+* opus_author_coda_after
+* opus_author_details_before
+* opus_author_details_after
 * opus_post_author_top
-* opus_before_author_details
-* opus_after_author_details
-* opus_before_modified_author_details
-* opus_after_modified_author_details
-* opus_before_author_coda
-* opus_after_author_coda
+* opus_post_author_bottom
+* opus_author_details_before
+* opus_author_details_after
+* opus_modified_author_details_before
+* opus_modified_author_details_after
 
+* opus_comments_link_before
+* opus_comments_link_after
+* opus_comments_before
+* opus_comments_after
 
-= class.OpusPrimusComments.php =
+* opus_featured_image_before
+* opus_featured_image_after
+* opus_secondary_images_before
+* opus_secondary_images_after
 
-* opus_before_comments_link
-* opus_after_comments_link
-* opus_before_comments
-* opus_after_comments
+* opus_exif_box_before
+* opus_exif_box_after
+* opus_exif_table_before
+* opus_exif_table_after
+* opus_exif_aperture_before
+* opus_exif_camera_before
+* opus_exif_caption_before
+* opus_exif_copyright_before
+* opus_exif_dimensions_before
+* opus_exif_focal_length_before
+* opus_exif_iso_speed_before
+* opus_exif_shutter_before
+* opus_exif_timestamp_before
+* opus_exif_title_before
+* opus_image_title_before
+* opus_image_title_after
 
+* opus_comments_link_before
+* opus_comments_link_after
+* opus_image_nav_before
+* opus_image_nav_after
+* opus_links_pages_before
+* opus_link_pages_after
+* opus_post_link_before
+* opus_post_link_after
+* opus_posts_link_before
+* opus_posts_link_after
+* opus_primary_menu_before
+* opus_primary_menu_after
+* opus_search_menu_before
+* opus_search_menu_after
+* opus_secondary_menu_before
+* opus_secondary_menu_after
 
-= class.OpusPrimusGallery.php =
+* opus_meta_tags_before
+* opus_meta_tags_after
+* opus_modified_post_before
+* opus_modified_post_after
+* opus_post_byline_before
+* opus_post_byline_after
+* opus_post_coda_before
+* opus_post_coda_after
+* opus_the_excerpt_before
+* opus_the_excerpt_after
+* opus_post_title_before
+* opus_post_title_after
+* opus_status_update_before
+* opus_status_update_after
 
-* opus_before_featured_image
-* opus_after_featured_image
-* opus_before_secondary_images
-* opus_after_secondary_images
-
-
-= class.OpusPrimusImages.php =
-
-* opus_before_exif_box
-* opus_after_exif_box
-* opus_before_exif_table
-* opus_after_exif_table
-* opus_before_exif_dimensions
-* opus_before_exif_copyright
-* opus_before_exif_timestamp
-* opus_before_exif_camera
-* opus_before_exif_shutter
-* opus_before_exif_aperture
-* opus_before_exif_caption
-* opus_before_exif_focal_length
-* opus_before_exif_iso_speed
-* opus_before_exif_title
-* opus_before_image_title
-* opus_after_image_title
-
-
-= class.OpusPrimusNavigation.php =
-
-* opus_before_primary_menu
-* opus_after_primary_menu
-* opus_before_links_pages
-* opus_after_links_pages
-* opus_before_comments_link
-* opus_after_comments_link
-* opus_before_post_link
-* opus_after_post_link
-* opus_before_image_nav
-* opus_after_image_nav
-* opus_before_posts_link
-* opus_after_posts_link
-* opus_before_search_menu
-* opus_after_search_menu
-* opus_before_secondary_menu
-* opus_after_secondary_menu
-
-
-= class.OpusPrimusPosts.php =
-
-* opus_before_post_byline
-* opus_after_post_byline
-* opus_before_modified_post
-* opus_after_modified_post
-* opus_before_post_title
-* opus_after_post_title
-* opus_before_the_content
-* opus_after_the_content
-* opus_before_the_excerpt
-* opus_after_the_excerpt
-* opus_before_status_update
-* opus_after_status_update
-* opus_before_meta_tags
-* opus_after_meta_tags
-* opus_before_post_coda
-* opus_after_post_coda
-
-
-= class.OpusPrimusStructures.php =
-
-* opus_before_get_template_part
-* opus_after_get_template_part
-* opus_before_search_results
-* opus_after_search_results
+* opus_search_results_before
+* opus_search_results_after
+* opus_get_template_part_before
+* opus_get_template_part_after

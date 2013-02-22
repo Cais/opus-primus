@@ -289,6 +289,10 @@ class OpusPrimusPosts {
      * @uses    get_the_time
      * @uses    get_userdata
      * @uses    home_url
+     *
+     * @version 1.0.1
+     * @date    February 22, 2013
+     * Wrapped 'opus_modified_post_after' in conditional making it consistent with 'opus_modified_post_before'
      */
     function modified_post( $tempus = 'date' ){
         /** Grab the $post object and bring in the original post author ID */
@@ -352,8 +356,10 @@ class OpusPrimusPosts {
             } /** End if - get the date */
         } /** End if - time */
 
-        /** Add empty hook after modified post author */
-        do_action( 'opus_modified_post_after' );
+        /** Add empty hook after modified post author if one exists */
+        if ( ( ! empty( $last_user ) ) && ( $opus_author_id <> $last_id ) ) {
+            do_action( 'opus_modified_post_after' );
+        } /** End if - not empty */
 
     } /** End function - modified post */
 

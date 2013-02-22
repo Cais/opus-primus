@@ -1,13 +1,16 @@
 === Opus Primus changelog.txt ===
-Last revised February 21, 2013
+Last revised February 22, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.0.1 ==
 = Code =
+* Added 'opus_footer_after' action hook
 * Created new methods `the_loop_wrapped` and `the_loop_archives_wrapped`
 * Modified action hooks to more semantic naming convention: `opus_<section>_<placement>`
+* Moved 'opus_body_bottom' action hook to immediately before closing body tag
 * Replaced `the_loop` method and surrounding code with `the_loop_wrapped`
 * Replaced `the_loop_archives` method and surrounding code with `the_loop_archives_wrapped`
+* Wrapped 'opus_modified_post_after' action hook in conditional making it consistent with 'opus_modified_post_before'
 
 = CSS =
 * Center top level menu items only - better aesthetics with short page titles
@@ -15,6 +18,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = Miscellaneous =
 * Fixed no comments message
 * Minor code formatting
+* Refactored the 'hooks-actions.txt' listing
 * Updated 'theme-version-guidelines.txt' as taken from http://opusprimus.com/under-the-page/theme-version-guidelines/
 
 = Current Internet Browsers Reviewed =

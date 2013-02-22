@@ -35,6 +35,8 @@
  * @date    February 21, 2013
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
+ * Added 'opus_footer_after' action hook
+ * Moved 'opus_body_bottom' action hook to immediately before closing body tag
  */
 
 /** Add empty hook at beginning of footer */
@@ -47,11 +49,11 @@ if ( is_singular() ) {
     get_template_part( 'opus-primus-footer' );
 } /** End if - is singular */
 
-/** Add empty hook at end of footer */
-do_action( 'opus_wp_footer_before' );
+/** Add empty hook after footer */
+do_action( 'opus_footer_after' );
 
-/** Add empty hook bottom before call to wp_footer */
-do_action( 'opus_body_bottom' );
+/** Add empty hook at end of footer - same as `opus_footer_after` */
+do_action( 'opus_wp_footer_before' );
 
 /**
  * `wp_footer` is placed inside the #opus-primus element to provide a container
@@ -62,6 +64,10 @@ wp_footer(); ?>
 
 <!-- The following tags are opened in header.php -->
 </div><!-- #opus-primus -->
+
+<?php
+/** Add empty (Mallory-Everest?) hook at bottom of body */
+do_action( 'opus_body_bottom' ); ?>
 
 </body>
 </html>
