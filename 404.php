@@ -35,6 +35,7 @@
  * @date    February 21, 2013
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
+ * Change classes from using underscores to using hyphens
  */
 
 global $opus_archives, $opus_structures;
@@ -58,18 +59,18 @@ do_action( 'opus_content_before' ); ?>
     <div class="the-loop">
 
         <?php
-        printf( '<h1 class="opus_404_title_text">%1$s</h1>',
+        printf( '<h1 class="opus-404-title-text">%1$s</h1>',
             apply_filters( 'opus_404_title_text', __( 'Something seems to have gone bust ...', 'opusprimus' ) )
         );
 
         /** Use action hook to add image - see Structures class for hook call */
         do_action( 'opus_404_image' );
 
-        printf( '<p class="opus_404_message_text">%1$s</p>',
+        printf( '<p class="opus-404-message-text">%1$s</p>',
             apply_filters( 'opus_404_message_text' , __( 'This is the 404 error page; we seemed to have lost what you are looking for.', 'opusprimus' ) )
         );
 
-        printf( '<p class="opus_404_posts_text">%1$s</p>',
+        printf( '<p class="opus-404-posts-text">%1$s</p>',
             apply_filters( 'opus_404_posts_text', __( 'Were you looking for a recent post?', 'opusprimus' ) )
         );
 
@@ -84,7 +85,7 @@ do_action( 'opus_content_before' ); ?>
         );
 
         /** Display links to archives */
-        printf( '<p class="opus_404_category_text">%1$s</p>',
+        printf( '<p class="opus-404-category-text">%1$s</p>',
             apply_filters( 'opus_404_category_text', __( 'Maybe you were looking for one these categories ...', 'opusprimus' ) )
         );
 
@@ -98,7 +99,7 @@ do_action( 'opus_content_before' ); ?>
             'number'        => 10,
         ) );
 
-        printf( '<p class="opus_404_tag_text">%1$s</p>',
+        printf( '<p class="opus-404-tag-text">%1$s</p>',
             apply_filters( 'opus_404_tag_text', __( '... or maybe you are interested in one of these tags?', 'opusprimus' ) )
         );
 

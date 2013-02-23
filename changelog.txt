@@ -5,6 +5,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 == Version 1.0.1 ==
 = Code =
 * Added 'opus_footer_after' action hook
+* Change classes in '404.php' from using underscores to using hyphens
 * Created new methods `the_loop_wrapped` and `the_loop_archives_wrapped`
 * Modified action hooks to more semantic naming convention: `opus_<section>_<placement>`
 * Moved 'opus_body_bottom' action hook to immediately before closing body tag
@@ -20,6 +21,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Minor code formatting
 * Refactored the 'hooks-actions.txt' listing
 * Updated 'theme-version-guidelines.txt' as taken from http://opusprimus.com/under-the-page/theme-version-guidelines/
+* Updated 'hooks-actions.txt' as taken from http://opusprimus.com/under-the-page/hooks-actions/
 
 = Current Internet Browsers Reviewed =
 * Apple Safari
