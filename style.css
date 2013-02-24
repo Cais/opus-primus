@@ -44,9 +44,12 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
  * @version 1.0.1
- * @date    February 14, 2013
+ * @date    February 24, 2013
  * Changed header details to use 'WordPress Required Version' and 'WordPress
  * Tested Version' to reflect WordPress core trac ticket #16868
+ * Added `clear: both;` to 'img.aligncenter, img.center' to address Firefox
+ * issue when when a Featured Image and a large in post image are too close
+ * together.
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -462,7 +465,7 @@ table {
 div.aligncenter, .aligncenter, .center { margin: 0 auto; }
 .alignleft, .left { float: left; text-align: left; }
 .alignright, .right { float: right; text-align: right; }
-img.aligncenter, img.center { display: block; }
+img.aligncenter, img.center { clear: both; display: block; }
 img.alignleft, img.left { display: inline; margin: 0 8px 8px 0; }
 img.alignright, img.right { display: inline; margin: 0 0 8px 8px; }
 .wp-caption { border: 1px solid #ddd; text-align: center; background-color: #f3f3f3; padding-top: 4px; margin: 10px; border-radius: 3px; }

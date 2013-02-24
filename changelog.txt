@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised February 22, 2013
+Last revised February 24, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.0.1 ==
@@ -15,6 +15,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = CSS =
 * Center top level menu items only - better aesthetics with short page titles
+* Added `clear: both;` to 'img.aligncenter, img.center' to address Firefox issue when when a Featured Image and a large in post image are too close together.
 
 = Miscellaneous =
 * Fixed no comments message
