@@ -32,6 +32,10 @@
  * @version 1.0.1
  * @date    February 12, 2013
  * Center top level menu items only - better aesthetics with short page titles
+ *
+ * @version 1.0.2
+ * @date    February 27, 2013
+ * Start === BNS Plugin Integrations ===
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -73,6 +77,7 @@
  * === Taglines ===
  *
  * === Miscellaneous ===
+ * === BNS Plugin Integrations ===
  *
  * === Ain't Miss B. Haven ===
  * Jetpack
@@ -1214,6 +1219,11 @@ h6#site-generator {
 /** === Miscellaneous === --------------------------------------------------- */
 .question-mark { cursor: help; }
 /** End: Miscellaneous ------------------------------------------------------ */
+
+/** === BNS Plugin Integrations === ----------------------------------------- */
+/** BNS Inline Asides */
+div.aside-toggler { margin: 0 0 9px; }
+/** End: BNS Plugin Integrations -------------------------------------------- */
 
 /** === Ain't Miss B. Haven === --------------------------------------------- */
 /** Jetpack (WP Stats) - smiley face */

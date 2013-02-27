@@ -1,7 +1,19 @@
 === Opus Primus changelog.txt ===
-Last revised February 24, 2013
+Last revised February 27, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
+== Version 1.0.2 ==
+= CSS =
+* Start "BNS Plugin Integrations" (BNS Inline Asides)
+
+= Current Internet Browsers Reviewed =
+* Apple Safari
+* Firefox
+* Google Chrome
+* Internet Explorer
+* Opera
+
+/** ------------------------------------------------------------------------- */
 == Version 1.0.1 ==
 = Code =
 * Added 'opus_footer_after' action hook
@@ -24,15 +36,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Updated 'theme-version-guidelines.txt' as taken from http://opusprimus.com/under-the-page/theme-version-guidelines/
 * Updated 'hooks-actions.txt' as taken from http://opusprimus.com/under-the-page/hooks-actions/
 
-= Current Internet Browsers Reviewed =
-* Apple Safari
-* Firefox
-* Google Chrome
-* Internet Explorer
-* Opera
-
 /** ------------------------------------------------------------------------- */
-
 == Version 1.0 ==
 * Initial release - February 2013
 
