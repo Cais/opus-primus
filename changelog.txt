@@ -3,18 +3,13 @@ Last revised February 27, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.0.2 ==
+* Released February 2013
+
 = Code =
 * Fix 'search' template bug when a page is returned in the results
 
 = CSS =
-* Start "BNS Plugin Integrations" (BNS Inline Asides)
-
-= Current Internet Browsers Reviewed =
-* Apple Safari
-* Firefox
-* Google Chrome
-* Internet Explorer
-* Opera
+* Start "BNS Plugin Integrations" (aka BPI) - BNS Inline Asides
 
 /** ------------------------------------------------------------------------- */
 == Version 1.0.1 ==
@@ -46,7 +41,14 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Initial release - February 2013
 
 /** ------------------------------------------------------------------------- */
+= Current Internet Browsers Reviewed =
+* Apple Safari
+* Firefox
+* Google Chrome
+* Internet Explorer
+* Opera
 
+/** ------------------------------------------------------------------------- */
 == Copyright ==
 Copyright (c) 2012-2013, Opus Primus
 
