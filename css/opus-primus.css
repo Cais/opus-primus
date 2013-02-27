@@ -1223,6 +1223,7 @@ h6#site-generator {
 /** === BNS Plugin Integrations === ----------------------------------------- */
 /** BNS Inline Asides */
 div.aside-toggler { margin: 0 0 9px; }
+.open-aside.changelog {background-color: transparent; }
 /** End: BNS Plugin Integrations -------------------------------------------- */
 
 /** === Ain't Miss B. Haven === --------------------------------------------- */
