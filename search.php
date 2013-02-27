@@ -37,7 +37,7 @@
  * `opus_<section>_<placement>`
  */
 
-global $opus_navigation, $opus_structures;
+global $opus_navigation, $opus_structures, $opus_posts;
 get_header( 'search' );
 
 /** Add empty hook before content */
@@ -63,9 +63,31 @@ do_action( 'opus_content_before' ); ?>
 
         /** the_Loop - Starts */
         if ( have_posts() ) {
+            printf( sprintf( '<h2 class="search-found-pre-text">%1$s <span class="search-query">%2$s</span></h2>',
+                apply_filters( 'opus_search_found_pre_text', __( 'We found it!<br />It looks like you searched for ...', 'opusprimus') ),
+                get_search_query()
+            ) );
+            _e( apply_filters( 'opus_search_found_post_text', __( '<h2 class="">Here are the results:</h2>', 'opusprimus' ) ) );
             while ( have_posts() ) {
+
                 the_post();
-                get_template_part( 'loops/opus-primus', get_post_format() );
+                if ( 'page' == get_post_type() ) { ?>
+
+                    <div <?php post_class(); ?>>
+
+                        <?php
+                        $opus_posts->post_byline( array( 'show_mod_author' => true ) );
+                        $opus_posts->post_title();
+                        $opus_posts->post_excerpt(); ?>
+
+                    </div><!-- post classes -->
+
+                <?php } else {
+
+                    get_template_part( 'opus-primus', get_post_format() );
+
+                } /** End if - page is post type */
+
             } /** End while - have posts */
         } else {
             $opus_structures->no_search_results();

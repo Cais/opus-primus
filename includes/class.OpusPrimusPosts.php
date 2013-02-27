@@ -803,7 +803,7 @@ class OpusPrimusPosts {
          * second category by checking if the second object is empty then
          * return true ... else return false
          */
-        if ( 'uncategorized' == $post_categories[0]->slug ) {
+        if ( ! is_page() && 'uncategorized' == $post_categories[0]->slug ) {
             if ( empty( $post_categories[1]->slug ) ) {
                 return true;
             } /** End if - empty */
