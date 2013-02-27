@@ -3,6 +3,9 @@ Last revised February 27, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.0.2 ==
+= Code =
+* Fix 'search' template bug when a page is returned in the results
+
 = CSS =
 * Start "BNS Plugin Integrations" (BNS Inline Asides)
 

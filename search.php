@@ -67,10 +67,13 @@ do_action( 'opus_content_before' ); ?>
                 apply_filters( 'opus_search_found_pre_text', __( 'We found it!<br />It looks like you searched for ...', 'opusprimus') ),
                 get_search_query()
             ) );
-            _e( apply_filters( 'opus_search_found_post_text', __( '<h2 class="">Here are the results:</h2>', 'opusprimus' ) ) );
+            _e( apply_filters( 'opus_search_found_post_text',
+                __( '<div class="opus-search-found-post-text">Here are the results:</div>', 'opusprimus' ) )
+            );
             while ( have_posts() ) {
 
                 the_post();
+                /** Since we're in the_Loop we need to check the post type */
                 if ( 'page' == get_post_type() ) { ?>
 
                     <div <?php post_class(); ?>>

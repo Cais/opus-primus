@@ -40,6 +40,9 @@
  * Replace `the_loop` method and surrounding code with `the_loop_wrapped`
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
+ *
+ * @version 1.0.2
+ * @date    February 2013
  */
 
 global $opus_structures;
