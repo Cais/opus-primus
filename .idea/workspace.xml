@@ -4,9 +4,6 @@
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-header.php" afterPath="$PROJECT_DIR$/opus-primus-header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,8 +29,10 @@
       <file leaf-file-name="class.OpusPrimusStructures.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="1" selection-start="1447" selection-end="1447" vertical-scroll-proportion="0.65384614">
-              <folding />
+            <state line="227" column="64" selection-start="8491" selection-end="8491" vertical-scroll-proportion="0.34735578">
+              <folding>
+                <element signature="e#6#1524#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,10 +91,10 @@
         <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/functions.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/opus-primus-header.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
       </list>
     </option>
   </component>
@@ -1610,7 +1609,11 @@
       <created>1361977955138</created>
       <updated>1361977955138</updated>
     </task>
-    <option name="localTasksCounter" value="309" />
+    <task id="LOCAL-00309" summary="* Add `breadcrumbs` function as a stepping stone to on screen breadcrumbs">
+      <created>1362083518681</created>
+      <updated>1362083518681</updated>
+    </task>
+    <option name="localTasksCounter" value="310" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1707,7 +1710,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="* More BPI: BNS Inline Asides" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Add `breadcrumbs` function as a stepping stone to on screen breadcrumbs" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1720,7 +1723,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="* Update theme description" />
     <MESSAGE value="* Add 'editor-style.css'" />
     <MESSAGE value="* Add featured thumbnail image to single page view" />
     <MESSAGE value="* Added a few more hooks to match other templates" />
@@ -1745,6 +1747,7 @@
     <MESSAGE value="* Start &quot;BNS Plugin Integrations&quot; (BNS Inline Asides)" />
     <MESSAGE value="* Minor documentation fixes" />
     <MESSAGE value="* More BPI: BNS Inline Asides" />
+    <MESSAGE value="* Add `breadcrumbs` function as a stepping stone to on screen breadcrumbs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1845,8 +1848,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="1" selection-start="1447" selection-end="1447" vertical-scroll-proportion="0.65384614">
-          <folding />
+        <state line="227" column="64" selection-start="8491" selection-end="8491" vertical-scroll-proportion="0.34735578">
+          <folding>
+            <element signature="e#6#1524#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

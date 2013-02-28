@@ -224,8 +224,8 @@ class OpusPrimusStructures {
 
     /**
      * Breadcrumbs
-     * Collect the post ID of each post in the lineage from the top level "parent"
-     * to the current "child"
+     * Collect the post ID of each post in the lineage from the top level
+     * "parent" to the current "child" for single view templates
      *
      * @package     OpusPrimus
      * @subpackage  Structures
