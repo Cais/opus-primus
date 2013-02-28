@@ -109,3 +109,5 @@
     do_action( 'opus_header_bottom' ); ?>
 
 </header><!-- End header section -->
+
+<?php $opus_structures->breadcrumbs();
