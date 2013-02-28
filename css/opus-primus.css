@@ -36,6 +36,10 @@
  * @version 1.0.2
  * @date    February 27, 2013
  * BNS Plugin Integrations (aka BPI): BNS Inline Asides
+ *
+ * @version 1.0.3
+ * @date    February 28, 2013
+ * Moved TagLines CSS into Stanza stylesheet
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -72,9 +76,6 @@
  * === Post-Format: Chat ===
  *
  * === Footer ===
- *
- * === Features ===
- * === Taglines ===
  *
  * === Miscellaneous ===
  * === BNS Plugin Integrations ===
@@ -1203,18 +1204,6 @@ h6#site-generator {
     border-top: 1px solid #e0e0e0;
 }
 /** End: Footer ------------------------------------------------------------- */
-
-/** === Features === -------------------------------------------------------- */
-/** === Taglines === -------------------------------------------------------- */
-.opus-primus-post-tagline,
-.opus-primus-page-tagline {
-    font-size: 14px;
-    font-variant:small-caps;
-    margin-left: 9px;
-    position: relative;
-    top: -3px;
-}
-/** End: Features ----------------------------------------------------------- */
 
 /** === Miscellaneous === --------------------------------------------------- */
 .question-mark { cursor: help; }

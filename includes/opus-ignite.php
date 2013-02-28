@@ -30,6 +30,10 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version 1.0.3
+ * @date    February 28, 2013
+ * @Moved Taglines into its own Stanza
  */
 
 /** Set CONSTANTS */
@@ -52,8 +56,6 @@ require_once( OPUS_INC . 'class.OpusPrimusNavigation.php' );
 require_once( OPUS_INC . 'class.OpusPrimusStructures.php' );
 /** Add Posts */
 require_once( OPUS_INC . 'class.OpusPrimusPosts.php' );
-/** Add Meta Boxes */
-require_once( OPUS_INC . 'class.OpusPrimusMetaBoxes.php' );
 /** Add Comments Hooks */
 require_once( OPUS_INC . 'class.OpusPrimusComments.php' );
 /** Add Images */

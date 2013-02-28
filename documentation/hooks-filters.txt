@@ -51,7 +51,7 @@
 * opus_linked_image_filter
 
 
-= class.OpusPrimusMetaBoxes.php =
+= class.OpusPrimusTagLines.php=
 
 * opus_taglines_meta_box_title
 * opus_taglines_text_field_description

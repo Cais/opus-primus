@@ -110,4 +110,6 @@
 
 </header><!-- End header section -->
 
-<?php $opus_structures->breadcrumbs();
+<?php
+/** In testing ... new v1.1.0 feature */
+// $opus_structures->breadcrumbs();

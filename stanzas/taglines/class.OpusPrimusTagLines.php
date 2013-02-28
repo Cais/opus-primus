@@ -1,9 +1,10 @@
 <?php
 /**
- * Opus Primus Meta Boxes
- * Add meta boxes to various places in the administration panels
+ * Opus Primus TagLines
+ * Add a meta box for a tagline to various places in the administration panels
  *
  * @package     OpusPrimus
+ * @subpackage  TagLines
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
@@ -35,11 +36,18 @@
  * @date    February 21, 2013
  * Re-order methods: action and filter calls by request order, then alphabetical
  * Modified action hook call to use current standard
+ *
+ * @version 1.0.3
+ * @date    February 28, 2013
+ * Changed name from "Meta_Boxes" to "TagLines" and moved to Stanzas
  */
 
-class OpusPrimusMetaBoxes {
+class OpusPrimusTagLines {
     /** Constructor */
     function __construct() {
+        /** Enqueue Styles */
+        add_action( 'wp_enqueue_scripts', array( $this, 'scripts_and_styles' ) );
+
         /** Add taglines meta boxes */
         add_action( 'add_meta_boxes', array( $this, 'tagline_create_boxes' ) );
 
@@ -53,6 +61,24 @@ class OpusPrimusMetaBoxes {
 
 
     /** ---- Action and Filter Methods ---- */
+
+
+    /**
+     * Enqueue Scripts and Styles
+     * Use to enqueue the extension scripts and stylesheets, if they exists
+     *
+     * @package     OpusPrimus
+     * @subpackage  TagLines
+     * @since       1.0.3
+     *
+     * @uses        wp_enqueue_script
+     * @uses        wp_enqueue_style
+     */
+    function scripts_and_styles() {
+        /** Enqueue Styles */
+        /** Enqueue Theme Stylesheets */
+        wp_enqueue_style( 'Opus-Primus-TagLines', OPUS_STANZAS_URI . 'taglines/opus-primus.taglines.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
+    }
 
 
     /**
@@ -173,7 +199,7 @@ class OpusPrimusMetaBoxes {
     } /** End function - tagline callback */
 
 
-} /** End Opus Primus Meta Boxes class */
+} /** End Opus Primus TagLines class */
 
-/** @var $opus_meta_boxes - new instance of class */
-$opus_meta_boxes = new OpusPrimusMetaBoxes();
+/** @var $opus_taglines - new instance of class */
+$opus_taglines = new OpusPrimusTagLines();
