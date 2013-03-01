@@ -137,3 +137,4 @@ included with the theme will simply be a copy of the noted page.
 * http://themes.trac.wordpress.org/ticket/11106 - Version 1.0, February 2013
 * http://themes.trac.wordpress.org/ticket/11325 - Version 1.0.1, February 2013
 * http://themes.trac.wordpress.org/ticket/11367 - Version 1.0.2, February 2013
+* http://themes.trac.wordpress.org/ticket/11386 - Version 1.0.3, February 2013

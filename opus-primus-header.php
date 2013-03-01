@@ -112,4 +112,4 @@
 
 <?php
 /** In testing ... new v1.1.0 feature */
-// $opus_structures->breadcrumbs();
+$opus_structures->breadcrumbs();
