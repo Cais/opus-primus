@@ -48,11 +48,11 @@ class OpusPrimusBreadcrumbs {
      * @uses        is_singular
      * @uses        get_post
      *
-     * @internal Testing purpose only ... more work to be done
+     * @version     1.0.4
+     * @date        March 1, 2013
+     * Added 'Breadcrumbs' for pages completed
      *
-     * @todo Clean up code and sort out how to use this for pages
-     * @todo Can this be used with post as well as pages ... or does it need to be refactored
-     * @todo Review using categories for posts and listing *all* categories of the post if multiple are used
+     * @internal Considered new feature for release at version 1.1.0
      */
     function breadcrumbs() {
 
@@ -99,20 +99,42 @@ class OpusPrimusBreadcrumbs {
      * @package     OpusPrimus
      * @subpackage  Breadcrumbs
      * @since       1.0.4
+     *
+     * @uses        OpusPrimusBreadcrumbs::breadcrumbs
+     * @uses        get_post
+     * @uses        home_url
      */
     function the_trail() {
 
-        $trail = '<ul class="breadcrumbs">';
+        /**
+         * Hansel and Gretel did not need breadcrumbs until they left home, no
+         * reason we need to have them if we are at home, too.
+         */
+        if ( null !== $this->breadcrumbs() ) {
 
-            foreach ( $this->breadcrumbs() as $steps ) {
+            $trail = '<div id="breadcrumbs">';
+                $trail .= '<ul class="breadcrumb">';
 
-                $trail .= '<li>' . 'Page ID: ' . $steps . '</li>';
+                    $trail .= '<li>'
+                        . '<a href="' . home_url( '/' ) . '">' . __( 'Home', 'opusprimus' ) . '</a>'
+                        . '</li>';
 
-            }
+                    foreach ( $this->breadcrumbs() as $steps ) {
 
-        $trail .= '</ul><!-- breadcrumbs -->';
+                        $trail .= '<li>'
+                            . '<a title="' . get_post( $steps )->post_title . '" href="' . home_url( '/?page_id=' ) . get_post( $steps )->ID . '">' . get_post( $steps )->post_title . '</a>'
+                            . '</li>';
 
-        return $trail;
+                    } /** End foreach - steps */
+
+                $trail .= '</ul><!-- breadcrumb -->';
+            $trail .= '</div><!-- #breadcrumbs -->';
+
+            return $trail;
+
+        } /** End if - no breadcrumbs */
+
+        return null;
 
     } /** End function - the trail */
 
@@ -124,6 +146,8 @@ class OpusPrimusBreadcrumbs {
      * @package     OpusPrimus
      * @subpackage  Breadcrumbs
      * @since       1.0.4
+     *
+     * @uses        OpusPrimusBreadcrumbs::the_trail
      */
     function show_the_trail() {
         echo $this->the_trail();

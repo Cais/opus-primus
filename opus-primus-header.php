@@ -39,6 +39,7 @@
  *
  * @version 1.0.4
  * @date    March 1, 2013
+ * Added 'Breadcrumbs' for pages
  * Removed `hgroup` container
  */ ?>
 
@@ -111,6 +112,5 @@
 </header><!-- End header section -->
 
 <?php
-/** In testing ... new v1.1.0 feature */
 global $opus_breadcrumbs;
 $opus_breadcrumbs->show_the_trail();

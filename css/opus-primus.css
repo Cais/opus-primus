@@ -40,6 +40,10 @@
  * @version 1.0.3
  * @date    February 28, 2013
  * Moved TagLines CSS into Stanza stylesheet
+ *
+ * @version 1.0.4
+ * @date    March 1, 2013
+ * Added 'Breadcrumbs' section for pages
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -50,6 +54,7 @@
  * Elements Requiring Clearance
  *
  * === Menu Related Elements ===
+ * === Breadcrumbs ===
  * === Post Elements ===
  * === Search ===
  *
@@ -83,6 +88,7 @@
  * === Ain't Miss B. Haven ===
  * Jetpack
  * Twitter oEmbed
+ * Miscellaneous testing classes
  */
 /** End: Table of Contents -------------------------------------------------- */
 
@@ -154,6 +160,7 @@ blockquote:before,
 blockquote:after {
     content: "";
 }
+
 cite {
     font-style: normal;
 }
@@ -454,7 +461,9 @@ img {
     vertical-align: middle;
 }
 
-kbd { font-family: monospace, sans-serif; }
+kbd {
+    font-family: monospace, sans-serif;
+}
 
 /** - Lists */
 /** -- unordered, ordered */
@@ -528,7 +537,9 @@ pre code {
     border: 0;
 }
 
-select { width: 98%; }
+select {
+    width: 98%;
+}
 
 small {
     font-size: 100%;
@@ -553,7 +564,9 @@ table {
     background-color: transparent;
 }
 
-tt { font-family: monospace, sans-serif; }
+tt {
+    font-family: monospace, sans-serif;
+}
 
 /** Elements Requiring Clearance */
 /** Micro Clearfix ---------------------------------------------------------- */
@@ -591,7 +604,9 @@ div#top-navigation-menu {
     width: 970px;
 }
 
-.page ul.nav-menu { padding-left: 0; }
+.page ul.nav-menu {
+    padding-left: 0;
+}
 
 .nav-menu {
     margin: 0;
@@ -622,6 +637,7 @@ div#top-navigation-menu {
     font-weight: bold;
     padding: 8px 12px;
 }
+
 .nav-menu a:hover, .nav-menu a:active {
     background: #eee;
     color: #000;
@@ -708,6 +724,79 @@ ul.nav-menu ul.sub-menu li, ul.nav-menu ul.children li, ul.nav-menu ul, ul.nav-m
 }
 /** End: Menu Related Elements ---------------------------------------------- */
 
+/** === Breadcrumbs === ----------------------------------------------------- */
+#breadcrumbs {
+    border-bottom: 1px solid #d3d3d3;
+    border-top: 1px solid #d3d3d3;
+    clear: both;
+}
+
+ul.breadcrumb {
+    font-size: .875em;
+    list-style: none;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+ul.breadcrumb li {
+    float: left;
+}
+
+ul.breadcrumb li a {
+    color: #988b8b;
+    display: block;
+    float: left;
+    padding: 10px 0 10px 48px;
+    position: relative;
+    text-decoration: none;
+}
+
+ul.breadcrumb li:first-child a {
+    padding-left: 18px;
+}
+
+ul.breadcrumb li a:after {
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid white;
+    border-top: 50px solid transparent;
+    content: " ";
+    display: block;
+    height: 0;
+    left: 100%;
+    margin-top: -50px;
+    position: absolute;
+    top: 50%;
+    width: 0;
+    z-index: 2;
+}
+
+ul.breadcrumb li a:before {
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid #d3d3d3;
+    border-top: 50px solid transparent;
+    content: " ";
+    display: block;
+    height: 0;
+    left: 100%;
+    margin-left: 1px;
+    margin-top: -50px;
+    position: absolute;
+    top: 50%;
+    width: 0;
+    z-index: 1;
+}
+
+ul.breadcrumb li:last-child a:before,
+.breadcrumb li:last-child a:after {
+    display: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: #000000;
+    font-weight: bold;
+}
+/** End: Breadcrumbs -------------------------------------------------------- */
+
 /** === Post Elements === --------------------------------------------------- */
 /** Meta Byline ------------------------------------------------------------- */
 .meta-byline {
@@ -749,6 +838,7 @@ form#searchform label.screen-reader-text {
     display: none;
     margin: 0;
 }
+
 ul.featured-search-pages {
     list-style: none;
 }
@@ -879,22 +969,34 @@ div.second-sidebar ul li ul {
 /** Set all sidebar background colors to transparent */
 .three-columns,
 .three-columns .column-middle,
-.three-columns .column-left { background-color: transparent; }
+.three-columns .column-left {
+    background-color: transparent;
+}
 
 .blog-style,
 .blog-style .column-middle,
-.blog-style .column-left { background-color: transparent; }
+.blog-style .column-left {
+    background-color: transparent;
+}
 
 .left-menu,
-.left-menu .column-left { background-color: transparent; }
+.left-menu .column-left {
+    background-color: transparent;
+}
 
 .right-sidebar,
-.right-sidebar .column-left { background-color: transparent; }
+.right-sidebar .column-left {
+    background-color: transparent;
+}
 
 .doublepage,
-.doublepage .column-left { background-color: transparent; }
+.doublepage .column-left {
+    background-color: transparent;
+}
 
-.full-page { background-color: transparent; }
+.full-page {
+    background-color: transparent;
+}
 
 /** End: Sidebars ----------------------------------------------------------- */
 
@@ -942,9 +1044,11 @@ ul.featured li ul.nav div.nav {
 .error404 div.widget_recent_entries {
     margin: 0 0 9px 25px;
 }
+
 .error404 div.widget_recent_entries h2.widgettitle {
     padding-left: 10px;
 }
+
 .error404 div.widget_recent_entries ul {
     list-style-type: none;
 }
@@ -982,6 +1086,7 @@ ul.featured li ul.nav div.nav {
 h2#attachment-notice {
     text-align: center;
 }
+
 div.the-loop div.attached-image,
 div.exif-dimensions {
     text-align: center;
@@ -1030,6 +1135,7 @@ div.meta-byline button {
 .format-gallery img.attachment-thumbnail {
     border: medium double #000000;
 }
+
 .gallery-featured-image,
 .gallery-secondary-images {
     margin: 10px 0;
@@ -1062,6 +1168,7 @@ p.more-images,
 div.post.format-image h2.image-title {
     text-align: center;
 }
+
 div.image-media-details {
     margin: 0 auto;
     width: 60%;
@@ -1158,9 +1265,11 @@ blockquote + div.sharing {
 div.post.format-link .post-content a {
     font-size: 18px;
 }
+
 .link-symbol:before {
     content: '\221E \0020'; /** Infinity Symbol + space - uses CSS hex values */
 }
+
 .link-symbol:after {
     content: '\0020 \221E'; /** space + Infinity Symbol - uses CSS hex values */
 }
@@ -1170,6 +1279,7 @@ div.post.format-link .post-content a {
 div.post.format-audio .post-content a {
     font-size: 18px;
 }
+
 .format-audio p iframe {
     width: 100% !important;
 }
@@ -1177,6 +1287,7 @@ div.post.format-audio .post-content a {
 .audio-symbol:before {
     /** content: '\1D11E \0020'; /** Musical G Clef Symbol + space - uses CSS hex values */
 }
+
 .audio-symbol:after {
     /** content: '\0020 \1D11E'; /** space + Musical G Clef Symbol - uses CSS hex values */
 }
@@ -1206,18 +1317,27 @@ h6#site-generator {
 /** End: Footer ------------------------------------------------------------- */
 
 /** === Miscellaneous === --------------------------------------------------- */
-.question-mark { cursor: help; }
+.question-mark {
+    cursor: help;
+}
 /** End: Miscellaneous ------------------------------------------------------ */
 
 /** === BNS Plugin Integrations === ----------------------------------------- */
 /** BNS Inline Asides */
-div.aside-toggler { margin: 0 0 9px; }
-.open-aside.changelog {background-color: transparent; }
+div.aside-toggler {
+    margin: 0 0 9px;
+}
+
+.open-aside.changelog {
+    background-color: transparent;
+}
 /** End: BNS Plugin Integrations -------------------------------------------- */
 
 /** === Ain't Miss B. Haven === --------------------------------------------- */
 /** Jetpack (WP Stats) - smiley face */
-img#wpstats { display: none; }
+img#wpstats {
+    display: none;
+}
 
 /** Jetpack Notifications? */
 p.comment-subscription-form {
@@ -1230,21 +1350,7 @@ p.comment-subscription-form {
     width: 100% !important;
 }
 
+.test-text {
+    display: none;
+}
 /** End: Ain't Miss B. Haven === -------------------------------------------- */
-
-.test-text {display: none;}
-
-/** === Breadcrumbs === ----------------------------------------------------- */
-ul.breadcrumbs {
-    clear: both;
-}
-
-ul.breadcrumbs li {
-    float: left;
-    list-style: none outside none;
-    margin-left: 2px;
-    margin-right: 2px;
-    min-width: 99px;
-    position: relative;
-    white-space: nowrap;
-}

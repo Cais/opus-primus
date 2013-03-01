@@ -10,6 +10,10 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Moved `breadcrumbs` method from 'Structures' class to 'Breadcrumbs' class
 * Removed `hgroup` container from 'opus-primus-header'
 
+= CSS =
+* Added Breadcrumbs section
+* Code formatting
+
 /** ------------------------------------------------------------------------- */
 == Version 1.0.3 ==
 * Released February 2013
