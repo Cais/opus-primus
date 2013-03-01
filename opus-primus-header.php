@@ -36,59 +36,59 @@
  * @date    February 21, 2013
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
+ *
+ * @version 1.0.4
+ * @date    March 1, 2013
+ * Removed `hgroup` container
  */ ?>
 
 <header>
 
     <?php do_action( 'opus_header_top' ); ?>
 
-    <hgroup>
+    <div class="masthead">
 
-        <div class="masthead">
-
-            <div id="header-text">
-
-                <?php
-                /** Add empty hook before site title */
-                do_action( 'opus_site_title_before' ); ?>
-
-                <h1 id="site-title">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                        <?php bloginfo( 'name' ); ?>
-                    </a>
-                </h1><!-- #site-title -->
-
-                <?php
-                /**
-                 * Add empty hooks between the site title and description ... now we're
-                 * really writing Mallory-Everest code but someone might want this.
-                 */
-                do_action( 'opus_site_title_after' );
-                do_action( 'opus_site_description_before' ); ?>
-
-                <h2 id="site-description">
-                    <?php bloginfo( 'description' ); ?>
-                </h2><!-- #site-description -->
-
-                <?php
-                /** Add empty hook after site description */
-                do_action( 'opus_site_description_after' ); ?>
-
-            </div><!-- #header-text -->
+        <div id="header-text">
 
             <?php
-            /** Add empty hook before custom header image */
-            do_action( 'opus_custom_header_image_before' );
+            /** Add empty hook before site title */
+            do_action( 'opus_site_title_before' ); ?>
 
-            global $opus_structures;
-            $opus_structures->show_custom_header_image();
+            <h1 id="site-title">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                    <?php bloginfo( 'name' ); ?>
+                </a>
+            </h1><!-- #site-title -->
 
-            /** Add empty hook after custom header image */
-            do_action( 'opus_custom_header_image_after' ); ?>
+            <?php
+            /**
+             * Add empty hooks between the site title and description ... now we're
+             * really writing Mallory-Everest code but someone might want this.
+             */
+            do_action( 'opus_site_title_after' );
+            do_action( 'opus_site_description_before' ); ?>
 
-        </div><!-- .masthead -->
+            <h2 id="site-description">
+                <?php bloginfo( 'description' ); ?>
+            </h2><!-- #site-description -->
 
-    </hgroup><!-- End header group section -->
+            <?php
+            /** Add empty hook after site description */
+            do_action( 'opus_site_description_after' ); ?>
+
+        </div><!-- #header-text -->
+
+        <?php
+        /** Add empty hook before custom header image */
+        do_action( 'opus_custom_header_image_before' );
+
+        global $opus_structures;
+        $opus_structures->show_custom_header_image();
+
+        /** Add empty hook after custom header image */
+        do_action( 'opus_custom_header_image_after' ); ?>
+
+    </div><!-- .masthead -->
 
     <div id="header-widgets">
         <?php get_sidebar( 'header' ); ?>
@@ -112,4 +112,5 @@
 
 <?php
 /** In testing ... new v1.1.0 feature */
-$opus_structures->breadcrumbs();
+global $opus_breadcrumbs;
+$opus_breadcrumbs->breadcrumbs();

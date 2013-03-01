@@ -33,7 +33,11 @@
  *
  * @version 1.0.3
  * @date    February 28, 2013
- * @Moved Taglines into its own Stanza
+ * Moved Taglines into its own Stanza
+ *
+ * @version 1.0.4
+ * @date    March 1, 2013
+ * Added call to 'Breadcrumbs' class
  */
 
 /** Set CONSTANTS */
@@ -66,6 +70,8 @@ require_once( OPUS_INC . 'class.OpusPrimusGallery.php' );
 require_once( OPUS_INC . 'class.OpusPrimusAuthors.php' );
 /** Add Archives */
 require_once( OPUS_INC . 'class.OpusPrimusArchives.php' );
+/** Add Breadcrumbs */
+require_once( OPUS_INC . 'class.OpusPrimusBreadcrumbs.php' );
 
 /** Add Stanzas */
 require_once( OPUS_STANZAS . 'stanzas.php' );

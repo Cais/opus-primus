@@ -1,0 +1,98 @@
+<?php
+/**
+ * Opus Primus Breadcrumbs
+ * Creates and display a breadcrumb trail for pages
+ *
+ * @package     OpusPrimus
+ * @since       1.0.4
+ *
+ * @author      Opus Primus <in.opus.primus@gmail.com>
+ * @copyright   Copyright (c) 2013, Opus Primus
+ *
+ * This file is part of Opus Primus.
+ *
+ * Opus Primus is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 2, as published by the
+ * Free Software Foundation.
+ *
+ * You may NOT assume that you can use any other version of the GPL.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, write to:
+ *
+ *      Free Software Foundation, Inc.
+ *      51 Franklin St, Fifth Floor
+ *      Boston, MA  02110-1301  USA
+ *
+ * The license for this software can also likely be found here:
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+class OpusPrimusBreadcrumbs {
+
+    function __construct() {}
+
+    /**
+     * Breadcrumbs
+     * Collect the post ID of each post in the lineage from the top level
+     * "parent" to the current "child" for single view templates
+     *
+     * @package     OpusPrimus
+     * @subpackage  Structures
+     * @since       1.0.3-alpha
+     *
+     * @uses        is_singular
+     * @uses        get_post
+     *
+     * @internal Testing purpose only ... more work to be done
+     *
+     * @todo Clean up code and sort out how to use this for pages
+     * @todo Can this be used with post as well as pages ... or does it need to be refactored
+     * @todo Review using categories for posts and listing *all* categories of the post if multiple are used
+     */
+    function breadcrumbs() {
+
+        /** Sanity check - are we on a single view template */
+        if ( is_singular() ) {
+
+            /** @var $breadcrumb - empty array to hold the breadcrumb */
+            $breadcrumb = array();
+            /** @var $x - array index */
+            $x = 0;
+
+            /** Get the current post (from outside the_Loop) */
+            global $post;
+
+            /** Set initial array element as current post ID */
+            $breadcrumb[$x] = $post->ID;
+
+            /** Walk back to the parent getting each post ID  */
+            while ( get_post( $breadcrumb[$x] )->post_parent !== 0 ) {
+                /** @var $parent_post - current index parent post ID */
+                $parent_post = get_post( $breadcrumb[$x] )->post_parent;
+                /** Add ID to breadcrumb array */
+                $breadcrumb[] = $parent_post;
+                /** Increment the index to check the next post */
+                $x++;
+            }
+
+            /** @var $breadcrumb - reverse the array for parent-child ordering */
+            $breadcrumb = array_reverse( $breadcrumb );
+
+            /** var_dump testing */
+            var_dump($breadcrumb);
+
+        } /** End if - is singular */
+
+    } /** End function - breadcrumbs */
+
+
+} /** End class - opus primus breadcrumbs */
+
+
+/** @var $opus_breadcrumbs - new instance of class */
+$opus_breadcrumbs = new OpusPrimusBreadcrumbs();

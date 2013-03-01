@@ -40,6 +40,10 @@
  * @version 1.0.3-alpha
  * @date    February 28, 2013
  * Add `breadcrumbs` function as a stepping stone to on screen breadcrumbs
+ *
+ * @version 1.0.4-alpha
+ * @date    March 1, 2013
+ * Move `breadcrumbs` into its own class
  */
 
 class OpusPrimusStructures {
@@ -220,61 +224,6 @@ class OpusPrimusStructures {
 
 
     /** ---- Additional Methods ---- */
-
-
-    /**
-     * Breadcrumbs
-     * Collect the post ID of each post in the lineage from the top level
-     * "parent" to the current "child" for single view templates
-     *
-     * @package     OpusPrimus
-     * @subpackage  Structures
-     * @since       1.0.3-alpha
-     *
-     * @uses        is_singular
-     * @uses        get_post
-     *
-     * @internal Testing purpose only ... more work to be done
-     *
-     * @todo Clean up code and sort out how to use this for pages
-     * @todo Can this be used with post as well as pages ... or does it need to be refactored
-     * @todo Review using categories for posts and listing *all* categories of the post if multiple are used
-     */
-    function breadcrumbs() {
-
-        /** Sanity check - are we on a single view template */
-        if ( is_singular() ) {
-
-            /** @var $breadcrumb - empty array to hold the breadcrumb */
-            $breadcrumb = array();
-            /** @var $x - array index */
-            $x = 0;
-
-            /** Get the current post (from outside the_Loop) */
-            global $post;
-
-            /** Set initial array element as current post ID */
-            $breadcrumb[$x] = $post->ID;
-
-            /** Walk back to the parent getting each post ID  */
-            while ( get_post( $breadcrumb[$x] )->post_parent !== 0 ) {
-                /** @var $parent_post - current index parent post ID */
-                $parent_post = get_post( $breadcrumb[$x] )->post_parent;
-                /** Add ID to breadcrumb array */
-                $breadcrumb[] = $parent_post;
-                /** Increment the index to check the next post */
-                $x++;
-            }
-
-            /** @var $breadcrumb - reverse the array for parent-child ordering */
-            $breadcrumb = array_reverse( $breadcrumb );
-
-            /** var_dump testing */
-            var_dump($breadcrumb);
-
-        } /** End if - is singular */
-
-    } /** End function - breadcrumbs */
 
 
     /**

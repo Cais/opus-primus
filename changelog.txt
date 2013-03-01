@@ -1,7 +1,16 @@
 === Opus Primus changelog.txt ===
-Last revised February 28, 2013
+Last revised March 1, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
+== Version 1.0.4 ==
+* Released ...
+
+= Code =
+* Added 'Breadcrumbs' class
+* Moved `breadcrumbs` method from 'Structures' class to 'Breadcrumbs' class
+* Removed `hgroup` container from 'opus-primus-header'
+
+/** ------------------------------------------------------------------------- */
 == Version 1.0.3 ==
 * Released February 2013
 
