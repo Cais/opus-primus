@@ -93,6 +93,40 @@ class OpusPrimusBreadcrumbs {
 
 
     /**
+     * Blog Breadcrumb
+     *
+     * @return  null|string
+     */
+    function blog_breadcrumb() {
+
+        if ( is_singular() ) {
+
+            global $post;
+
+            $blog_post_ID = $post->ID;
+
+            $blog_categories = get_the_category_list( '', '', $blog_post_ID );
+
+            $blog_trail = '<ul>';
+
+            $blog_trail .= '<li>'
+                . '<a href="' . home_url( '/' ) . '">' . __( 'Home', 'opusprimus' ) . '</a>'
+                . '</li>';
+
+            $blog_trail .= $blog_categories;
+
+            $blog_trail .= '</ul>';
+
+            return $blog_trail;
+
+        } /** End if - is singular */
+
+        return null;
+
+    } /** End function - blog_breadcrumb */
+
+
+    /**
      * The Trail
      * Create the trail of breadcrumbs
      *

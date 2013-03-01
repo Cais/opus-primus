@@ -114,3 +114,4 @@
 <?php
 global $opus_breadcrumbs;
 $opus_breadcrumbs->show_the_trail();
+$opus_breadcrumbs->blog_breadcrumb();
