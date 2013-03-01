@@ -1233,3 +1233,18 @@ p.comment-subscription-form {
 /** End: Ain't Miss B. Haven === -------------------------------------------- */
 
 .test-text {display: none;}
+
+/** === Breadcrumbs === ----------------------------------------------------- */
+ul.breadcrumbs {
+    clear: both;
+}
+
+ul.breadcrumbs li {
+    float: left;
+    list-style: none outside none;
+    margin-left: 2px;
+    margin-right: 2px;
+    min-width: 99px;
+    position: relative;
+    white-space: nowrap;
+}

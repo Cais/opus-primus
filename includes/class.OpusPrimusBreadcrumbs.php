@@ -83,12 +83,51 @@ class OpusPrimusBreadcrumbs {
             /** @var $breadcrumb - reverse the array for parent-child ordering */
             $breadcrumb = array_reverse( $breadcrumb );
 
-            /** var_dump testing */
-            var_dump($breadcrumb);
+            return $breadcrumb;
 
         } /** End if - is singular */
 
+        return null;
+
     } /** End function - breadcrumbs */
+
+
+    /**
+     * The Trail
+     * Create the trail of breadcrumbs
+     *
+     * @package     OpusPrimus
+     * @subpackage  Breadcrumbs
+     * @since       1.0.4
+     */
+    function the_trail() {
+
+        $trail = '<ul class="breadcrumbs">';
+
+            foreach ( $this->breadcrumbs() as $steps ) {
+
+                $trail .= '<li>' . 'Page ID: ' . $steps . '</li>';
+
+            }
+
+        $trail .= '</ul><!-- breadcrumbs -->';
+
+        return $trail;
+
+    } /** End function - the trail */
+
+
+    /**
+     * Show The Trail
+     * Shows the trail of breadcrumbs
+     *
+     * @package     OpusPrimus
+     * @subpackage  Breadcrumbs
+     * @since       1.0.4
+     */
+    function show_the_trail() {
+        echo $this->the_trail();
+    } /** End function - show the trail */
 
 
 } /** End class - opus primus breadcrumbs */

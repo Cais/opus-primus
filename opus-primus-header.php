@@ -113,4 +113,4 @@
 <?php
 /** In testing ... new v1.1.0 feature */
 global $opus_breadcrumbs;
-$opus_breadcrumbs->breadcrumbs();
+$opus_breadcrumbs->show_the_trail();
