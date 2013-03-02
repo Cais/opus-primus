@@ -795,6 +795,10 @@ ul.breadcrumb li a:hover {
     color: #000000;
     font-weight: bold;
 }
+
+ul.blog-trail-categories {
+    /** display: none; */
+}
 /** End: Breadcrumbs -------------------------------------------------------- */
 
 /** === Post Elements === --------------------------------------------------- */

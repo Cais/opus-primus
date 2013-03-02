@@ -112,6 +112,6 @@
 </header><!-- End header section -->
 
 <?php /** In testing ... scheduled for release at version 1.1.0 */
-// global $opus_breadcrumbs;
-// $opus_breadcrumbs->show_the_trail();
-// $opus_breadcrumbs->show_blog_breadcrumbs();
+global $opus_breadcrumbs;
+$opus_breadcrumbs->show_the_trail();
+$opus_breadcrumbs->show_blog_breadcrumbs();
