@@ -57,7 +57,7 @@ class OpusPrimusBreadcrumbs {
     function breadcrumbs() {
 
         /** Sanity check - are we on a single view template */
-        if ( is_singular() ) {
+        if ( is_singular() && ! is_single() ) {
 
             /** @var $breadcrumb - empty array to hold the breadcrumb */
             $breadcrumb = array();
@@ -99,23 +99,36 @@ class OpusPrimusBreadcrumbs {
      */
     function blog_breadcrumb() {
 
-        if ( is_singular() ) {
+        if ( is_singular() && is_single() ) {
 
             global $post;
 
             $blog_post_ID = $post->ID;
 
-            $blog_categories = get_the_category_list( '', '', $blog_post_ID );
+            // $blog_categories = wp_get_post_categories( $blog_post_ID );
+            $blog_categories = get_the_category( $blog_post_ID );
 
             $blog_trail = '<ul>';
 
-            $blog_trail .= '<li>'
-                . '<a href="' . home_url( '/' ) . '">' . __( 'Home', 'opusprimus' ) . '</a>'
-                . '</li>';
+                $blog_trail .= '<li>'
+                    . '<a href="' . home_url( '/' ) . '">' . __( 'Home', 'opusprimus' ) . '</a>'
+                    . '</li>';
 
-            $blog_trail .= $blog_categories;
+                foreach ( $blog_categories as $category ) {
+
+                    $blog_trail .= '<li>';
+                        $blog_trail .= '<a href="' . home_url( '/?cat=' ) . $category->cat_ID . '">' . $category->name . '</a>';
+                    $blog_trail .= '</li>';
+
+                }
+
+            $blog_trail .= '<li>' . 'Post Name: ' . $post->post_title . '</li>';
 
             $blog_trail .= '</ul>';
+
+            var_dump( $blog_categories );
+
+            var_dump($blog_trail);
 
             return $blog_trail;
 
@@ -124,6 +137,11 @@ class OpusPrimusBreadcrumbs {
         return null;
 
     } /** End function - blog_breadcrumb */
+
+
+    function show_blog_breadcrumbs() {
+        echo $this->blog_breadcrumb();
+    }
 
 
     /**

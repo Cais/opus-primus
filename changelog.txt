@@ -3,10 +3,11 @@ Last revised March 1, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.0.4 ==
-* Released ...
+* Released March 2013
 
 = Code =
 * Added 'Breadcrumbs' class
+* Fixed problem with wrong loop method call in 'archive.php'
 * Moved `breadcrumbs` method from 'Structures' class to 'Breadcrumbs' class
 * Removed `hgroup` container from 'opus-primus-header'
 

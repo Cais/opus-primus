@@ -40,6 +40,10 @@
  * `the_loop_archives_wrapped`
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
+ *
+ * @version 1.0.4
+ * @date    March 1, 2013
+ * Fixed problem with wrong loop method call
  */
 
 /** Get the Post Structure and Navigation class variables */
@@ -59,7 +63,7 @@ do_action( 'opus_content_before' ); ?>
     echo $opus_structures->layout_open();
 
     /** The complete archives loop section */
-    $opus_structures->the_loop_archives();
+    $opus_structures->the_loop_archives_wrapped();
 
     /** Calls the archive specific sidebar if it exists, else the default */
     get_sidebar( 'archive' );
