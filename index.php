@@ -49,6 +49,8 @@
  *
  * @version 1.0.4
  * @date    March 1, 2013
+ *
+ * @todo Comments could use some styling ... they really are rather bland
  */
 
 global $opus_structures;

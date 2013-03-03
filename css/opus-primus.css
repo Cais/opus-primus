@@ -791,13 +791,23 @@ ul.breadcrumb li:last-child a:before,
     display: none;
 }
 
+ul.breadcrumb li ul.blog-trail-categories li:last-child a:before,
+ul.breadcrumb li ul.blog-trail-categories li:last-child a:after {
+    display: block;
+}
+
 ul.breadcrumb li a:hover {
     color: #000000;
     font-weight: bold;
 }
 
-ul.blog-trail-categories {
-    /** display: none; */
+ul.breadcrumb li ul.blog-trail-categories li {
+    display: none;
+    list-style-type: none;
+}
+
+ul.breadcrumb li ul.blog-trail-categories li:first-child {
+    display: block;
 }
 /** End: Breadcrumbs -------------------------------------------------------- */
 
