@@ -106,9 +106,6 @@ class OpusPrimusBreadcrumbs {
 
             $blog_post_ID = $post->ID;
 
-            // $blog_categories = wp_get_post_categories( $blog_post_ID );
-            $blog_categories = get_the_category( $blog_post_ID );
-
             $blog_trail = '<div id="breadcrumbs">';
 
             $blog_trail .= '<ul class="breadcrumb">';
@@ -117,7 +114,9 @@ class OpusPrimusBreadcrumbs {
                     . '<a href="' . home_url( '/' ) . '">' . __( 'Home', 'opusprimus' ) . '</a>'
                     . '</li>';
 
+                /** Categories breadcrumb item(s) */
                 $blog_trail .= '<li><ul class="blog-trail-categories">';
+                $blog_categories = get_the_category( $blog_post_ID );
                 foreach ( $blog_categories as $category ) {
 
                     $blog_trail .= '<li>';
@@ -126,6 +125,7 @@ class OpusPrimusBreadcrumbs {
 
                 }
                 $blog_trail .= '</ul></li>';
+                /** End: Categories breadcrumb item(s) */
 
             $blog_trail .= '<li><a href="#">' . $post->post_title . '</li>';
 
@@ -158,6 +158,8 @@ class OpusPrimusBreadcrumbs {
      * @uses        OpusPrimusBreadcrumbs::breadcrumbs
      * @uses        get_post
      * @uses        home_url
+     *
+     * @todo Address pages without titles ... use Post ID?
      */
     function the_trail() {
 
