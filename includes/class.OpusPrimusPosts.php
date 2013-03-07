@@ -189,6 +189,29 @@ class OpusPrimusPosts {
 
 
     /**
+     * Anchor Title Text
+     * Returns the post title text to be used as the anchor title if it exists
+     *
+     * @package     OpusPrimus
+     * @subpackage  Posts
+     * @since       1.0.5
+     *
+     * @uses        the_title_attribute
+     *
+     * @return      null|string|void - anchor text
+     */
+    function anchor_title_text() {
+
+        /** @var $link_title_text - initialize variable for the title */
+        $link_title_text = the_title_attribute( 'echo=0' );
+
+        /** Return the string */
+        return empty( $link_title_text ) ? __( 'post', 'opusprimus' ) : $link_title_text;
+
+    } /** End function - anchor title text */
+
+
+    /**
      * Meta Tags
      * Prints HTML with meta information for the current post (category, tags
      * and permalink) - inspired by TwentyTen
@@ -236,7 +259,7 @@ class OpusPrimusPosts {
             get_the_category_list( ', ' ),
             $opus_tag_list,
             get_permalink(),
-            the_title_attribute( 'echo=0' ),
+            $this->anchor_title_text(),
             $this->status_update()
         );
 

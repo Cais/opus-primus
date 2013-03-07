@@ -5,6 +5,9 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 == Version 1.0.5 ==
 * Released March 2013
 
+= Code =
+* Added `anchor_title_text` to return the post title text in the permalink post meta
+
 /** ------------------------------------------------------------------------- */
 == Version 1.0.4 ==
 * Released March 2013
