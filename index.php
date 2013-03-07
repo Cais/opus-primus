@@ -4,7 +4,7 @@
  * A WordPress Framework Theme.
  *
  * @package     OpusPrimus
- * @version     1.0
+ * @version     1.1
  *
  * @internal    RECOMMENDED HTML5
  * @internal    RECOMMENDED CSS3
@@ -51,6 +51,8 @@
  * @date    March 1, 2013
  *
  * @todo Comments could use some styling ... they really are rather bland
+ * @todo Review ellipsis as a link in post excerpts ... should it be active or remain as simple text
+ * @todo Extend anchor text used in author details to include more words as better identification of the link and its usage
  */
 
 global $opus_structures;
