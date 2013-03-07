@@ -7,7 +7,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012, Opus Primus
+ * @copyright   Copyright (c) 2012-2013, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -127,7 +127,9 @@ class OpusPrimusAuthors {
      * @uses    home_url
      * @uses    user_can
      *
-     * @todo Add class to h2, ul, li elements?
+     * @version 1.1
+     * @date    March 7, 2013
+     * Added classes to `h2`, `ul`, and `li` elements
      */
     function author_details( $author_id, $show_author_url, $show_author_email, $show_author_desc ){
         /** Collect details from the author's profile */
@@ -140,78 +142,83 @@ class OpusPrimusAuthors {
         do_action( 'opus_author_details_before' ); ?>
 
         <div class="author-details <?php $this->author_classes( $author_id ); ?>">
-            <h2>
+
+            <h2 class="opus-author-details-header">
                 <?php
                 /** Sanity check - an author id should always be present */
                 if ( ! empty( $author_id ) ) {
                     echo get_avatar( $author_id );
                 } /** End if - not empty author id */
+
                 printf( '<span class="opus-author-about">%1$s</span>',
                     sprintf( '<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
                         home_url( '/?author=' . $author_id ),
                         esc_attr( sprintf( __( 'View all posts by %1$s', 'opusprimus' ), $author_display_name ) ),
                         $author_display_name ) ); ?>
-            </h2><!--  -->
-            <ul>
+            </h2><!-- opus-author-details-header -->
+
+            <ul class="opus-author-detail-items">
                 <?php
                 /**
                  * Check for the author URL; if show Author URL is true; and,
                  * show Author email is true
                  */
                 if ( ! empty( $author_url ) && $show_author_url && $show_author_email ) { ?>
-                    <li>
+                    <li class="opus-author-contact">
                         <?php
-                        printf( '<span class="opus-author-contact">' . __( 'Visit the web site of %1$s or email %2$s.', 'opusprimus' ) . '</span>',
+                        printf( '<span class="opus-author-contact-text">' . __( 'Visit the web site of %1$s or email %2$s.', 'opusprimus' ) . '</span>',
                             '<a class="opus-author-url" href="' . $author_url . '">' . $author_display_name . '</a>',
                             '<a class="opus-author-email" href="mailto:' .  $author_email . '">' . $author_display_name . '</a>'
                         ); ?>
-                    </li>
-                    <?php
-                    /**
-                     * Check for the author URL; show Author URL is true; and,
-                     * show Author email is false
-                     */
+                    </li><!-- opus-author-contact -->
+                <?php
+                /**
+                 * Check for the author URL; show Author URL is true; and,
+                 * show Author email is false
+                 */
                 } elseif ( ! empty( $author_url ) && $show_author_url && ! $show_author_email ) { ?>
-                    <li>
+                    <li class="opus-author-contact">
                         <?php
-                        printf( '<span class="opus-author-contact">' . __( 'Visit the web site of %1$s.', 'opusprimus' ) . '</span>',
+                        printf( '<span class="opus-author-contact-text">' . __( 'Visit the web site of %1$s.', 'opusprimus' ) . '</span>',
                             '<a class="opus-author-url" href="' . $author_url . '">' . $author_display_name . '</a>'
                         ); ?>
-                    </li>
-                    <?php
-                    /**
-                     * Check for the author URL; show Author URL is false; and,
-                     * show Author email is true
-                     */
+                    </li><!-- opus-author-contact -->
+                <?php
+                /**
+                 * Check for the author URL; show Author URL is false; and,
+                 * show Author email is true
+                 */
                 } elseif ( ! empty( $author_url ) && ! $show_author_url && $show_author_email ) { ?>
-                    <li>
+                    <li class="opus-author-contact">
                         <?php
-                        printf( '<span class="opus-author-contact">' . __( 'Email %1$s.', 'opusprimus' ) . '</span>',
+                        printf( '<span class="opus-author-contact-text">' . __( 'Email %1$s.', 'opusprimus' ) . '</span>',
                             '<a class="opus-author-email" href="mailto:' .  $author_email . '">' . $author_display_name . '</a>'
                         ); ?>
-                    </li>
-                    <?php
-                    /**
-                     * The last option available in this logic chain: no Author
-                     * URL and show Author email is true
-                     */
+                    </li><!-- opus-author-contact -->
+                <?php
+                /**
+                 * The last option available in this logic chain: no Author
+                 * URL and show Author email is true
+                 */
                 } elseif ( $show_author_email ) { ?>
-                    <li>
+                    <li class="opus-author-contact">
                         <?php
-                        printf( '<span class="opus-author-contact">' . __( 'Email %1$s.', 'opusprimus' ) . '</span>',
+                        printf( '<span class="opus-author-contact-text">' . __( 'Email %1$s.', 'opusprimus' ) . '</span>',
                             '<a class="opus-author-email" href="mailto:' .  $author_email . '">' . $author_display_name . '</a>'
                         ); ?>
-                    </li>
-                    <?php } /** End if - show author details */
+                    </li><!-- opus-author-contact -->
+                <?php } /** End if - show author details */
+
                 /**
                  * Check for the author bio; and, if show Author Desc is true
                  */
                 if ( ! empty( $author_desc ) && $show_author_desc ) { ?>
-                    <li>
-                        <?php printf( '<span class="opus-author-biography">' . __( 'Biography: %1$s', 'opusprimus' ) . '</span>', $author_desc ); ?>
-                    </li>
-                    <?php } /** End if - not empty */ ?>
-            </ul><!--  -->
+                    <li class="opus-author-biography">
+                        <?php printf( '<span class="opus-author-biography-text">' . __( 'Biography: %1$s', 'opusprimus' ) . '</span>', $author_desc ); ?>
+                    </li><!-- opus-author-biography -->
+                <?php } /** End if - not empty */ ?>
+            </ul><!-- opus-author-detail-items -->
+
         </div><!-- author details -->
 
         <?php
