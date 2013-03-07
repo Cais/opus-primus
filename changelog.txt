@@ -1,12 +1,13 @@
 === Opus Primus changelog.txt ===
-Last revised March 1, 2013
+Last revised March 7, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
-== Version 1.0.5 ==
-* Released March 2013
+== Version 1.1 ==
+* Released ...
 
 = Code =
-* Added `anchor_title_text` to return the post title text in the permalink post meta
+* Added `excerpt_more_link` and attached to `excerpt_more` filter
+* Added `anchor_title_text` for use with `excerpt_more_link` and permalinks in the post meta details
 
 /** ------------------------------------------------------------------------- */
 == Version 1.0.4 ==

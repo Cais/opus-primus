@@ -36,18 +36,55 @@
  * Re-order methods: action and filter calls by request order, then alphabetical
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
+ *
+ * @version 1.1
+ * @date    March 7, 2013
+ * Added `excerpt_more_link` and attached to `excerpt_more` filter
+ * Added `anchor_title_text` for use with `excerpt_more_link` and permalinks in the post meta details
  */
 
 class OpusPrimusPosts {
     /** Constructor */
     function __construct() {
+        /** Add excerpt more link */
+        add_filter('excerpt_more', array( $this, 'excerpt_more_link') );
+
         /** Add classes to post tag */
         add_filter( 'post_class', array( $this, 'post_classes' ) );
-
     } /** End function - construct */
 
 
     /** ---- Action and Filter Methods ---- */
+
+
+    /**
+     * Excerpt More Link
+     *
+     * @package OpusPrimus
+     * @class   Posts
+     * @since   1.0.5
+     *
+     * @uses    OpusPrimusPosts::anchor_title_text
+     * @uses    get_permalink
+     *
+     * @param   $more
+     *
+     * @return  string
+     */
+    function excerpt_more_link( $more ) {
+
+        /** Get global for the post */
+        global $post;
+
+        /** @var $link_text - text for the title attribute */
+        $link_text = sprintf( __( 'Read more of %1$s', 'opusprimus' ), $this->anchor_title_text() );
+
+        /** @var $link_url - URL to single view */
+        $link_url = apply_filters( 'opus_excerpt_more_link', '<a class="excerpt-more-link" title="' . $link_text . '" href="' . get_permalink( $post->ID ) . '"> &hellip;&infin;</a>' );
+
+        return $link_url;
+
+    } /** End function - excerpt more link */
 
 
     /**
@@ -409,7 +446,7 @@ class OpusPrimusPosts {
         /** Create URL or string text */
         $opus_no_title = get_the_title();
         empty( $opus_no_title )
-            ? $opus_no_title = '<span class="no-title"><a href="' . get_permalink() . '" title="' . get_the_excerpt() . '">' . $anchor . '</span></a>'
+            ? $opus_no_title = '<span class="no-title"><a href="' . get_permalink() . '" title="' . esc_attr( get_the_excerpt() ) . '">' . $anchor . '</span></a>'
             : $opus_no_title = $anchor;
 
         return apply_filters( 'opus_no_title_link', $opus_no_title );
