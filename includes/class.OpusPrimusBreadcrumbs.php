@@ -114,18 +114,9 @@ class OpusPrimusBreadcrumbs {
                     . '<a href="' . home_url( '/' ) . '">' . __( 'Home', 'opusprimus' ) . '</a>'
                     . '</li>';
 
-                /** Categories breadcrumb item(s) */
-                $blog_trail .= '<li><ul class="blog-trail-categories">';
-                $blog_categories = get_the_category( $blog_post_ID );
-                foreach ( $blog_categories as $category ) {
+            $blog_trail .= $this->categories($blog_trail, $blog_post_ID);
 
-                    $blog_trail .= '<li>';
-                        $blog_trail .= '<a href="' . home_url( '/?cat=' ) . $category->cat_ID . '">' . $category->name . '</a>';
-                    $blog_trail .= '</li>';
-
-                }
-                $blog_trail .= '</ul></li>';
-                /** End: Categories breadcrumb item(s) */
+            $blog_trail .= $this->post_formats($blog_post_ID, $post, $blog_trail);
 
             $blog_trail .= '<li><a href="#">' . $post->post_title . '</li>';
 
@@ -140,6 +131,68 @@ class OpusPrimusBreadcrumbs {
         return null;
 
     } /** End function - blog_breadcrumb */
+
+
+    /**
+     * Post Formats
+     * Returns the Post Format type as part of the breadcrumb trail
+     *
+     * @package OpusPrimus
+     * @since   1.1
+     *
+     * @uses    ...
+     *
+     * @param   $blog_post_ID
+     * @param   $post
+     * @param   $blog_trail
+     *
+     * @return  string
+     */
+    function post_formats( $blog_post_ID, $post, $blog_trail ) {
+
+        $flag_text = get_post_format_string( get_post_format( $blog_post_ID ) );
+        $post_format_output = '<a href="' . get_post_format_link( get_post_format( $blog_post_ID ) ) . '" title="' . sprintf( __( 'View the %1$s archive.', 'opusprimus' ), $post->post_title ) . '">' . $flag_text . '</a>';
+
+        $blog_trail .= '<li>' . $post_format_output . '</li>';
+
+        return $blog_trail;
+
+    } /** End function - post format */
+
+
+    /**
+     * Categories
+     * Returns all categories assigned to post but only displays the first
+     *
+     * @package OpusPrimus
+     * @since   1.1
+     *
+     * @uses    ...
+     *
+     * @param   $blog_trail
+     * @param   $blog_post_ID
+     *
+     * @return  string
+     */
+    function categories( $blog_trail, $blog_post_ID ) {
+
+        $blog_trail .= '<li><ul class="blog-trail-categories">';
+
+        $blog_categories = get_the_category( $blog_post_ID );
+
+        foreach ( $blog_categories as $category ) {
+
+            $blog_trail .= '<li>';
+                $blog_trail .= '<a href="' . home_url( '/?cat=' ) . $category->cat_ID . '">' . $category->name . '</a>';
+            $blog_trail .= '</li>';
+
+        }
+
+        $blog_trail .= '</ul></li>';
+
+        return $blog_trail;
+
+    } /** End function - blog categories */
 
 
     function show_blog_breadcrumbs() {
