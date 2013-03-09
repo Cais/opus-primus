@@ -71,6 +71,12 @@ written here.
 == Screenshots ==
 
 == Basic FAQ ==
+Q: How do the breadcrumb trails work?
+There are two different breadcrumb trails used in Opus Primus. One type is used
+on posts and shows the page hierarchy from the highest level to the lowest. The
+second trail is used on single views of posts and shows the first category and
+Post-Format of the post, both linked to their respective archive.
+
 Q: Where are the menu locations, and how are they used?
 There are three menu locations defined in Opus Primus.
 * The Primary Menu, located at the top of the page above the main content area.

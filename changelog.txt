@@ -8,6 +8,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = Code =
 * Added `excerpt_more_link` and attached to `excerpt_more` filter
 * Added `anchor_title_text` for use with `excerpt_more_link` and permalinks in the post meta details
+* Added Breadcrumbs trails to pages and posts
 
 = CSS =
 * Added classes to `h2`, `ul`, and `li` elements in `OpusPrimusAuthors::author_details`
