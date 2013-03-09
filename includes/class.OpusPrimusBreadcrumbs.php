@@ -94,14 +94,20 @@ class OpusPrimusBreadcrumbs {
 
     /**
      * Post Breadcrumb
+     * Create a breadcrumb trail showing the first category and Post Format of
+     * the post where the category and Post Format link to their respective
+     * archive.
      *
      * @package OpusPrimus
      * @since   1.1
      *
-     * @return  null|string
+     * @uses    OpusPrimusBreadcrumbs::breadcrumb_categories
+     * @uses    OpusPrimusBreadcrumbs::post_format_name
+     * @uses    home_url
+     * @uses    is_single
+     * @uses    is_singular
      *
-     * @todo link category to its archive
-     * @todo link Post-Format to its archive
+     * @return  null|string
      */
     function post_breadcrumbs() {
 
@@ -122,25 +128,18 @@ class OpusPrimusBreadcrumbs {
                     $post_trail .= '<li>'
                         . '<a href="' . home_url( '/' ) . '">' . __( 'Home', 'opusprimus' ) . '</a>'
                         . '</li>';
-    
-                    $post_trail .= '<li><ul class="blog-trail-categories">';
-    
-                    $post_categories = get_the_category( $post_ID );
-                    foreach ( $post_categories as $category ) {
-    
-                        $post_trail .= '<li>';
-                        $post_trail .= '<a href="' . home_url( '/?cat=' ) . $category->cat_ID . '">' . $category->name . '</a>';
-                        $post_trail .= '</li>';
-    
-                    }
-                    $post_trail .= '</ul></li>';
-    
-                    $flag_text = get_post_format_string( get_post_format( $post_ID ) );
-                    $post_format_output = '<a href="' . get_post_format_link( get_post_format( $post_ID ) ) . '" title="' . sprintf( __( 'View the %1$s archive.', 'opusprimus' ), $post->post_title ) . '">' . $flag_text . '</a>';
-    
-                    $post_trail .= '<li>' . $post_format_output . '</li>';
-    
-                    $post_trail .= '<li><a href="#">' . $post->post_title . '</li>';
+
+                    /** @var $post_trail - add post categories */
+                    $post_trail = $this->breadcrumb_categories( $post_trail, $post_ID );
+
+                    /** @var $post_trail - add Post Format name */
+                    $post_trail = $this->post_format_name( $post_ID, $post, $post_trail );
+
+                    $post_title = empty( $post->post_title )
+                        ? sprintf( __( 'Post %1$s', 'opusprimus' ), $post_ID )
+                        : $post->post_title;
+
+                    $post_trail .= '<li><a href="#">' . $post_title . '</li>';
     
                 $post_trail .= '</ul><!-- breadcrumb -->';
 
@@ -156,6 +155,74 @@ class OpusPrimusBreadcrumbs {
 
 
     /**
+     * Post Format Name
+     * Display the Post Format name as part of the post trail
+     *
+     * @package OpusPrimus
+     * @since   1.1
+     *
+     * @param   $post - global post object
+     * @param   $post_trail - existing post trail
+     * @param   $post_ID - post ID, since breadcrumbs are outside of the_Loop
+     *
+     * @uses    get_post_format
+     * @uses    get_post_format_link
+     * @uses    get_post_format_string
+     *
+     * @return  null|string
+     */
+    function post_format_name( $post_ID, $post, $post_trail ) {
+
+        $post_format_name = get_post_format_string( get_post_format( $post_ID ) );
+        $post_format_output = '<a href="' . get_post_format_link( get_post_format( $post_ID ) ) . '" title="' . sprintf( __( 'View the %1$s archive.', 'opusprimus' ), $post->post_title ) . '">' . $post_format_name . '</a>';
+
+        $post_trail .= '<li>' . $post_format_output . '</li>';
+
+        return $post_trail;
+
+    } /** End function - post format name */
+
+
+    /**
+     * Breadcrumb Categories
+     * Adds the post categories to the post trail
+     *
+     * @package OpusPrimus
+     * @since   1.1
+     *
+     * @param   $post_trail - existing post trail
+     * @param   $post_ID - post ID, since breadcrumbs are outside of the_Loop
+     *
+     * @uses    get_the_category
+     * @uses    home_url
+     *
+     * @return  null|string
+     */
+    function breadcrumb_categories( $post_trail, $post_ID ) {
+
+        /** Add categories unordered list to post trail */
+        $post_trail .= '<li><ul class="post-trail-categories">';
+
+            $post_categories = get_the_category($post_ID);
+            /** Loop through categories */
+            foreach ($post_categories as $category) {
+
+                $post_trail .= '<li>';
+                    $post_trail .= '<a href="' . home_url('/?cat=') . $category->cat_ID . '">' . $category->name . '</a>';
+                $post_trail .= '</li>';
+
+            } /** End for - categories loop */
+
+        /** Close categories unordered list */
+        $post_trail .= '</ul></li>';
+
+        /** Return categories part of post trail to be added to post trail */
+        return $post_trail;
+
+    } /** End function - breadcrumb categories */
+
+
+    /**
      * The Trail
      * Create the trail of breadcrumbs
      *
@@ -166,8 +233,6 @@ class OpusPrimusBreadcrumbs {
      * @uses        OpusPrimusBreadcrumbs::breadcrumbs
      * @uses        get_post
      * @uses        home_url
-     *
-     * @todo Address pages without titles ... use Post ID?
      */
     function the_trail() {
 
@@ -186,8 +251,12 @@ class OpusPrimusBreadcrumbs {
 
                     foreach ( $this->breadcrumbs() as $steps ) {
 
+                        $post_title = empty( get_post( $steps )->post_title )
+                            ? sprintf( __( 'Page ID: %1$s', 'opusprimus' ), get_post( $steps )->ID )
+                            : get_post( $steps )->post_title;
+
                         $trail .= '<li>'
-                            . '<a title="' . get_post( $steps )->post_title . '" href="' . home_url( '/?page_id=' ) . get_post( $steps )->ID . '">' . get_post( $steps )->post_title . '</a>'
+                            . '<a title="' . $post_title . '" href="' . home_url( '/?page_id=' ) . get_post( $steps )->ID . '">' . $post_title . '</a>'
                             . '</li>';
 
                     } /** End foreach - steps */

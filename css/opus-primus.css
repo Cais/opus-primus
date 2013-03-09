@@ -791,8 +791,8 @@ ul.breadcrumb li:last-child a:before,
     display: none;
 }
 
-ul.breadcrumb li ul.blog-trail-categories li:last-child a:before,
-ul.breadcrumb li ul.blog-trail-categories li:last-child a:after {
+ul.breadcrumb li ul.post-trail-categories li:last-child a:before,
+ul.breadcrumb li ul.post-trail-categories li:last-child a:after {
     display: block;
 }
 
@@ -801,12 +801,12 @@ ul.breadcrumb li a:hover {
     font-weight: bold;
 }
 
-ul.breadcrumb li ul.blog-trail-categories li {
+ul.breadcrumb li ul.post-trail-categories li {
     display: none;
     list-style-type: none;
 }
 
-ul.breadcrumb li ul.blog-trail-categories li:first-child {
+ul.breadcrumb li ul.post-trail-categories li:first-child {
     display: block;
 }
 /** End: Breadcrumbs -------------------------------------------------------- */
