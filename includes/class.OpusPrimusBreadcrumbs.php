@@ -133,7 +133,7 @@ class OpusPrimusBreadcrumbs {
                     $post_trail = $this->breadcrumb_categories( $post_trail, $post_ID );
 
                     /** @var $post_trail - add Post Format name */
-                    $post_trail = $this->post_format_name( $post_ID, $post, $post_trail );
+                    $post_trail = $this->post_format_name( $post_ID, $post_trail );
 
                     $post_title = empty( $post->post_title )
                         ? sprintf( __( 'Post %1$s', 'opusprimus' ), $post_ID )
@@ -161,7 +161,6 @@ class OpusPrimusBreadcrumbs {
      * @package OpusPrimus
      * @since   1.1
      *
-     * @param   $post - global post object
      * @param   $post_trail - existing post trail
      * @param   $post_ID - post ID, since breadcrumbs are outside of the_Loop
      *
@@ -171,10 +170,11 @@ class OpusPrimusBreadcrumbs {
      *
      * @return  null|string
      */
-    function post_format_name( $post_ID, $post, $post_trail ) {
+    function post_format_name( $post_ID, $post_trail ) {
 
         $post_format_name = get_post_format_string( get_post_format( $post_ID ) );
-        $post_format_output = '<a href="' . get_post_format_link( get_post_format( $post_ID ) ) . '" title="' . sprintf( __( 'View the %1$s archive.', 'opusprimus' ), $post->post_title ) . '">' . $post_format_name . '</a>';
+
+        $post_format_output = '<a href="' . get_post_format_link( get_post_format( $post_ID ) ) . '" title="' . sprintf( __( 'View the %1$s archive.', 'opusprimus' ), $post_format_name ) . '">' . $post_format_name . '</a>';
 
         $post_trail .= '<li>' . $post_format_output . '</li>';
 
