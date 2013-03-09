@@ -108,6 +108,8 @@ class OpusPrimusBreadcrumbs {
      * @uses    is_singular
      *
      * @return  null|string
+     *
+     * @todo Add sticky posts?
      */
     function post_breadcrumbs() {
 
@@ -129,7 +131,7 @@ class OpusPrimusBreadcrumbs {
                         . '<a href="' . home_url( '/' ) . '">' . __( 'Home', 'opusprimus' ) . '</a>'
                         . '</li>';
 
-                    /** @var $post_trail - add post categories */
+                    /** @var $post_trail - add breadcrumb categories */
                     $post_trail = $this->breadcrumb_categories( $post_trail, $post_ID );
 
                     /** @var $post_trail - add Post Format name */

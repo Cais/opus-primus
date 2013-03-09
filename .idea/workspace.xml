@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="* Fix Post Format name being passed to title attribute">
+    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusBreadcrumbs.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusBreadcrumbs.php" />
     </list>
@@ -29,21 +29,12 @@
       <file leaf-file-name="class.OpusPrimusBreadcrumbs.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusBreadcrumbs.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="107" selection-start="4032" selection-end="4032" vertical-scroll-proportion="-0.7081413">
+            <state line="133" column="57" selection-start="4312" selection-end="4312" vertical-scroll-proportion="0.23502304">
               <folding>
-                <marker date="1362871450330" expanded="true" signature="6767:6814" placeholder="..." />
-                <marker date="1362871450330" expanded="true" signature="7892:7929" placeholder="..." />
-                <marker date="1362871450330" expanded="true" signature="8378:8420" placeholder="..." />
+                <marker date="1362871708072" expanded="true" signature="6811:6858" placeholder="..." />
+                <marker date="1362871708072" expanded="true" signature="7936:7973" placeholder="..." />
+                <marker date="1362871708072" expanded="true" signature="8422:8464" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="archive.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/archive.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="52" selection-start="1610" selection-end="1610" vertical-scroll-proportion="-23.538462">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -160,7 +151,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="includes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1628,7 +1619,11 @@
       <created>1362870522181</created>
       <updated>1362870522181</updated>
     </task>
-    <option name="localTasksCounter" value="319" />
+    <task id="LOCAL-00319" summary="* Fix Post Format name being passed to title attribute">
+      <created>1362871531012</created>
+      <updated>1362871531012</updated>
+    </task>
+    <option name="localTasksCounter" value="320" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1725,7 +1720,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Fix no title issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Fix Post Format name being passed to title attribute" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1738,7 +1733,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Add 'theme-support.txt' to the documentation folder" />
     <MESSAGE value="Add 'theme-version-guidelines.txt' to documentation" />
     <MESSAGE value="Documentation adjustments to &quot;read&quot; better in a markdown manner" />
     <MESSAGE value="Set theme Version to 1.0 ... almost ready for release!" />
@@ -1763,6 +1757,7 @@
     <MESSAGE value="* Refactored `post_title` into its own method" />
     <MESSAGE value="* Reversion to pre-post_title as Post ID" />
     <MESSAGE value="* Fix no title issues" />
+    <MESSAGE value="* Fix Post Format name being passed to title attribute" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1851,11 +1846,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusBreadcrumbs.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="107" selection-start="4032" selection-end="4032" vertical-scroll-proportion="-0.7081413">
+        <state line="133" column="57" selection-start="4312" selection-end="4312" vertical-scroll-proportion="0.23502304">
           <folding>
-            <marker date="1362871450330" expanded="true" signature="6767:6814" placeholder="..." />
-            <marker date="1362871450330" expanded="true" signature="7892:7929" placeholder="..." />
-            <marker date="1362871450330" expanded="true" signature="8378:8420" placeholder="..." />
+            <marker date="1362871708072" expanded="true" signature="6811:6858" placeholder="..." />
+            <marker date="1362871708072" expanded="true" signature="7936:7973" placeholder="..." />
+            <marker date="1362871708072" expanded="true" signature="8422:8464" placeholder="..." />
           </folding>
         </state>
       </provider>
