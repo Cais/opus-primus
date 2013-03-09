@@ -108,43 +108,50 @@ class OpusPrimusBreadcrumbs {
         /** Sanity check - are we on a single view template and single */
         if ( is_singular() && is_single() ) {
 
+            /** Get the global post object */
             global $post;
 
+            /** @var $post_ID - the post ID, since its outside the_Loop */
             $post_ID = $post->ID;
 
+            /** @var $post_trail - variable holding the output */
             $post_trail = '<div id="breadcrumbs">';
-
             $post_trail .= '<ul class="breadcrumb">';
 
-                $post_trail .= '<li>'
-                    . '<a href="' . home_url( '/' ) . '">' . __( 'Home', 'opusprimus' ) . '</a>'
-                    . '</li>';
+            /** Create "Home" link at beginning of trail */
+            $post_trail .= '<li>'
+                . '<a href="' . home_url( '/' ) . '">' . __( 'Home', 'opusprimus' ) . '</a>'
+                . '</li>';
 
-                $post_trail .= '<li><ul class="blog-trail-categories">';
+            /** @var $post_categories - holds all post categories */
+            $post_trail .= '<li><ul class="blog-trail-categories">';
+            $post_categories = get_the_category( $post_ID );
+            foreach ( $post_categories as $category ) {
 
-                $blog_categories = get_the_category( $post_ID );
+                $post_trail .= '<li>';
+                $post_trail .= '<a href="' . home_url( '/?cat=' ) . $category->cat_ID . '">' . $category->name . '</a>';
+                $post_trail .= '</li>';
 
-                foreach ( $blog_categories as $category ) {
+            }
+            $post_trail .= '</ul></li>';
 
-                    $post_trail .= '<li>';
-                    $post_trail .= '<a href="' . home_url( '/?cat=' ) . $category->cat_ID . '">' . $category->name . '</a>';
-                    $post_trail .= '</li>';
+            /** @var $flag_text - get post format type as name */
+            $flag_text = get_post_format_string( get_post_format( $post_ID ) );
 
-                }
+            /** @var $post_format_output - create link to Post Format archive */
+            $post_format_output = '<a href="' . get_post_format_link( get_post_format( $post_ID ) ) . '" title="' . sprintf( __( 'View the %1$s archive.', 'opusprimus' ), $post->post_title ) . '">' . $flag_text . '</a>';
 
-                $post_trail .= '</ul></li>';
+            /** Add Post Format archive to trail */
+            $post_trail .= '<li>' . $post_format_output . '</li>';
 
-                $flag_text = get_post_format_string( get_post_format( $post_ID ) );
-                $post_format_output = '<a href="' . get_post_format_link( get_post_format( $post_ID ) ) . '" title="' . sprintf( __( 'View the %1$s archive.', 'opusprimus' ), $post->post_title ) . '">' . $flag_text . '</a>';
+            /** End trail with current post */
+            $post_trail .= '<li><a href="#">' . $post->post_title . '</li>';
 
-                $post_trail .= '<li>' . $post_format_output . '</li>';
-
-                $post_trail .= '<li><a href="#">' . $post->post_title . '</li>';
-
+            /** End trail */
             $post_trail .= '</ul><!-- breadcrumb -->';
-
             $post_trail .= '</div><!-- #breadcrumbs -->';
 
+            /** Return the trail */
             return $post_trail;
 
         } /** End if - is singular */
