@@ -99,6 +99,9 @@ class OpusPrimusBreadcrumbs {
      * @since   1.1
      *
      * @return  null|string
+     *
+     * @todo link category to its archive
+     * @todo link Post-Format to its archive
      */
     function post_breadcrumbs() {
 
@@ -113,42 +116,36 @@ class OpusPrimusBreadcrumbs {
 
             /** @var $post_trail - variable holding the output */
             $post_trail = '<div id="breadcrumbs">';
-            $post_trail .= '<ul class="breadcrumb">';
 
-            /** Create "Home" link at beginning of trail */
-            $post_trail .= '<li>'
-                . '<a href="' . home_url( '/' ) . '">' . __( 'Home', 'opusprimus' ) . '</a>'
-                . '</li>';
+                $post_trail .= '<ul class="breadcrumb">';
+    
+                    $post_trail .= '<li>'
+                        . '<a href="' . home_url( '/' ) . '">' . __( 'Home', 'opusprimus' ) . '</a>'
+                        . '</li>';
+    
+                    $post_trail .= '<li><ul class="blog-trail-categories">';
+    
+                    $post_categories = get_the_category( $post_ID );
+                    foreach ( $post_categories as $category ) {
+    
+                        $post_trail .= '<li>';
+                        $post_trail .= '<a href="' . home_url( '/?cat=' ) . $category->cat_ID . '">' . $category->name . '</a>';
+                        $post_trail .= '</li>';
+    
+                    }
+                    $post_trail .= '</ul></li>';
+    
+                    $flag_text = get_post_format_string( get_post_format( $post_ID ) );
+                    $post_format_output = '<a href="' . get_post_format_link( get_post_format( $post_ID ) ) . '" title="' . sprintf( __( 'View the %1$s archive.', 'opusprimus' ), $post->post_title ) . '">' . $flag_text . '</a>';
+    
+                    $post_trail .= '<li>' . $post_format_output . '</li>';
+    
+                    $post_trail .= '<li><a href="#">' . $post->post_title . '</li>';
+    
+                $post_trail .= '</ul><!-- breadcrumb -->';
 
-            /** @var $post_categories - holds all post categories */
-            $post_trail .= '<li><ul class="post-trail-categories">';
-            $post_categories = get_the_category( $post_ID );
-            foreach ( $post_categories as $category ) {
-
-                $post_trail .= '<li>';
-                $post_trail .= '<a href="' . home_url( '/?cat=' ) . $category->cat_ID . '">' . $category->name . '</a>';
-                $post_trail .= '</li>';
-
-            }
-            $post_trail .= '</ul></li>';
-
-            /** @var $post_format_name - get post format type as name */
-            $post_format_name = get_post_format_string( get_post_format( $post_ID ) );
-
-            /** @var $post_format_link - create link to Post Format archive */
-            $post_format_link = '<a href="' . get_post_format_link( get_post_format( $post_ID ) ) . '" title="' . sprintf( __( 'View the %1$s archive.', 'opusprimus' ), $post->post_title ) . '">' . $post_format_name . '</a>';
-
-            /** Add Post Format archive to trail */
-            $post_trail .= '<li>' . $post_format_link . '</li>';
-
-            /** @var $post_trail - re-initialized */
-            $post_trail = $this->post_title( $post, $post_trail );
-
-            /** End trail */
-            $post_trail .= '</ul><!-- breadcrumb -->';
             $post_trail .= '</div><!-- #breadcrumbs -->';
 
-            /** Return the trail */
             return $post_trail;
 
         } /** End if - is singular */
@@ -156,33 +153,6 @@ class OpusPrimusBreadcrumbs {
         return null;
 
     } /** End function - post_breadcrumbs */
-
-
-    /**
-     * Post Title
-     * Returns either the post title, if it exists; or the "Post ID" if there is
-     * no title used.
-     *
-     * @package OpusPrimus
-     * @since   1.1
-     *
-     * @param   $post
-     * @param   $post_trail
-     *
-     * @return  string
-     */
-    function post_title( $post, $post_trail ) {
-        /** End trail with current post */
-        /** @var $post_title - handle empty post title */
-        $post_title = empty( $post->post_title )
-            ? sprintf( __( 'Post %1$s', 'opusprimus' ), $post->ID )
-            : $post->post_title;
-
-        $post_trail .= '<li><a href="#">' . $post_title . '</li>';
-
-        return $post_trail;
-
-    } /** End function - post title */
 
 
     /**
