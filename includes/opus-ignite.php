@@ -38,6 +38,10 @@
  * @version 1.0.4
  * @date    March 1, 2013
  * Added call to 'Breadcrumbs' class
+ *
+ * @version 1.1
+ * @date    March 9, 2013
+ * Added call to 'Header' class
  */
 
 /** Set CONSTANTS */
@@ -58,6 +62,8 @@ require_once( OPUS_INC . 'class.OpusPrimusDefaults.php' );
 require_once( OPUS_INC . 'class.OpusPrimusNavigation.php' );
 /** Add Structures */
 require_once( OPUS_INC . 'class.OpusPrimusStructures.php' );
+/** Add Headers */
+require_once( OPUS_INC . 'class.OpusPrimusHeader.php' );
 /** Add Posts */
 require_once( OPUS_INC . 'class.OpusPrimusPosts.php' );
 /** Add Comments Hooks */

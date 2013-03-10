@@ -372,23 +372,6 @@ class OpusPrimusStructures {
 
 
     /**
-     * Custom Header Image
-     * Returns the string to display the custom header image.
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @uses    get_header_image
-     *
-     * @return string
-     */
-    function custom_header_image() {
-        $header_image = '<img class="opus-custom-header" src="' . get_header_image() . '" alt="" />';
-        return $header_image;
-    } /** End function - custom header image */
-
-
-    /**
      * Layout - Close
      * Closes appropriate CSS containers depending on the layout structure.
      *
@@ -588,44 +571,6 @@ class OpusPrimusStructures {
         return $new_text;
 
     } /** End function - replace spaces */
-
-
-    /**
-     * Show Custom Header Image
-     * Writes to the screen the URL return by custom_header_image
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @uses    get_header_image
-     */
-    function show_custom_header_image() {
-        if ( get_header_image() ) {
-            echo $this->custom_header_image();
-        } /** End if - get header image */
-    } /** End function - show custom header image */
-
-
-    /**
-     * Show Custom Header Image Block
-     * Outputs the Custom Header image wrapped in action hooks
-     *
-     * @package OpusPrimus
-     * @since   1.1
-     *
-     * @uses    OpusPrimusStructures::show_custom_header_image
-     * @uses    do_action
-     */
-    function show_custom_header_image_block() {
-        /** Add empty hook before custom header image */
-        do_action( 'opus_custom_header_image_before' );
-
-        $this->show_custom_header_image();
-
-        /** Add empty hook after custom header image */
-        do_action( 'opus_custom_header_image_after' );
-
-    } /** End function - show custom header image block */
 
 
     /**

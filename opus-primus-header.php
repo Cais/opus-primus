@@ -41,7 +41,10 @@
  * @date    March 1, 2013
  * Added 'Breadcrumbs' for pages
  * Removed `hgroup` container
- */ ?>
+ */
+
+/** Call global class variables */
+global $opus_header; ?>
 
 <header>
 
@@ -52,37 +55,12 @@
         <div id="header-text">
 
             <?php
-            /** Add empty hook before site title */
-            do_action( 'opus_site_title_before' ); ?>
-
-            <h1 id="site-title">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                    <?php bloginfo( 'name' ); ?>
-                </a>
-            </h1><!-- #site-title -->
-
-            <?php
-            /**
-             * Add empty hooks between the site title and description ... now we're
-             * really writing Mallory-Everest code but someone might want this.
-             */
-            do_action( 'opus_site_title_after' );
-            do_action( 'opus_site_description_before' ); ?>
-
-            <h2 id="site-description">
-                <?php bloginfo( 'description' ); ?>
-            </h2><!-- #site-description -->
-
-            <?php
-            /** Add empty hook after site description */
-            do_action( 'opus_site_description_after' ); ?>
+            $opus_header->site_title_block();
+            $opus_header->site_description_block(); ?>
 
         </div><!-- #header-text -->
 
-        <?php
-        /** Get Structures global and use to display Custom Header Images */
-        global $opus_structures;
-        $opus_structures->show_custom_header_image_block(); ?>
+        <?php $opus_header->show_custom_header_image_block(); ?>
 
     </div><!-- .masthead -->
 

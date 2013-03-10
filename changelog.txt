@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised March 7, 2013
+Last revised March 9, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.1 ==
@@ -9,6 +9,9 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added `excerpt_more_link` and attached to `excerpt_more` filter
 * Added `anchor_title_text` for use with `excerpt_more_link` and permalinks in the post meta details
 * Added Breadcrumbs trails to pages and posts
+* Created Header class
+* Refactored Structures class to put `site_title`, `site_description`, and `custom_header_image` into Header class
+* Refactored `opus-primus-header` to reflect class/method changes of Structures and Header
 
 = CSS =
 * Added classes to `h2`, `ul`, and `li` elements in `OpusPrimusAuthors::author_details`
