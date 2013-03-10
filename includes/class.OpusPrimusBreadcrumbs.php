@@ -205,12 +205,12 @@ class OpusPrimusBreadcrumbs {
         /** Add categories unordered list to post trail */
         $post_trail .= '<li><ul class="post-trail-categories">';
 
-            $post_categories = get_the_category($post_ID);
+            $post_categories = get_the_category( $post_ID );
             /** Loop through categories */
-            foreach ($post_categories as $category) {
+            foreach ( $post_categories as $category ) {
 
                 $post_trail .= '<li>';
-                    $post_trail .= '<a href="' . home_url('/?cat=') . $category->cat_ID . '">' . $category->name . '</a>';
+                    $post_trail .= '<a href="' . home_url( '/?cat=' ) . $category->cat_ID . '">' . $category->name . '</a>';
                 $post_trail .= '</li>';
 
             } /** End for - categories loop */
