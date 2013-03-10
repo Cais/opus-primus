@@ -41,6 +41,10 @@
  * @date    March 1, 2013
  * Added 'Breadcrumbs' for pages
  * Removed `hgroup` container
+ *
+ * @version 1.1
+ * @date    March 9, 2013
+ * Refactored the site title and description to use Header class methods
  */
 
 /** Call global class variables */
