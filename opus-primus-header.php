@@ -80,14 +80,9 @@
         </div><!-- #header-text -->
 
         <?php
-        /** Add empty hook before custom header image */
-        do_action( 'opus_custom_header_image_before' );
-
+        /** Get Structures global and use to display Custom Header Images */
         global $opus_structures;
-        $opus_structures->show_custom_header_image();
-
-        /** Add empty hook after custom header image */
-        do_action( 'opus_custom_header_image_after' ); ?>
+        $opus_structures->show_custom_header_image_block(); ?>
 
     </div><!-- .masthead -->
 

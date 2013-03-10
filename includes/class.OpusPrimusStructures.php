@@ -607,6 +607,28 @@ class OpusPrimusStructures {
 
 
     /**
+     * Show Custom Header Image Block
+     * Outputs the Custom Header image wrapped in action hooks
+     *
+     * @package OpusPrimus
+     * @since   1.1
+     *
+     * @uses    OpusPrimusStructures::show_custom_header_image
+     * @uses    do_action
+     */
+    function show_custom_header_image_block() {
+        /** Add empty hook before custom header image */
+        do_action( 'opus_custom_header_image_before' );
+
+        $this->show_custom_header_image();
+
+        /** Add empty hook after custom header image */
+        do_action( 'opus_custom_header_image_after' );
+
+    } /** End function - show custom header image block */
+
+
+    /**
      * the_Loop
      * The most basic structure for the posts loop
      *
