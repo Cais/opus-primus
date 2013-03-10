@@ -174,11 +174,18 @@ class OpusPrimusBreadcrumbs {
      */
     function post_format_name( $post_ID, $post_trail ) {
 
+        /** @var $post_format_name - get Post Format name */
         $post_format_name = get_post_format_string( get_post_format( $post_ID ) );
 
+        /** @var $post_format_output - create link to Post Format archive */
         $post_format_output = '<a href="' . get_post_format_link( get_post_format( $post_ID ) ) . '" title="' . sprintf( __( 'View the %1$s archive.', 'opusprimus' ), $post_format_name ) . '">' . $post_format_name . '</a>';
 
-        $post_trail .= '<li>' . $post_format_output . '</li>';
+        /** Only show Post Format if it is not the Standard */
+        if ( 'Standard' == $post_format_name ) {
+            $post_trail .= '';
+        } else {
+            $post_trail .= '<li>' . $post_format_output . '</li>';
+        } /** End if - standard is post format name */
 
         return $post_trail;
 
