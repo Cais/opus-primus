@@ -183,5 +183,5 @@ class OpusPrimusHeader {
 } /** End class - OpusPrimusHeader */
 
 
-/** @var $opus_header - initialize class */
-$opus_header = new OpusPrimusHeader();
+/** @var $opus_headers - initialize class */
+$opus_headers = new OpusPrimusHeader();

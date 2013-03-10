@@ -63,7 +63,7 @@ require_once( OPUS_INC . 'class.OpusPrimusNavigation.php' );
 /** Add Structures */
 require_once( OPUS_INC . 'class.OpusPrimusStructures.php' );
 /** Add Headers */
-require_once( OPUS_INC . 'class.OpusPrimusHeader.php' );
+require_once( OPUS_INC . 'class.OpusPrimusHeaders.php' );
 /** Add Posts */
 require_once( OPUS_INC . 'class.OpusPrimusPosts.php' );
 /** Add Comments Hooks */

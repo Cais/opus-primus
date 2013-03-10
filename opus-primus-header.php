@@ -48,7 +48,7 @@
  */
 
 /** Call global class variables */
-global $opus_header; ?>
+global $opus_headers; ?>
 
 <header>
 
@@ -59,12 +59,12 @@ global $opus_header; ?>
         <div id="header-text">
 
             <?php
-            $opus_header->site_title_block();
-            $opus_header->site_description_block(); ?>
+            $opus_headers->site_title_block();
+            $opus_headers->site_description_block(); ?>
 
         </div><!-- #header-text -->
 
-        <?php $opus_header->show_custom_header_image_block(); ?>
+        <?php $opus_headers->show_custom_header_image_block(); ?>
 
     </div><!-- .masthead -->
 
