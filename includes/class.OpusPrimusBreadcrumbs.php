@@ -106,10 +106,9 @@ class OpusPrimusBreadcrumbs {
      * @uses    home_url
      * @uses    is_single
      * @uses    is_singular
+     * @uses    is_sticky
      *
      * @return  null|string
-     *
-     * @todo Add sticky posts?
      */
     function post_breadcrumbs() {
 
@@ -127,8 +126,8 @@ class OpusPrimusBreadcrumbs {
 
                 $post_trail .= '<ul class="breadcrumb">';
     
-                    $post_trail .= '<li>'
-                        . '<a href="' . home_url( '/' ) . '">' . __( 'Home', 'opusprimus' ) . '</a>'
+                    $post_trail .= '<li class="post-breadcrumbs-home-text">'
+                        . '<a href="' . home_url( '/' ) . '">' . apply_filters( 'opus_post_breadcrumbs_home_text', __( 'Home', 'opusprimus' ) ) . '</a>'
                         . '</li>';
 
                     /** @var $post_trail - add breadcrumb categories */
@@ -137,13 +136,17 @@ class OpusPrimusBreadcrumbs {
                     /** @var $post_trail - add Post Format name */
                     $post_trail = $this->post_format_name( $post_ID, $post_trail );
 
+                    /** If post is sticky add Sticky Post text */
+                    if ( is_sticky( $post_ID ) ) {
+                        $post_trail .= sprintf( '<li class="post-breadcrumbs-sticky-text"><a href="#">%1$s</a></li>',
+                            apply_filters( 'opus_post_breadcrumbs_sticky_text',
+                                __( 'Sticky Post', 'opusprimus' ) )
+                        );
+                    } /** Enf if - is sticky */
+
                     $post_title = empty( $post->post_title )
                         ? sprintf( __( 'Post %1$s', 'opusprimus' ), $post_ID )
                         : $post->post_title;
-
-                    if ( is_sticky( $post_ID ) ) {
-                        $post_trail .= sprintf( '<li><a href="#">%1$s</a></li>', __( 'Sticky Post', 'opusprimus' ) );
-                    } /** Enf if - is sticky */
 
                     $post_trail .= '<li><a href="#">' . $post_title . '</li>';
     
@@ -301,11 +304,6 @@ class OpusPrimusBreadcrumbs {
         echo $this->the_trail();
         /** Used on posts */
         echo $this->post_breadcrumbs();
-
-        global $post;
-        if ( is_sticky( $post->ID ) ) {
-            echo 'BACON!!!';
-        }
 
     } /** End function - show the trail */
 
