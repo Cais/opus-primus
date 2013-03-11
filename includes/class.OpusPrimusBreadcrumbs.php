@@ -139,9 +139,7 @@ class OpusPrimusBreadcrumbs {
                     /** If post is sticky add Sticky Post text */
                     if ( is_sticky( $post_ID ) ) {
                         $post_trail .= sprintf( '<li class="post-breadcrumbs-sticky-text"><a href="#">%1$s</a></li>',
-                            apply_filters( 'opus_post_breadcrumbs_sticky_text',
-                                __( 'Sticky Post', 'opusprimus' ) )
-                        );
+                            apply_filters( 'opus_post_breadcrumbs_sticky_text', __( 'Sticky Post', 'opusprimus' ) ) );
                     } /** Enf if - is sticky */
 
                     /** @var $post_title - sets Post Title to ID if empty */
@@ -149,7 +147,7 @@ class OpusPrimusBreadcrumbs {
                         ? sprintf( __( 'Post %1$s', 'opusprimus' ), $post_ID )
                         : $post->post_title;
 
-                    $post_trail .= '<li><a href="#">' . $post_title . '</li>';
+                    $post_trail .= '<li><a href="#">' . $post_title . '</a></li>';
     
                 $post_trail .= '</ul><!-- breadcrumb -->';
 
