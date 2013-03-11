@@ -144,6 +144,7 @@ class OpusPrimusBreadcrumbs {
                         );
                     } /** Enf if - is sticky */
 
+                    /** @var $post_title - sets Post Title to ID if empty */
                     $post_title = empty( $post->post_title )
                         ? sprintf( __( 'Post %1$s', 'opusprimus' ), $post_ID )
                         : $post->post_title;
