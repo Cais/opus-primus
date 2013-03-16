@@ -16,6 +16,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = CSS =
 * Added classes to `h2`, `ul`, and `li` elements in `OpusPrimusAuthors::author_details`
+* Center content of Post Format: Video posts.
 
 /** ------------------------------------------------------------------------- */
 == Version 1.0.4 ==

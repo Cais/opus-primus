@@ -1208,6 +1208,9 @@ td.archive-image-excerpt {
 /** End: Post-Format: Image ------------------------------------------------- */
 
 /** === Post-Format: Video === ---------------------------------------------- */
+div.post.format-video div.post-content p {
+    text-align: center;
+}
 /** End: Post-Format: Video ------------------------------------------------- */
 
 /** === Post-Format: Quote === ---------------------------------------------- */
