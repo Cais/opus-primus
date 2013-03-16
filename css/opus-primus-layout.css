@@ -179,19 +179,19 @@
     overflow: hidden;
 }
 /** 2 Column (left menu) settings */
-.leftmenu {
+.left-menu {
     background: #fff;       /** right column background colour */
 }
-.leftmenu .column-left {
+.left-menu .column-left {
     right: 75%;             /** right column width */
     background: #f4f4f4;    /** left column background colour */
 }
-.leftmenu .the-loop {
+.left-menu .the-loop {
     width: 71%;             /** right column content width */
     left:102%;              /** 100% plus left column left padding */
 }
-.leftmenu .first-sidebar,
-.leftmenu .second-sidebar {
+.left-menu .first-sidebar,
+.left-menu .second-sidebar {
     width: 21%;             /** left column content width (column width minus left and right padding) */
     left: 6%;               /** (right column left and right padding) plus (left column left padding) */
 }
