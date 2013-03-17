@@ -18,6 +18,9 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added classes to `h2`, `ul`, and `li` elements in `OpusPrimusAuthors::author_details`
 * Center content of Post Format: Video posts.
 
+= Miscellaneous =
+* Removed unused style sheet 'opus-primus-responsive-layout.css'
+
 /** ------------------------------------------------------------------------- */
 == Version 1.0.4 ==
 * Released March 2013
