@@ -34,8 +34,6 @@
  * @version 1.1
  * @date    March 16, 2013
  * Limit width to a maximum of 1000px
- *
- * @todo Review if the value of $content_width can be passed as the limit
  */
 
 jQuery( document ).ready( function( $ ) {

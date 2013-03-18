@@ -54,6 +54,7 @@
  * @date    ...
  *
  * @todo Comments could use some styling ... they really are rather bland
+ * @todo Review if the value of $content_width can be passed as the limit (see 'opus-primus-full-size-video.js')
  */
 
 global $opus_structures;
