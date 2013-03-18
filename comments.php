@@ -117,7 +117,7 @@ global $wp_query, $opus_navigation; ?>
                     } /** End if - comments count */ ?>
                 </div><!-- #comments-only -->
 
-            <?php } ?>
+            <?php } /** End if - not empty - comments */ ?>
 
             <?php if ( ! empty( $comments_by_type['pingback'] ) ) { ?>
 
@@ -131,7 +131,7 @@ global $wp_query, $opus_navigation; ?>
                     } /** End if - comments count */ ?>
                 </div><!-- #pingbacks-only -->
 
-            <?php } ?>
+            <?php } /** End if - not empty - pingbacks */ ?>
 
             <?php if ( ! empty( $comments_by_type['trackback'] ) ) { ?>
 
@@ -145,7 +145,7 @@ global $wp_query, $opus_navigation; ?>
                     } /** End if - comments count */ ?>
                 </div><!-- #trackbacks-only -->
 
-            <?php } ?>
+            <?php } /** End if - not empty - trackbacks */ ?>
 
         </div><!-- #comment-tabs -->
 
