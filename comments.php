@@ -111,7 +111,10 @@ global $wp_query, $opus_navigation; ?>
                     <ul class="comments-list">
                         <?php wp_list_comments( 'type=comment' ); ?>
                     </ul><!-- comments-list -->
-                    <?php $opus_navigation->comments_navigation(); ?>
+                    <?php
+                    if ( get_option( 'comments_per_page' ) < count( $wp_query->comments_by_type['comment'] ) ) {
+                        $opus_navigation->comments_navigation();
+                    } /** End if - comments count */ ?>
                 </div><!-- #comments-only -->
 
             <?php } ?>
@@ -122,7 +125,10 @@ global $wp_query, $opus_navigation; ?>
                     <ul class="pingbacks-list">
                         <?php wp_list_comments( 'type=pingback' ); ?>
                     </ul><!-- pingbacks-list -->
-                    <?php $opus_navigation->comments_navigation(); ?>
+                    <?php
+                    if ( get_option( 'comments_per_page' ) < count( $wp_query->comments_by_type['pingback'] ) ) {
+                        $opus_navigation->comments_navigation();
+                    } /** End if - comments count */ ?>
                 </div><!-- #pingbacks-only -->
 
             <?php } ?>
@@ -133,7 +139,10 @@ global $wp_query, $opus_navigation; ?>
                     <ul class="trackbacks-list">
                         <?php wp_list_comments( 'type=trackback' ); ?>
                     </ul><!-- trackbacks-list -->
-                    <?php $opus_navigation->comments_navigation(); ?>
+                    <?php
+                    if ( get_option( 'comments_per_page' ) < count( $wp_query->comments_by_type['trackback'] ) ) {
+                        $opus_navigation->comments_navigation();
+                    } /** End if - comments count */ ?>
                 </div><!-- #trackbacks-only -->
 
             <?php } ?>
