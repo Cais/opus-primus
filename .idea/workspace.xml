@@ -7,7 +7,7 @@
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363647031260" ignored="false" />
+    <file path="/Dummy.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363647948661" ignored="false" />
     <file path="/opus-primus-header.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363452033046" ignored="false" />
     <file path="$PROJECT_DIR$/../wpfirstaid/opus-primus-header.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363452033046" ignored="false" />
     <file path="$PROJECT_DIR$/../wpfirstaid/wpfirstaid-header-layout.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363447365297" ignored="false" />
@@ -23,7 +23,7 @@
     <file path="/opus-primus-responsive-layout.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363549085306" ignored="false" />
     <file path="$PROJECT_DIR$/../wpfirstaid/.idea/workspace.xml" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363556537351" ignored="false" />
     <file path="/opus-primus-media-queries.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363550152353" ignored="false" />
-    <file path="/comments.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363647792008" ignored="false" />
+    <file path="/comments.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363649621560" ignored="false" />
     <file path="/opus-primus-comment-tabs.js" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363641262246" ignored="false" />
     <file path="/class.OpusPrimusComments.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363647721624" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -75,7 +75,7 @@
       <file leaf-file-name="comments.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/comments.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="133" column="44" selection-start="5832" selection-end="5832" vertical-scroll-proportion="2.8689759">
+            <state line="96" column="32" selection-start="4018" selection-end="4018" vertical-scroll-proportion="0.5903614">
               <folding>
                 <element signature="e#6#1376#0" expanded="true" />
               </folding>
@@ -1854,7 +1854,11 @@
       <created>1363647036809</created>
       <updated>1363647036809</updated>
     </task>
-    <option name="localTasksCounter" value="345" />
+    <task id="LOCAL-00345" summary="* Code formatting and block termination comments">
+      <created>1363647954775</created>
+      <updated>1363647954775</updated>
+    </task>
+    <option name="localTasksCounter" value="346" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1959,7 +1963,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Fix extra space caused by empty comment navigation container" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Code formatting and block termination comments" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1973,7 +1977,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="* More Blog Breadcrumbs work ... still needs a lot more work" />
     <MESSAGE value="* Removed `media=&quot;all&quot;` as not required in stylesheet call" />
     <MESSAGE value="* Tidied up the Breadcrumbs class&#10;* Refactored the display methods from two to one; adjusted the header call appropriately&#10;* Updated 'changelog' and added FAQ re: Breadcrumbs to 'readme'" />
     <MESSAGE value="* Add basic documentation to post breadcrumbs method" />
@@ -1998,6 +2001,7 @@
     <MESSAGE value="* Removed unused style sheet 'opus-primus-responsive-layout.css'" />
     <MESSAGE value="* Added Comment Tabs for each type (Comment, Pingback, and Trackback)" />
     <MESSAGE value="* Fix extra space caused by empty comment navigation container" />
+    <MESSAGE value="* Code formatting and block termination comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2108,7 +2112,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/comments.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="44" selection-start="5832" selection-end="5832" vertical-scroll-proportion="2.8689759">
+        <state line="96" column="32" selection-start="4018" selection-end="4018" vertical-scroll-proportion="0.5903614">
           <folding>
             <element signature="e#6#1376#0" expanded="true" />
           </folding>

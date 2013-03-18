@@ -59,7 +59,8 @@ global $wp_query, $opus_navigation; ?>
                     <li id="comments-only-tab">
                         <a href="#comments-only">
                             <h3 id="comments">
-                                <?php printf(
+                                <?php
+                                printf(
                                     _n(
                                         __( '%1$s Comment', 'opusprimus' ),
                                         __( '%1$s Comments', 'opusprimus' ),
@@ -75,7 +76,8 @@ global $wp_query, $opus_navigation; ?>
                     <li id="pingbacks-only-tab">
                         <a href="#pingbacks-only">
                             <h3 id="pingbacks">
-                                <?php printf(
+                                <?php
+                                printf(
                                 _n(
                                     __( '%1$s Pingback', 'opusprimus' ),
                                     __( '%1$s Pingbacks', 'opusprimus' ),
@@ -91,7 +93,8 @@ global $wp_query, $opus_navigation; ?>
                     <li id="trackbacks-only-tab">
                         <a href="#trackbacks-only">
                             <h3 id="trackbacks">
-                                <?php printf(
+                                <?php
+                                printf(
                                 _n(
                                     __( '%1$s Trackback', 'opusprimus' ),
                                     __( '%1$s Trackbacks', 'opusprimus' ),
