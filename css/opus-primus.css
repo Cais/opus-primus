@@ -63,6 +63,7 @@
  * === Search ===
  *
  * === Comments ===
+ * === Comment Tabs ===
  *
  * === Sidebars ===
  * === Default Widgets ===
@@ -973,6 +974,47 @@ div.comments-wrapper ul.comments-list li.comment {
 .trackback .reply {
     display: none;
 }
+
+/** === Comment Tabs === ---------------------------------------------------- */
+/** Required Style */
+.ui-tabs-hide { display: none; }
+
+/** Additional Styles */
+div#comments-only,
+div#pingbacks-only,
+div#trackbacks-only {
+    clear: both;
+}
+
+.ui-tabs {
+    clear: both;
+    list-style: none;
+    margin: 5px;
+    padding: 0;
+}
+
+.ui-tabs li {
+    float: left;
+    margin: 0 5px 0 0;
+    padding: 0;
+}
+
+.ui-tabs a {
+    text-decoration: none;
+    display: block;
+    padding: 5px 15px 3px 15px;
+    border: 1px solid #999;
+    border-bottom: none;
+}
+
+.ui-tabs-panel {
+    clear: left;
+    border: 1px solid #999;
+    padding: 10px;
+    background-color: #FFC;
+}
+
+/** End: Comment Tabs ------------------------------------------------------- */
 
 /** End: Comments ----------------------------------------------------------- */
 
