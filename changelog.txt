@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised March 16, 2013
+Last revised March 18, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.1 ==
@@ -16,6 +16,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = CSS =
 * Added classes to `h2`, `ul`, and `li` elements in `OpusPrimusAuthors::author_details`
+* Add minor comments styles
 * Center content of Post Format: Video posts.
 
 = Miscellaneous =

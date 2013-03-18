@@ -44,6 +44,10 @@
  * @version 1.0.4
  * @date    March 1, 2013
  * Added 'Breadcrumbs' section for pages
+ *
+ * @version 1.1
+ * @date    March 18, 2013
+ * Add minor comments styles
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -958,6 +962,10 @@ p.form-allowed-tags + p.form-submit {
 
 .comment div.reply {
     text-align: right;
+}
+
+div.comments-wrapper ul.comments-list li.comment {
+    border-left: solid #d3d3d3 1px;
 }
 
 /** Do not display the reply button on trackbacks and pingbacks */
