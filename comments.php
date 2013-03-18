@@ -30,6 +30,11 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
+ * @version 1.1
+ * @date    March 18, 2013
+ * Added additional list wrapper around each comment type
+ * Fixed comments (only) count output
+ *
  * @todo Review general commentary look and feel ... make more unique to OP
  */
 
@@ -45,47 +50,65 @@ global $wp_query, $opus_navigation; ?>
             <?php comments_number( __( 'No Responses', 'opusprimus' ), __( 'One Response', 'opusprimus' ), __( '% Responses', 'opusprimus' ) ); ?>
         </h2><!-- #all-comments -->
 
-        <?php if ( ! empty( $comments_by_type['comment'] ) ) { ?>
-            <h3 id="comments">
-                <?php printf( __( '%1$s Comments', 'opusprimus' ), count( $wp_query->comments_by_type['comment'] ) ); ?>
-            </h3><!-- #comments -->
-            <ul class="comments-list">
-                <?php wp_list_comments( 'type=comment' ); ?>
-            </ul><!-- comments-list -->
-            <?php $opus_navigation->comments_navigation();
-        } /** End if - comments by type - comment */
+        <ul id="comment-tabs">
 
-        if ( ! empty( $comments_by_type['pingback'] ) ) { ?>
-            <h3 id="pingbacks">
-                <?php printf(
-                _n(
-                    __( '%1$s Pingback', 'opusprimus' ),
-                    __( '%1$s Pingbacks', 'opusprimus' ),
-                    count( $wp_query->comments_by_type['pingback'] ) ),
-                count( $wp_query->comments_by_type['pingback'] )
-                ); ?>
-            </h3><!-- #pingbacks -->
-            <ul class="pingbacks-list">
-                <?php wp_list_comments( 'type=pingback' ); ?>
-            </ul><!-- pingbacks-list -->
-            <?php $opus_navigation->comments_navigation();
-        } /** End if - comments by type - pingback */
+            <?php if ( ! empty( $comments_by_type['comment'] ) ) { ?>
+                <li id="comments-only">
+                    <h3 id="comments">
+                        <?php printf(
+                            _n(
+                                __( '%1$s Comment', 'opusprimus' ),
+                                __( '%1$s Comments', 'opusprimus' ),
+                                count( $wp_query->comments_by_type['comment'] ) ),
+                            count( $wp_query->comments_by_type['comment'] )
+                        ); ?>
+                    </h3><!-- #comments -->
+                    <ul class="comments-list">
+                        <?php wp_list_comments( 'type=comment' ); ?>
+                    </ul><!-- comments-list -->
+                </li><!-- #comments-only -->
+                <?php $opus_navigation->comments_navigation();
+            } /** End if - comments by type - comment */
 
-        if ( ! empty( $comments_by_type['trackback'] ) ) { ?>
-            <h3 id="trackbacks">
-                <?php printf(
-                _n(
-                    __( '%1$s Trackback', 'opusprimus' ),
-                    __( '%1$s Trackbacks', 'opusprimus' ),
-                    count( $wp_query->comments_by_type['trackback'] ) ),
-                count( $wp_query->comments_by_type['trackback'] )
-                ); ?>
-            </h3><!-- #trackbacks -->
-            <ul class="trackbacks-list">
-                <?php wp_list_comments( 'type=trackback' ); ?>
-            </ul><!-- trackbacks-list -->
-            <?php $opus_navigation->comments_navigation();
-        } /** End if - comments by type - trackback */
+            if ( ! empty( $comments_by_type['pingback'] ) ) { ?>
+                <li id="pingbacks-only">
+                    <h3 id="pingbacks">
+                        <?php printf(
+                        _n(
+                            __( '%1$s Pingback', 'opusprimus' ),
+                            __( '%1$s Pingbacks', 'opusprimus' ),
+                            count( $wp_query->comments_by_type['pingback'] ) ),
+                        count( $wp_query->comments_by_type['pingback'] )
+                        ); ?>
+                    </h3><!-- #pingbacks -->
+                    <ul class="pingbacks-list">
+                        <?php wp_list_comments( 'type=pingback' ); ?>
+                    </ul><!-- pingbacks-list -->
+                </li><!-- #pingbakcs-only -->
+                <?php $opus_navigation->comments_navigation();
+            } /** End if - comments by type - pingback */
+
+            if ( ! empty( $comments_by_type['trackback'] ) ) { ?>
+                <li id="trackbacks-only">
+                    <h3 id="trackbacks">
+                        <?php printf(
+                        _n(
+                            __( '%1$s Trackback', 'opusprimus' ),
+                            __( '%1$s Trackbacks', 'opusprimus' ),
+                            count( $wp_query->comments_by_type['trackback'] ) ),
+                        count( $wp_query->comments_by_type['trackback'] )
+                        ); ?>
+                    </h3><!-- #trackbacks -->
+                    <ul class="trackbacks-list">
+                        <?php wp_list_comments( 'type=trackback' ); ?>
+                    </ul><!-- trackbacks-list -->
+                </li><!-- #trackbacks-only -->
+                <?php $opus_navigation->comments_navigation();
+            } /** End if - comments by type - trackback */ ?>
+
+        </ul><!-- #comment-tabs -->
+
+    <?php
 
     } /** End if - have comments */
 
