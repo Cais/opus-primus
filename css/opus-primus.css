@@ -881,8 +881,7 @@ div#respond.closed {
 ul.comments-list,
 ul.pingbacks-list,
 ul.trackbacks-list {
-    margin: 0 0 9px 5px;
-    width: 97%;
+    margin: 0 0 9px;
 }
 
 .pingback.odd,
@@ -980,26 +979,19 @@ div.comments-wrapper ul.comments-list li.comment {
 .ui-tabs-hide { display: none; }
 
 /** Additional Styles */
-div#comments-only,
-div#pingbacks-only,
-div#trackbacks-only {
-    clear: both;
-}
-
-.ui-tabs {
-    clear: both;
+.ui-tabs-nav {
     list-style: none;
-    margin: 5px;
+    margin: 0;
     padding: 0;
 }
 
-.ui-tabs li {
+.ui-tabs-nav li {
     float: left;
     margin: 0 5px 0 0;
     padding: 0;
 }
 
-.ui-tabs a {
+.ui-tabs-nav a {
     text-decoration: none;
     display: block;
     padding: 5px 15px 3px 15px;
@@ -1010,12 +1002,8 @@ div#trackbacks-only {
 .ui-tabs-panel {
     clear: left;
     border: 1px solid #999;
-    padding: 10px;
-    background-color: #FFC;
+    padding: 10px 10px 0;
 }
-
-/** Page 10/19 in Kobo reader ... */
-
 /** End: Comment Tabs ------------------------------------------------------- */
 
 /** End: Comments ----------------------------------------------------------- */

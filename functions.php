@@ -67,8 +67,8 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
         wp_enqueue_script( 'opus-primus', OPUS_JS . 'opus-primus.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
         /** Enqueue Opus Primus Full Size Video which will enqueue jQuery as a dependency */
         wp_enqueue_script( 'opus-primus-full-size-video', OPUS_JS . 'opus-primus-full-size-video.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
-        /** Enqueue Opus Primus Comment Tabs */
-        wp_enqueue_script( 'opus-primus-comment-tabs', OPUS_JS . 'opus-primus-comment-tabs.js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-tabs' ), wp_get_theme()->get( 'Version' ), 'true' );
+        /** Enqueue Opus Primus Comment Tabs which will enqueue jQuery, jQuery UI Core, jQuery UI Widget, and jQuery UI Tabs as dependencies */
+        wp_enqueue_script( 'opus-primus-comment-tabs', OPUS_JS . 'opus-primus-comment-tabs.js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-tabs' ), wp_get_theme()->get( 'Version' ), 'true' );
         /** Enqueue Opus Primus Header Image Position (if there is a header image) which will enqueue jQuery as a dependency */
         if ( get_header_image() ) {
             wp_enqueue_script( 'opus-primus-header-image-position', OPUS_JS . 'opus-primus-header-image-position.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
