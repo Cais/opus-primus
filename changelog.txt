@@ -2,6 +2,10 @@
 Last revised March 19, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
+== Version 1.1.1 ==
+* Released ...
+
+/** ------------------------------------------------------------------------- */
 == Version 1.1 ==
 * Released March 2013
 
