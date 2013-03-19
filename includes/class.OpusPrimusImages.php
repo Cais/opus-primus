@@ -69,6 +69,12 @@ class OpusPrimusImages {
      *
      * @return  mixed
      *
+     * @version 1.1
+     * @date    March 19, 2013
+     * @internal Used with `media_send_to_editor` hook but apparently causing
+     * the "Add Media" functionality to fail. Filter hook commented out until
+     * further testing can solve ...
+     *
      * @todo Review if this needs to be adjusted / removed / enhanced ...
      */
     function restore_image_title( $html, $id ) {
