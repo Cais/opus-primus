@@ -46,7 +46,7 @@ class OpusPrimusImages {
     function __construct() {
 
         /** Restore Image Title */
-        add_filter( 'media_send_to_editor', 'restore_image_title', 15, 2 );
+        // add_filter( 'media_send_to_editor', 'restore_image_title', 15, 2 );
 
     } /** End function - constructor */
 
