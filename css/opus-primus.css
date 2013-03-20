@@ -1000,11 +1000,11 @@ div.comments-wrapper ul.comments-list li.comment {
     border-bottom: none;
 }
 
-.ui-state-default {
+.ui-state-default a {
     background-color: #d3d3d3;
 }
 
-.ui-state-active {
+.ui-state-active a {
     background-color: transparent;
 }
 
