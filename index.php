@@ -4,7 +4,7 @@
  * A WordPress Framework Theme.
  *
  * @package     OpusPrimus
- * @version     1.1
+ * @version     1.1.1
  *
  * @internal    RECOMMENDED HTML5
  * @internal    RECOMMENDED CSS3
@@ -35,23 +35,14 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version 1.0.1
- * @date    February 21, 2013
- * Replace `the_loop` method and surrounding code with `the_loop_wrapped`
- * Modified action hooks to more semantic naming convention:
- * `opus_<section>_<placement>`
- *
- * @version 1.0.2
- * @date    February 2013
- *
- * @version 1.0.3
- * @date    February 28, 2013
- *
  * @version 1.0.4
  * @date    March 1, 2013
  *
  * @version 1.1
  * @date    March 19, 2013
+ *
+ * @version 1.1.1
+ * @date    March 20, 2013
  *
  * @todo Comments could use some styling ... they really are rather bland
  * @todo Review if the value of $content_width can be passed as the limit (see 'opus-primus-full-size-video.js')

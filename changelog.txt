@@ -1,9 +1,15 @@
 === Opus Primus changelog.txt ===
-Last revised March 19, 2013
+Last revised March 20, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.1.1 ==
 * Released ...
+
+= CSS =
+* Removed unused element for non-existent 'comments-toggle' script
+
+= Miscellaneous =
+* Code clean-up
 
 /** ------------------------------------------------------------------------- */
 == Version 1.1 ==

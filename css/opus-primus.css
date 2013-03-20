@@ -48,6 +48,10 @@
  * @version 1.1
  * @date    March 18, 2013
  * Add minor comments styles
+ *
+ * @version 1.1.1
+ * @date    March 20, 2013
+ * Removed unused element for non-existent 'comments-toggle' script
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -864,11 +868,6 @@ ul.featured-search-pages {
 /** End: Search ------------------------------------------------------------- */
 
 /** === Comments === -------------------------------------------------------- */
-/** Initial comments-toggle.js class state */
-div#respond.closed {
-    display: none;
-}
-
 .comments-wrapper ul.comments-list,
 .comments-wrapper ul.comments-list li.comment ul.children,
 .comments-wrapper ul.pingbacks-list,
