@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/opus-primus.css" afterPath="$PROJECT_DIR$/css/opus-primus.css" />
+    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="* Used a more specific HTML element to set background color on comment tabs">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comments.php" afterPath="$PROJECT_DIR$/comments.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363809612887" ignored="false" />
+    <file path="/Dummy.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363869032904" ignored="false" />
     <file path="/a.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363106901363" ignored="false" />
     <file path="/a.html" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363107087453" ignored="false" />
     <file path="/a.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363107067982" ignored="false" />
@@ -17,12 +18,13 @@
     <file path="/search.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363187152448" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../website/wp-content/themes/ground-floor/functions.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363200238219" ignored="false" />
     <file path="/opus-primus.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363809930229" ignored="false" />
-    <file path="/comments.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363622816288" ignored="false" />
+    <file path="/comments.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363884597614" ignored="false" />
     <file path="/functions.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363619661859" ignored="false" />
     <file path="/changelog.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363798303624" ignored="false" />
     <file path="/opus-primus-comment-tabs.js" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363621396915" ignored="false" />
     <file path="/readme.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363717783388" ignored="false" />
     <file path="/style.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363798136092" ignored="false" />
+    <file path="/class.OpusPrimusComments.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363885069542" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,31 +44,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="opus-primus.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
+      <file leaf-file-name="comments.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/comments.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1006" column="18" selection-start="19996" selection-end="19996" vertical-scroll-proportion="0.6257176">
+            <state line="110" column="18" selection-start="4684" selection-end="4684" vertical-scroll-proportion="0.49704143">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="changelog.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/changelog.txt">
+      <file leaf-file-name="class.OpusPrimusComments.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusComments.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+            <state line="286" column="0" selection-start="9401" selection-end="9401" vertical-scroll-proportion="-28.576923">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="0" selection-start="1224" selection-end="1224" vertical-scroll-proportion="-16.807692">
-              <folding>
-                <marker date="1363798309852" expanded="true" signature="1705:2233" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -89,7 +80,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/js/opus-primus.js" />
         <option value="$PROJECT_DIR$/opus-primus-header.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" />
@@ -98,13 +88,14 @@
         <option value="$PROJECT_DIR$/js/opus-primus-full-size-video.js" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/js/opus-primus-comment-tabs.js" />
-        <option value="$PROJECT_DIR$/comments.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
         <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/changelog.txt" />
         <option value="$PROJECT_DIR$/css/opus-primus.css" />
+        <option value="$PROJECT_DIR$/comments.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" />
       </list>
     </option>
   </component>
@@ -191,6 +182,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -210,16 +219,16 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../website/wp-content/themes/ground-floor" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="293" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="967" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="967" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="967" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="293" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="291" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig" serverName="EAC" serverId="ade6ddbc-f20c-4339-b36a-11b5e55e94a7">
     <servers>
@@ -347,14 +356,14 @@
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="59791a67-7e89-437b-b6d2-d013c0025a62" server_name="EAC">
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
       <JSDebuggerConfigurationSettings>
         <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="59791a67-7e89-437b-b6d2-d013c0025a62" server_name="EAC">
       <method />
     </configuration>
     <list size="0" />
@@ -1712,7 +1721,11 @@
       <created>1363809625407</created>
       <updated>1363809625407</updated>
     </task>
-    <option name="localTasksCounter" value="333" />
+    <task id="LOCAL-00333" summary="* Used a more specific HTML element to set background color on comment tabs">
+      <created>1363810148397</created>
+      <updated>1363810148397</updated>
+    </task>
+    <option name="localTasksCounter" value="334" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1750,27 +1763,27 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277592" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3247768" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32664436" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19797225" sideWeight="0.6722408" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20010673" sideWeight="0.6722408" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32664436" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277592" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32218507" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32218507" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3236607" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277592" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1818,7 +1831,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Add rounded corners for the comment type tabs and the comments panel&#10;* Add `#d3d3d3` color as default tab background color; active is transparent" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Used a more specific HTML element to set background color on comment tabs" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1832,7 +1845,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="* More BPI: BNS Inline Asides" />
     <MESSAGE value="* Add `breadcrumbs` function as a stepping stone to on screen breadcrumbs" />
     <MESSAGE value="* Documentation fix" />
     <MESSAGE value="* Moved TagLines into its own Stanza&#10;* Tagged as version 1.0.3" />
@@ -1857,16 +1869,12 @@
     <MESSAGE value="* Update 'readme' to reference theme trac ticket #11738" />
     <MESSAGE value="* Removed unused element for non-existent 'comments-toggle' script&#10;* Code clean-up" />
     <MESSAGE value="* Add rounded corners for the comment type tabs and the comments panel&#10;* Add `#d3d3d3` color as default tab background color; active is transparent" />
+    <MESSAGE value="* Used a more specific HTML element to set background color on comment tabs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="0" selection-start="2283" selection-end="2283" vertical-scroll-proportion="0.42908654" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/archive.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" />
@@ -1887,11 +1895,6 @@
         <state line="36" column="0" selection-start="1301" selection-end="1301" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/opus-primus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="70" column="0" selection-start="2519" selection-end="2519" vertical-scroll-proportion="0.0" />
@@ -1902,11 +1905,6 @@
         <state line="36" column="31" selection-start="1275" selection-end="1275" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/comments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="28" selection-start="1813" selection-end="1813" vertical-scroll-proportion="0.020118343" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusImages.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="0" selection-start="1539" selection-end="1539" vertical-scroll-proportion="-5.8846154" />
@@ -1914,44 +1912,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1224" selection-end="1224" vertical-scroll-proportion="-16.807692">
+        <state line="37" column="0" selection-start="1224" selection-end="1224" vertical-scroll-proportion="0.020118343">
           <folding>
-            <marker date="1363798309852" expanded="true" signature="1705:2233" placeholder="..." />
+            <marker date="1363798309852" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.951049">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.951049" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="49.12">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="49.12" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/changelog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+        <state line="8" column="0" selection-start="184" selection-end="184" vertical-scroll-proportion="0.019517796">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1006" column="18" selection-start="19996" selection-end="19996" vertical-scroll-proportion="0.6257176">
+        <state line="1006" column="18" selection-start="19996" selection-end="19996" vertical-scroll-proportion="0.019517796">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/opus-primus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.22962113">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusComments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="286" column="0" selection-start="9401" selection-end="9401" vertical-scroll-proportion="-28.576923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="110" column="18" selection-start="4684" selection-end="4684" vertical-scroll-proportion="0.49704143">
           <folding />
         </state>
       </provider>

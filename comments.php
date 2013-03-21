@@ -40,7 +40,7 @@
  */
 
 /** Call the global variables needed */
-global $wp_query, $opus_navigation; ?>
+global $wp_query, $opus_comments, $opus_navigation; ?>
 
 <!-- Show the comments -->
 <!-- Inspired by http://digwp.com/2010/02/separate-comments-pingbacks-trackbacks/ -->
@@ -108,19 +108,7 @@ global $wp_query, $opus_navigation; ?>
 
             </ul>
 
-            <?php if ( ! empty( $comments_by_type['comment'] ) ) { ?>
-
-                <div id="comments-only">
-                    <ul class="comments-list">
-                        <?php wp_list_comments( 'type=comment' ); ?>
-                    </ul><!-- comments-list -->
-                    <?php
-                    if ( get_option( 'comments_per_page' ) < count( $wp_query->comments_by_type['comment'] ) ) {
-                        $opus_navigation->comments_navigation();
-                    } /** End if - comments count */ ?>
-                </div><!-- #comments-only -->
-
-            <?php } /** End if - not empty - comments */ ?>
+            <?php $opus_comments->comments_only_panel( $wp_query ); ?>
 
             <?php if ( ! empty( $comments_by_type['pingback'] ) ) { ?>
 

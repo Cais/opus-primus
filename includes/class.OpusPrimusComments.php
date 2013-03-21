@@ -252,6 +252,40 @@ class OpusPrimusComments {
 
     } /** End function - wrapped comments template */
 
+
+    /**
+     * Comments Only Panel
+     * Displays only those comments of type: comment
+     *
+     * @package OpusPrimus
+     * @since   1.2
+     *
+     * @param   $wp_query
+     *
+     * @uses    OpusPrimusNavigation::comments_navigation
+     * @uses    WP_Query::comments_by_type
+     * @uses    get_option
+     * @uses    wp_list_comments
+     */
+    function comments_only_panel( $wp_query ) {
+        $comments_only = $wp_query->comments_by_type['comment'];
+        if ( ! empty( $comments_only ) ) { ?>
+
+            <div id="comments-only">
+                <ul class="comments-list">
+                    <?php wp_list_comments( 'type=comment' ); ?>
+                </ul><!-- comments-list -->
+                <?php
+                if ( get_option( 'comments_per_page' ) < count( $comments_only ) ) {
+                    global $opus_navigation; $opus_navigation->comments_navigation();
+                } /** End if - comments count */ ?>
+            </div><!-- #comments-only -->
+
+        <?php } /** End if - not empty - comments */
+
+    } /** End function - comments only panel */
+
+
 } /** End class Opus Primus Comments */
 
 
