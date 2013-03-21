@@ -282,8 +282,71 @@ class OpusPrimusComments {
             </div><!-- #comments-only -->
 
         <?php } /** End if - not empty - comments */
-
     } /** End function - comments only panel */
+
+
+    /**
+     * Pingbacks Only Panel
+     * Displays only those comments of type: pingback
+     *
+     * @package OpusPrimus
+     * @since   1.2
+     *
+     * @param   $wp_query
+     *
+     * @uses    OpusPrimusNavigation::comments_navigation
+     * @uses    WP_Query::comments_by_type
+     * @uses    get_option
+     * @uses    wp_list_comments
+     */
+    function pingbacks_only_panel( $wp_query ) {
+        $pingbacks_only = $wp_query->comments_by_type['pingback'];
+        if ( ! empty( $pingbacks_only ) ) { ?>
+
+            <div id="pingbacks-only">
+                <ul class="pingbacks-list">
+                    <?php wp_list_comments( 'type=pingback' ); ?>
+                </ul><!-- pingbacks-list -->
+                <?php
+                if ( get_option( 'comments_per_page' ) < count( $pingbacks_only ) ) {
+                    global $opus_navigation; $opus_navigation->comments_navigation();
+                } /** End if - comments count */ ?>
+            </div><!-- #pingbacks-only -->
+
+        <?php } /** End if - not empty - pingbacks */
+    } /** End function - pingbacks only panel */
+
+
+    /**
+     * Trackbacks Only Panel
+     * Displays only those comments of type: trackback
+     *
+     * @package OpusPrimus
+     * @since   1.2
+     *
+     * @param   $wp_query
+     *
+     * @uses    OpusPrimusNavigation::comments_navigation
+     * @uses    WP_Query::comments_by_type
+     * @uses    get_option
+     * @uses    wp_list_comments
+     */
+    function trackbacks_only_panel( $wp_query ) {
+        $trackbacks_only = $wp_query->comments_by_type['trackback'];
+        if ( ! empty( $trackbacks_only ) ) { ?>
+
+            <div id="trackbacks-only">
+                <ul class="trackbacks-list">
+                    <?php wp_list_comments( 'type=trackback' ); ?>
+                </ul><!-- trackbacks-list -->
+                <?php
+                if ( get_option( 'comments_per_page' ) < count( $trackbacks_only ) ) {
+                    global $opus_navigation; $opus_navigation->comments_navigation();
+                } /** End if - comments count */ ?>
+            </div><!-- #trackbacks-only -->
+
+        <?php } /** End if - not empty - trackbacks */
+    } /** End function - trackbacks only panel */
 
 
 } /** End class Opus Primus Comments */

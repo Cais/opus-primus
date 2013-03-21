@@ -108,35 +108,10 @@ global $wp_query, $opus_comments, $opus_navigation; ?>
 
             </ul>
 
-            <?php $opus_comments->comments_only_panel( $wp_query ); ?>
-
-            <?php if ( ! empty( $comments_by_type['pingback'] ) ) { ?>
-
-                <div id="pingbacks-only">
-                    <ul class="pingbacks-list">
-                        <?php wp_list_comments( 'type=pingback' ); ?>
-                    </ul><!-- pingbacks-list -->
-                    <?php
-                    if ( get_option( 'comments_per_page' ) < count( $wp_query->comments_by_type['pingback'] ) ) {
-                        $opus_navigation->comments_navigation();
-                    } /** End if - comments count */ ?>
-                </div><!-- #pingbacks-only -->
-
-            <?php } /** End if - not empty - pingbacks */ ?>
-
-            <?php if ( ! empty( $comments_by_type['trackback'] ) ) { ?>
-
-                <div id="trackbacks-only">
-                    <ul class="trackbacks-list">
-                        <?php wp_list_comments( 'type=trackback' ); ?>
-                    </ul><!-- trackbacks-list -->
-                    <?php
-                    if ( get_option( 'comments_per_page' ) < count( $wp_query->comments_by_type['trackback'] ) ) {
-                        $opus_navigation->comments_navigation();
-                    } /** End if - comments count */ ?>
-                </div><!-- #trackbacks-only -->
-
-            <?php } /** End if - not empty - trackbacks */ ?>
+            <?php
+            $opus_comments->comments_only_panel( $wp_query );
+            $opus_comments->pingbacks_only_panel( $wp_query );
+            $opus_comments->trackbacks_only_panel( $wp_query ); ?>
 
         </div><!-- #comment-tabs -->
 
