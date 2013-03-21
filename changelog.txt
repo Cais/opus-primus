@@ -1,9 +1,12 @@
 === Opus Primus changelog.txt ===
-Last revised March 20, 2013
+Last revised March 21, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
-== Version 1.1.1 ==
+== Version 1.2 ==
 * Released ...
+
+= Code =
+* Move `comments only panel` functionality into Comments class as a method
 
 = CSS =
 * Add rounded corners for the comment type tabs and the comments panel
