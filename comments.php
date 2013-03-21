@@ -55,56 +55,10 @@ global $wp_query, $opus_comments, $opus_navigation; ?>
 
             <ul id="comment-tabs-header">
 
-                <?php if ( ! empty( $comments_by_type['comment'] ) ) { ?>
-                    <li id="comments-only-tab">
-                        <a href="#comments-only">
-                            <h3 id="comments">
-                                <?php
-                                printf(
-                                    _n(
-                                        __( '%1$s Comment', 'opusprimus' ),
-                                        __( '%1$s Comments', 'opusprimus' ),
-                                        count( $wp_query->comments_by_type['comment'] ) ),
-                                    count( $wp_query->comments_by_type['comment'] )
-                                ); ?>
-                            </h3><!-- #comments -->
-                        </a>
-                    </li><!-- #comments-only-tab -->
-                <?php } /** End if - comments by type - comment */
-
-                if ( ! empty( $comments_by_type['pingback'] ) ) { ?>
-                    <li id="pingbacks-only-tab">
-                        <a href="#pingbacks-only">
-                            <h3 id="pingbacks">
-                                <?php
-                                printf(
-                                _n(
-                                    __( '%1$s Pingback', 'opusprimus' ),
-                                    __( '%1$s Pingbacks', 'opusprimus' ),
-                                    count( $wp_query->comments_by_type['pingback'] ) ),
-                                count( $wp_query->comments_by_type['pingback'] )
-                                ); ?>
-                            </h3><!-- #pingbacks -->
-                        </a>
-                    </li><!-- #pingbakcs-only-tab -->
-                <?php } /** End if - comments by type - pingback */
-
-                if ( ! empty( $comments_by_type['trackback'] ) ) { ?>
-                    <li id="trackbacks-only-tab">
-                        <a href="#trackbacks-only">
-                            <h3 id="trackbacks">
-                                <?php
-                                printf(
-                                _n(
-                                    __( '%1$s Trackback', 'opusprimus' ),
-                                    __( '%1$s Trackbacks', 'opusprimus' ),
-                                    count( $wp_query->comments_by_type['trackback'] ) ),
-                                count( $wp_query->comments_by_type['trackback'] )
-                                ); ?>
-                            </h3><!-- #trackbacks -->
-                        </a>
-                    </li><!-- #trackbacks-only-tab -->
-                <?php } /** End if - comments by type - trackback */ ?>
+                <?php
+                $opus_comments->comments_only_tab( $wp_query );
+                $opus_comments->pingbacks_only_tab( $wp_query );
+                $opus_comments->trackbacks_only_tab( $wp_query ); ?>
 
             </ul>
 

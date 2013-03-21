@@ -254,6 +254,114 @@ class OpusPrimusComments {
 
 
     /**
+     * Comments Only Tab
+     * Displays number of comments for the type:comment tab
+     *
+     * @package OpusPrimus
+     * @since   1.2
+     *
+     * @uses    WP_Query::comments_by_type
+     * @uses    __
+     * @uses    _n
+     *
+     * @param   $wp_query
+     */
+    function comments_only_tab( $wp_query ) {
+        $comments_only = $wp_query->comments_by_type['comment'];
+        if ( ! empty( $comments_only ) ) { ?>
+
+            <li id="comments-only-tab">
+                <a href="#comments-only">
+                    <h3 id="comments">
+                        <?php
+                        printf(
+                            _n(
+                                __( '%1$s Comment', 'opusprimus' ),
+                                __( '%1$s Comments', 'opusprimus' ),
+                                count( $comments_only ) ),
+                            count( $comments_only )
+                        ); ?>
+                    </h3><!-- #comments -->
+                </a>
+            </li><!-- #comments-only-tab -->
+
+        <?php } /** End if - comments by type - comment */
+    } /** End function - comments only tab */
+
+
+    /**
+     * Pingbacks Only Tab
+     * Displays number of comments for the type:pingback tab
+     *
+     * @package OpusPrimus
+     * @since   1.2
+     *
+     * @uses    WP_Query::comments_by_type
+     * @uses    __
+     * @uses    _n
+     *
+     * @param   $wp_query
+     */
+    function pingbacks_only_tab( $wp_query ) {
+        $pingbacks_only = $wp_query->comments_by_type['pingback'];
+        if ( ! empty( $pingbacks_only ) ) { ?>
+
+            <li id="pingbacks-only-tab">
+                <a href="#pingbacks-only">
+                    <h3 id="pingbacks">
+                        <?php
+                        printf(
+                            _n(
+                                __( '%1$s Pingback', 'opusprimus' ),
+                                __( '%1$s Pingbacks', 'opusprimus' ),
+                                count( $pingbacks_only ) ),
+                            count( $pingbacks_only )
+                        ); ?>
+                    </h3><!-- #pingbacks -->
+                </a>
+            </li><!-- #pingbacks-only-tab -->
+
+        <?php } /** End if - pingbacks only */
+    } /** End function - pingbacks only tab */
+
+
+    /**
+     * Trackbacks Only Tab
+     * Displays number of comments for the type:trackback tab
+     *
+     * @package OpusPrimus
+     * @since   1.2
+     *
+     * @uses    WP_Query::comments_by_type
+     * @uses    __
+     * @uses    _n
+     *
+     * @param   $wp_query
+     */
+    function trackbacks_only_tab( $wp_query ) {
+        $trackbacks_only = $wp_query->comments_by_type['trackback'];
+        if ( ! empty( $trackbacks_only ) ) { ?>
+
+            <li id="trackbacks-only-tab">
+                <a href="#trackbacks-only">
+                    <h3 id="trackbacks">
+                        <?php
+                        printf(
+                            _n(
+                                __( '%1$s Trackback', 'opusprimus' ),
+                                __( '%1$s Trackbacks', 'opusprimus' ),
+                                count( $trackbacks_only ) ),
+                            count( $trackbacks_only )
+                        ); ?>
+                    </h3><!-- #trackbacks -->
+                </a>
+            </li><!-- #trackbacks-only-tab -->
+
+        <?php } /** End if - trackbacks only */
+    } /** End function - trackbacks only tab */
+
+
+    /**
      * Comments Only Panel
      * Displays only those comments of type: comment
      *
