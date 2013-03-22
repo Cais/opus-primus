@@ -17,7 +17,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Removed unused element for non-existent 'comments-toggle' script
 
 = Miscellaneous =
-* Code clean-up
+* Updated 'hooks-actions.txt'
 
 /** ------------------------------------------------------------------------- */
 == Version 1.1 ==
