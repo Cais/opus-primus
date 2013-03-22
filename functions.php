@@ -198,11 +198,10 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 } /** End if - function exists - opus primus theme setup */
 add_action( 'after_setup_theme', 'opus_primus_theme_setup' );
 
-/**
- * Temporary value of 1024 set for $content_width for testing purposes
- * @todo Sort out proper width and/or calculation to set appropriate width
- */
-if ( ! isset( $content_width ) ) $content_width = 1024;
+/** Set content width to 1000 - see Full Size Video script */
+if ( ! isset( $content_width ) ) {
+    $content_width = 1000;
+} /** End if - not isset - content width */
 
 /** Miscellaneous Functions */
 /** Return a space when all other __return_* fail, use this?! */

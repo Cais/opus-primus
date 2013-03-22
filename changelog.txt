@@ -17,6 +17,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Removed unused element for non-existent 'comments-toggle' script
 
 = Miscellaneous =
+* Remove $content_width set values from Structures class method `layout_open` and set in 'functions.php'
 * Updated 'hooks-actions.txt'
 
 /** ------------------------------------------------------------------------- */

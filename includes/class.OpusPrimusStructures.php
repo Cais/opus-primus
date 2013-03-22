@@ -418,19 +418,18 @@ class OpusPrimusStructures {
      * Layout - Open
      * Adds appropriate CSS containers depending on the layout structure.
      *
-     * @package     OpusPrimus
-     * @since       0.1
+     * @package OpusPrimus
+     * @since   0.1
      *
-     * @uses        $content_width (global)
-     * @uses        is_active_sidebar
+     * @uses    is_active_sidebar
      *
-     * @internal    works in conjunction with layout_close
-     * @internal    $content_width is set based on the amount of columns being
-     * displayed and a display using the common 1024px x 768px resolution
+     * @internal works in conjunction with layout_close
      *
-     * @return      string
+     * @return  string
      *
-     * @todo Review $content_width settings
+     * @version 1.2
+     * @date    March 22, 2013
+     * Remove $content_width set values - see 'functions.php' for $content_width
      */
     function layout_open() {
         global $content_width;
@@ -441,7 +440,6 @@ class OpusPrimusStructures {
         /** Test if all widget areas are inactive for one-column layout */
         if ( ! ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) || is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
             $layout = '<div class="column-mask full-page">';
-            $content_width = 990;
         } /** End if - not is active sidebar */
 
         /** Test if the first-sidebar or second-sidebar is active by testing their component widget areas for a two column layout */
@@ -449,18 +447,15 @@ class OpusPrimusStructures {
             && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
                 && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) ) {
             $layout = '<div class="column-mask right-sidebar"><div class="column-left">';
-            $content_width = 700;
         } elseif( ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) )
             && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
                 && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) ) {
             $layout = '<div class="column-mask right-sidebar"><div class="column-left">';
-            $content_width = 700;
         } /** End if - is active sidebar */
 
         /** Test if at least one widget area in each sidebar area is active for a three-column layout */
         if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) ) && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
             $layout = '<div class="column-mask blog-style"><div class="column-middle"><div class="column-left">';
-            $content_width = 450;
         } /** End if - is active sidebar */
 
         return $layout;
