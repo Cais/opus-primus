@@ -6,6 +6,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Released ...
 
 = Code =
+* Added `all_comments_count` and `show_all_comments_count` methods to Comments class to be used in the 'comments.php' template when displaying total comments
 * General minor code refactorings and improvements
 * Moved `comments only tab`, `pingbacks only tab` and `trackbacks only tab` functionality into Comments class methods
 * Moved `comments only panel`, `pingbacks only panel` and `trackbacks only panel` functionality into Comments class methods

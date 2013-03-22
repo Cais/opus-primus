@@ -41,6 +41,8 @@
  * Added `comments only tab`, `pingbacks only tab`, `trackbacks only tab`,
  * `comments only panel`, `pingbacks only panel` and `trackbacks only panel`
  * functionality class methods from 'comments.php' template
+ * Added `all_comments_count` and `show_all_comments_count` to be used in the
+ * 'comments.php' template to display total comments
  */
 
 class OpusPrimusComments {
@@ -269,10 +271,9 @@ class OpusPrimusComments {
      * @uses    WP_Query::comments_by_type
      * @uses    __
      * @uses    _n
-     *
-     * @param   $wp_query
      */
-    function comments_only_tab( $wp_query ) {
+    function comments_only_tab() {
+        global $wp_query;
         $comments_only = $wp_query->comments_by_type['comment'];
         if ( ! empty( $comments_only ) ) { ?>
 
@@ -305,10 +306,9 @@ class OpusPrimusComments {
      * @uses    WP_Query::comments_by_type
      * @uses    __
      * @uses    _n
-     *
-     * @param   $wp_query
      */
-    function pingbacks_only_tab( $wp_query ) {
+    function pingbacks_only_tab() {
+        global $wp_query;
         $pingbacks_only = $wp_query->comments_by_type['pingback'];
         if ( ! empty( $pingbacks_only ) ) { ?>
 
@@ -341,10 +341,9 @@ class OpusPrimusComments {
      * @uses    WP_Query::comments_by_type
      * @uses    __
      * @uses    _n
-     *
-     * @param   $wp_query
      */
-    function trackbacks_only_tab( $wp_query ) {
+    function trackbacks_only_tab() {
+        global $wp_query;
         $trackbacks_only = $wp_query->comments_by_type['trackback'];
         if ( ! empty( $trackbacks_only ) ) { ?>
 
@@ -374,14 +373,13 @@ class OpusPrimusComments {
      * @package OpusPrimus
      * @since   1.2
      *
-     * @param   $wp_query
-     *
      * @uses    OpusPrimusNavigation::comments_navigation
      * @uses    WP_Query::comments_by_type
      * @uses    get_option
      * @uses    wp_list_comments
      */
-    function comments_only_panel( $wp_query ) {
+    function comments_only_panel() {
+        global $wp_query;
         $comments_only = $wp_query->comments_by_type['comment'];
         if ( ! empty( $comments_only ) ) { ?>
 
@@ -406,14 +404,13 @@ class OpusPrimusComments {
      * @package OpusPrimus
      * @since   1.2
      *
-     * @param   $wp_query
-     *
      * @uses    OpusPrimusNavigation::comments_navigation
      * @uses    WP_Query::comments_by_type
      * @uses    get_option
      * @uses    wp_list_comments
      */
-    function pingbacks_only_panel( $wp_query ) {
+    function pingbacks_only_panel() {
+        global $wp_query;
         $pingbacks_only = $wp_query->comments_by_type['pingback'];
         if ( ! empty( $pingbacks_only ) ) { ?>
 
@@ -438,14 +435,13 @@ class OpusPrimusComments {
      * @package OpusPrimus
      * @since   1.2
      *
-     * @param   $wp_query
-     *
      * @uses    OpusPrimusNavigation::comments_navigation
      * @uses    WP_Query::comments_by_type
      * @uses    get_option
      * @uses    wp_list_comments
      */
-    function trackbacks_only_panel( $wp_query ) {
+    function trackbacks_only_panel() {
+        global $wp_query;
         $trackbacks_only = $wp_query->comments_by_type['trackback'];
         if ( ! empty( $trackbacks_only ) ) { ?>
 
@@ -461,6 +457,77 @@ class OpusPrimusComments {
 
         <?php } /** End if - not empty - trackbacks */
     } /** End function - trackbacks only panel */
+
+
+    /**
+     * All Comments Count
+     * Calculates total comments by adding the totals of each of the comment
+     * types: comment, pingback, and trackback
+     *
+     * @package OpusPrimus
+     * @since   1.2
+     *
+     * @uses    WP_Query::comments_by_type
+     *
+     * @return  string
+     */
+    function all_comments_count() {
+        global $wp_query;
+
+        $comments_only = intval( count( $wp_query->comments_by_type['comment'] ) );
+        $pingbacks_only = intval( count( $wp_query->comments_by_type['pingback'] ) );
+        $trackbacks_only = intval( count( $wp_query->comments_by_type['trackback'] ) );
+
+        /** @var $all_comments - initialize comments counter */
+        $all_comments = 0;
+        /**
+         * To remove a comment type count simply comment out or remove the
+         * appropriate line. This will affect the value passed to the method
+         * used to display the value.
+         * NB: This would be best done via a Child-Theme.
+         */
+        $all_comments = $all_comments + $comments_only;
+        $all_comments = $all_comments + $pingbacks_only;
+        $all_comments = $all_comments + $trackbacks_only;
+
+        return $all_comments;
+
+    } /** End function - all comments count */
+
+
+    /**
+     * Show All Comments Count
+     * Displays the `all_comments_count` value
+     *
+     * @package OpusPrimus
+     * @since   1.2
+     *
+     * @uses    OpusPrimusComments::all_comments_count
+     * @USES    __
+     * @uses    _n
+     * @uses    do_action
+     */
+    function show_all_comments_count() {
+        /** Add empty hook before all comments count */
+        do_action( 'opus_all_comments_count_before' );
+
+        /** Get the total from `all_comments_count` */
+        $total_comments = $this->all_comments_count();
+
+        /** Check if there are any comments */
+        if ( $total_comments > 0 ) {
+            $show_all_comments_count = sprintf( _n( '%s Response', '%s Responses', $total_comments ), $total_comments );
+        } else {
+            $show_all_comments_count = __( 'No Responses', 'opusprimus' );
+        } /** End if - total comments greater than zero */
+
+        /** Display the total comments message */
+        echo $show_all_comments_count;
+
+        /** Add empty hook after all comments count */
+        do_action( 'opus_all_comments_count_after' );
+
+    } /** End function - show all comments count */
 
 
 } /** End class Opus Primus Comments */

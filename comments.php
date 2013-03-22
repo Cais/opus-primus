@@ -44,6 +44,7 @@
  * `trackbacks only panel` functionality into Comments class methods
  * Moved global variables call inside conditional statement as they are not
  * needed if we do not have comments.
+ * Changed comments count to be display via a Comments class method
  *
  * @todo Review general commentary look and feel ... make more unique to OP
  */ ?>
@@ -54,10 +55,10 @@
     <?php if ( have_comments() ) {
 
         /** Call the global variables needed */
-        global $wp_query, $opus_comments, $opus_navigation; ?>
+        global $opus_comments ?>
 
         <h2 id="all-comments">
-            <?php comments_number( __( 'No Responses', 'opusprimus' ), __( 'One Response', 'opusprimus' ), __( '% Responses', 'opusprimus' ) ); ?>
+            <?php $opus_comments->show_all_comments_count(); ?>
         </h2><!-- #all-comments -->
 
         <div id="comment-tabs">
@@ -65,16 +66,16 @@
             <ul id="comment-tabs-header">
 
                 <?php
-                $opus_comments->comments_only_tab( $wp_query );
-                $opus_comments->pingbacks_only_tab( $wp_query );
-                $opus_comments->trackbacks_only_tab( $wp_query ); ?>
+                $opus_comments->comments_only_tab();
+                $opus_comments->pingbacks_only_tab();
+                $opus_comments->trackbacks_only_tab(); ?>
 
             </ul>
 
             <?php
-            $opus_comments->comments_only_panel( $wp_query );
-            $opus_comments->pingbacks_only_panel( $wp_query );
-            $opus_comments->trackbacks_only_panel( $wp_query ); ?>
+            $opus_comments->comments_only_panel();
+            $opus_comments->pingbacks_only_panel();
+            $opus_comments->trackbacks_only_panel(); ?>
 
         </div><!-- #comment-tabs -->
 
