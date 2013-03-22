@@ -7,8 +7,8 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Code =
 * General minor code refactorings and improvements
-* Moved `comments only tab`, `pingbacks only tab` and `trackbacks only tab` functionality into Comments class as a methods
-* Moved `comments only panel`, `pingbacks only panel` and `trackbacks only panel` functionality into Comments class as a methods
+* Moved `comments only tab`, `pingbacks only tab` and `trackbacks only tab` functionality into Comments class methods
+* Moved `comments only panel`, `pingbacks only panel` and `trackbacks only panel` functionality into Comments class methods
 
 = CSS =
 * Add rounded corners for the comment type tabs and the comments panel

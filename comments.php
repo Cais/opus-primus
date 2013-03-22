@@ -39,9 +39,9 @@
  * @version 1.2
  * @date    March 22, 2013
  * Moved `comments only tab`, `pingbacks only tab` and `trackbacks only tab`
- * functionality into Comments class as a methods
+ * functionality into Comments class methods
  * Moved `comments only panel`, `pingbacks only panel` and
- * `trackbacks only panel` functionality into Comments class as a methods
+ * `trackbacks only panel` functionality into Comments class methods
  * Moved global variables call inside conditional statement as they are not
  * needed if we do not have comments.
  *
