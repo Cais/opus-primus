@@ -36,16 +36,25 @@
  * Added Comment Tabs for each type (Comment, Pingback, and Trackback)
  * Fixed comments (only) count output
  *
+ * @version 1.2
+ * @date    March 22, 2013
+ * Moved `comments only tab`, `pingbacks only tab` and `trackbacks only tab`
+ * functionality into Comments class as a methods
+ * Moved `comments only panel`, `pingbacks only panel` and
+ * `trackbacks only panel` functionality into Comments class as a methods
+ * Moved global variables call inside conditional statement as they are not
+ * needed if we do not have comments.
+ *
  * @todo Review general commentary look and feel ... make more unique to OP
- */
-
-/** Call the global variables needed */
-global $wp_query, $opus_comments, $opus_navigation; ?>
+ */ ?>
 
 <!-- Show the comments -->
 <!-- Inspired by http://digwp.com/2010/02/separate-comments-pingbacks-trackbacks/ -->
 <div class="comments-wrapper">
-    <?php if ( have_comments() ) { ?>
+    <?php if ( have_comments() ) {
+
+        /** Call the global variables needed */
+        global $wp_query, $opus_comments, $opus_navigation; ?>
 
         <h2 id="all-comments">
             <?php comments_number( __( 'No Responses', 'opusprimus' ), __( 'One Response', 'opusprimus' ), __( '% Responses', 'opusprimus' ) ); ?>

@@ -35,6 +35,12 @@
  * @date    February 21, 2013
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
+ *
+ * @version 1.2
+ * @date    March 22, 2013
+ * Added `comments only tab`, `pingbacks only tab`, `trackbacks only tab`,
+ * `comments only panel`, `pingbacks only panel` and `trackbacks only panel`
+ * functionality class methods from 'comments.php' template
  */
 
 class OpusPrimusComments {

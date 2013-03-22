@@ -1,11 +1,12 @@
 === Opus Primus changelog.txt ===
-Last revised March 21, 2013
+Last revised March 22, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2 ==
 * Released ...
 
 = Code =
+* General minor code refactorings and improvements
 * Moved `comments only tab`, `pingbacks only tab` and `trackbacks only tab` functionality into Comments class as a methods
 * Moved `comments only panel`, `pingbacks only panel` and `trackbacks only panel` functionality into Comments class as a methods
 
