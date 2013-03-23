@@ -1,9 +1,9 @@
 === Opus Primus changelog.txt ===
-Last revised March 22, 2013
+Last revised March 23, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
-== Version 1.2 ==
-* Released ...
+== Version 1.1.1 ==
+* Released March 2013
 
 = Code =
 * Added `all_comments_count` and `show_all_comments_count` methods to Comments class to be used in the 'comments.php' template when displaying total comments

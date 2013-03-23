@@ -4,7 +4,7 @@
  * A WordPress Framework Theme.
  *
  * @package     OpusPrimus
- * @version     1.2
+ * @version     1.1.1
  *
  * @internal    RECOMMENDED HTML5
  * @internal    RECOMMENDED CSS3
@@ -41,8 +41,8 @@
  * @version 1.1
  * @date    March 19, 2013
  *
- * @version 1.2
- * @date    March 21, 2013
+ * @version 1.1.1
+ * @date    March 23, 2013
  *
  * @todo Comments could use some styling ... they really are rather bland
  * @todo Review if the value of $content_width can be passed as the limit (see 'opus-primus-full-size-video.js')

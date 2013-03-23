@@ -30,6 +30,10 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version 1.1.1
+ * @date    March 23, 2013
+ * Set $content_width to 1000 (matches 'Full Size Video' maximum width)
  */
 
 /**

@@ -36,7 +36,7 @@
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
  *
- * @version 1.2
+ * @version 1.1.1
  * @date    March 22, 2013
  * Added `comments only tab`, `pingbacks only tab`, `trackbacks only tab`,
  * `comments only panel`, `pingbacks only panel` and `trackbacks only panel`
@@ -266,7 +266,7 @@ class OpusPrimusComments {
      * Displays number of comments for the type:comment tab
      *
      * @package OpusPrimus
-     * @since   1.2
+     * @since   1.1.1
      *
      * @uses    WP_Query::comments_by_type
      * @uses    __
@@ -301,7 +301,7 @@ class OpusPrimusComments {
      * Displays number of comments for the type:pingback tab
      *
      * @package OpusPrimus
-     * @since   1.2
+     * @since   1.1.1
      *
      * @uses    WP_Query::comments_by_type
      * @uses    __
@@ -336,7 +336,7 @@ class OpusPrimusComments {
      * Displays number of comments for the type:trackback tab
      *
      * @package OpusPrimus
-     * @since   1.2
+     * @since   1.1.1
      *
      * @uses    WP_Query::comments_by_type
      * @uses    __
@@ -371,7 +371,7 @@ class OpusPrimusComments {
      * Displays only those comments of type: comment
      *
      * @package OpusPrimus
-     * @since   1.2
+     * @since   1.1.1
      *
      * @uses    OpusPrimusNavigation::comments_navigation
      * @uses    WP_Query::comments_by_type
@@ -402,7 +402,7 @@ class OpusPrimusComments {
      * Displays only those comments of type: pingback
      *
      * @package OpusPrimus
-     * @since   1.2
+     * @since   1.1.1
      *
      * @uses    OpusPrimusNavigation::comments_navigation
      * @uses    WP_Query::comments_by_type
@@ -433,7 +433,7 @@ class OpusPrimusComments {
      * Displays only those comments of type: trackback
      *
      * @package OpusPrimus
-     * @since   1.2
+     * @since   1.1.1
      *
      * @uses    OpusPrimusNavigation::comments_navigation
      * @uses    WP_Query::comments_by_type
@@ -465,7 +465,7 @@ class OpusPrimusComments {
      * types: comment, pingback, and trackback
      *
      * @package OpusPrimus
-     * @since   1.2
+     * @since   1.1.1
      *
      * @uses    WP_Query::comments_by_type
      *
@@ -500,7 +500,7 @@ class OpusPrimusComments {
      * Displays the `all_comments_count` value
      *
      * @package OpusPrimus
-     * @since   1.2
+     * @since   1.1.1
      *
      * @uses    OpusPrimusComments::all_comments_count
      * @USES    __

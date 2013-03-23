@@ -427,13 +427,11 @@ class OpusPrimusStructures {
      *
      * @return  string
      *
-     * @version 1.2
-     * @date    March 22, 2013
+     * @version 1.1.1
+     * @date    March 23, 2013
      * Remove $content_width set values - see 'functions.php' for $content_width
      */
     function layout_open() {
-        global $content_width;
-
         /** @var $layout - initialize variable as empty */
         $layout = '';
 
