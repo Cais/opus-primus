@@ -38,24 +38,12 @@ jQuery( document ).ready( function( $ ) {
     /** Get the page content width */
     var page_content = $( 'body.page div.the-loop div.page');
 
-    var page_width = page_content.width();
-    alert( page_width );
+    var page_content_width = page_content.width();
+    // alert( 'page_content ' + page_content_width );
 
-    var golden_height = page_width / 1.618;
-    alert( golden_height );
-
-    /** Get the image width */
     var featured_image = $( 'body.page div.page a.featured-thumbnail img' );
     var featured_image_width = featured_image.attr( 'width' );
-    alert(featured_image_width);
 
-    var featured_image_height = featured_image.attr( 'height' );
-    alert(featured_image_height);
-
-    if ( ( featured_image_width / 1.618 ) < golden_height ) {
-        alert( 'featured_image_width: ' + featured_image_width )
-        featured_image.attr( 'width', golden_height );
-        featured_image.attr( 'height', 'auto' );
-    }
+    // alert('featured_image ' + featured_image_width);
 
 } );

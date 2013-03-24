@@ -66,6 +66,7 @@
  * === Menu Related Elements ===
  * === Breadcrumbs ===
  * === Post Elements ===
+ * === Page Elements ===
  * === Search ===
  *
  * === Comments ===
@@ -854,6 +855,12 @@ p.meta-tags {
     border-top: 1px solid #d3d3d3;
 }
 /** End: Post Elements ------------------------------------------------------ */
+
+/** === Page Elements === --------------------------------------------------- */
+body.page div.page a.featured-thumbnail img {
+    max-width: 100%;
+}
+/** End: Page Elements ------------------------------------------------------ */
 
 /** === Search === ---------------------------------------------------------- */
 form#searchform {
