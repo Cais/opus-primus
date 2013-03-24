@@ -1,7 +1,14 @@
 === Opus Primus changelog.txt ===
-Last revised March 23, 2013
+Last revised March 24, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
+== Version 1.2 ==
+* Released ...
+
+= CSS =
+* Sorted out the adaptive layout for screens less than 480px wide
+
+/** ------------------------------------------------------------------------- */
 == Version 1.1.1 ==
 * Released March 2013
 
