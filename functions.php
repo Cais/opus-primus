@@ -64,6 +64,10 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
      * @version 1.1
      * @date    March 18, 2013
      * Enqueue jQuery UI Tabs script for Comments
+     *
+     * @version 1.2
+     * @date    March 24, 2013
+     * Enqueue ...
      */
     function opus_primus_enqueue_scripts() {
         /** Enqueue Theme Scripts */
@@ -77,6 +81,9 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
         if ( get_header_image() ) {
             wp_enqueue_script( 'opus-primus-header-image-position', OPUS_JS . 'opus-primus-header-image-position.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
         } /** End if - get header image */
+
+        /** Enqueue Opus Primus Page Featured Image Adjust which will enqueue jQuery as a dependency */
+        // wp_enqueue_script( 'opus-primus-page-featured-image-adjust', OPUS_JS . 'opus-primus-page-featured-image-adjust.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
 
         /** Enqueue Theme Stylesheets */
         /** Theme Layouts */

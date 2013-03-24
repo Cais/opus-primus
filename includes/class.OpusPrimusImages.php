@@ -736,6 +736,10 @@ class OpusPrimusImages {
      * @uses    the_post_thumbnail
      * @uses    the_title_attribute
      *
+     * @version 1.2
+     * @date    March 24, 2013
+     * Change post thumbnail on pages to full size image and align to the center
+     *
      * @todo clean up and have link display attachment archive
      */
     function featured_thumbnail() {
@@ -743,7 +747,8 @@ class OpusPrimusImages {
             $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
             echo '<a class="featured-thumbnail" href="' . $large_image_url[0] . '" title="' . the_title_attribute( 'echo=0' ) . '" >';
             if ( is_page() ) {
-                the_post_thumbnail( 'thumbnail', array( 'class' => 'alignright' ) );
+                // the_post_thumbnail( 'thumbnail', array( 'class' => 'alignright' ) );
+                the_post_thumbnail( 'full', array( 'class' => 'aligncenter' ) );
             } else {
                 the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) );
             } /** End if - is page */

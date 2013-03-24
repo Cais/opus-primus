@@ -5,6 +5,9 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 == Version 1.2 ==
 * Released ...
 
+= Code =
+* Change post thumbnail on pages to full size image and align to the center
+
 = CSS =
 * Sorted out the adaptive layout for screens less than 480px wide
 
