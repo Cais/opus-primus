@@ -30,7 +30,7 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
  * @version 1.2
- * @date    March 24, 2013
+ * @date    March 25, 2013
  * Sorted out the adaptive layout for screens less than 480px wide
  */
 
@@ -56,7 +56,7 @@ and ( max-width : 478px ) {
     }
 
     /* More */
-    body {
+    #opus-primus {
         padding: 0 5px;
     }
 
@@ -140,7 +140,7 @@ and ( max-width : 1023px ) {
     }
 
     /** More */
-    body {
+    #opus-primus {
         padding: 0 5px;
     }
 
