@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised March 24, 2013
+Last revised March 25, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2 ==
@@ -10,6 +10,9 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = CSS =
 * Sorted out the adaptive layout for screens less than 480px wide
+
+= Miscellaneous =
+* Updated 'readme.txt' with FAQ explaining how the "Featured Image" is used
 
 /** ------------------------------------------------------------------------- */
 == Version 1.1.1 ==

@@ -1,7 +1,6 @@
 /**
  * Opus Primus Page Featured Image Adjust Script
- * Adjusts the featured image width and height to a golden ratio based on the
- * page content area width
+ * Adjusts the featured image width and height ...
  *
  * @package     OpusPrimus
  * @since       1.2

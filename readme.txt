@@ -71,6 +71,12 @@ written here.
 == Screenshots ==
 
 == Basic FAQ ==
+Q: What is the difference between how the "Featured Image" is used on a post and
+how it is used on a page?
+The "Featured Image" on a page is set to ideally be used as a "banner" on pages;
+and, to add emphasis for posts when they are viewed as part of a list, such as
+the index view or in archives.
+
 Q: How do the breadcrumb trails work?
 There are two different breadcrumb trails used in Opus Primus. One type is used
 on posts and shows the page hierarchy from the highest level to the lowest. The
