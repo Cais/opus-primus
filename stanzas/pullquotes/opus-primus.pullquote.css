@@ -5,7 +5,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012, Opus Primus
+ * @copyright   Copyright (c) 2012-2013, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -28,24 +28,40 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version 1.2
+ * @date    March 25, 2013
+ * Added styles for Pull Quotes on left side
  */
 
-span.pullquote {
+span.pullquote,
+span.pullquote-left {
     border-bottom: 5px solid #eeeeee;
     border-top: 5px solid #eeeeee;
-    float: right;
     font-family: "Merienda", cursive;
     font-size: 18px;
     line-height: 24px;
-    margin-left: 10px;
-    padding: 10px 0 10px 15px;
     width: 30%;
 }
 
-span.pq cite {
+span.pullquote {
+    float: right;
+    margin-left: 10px;
+    padding: 10px 0 10px 15px;
+}
+
+span.pullquote-left {
+    float: left;
+    margin-right: 10px;
+    padding: 10px 15px 10px 0;
+}
+
+span.pq cite,
+span.pql cite {
     display: none;
 }
 
-span.pullquote cite {
+span.pullquote cite,
+span.pullquote-left cite {
     display: inline;
 }

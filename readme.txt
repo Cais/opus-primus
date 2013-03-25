@@ -1,5 +1,5 @@
 === Opus Primus readme.txt ===
-* Last revised March 19, 2013
+* Last revised March 25, 2013
 
 == Contents ==
 * Copyright
@@ -71,6 +71,11 @@ written here.
 == Screenshots ==
 
 == Basic FAQ ==
+Q: What are Stanzas?
+Stanzas are meant to add additional functionality specifically to Opus Primus by
+either using specific Opus Primus assets, such as a particular font face; or, by
+hooking into specific action and/or filter hooks only found in Opus Primus.
+
 Q: What is the difference between how the "Featured Image" is used on a post and
 how it is used on a page?
 The "Featured Image" on a page is set to ideally be used as a "banner" on pages;

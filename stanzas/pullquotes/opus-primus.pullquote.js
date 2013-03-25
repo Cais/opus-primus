@@ -28,10 +28,16 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version 1.2
+ * @date    March 25, 2013
+ * Added scripting to have left side Pull Quotes
  */
 
 jQuery( document ).ready( function( $ ) {
-/** Note: $() will work as an alias for jQuery() inside of this function */
+    /** Note: $() will work as an alias for jQuery() inside of this function */
+
+    /** Pull Quotes on (default) right side */
     $( 'span.pq' ).each( function() {
         var $parentParagraph = $(this).parent( 'p' );
         $parentParagraph.css( 'position', 'relative' );
@@ -39,4 +45,14 @@ jQuery( document ).ready( function( $ ) {
             .addClass( 'pullquote' )
             .prependTo( $parentParagraph );
     } );
+
+    /** Pull Quotes on left side */
+    $( 'span.pql' ).each( function() {
+        var $parentParagraph = $(this).parent( 'p' );
+        $parentParagraph.css( 'position', 'relative' );
+        $(this).clone()
+            .addClass( 'pullquote-left' )
+            .prependTo( $parentParagraph );
+    } );
+
 } );
