@@ -43,6 +43,10 @@
  * functionality class methods from 'comments.php' template
  * Added `all_comments_count` and `show_all_comments_count` to be used in the
  * 'comments.php' template to display total comments
+ *
+ * @version 1.2
+ * @date    March 26, 2013
+ * Change comment fields into an unordered list
  */
 
 class OpusPrimusComments {
@@ -53,8 +57,17 @@ class OpusPrimusComments {
         add_action( 'comment_form_before', array( $this, 'before_comment_form' ) );
         add_action( 'comment_form_comments_closed', array( $this ,'comments_form_closed' ) );
 
+        /** Add comment actions - wrap comment fields in unordered list */
+        add_action( 'comment_form_before_fields', array( $this, 'comment_fields_wrapper_start' ) );
+        add_action( 'comment_form_after_fields', array( $this, 'comment_fields_wrapper_end' ) );
+
         /** Add comment filters */
         add_filter( 'comment_class', array( $this, 'comment_author_class' ) );
+
+        /** Add comment filters - change fields to list items from paragraphs */
+        add_filter( 'comment_form_default_fields', array( $this, 'comment_fields_as_list_items' ) );
+
+
     } /** End function - construct */
 
 
@@ -190,6 +203,64 @@ class OpusPrimusComments {
         return $classes;
 
     } /** End function - comment author class */
+
+
+    /**
+     * Comment Fields as List Items
+     *
+     * @package OpusPrimus
+     * @since   1.2
+     *
+     * @uses    esc_attr
+     * @uses    get_option
+     * @uses    wp_get_current_commenter
+     *
+     * @return  array
+     */
+    function comment_fields_as_list_items() {
+        $commenter = wp_get_current_commenter();
+        $req = get_option( 'require_name_email' );
+        $aria_req = ( $req ? " aria-required='true'" : '' );
+
+        $fields =  array(
+            'author' => '<li class="comment-form-author">' . '<label for="author">' . __( 'Name' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+                '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></li>',
+            'email'  => '<li class="comment-form-email"><label for="email">' . __( 'Email' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+                '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></li>',
+            'url'    => '<li class="comment-form-url"><label for="url">' . __( 'Website' ) . '</label>' .
+                '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></li>',
+        );
+
+        return $fields;
+    } /** End function - comment fields as list items */
+
+
+    /**
+     * Comment Fields Wrapper Start
+     * Echoes an opening `ul` tag
+     *
+     * @package OpusPrimus
+     * @since   1.2
+     *
+     * @internal Works in conjunction with `comment_fields_as_list_items`
+     */
+    function comment_fields_wrapper_start() {
+        echo '<ul>';
+    } /** End function - comment fields wrapper start */
+
+
+    /**
+     * Comment Fields Wrapper End
+     * Echoes a closing `ul` tag
+     *
+     * @package OpusPrimus
+     * @since   1.2
+     *
+     * @internal Works in conjunction with `comment_fields_as_list_items`
+     */
+    function comment_fields_wrapper_end() {
+        echo '</ul>';
+    } /** End function - comment fields wrapper end */
 
 
     /** ---- Additional Methods ---- */

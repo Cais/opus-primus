@@ -47,15 +47,16 @@
  * Changed comments count to be display via a Comments class method
  *
  * @todo Review general commentary look and feel ... make more unique to OP
- */ ?>
+ */
+
+global $opus_comments; ?>
 
 <!-- Show the comments -->
 <!-- Inspired by http://digwp.com/2010/02/separate-comments-pingbacks-trackbacks/ -->
 <div class="comments-wrapper">
     <?php if ( have_comments() ) {
 
-        /** Call the global variables needed */
-        global $opus_comments ?>
+        /** Call the global variables needed */ ?>
 
         <h2 id="all-comments">
             <?php $opus_comments->show_all_comments_count(); ?>

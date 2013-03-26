@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised March 25, 2013
+Last revised March 26, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2 ==
@@ -7,6 +7,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Code =
 * Change post thumbnail on pages to full size image and align to the center
+* Change comment fields into an unordered list
 
 = CSS =
 * Sorted out the adaptive layout for screens less than 480px wide
