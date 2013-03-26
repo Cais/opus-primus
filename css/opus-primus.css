@@ -940,7 +940,7 @@ form#commentform label {
     padding: 0 5px;
 }
 form#commentform .comment-form-url label {
-    padding-right: 8px;
+    padding-right: 10px;
 }
 
 form#commentform span.required {
@@ -1047,6 +1047,10 @@ ul#comment-fields-listed-wrapper {
 
 ul#comment-fields-listed-wrapper li {
     float: left;
+}
+
+ul#comment-fields-listed-wrapper li label {
+    /** display: none; */
 }
 /** End: Comment Form Fields ------------------------------------------------ */
 
