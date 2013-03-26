@@ -10,6 +10,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Change comment fields into an unordered list
 
 = CSS =
+* Add styles for Comment Form Fields
 * Sorted out the adaptive layout for screens less than 480px wide
 
 = Stanzas =

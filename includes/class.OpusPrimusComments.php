@@ -245,7 +245,7 @@ class OpusPrimusComments {
      * @internal Works in conjunction with `comment_fields_as_list_items`
      */
     function comment_fields_wrapper_start() {
-        echo '<ul>';
+        echo '<ul id="comment-fields-listed-wrapper">';
     } /** End function - comment fields wrapper start */
 
 
@@ -259,7 +259,7 @@ class OpusPrimusComments {
      * @internal Works in conjunction with `comment_fields_as_list_items`
      */
     function comment_fields_wrapper_end() {
-        echo '</ul>';
+        echo '</ul><!-- #comment-fields-listed-wrapper -->';
     } /** End function - comment fields wrapper end */
 
 

@@ -54,6 +54,10 @@
  * Add rounded corners for the comment type tabs and the comments panel
  * Add `#d3d3d3` color as default tab background color; active is transparent
  * Removed unused element for non-existent 'comments-toggle' script
+ *
+ * @version 1.2
+ * @date    March 26, 2013
+ * Add styles for Comment Form Fields
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -71,6 +75,7 @@
  *
  * === Comments ===
  * === Comment Tabs ===
+ * === Comment Form Fields ===
  *
  * === Sidebars ===
  * === Default Widgets ===
@@ -1033,6 +1038,17 @@ div.comments-wrapper ul.comments-list li.comment {
     border-top-right-radius: 5px;
 }
 /** End: Comment Tabs ------------------------------------------------------- */
+
+/** === Comment Form Fields === --------------------------------------------- */
+ul#comment-fields-listed-wrapper {
+    list-style: none inside none;
+    margin: 0 0 9px;
+}
+
+ul#comment-fields-listed-wrapper li {
+    float: left;
+}
+/** End: Comment Form Fields ------------------------------------------------ */
 
 /** End: Comments ----------------------------------------------------------- */
 
