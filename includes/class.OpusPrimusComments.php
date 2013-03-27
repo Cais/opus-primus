@@ -46,6 +46,7 @@
  *
  * @version 1.2
  * @date    March 26, 2013
+ * Added filtered $required glyph variable for comment fields
  * Change comment fields into an unordered list
  */
 
@@ -66,7 +67,6 @@ class OpusPrimusComments {
 
         /** Add comment filters - change fields to list items from paragraphs */
         add_filter( 'comment_form_default_fields', array( $this, 'comment_fields_as_list_items' ) );
-
 
     } /** End function - construct */
 
@@ -206,6 +206,28 @@ class OpusPrimusComments {
 
 
     /**
+     * Comments Notes Before
+     *
+     * @package OpusPrimus
+     * @since   1.2
+     *
+     * @uses    apply_filters
+     * @uses    get_option
+     *
+     * @internal ... not used at this time (March 27, 2013)
+     *
+     * @return  string
+     */
+    function comments_notes_before() {
+        $req = get_option( 'require_name_email' );
+        $required_glyph = apply_filters( 'opus_comment_required_glyph', '*' );
+        $required_text = sprintf( ' ' . __('Required fields are marked %s'), '<span class="required">' . $required_glyph . '</span>' );
+
+        return '<p class="comment-notes">' . __( 'Your email address will not be published.' ) . ( $req ? $required_text : '' ) . '</p>';
+    }
+
+
+    /**
      * Comment Fields as List Items
      *
      * @package OpusPrimus
@@ -221,11 +243,12 @@ class OpusPrimusComments {
         $commenter = wp_get_current_commenter();
         $req = get_option( 'require_name_email' );
         $aria_req = ( $req ? " aria-required='true'" : '' );
+        $required_glyph = apply_filters( 'opus_comment_required_glyph', '*' );
 
         $fields =  array(
-            'author' => '<li class="comment-form-author">' . '<label for="author">' . __( 'Name' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+            'author' => '<li class="comment-form-author">' . '<label for="author">' . __( 'Name' ) . ( $req ? ' <span class="required">' . $required_glyph . '</span>' : '' ) . '</label> ' .
                 '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></li>',
-            'email'  => '<li class="comment-form-email"><label for="email">' . __( 'Email' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+            'email'  => '<li class="comment-form-email"><label for="email">' . __( 'Email' ) . ( $req ? ' <span class="required">' . $required_glyph . '</span>' : '' ) . '</label> ' .
                 '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></li>',
             'url'    => '<li class="comment-form-url"><label for="url">' . __( 'Website' ) . '</label>' .
                 '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></li>',
