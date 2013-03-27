@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised March 26, 2013
+Last revised March 27, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2 ==
@@ -11,7 +11,8 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Change comment fields into an unordered list
 
 = CSS =
-* Add styles for Comment Form Fields
+* Add styles for comment form fields
+* Adjust widths of comment form elements
 * Sorted out the adaptive layout for screens less than 480px wide
 
 = Stanzas =

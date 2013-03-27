@@ -58,6 +58,7 @@
  * @version 1.2
  * @date    March 26, 2013
  * Add styles for Comment Form Fields
+ * Adjust widths of comment form elements
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -954,13 +955,13 @@ p.comment-form-comment {
 }
 
 p.comment-form-comment textarea#comment {
-    width: 96%;
+    width: 98%;
 }
 
 /** Move the `form-allowed-tags` code box to beneath the notification text */
 code.form-allowed-tags-code-box {
     float: left;
-    width: 96%;
+    width: 98%;
 }
 
 /** Place the "Post Comment" button on the right side of the content */
@@ -970,7 +971,7 @@ form#commentform p.form-submit input#submit {
 /** Align the "post Comment" button with the comment textarea */
 p.form-allowed-tags + p.form-submit {
     margin: 10px;
-    width: 96%;
+    width: 98%;
 }
 
 .comment div.reply {
