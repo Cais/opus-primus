@@ -7,7 +7,7 @@
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364509240324" ignored="false" />
+    <file path="/Dummy.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364509333158" ignored="false" />
     <file path="/opus-primus-header.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363452033046" ignored="false" />
     <file path="$PROJECT_DIR$/../wpfirstaid/opus-primus-header.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363452033046" ignored="false" />
     <file path="$PROJECT_DIR$/../wpfirstaid/wpfirstaid-header-layout.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363447365297" ignored="false" />
@@ -54,7 +54,7 @@
       <file leaf-file-name="class.OpusPrimusPosts.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPosts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="8" selection-start="2770" selection-end="2770" vertical-scroll-proportion="-3.5253456">
+            <state line="52" column="26" selection-start="1736" selection-end="1736" vertical-scroll-proportion="0.2611367">
               <folding />
             </state>
           </provider>
@@ -1852,7 +1852,11 @@
       <created>1364509247022</created>
       <updated>1364509247023</updated>
     </task>
-    <option name="localTasksCounter" value="355" />
+    <task id="LOCAL-00355" summary="* Code formatting">
+      <created>1364509339339</created>
+      <updated>1364509339339</updated>
+    </task>
+    <option name="localTasksCounter" value="356" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -2098,7 +2102,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPosts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="8" selection-start="2770" selection-end="2770" vertical-scroll-proportion="-3.5253456">
+        <state line="52" column="26" selection-start="1736" selection-end="1736" vertical-scroll-proportion="0.2611367">
           <folding />
         </state>
       </provider>

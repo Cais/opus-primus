@@ -44,10 +44,17 @@
  */
 
 class OpusPrimusPosts {
-    /** Constructor */
+    /**
+     * Constructor
+     *
+     * @package OpusPrimus
+     * @since   0.1
+     *
+     * @uses    add_filter
+     */
     function __construct() {
         /** Add excerpt more link */
-        add_filter( 'excerpt_more', array( $this, 'excerpt_more_link') );
+        add_filter( 'excerpt_more', array( $this, 'excerpt_more_link' ) );
 
         /** Add classes to post tag */
         add_filter( 'post_class', array( $this, 'post_classes' ) );
