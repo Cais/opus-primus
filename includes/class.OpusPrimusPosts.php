@@ -490,7 +490,12 @@ class OpusPrimusPosts {
      * @uses    sticky_flag
      * @uses    wp_parse_args
      *
+     * @version 1.2
+     * @date    March 28, 2013
+     * Changed `meta-byline` container from `div` to `h3`
+     *
      * @todo Review for additional filter options
+     * @todo Add additional wrapper elements for date and time
      */
     function post_byline( $byline_args = '' ) {
         /** Set defaults */
@@ -514,7 +519,7 @@ class OpusPrimusPosts {
         /**
          * Output post byline (date, time, and author) and open the CSS wrapper
          */
-        echo '<div class="meta-byline">';
+        echo '<h3 class="meta-byline">';
 
             printf( $opus_post_byline,
                 $this->no_title_link( $byline_args['anchor'] ),
@@ -537,7 +542,7 @@ class OpusPrimusPosts {
             echo $this->post_format_flag();
 
         /** Close CSS wrapper for the post byline */
-        echo '</div><!-- .meta-byline -->';
+        echo '</h3><!-- .meta-byline -->';
 
         /** Add empty hook after post by line */
         do_action( 'opus_post_byline_after' );

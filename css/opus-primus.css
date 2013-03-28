@@ -56,9 +56,10 @@
  * Removed unused element for non-existent 'comments-toggle' script
  *
  * @version 1.2
- * @date    March 26, 2013
+ * @date    March 28, 2013
  * Add styles for Comment Form Fields
  * Adjust widths of comment form elements
+ * Adjust `meta-byline` CSS due to container change from `div` to `h3`
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -592,7 +593,7 @@ tt {
 .cf:after { clear: both; }
 .cf { zoom: 1; }
 
-div.meta-byline,
+h3.meta-byline,
 h2.post-title,
 ul.archive,
 ul.sidebar {
@@ -833,6 +834,7 @@ ul.breadcrumb li ul.post-trail-categories li:first-child {
 /** Meta Byline ------------------------------------------------------------- */
 .meta-byline {
     font-size: 13px;
+    font-weight: normal;
 }
 
 /** Post Content ------------------------------------------------------------ */
@@ -1229,7 +1231,7 @@ span.opus-author-about {
 /** End: Authors ------------------------------------------------------------ */
 
 /** === Post Formats === ---------------------------------------------------- */
-div.meta-byline button {
+h3.meta-byline button {
     float: right;
 }
 
