@@ -566,7 +566,9 @@ class OpusPrimusPosts {
 
         /** Create the text art */
         $post_coda = '* * * * *';
-        printf( '<div class="post-coda">%1$s</div>', apply_filters( 'opus_post_coda', $post_coda )  );
+        printf( '<div class="post-coda">%1$s</div>',
+            apply_filters( 'opus_post_coda', $post_coda )
+        );
 
         /** Add empty hook after the post coda */
         do_action( 'opus_post_coda_after' );

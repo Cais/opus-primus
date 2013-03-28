@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/opus-primus.css" afterPath="$PROJECT_DIR$/css/opus-primus.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364504568262" ignored="false" />
+    <file path="/Dummy.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364508691678" ignored="false" />
     <file path="/opus-primus-header.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363452033046" ignored="false" />
     <file path="$PROJECT_DIR$/../wpfirstaid/opus-primus-header.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363452033046" ignored="false" />
     <file path="$PROJECT_DIR$/../wpfirstaid/wpfirstaid-header-layout.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363447365297" ignored="false" />
@@ -56,7 +54,7 @@
       <file leaf-file-name="class.OpusPrimusPosts.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPosts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="497" column="62" selection-start="19119" selection-end="19119" vertical-scroll-proportion="0.67895544">
+            <state line="571" column="0" selection-start="21727" selection-end="21727" vertical-scroll-proportion="5.1966205">
               <folding />
             </state>
           </provider>
@@ -1846,7 +1844,11 @@
       <created>1364163978846</created>
       <updated>1364163978846</updated>
     </task>
-    <option name="localTasksCounter" value="353" />
+    <task id="LOCAL-00353" summary="* Change `meta-byline` container from `div` to `h3` (adjusted CSS as needed)">
+      <created>1364508701642</created>
+      <updated>1364508701642</updated>
+    </task>
+    <option name="localTasksCounter" value="354" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1951,7 +1953,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Add some JavaScript magic?!" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Change `meta-byline` container from `div` to `h3` (adjusted CSS as needed)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1965,7 +1967,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="* Fix Post Format name being passed to title attribute" />
     <MESSAGE value="* Documentation corrections and added a todo" />
     <MESSAGE value="* Refactor Custom Header image block into its own Structures method" />
     <MESSAGE value="* Create Header class&#10;* Refactor Structures class to put `site_title`, `site_description`, and `custom_header_image` into Header class&#10;* Refactored `opus-primus-header` to reflect class/method changes" />
@@ -1990,6 +1991,7 @@
     <MESSAGE value="* Sorted out the adaptive layout for screens less than 480px wide&#10;* Reset version to 1.2-alpha after 1.1.1 bug fix release" />
     <MESSAGE value="* Change post thumbnail on pages to full size image and align to the center" />
     <MESSAGE value="* Add some JavaScript magic?!" />
+    <MESSAGE value="* Change `meta-byline` container from `div` to `h3` (adjusted CSS as needed)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2092,7 +2094,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPosts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="497" column="62" selection-start="19119" selection-end="19119" vertical-scroll-proportion="0.67895544">
+        <state line="571" column="0" selection-start="21727" selection-end="21727" vertical-scroll-proportion="5.1966205">
           <folding />
         </state>
       </provider>
