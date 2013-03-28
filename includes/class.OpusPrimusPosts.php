@@ -47,7 +47,7 @@ class OpusPrimusPosts {
     /** Constructor */
     function __construct() {
         /** Add excerpt more link */
-        add_filter('excerpt_more', array( $this, 'excerpt_more_link') );
+        add_filter( 'excerpt_more', array( $this, 'excerpt_more_link') );
 
         /** Add classes to post tag */
         add_filter( 'post_class', array( $this, 'post_classes' ) );
@@ -80,7 +80,9 @@ class OpusPrimusPosts {
         $link_text = sprintf( __( 'Read more of %1$s', 'opusprimus' ), $this->anchor_title_text() );
 
         /** @var $link_url - URL to single view */
-        $link_url = apply_filters( 'opus_excerpt_more_link', '<a class="excerpt-more-link" title="' . $link_text . '" href="' . get_permalink( $post->ID ) . '"> &hellip;&infin;</a>' );
+        $link_url = apply_filters( 'opus_excerpt_more_link',
+            '<a class="excerpt-more-link" title="' . $link_text . '" href="' . get_permalink( $post->ID ) . '"> &hellip;&infin;</a>'
+        );
 
         return $link_url;
 

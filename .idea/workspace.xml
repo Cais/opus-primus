@@ -7,7 +7,7 @@
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364508691678" ignored="false" />
+    <file path="/Dummy.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364509240324" ignored="false" />
     <file path="/opus-primus-header.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363452033046" ignored="false" />
     <file path="$PROJECT_DIR$/../wpfirstaid/opus-primus-header.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363452033046" ignored="false" />
     <file path="$PROJECT_DIR$/../wpfirstaid/wpfirstaid-header-layout.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363447365297" ignored="false" />
@@ -54,7 +54,7 @@
       <file leaf-file-name="class.OpusPrimusPosts.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPosts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="571" column="0" selection-start="21727" selection-end="21727" vertical-scroll-proportion="5.1966205">
+            <state line="84" column="8" selection-start="2770" selection-end="2770" vertical-scroll-proportion="-3.5253456">
               <folding />
             </state>
           </provider>
@@ -1848,7 +1848,11 @@
       <created>1364508701642</created>
       <updated>1364508701642</updated>
     </task>
-    <option name="localTasksCounter" value="354" />
+    <task id="LOCAL-00354" summary="* Code formatting">
+      <created>1364509247022</created>
+      <updated>1364509247023</updated>
+    </task>
+    <option name="localTasksCounter" value="355" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1953,7 +1957,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Change `meta-byline` container from `div` to `h3` (adjusted CSS as needed)" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Code formatting" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1984,7 +1988,6 @@
     <MESSAGE value="* Added Comment Tabs for each type (Comment, Pingback, and Trackback)" />
     <MESSAGE value="* Fix extra space caused by empty comment navigation container" />
     <MESSAGE value="* Code formatting and block termination comments" />
-    <MESSAGE value="* Code formatting" />
     <MESSAGE value="* Remove $content_width set values from Structures class method `layout_open` and set in 'functions.php'" />
     <MESSAGE value="* Reversion to 1.1.1 - to be released as (minor) bug fix" />
     <MESSAGE value="* Update 'readme.txt' with latest theme trac ticket reference #11803" />
@@ -1992,6 +1995,7 @@
     <MESSAGE value="* Change post thumbnail on pages to full size image and align to the center" />
     <MESSAGE value="* Add some JavaScript magic?!" />
     <MESSAGE value="* Change `meta-byline` container from `div` to `h3` (adjusted CSS as needed)" />
+    <MESSAGE value="* Code formatting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2094,7 +2098,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPosts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="571" column="0" selection-start="21727" selection-end="21727" vertical-scroll-proportion="5.1966205">
+        <state line="84" column="8" selection-start="2770" selection-end="2770" vertical-scroll-proportion="-3.5253456">
           <folding />
         </state>
       </provider>
