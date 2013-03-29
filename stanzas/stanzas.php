@@ -34,12 +34,6 @@
  * @version 1.0.3
  * @date    February 28, 2013
  * Added Taglines as a Stanza versus a theme feature
- *
- * @version 1.2
- * @date    March 29, 2013
- * Added action hook to allow custom Stanzas to be used
- *
- * @todo Write new Stanza to use `opus_add_stanza` hook
  */
 
 /** Add Pull Quotes */
