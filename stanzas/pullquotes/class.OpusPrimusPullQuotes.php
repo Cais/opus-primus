@@ -1,16 +1,17 @@
 <?php
 /**
- * Opus Primus Post Structures
- * Controls for the organization and layout of the site and its content.
+ * Opus Primus PullQuotes Stanza
+ * This provides pull quote functionality to the Opus Primus theme as a feature
+ * to display highlighted or emphasized content.
  *
  * @package     OpusPrimus
- * @subpackage  Stanzas
+ * @subpackage  PullQuotes
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
  * @copyright   Copyright (c) 2012-2013, Opus Primus
  *
- * This file is part of Opus Primus.
+ * This file is part of Opus Primus PullQuotes, a part of Opus Primus.
  *
  * Opus Primus is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License version 2, as published by the
@@ -72,11 +73,11 @@ class OpusPrimusPullQuotes {
      */
     function scripts_and_styles() {
         /** Enqueue Scripts */
-        /** Enqueue Opus Primus JavaScripts which will enqueue jQuery as a dependency */
+        /** Enqueue Opus Primus PullQuotes JavaScripts which will enqueue jQuery as a dependency */
         wp_enqueue_script( 'opus-primus-pullquote', OPUS_STANZAS_URI .'pullquotes/opus-primus.pullquote.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
 
         /** Enqueue Styles */
-        /** Enqueue Theme Stylesheets */
+        /** Enqueue PullQuotes Stanza Stylesheets */
         wp_enqueue_style( 'Opus-Primus-PullQuote', OPUS_STANZAS_URI . 'pullquotes/opus-primus.pullquote.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
 
     } /** End function - scripts and styles */

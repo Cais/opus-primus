@@ -2,12 +2,13 @@
  * Opus Primus Pull Quote JavaScript
  *
  * @package     OpusPrimus
+ * @subpackage  PullQuotes
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012, Opus Primus
+ * @copyright   Copyright (c) 2012-2013, Opus Primus
  *
- * This file is part of Opus Primus.
+ * This file is part of Opus Primus PullQuotes, a part of Opus Primus.
  *
  * Opus Primus is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License version 2, as published by the

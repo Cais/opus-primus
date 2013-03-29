@@ -10,7 +10,7 @@
  * @author      Opus Primus <in.opus.primus@gmail.com>
  * @copyright   Copyright (c) 2012-2013, Opus Primus
  *
- * This file is part of Opus Primus.
+ * This file is part of Opus Primus Taglines, a part of Opus Primus.
  *
  * Opus Primus is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License version 2, as published by the
@@ -76,7 +76,7 @@ class OpusPrimusTagLines {
      */
     function scripts_and_styles() {
         /** Enqueue Styles */
-        /** Enqueue Theme Stylesheets */
+        /** Enqueue Taglines Stanza Stylesheets */
         wp_enqueue_style( 'Opus-Primus-TagLines', OPUS_STANZAS_URI . 'taglines/opus-primus.taglines.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
     }
 

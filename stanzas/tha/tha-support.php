@@ -5,12 +5,13 @@
  * Opus Primus hooks.
  *
  * @package     OpusPrimus
+ * @subpackage  THA
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
  * @copyright   Copyright (c) 2013, Opus Primus
  *
- * This file is part of Opus Primus.
+ * This file is part of Opus Primus THA, a part of Opus Primus.
  *
  * Opus Primus is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License version 2, as published by the

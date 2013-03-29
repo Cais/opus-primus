@@ -50,6 +50,3 @@ require_once( OPUS_STANZAS . 'taglines/class.OpusPrimusTagLines.php' );
 
 /** Add Theme Hook Alliance Support */
 require_once( OPUS_STANZAS . 'tha/tha-support.php' );
-
-/** Add hook for other Stanza developers to grab onto */
-do_action( 'opus_add_stanza' );
