@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="* Added 'taglines-readme.txt' file">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stanzas/taglines/taglines-readme.txt" />
+    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stanzas/tha/tha-readme.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php" afterPath="$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stanzas/tha/tha-support.php" afterPath="$PROJECT_DIR$/stanzas/tha/tha-support.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364579581111" ignored="false" />
+    <file path="/Dummy.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364579715015" ignored="false" />
     <file path="/opus-primus-header.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363452033046" ignored="false" />
     <file path="$PROJECT_DIR$/../wpfirstaid/opus-primus-header.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363452033046" ignored="false" />
     <file path="$PROJECT_DIR$/../wpfirstaid/wpfirstaid-header-layout.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363447365297" ignored="false" />
@@ -20,7 +20,7 @@
     <file path="/a.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363454224462" ignored="false" />
     <file path="/wpfa-opus-primus.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363548535886" ignored="false" />
     <file path="/opus-primus-full-size-video.js" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363479645500" ignored="false" />
-    <file path="/changelog.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364579696473" ignored="false" />
+    <file path="/changelog.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364580135567" ignored="false" />
     <file path="/opus-primus.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364515181133" ignored="false" />
     <file path="/opus-primus-responsive-layout.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363549085306" ignored="false" />
     <file path="$PROJECT_DIR$/../wpfirstaid/.idea/workspace.xml" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363556537351" ignored="false" />
@@ -36,6 +36,7 @@
     <file path="/class.OpusPrimusPosts.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364508285495" ignored="false" />
     <file path="/pullquotes-readme.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364576318441" ignored="false" />
     <file path="/taglines-readme.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364579495363" ignored="false" />
+    <file path="/tha-readme.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364580043662" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,25 +59,27 @@
       <file leaf-file-name="changelog.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/changelog.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="865" selection-end="865" vertical-scroll-proportion="0.615942">
+            <state line="23" column="0" selection-start="846" selection-end="846" vertical-scroll-proportion="0.56666666">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="taglines-readme.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stanzas/taglines/taglines-readme.txt">
+      <file leaf-file-name="tha-support.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stanzas/tha/tha-support.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="31" selection-start="2586" selection-end="2586" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="44" column="61" selection-start="1607" selection-end="1607" vertical-scroll-proportion="-28.76923">
+              <folding>
+                <element signature="e#6#1357#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="class.OpusPrimusTagLines.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php">
+      <file leaf-file-name="tha-readme.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stanzas/tha/tha-readme.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="68" selection-start="1492" selection-end="1492" vertical-scroll-proportion="-14.384615">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -100,7 +103,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/css/opus-primus-media-queries.css" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/index.php" />
@@ -110,12 +112,13 @@
         <option value="$PROJECT_DIR$/css/opus-primus.css" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
         <option value="$PROJECT_DIR$/stanzas/stanzas.php" />
-        <option value="$PROJECT_DIR$/stanzas/tha/tha-support.php" />
         <option value="$PROJECT_DIR$/stanzas/pullquotes/pullquotes-readme.txt" />
         <option value="$PROJECT_DIR$/stanzas/pullquotes/class.OpusPrimusPullQuotes.php" />
         <option value="$PROJECT_DIR$/stanzas/taglines/taglines-readme.txt" />
         <option value="$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php" />
+        <option value="$PROJECT_DIR$/stanzas/tha/tha-readme.txt" />
         <option value="$PROJECT_DIR$/changelog.txt" />
+        <option value="$PROJECT_DIR$/stanzas/tha/tha-support.php" />
       </list>
     </option>
   </component>
@@ -1964,7 +1967,11 @@
       <created>1364576502623</created>
       <updated>1364576502623</updated>
     </task>
-    <option name="localTasksCounter" value="361" />
+    <task id="LOCAL-00361" summary="* Added 'taglines-readme.txt' file&#10;* Minor changes to text tense used in 'changelog.txt'">
+      <created>1364579724030</created>
+      <updated>1364579724030</updated>
+    </task>
+    <option name="localTasksCounter" value="362" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -2069,7 +2076,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Added details to 'pullquotes-readme.txt' file" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Added 'taglines-readme.txt' file&#10;* Minor changes to text tense used in 'changelog.txt'" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -2083,7 +2090,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="* Do not display &quot;Standard&quot; Post Format  name in breadcrumb trail" />
     <MESSAGE value="* Add sticky post step to breadcrumb trail" />
     <MESSAGE value="* Add some text filters for the 'Home' and 'Sticky&quot; text in the post breadcrumbs trail" />
     <MESSAGE value="* Changed 'leftmenu' to 'left-menu' (not used, yet)" />
@@ -2108,6 +2114,7 @@
     <MESSAGE value="* Added 'pullquotes-readme.txt' file/frame" />
     <MESSAGE value="* Added multiple todo items related to Stanzas" />
     <MESSAGE value="* Added details to 'pullquotes-readme.txt' file" />
+    <MESSAGE value="* Added 'taglines-readme.txt' file&#10;* Minor changes to text tense used in 'changelog.txt'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2125,11 +2132,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="5.8846154" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="85" column="11" selection-start="3531" selection-end="3531" vertical-scroll-proportion="-14.384615" />
@@ -2185,13 +2187,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stanzas/tha/tha-support.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="41" selection-start="1398" selection-end="1398" vertical-scroll-proportion="-11.730769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stanzas/pullquotes/class.OpusPrimusPullQuotes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="0" selection-start="1270" selection-end="1270" vertical-scroll-proportion="-12.423077">
@@ -2206,13 +2201,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stanzas/taglines/taglines-readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="31" selection-start="2586" selection-end="2586" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="68" selection-start="1492" selection-end="1492" vertical-scroll-proportion="-14.384615">
@@ -2220,9 +2208,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/stanzas/taglines/taglines-readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stanzas/tha/tha-readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stanzas/tha/tha-support.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="61" selection-start="1607" selection-end="1607" vertical-scroll-proportion="-28.76923">
+          <folding>
+            <element signature="e#6#1357#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/changelog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="865" selection-end="865" vertical-scroll-proportion="0.615942">
+        <state line="23" column="0" selection-start="846" selection-end="846" vertical-scroll-proportion="0.56666666">
           <folding />
         </state>
       </provider>

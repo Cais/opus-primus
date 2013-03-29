@@ -21,6 +21,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * PullQuotes - Added 'pullquotes-readme.txt' file
 * PullQuotes - Added left-side placement with new `to` parameter
 * Taglines - Added 'taglines-readme.txt' file
+* THA - Added 'tha-readme.txt' file
 
 = Miscellaneous =
 * Minor changes to text tense used in 'changelog.txt'

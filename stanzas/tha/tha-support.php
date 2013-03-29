@@ -36,8 +36,6 @@
  * @date    February 21, 2013
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>` matching the THA formats
- *
- * @todo Add Stanza 'tha-readme.txt' file
  */
 
 /** Sanity check - make sure the hooks file exists before adding the bridges */
