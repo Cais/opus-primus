@@ -60,6 +60,7 @@
  * Add styles for Comment Form Fields
  * Adjust widths of comment form elements
  * Adjust `meta-byline` CSS due to container change from `div` to `h3`
+ * Adjust `meta-tags` CSS due to container change from `p` to `h3`
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -859,8 +860,10 @@ div.post-content {
     border-bottom: 1px solid #d3d3d3;
 }
 /** Meta-Tags --------------------------------------------------------------- */
-p.meta-tags {
+.meta-tags {
     border-top: 1px solid #d3d3d3;
+    font-size: 13px;
+    font-weight: normal;
 }
 /** End: Post Elements ------------------------------------------------------ */
 
@@ -1335,7 +1338,7 @@ div.post.format-video div.post-content p {
     line-height: 22.5px;
 }
 
-.archive.term-post-format-quote p.meta-tags {
+.archive.term-post-format-quote h3.meta-tags {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 75%;
     line-height: 18px;

@@ -277,6 +277,10 @@ class OpusPrimusPosts {
      * @uses    no_title_link
      * @uses    the_title_attribute
      * @uses    uncategorized
+     *
+     * @version 1.2
+     * @date    March 28, 2013
+     * Changed `meta-byline` container from `p` to `h3`
      */
     function meta_tags( $anchor ) {
         /** Add empty hook before meta tags */
@@ -300,7 +304,7 @@ class OpusPrimusPosts {
         } /** End if - tag list */
 
         /** Prints the "opus_posted_in" string, replacing the placeholders */
-        printf( '<p class="meta-tags">' . $opus_posted_in . '</p>',
+        printf( '<h3 class="meta-tags">' . $opus_posted_in . '</h3>',
             $this->no_title_link( $anchor ),
             get_the_category_list( ', ' ),
             $opus_tag_list,
