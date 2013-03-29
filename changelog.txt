@@ -18,7 +18,8 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Sorted out the adaptive layout for screens less than 480px wide
 
 = Stanzas =
-* PullQuotes - added left-side placement with new `to` parameter
+* PullQuotes - Added 'pullquotes-readme.txt' file
+* PullQuotes - Added left-side placement with new `to` parameter
 
 = Miscellaneous =
 * Updated 'readme.txt' FAQ - What is the difference between how the "Featured Image" is used on a post and how it is used on a page?

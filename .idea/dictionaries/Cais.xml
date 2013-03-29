@@ -4,6 +4,7 @@
       <w>alignleft</w>
       <w>alignright</w>
       <w>bloginfo</w>
+      <w>cais</w>
       <w>caissie</w>
       <w>changelog</w>
       <w>clearfix</w>
@@ -32,6 +33,7 @@
       <w>userdata</w>
       <w>userid</w>
       <w>vids</w>
+      <w>wikipedia</w>
       <w>wtfpl</w>
     </words>
   </dictionary>
