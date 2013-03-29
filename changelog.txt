@@ -6,6 +6,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Released ...
 
 = Code =
+* Added action hook to allow custom Stanzas to be used
 * Added filtered $required glyph variable for comment fields
 * Change post thumbnail on pages to full size image and align to the center
 * Change comment fields into an unordered list

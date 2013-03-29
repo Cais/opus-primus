@@ -35,8 +35,11 @@
  * @date    February 28, 2013
  * Added Taglines as a Stanza versus a theme feature
  *
- * @todo Add action hook to allow custom Stanzas to be added
- * @todo Write new Stanza to test with ... use as example for attaching to hook
+ * @version 1.2
+ * @date    March 29, 2013
+ * Added action hook to allow custom Stanzas to be used
+ *
+ * @todo Write new Stanza to use `opus_add_stanza` hook
  */
 
 /** Add Pull Quotes */
@@ -47,3 +50,6 @@ require_once( OPUS_STANZAS . 'taglines/class.OpusPrimusTagLines.php' );
 
 /** Add Theme Hook Alliance Support */
 require_once( OPUS_STANZAS . 'tha/tha-support.php' );
+
+/** Add hook for other Stanza developers to grab onto */
+do_action( 'opus_add_stanza' );
