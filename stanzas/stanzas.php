@@ -34,6 +34,9 @@
  * @version 1.0.3
  * @date    February 28, 2013
  * Added Taglines as a Stanza versus a theme feature
+ *
+ * @todo Add action hook to allow custom Stanzas to be added
+ * @todo Write new Stanza to test with ... use as example for attaching to hook
  */
 
 /** Add Pull Quotes */

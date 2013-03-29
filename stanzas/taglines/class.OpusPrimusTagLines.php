@@ -40,6 +40,8 @@
  * @version 1.0.3
  * @date    February 28, 2013
  * Changed name from "Meta_Boxes" to "TagLines" and moved to Stanzas
+ *
+ * @todo Add Stanza 'taglines-readme.txt' file
  */
 
 class OpusPrimusTagLines {
