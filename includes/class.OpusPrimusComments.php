@@ -138,6 +138,24 @@ class OpusPrimusComments {
 
 
     /**
+     * Required Fields Glyph
+     * Returns a filtered glyph used with Comment Required Fields
+     *
+     * @package OpusPrimus
+     * @since   1.2
+     *
+     * @uses    apply_filters
+     *
+     * @return  mixed|void - default glyph - asterisk (*)
+     */
+    function required_fields_glyph() {
+        $glyph = apply_filters( 'opus_comment_required_glyph', '*' );
+
+        return $glyph;
+    } /** End function - required fields glyph */
+
+
+    /**
      * Change Required Fields Glyph
      * Changes the default asterisk (*) to the hash mark (#)
      *
@@ -159,24 +177,6 @@ class OpusPrimusComments {
         $defaults['comment_notes_before'] = str_replace( '*', $this->required_fields_glyph(), $defaults['comment_notes_before'] );
         return $defaults;
     } /** End function - change required fields glyph */
-
-
-    /**
-     * Required Fields Glyph
-     * Returns a filtered glyph used with Comment Required Fields
-     *
-     * @package OpusPrimus
-     * @since   1.2
-     *
-     * @uses    apply_filters
-     *
-     * @return  mixed|void - default glyph
-     */
-    function required_fields_glyph() {
-        $glyph = apply_filters( 'opus_comment_required_glyph', '*' );
-
-        return $glyph;
-    } /** End function - required fields glyph */
 
 
     /**
