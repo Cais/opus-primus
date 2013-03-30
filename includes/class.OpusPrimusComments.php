@@ -46,7 +46,7 @@
  *
  * @version 1.2
  * @date    March 26, 2013
- * Added filtered $required glyph variable for comment fields
+ * Added filtered `required_fields_glyph` method for comment fields
  * Change comment fields into an unordered list
  */
 
@@ -64,6 +64,7 @@ class OpusPrimusComments {
 
         /** Add comment filters */
         add_filter( 'comment_class', array( $this, 'comment_author_class' ) );
+        add_filter( 'comment_form_defaults', array( $this, 'change_required_fields_glyph' ) );
 
         /** Add comment filters - change fields to list items from paragraphs */
         add_filter( 'comment_form_default_fields', array( $this, 'comment_fields_as_list_items' ) );
@@ -134,6 +135,48 @@ class OpusPrimusComments {
         } /** End if - not have comments */
 
     } /** End function - before comment form */
+
+
+    /**
+     * Change Required Fields Glyph
+     * Changes the default asterisk (*) to the hash mark (#)
+     *
+     * @package OpusPrimus
+     * @since   1.2
+     *
+     * @internal Props tp Sergey Biryukov via the WordPress core trac
+     * @link https://core.trac.wordpress.org/ticket/23870
+     *
+     * @uses    OpusPrimusComments::required_fields_glyph
+     *
+     * @param   $defaults
+     *
+     * @return  mixed
+     */
+    function change_required_fields_glyph( $defaults ) {
+        $defaults['fields']['author']     = str_replace( '*', $this->required_fields_glyph(), $defaults['fields']['author'] );
+        $defaults['fields']['email']      = str_replace( '*', $this->required_fields_glyph(), $defaults['fields']['email'] );
+        $defaults['comment_notes_before'] = str_replace( '*', $this->required_fields_glyph(), $defaults['comment_notes_before'] );
+        return $defaults;
+    } /** End function - change required fields glyph */
+
+
+    /**
+     * Required Fields Glyph
+     * Returns a filtered glyph used with Comment Required Fields
+     *
+     * @package OpusPrimus
+     * @since   1.2
+     *
+     * @uses    apply_filters
+     *
+     * @return  mixed|void - default glyph
+     */
+    function required_fields_glyph() {
+        $glyph = apply_filters( 'opus_comment_required_glyph', '*' );
+
+        return $glyph;
+    } /** End function - required fields glyph */
 
 
     /**
@@ -243,12 +286,11 @@ class OpusPrimusComments {
         $commenter = wp_get_current_commenter();
         $req = get_option( 'require_name_email' );
         $aria_req = ( $req ? " aria-required='true'" : '' );
-        $required_glyph = apply_filters( 'opus_comment_required_glyph', '*' );
 
         $fields =  array(
-            'author' => '<li class="comment-form-author">' . '<label for="author">' . __( 'Name' ) . ( $req ? ' <span class="required">' . $required_glyph . '</span>' : '' ) . '</label> ' .
+            'author' => '<li class="comment-form-author">' . '<label for="author">' . __( 'Name' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
                 '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></li>',
-            'email'  => '<li class="comment-form-email"><label for="email">' . __( 'Email' ) . ( $req ? ' <span class="required">' . $required_glyph . '</span>' : '' ) . '</label> ' .
+            'email'  => '<li class="comment-form-email"><label for="email">' . __( 'Email' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
                 '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></li>',
             'url'    => '<li class="comment-form-url"><label for="url">' . __( 'Website' ) . '</label>' .
                 '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></li>',
