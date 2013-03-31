@@ -31,11 +31,6 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version 1.0.1
- * @date    February 21, 2013
- * Modified action hooks to more semantic naming convention:
- * `opus_<section>_<placement>`
- *
  * @version 1.1.1
  * @date    March 22, 2013
  * Added `comments only tab`, `pingbacks only tab`, `trackbacks only tab`,
@@ -45,8 +40,8 @@
  * 'comments.php' template to display total comments
  *
  * @version 1.2
- * @date    March 26, 2013
- * Added filtered `required_fields_glyph` method for comment fields
+ * @date    March 31, 2013
+ * Added filtered `comment_form_required_field_glyph` method for comment fields
  * Change comment fields into an unordered list
  */
 
@@ -64,7 +59,7 @@ class OpusPrimusComments {
 
         /** Add comment filters */
         add_filter( 'comment_class', array( $this, 'comment_author_class' ) );
-        add_filter( 'comment_form_defaults', array( $this, 'change_required_fields_glyph' ) );
+        add_filter( 'comment_form_defaults', array( $this, 'change_comment_form_required_field_glyph' ) );
 
         /** Add comment filters - change fields to list items from paragraphs */
         add_filter( 'comment_form_default_fields', array( $this, 'comment_fields_as_list_items' ) );
@@ -138,8 +133,8 @@ class OpusPrimusComments {
 
 
     /**
-     * Required Fields Glyph
-     * Returns a filtered glyph used with Comment Required Fields
+     * Comment Form Required Field Glyph
+     * Returns a filtered glyph used with Comment Form Required Fields
      *
      * @package OpusPrimus
      * @since   1.2
@@ -148,33 +143,34 @@ class OpusPrimusComments {
      *
      * @return  mixed|void - default glyph - asterisk (*)
      */
-    function required_fields_glyph() {
-        $glyph = apply_filters( 'opus_comment_required_glyph', '*' );
+    function comment_form_required_field_glyph() {
+        $glyph = apply_filters( 'opus_comment_form_required_field_glyph', '*' );
 
         return $glyph;
     } /** End function - required fields glyph */
 
 
     /**
-     * Change Required Fields Glyph
-     * Changes the default asterisk (*) to the hash mark (#)
+     * Change Comment Form Required Field Glyph
+     * Changes the default asterisk (*) to a filtered function
      *
      * @package OpusPrimus
      * @since   1.2
      *
-     * @internal Props tp Sergey Biryukov via the WordPress core trac
+     * @internal Props to Sergey Biryukov via the WordPress core trac for the
+     * base code used in this method
      * @link https://core.trac.wordpress.org/ticket/23870
      *
-     * @uses    OpusPrimusComments::required_fields_glyph
+     * @uses    OpusPrimusComments::comment_form_required_field_glyph
      *
      * @param   $defaults
      *
      * @return  mixed
      */
-    function change_required_fields_glyph( $defaults ) {
-        $defaults['fields']['author']     = str_replace( '*', $this->required_fields_glyph(), $defaults['fields']['author'] );
-        $defaults['fields']['email']      = str_replace( '*', $this->required_fields_glyph(), $defaults['fields']['email'] );
-        $defaults['comment_notes_before'] = str_replace( '*', $this->required_fields_glyph(), $defaults['comment_notes_before'] );
+    function change_comment_form_required_field_glyph( $defaults ) {
+        $defaults['fields']['author']     = str_replace( '*', $this->comment_form_required_field_glyph(), $defaults['fields']['author'] );
+        $defaults['fields']['email']      = str_replace( '*', $this->comment_form_required_field_glyph(), $defaults['fields']['email'] );
+        $defaults['comment_notes_before'] = str_replace( '*', $this->comment_form_required_field_glyph(), $defaults['comment_notes_before'] );
         return $defaults;
     } /** End function - change required fields glyph */
 

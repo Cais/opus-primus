@@ -1,21 +1,20 @@
 === Opus Primus changelog.txt ===
-Last revised March 30, 2013
+Last revised March 31, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2 ==
 * Released ...
 
 = Code =
-* Added action hook to allow custom Stanzas to be used
-* Added filtered `required_fields_glyph` method in Comments class for comment required fields
-* Change post thumbnail on pages to full size image and align to the center
-* Change comment fields into an unordered list
-* Change `meta-byline` container from `div` to `h3` (adjusted CSS as needed)
-* Change `meta-tags` container from `p` to `h3` (adjusted CSS as needed)
+* Added filtered `comment_form_required_field_glyph` method in Comments class
+* Changed post thumbnail on pages to full size image and align to the center
+* Changed comment fields into an unordered list
+* Changed `meta-byline` container from `div` to `h3` (adjusted CSS as needed)
+* Changed `meta-tags` container from `p` to `h3` (adjusted CSS as needed)
 
 = CSS =
 * Added styles for comment form fields
-* Adjust widths of comment form elements
+* Adjusted widths of comment form elements
 * Sorted out the adaptive layout for screens less than 480px wide
 
 = Stanzas =
