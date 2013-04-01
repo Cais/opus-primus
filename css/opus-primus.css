@@ -29,22 +29,6 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version 1.0.1
- * @date    February 12, 2013
- * Center top level menu items only - better aesthetics with short page titles
- *
- * @version 1.0.2
- * @date    February 27, 2013
- * BNS Plugin Integrations (aka BPI): BNS Inline Asides
- *
- * @version 1.0.3
- * @date    February 28, 2013
- * Moved TagLines CSS into Stanza stylesheet
- *
- * @version 1.0.4
- * @date    March 1, 2013
- * Added 'Breadcrumbs' section for pages
- *
  * @version 1.1
  * @date    March 18, 2013
  * Add minor comments styles
@@ -56,11 +40,12 @@
  * Removed unused element for non-existent 'comments-toggle' script
  *
  * @version 1.2
- * @date    March 28, 2013
- * Add styles for Comment Form Fields
- * Adjust widths of comment form elements
- * Adjust `meta-byline` CSS due to container change from `div` to `h3`
- * Adjust `meta-tags` CSS due to container change from `p` to `h3`
+ * @date    April 1, 2013
+ * Added more specific selector used with .post.format-link
+ * Added styles for Comment Form Fields
+ * Adjusted widths of comment form elements
+ * Adjusted `meta-byline` CSS due to container change from `div` to `h3`
+ * Adjusted `meta-tags` CSS due to container change from `p` to `h3`
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -1373,7 +1358,7 @@ blockquote + div.sharing {
 /** End: Post-Format: Status ------------------------------------------------ */
 
 /** === Post-Format: Link === ----------------------------------------------- */
-div.post.format-link .post-content a {
+div.post.format-link .post-content p a {
     font-size: 18px;
 }
 

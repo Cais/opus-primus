@@ -29,6 +29,10 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version 1.2
+ * @date    April 1, 2013
+ * Added more specific selector used with .post.format-link
  */
 
 jQuery( document ).ready( function( $ ) {
@@ -48,7 +52,7 @@ jQuery( document ).ready( function( $ ) {
      * - Post-Format: Link
      * - Linked Image Message
      */
-    $( 'div.post.format-link .post-content a, div.linked-image-message').wrapInner( '<span class="link-symbol" />' );
+    $( 'div.post.format-link .post-content p a, div.linked-image-message').wrapInner( '<span class="link-symbol" />' );
 
     /** Wrap post-format:audio anchors with audio-symbol class */
     $( 'div.post.format-audio .post-content a').wrapInner( '<span class="audio-symbol" />' );
