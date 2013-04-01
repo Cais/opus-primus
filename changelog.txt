@@ -15,6 +15,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = CSS =
 * Added styles for comment form fields
 * Added more specific selector used with .post.format-link
+* Address both class and id usage for the sidebar search form
 * Adjusted widths of comment form elements
 * Sorted out the adaptive layout for screens less than 480px wide
 

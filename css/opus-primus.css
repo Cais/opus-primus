@@ -43,6 +43,7 @@
  * @date    April 1, 2013
  * Added more specific selector used with .post.format-link
  * Added styles for Comment Form Fields
+ * Address both class and id usage for the sidebar search form
  * Adjusted widths of comment form elements
  * Adjusted `meta-byline` CSS due to container change from `div` to `h3`
  * Adjusted `meta-tags` CSS due to container change from `p` to `h3`
@@ -859,9 +860,12 @@ body.page div.page a.featured-thumbnail img {
 /** End: Page Elements ------------------------------------------------------ */
 
 /** === Search === ---------------------------------------------------------- */
+form.searchform,
 form#searchform {
     margin: 0;
 }
+
+form.searchform label.screen-reader-text,
 form#searchform label.screen-reader-text {
     display: none;
     margin: 0;
