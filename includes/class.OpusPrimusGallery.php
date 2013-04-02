@@ -262,6 +262,7 @@ class OpusPrimusGallery {
      *
      * @uses    (global) $opus_thumb_id
      * @uses    WP_Query
+     * @uses    apply_filters
      * @uses    do_action
      * @uses    get_permalink
      * @uses    get_the_ID

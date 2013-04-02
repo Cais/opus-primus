@@ -79,6 +79,7 @@ class OpusPrimusStructures {
      * @param       string $sep - separator character
      * @param       string $sep_location - left|right - separator placement in relationship to title
      *
+     * @uses        apply_filters
      * @uses        get_bloginfo - name, description
      * @uses        is_home
      * @uses        is_front_page
@@ -327,6 +328,7 @@ class OpusPrimusStructures {
      * @package OpusPrimus
      * @since   0.1
      *
+     * @uses    apply_filters
      * @uses    esc_attr__
      * @uses    esc_attr
      * @uses    esc_url
@@ -470,6 +472,7 @@ class OpusPrimusStructures {
      *
      * @uses    $opus_archives (global)
      * @uses    $opus_navigation (global)
+     * @uses    __
      * @uses    apply_filters
      * @uses    archive_cloud
      * @uses    categories_archives
@@ -490,23 +493,20 @@ class OpusPrimusStructures {
         <h2 class="post-title">
             <?php
             printf( __( 'Search Results for: %s', 'opus' ),
-                apply_filters(
-                    'opus_search_results_for_text',
+                apply_filters( 'opus_search_results_for_text',
                     '<span class="search-results">' . esc_html( get_search_query() ) . '</span>'
                 ) ); ?>
         </h2><!-- .post-title -->
 
         <?php
         printf( '<p class="no-results">%1$s</p>',
-            apply_filters(
-                'opus_no_results_text',
+            apply_filters( 'opus_no_results_text',
                 __( 'No results were found, would you like to try another search ...', 'opusprimus' )
             ) );
         get_search_form();
 
         printf( '<p class="no-results">%1$s</p>',
-            apply_filters(
-                'opus_no_results_links_text',
+            apply_filters( 'opus_no_results_links_text',
                 __( '... or try one of the links below.', 'opusprimus' )
             ) );
 

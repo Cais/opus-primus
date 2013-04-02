@@ -100,7 +100,7 @@ class OpusPrimusAuthors {
 
         /** Create the text art */
         $author_coda = '|=|=|=|=|';
-        printf( '<div class="author-coda">%1$s</div>', apply_filters( 'opus_author_coda', $author_coda )  );
+        printf( '<div class="author-coda">%1$s</div>', apply_filters( 'opus_author_coda', $author_coda ) );
 
         /** Add empty hook after the post coda */
         do_action( 'opus_author_coda_after' );
@@ -246,6 +246,7 @@ class OpusPrimusAuthors {
      *
      * @uses    $opus_author_id (global) - from OpusPrimusPosts::post_byline
      * @uses    $post (global)
+     * @uses    apply_filters
      * @uses    do_action
      * @uses    get_post_meta
      * @uses    get_the_date

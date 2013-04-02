@@ -103,6 +103,7 @@ class OpusPrimusBreadcrumbs {
      *
      * @uses    OpusPrimusBreadcrumbs::breadcrumb_categories
      * @uses    OpusPrimusBreadcrumbs::post_format_name
+     * @uses    apply_filters
      * @uses    home_url
      * @uses    is_single
      * @uses    is_singular

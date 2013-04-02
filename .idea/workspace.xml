@@ -3,12 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/opus-primus.css" afterPath="$PROJECT_DIR$/css/opus-primus.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusBreadcrumbs.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusBreadcrumbs.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documentation/hooks-filters.txt" afterPath="$PROJECT_DIR$/documentation/hooks-filters.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364841870530" ignored="false" />
+    <file path="/Dummy.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364910962821" ignored="false" />
     <file path="/a.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363106901363" ignored="false" />
     <file path="/a.html" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363107087453" ignored="false" />
     <file path="/a.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363107067982" ignored="false" />
@@ -20,11 +26,11 @@
     <file path="/opus-primus.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364845246226" ignored="false" />
     <file path="/comments.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364315354819" ignored="false" />
     <file path="/functions.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364401679699" ignored="false" />
-    <file path="/changelog.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364841758110" ignored="false" />
+    <file path="/changelog.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364921077651" ignored="false" />
     <file path="/opus-primus-comment-tabs.js" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363621396915" ignored="false" />
     <file path="/readme.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364840408820" ignored="false" />
     <file path="/style.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363798136092" ignored="false" />
-    <file path="/class.OpusPrimusComments.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364400292672" ignored="false" />
+    <file path="/class.OpusPrimusComments.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364918166258" ignored="false" />
     <file path="/opus-primus-media-queries.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364215189861" ignored="false" />
     <file path="/opus-primus.pullquote.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364227918709" ignored="false" />
     <file path="/class.OpusPrimusPullQuotes.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364227510094" ignored="false" />
@@ -42,6 +48,9 @@
     <file path="$PROJECT_DIR$/../../../../website/wp-content/plugins/bns-body-classes/readme.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364840408820" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../website/wp-content/plugins/bns-body-classes/bns-body-classes.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364840418634" ignored="false" />
     <file path="/opus-primus.js" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364841470955" ignored="false" />
+    <file path="/a.dummy" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364916910703" ignored="false" />
+    <file path="/DummyFile.xpath" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364917349406" ignored="false" />
+    <file path="/hooks-filters.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364920525995" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,19 +70,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="opus-primus.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="1578" selection-end="1578" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="changelog.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/changelog.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="61" selection-start="705" selection-end="705" vertical-scroll-proportion="0.33180252">
+            <state line="33" column="0" selection-start="1234" selection-end="1234" vertical-scroll-proportion="0.64408726">
               <folding />
             </state>
           </provider>
@@ -97,21 +97,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
-        <option value="$PROJECT_DIR$/documentation/hooks-actions.txt" />
-        <option value="$PROJECT_DIR$/css/opus-primus-media-queries.css" />
-        <option value="$PROJECT_DIR$/js/opus-primus-page-featured-image-adjust.js" />
-        <option value="$PROJECT_DIR$/stanzas/pullquotes/opus-primus.pullquote.css" />
         <option value="$PROJECT_DIR$/stanzas/pullquotes/opus-primus.pullquote.js" />
         <option value="$PROJECT_DIR$/stanzas/pullquotes/class.OpusPrimusPullQuotes.php" />
         <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/comments.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" />
         <option value="$PROJECT_DIR$/js/opus-primus.js" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/css/opus-primus.css" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusBreadcrumbs.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
+        <option value="$PROJECT_DIR$/documentation/hooks-filters.txt" />
         <option value="$PROJECT_DIR$/changelog.txt" />
       </list>
     </option>
@@ -149,6 +149,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -195,13 +196,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="documentation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -216,7 +216,7 @@
     <property name="options.lastSelected" value="web.server" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../WordPress/wp-content/themes/twentythirteen" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../website/wp-content/plugins/bns-early-adopter" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="293" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="967" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="967" />
@@ -1792,7 +1792,11 @@
       <created>1364841881225</created>
       <updated>1364841881225</updated>
     </task>
-    <option name="localTasksCounter" value="351" />
+    <task id="LOCAL-00351" summary="* Address both class and id usage for the sidebar search form">
+      <created>1364845270184</created>
+      <updated>1364845270184</updated>
+    </task>
+    <option name="localTasksCounter" value="352" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1832,13 +1836,13 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277592" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3247768" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32664436" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32329988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21931697" sideWeight="0.67781496" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22465315" sideWeight="0.6767001" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32664436" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -1850,7 +1854,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3236607" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277592" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1898,7 +1902,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Added more specific selector used with .post.format-link" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Address both class and id usage for the sidebar search form" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1912,7 +1916,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="* Start adding UI Tabs styles ... (City shutting down power to block?!)" />
     <MESSAGE value="* Mid-work note added to style for reference ..." />
     <MESSAGE value="* Drop 'restore_image_title' filter as potentially blocking insertion of media" />
     <MESSAGE value="* Documentation updates&#10;* Set tag to version 1.1 - bug fix release" />
@@ -1937,69 +1940,29 @@
     <MESSAGE value="* Added filtered $required glyph variable for comment fields" />
     <MESSAGE value="* Adjust widths of comment form elements" />
     <MESSAGE value="* Added more specific selector used with .post.format-link" />
+    <MESSAGE value="* Address both class and id usage for the sidebar search form" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
+  <component name="XPathView.XPathProjectComponent">
+    <history />
+    <find-history />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sidebar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/opus-primus-media-queries.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="66" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stanzas/pullquotes/opus-primus.pullquote.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="48" selection-start="1180" selection-end="1180" vertical-scroll-proportion="0.5706085" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="0" selection-start="3051" selection-end="3051" vertical-scroll-proportion="0.5464983" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stanzas/pullquotes/opus-primus.pullquote.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="44" selection-start="1197" selection-end="1197" vertical-scroll-proportion="0.2675086" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stanzas/pullquotes/class.OpusPrimusPullQuotes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/opus-primus-comment-tabs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="4" selection-start="1779" selection-end="1779" vertical-scroll-proportion="-3.0769231" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="749" column="3" selection-start="28099" selection-end="28099" vertical-scroll-proportion="0.89783657" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../wp-includes/comment-template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1537" column="29" selection-start="52043" selection-end="52063" vertical-scroll-proportion="0.75600964" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusComments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="1695" selection-end="1695" vertical-scroll-proportion="-6.923077" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/opus-primus.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="1201" selection-end="1201" vertical-scroll-proportion="0.0">
+        <state line="34" column="0" selection-start="1201" selection-end="1201" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="13" selection-start="2385" selection-end="2385" vertical-scroll-proportion="0.9597633" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="0" selection-start="1578" selection-end="1578" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -2011,25 +1974,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/404.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="13" selection-start="2385" selection-end="2385" vertical-scroll-proportion="0.9597633">
-          <folding>
-            <element signature="e#6#1584#0" expanded="true" />
-          </folding>
+        <state line="102" column="12" selection-start="3613" selection-end="3613" vertical-scroll-proportion="-7.1153846">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
+    <entry file="file://$PROJECT_DIR$/search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="1578" selection-end="1578" vertical-scroll-proportion="0.0">
+        <state line="69" column="61" selection-start="2327" selection-end="2327" vertical-scroll-proportion="-7.1153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="248" column="29" selection-start="9996" selection-end="9996" vertical-scroll-proportion="-0.86126125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusBreadcrumbs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="142" column="115" selection-start="4952" selection-end="5024" vertical-scroll-proportion="-6.923077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusComments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="77" selection-start="2412" selection-end="2412" vertical-scroll-proportion="-9.807693">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusGallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="264" column="29" selection-start="10216" selection-end="10216" vertical-scroll-proportion="-2.2896678">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusImages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="718" column="60" selection-start="25882" selection-end="25912" vertical-scroll-proportion="-6.923077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPosts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="855" column="57" selection-start="30981" selection-end="31008" vertical-scroll-proportion="-7.1153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="521" column="176" selection-start="21415" selection-end="21501" vertical-scroll-proportion="-6.923077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="194" column="155" selection-start="6358" selection-end="6481" vertical-scroll-proportion="-10.884615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/documentation/hooks-filters.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/changelog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="61" selection-start="705" selection-end="705" vertical-scroll-proportion="0.33180252">
+        <state line="33" column="0" selection-start="1234" selection-end="1234" vertical-scroll-proportion="0.64408726">
           <folding />
         </state>
       </provider>

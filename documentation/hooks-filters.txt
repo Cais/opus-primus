@@ -1,85 +1,80 @@
 ==== Hooks: Filters ====
+* Last revised April 2, 2013
 
 * Listing by File
-* Sorted Alphabetically
-* In Order of Appearance
-* Last revised January 27, 2013
+* In Order of Appearance (as used)
 
 === Filters ===
 == \ ==
 = 404.php =
+* 'opus_404_title_text', __( 'Something seems to have gone bust ...', 'opusprimus' )
+* 'opus_404_message_text' , __( 'This is the 404 error page; we seemed to have lost what you are looking for.', 'opusprimus' )
+* 'opus_404_posts_text', __( 'Were you looking for a recent post?', 'opusprimus' )
+* 'opus_404_category_text', __( 'Maybe you were looking for one these categories ...', 'opusprimus' )
+* 'opus_404_tag_text', __( '... or maybe you are interested in one of these tags?', 'opusprimus' )
 
-* opus_404_title_text
-* opus_404_message_text
-* opus_404_posts_text
-* opus_404_category_text
-* opus_404_tag_text
-
+= search.php =
+* 'opus_search_found_pre_text', __( 'We found it!<br />It looks like you searched for ...', 'opusprimus')
+* 'opus_search_found_post_text', __( '<div class="opus-search-found-post-text">Here are the results:</div>', 'opusprimus' )
 
 == \includes ==
 = class.OpusPrimusAuthors.php =
+* 'opus_author_coda', $author_coda
+* 'opus_first_author_by_text', __( 'Author:', 'opusprimus' )
+* 'opus_modified_author_by_text', __( 'Modified by:', 'opusprimus' )
 
-* opus_first_author_by_text
-* opus_modified_author_by_text
-* opus_author_coda
-
+= class.OpusPrimusBreadcrumbs.php =
+* 'opus_post_breadcrumbs_home_text', __( 'Home', 'opusprimus' )
+* 'opus_post_breadcrumbs_sticky_text', __( 'Sticky Post', 'opusprimus' )
 
 = class.OpusPrimusComments.php =
-
-* opus_comments_password_required
-* opus_no_comments_message
-* opus_comments_form_closed
-
+* 'opus_comments_password_required', __( 'This post is password protected. Enter the password to view comments.', 'opusprimus' )
+* 'opus_no_comments_message', __( 'Start a discussion ...', 'opusprimus' )
+* 'opus_comment_form_required_field_glyph', __( '*', 'opusprimus' )
+* 'opus_comments_form_closed' , __( 'New comments are not being accepted at this time, please feel free to contact the post author directly.', 'opusprimus' )
 
 = class.OpusPrimusGallery.php =
-
-* opus_more_images_text
-
+* 'opus_more_images_text', sprintf( _n( __( 'There is %2$sone more image%3$s in addition to these in the gallery.', 'opusprimus' ), __( 'There are %2$s%1$s more images%3$s in addition to these in the gallery.', 'opusprimus' ), ( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 ) ), ( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 ), '<a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">', '</a>' )
 
 = class.OpusPrimusImages.php =
+* 'opus_linked_image_message', __( 'This is a linked image.', 'opusprimus' )
+* 'opus_exif_aperture', $aperture
+* 'opus_exif_camera', $camera
+* 'opus_exif_caption', $exif_caption
+* 'opus_exif_copyright', $copyright
+* 'opus_exif_dimensions', $dimensions
+* 'opus_exif_focal_length', $focal_length
+* 'opus_exif_iso_speed', $iso_speed
+* 'opus_exif_shutter', $shutter
+* 'opus_exif_timestamp', $timestamp
+* 'opus_exif_title', $exif_title
 
-* opus_exif_dimensions
-* opus_exif_copyright
-* opus_exif_timestamp
-* opus_exif_camera
-* opus_exif_shutter
-* opus_exif_aperture
-* opus_exif_caption
-* opus_exif_focal_length
-* opus_exif_iso_speed
-* opus_exif_title
-* opus_linked_image_filter
-
-
-= class.OpusPrimusTagLines.php=
-
-* opus_taglines_meta_box_title
-* opus_taglines_text_field_description
-* opus_tagline_output
-
-
-= class.OpusPrimusPosts.php =
-
-* opus_post_byline_details
-* opus_no_title_link
-* opus_mod_different_author_phrase
-* opus_mod_same_author_phrase
-* opus_default_sticky_flag
-* opus_sticky_flag
-* opus_post_format_flag
-* opus_status_update_text
-* opus_status_update
-* opus_status_update_over_year
-* opus_post_coda
-
+= class.OpusPrimusPosts =
+* 'opus_excerpt_more_link', '<a class="excerpt-more-link" title="' . $link_text . '" href="' . get_permalink( $post->ID ) . '"> &hellip;&infin;</a>'
+* 'opus_mod_different_author_phrase', __( 'Last modified by %1$s %2$s on %3$s at %4$s.', 'opusprimus' )
+* 'opus_mod_same_author_phrase', __( 'and modified on %3$s at %4$s.', 'opusprimus' )
+* 'opus_no_title_link', $opus_no_title
+* 'opus_post_byline_details', __( '%1$s on %2$s at %3$s by %4$s', 'opusprimus' )
+* 'opus_post_coda', $post_coda
+* 'opus_post_format_flag', $output
+* 'opus_status_update_text', __( 'Updated again', 'opusprimus' )
+* 'opus_status_update', sprintf( __( '%1$s %2$s ago.', 'opusprimus' ), $update_text, human_time_diff( get_the_modified_time( 'U' ), current_time( 'timestamp' ) ) )
+* 'opus_status_update_over_year', $update_text . ' ' . __( 'over a year ago.', 'opusprimus' )
+* 'opus_default_sticky_flag', $sticky_text
+* 'opus_sticky_flag', $output
 
 = class.OpusPrimusStructures.php =
+* 'opus_browser_title', $opus_title_text
+* 'opus_body_classes', $classes
+* 'opus_copyright', $output
+* 'opus_credits', $credits
+* 'opus_search_results_for_text', '<span class="search-results">' . esc_html( get_search_query() ) . '</span>'
+* 'opus_no_results_text', __( 'No results were found, would you like to try another search ...', 'opusprimus' )
+* 'opus_no_results_links_text', __( '... or try one of the links below.', 'opusprimus' )
+* 'opus_category_archives_title', __( 'Top 10 Categories by Post Count:', 'opusprimus' )
 
-* opus_browser_title
-* opus_body_classes
-* opus_credits
-* opus_copyright
-* opus_search_results_for_text
-* opus_no_results_text
-* opus_no_results_links_text
-* opus_category_archives_title
+== \stanzas ==
+= class.OpusPrimusTagLines.php =
+* 'opus_taglines_meta_box_title', sprintf( __( '%1$s Tagline', 'opusprimus' ), ucfirst( $post->post_type ) )
+* 'opus_tagline_output_' . $post->ID, get_post_meta( $post->ID, 'tagline_text_field', true )
+* 'opus_taglines_text_field_description', sprintf( __('Add custom tagline to this %1$s: ', 'opusprimus' ), $post->post_type )

@@ -72,6 +72,7 @@ class OpusPrimusPosts {
      * @since   1.0.5
      *
      * @uses    OpusPrimusPosts::anchor_title_text
+     * @uses    apply_filters
      * @uses    get_permalink
      *
      * @param   $more

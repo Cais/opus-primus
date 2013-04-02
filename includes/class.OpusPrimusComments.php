@@ -57,7 +57,7 @@ class OpusPrimusComments {
         add_action( 'comment_form_before_fields', array( $this, 'comment_fields_wrapper_start' ) );
         add_action( 'comment_form_after_fields', array( $this, 'comment_fields_wrapper_end' ) );
 
-        /** Add comment filters */
+        /** Add comment filters - NB: Order of these filters is important! */
         add_filter( 'comment_class', array( $this, 'comment_author_class' ) );
         add_filter( 'comment_form_defaults', array( $this, 'change_comment_form_required_field_glyph' ) );
 
@@ -139,12 +139,13 @@ class OpusPrimusComments {
      * @package OpusPrimus
      * @since   1.2
      *
+     * @uses    __
      * @uses    apply_filters
      *
      * @return  mixed|void - default glyph - asterisk (*)
      */
     function comment_form_required_field_glyph() {
-        $glyph = apply_filters( 'opus_comment_form_required_field_glyph', '*' );
+        $glyph = apply_filters( 'opus_comment_form_required_field_glyph', __( '*', 'opusprimus' ) );
 
         return $glyph;
     } /** End function - required fields glyph */
@@ -242,28 +243,6 @@ class OpusPrimusComments {
         return $classes;
 
     } /** End function - comment author class */
-
-
-    /**
-     * Comments Notes Before
-     *
-     * @package OpusPrimus
-     * @since   1.2
-     *
-     * @uses    apply_filters
-     * @uses    get_option
-     *
-     * @internal ... not used at this time (March 27, 2013)
-     *
-     * @return  string
-     */
-    function comments_notes_before() {
-        $req = get_option( 'require_name_email' );
-        $required_glyph = apply_filters( 'opus_comment_required_glyph', '*' );
-        $required_text = sprintf( ' ' . __('Required fields are marked %s'), '<span class="required">' . $required_glyph . '</span>' );
-
-        return '<p class="comment-notes">' . __( 'Your email address will not be published.' ) . ( $req ? $required_text : '' ) . '</p>';
-    }
 
 
     /**
