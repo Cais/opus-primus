@@ -1,78 +1,71 @@
-==== Hooks: Filters ====
-* Last revised April 2, 2013
-* Listing by file, in order of appearance
+Hooks – Filters
+Currently available: 51
 
-=== Filters ===
-== \ ==
-= 404.php =
-* opus_404_title_text
-* opus_404_message_text
-* opus_404_posts_text
-* opus_404_category_text
-* opus_404_tag_text
+There are many filter hooks available for use with Opus Primus.
+The naming convention follows this general guideline: opus-< relevant text description >
 
-= search.php =
-* opus_search_found_pre_text
-* opus_search_found_post_text
+The filters are listed below by file, in order of appearance:
 
-== \includes ==
-= class.OpusPrimusAuthors.php =
-* opus_author_coda
-* opus_first_author_by_text
-* opus_modified_author_by_text
+    404.php
+        opus_404_title_text
+        opus_404_message_text
+        opus_404_posts_text
+        opus_404_category_text
+        opus_404_tag_text
+    search.php
+        opus_search_found_pre_text
+        opus_search_found_post_text
+    includes\class.OpusPrimusAuthors.php
+        opus_author_coda
+        opus_first_author_by_text
+        opus_modified_author_by_text
+    includes\class.OpusPrimusBreadcrumbs.php
+        opus_post_breadcrumbs_home_text
+        opus_post_breadcrumbs_sticky_text
+    includes\class.OpusPrimusComments.php
+        opus_comments_password_required
+        opus_no_comments_message
+        opus_comment_form_required_field_glyph
+        opus_comments_form_closed
+    includes\class.OpusPrimusGallery.php
+        opus_more_images_text
+    includes\class.OpusPrimusImages.php
+        opus_linked_image_message
+        opus_exif_aperture
+        opus_exif_camera
+        opus_exif_caption
+        opus_exif_copyright
+        opus_exif_dimensions
+        opus_exif_focal_length
+        opus_exif_iso_speed
+        opus_exif_shutter
+        opus_exif_timestamp
+        opus_exif_title
+    includes\class.OpusPrimusPosts.php
+        opus_excerpt_more_link
+        opus_mod_different_author_phrase
+        opus_mod_same_author_phrase
+        opus_no_title_link
+        opus_post_byline_details
+        opus_post_coda
+        opus_post_format_flag
+        opus_status_update_text
+        opus_status_update
+        opus_status_update_over_year
+        opus_default_sticky_flag
+        opus_sticky_flag
+    includes\class.OpusPrimusStructures.php
+        opus_browser_title
+        opus_body_classes
+        opus_copyright
+        opus_credits
+        opus_search_results_for_text
+        opus_no_results_text
+        opus_no_results_links_text
+        opus_category_archives_title
+    stanzas\taglines\class.OpusPrimusTagLines.php
+        opus_taglines_meta_box_title
+        opus_tagline_output_’ . $post->ID
+        opus_taglines_text_field_description
 
-= class.OpusPrimusBreadcrumbs.php =
-* opus_post_breadcrumbs_home_text
-* opus_post_breadcrumbs_sticky_text
-
-= class.OpusPrimusComments.php =
-* opus_comments_password_required
-* opus_no_comments_message
-* opus_comment_form_required_field_glyph
-* opus_comments_form_closed
-
-= class.OpusPrimusGallery.php =
-* opus_more_images_text
-
-= class.OpusPrimusImages.php =
-* opus_linked_image_message
-* opus_exif_aperture
-* opus_exif_camera
-* opus_exif_caption
-* opus_exif_copyright
-* opus_exif_dimensions
-* opus_exif_focal_length
-* opus_exif_iso_speed
-* opus_exif_shutter
-* opus_exif_timestamp
-* opus_exif_title
-
-= class.OpusPrimusPosts.php =
-* opus_excerpt_more_link
-* opus_mod_different_author_phrase
-* opus_mod_same_author_phrase
-* opus_no_title_link
-* opus_post_byline_details
-* opus_post_coda
-* opus_post_format_flag
-* opus_status_update_text
-* opus_status_update
-* opus_status_update_over_year
-* opus_default_sticky_flag
-* opus_sticky_flag
-
-= class.OpusPrimusStructures.php =
-* opus_browser_title
-* opus_body_classes
-* opus_copyright
-* opus_credits
-* opus_search_results_for_text
-* opus_no_results_text
-* opus_no_results_links_text
-* opus_category_archives_title
-
-== \stanzas ==
-= class.OpusPrimusTagLines.php =
-* opus_taglines_meta_box_title
-* opus_tagline_output_' . $post->ID
-* opus_taglines_text_field_description
+Last revised April 2, 2013
