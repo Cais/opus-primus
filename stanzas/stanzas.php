@@ -34,6 +34,12 @@
  * @version 1.0.3
  * @date    February 28, 2013
  * Added Taglines as a Stanza versus a theme feature
+ *
+ * @version 1.2
+ * @date    April 5, 2013
+ * Added mechanism to find and include new custom stanzas
+ *
+ * @todo Document the livin' bejeebers out of this new functionality
  */
 
 /** Add Pull Quotes */
@@ -44,3 +50,15 @@ require_once( OPUS_STANZAS . 'taglines/class.OpusPrimusTagLines.php' );
 
 /** Add Theme Hook Alliance Support */
 require_once( OPUS_STANZAS . 'tha/tha-support.php' );
+
+/** ------------------------------------------------------------------------- */
+
+/** get all files with a .txt extension. */
+$stanzas = glob( OPUS_STANZAS . "*.txt");
+
+/** Sanity check ... make sure there are custom stanzas to be added first */
+if ( $stanzas ) {
+    foreach( $stanzas as $stanza ) {
+        require_once( OPUS_STANZAS . basename(  $stanza, ".txt" ) . '/' . basename(  $stanza, ".txt" ) . '.php' );
+    } /** End foreach - add each custom stanza */
+} /** End if - stanzas */

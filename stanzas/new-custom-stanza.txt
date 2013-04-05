@@ -1,0 +1,3 @@
+REQUIRED indexing file to have the custom "New Stanza" added to Opus Primus.
+
+The content of this file is not currently used, but may be used in the future.
