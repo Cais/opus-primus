@@ -52,11 +52,11 @@ require_once( OPUS_STANZAS . 'tha/tha-support.php' );
 
 /** === New Custom Stanzas === ---------------------------------------------- */
 /** Get all files with a .txt extension. */
-$stanzas = glob( OPUS_STANZAS . "*.txt");
+$stanzas = glob( OPUS_STANZAS . '*.txt' );
 
 /** Sanity check ... make sure there are custom stanzas to be added first */
 if ( $stanzas ) {
     foreach( $stanzas as $stanza ) {
-        require_once( OPUS_STANZAS . basename(  $stanza, ".txt" ) . '/' . basename(  $stanza, ".txt" ) . '.php' );
+        require_once( OPUS_STANZAS . basename(  $stanza, '.txt' ) . '/' . basename(  $stanza, '.txt' ) . '.php' );
     } /** End foreach - add each custom stanza */
 } /** End if - stanzas */

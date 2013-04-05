@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/ecaissie.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/ecaissie.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stanzas/new-custom-stanza.txt" afterPath="$PROJECT_DIR$/stanzas/new-custom-stanza.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stanzas/stanzas.php" afterPath="$PROJECT_DIR$/stanzas/stanzas.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1365175480891" ignored="false" />
+    <file path="/Dummy.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1365179189914" ignored="false" />
     <file path="/a.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363106901363" ignored="false" />
     <file path="/a.html" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363107087453" ignored="false" />
     <file path="/a.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363107067982" ignored="false" />
@@ -79,15 +77,6 @@
               <folding>
                 <element signature="e#6#1335#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new-custom-stanza.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stanzas/new-custom-stanza.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="54" selection-start="977" selection-end="977" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -209,24 +198,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="stanzas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1843,7 +1814,11 @@
       <created>1365175490083</created>
       <updated>1365175490083</updated>
     </task>
-    <option name="localTasksCounter" value="356" />
+    <task id="LOCAL-00356" summary="* Added basic documentation explaining how to add a new custom Stanza">
+      <created>1365177836125</created>
+      <updated>1365177836125</updated>
+    </task>
+    <option name="localTasksCounter" value="357" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1949,7 +1924,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Added mechanism to find and include new custom stanzas" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Added basic documentation explaining how to add a new custom Stanza" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1963,7 +1938,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="* Removed unused element for non-existent 'comments-toggle' script&#10;* Code clean-up" />
     <MESSAGE value="* Add rounded corners for the comment type tabs and the comments panel&#10;* Add `#d3d3d3` color as default tab background color; active is transparent" />
     <MESSAGE value="* Used a more specific HTML element to set background color on comment tabs" />
     <MESSAGE value="* Move `comments only panel` functionality into Comments class as a method" />
@@ -1988,6 +1962,7 @@
     <MESSAGE value="* Updated 'hooks-filters.txt'" />
     <MESSAGE value="* Updated 'hooks-filters.txt' to match http://opusprimus.com/under-the-page/hooks-filters/" />
     <MESSAGE value="* Added mechanism to find and include new custom stanzas" />
+    <MESSAGE value="* Added basic documentation explaining how to add a new custom Stanza" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2093,7 +2068,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stanzas/new-custom-stanza.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="54" selection-start="977" selection-end="977" vertical-scroll-proportion="0.0">
+        <state line="17" column="54" selection-start="977" selection-end="977" vertical-scroll-proportion="0.33180252">
           <folding />
         </state>
       </provider>
