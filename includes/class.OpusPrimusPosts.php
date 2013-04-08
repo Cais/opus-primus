@@ -508,7 +508,7 @@ class OpusPrimusPosts {
      * @date    April 8, 2013
      * Added individual filters for anchor, date, time, and author elements
      * Changed `meta-byline` container from `div` to `h3`
-     *
+     * Changed `opus_post_byline_details` filter to `opus_post_byline_phrase`
      */
     function post_byline( $byline_args = '' ) {
         /** Set defaults */
@@ -527,8 +527,8 @@ class OpusPrimusPosts {
         /** Add empty hook before post by line */
         do_action( 'opus_post_byline_before' );
 
-        /** @var string $opus_post_byline - create byline details string */
-        $opus_post_byline = apply_filters( 'opus_post_byline_details',
+        /** @var string $opus_post_byline - create byline phrase string */
+        $opus_post_byline = apply_filters( 'opus_post_byline_phrase',
             __( '%1$s %2$s %3$s %4$s', 'opusprimus' )
         );
 

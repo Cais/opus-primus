@@ -46,7 +46,7 @@ The filters are listed below by file, in order of appearance:
         opus_mod_different_author_phrase
         opus_mod_same_author_phrase
         opus_no_title_link
-        opus_post_byline_details
+        opus_post_byline_phrase
         opus_post_byline_anchor
         opus_post_byline_date
         opus_post_byline_time

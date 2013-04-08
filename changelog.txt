@@ -11,6 +11,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Changed comment fields into an unordered list
 * Changed `meta-byline` container from `div` to `h3` (adjusted CSS as needed)
 * Changed `meta-tags` container from `p` to `h3` (adjusted CSS as needed)
+* Changed `opus_post_byline_details` filter to `opus_post_byline_phrase`
 
 = CSS =
 * Added styles for comment form fields
