@@ -43,9 +43,6 @@
  *
  * @version 1.2
  * @date    April 1, 2013
- *
- * @todo Comments could still use some styling ... they really are still bland
- * @todo Review if/should the value of $content_width can/should be passed as the maximum width limit (see 'opus-primus-full-size-video.js')
  */
 
 global $opus_structures;

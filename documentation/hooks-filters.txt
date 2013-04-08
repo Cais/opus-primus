@@ -1,5 +1,5 @@
 Hooks – Filters
-Currently available: 51
+Currently available: 55
 
 There are many filter hooks available for use with Opus Primus.
 The naming convention follows this general guideline: opus-< relevant text description >
@@ -47,6 +47,10 @@ The filters are listed below by file, in order of appearance:
         opus_mod_same_author_phrase
         opus_no_title_link
         opus_post_byline_details
+        opus_post_byline_anchor
+        opus_post_byline_date
+        opus_post_byline_time
+        opus_post_byline_author
         opus_post_coda
         opus_post_format_flag
         opus_status_update_text
@@ -68,4 +72,4 @@ The filters are listed below by file, in order of appearance:
         opus_tagline_output_’ . $post->ID
         opus_taglines_text_field_description
 
-Last revised April 2, 2013
+Last revised April 8, 2013

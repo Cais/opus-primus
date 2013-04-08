@@ -505,11 +505,10 @@ class OpusPrimusPosts {
      * @uses    wp_parse_args
      *
      * @version 1.2
-     * @date    March 28, 2013
+     * @date    April 8, 2013
+     * Added individual filters for anchor, date, time, and author elements
      * Changed `meta-byline` container from `div` to `h3`
      *
-     * @todo Review for additional filter options
-     * @todo Add additional wrapper elements for date and time
      */
     function post_byline( $byline_args = '' ) {
         /** Set defaults */
@@ -529,17 +528,33 @@ class OpusPrimusPosts {
         do_action( 'opus_post_byline_before' );
 
         /** @var string $opus_post_byline - create byline details string */
-        $opus_post_byline = apply_filters( 'opus_post_byline_details', __( '%1$s on %2$s at %3$s by %4$s', 'opusprimus' ) );
-        /**
-         * Output post byline (date, time, and author) and open the CSS wrapper
-         */
+        $opus_post_byline = apply_filters( 'opus_post_byline_details',
+            __( '%1$s %2$s %3$s %4$s', 'opusprimus' )
+        );
+
+        /** Output post byline */
         echo '<h3 class="meta-byline">';
 
+            /** Post By-Line filtered components */
             printf( $opus_post_byline,
-                $this->no_title_link( $byline_args['anchor'] ),
-                get_the_date( get_option( 'date_format' ) ),
-                get_the_time( get_option( 'time_format' ) ),
-                $this->author_posts_link()
+                apply_filters( 'opus_post_byline_anchor',
+                    $this->no_title_link( $byline_args['anchor'] )
+                ),
+                apply_filters( 'opus_post_byline_date',
+                    sprintf( __( 'on %1$s', 'opusprimus' ),
+                        get_the_date( get_option( 'date_format' ) )
+                    )
+                ),
+                apply_filters( 'opus_post_byline_time',
+                    sprintf( __( 'at %1$s', 'opusprimus' ),
+                        get_the_time( get_option( 'time_format' ) )
+                    )
+                ),
+                apply_filters( 'opus_post_byline_author',
+                    sprintf( __( 'by %1$s', 'opusprimus' ),
+                        $this->author_posts_link()
+                    )
+                )
             );
 
             /**

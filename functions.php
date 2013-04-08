@@ -111,8 +111,6 @@ add_action( 'wp_enqueue_scripts', 'opus_primus_enqueue_scripts' );
  * @uses    (constant) OPUS_CSS
  * @uses    (constant) OPUS_JS
  * @uses    wp_enqueue_script
- *
- * @todo Comment out LESS implementation?
  */
 function opus_primus_LESS() {
     /** Add LESS link - cannot enqueue due to "rel" requirement */

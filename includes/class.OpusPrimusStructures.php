@@ -732,7 +732,7 @@ $opus_structures = new OpusPrimusStructures();
 /** ------------------------------------------------------------------------- */
 /** Testing ... testing ... testing ... */
 function opus_test() {
-    return 'BACON Test!!! PS: This works, too!<br />';
+    return 'BACON Test!!! PS: This works, too!';
 }
 function show_opus_test() {
     echo opus_test();
@@ -746,6 +746,6 @@ function show_opus_test() {
 // add_action( 'opus_before_modified_post', 'show_opus_test' );
 // add_action( 'opus_before_get_template_part', 'show_opus_test' );
 
-// add_filter( 'opus_modified_author_by_text', 'opus_test' );
+// add_filter( 'opus_post_byline_date', 'opus_test' );
 // add_filter( 'opus_author_coda', 'opus_test' );
 // add_filter( 'opus_category_archives_title', 'opus_test' );
