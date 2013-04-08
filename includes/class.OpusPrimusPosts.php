@@ -396,7 +396,7 @@ class OpusPrimusPosts {
          * not be noted ( per developer prerogative ).
          */
         if ( ( ! empty( $last_user ) ) && ( $opus_author_id <> $last_id ) ) {
-            $mod_author_phrase .= apply_filters( 'opus_mod_different_author_phrase', __( 'Last modified by %1$s %2$s on %3$s at %4$s.', 'opusprimus' ) );
+            $mod_author_phrase .= apply_filters( 'opus_mod_different_author_phrase', __( 'Last modified by %1$s %2$s %3$s %4$s.', 'opusprimus' ) );
             $mod_author_avatar = get_avatar( $last_user->user_email, $line_height );
 
             /**
@@ -406,7 +406,7 @@ class OpusPrimusPosts {
             do_action( 'opus_modified_post_before' );
 
         } else {
-            $mod_author_phrase .= apply_filters( 'opus_mod_same_author_phrase', __( 'and modified on %3$s at %4$s.', 'opusprimus' ) );
+            $mod_author_phrase .= apply_filters( 'opus_mod_same_author_phrase', __( 'and modified %3$s %4$s.', 'opusprimus' ) );
             $mod_author_avatar = '';
         } /** End if - not empty last user */
 
@@ -416,17 +416,19 @@ class OpusPrimusPosts {
                 /** @var $mod_author_phrase string */
                 printf( '<span class="author-modified-time">' . $mod_author_phrase . '</span>',
                     $mod_author_avatar,
-                    $this->modified_author_posts_link( $last_user ),
-                    get_the_modified_date( get_option( 'date_format' ) ),
-                    get_the_modified_time( get_option( 'time_format' ) ) );
+                    apply_filters( 'opus_post_byline_mod_author', $this->modified_author_posts_link( $last_user ) ),
+                    apply_filters( 'opus_post_byline_mod_date', sprintf( __( 'on %1$s', 'opusprimus' ), get_the_modified_date( get_option( 'date_format' ) ) ) ),
+                    apply_filters( 'opus_post_byline_mod_time', sprintf( __( 'at %1$s', 'opusprimus' ), get_the_modified_time( get_option( 'time_format' ) ) ) )
+                );
             } /** End if - get the time */
         } else {
             if ( get_the_date() <> get_the_modified_date() ) {
                 printf( '<span class="author-modified-date">' . $mod_author_phrase . '</span>',
                     $mod_author_avatar,
-                    $this->modified_author_posts_link( $last_user ),
-                    get_the_modified_date( get_option( 'date_format' ) ),
-                    get_the_modified_time( get_option( 'time_format' ) ) );
+                    apply_filters( 'opus_post_byline_mod_author', $this->modified_author_posts_link( $last_user ) ),
+                    apply_filters( 'opus_post_byline_mod_date', sprintf( __( 'on %1$s', 'opusprimus' ), get_the_modified_date( get_option( 'date_format' ) ) ) ),
+                    apply_filters( 'opus_post_byline_mod_time', sprintf( __( 'at %1$s', 'opusprimus' ), get_the_modified_time( get_option( 'time_format' ) ) ) )
+                );
             } /** End if - get the date */
         } /** End if - time */
 

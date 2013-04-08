@@ -7,6 +7,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Code =
 * Added filtered `comment_form_required_field_glyph` method in Comments class
+* Added multiple filters to handle the elements of the post byline phrases
 * Changed post thumbnail on pages to full size image and align to the center
 * Changed comment fields into an unordered list
 * Changed `meta-byline` container from `div` to `h3` (adjusted CSS as needed)
