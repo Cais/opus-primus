@@ -44,6 +44,9 @@
  * @version 1.0.4-alpha
  * @date    March 1, 2013
  * Move `breadcrumbs` into its own class
+ *
+ * @version 1.2
+ * @date    April 9, 2013
  */
 
 class OpusPrimusStructures {
@@ -130,6 +133,10 @@ class OpusPrimusStructures {
      * @uses    is_active_sidebar
      *
      * @return  string - specific class based on active columns
+     *
+     * @version 1.2
+     * @date    April 9, 2013
+     * Added sanity conditional check to eliminate potential duplicate classes
      */
     function body_classes( $classes ) {
         /** Theme Layout */
@@ -154,36 +161,43 @@ class OpusPrimusStructures {
             $classes[] = 'three-column';
         } /** End if - is active sidebar */
 
-        /** Current Date Classes */
-        /** Year */
-        $current_year = date( 'Y' );
-        $classes[] = 'year-' . $current_year;
-        $leap_year = date( 'L' );
-        if ( '1' == $leap_year ) {
-            $classes[] = 'leap-year';
-        } /** End if - leap year */
+        /**
+         * Sanity check to reduce duplicate body classes - use BNS Body Classes
+         * if it exists as there are a lot more specific classes added by the
+         * plugin.
+         */
+        if ( ! class_exists( 'BNS_Body_Classes' ) ) {
+            /** Current Date Classes */
+            /** Year */
+            $current_year = date( 'Y' );
+            $classes[] = 'year-' . $current_year;
+            $leap_year = date( 'L' );
+            if ( '1' == $leap_year ) {
+                $classes[] = 'leap-year';
+            } /** End if - leap year */
 
-        /** Month */
-        $current_month_numeric = date( 'm' );
-        $classes[] = 'month-' . $current_month_numeric;
-        $current_month_short = date( 'M' );
-        $classes[] = 'month-' . strtolower( $current_month_short );
-        $current_month_long = date( 'F' );
-        $classes[] = 'month-' . strtolower( $current_month_long );
+            /** Month */
+            $current_month_numeric = date( 'm' );
+            $classes[] = 'month-' . $current_month_numeric;
+            $current_month_short = date( 'M' );
+            $classes[] = 'month-' . strtolower( $current_month_short );
+            $current_month_long = date( 'F' );
+            $classes[] = 'month-' . strtolower( $current_month_long );
 
-        /** Day */
-        $current_day_of_month = date( 'd' );
-        $classes[] = 'day-' . $current_day_of_month;
-        $current_day_of_week_short = date( 'D' );
-        $classes[] = 'day-' . strtolower( $current_day_of_week_short );
-        $current_day_of_week_long = date( 'l' );
-        $classes[] = 'day-' . strtolower( $current_day_of_week_long );
+            /** Day */
+            $current_day_of_month = date( 'd' );
+            $classes[] = 'day-' . $current_day_of_month;
+            $current_day_of_week_short = date( 'D' );
+            $classes[] = 'day-' . strtolower( $current_day_of_week_short );
+            $current_day_of_week_long = date( 'l' );
+            $classes[] = 'day-' . strtolower( $current_day_of_week_long );
 
-        /** Time: Hour */
-        $current_24_hour = date( 'H' );
-        $classes[] = 'hour-' . $current_24_hour;
-        $current_12_hour = date( 'ha' );
-        $classes[] = 'hour-' . $current_12_hour;
+            /** Time: Hour */
+            $current_24_hour = date( 'H' );
+            $classes[] = 'hour-' . $current_24_hour;
+            $current_12_hour = date( 'ha' );
+            $classes[] = 'hour-' . $current_12_hour;
+        } /** End if - not class exists */
 
         /** Return the classes for use with the `body_class` filter */
         return apply_filters( 'opus_body_classes', $classes );

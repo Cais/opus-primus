@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised April 1, 2013
+Last revised April 9, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2 ==
@@ -8,6 +8,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = Code =
 * Added filtered `comment_form_required_field_glyph` method in Comments class
 * Added multiple filters to handle the elements of the post byline phrases
+* Added sanity conditional check to eliminate potential duplicate body classes
 * Changed post thumbnail on pages to full size image and align to the center
 * Changed comment fields into an unordered list
 * Changed `meta-byline` container from `div` to `h3` (adjusted CSS as needed)
