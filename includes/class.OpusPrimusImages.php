@@ -37,6 +37,10 @@
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
  *
+ * @version 1.2
+ * @date    April 9, 2013
+ * Removed global `$opus_image_meta`; replaced with call to `exif_data` method
+ *
  * @todo Review adding `opus_*_after` hooks; may also require `show_*` functions
  */
 
@@ -316,16 +320,19 @@ class OpusPrimusImages {
      * @package OpuysPrimus
      * @since   0.1
      *
-     * @uses    $opus_image_meta (global)
+     * @uses    OpusPrimusImages::exif_data
      * @uses    apply_filters
      * @uses    do_action
      *
      * @return  string
+     *
+     * @version 1.2
+     * @date    April 9, 2013
+     * Removed global `$opus_image_meta`; call `exif_data` method instead
      */
     function exif_aperture() {
-        /** Get the image meta object */
-        global $opus_image_meta;
-        $this->exif_data();
+        /** @var $image_data - image meta data */
+        $image_data = $this->exif_data();
 
         /** Add empty hook before EXIF aperture */
         do_action( 'opus_exif_aperture_before' );
@@ -334,8 +341,8 @@ class OpusPrimusImages {
         $aperture = '';
 
         /** Aperture Setting */
-        if ( $opus_image_meta['image_meta']['aperture'] ) {
-            $aperture .= $opus_image_meta['image_meta']['aperture'];
+        if ( $image_data['image_meta']['aperture'] ) {
+            $aperture .= $image_data['image_meta']['aperture'];
         } /** End if - aperture */
 
         /** Return Aperture string */
@@ -351,16 +358,19 @@ class OpusPrimusImages {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    $opus_image_meta (global)
+     * @uses    OpusPrimusImages::exif_data
      * @uses    apply_filters
      * @uses    do_action
      *
      * @return  string
+     *
+     * @version 1.2
+     * @date    April 9, 2013
+     * Removed global `$opus_image_meta`; call `exif_data` method instead
      */
     function exif_camera() {
-        /** Get the image meta object */
-        global $opus_image_meta;
-        $this->exif_data();
+        /** @var $image_data - image meta data */
+        $image_data = $this->exif_data();
 
         /** Add empty hook before EXIF camera */
         do_action( 'opus_exif_camera_before' );
@@ -369,8 +379,8 @@ class OpusPrimusImages {
         $camera = '';
 
         /** Camera details */
-        if ( $opus_image_meta['image_meta']['camera'] ) {
-            $camera .= $opus_image_meta['image_meta']['camera'];
+        if ( $image_data['image_meta']['camera'] ) {
+            $camera .= $image_data['image_meta']['camera'];
         } /** End if - camera */
 
         /** Return Camera string */
@@ -386,16 +396,19 @@ class OpusPrimusImages {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    $opus_image_meta (global)
+     * @uses    OpusPrimusImages::exif_data
      * @uses    apply_filters
      * @uses    do_action
      *
      * @return  string
+     *
+     * @version 1.2
+     * @date    April 9, 2013
+     * Removed global `$opus_image_meta`; call `exif_data` method instead
      */
     function exif_caption() {
-        /** Get the image meta object */
-        global $opus_image_meta;
-        $this->exif_data();
+        /** @var $image_data - image meta data */
+        $image_data = $this->exif_data();
 
         /** Add empty hook before EXIF caption */
         do_action( 'opus_exif_caption_before' );
@@ -404,8 +417,8 @@ class OpusPrimusImages {
         $exif_caption = '';
 
         /** Image caption from EXIF details */
-        if ( $opus_image_meta['image_meta']['caption'] ) {
-            $exif_caption .= $opus_image_meta['image_meta']['caption'];
+        if ( $image_data['image_meta']['caption'] ) {
+            $exif_caption .= $image_data['image_meta']['caption'];
         } /** End if - caption */
 
         /** Return Caption string */
@@ -421,17 +434,20 @@ class OpusPrimusImages {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    $opus_image_meta (global)
+     * @uses    OpusPrimusImages::exif_data
      * @uses    apply_filters
      * @uses    do_action
      * @uses    get_the_time
      *
      * @return  string
+     *
+     * @version 1.2
+     * @date    April 9, 2013
+     * Removed global `$opus_image_meta`; call `exif_data` method instead
      */
     function exif_copyright() {
-        /** Get the image meta object */
-        global $opus_image_meta;
-        $this->exif_data();
+        /** @var $image_data - image meta data */
+        $image_data = $this->exif_data();
 
         /** Add empty hook before EXIF copyright */
         do_action( 'opus_exif_copyright_before' );
@@ -440,14 +456,14 @@ class OpusPrimusImages {
         $copyright = '';
 
         /** Author Credit with Copyright details */
-        if ( $opus_image_meta['image_meta']['credit'] ) {
-            $copyright .= $opus_image_meta['image_meta']['credit'];
+        if ( $image_data['image_meta']['credit'] ) {
+            $copyright .= $image_data['image_meta']['credit'];
         } /** End if - credit */
-        if ( $opus_image_meta['image_meta']['credit'] && $opus_image_meta['image_meta']['copyright'] ) {
+        if ( $image_data['image_meta']['credit'] && $image_data['image_meta']['copyright'] ) {
             $copyright .= ' ';
         } /** End if - credit & copyright */
-        if ( $opus_image_meta['image_meta']['copyright'] ) {
-            $copyright .= sprintf( __( '&copy; %1$s %2$s', 'opusprimus' ), get_the_time( 'Y' ), $opus_image_meta['image_meta']['copyright'] );
+        if ( $image_data['image_meta']['copyright'] ) {
+            $copyright .= sprintf( __( '&copy; %1$s %2$s', 'opusprimus' ), get_the_time( 'Y' ), $image_data['image_meta']['copyright'] );
         } /** End if - copyright */
 
         /** Return Copyright string */
@@ -464,14 +480,15 @@ class OpusPrimusImages {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    $opus_image_data (global)
      * @uses    wp_get_attachment_metadata
      *
-     * @return object|null
+     * @return  object|null
+     *
+     * @version 1.2
+     * @date    April 9, 2013
+     * Removed globalization of `$opus_image_meta`
      */
     function exif_data() {
-        global $opus_image_meta;
-
         /** @var $opus_image_meta - EXIF information from image */
         $opus_image_meta = wp_get_attachment_metadata();
 
@@ -492,28 +509,32 @@ class OpusPrimusImages {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    $opus_image_meta (global)
+     * @uses    OpusPrimusImages::exif_data
      * @uses    $post (global)
      * @uses    apply_filters
      * @uses    do_action
      * @uses    wp_get_attachment_url
      *
      * @return  string
+     *
+     * @version 1.2
+     * @date    April 9, 2013
+     * Removed global `$opus_image_meta`; call `exif_data` method instead
      */
     function exif_dimensions() {
-        /** Get the post and image meta object */
-        global $post, $opus_image_meta;
-        $this->exif_data();
+        /** @var $image_data - image meta data */
+        $image_data = $this->exif_data();
 
         /** Add empty hook before EXIF dimension */
         do_action( 'opus_exif_dimensions_before' );
 
         $dimensions = '';
-        $width = $opus_image_meta['width'];
-        $height = $opus_image_meta['height'];
+        $width = $image_data['width'];
+        $height = $image_data['height'];
 
         /** Link to original image with size displayed */
         if ( $width && $height ) {
+            global $post;
             $dimensions .= sprintf( __( '%1$s (Size: %2$s by %3$s)', 'opusprimus' ),
                 '<a href="' . wp_get_attachment_url( $post->ID ) . '">' . sprintf( __( 'Original image', 'opusprimus' ) ) . '</a>',
                 $width . 'px',
@@ -532,7 +553,7 @@ class OpusPrimusImages {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    $opus_image_meta (global)
+     * @uses    OpusPrimusImages::exif_data
      * @uses    apply_filters
      * @uses    do_action
      * @uses    exif_data
@@ -540,11 +561,14 @@ class OpusPrimusImages {
      * @internal mm = UI for millimeters; no need to translate
      *
      * @return  string
+     *
+     * @version 1.2
+     * @date    April 9, 2013
+     * Removed global `$opus_image_meta`; call `exif_data` method instead
      */
     function exif_focal_length() {
-        /** Get the image meta object */
-        global $opus_image_meta;
-        $this->exif_data();
+        /** @var $image_data - image meta data */
+        $image_data = $this->exif_data();
 
         /** Add empty hook before EXIF focal length */
         do_action( 'opus_exif_focal_length_before' );
@@ -553,8 +577,8 @@ class OpusPrimusImages {
         $focal_length = '';
 
         /** Output Focal Length */
-        if ( $opus_image_meta['image_meta']['focal_length'] ) {
-            $focal_length .= $opus_image_meta['image_meta']['focal_length'] . 'mm';
+        if ( $image_data['image_meta']['focal_length'] ) {
+            $focal_length .= $image_data['image_meta']['focal_length'] . 'mm';
         } /** End if - focal length */
 
         /** Return Focal Length string */
@@ -570,17 +594,20 @@ class OpusPrimusImages {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    $opus_image_meta (global)
+     * @uses    OpusPrimusImages::exif_data
      * @uses    apply_filters
      * @uses    do_action
      * @uses    exif_data
      *
      * @return  string
+     *
+     * @version 1.2
+     * @date    April 9, 2013
+     * Removed global `$opus_image_meta`; call `exif_data` method instead
      */
     function exif_iso_speed() {
-        /** Get the image meta object */
-        global $opus_image_meta;
-        $this->exif_data();
+        /** @var $image_data - image meta data */
+        $image_data = $this->exif_data();
 
         /** Add empty hook before EXIF ISO speed */
         do_action( 'opus_exif_iso_speed_before' );
@@ -589,8 +616,8 @@ class OpusPrimusImages {
         $iso_speed = '';
 
         /** Output ISO Speed */
-        if ( $opus_image_meta['image_meta']['iso'] ) {
-            $iso_speed .= $opus_image_meta['image_meta']['iso'];
+        if ( $image_data['image_meta']['iso'] ) {
+            $iso_speed .= $image_data['image_meta']['iso'];
         } /** End if - iso */
 
         /** Return ISO Speed */
@@ -606,16 +633,19 @@ class OpusPrimusImages {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    $opus_image_meta (global)
+     * @uses    OpusPrimusImages::exif_data
      * @uses    apply_filters
      * @uses    do_action
      * @uses    exif_data
      * @uses    number_format
+     *
+     * @version 1.2
+     * @date    April 9, 2013
+     * Removed global `$opus_image_meta`; call `exif_data` method instead
      */
     function exif_shutter() {
-        /** Get the image meta object */
-        global $opus_image_meta;
-        $this->exif_data();
+        /** @var $image_data - image meta data */
+        $image_data = $this->exif_data();
 
         /** Add empty hook before EXIF shutter */
         do_action( 'opus_exif_shutter_before' );
@@ -624,17 +654,17 @@ class OpusPrimusImages {
         $shutter = '';
 
         /** Shutter speed */
-        if ( $opus_image_meta['image_meta']['shutter_speed'] ) {
+        if ( $image_data['image_meta']['shutter_speed'] ) {
             /** Shutter Speed Handler - "sec" is used as the short-form for time measured in seconds */
-            if ( ( 1 / $opus_image_meta['image_meta']['shutter_speed'] ) > 1 ) {
+            if ( ( 1 / $image_data['image_meta']['shutter_speed'] ) > 1 ) {
                 $shutter .= "1/";
-                if ( number_format( ( 1 / $opus_image_meta['image_meta']['shutter_speed'] ), 1 ) ==  number_format( ( 1 / $opus_image_meta['image_meta']['shutter_speed'] ), 0 ) ) {
-                    $shutter .= number_format( ( 1 / $opus_image_meta['image_meta']['shutter_speed'] ), 0, '.', '' ) . ' ' . __( 'sec', 'opusprimus' );
+                if ( number_format( ( 1 / $image_data['image_meta']['shutter_speed'] ), 1 ) ==  number_format( ( 1 / $image_data['image_meta']['shutter_speed'] ), 0 ) ) {
+                    $shutter .= number_format( ( 1 / $image_data['image_meta']['shutter_speed'] ), 0, '.', '' ) . ' ' . __( 'sec', 'opusprimus' );
                 } else {
-                    $shutter .= number_format( ( 1 / $opus_image_meta['image_meta']['shutter_speed'] ), 1, '.', '' ) . ' ' . __( 'sec', 'opusprimus' );
+                    $shutter .= number_format( ( 1 / $image_data['image_meta']['shutter_speed'] ), 1, '.', '' ) . ' ' . __( 'sec', 'opusprimus' );
                 }
             } else {
-                $shutter .= $opus_image_meta['image_meta']['shutter_speed'] . ' ' . __( 'sec', 'opusprimus' );
+                $shutter .= $image_data['image_meta']['shutter_speed'] . ' ' . __( 'sec', 'opusprimus' );
             } /** End if - calculated shutter speed */
         } /** End if - shutter speed */
 
@@ -653,18 +683,21 @@ class OpusPrimusImages {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    $opus_image_meta (global)
+     * @uses    OpusPrimusImages::exif_data
      * @uses    apply_filters
      * @uses    do_action
      * @uses    get_option
      * @uses    get_the_time
      *
      * @return  string
+     *
+     * @version 1.2
+     * @date    April 9, 2013
+     * Removed global `$opus_image_meta`; call `exif_data` method instead
      */
     function exif_timestamp() {
-        /** Get the image meta object */
-        global $opus_image_meta;
-        $this->exif_data();
+        /** @var $image_data - image meta data */
+        $image_data = $this->exif_data();
 
         /** Add empty hook before EXIF timestamp */
         do_action( 'opus_exif_timestamp_before' );
@@ -673,10 +706,10 @@ class OpusPrimusImages {
         $timestamp = '';
 
         /** Creation timestamp in end-user settings format */
-        if ( $opus_image_meta['image_meta']['created_timestamp'] ) {
+        if ( $image_data['image_meta']['created_timestamp'] ) {
             $timestamp .= sprintf( __( '%1$s @ %2$s', 'opusprimus' ),
-                get_the_time( get_option( 'date_format' ), $opus_image_meta['image_meta']['created_timestamp'] ),
-                get_the_time ( get_option( 'time_format' ), $opus_image_meta['image_meta']['created_timestamp'] )
+                get_the_time( get_option( 'date_format' ), $image_data['image_meta']['created_timestamp'] ),
+                get_the_time ( get_option( 'time_format' ), $image_data['image_meta']['created_timestamp'] )
             );
         } /** End if - timestamp */
 
@@ -693,16 +726,19 @@ class OpusPrimusImages {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    $opus_image_meta (global)
+     * @uses    OpusPrimusImages::exif_data
      * @uses    apply_filters
      * @uses    do_action
      *
      * @return  string
+     *
+     * @version 1.2
+     * @date    April 9, 2013
+     * Removed global `$opus_image_meta`; call `exif_data` method instead
      */
     function exif_title() {
-        /** Get the image meta object */
-        global $opus_image_meta;
-        $this->exif_data();
+        /** @var $image_data - image meta data */
+        $image_data = $this->exif_data();
 
         /** Add empty hook before EXIF Title */
         do_action( 'opus_exif_title_before' );
@@ -711,8 +747,8 @@ class OpusPrimusImages {
         $exif_title = '';
 
         /** Title from EXIF details */
-        if ( $opus_image_meta['image_meta']['title'] ) {
-            $exif_title .= $opus_image_meta['image_meta']['title'];
+        if ( $image_data['image_meta']['title'] ) {
+            $exif_title .= $image_data['image_meta']['title'];
         } /** ENd if - title */
 
         /** Return Title string */

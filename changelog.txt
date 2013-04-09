@@ -14,6 +14,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Changed `meta-byline` container from `div` to `h3` (adjusted CSS as needed)
 * Changed `meta-tags` container from `p` to `h3` (adjusted CSS as needed)
 * Changed `opus_post_byline_details` filter to `opus_post_byline_phrase`
+* Removed global `$opus_image_meta`; replaced with call to `exif_data` method
 
 = CSS =
 * Added styles for comment form fields
