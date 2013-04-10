@@ -254,9 +254,14 @@ class OpusPrimusImages {
      * @package OpusPrimus
      * @since   0.1
      *
+     * @uses    apply_filters
      * @uses    do_action
      *
      * @internal see display_exif_box for box-model output
+     *
+     * @version 1.2
+     * @date    April 10, 2013
+     * Added `opus_display_exif_table_header_text` filter
      */
     function display_exif_table() {
         /** Add empty hook before exif table */
@@ -266,7 +271,11 @@ class OpusPrimusImages {
         <table class="display-exif-table">
             <thead>
             <tr>
-                <th><?php _e( 'Image Details', 'opusprimus' ); ?></th>
+                <th>
+                    <?php printf( '<span class="display-exif-table-header-text">%1$s</span>',
+                        apply_filters( 'opus_display_exif_table_header_text', __( 'Image Details', 'opusprimus' ) )
+                    ); ?>
+                </th>
             </tr>
             </thead><!-- End table header -->
             <tbody>
