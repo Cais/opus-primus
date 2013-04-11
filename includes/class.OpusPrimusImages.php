@@ -106,6 +106,7 @@ class OpusPrimusImages {
      *
      * @param   string $size - standard WordPress post_thumbnail sizes / or custom defined sizes can be used
      *
+     * @uses    apply_filters
      * @uses    get_children
      * @uses    get_permalink
      * @uses    get_the_ID
@@ -113,9 +114,14 @@ class OpusPrimusImages {
      * @uses    the_title_attribute
      * @uses    wp_get_attachment_image
      *
-     * @todo Add filters to output messages
      * @todo Address $archive_image message(s) once `first_linked_image` is sorted out
      * @todo Address CSS aesthetics on images not attached ... or find a way to display the post excerpt details (much better choice!)
+     *
+     * @version 1.2
+     * @date    April 11, 2013
+     * Added `opus_archive_image_title` filter
+     * Added `opus_archive_image_excerpt` filter
+     * Added `opus_archive_image_content` filter
      */
     function archive_image_details( $size = 'medium' ) {
         $attachments = get_children( array(
@@ -149,7 +155,11 @@ class OpusPrimusImages {
             <tr><th>
                 <?php
                 if ( ! empty( $archive_image_title ) ) {
-                    printf( '<span class="archive-image-title">' . __( 'Image Title: %1$s', 'opusprimus' )  . '</span>', $archive_image_title );
+                    printf( '<span class="archive-image-title">%1$s</span>',
+                        apply_filters( 'opus_archive_image_title',
+                            sprintf( __( 'Image Title: %1$s', 'opusprimus' ), $archive_image_title )
+                        )
+                    );
                 } /** End if - not empty title */ ?>
             </th></tr>
             </thead><!-- End table header -->
@@ -163,7 +173,9 @@ class OpusPrimusImages {
                             . '</a></span>';
                         if ( empty( $attachments ) ) {
                             printf( '<div class="linked-image-message">%1$s</div>',
-                                apply_filters( 'opus_linked_image_message', __( 'This is a linked image.', 'opusprimus' ) )
+                                apply_filters( 'opus_linked_image_message',
+                                    __( 'This is a linked image.', 'opusprimus' )
+                                )
                             );
                         } /** End if - empty attachments */
                     } /** End if - not is single */ ?>
@@ -172,13 +184,21 @@ class OpusPrimusImages {
             <tr>
                 <?php
                 if ( ! empty( $archive_image_excerpt ) ) {
-                    printf( '<td class="archive-image-excerpt">' . __( 'Image Caption: %1$s', 'opusprimus' )  . '</td>', $archive_image_excerpt );
+                    printf( '<td class="archive-image-excerpt">%1$s</td>',
+                        apply_filters( 'opus_archive_image_excerpt',
+                            sprintf( __( 'Image Caption: %1$s', 'opusprimus' ), $archive_image_excerpt )
+                        )
+                    );
                 } /** End if - not empty excerpt */ ?>
             </tr>
             <tr>
                 <?php
                 if ( ! empty( $archive_image_content ) ) {
-                    printf( '<td class="archive-image-content">' . __( 'Image Description: %1$s', 'opusprimus' )  . '</td>', $archive_image_content );
+                    printf( '<td class="archive-image-content">%1$s</td>',
+                        apply_filters( 'opus_archive_image_content',
+                            sprintf( __( 'Image Description: %1$s', 'opusprimus' ), $archive_image_content )
+                        )
+                    );
                 } /** End if - not empty content */ ?>
             </tr>
             </tbody><!-- End table body -->

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="* Added `opus_display_exif_table_header_text` filter">
+    <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documentation/hooks-filters.txt" afterPath="$PROJECT_DIR$/documentation/hooks-filters.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1365610754615" ignored="false" />
+    <file path="/Dummy.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1365690866904" ignored="false" />
     <file path="/a.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363106901363" ignored="false" />
     <file path="/a.html" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363107087453" ignored="false" />
     <file path="/a.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363107067982" ignored="false" />
@@ -19,7 +21,7 @@
     <file path="/opus-primus.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364845246226" ignored="false" />
     <file path="/comments.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364315354819" ignored="false" />
     <file path="/functions.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364401679699" ignored="false" />
-    <file path="/changelog.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1365537282303" ignored="false" />
+    <file path="/changelog.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1365695756272" ignored="false" />
     <file path="/opus-primus-comment-tabs.js" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363621396915" ignored="false" />
     <file path="/readme.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1365522054409" ignored="false" />
     <file path="/style.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363798136092" ignored="false" />
@@ -56,7 +58,7 @@
     <file path="/bnsbc-2013-christian-calendar.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1365521524889" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../website/wp-content/plugins/bns-body-classes/bnsbc-calendar-sample.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1365522146727" ignored="false" />
     <file path="/bnsbc-calendar-sample.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1365522110879" ignored="false" />
-    <file path="/class.OpusPrimusImages.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1365610490414" ignored="false" />
+    <file path="/class.OpusPrimusImages.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1365695693735" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,13 +78,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="class.OpusPrimusImages.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="class.OpusPrimusImages.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusImages.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="263" column="5" selection-start="10431" selection-end="10431" vertical-scroll-proportion="-77.15385">
+            <state line="124" column="0" selection-start="3983" selection-end="3983" vertical-scroll-proportion="0.45833334">
               <folding>
                 <element signature="e#6#1549#0" expanded="true" />
+                <marker date="1365695832855" expanded="true" signature="5981:6140" placeholder="..." />
+                <marker date="1365695832855" expanded="true" signature="5998:6140" placeholder="..." />
+                <marker date="1365695832855" expanded="true" signature="6041:6140" placeholder="..." />
+                <marker date="1365695832855" expanded="true" signature="6981:7091" placeholder="..." />
+                <marker date="1365695832855" expanded="true" signature="7450:7560" placeholder="..." />
+                <marker date="1365695832855" expanded="true" signature="11433:11526" placeholder="..." />
+                <marker date="1365695832855" expanded="true" signature="11453:11526" placeholder="..." />
+                <marker date="1365695832855" expanded="true" signature="11470:11487" placeholder="..." />
+                <marker date="1365695832855" expanded="true" signature="11491:11526" placeholder="..." />
+                <marker date="1365695832855" expanded="true" signature="11833:11990" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hooks-filters.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/documentation/hooks-filters.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="32" selection-start="1078" selection-end="1102" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,16 +111,7 @@
       <file leaf-file-name="changelog.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/changelog.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="44" selection-start="345" selection-end="380" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hooks-filters.txt" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/documentation/hooks-filters.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="23" selection-start="39" selection-end="39" vertical-scroll-proportion="0.019517796">
+            <state line="13" column="0" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -136,18 +148,16 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
         <option value="$PROJECT_DIR$/changelog.txt" />
         <option value="$PROJECT_DIR$/documentation/hooks-filters.txt" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1920" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -242,18 +252,18 @@
     <property name="options.lastSelected" value="preferences.sourceCode.General" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../website/wp-content/plugins/bns-support" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../website/wp-content/themes/desk-mess-mirrored" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="293" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="967" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="967" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="967" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="293" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="291" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig" serverName="EAC" serverId="ade6ddbc-f20c-4339-b36a-11b5e55e94a7">
     <servers>
@@ -381,14 +391,14 @@
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="59791a67-7e89-437b-b6d2-d013c0025a62" server_name="EAC">
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
       <JSDebuggerConfigurationSettings>
         <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="59791a67-7e89-437b-b6d2-d013c0025a62" server_name="EAC">
       <method />
     </configuration>
     <list size="0" />
@@ -1874,7 +1884,11 @@
       <created>1365610679759</created>
       <updated>1365610679759</updated>
     </task>
-    <option name="localTasksCounter" value="365" />
+    <task id="LOCAL-00365" summary="* Updated 'hooks-filters.txt'">
+      <created>1365610795967</created>
+      <updated>1365610795967</updated>
+    </task>
+    <option name="localTasksCounter" value="366" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1911,7 +1925,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277592" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1920,15 +1934,15 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24066168" sideWeight="0.6677815" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2454252" sideWeight="0.6677815" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32664436" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277592" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32218507" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32218507" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1980,7 +1994,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Added `opus_display_exif_table_header_text` filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Updated 'hooks-filters.txt'" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -2007,7 +2021,6 @@
     <MESSAGE value="* Added more specific selector used with .post.format-link" />
     <MESSAGE value="* Address both class and id usage for the sidebar search form" />
     <MESSAGE value="* Updated 'hooks-filters.txt'&#10;* Miscellaneous documentation updates" />
-    <MESSAGE value="* Updated 'hooks-filters.txt'" />
     <MESSAGE value="* Updated 'hooks-filters.txt' to match http://opusprimus.com/under-the-page/hooks-filters/" />
     <MESSAGE value="* Added mechanism to find and include new custom stanzas" />
     <MESSAGE value="* Added basic documentation explaining how to add a new custom Stanza" />
@@ -2019,6 +2032,7 @@
     <MESSAGE value="* Added sanity conditional check to eliminate potential duplicate body classes" />
     <MESSAGE value="* Removed global `$opus_image_meta`; replaced with call to `exif_data` method" />
     <MESSAGE value="* Added `opus_display_exif_table_header_text` filter" />
+    <MESSAGE value="* Updated 'hooks-filters.txt'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2093,26 +2107,36 @@
         <state line="764" column="61" selection-start="28812" selection-end="28812" vertical-scroll-proportion="12.9375" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/documentation/hooks-filters.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="32" selection-start="1078" selection-end="1102" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/changelog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="44" selection-start="345" selection-end="380" vertical-scroll-proportion="0.0">
+        <state line="13" column="0" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusImages.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="263" column="5" selection-start="10431" selection-end="10431" vertical-scroll-proportion="-77.15385">
+        <state line="124" column="0" selection-start="3983" selection-end="3983" vertical-scroll-proportion="0.45833334">
           <folding>
             <element signature="e#6#1549#0" expanded="true" />
+            <marker date="1365695832855" expanded="true" signature="5981:6140" placeholder="..." />
+            <marker date="1365695832855" expanded="true" signature="5998:6140" placeholder="..." />
+            <marker date="1365695832855" expanded="true" signature="6041:6140" placeholder="..." />
+            <marker date="1365695832855" expanded="true" signature="6981:7091" placeholder="..." />
+            <marker date="1365695832855" expanded="true" signature="7450:7560" placeholder="..." />
+            <marker date="1365695832855" expanded="true" signature="11433:11526" placeholder="..." />
+            <marker date="1365695832855" expanded="true" signature="11453:11526" placeholder="..." />
+            <marker date="1365695832855" expanded="true" signature="11470:11487" placeholder="..." />
+            <marker date="1365695832855" expanded="true" signature="11491:11526" placeholder="..." />
+            <marker date="1365695832855" expanded="true" signature="11833:11990" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/documentation/hooks-filters.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="23" selection-start="39" selection-end="39" vertical-scroll-proportion="0.019517796">
-          <folding />
         </state>
       </provider>
     </entry>
