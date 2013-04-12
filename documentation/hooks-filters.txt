@@ -1,5 +1,5 @@
 Hooks – Filters
-Currently available: 62
+Currently available: 72
 
 There are many filter hooks available for use with Opus Primus.
 The naming convention follows this general guideline: opus-< relevant text description >
@@ -34,6 +34,16 @@ The filters are listed below by file, in order of appearance:
         opus_linked_image_message
         opus_archive_image_excerpt
         opus_archive_image_content
+        opus_exif_dimensions_label
+        opus_exif_copyright_label
+        opus_exif_timestamp_label
+        opus_exif_camera_label
+        opus_exif_shutter_label
+        opus_exif_aperture_label
+        opus_exif_caption_label
+        opus_exif_focal_length_label
+        opus_exif_iso_speed_label
+        opus_exif_title_label
         opus_display_exif_table_header_text
         opus_exif_aperture
         opus_exif_camera
@@ -79,4 +89,4 @@ The filters are listed below by file, in order of appearance:
         opus_tagline_output_’ . $post->ID
         opus_taglines_text_field_description
 
-Last revised April 11, 2013
+Last revised April 12, 2013

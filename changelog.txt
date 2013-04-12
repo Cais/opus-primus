@@ -12,6 +12,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added `opus_archive_image_title` filter
 * Added `opus_archive_image_excerpt` filter
 * Added `opus_archive_image_content` filter
+* Added `opus_exif_*_label` filters for all details
 * Added sanity conditional check to eliminate potential duplicate body classes
 * Changed post thumbnail on pages to full size image and align to the center
 * Changed comment fields into an unordered list
