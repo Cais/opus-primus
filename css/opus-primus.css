@@ -40,8 +40,9 @@
  * Removed unused element for non-existent 'comments-toggle' script
  *
  * @version 1.2
- * @date    April 1, 2013
+ * @date    April 13, 2013
  * Added more specific selector used with .post.format-link
+ * Added more BNS Plugin Integration (BPI) adjustments
  * Added styles for Comment Form Fields
  * Address both class and id usage for the sidebar search form
  * Adjusted widths of comment form elements
@@ -1424,12 +1425,20 @@ h6#site-generator {
 
 /** === BNS Plugin Integrations === ----------------------------------------- */
 /** BNS Inline Asides */
-div.aside-toggler {
+div.aside-toggler,
+.bnsia.aside {
     margin: 0 0 9px;
 }
 
 .open-aside.changelog {
     background-color: transparent;
+}
+
+.bnsia.aside.nb,
+.bnsia.aside.nota-bene,
+blockquote.aside.nb,
+blockquote.aside.nota-bene {
+    background-color: #e3e3e3;
 }
 /** End: BNS Plugin Integrations -------------------------------------------- */
 

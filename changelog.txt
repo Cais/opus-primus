@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised April 11, 2013
+Last revised April 13, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2 ==
@@ -24,6 +24,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = CSS =
 * Added styles for comment form fields
 * Added more specific selector used with .post.format-link
+* Added more BNS Plugin Integration (BPI) adjustments
 * Address both class and id usage for the sidebar search form
 * Adjusted widths of comment form elements
 * Sorted out the adaptive layout for screens less than 480px wide
