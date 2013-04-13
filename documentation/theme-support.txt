@@ -1,6 +1,6 @@
-=== Theme Support ===
+=== Opus Primus Theme Support ===
 
-Last revised February 10, 2013
+Last reviewed April 13, 2013
 
 == Internet Addresses ==
 
@@ -9,7 +9,7 @@ Last revised February 10, 2013
 
 == Email Addresses ==
 
-* Home:             in.opus.primus@gmail.com
+* Main:             in.opus.primus@gmail.com
 * Lead Developer:   edward.caissie@gmail.com
 
 == Helpful Advise and Information ==
