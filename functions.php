@@ -45,6 +45,7 @@
  */
 require_once( get_template_directory() . '/includes/opus-ignite.php' );
 
+
 if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
     /**
      * Opus Primus Enqueue Scripts
@@ -82,9 +83,6 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
             wp_enqueue_script( 'opus-primus-header-image-position', OPUS_JS . 'opus-primus-header-image-position.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
         } /** End if - get header image */
 
-        /** Enqueue Opus Primus Page Featured Image Adjust which will enqueue jQuery as a dependency */
-        // wp_enqueue_script( 'opus-primus-page-featured-image-adjust', OPUS_JS . 'opus-primus-page-featured-image-adjust.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
-
         /** Enqueue Theme Stylesheets */
         /** Theme Layouts */
         wp_enqueue_style( 'Opus-Primus-Layout', OPUS_CSS . 'opus-primus-layout.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
@@ -97,9 +95,12 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
         if ( is_readable( OPUS_CSS . 'opus-primus-custom-style.css' ) ) {
             wp_enqueue_style( 'Opus-Primus-Custom-Style', OPUS_CSS . 'opus-primus-custom-style.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
         } /** End if - is readable */
+
     } /** End function - opus primus enqueue scripts */
+
 } /** End if - function exists - opus primus enqueue scripts */
 add_action( 'wp_enqueue_scripts', 'opus_primus_enqueue_scripts' );
+
 
 /**
  * Opus Primus LESS
@@ -121,6 +122,7 @@ function opus_primus_LESS() {
     wp_enqueue_script( 'less-1.3.3', OPUS_JS . 'less-1.3.3.min.js', '', '1.3.3' );
 } /** End function - opus primus LESS */
 add_action( 'wp_enqueue_scripts', 'opus_primus_LESS' );
+
 
 if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
     /**
@@ -207,10 +209,12 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 } /** End if - function exists - opus primus theme setup */
 add_action( 'after_setup_theme', 'opus_primus_theme_setup' );
 
+
 /** Set content width to 1000 - see Full Size Video script */
 if ( ! isset( $content_width ) ) {
     $content_width = 1000;
 } /** End if - not isset - content width */
+
 
 /** Miscellaneous Functions */
 /** Return a space when all other __return_* fail, use this?! */

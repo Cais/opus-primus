@@ -838,7 +838,6 @@ class OpusPrimusImages {
             $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
             echo '<a class="featured-thumbnail" href="' . $large_image_url[0] . '" title="' . the_title_attribute( 'echo=0' ) . '" >';
             if ( is_page() ) {
-                // the_post_thumbnail( 'thumbnail', array( 'class' => 'alignright' ) );
                 the_post_thumbnail( 'full', array( 'class' => 'aligncenter' ) );
             } else {
                 the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) );
