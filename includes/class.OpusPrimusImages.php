@@ -820,30 +820,35 @@ class OpusPrimusImages {
      * @package OpusPrimus
      * @since   0.1
      *
+     * @param   $size - default: thumbnail (uses WordPress sizes)
+     * @param   $class - default: alignleft (can be any CSS class)
+     *
      * @uses    get_post_thumbnail_id
      * @uses    has_post_thumbnail
-     * @uses    is_page
      * @uses    is_single
      * @uses    the_post_thumbnail
      * @uses    the_title_attribute
      *
      * @version 1.2
-     * @date    March 24, 2013
-     * Change post thumbnail on pages to full size image and align to the center
+     * @date    April 16, 2013
+     * Changed `the_post_thumbnail` to use parameters which are set in the call
+     * to this method
      *
      * @todo clean up and have link display attachment archive
      */
-    function featured_thumbnail() {
+    function featured_thumbnail( $size = 'thumbnail', $class = 'alignleft' ) {
         if ( has_post_thumbnail() && ! is_single() ) {
+
             $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
+
             echo '<a class="featured-thumbnail" href="' . $large_image_url[0] . '" title="' . the_title_attribute( 'echo=0' ) . '" >';
-            if ( is_page() ) {
-                the_post_thumbnail( 'full', array( 'class' => 'aligncenter' ) );
-            } else {
-                the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) );
-            } /** End if - is page */
+
+                the_post_thumbnail( $size, array( 'class' => $class ) );
+
             echo '</a>';
+
         } /** End if - has post thumbnail and not is single */
+
     } /** End function - featured thumbnail */
 
 

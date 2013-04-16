@@ -70,7 +70,7 @@ do_action( 'opus_content_before' ); ?>
 
                     <?php
                     $opus_posts->post_title();
-                    $opus_images->featured_thumbnail();
+                    $opus_images->featured_thumbnail( $size = 'full', $class = 'aligncenter' );
                     $opus_posts->post_content();
                     $opus_posts->post_byline( array( 'show_mod_author' => true ) );
                     $opus_authors->post_author( array(
