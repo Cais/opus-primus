@@ -36,6 +36,10 @@
  * Re-order methods: alphabetical
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
+ *
+ * @version 1.2
+ * @date    April 17, 2013
+ * Added `get_author_description` method
  */
 
 class OpusPrimusAuthors {
@@ -109,6 +113,28 @@ class OpusPrimusAuthors {
 
 
     /**
+     * Get Author Description
+     * Returns the author description from the user profile.
+     *
+     * @package OpusPrimus
+     * @since   1.2
+     *
+     * @param   $author_id
+     *
+     * @uses    get_the_author_meta
+     *
+     * @return  string
+     */
+    function get_author_description( $author_id ) {
+
+        $user_desc = get_the_author_meta( 'user_description', $author_id );
+
+        return $user_desc;
+
+    } /** End function - get author desc */
+
+
+    /**
      * Author Details
      * Takes the passed author ID parameter and creates / collects various
      * details to be used when outputting author information, by default,
@@ -136,7 +162,7 @@ class OpusPrimusAuthors {
         $author_display_name   = get_the_author_meta( 'display_name', $author_id );
         $author_url            = get_the_author_meta( 'user_url', $author_id );
         $author_email          = get_the_author_meta( 'user_email', $author_id );
-        $author_desc           = get_the_author_meta( 'user_description', $author_id );
+        $author_desc           = $this->get_author_description( $author_id );
 
         /** Add empty hook before author details */
         do_action( 'opus_author_details_before' ); ?>
@@ -214,7 +240,9 @@ class OpusPrimusAuthors {
                  */
                 if ( ! empty( $author_desc ) && $show_author_desc ) { ?>
                     <li class="opus-author-biography">
-                        <?php printf( '<span class="opus-author-biography-text">' . __( 'Biography: %1$s', 'opusprimus' ) . '</span>', $author_desc ); ?>
+                        <?php printf( '<span class="opus-author-biography-text">' . __( 'Biography: %1$s', 'opusprimus' ) . '</span>',
+                            $author_desc
+                        ); ?>
                     </li><!-- opus-author-biography -->
                 <?php } /** End if - not empty */ ?>
             </ul><!-- opus-author-detail-items -->
@@ -277,9 +305,10 @@ class OpusPrimusAuthors {
 
         /** Output author details */
         echo '<div class="first-author-details">';
-            printf(
-                '<div class="first-author-details-text">%1$s</div><!-- .first-author-details-text -->',
-                apply_filters( 'opus_first_author_by_text', __( 'Author:', 'opusprimus' ) )
+            printf( '<div class="first-author-details-text">%1$s</div><!-- .first-author-details-text -->',
+                apply_filters( 'opus_first_author_by_text',
+                    __( 'Author:', 'opusprimus' )
+                )
             );
             $this->author_details( $opus_author_id, $post_author_args['show_author_url'], $post_author_args['show_author_email'], $post_author_args['show_author_desc'] );
         echo '</div><!-- .first-author-details -->';
@@ -302,9 +331,10 @@ class OpusPrimusAuthors {
 
             /** Output author details based on the last one to edit the post */
             echo '<div class="modified-author-details">';
-                printf(
-                    '<div class="modified-author-details-text">%1$s</div><!-- modified-author-details-text -->',
-                    apply_filters( 'opus_modified_author_by_text', __( 'Modified by:', 'opusprimus' ) )
+                printf( '<div class="modified-author-details-text">%1$s</div><!-- modified-author-details-text -->',
+                    apply_filters( 'opus_modified_author_by_text',
+                        __( 'Modified by:', 'opusprimus' )
+                    )
                 );
                 $this->author_details( $last_id, $post_author_args['show_author_url'], $post_author_args['show_author_email'], $post_author_args['show_author_desc'] );
             echo '</div><!-- .modified-author-details -->';
