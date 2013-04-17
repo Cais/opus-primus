@@ -115,8 +115,10 @@ class OpusPrimusAuthors {
     /**
      * Get Author Description
      * Returns the author description from the user profile. This will also
-     * shorten the User Description  / Biography if the length is greater than
-     * 140 characters and it is not being shown on an author page.
+     * shorten the User Description  / Biography if the length is greater
+     * than 140 characters and it is not being shown on an author page. The
+     * description will also be shortened on author archive pages after the
+     * first page.
      *
      * @package OpusPrimus
      * @since   1.2
@@ -129,13 +131,15 @@ class OpusPrimusAuthors {
      */
     function get_author_description( $author_id ) {
 
+        global $paged;
+
         /** @var $user_desc - default string to be returned */
         $user_desc = get_the_author_meta( 'user_description', $author_id );
 
         /**
          * Shorten the description and add an ellipsis and the infinity symbols.
          */
-        if ( ! is_author() && ( strlen( $user_desc ) > 140 ) ) {
+        if ( ( ! is_author() && ( strlen( $user_desc ) > 140 ) ) || ( is_author() && ( $paged > 1 ) ) ) {
 
             /** @var $characters - filtered character count value */
             $characters = apply_filters( 'opus_author_description_excerpt_length', '139' );
