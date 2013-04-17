@@ -148,7 +148,17 @@ class OpusPrimusAuthors {
             /** @var $user_desc - manipulated string */
             $user_desc = substr( $user_desc, 0 , intval( $characters ) )
                 . apply_filters( 'opus_author_description_excerpt_extender', '&hellip;' )
-                . apply_filters( 'opus_author_description_excerpt_link', '&infin;' );
+                . apply_filters( 'opus_author_description_excerpt_link',
+                    sprintf( '<span class="opus-author-about">%1$s</span>',
+                        sprintf( '<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
+                            home_url( '/?author=' . $author_id ),
+                            esc_attr( sprintf( __( 'View the full biography ... and all posts by %1$s', 'opusprimus' ),
+                                get_the_author_meta( 'display_name', $author_id ) )
+                            ),
+                            '&infin;'
+                        )
+                    )
+                );
 
         } /** End if - not is author and description length is more than 140 */
 

@@ -1,5 +1,5 @@
 Hooks – Filters
-Currently available: 72
+Currently available: 75
 
 There are many filter hooks available for use with Opus Primus.
 The naming convention follows this general guideline: opus-< relevant text description >
