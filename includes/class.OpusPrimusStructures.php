@@ -47,6 +47,7 @@
  *
  * @version 1.2
  * @date    April 9, 2013
+ * Added new test function `opus_number`
  */
 
 class OpusPrimusStructures {
@@ -748,13 +749,17 @@ $opus_structures = new OpusPrimusStructures();
 function opus_test() {
     return 'BACON Test!!! PS: This works, too!';
 }
+
+function opus_number() {
+    return 10;
+}
+
 function show_opus_test() {
     echo opus_test();
 }
 
 /**
  * @todo Review as needed - no harm / no foul to leave in code as references
- *
  * Un-comment the following for testing purposes
  */
 // add_action( 'opus_before_modified_post', 'show_opus_test' );
@@ -762,4 +767,5 @@ function show_opus_test() {
 
 // add_filter( 'opus_post_byline_date', 'opus_test' );
 // add_filter( 'opus_author_coda', 'opus_test' );
-// add_filter( 'opus_category_archives_title', 'opus_test' );
+// add_filter( 'opus_author_description_excerpt_link', 'opus_test' );
+// add_filter( 'opus_author_description_excerpt_length', 'opus_number' );
