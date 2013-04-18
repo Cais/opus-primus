@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus.php" afterPath="$PROJECT_DIR$/opus-primus.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1366225949439" ignored="false" />
+    <file path="/Dummy.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1366299296437" ignored="false" />
     <file path="/a.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363106901363" ignored="false" />
     <file path="/a.html" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363107087453" ignored="false" />
     <file path="/a.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363107067982" ignored="false" />
@@ -19,7 +21,7 @@
     <file path="/opus-primus.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364845246226" ignored="false" />
     <file path="/comments.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364315354819" ignored="false" />
     <file path="/functions.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364401679699" ignored="false" />
-    <file path="/changelog.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1366222217526" ignored="false" />
+    <file path="/changelog.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1366302957799" ignored="false" />
     <file path="/opus-primus-comment-tabs.js" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363621396915" ignored="false" />
     <file path="/readme.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1365522054409" ignored="false" />
     <file path="/style.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363798136092" ignored="false" />
@@ -61,6 +63,7 @@
     <file path="/bns-featured-category.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1365709943985" ignored="false" />
     <file path="/page.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1366120103650" ignored="false" />
     <file path="/class.OpusPrimusAuthors.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1366226274645" ignored="false" />
+    <file path="/opus-primus.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1366301750131" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,21 +83,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="class.OpusPrimusAuthors.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php">
+      <file leaf-file-name="single.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/single.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="18" selection-start="3896" selection-end="3896" vertical-scroll-proportion="0.08047337">
-              <folding>
-                <element signature="e#6#1431#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hooks-filters.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/documentation/hooks-filters.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -103,16 +95,7 @@
       <file leaf-file-name="class.OpusPrimusStructures.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="1" selection-start="1661" selection-end="1661" vertical-scroll-proportion="-1.3076923">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="changelog.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/changelog.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+            <state line="49" column="1" selection-start="1661" selection-end="1661" vertical-scroll-proportion="347.03845">
               <folding />
             </state>
           </provider>
@@ -121,19 +104,48 @@
       <file leaf-file-name="opus-primus.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/opus-primus.php">
           <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="10" selection-start="1239" selection-end="1239" vertical-scroll-proportion="-5.6923075">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="changelog.txt" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/changelog.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="0.039035592">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="opus-primus-archive.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/opus-primus-archive.php">
+          <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding>
-                <marker date="1360009822413" expanded="true" signature="1378:2588" placeholder="..." />
+                <marker date="1360007225090" expanded="true" signature="1415:1909" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="class.OpusPrimusDefaults.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusDefaults.php">
+      <file leaf-file-name="class.OpusPrimusImages.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusImages.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="836" column="46" selection-start="30572" selection-end="30572" vertical-scroll-proportion="-20.923077">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="72" column="20" selection-start="2175" selection-end="2250" vertical-scroll-proportion="-19.615385">
+              <folding>
+                <element signature="e#6#1224#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,7 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/stanzas/new-stanza.txt" />
         <option value="$PROJECT_DIR$/stanzas/new-stanza/new-stanza.php" />
         <option value="$PROJECT_DIR$/stanzas/new-custom-stanza/new-custom-stanza.php" />
         <option value="$PROJECT_DIR$/stanzas/new-custom-stanza/class.OpusPrimusNewCustomCustomStanza.php" />
@@ -167,11 +178,12 @@
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/page.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
-        <option value="$PROJECT_DIR$/changelog.txt" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
         <option value="$PROJECT_DIR$/documentation/hooks-filters.txt" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
+        <option value="$PROJECT_DIR$/opus-primus.php" />
+        <option value="$PROJECT_DIR$/changelog.txt" />
       </list>
     </option>
   </component>
@@ -208,6 +220,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -258,27 +271,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="documentation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1953,7 +1947,11 @@
       <created>1366225957416</created>
       <updated>1366225957416</updated>
     </task>
-    <option name="localTasksCounter" value="372" />
+    <task id="LOCAL-00372" summary="* Add additional conditional check for author archive pages past the first">
+      <created>1366226453857</created>
+      <updated>1366226453857</updated>
+    </task>
+    <option name="localTasksCounter" value="373" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1999,7 +1997,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25400212" sideWeight="0.6767001" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25933832" sideWeight="0.67781496" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32664436" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -2043,7 +2041,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
     <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
     <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
@@ -2059,7 +2057,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Link the infinity symbol to the author archives" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Add additional conditional check for author archive pages past the first" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -2073,7 +2071,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="* Add styles for Comment Form Fields" />
     <MESSAGE value="* Adjusted styles for Comment Form Fields" />
     <MESSAGE value="* Added filtered $required glyph variable for comment fields" />
     <MESSAGE value="* Adjust widths of comment form elements" />
@@ -2098,6 +2095,7 @@
     <MESSAGE value="* Added `get_author_description` method in Authors class" />
     <MESSAGE value="* Added `opus_author_description_excerpt_*` filters&#10;* Updated 'hooks-filters.txt'&#10;* Added new test function `opus_number`" />
     <MESSAGE value="* Link the infinity symbol to the author archives" />
+    <MESSAGE value="* Add additional conditional check for author archive pages past the first" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2107,16 +2105,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusComments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="269" column="0" selection-start="9934" selection-end="9934" vertical-scroll-proportion="0.5516827" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stanzas/stanzas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="0" selection-start="1358" selection-end="1358" vertical-scroll-proportion="-6.1923075" />
@@ -2142,16 +2130,6 @@
         <state line="220" column="18" selection-start="8948" selection-end="8948" vertical-scroll-proportion="-28.73077" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusImages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="832" column="0" selection-start="30313" selection-end="30313" vertical-scroll-proportion="-15.692307" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="31" selection-start="1220" selection-end="1220" vertical-scroll-proportion="0.7307692" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/opus-primus-aside.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="18" selection-start="1843" selection-end="1843" vertical-scroll-proportion="0.4224852" />
@@ -2159,47 +2137,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusDefaults.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opus-primus.php">
+    <entry file="file://$PROJECT_DIR$/documentation/hooks-filters.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1360009822413" expanded="true" signature="1378:2588" placeholder="..." />
-          </folding>
-        </state>
+        <state line="19" column="0" selection-start="565" selection-end="565" vertical-scroll-proportion="0.019517796" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/changelog.txt">
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+        <state line="169" column="0" selection-start="5862" selection-end="5862" vertical-scroll-proportion="0.020118343" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/single.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="1" selection-start="1661" selection-end="1661" vertical-scroll-proportion="-1.3076923">
+        <state line="49" column="1" selection-start="1661" selection-end="1661" vertical-scroll-proportion="347.03845">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/documentation/hooks-filters.txt">
+    <entry file="file://$PROJECT_DIR$/page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="18" selection-start="3896" selection-end="3896" vertical-scroll-proportion="0.08047337">
+        <state line="72" column="20" selection-start="2175" selection-end="2250" vertical-scroll-proportion="-19.615385">
           <folding>
-            <element signature="e#6#1431#0" expanded="true" />
+            <element signature="e#6#1224#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opus-primus-archive.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1360007225090" expanded="true" signature="1415:1909" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusImages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="836" column="46" selection-start="30572" selection-end="30572" vertical-scroll-proportion="-20.923077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opus-primus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="10" selection-start="1239" selection-end="1239" vertical-scroll-proportion="-5.6923075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changelog.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="0.039035592">
+          <folding />
         </state>
       </provider>
     </entry>

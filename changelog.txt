@@ -6,6 +6,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Released ...
 
 = Code =
+* Added display of featured image centered at full size in single standard post format view
 * Added `get_author_description` method in Authors class
 * Added filtered `comment_form_required_field_glyph` method in Comments class
 * Added multiple filters to handle the elements of the post byline phrases

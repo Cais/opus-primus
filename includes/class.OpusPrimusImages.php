@@ -830,14 +830,16 @@ class OpusPrimusImages {
      * @uses    the_title_attribute
      *
      * @version 1.2
-     * @date    April 16, 2013
+     * @date    April 18, 2013
      * Changed `the_post_thumbnail` to use parameters which are set in the call
      * to this method
+     * Remove `is_single` conditional in conjunction with displaying full image
+     * on single view of standard format posts
      *
      * @todo clean up and have link display attachment archive
      */
     function featured_thumbnail( $size = 'thumbnail', $class = 'alignleft' ) {
-        if ( has_post_thumbnail() && ! is_single() ) {
+        if ( has_post_thumbnail() /** && ! is_single() */ ) {
 
             $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
 

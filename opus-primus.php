@@ -32,6 +32,11 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
  * @internal general usage notes for all loops can be found in this file
+ *
+ * @version 1.2
+ * @date    April 18, 2013
+ * Added display of featured image centered at full size in single standard post
+ * format view
  */
 
 /** Call the class variables */
@@ -45,14 +50,19 @@ global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_imag
     $anchor = __( 'Posted', 'opusprimus' );
     $opus_posts->post_byline( array( 'show_mod_author' => $opus_defaults->show_mod_author() ) );
     $opus_posts->post_title();
+
     if ( ! is_single() ) {
         $opus_comments->comments_link();
+        $opus_images->featured_thumbnail();
+    } else {
+        $opus_images->featured_thumbnail( $size = 'full', $class = 'aligncenter' );
     } /** End if - not is single */
-    $opus_images->featured_thumbnail();
+
     $opus_posts->post_content();
     $opus_navigation->multiple_pages_link( array(), $preface = __( 'Pages:', 'opusprimus' ) );
     $opus_posts->meta_tags( $anchor );
     $opus_posts->post_coda();
+
     if ( is_single() ) {
         /**
          * @internal using $opus_authors->post_author( $args ) works but is not
