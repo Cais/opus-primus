@@ -185,10 +185,11 @@ class OpusPrimusAuthors {
      * @since   0.1
      *
      * @param   $author_id - from OpusPrimusAuthors::post_author
-     * @param   $show_author_url
-     * @param   $show_author_email
-     * @param   $show_author_desc
+     * @param   $show_author_url boolean - default: true
+     * @param   $show_author_email boolean - default: true
+     * @param   $show_author_desc boolean - default: true
      *
+     * @uses    OpusPrimusAuthors::get_author_description
      * @uses    get_avatar
      * @uses    get_the_author_meta
      * @uses    home_url
@@ -258,7 +259,7 @@ class OpusPrimusAuthors {
                 } elseif ( ! empty( $author_url ) && ! $show_author_url && $show_author_email ) { ?>
                     <li class="opus-author-contact">
                         <?php
-                        printf( '<span class="opus-author-contact-text">' . __( 'Email %1$s.', 'opusprimus' ) . '</span>',
+                        printf( '<span class="opus-author-contact-text">' . __( 'Email: %1$s.', 'opusprimus' ) . '</span>',
                             '<a class="opus-author-email" href="mailto:' .  $author_email . '">' . $author_display_name . '</a>'
                         ); ?>
                     </li><!-- opus-author-contact -->
@@ -270,7 +271,7 @@ class OpusPrimusAuthors {
                 } elseif ( $show_author_email ) { ?>
                     <li class="opus-author-contact">
                         <?php
-                        printf( '<span class="opus-author-contact-text">' . __( 'Email %1$s.', 'opusprimus' ) . '</span>',
+                        printf( '<span class="opus-author-contact-text">' . __( 'Email: %1$s.', 'opusprimus' ) . '</span>',
                             '<a class="opus-author-email" href="mailto:' .  $author_email . '">' . $author_display_name . '</a>'
                         ); ?>
                     </li><!-- opus-author-contact -->
