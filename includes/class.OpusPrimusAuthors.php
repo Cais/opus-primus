@@ -125,7 +125,11 @@ class OpusPrimusAuthors {
      *
      * @param   $author_id
      *
+     * @uses    $paged (GLOBAL)
+     * @uses    apply_filters
      * @uses    get_the_author_meta
+     * @uses    home_url
+     * @uses    is_author
      *
      * @return  string
      */
