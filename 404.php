@@ -95,7 +95,7 @@ do_action( 'opus_content_before' ); ?>
             'order'         => 'desc',
             'show_count'    => 1,
             'hierarchical'  => 0,
-            'title_li'      => '<span class="title">' . __( 'Top 10 Categories by Post Count:', 'opusprimus' ) . '</span>',
+            'title_li'      => '<span class="title">' . apply_filters( 'opus_404_top_10_title', __( 'Top 10 Categories by Post Count:', 'opusprimus' ) ) . '</span>',
             'number'        => 10,
         ) );
 
