@@ -65,10 +65,6 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
      * @version 1.1
      * @date    March 18, 2013
      * Enqueue jQuery UI Tabs script for Comments
-     *
-     * @version 1.2
-     * @date    March 24, 2013
-     * Enqueue ...
      */
     function opus_primus_enqueue_scripts() {
         /** Enqueue Theme Scripts */
@@ -116,10 +112,13 @@ add_action( 'wp_enqueue_scripts', 'opus_primus_enqueue_scripts' );
 function opus_primus_LESS() {
     /** Add LESS link - cannot enqueue due to "rel" requirement */
     printf ( '<link rel="stylesheet/less" type="text/css" href="%1$s">', OPUS_CSS . 'style.less' );
+
     /** Print new line - head section will be easier to read */
     printf ( "\n" );
+
     /** Add JavaScript to compile LESS on the fly */
     wp_enqueue_script( 'less-1.3.3', OPUS_JS . 'less-1.3.3.min.js', '', '1.3.3' );
+
 } /** End function - opus primus LESS */
 add_action( 'wp_enqueue_scripts', 'opus_primus_LESS' );
 
@@ -147,27 +146,22 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
     function opus_primus_theme_setup() {
         /** This theme uses post thumbnails */
         add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
+
         /** Add default posts and comments RSS feed links to head */
         add_theme_support( 'automatic-feed-links' );
+
         /** Add theme support for editor-style */
         add_editor_style();
+
         /** This theme allows users to set a custom background */
         add_theme_support( 'custom-background', array(
                 'default-color' => 'ffffff',
                 /** 'default-image' => get_stylesheet_directory_uri() . '/images/background.png' */
-            ) );
+            )
+        );
+
         /** Add support for ALL post-formats */
-        add_theme_support( 'post-formats', array(
-            'aside',
-            'audio',
-            'chat',
-            'gallery',
-            'image',
-            'link',
-            'quote',
-            'status',
-            'video'
-        ) );
+        add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video' ) );
 
         /** @var $opus_custom_header_support - holds custom header parameters */
         $opus_custom_header_support = array(
@@ -205,7 +199,9 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
             /** @noinspection PhpIncludeInspection */
             require_once( $locale_file );
         } /** End if - is readable */
+
     } /** End function - opus primus theme setup */
+
 } /** End if - function exists - opus primus theme setup */
 add_action( 'after_setup_theme', 'opus_primus_theme_setup' );
 
