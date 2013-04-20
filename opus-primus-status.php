@@ -47,10 +47,14 @@ global $opus_defaults, $opus_structures, $opus_posts, $opus_comments, $opus_navi
         'sticky_flag'       => __( 'Breaking News', 'opusprimus' )
     ) );
     $opus_posts->post_title();
+
     if ( ! is_single() ) {
         $opus_comments->comments_link();
+        $opus_images->featured_thumbnail();
+    } else {
+        $opus_images->featured_thumbnail( $size = 'full', $class = 'aligncenter' );
     } /** End if - not is single */
-    $opus_images->featured_thumbnail();
+
     $opus_posts->post_content();
     $opus_navigation->multiple_pages_link( array(), $preface = __( 'Pages:', 'opusprimus' ) );
     $opus_posts->meta_tags( $anchor );

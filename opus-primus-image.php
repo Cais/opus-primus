@@ -47,6 +47,7 @@ global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_imag
         'sticky_flag'       => __( 'Framed', 'opusprimus' )
     ) );
     $opus_posts->post_title();
+
     if ( ! is_single() ) {
         $opus_comments->comments_link();
     } /** End if - not is single */

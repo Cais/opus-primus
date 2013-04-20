@@ -47,10 +47,11 @@ global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_imag
         'sticky_flag'       => __( 'Follow', 'opusprimus' )
     ) );
     $opus_posts->post_title();
+
     if ( ! is_single() ) {
         $opus_comments->comments_link();
     } /** End if - not is single */
-    $opus_images->featured_thumbnail();
+
     $opus_posts->post_content();
     $opus_navigation->multiple_pages_link( array(), $preface = __( 'Pages:', 'opusprimus' ) );
     $opus_posts->meta_tags( $anchor );

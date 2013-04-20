@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised April 13, 2013
+Last revised April 20, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2 ==
@@ -7,6 +7,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Code =
 * Added display of featured image centered at full size in single standard post format view
+* Added full `featured_image` method call to single view of post formats audio, chat, quote, and status
 * Added `get_author_description` method in Authors class
 * Added filtered `comment_form_required_field_glyph` method in Comments class
 * Added many new filters - see http://opusprimus.com/under-the-page/hooks-filters/ of 'hooks-filters.txt' for a current list
@@ -17,6 +18,8 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Changed `meta-byline` container from `div` to `h3` (adjusted CSS as needed)
 * Changed `meta-tags` container from `p` to `h3` (adjusted CSS as needed)
 * Changed `opus_post_byline_details` filter to `opus_post_byline_phrase`
+* Moved `featured_image` method call into `is_single` conditional in post-format loops
+* Removed `featured_image` method call from post-formats link and video loops
 * Removed global `$opus_image_meta`; replaced with call to `exif_data` method
 
 = CSS =
