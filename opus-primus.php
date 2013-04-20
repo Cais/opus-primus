@@ -35,8 +35,7 @@
  *
  * @version 1.2
  * @date    April 18, 2013
- * Added display of featured image centered at full size in single standard post
- * format view
+ * Adjusted conditional displaying the `featured_image`
  */
 
 /** Call the class variables */
