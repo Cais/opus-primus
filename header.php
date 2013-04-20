@@ -73,7 +73,7 @@ do_action( 'opus_body_top' ); ?>
         get_template_part( 'opus-primus-header', get_post_format() );
     } else {
         get_template_part( 'opus-primus-header' );
-    } /** End if - have posts */
+    } /** End if - is singular */
 
     /** Add empty hook after header */
     do_action( 'opus_header_after' );
