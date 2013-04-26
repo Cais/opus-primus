@@ -142,6 +142,13 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
      * @uses    get_template_directory
      * @uses    get_template_directory_uri
      * @uses    register_nav_menus
+     *
+     * @version 1.2
+     * @date    April 26, 2013
+     * Changed to add_theme_support( 'structured-post-formats' ) replacing
+     * add_theme_support( 'post-formats' )
+     *
+     * @todo Bump WordPress Version Required to 3.6?
      */
     function opus_primus_theme_setup() {
         /** This theme uses post thumbnails */
@@ -161,7 +168,7 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
         );
 
         /** Add support for ALL post-formats */
-        add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video' ) );
+        add_theme_support( 'structured-post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video' ) );
 
         /** @var $opus_custom_header_support - holds custom header parameters */
         $opus_custom_header_support = array(
