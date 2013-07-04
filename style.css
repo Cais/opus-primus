@@ -468,9 +468,21 @@ div.aligncenter, .aligncenter, .center { margin: 0 auto; }
 img.aligncenter, img.center { clear: both; display: block; }
 img.alignleft, img.left { display: inline; margin: 0 8px 8px 0; }
 img.alignright, img.right { display: inline; margin: 0 0 8px 8px; }
-.wp-caption { border: 1px solid #ddd; text-align: center; background-color: #f3f3f3; padding-top: 4px; margin: 10px; border-radius: 3px; }
+.wp-caption {
+    background-color: #f3f3f3;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    /* margin: 10px; */
+    padding-top: 4px;
+    text-align: center;
+}
 .wp-caption img { margin: 0; padding: 0; border: 0 none; }
-.wp-caption p.wp-caption-text { font-size: 11px; line-height: 17px; padding: 0 4px 5px; margin: 0; }
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
 
 .sticky { /* Required by WordPress - may be defined in another section */ }
 .gallery-caption { /* Required by WordPress - may be defined in another section */ }

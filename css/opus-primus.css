@@ -40,7 +40,7 @@
  * Removed unused element for non-existent 'comments-toggle' script
  *
  * @version 1.2
- * @date    April 13, 2013
+ * @date    July 4, 2013
  * Added more specific selector used with .post.format-link
  * Added more BNS Plugin Integration (BPI) adjustments
  * Added styles for Comment Form Fields
@@ -48,6 +48,7 @@
  * Adjusted widths of comment form elements
  * Adjusted `meta-byline` CSS due to container change from `div` to `h3`
  * Adjusted `meta-tags` CSS due to container change from `p` to `h3`
+ * Adjusted CSS to better handle large images with captions in large full-width displays
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -1175,6 +1176,35 @@ ul.featured li ul.nav div.nav {
     filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
 }
 
+/** Image Captions */
+p + div.wp-caption {
+    clear: both;
+}
+
+.wp-caption {
+    max-width: 100%;
+    padding-top: 8px;
+}
+
+.wp-caption p.wp-caption-text {
+    margin: 0;
+    padding: 0;
+}
+
+.wp-caption.alignleft,
+.wp-caption.left {
+    margin-right: 5px;
+}
+
+.wp-caption.alignright,
+.wp-caption.right {
+    margin-left: 5px;
+}
+
+img {
+    height: auto;
+}
+
 /** Featured Image */
 /* a.featured-thumbnail + div.post-content { float: left; } */
 
@@ -1196,15 +1226,6 @@ div.display-exif-box p {
 
 table.display-exif-table tbody tr td {
     padding-right: 10px;
-}
-
-.wp-caption,
-.wp-caption img {
-    max-width: 99%;
-}
-
-img {
-    height: auto;
 }
 /** End: Attachment: Image -------------------------------------------------- */
 
