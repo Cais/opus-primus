@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised July 4, 2013
+Last revised July 5, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2 ==
@@ -29,6 +29,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Address both class and id usage for the sidebar search form
 * Adjusted widths of comment form elements
 * Adjusted CSS to better handle large images with captions in large full-width displays
+* Change `table` elements from 'max-width: 100%' to 'width: 100%'
 * Sorted out the adaptive layout for screens less than 480px wide
 
 = JavaScript =

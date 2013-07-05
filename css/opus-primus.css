@@ -40,7 +40,7 @@
  * Removed unused element for non-existent 'comments-toggle' script
  *
  * @version 1.2
- * @date    July 4, 2013
+ * @date    July 5, 2013
  * Added more specific selector used with .post.format-link
  * Added more BNS Plugin Integration (BPI) adjustments
  * Added styles for Comment Form Fields
@@ -49,6 +49,7 @@
  * Adjusted `meta-byline` CSS due to container change from `div` to `h3`
  * Adjusted `meta-tags` CSS due to container change from `p` to `h3`
  * Adjusted CSS to better handle large images with captions in large full-width displays
+ * Change `table` elements from 'max-width: 100%' to 'width: 100%'
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -568,8 +569,8 @@ sup {
 }
 
 table {
-    max-width: 100%;
     background-color: transparent;
+    width: 100%;
 }
 
 tt {
