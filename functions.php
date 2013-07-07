@@ -45,7 +45,7 @@
  * - Define CONSTANTS
  * - Add Widgets
  * - Add Classes
- * - Add Extensions
+ * - Add Stanzas (Extensions)
  */
 require_once( get_template_directory() . '/includes/opus-ignite.php' );
 
@@ -121,9 +121,6 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
      * @uses    get_template_directory
      * @uses    get_template_directory_uri
      * @uses    register_nav_menus
-     *
-     * @version 1.2
-     * @date    July 4, 2013
      */
     function opus_primus_theme_setup() {
         /** This theme uses post thumbnails */
