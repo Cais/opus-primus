@@ -45,6 +45,7 @@
  * Added more BNS Plugin Integration (BPI) adjustments
  * Added styles for Comment Form Fields
  * Added styles from compiled `style.less` file (file removed)
+ * Added some basic table related styles
  * Address both class and id usage for the sidebar search form
  * Adjusted widths of comment form elements
  * Adjusted `meta-byline` CSS due to container change from `div` to `h3`
@@ -574,6 +575,10 @@ sup {
 table {
     background-color: transparent;
     width: 100%;
+}
+
+tr {
+    border-top: 1px solid #e3e3e3;
 }
 
 tt {
