@@ -572,14 +572,18 @@ sup {
     top: -0.5em;
 }
 
+/** Tables and related styles ----------------------------------------------- */
 table {
     background-color: transparent;
     width: 100%;
 }
 
-tr {
-    border-top: 1px solid #e3e3e3;
-}
+td { padding-left: 2px; }
+
+tr { border-top: 1px solid #e3e3e3; }
+
+.table-stripe { background-color: #e3e3e3; }
+/** End: Tables and related Styles ------------------------------------------ */
 
 tt {
     font-family: monospace, sans-serif;

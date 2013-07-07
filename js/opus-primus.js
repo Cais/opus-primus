@@ -59,4 +59,7 @@ jQuery( document ).ready( function( $ ) {
 
     /** Add a class to the form-allowed-tags code box */
     $( 'p.form-allowed-tags code' ).addClass( "form-allowed-tags-code-box" );
+
+    /** Add a class to table rows to create a striped effect */
+    $( 'tr:even' ).addClass( 'table-stripe' );
 } );

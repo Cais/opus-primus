@@ -36,6 +36,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = JavaScript =
 * Added more specific selector used with .post.format-link when adding .link-symbol class
+* Added script to create class to display tables with striped rows
 
 = Stanzas =
 * PullQuotes - Added 'pullquotes-readme.txt' file

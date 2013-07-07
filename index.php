@@ -42,7 +42,8 @@
  * @date    March 23, 2013
  *
  * @version 1.2
- * @date    April 1, 2013
+ * @date    July 6, 2013
+ * @todo Review table styles, insure bottom row background color extends across
  */
 
 global $opus_structures;
