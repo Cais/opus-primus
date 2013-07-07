@@ -34,6 +34,10 @@
  * @version 1.1.1
  * @date    March 23, 2013
  * Set $content_width to 1000 (matches 'Full Size Video' maximum width)
+ *
+ * @version 1.2
+ * @date    July 6, 2013
+ * Removed 'style.less' related function and action calls
  */
 
 /**
@@ -96,31 +100,6 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 
 } /** End if - function exists - opus primus enqueue scripts */
 add_action( 'wp_enqueue_scripts', 'opus_primus_enqueue_scripts' );
-
-
-/**
- * Opus Primus LESS
- * Add LESS stylesheet and JavaScript
- *
- * @package OpusPrimus
- * @since   0.1
- *
- * @uses    (constant) OPUS_CSS
- * @uses    (constant) OPUS_JS
- * @uses    wp_enqueue_script
- */
-function opus_primus_LESS() {
-    /** Add LESS link - cannot enqueue due to "rel" requirement */
-    printf ( '<link rel="stylesheet/less" type="text/css" href="%1$s">', OPUS_CSS . 'style.less' );
-
-    /** Print new line - head section will be easier to read */
-    printf ( "\n" );
-
-    /** Add JavaScript to compile LESS on the fly */
-    wp_enqueue_script( 'less-1.3.3', OPUS_JS . 'less-1.3.3.min.js', '', '1.3.3' );
-
-} /** End function - opus primus LESS */
-add_action( 'wp_enqueue_scripts', 'opus_primus_LESS' );
 
 
 if ( ! function_exists( 'opus_primus_theme_setup' ) ) {

@@ -40,10 +40,11 @@
  * Removed unused element for non-existent 'comments-toggle' script
  *
  * @version 1.2
- * @date    July 5, 2013
+ * @date    July 6, 2013
  * Added more specific selector used with .post.format-link
  * Added more BNS Plugin Integration (BPI) adjustments
  * Added styles for Comment Form Fields
+ * Added styles from compiled `style.less` file (file removed)
  * Address both class and id usage for the sidebar search form
  * Adjusted widths of comment form elements
  * Adjusted `meta-byline` CSS due to container change from `div` to `h3`
@@ -57,8 +58,8 @@
  * === Baselines ===
  * body{} properties
  * HTML Elements - Listed Alphabetically
- * Elements Requiring Clearance
  *
+ * === Clearance ===
  * === Menu Related Elements ===
  * === Breadcrumbs ===
  * === Post Elements ===
@@ -92,6 +93,8 @@
  * === Footer ===
  *
  * === Miscellaneous ===
+ * === Style.LESS Compiled to CSS ===
+ *
  * === BNS Plugin Integrations ===
  *
  * === Ain't Miss B. Haven ===
@@ -577,7 +580,9 @@ tt {
     font-family: monospace, sans-serif;
 }
 
-/** Elements Requiring Clearance */
+/** End: Baselines ---------------------------------------------------------- */
+
+/** === Clearance === ------------------------------------------------------- */
 /** Micro Clearfix ---------------------------------------------------------- */
 .cf:before, .cf:after { content: ""; display: table; }
 .cf:after { clear: both; }
@@ -590,7 +595,21 @@ ul.sidebar {
     clear: both;
 }
 
-/** End: Baselines ---------------------------------------------------------- */
+/** Generic Clearing Classes ------------------------------------------------ */
+.clr-l { clear: left; }
+.clr-r { clear: right; }
+
+/** All elements requiring clear: both -------------------------------------- */
+.clear,
+.post-title,
+.meta-byline,
+.meta-tags,
+.more-link,
+.author.details {
+    clear: both;
+}
+
+/** End: Clearance ---------------------------------------------------------- */
 
 /** === Menu Related Elements === */
 nav div.nav ul li {
@@ -823,8 +842,15 @@ ul.breadcrumb li ul.post-trail-categories li:first-child {
 /** === Post Elements === --------------------------------------------------- */
 /** Meta Byline ------------------------------------------------------------- */
 .meta-byline {
+    background: #e8e8e8;
+    background: -moz-linear-gradient(right,#ffffff,#cacaca);
+    background: -webkit-gradient(linear,left top,right top,from(#cacaca),to(#ffffff));
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#cacaca,EndColorStr=#ffffff,GradientType=1);
+    background-image: -ms-linear-gradient(right,#ffffff 0%,#cacaca 100%);
     font-size: 13px;
     font-weight: normal;
+    line-height: 200%;
+    padding-left: 7px;
 }
 
 /** Post Content ------------------------------------------------------------ */
@@ -1132,16 +1158,35 @@ ul.featured.search.pages li,
 ul.archive.cloud.list li,
 ul.archive.category.list li,
 ul.nav.search li {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border: 1px solid #000000;
     float: left;
     list-style-type: none;
     padding: 10px;
+}
+
+ul.featured.search.pages li ul li,
+ul.archive.cloud.list li ul li,
+ul.archive.category.list li ul li,
+ul.nav.search li ul li {
+    border: none;
 }
 
 ul.featured li ul.nav div.nav {
     margin-bottom: 0;
 }
 
+ul.archive.cloud.list ul {
+    margin: 0;
+}
+
 .error404 div.widget_recent_entries {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border: 1px solid #000000;
     margin: 0 0 9px 25px;
 }
 
@@ -1156,6 +1201,7 @@ ul.featured li ul.nav div.nav {
 .error404 div.widget_recent_entries ul li span.post-date:before {
     content: '- ';
 }
+
 /** End: 404 Layout --------------------------------------------------------- */
 
 /** === General Archives === ------------------------------------------------ */
@@ -1444,6 +1490,23 @@ h6#site-generator {
     cursor: help;
 }
 /** End: Miscellaneous ------------------------------------------------------ */
+
+/** === Style.LESS Compiled to CSS === -------------------------------------- */
+.fade-right {
+    background: #e8e8e8;
+    background: -moz-linear-gradient(right,#ffffff,#cacaca);
+    background: -webkit-gradient(linear,left top,right top,from(#cacaca),to(#ffffff));
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#cacaca,EndColorStr=#ffffff,GradientType=1);
+    background-image: -ms-linear-gradient(right,#ffffff 0%,#cacaca 100%);
+}
+.fade-left {
+    background: #e8e8e8;
+    background: -moz-linear-gradient(left,#ffffff,#cacaca);
+    background: -webkit-gradient(linear,right top,left top,from(#cacaca),to(#ffffff));
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#ffffff,EndColorStr=#cacaca,GradientType=1);
+    background-image: -ms-linear-gradient(left,#ffffff 0%,#cacaca 100%);
+}
+/** End: Style.LESS Compiled to CSS ----------------------------------------- */
 
 /** === BNS Plugin Integrations === ----------------------------------------- */
 /** BNS Inline Asides */

@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised July 5, 2013
+Last revised July 6, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2 ==
@@ -21,11 +21,13 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Moved `featured_image` method call into `is_single` conditional in post-format loops
 * Removed `featured_image` method call from post-formats link and video loops
 * Removed global `$opus_image_meta`; replaced with call to `exif_data` method
+* Removed 'style.less' related function and action calls
 
 = CSS =
 * Added styles for comment form fields
 * Added more specific selector used with .post.format-link
 * Added more BNS Plugin Integration (BPI) adjustments
+* Added styles from compiled `style.less` file (file removed)
 * Address both class and id usage for the sidebar search form
 * Adjusted widths of comment form elements
 * Adjusted CSS to better handle large images with captions in large full-width displays
@@ -43,6 +45,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Miscellaneous =
 * Minor changes to text tense used in 'changelog.txt'
+* Removed 'style.less' file (compiled and merged into 'opus-primus.css' file)
 * Updated 'hooks-actions.txt'
 * Updated 'hooks-filters.txt'
 * Updated 'readme.txt' FAQ - What is the difference between how the "Featured Image" is used on a post and how it is used on a page?
