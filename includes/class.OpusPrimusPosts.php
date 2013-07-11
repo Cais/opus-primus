@@ -220,6 +220,7 @@ class OpusPrimusPosts {
      * @package OpusPrimus
      * @since   0.1
      *
+     * @uses    __
      * @uses    get_author_posts_url
      * @uses    get_the_author_meta
      * @uses    get_the_author
@@ -243,6 +244,7 @@ class OpusPrimusPosts {
      * @subpackage  Posts
      * @since       1.0.5
      *
+     * @uses        __
      * @uses        the_title_attribute
      *
      * @return      null|string|void - anchor text
@@ -270,6 +272,10 @@ class OpusPrimusPosts {
      *
      * @param   string $anchor ( default = Posted ) - passed from the loops
      *
+     * @uses    OpusPrimusPosts::anchor_title_text
+     * @uses    OpusPrimusPosts::no_title_link
+     * @uses    OpusPrimusPosts::status_update
+     * @uses    __
      * @uses    do_action
      * @uses    get_permalink
      * @uses    get_post_type
@@ -327,6 +333,7 @@ class OpusPrimusPosts {
      * @package OpusPrimus
      * @since   0.1
      *
+     * @uses    __
      * @uses    home_url
      *
      * @param   $last_user - passed from OpusPrimusPosts::modified_post
@@ -354,6 +361,7 @@ class OpusPrimusPosts {
      *
      * @uses    $opus_author_id (global)
      * @uses    $post (global)
+     * @uses    __
      * @uses    apply_filters
      * @uses    do_action
      * @uses    get_post_meta
@@ -493,6 +501,7 @@ class OpusPrimusPosts {
      * 'date' will only show if there is a difference of more than one (1) day.
      * Also note, 'show_mod_author' is not needed if 'tempus' is set to 'time'.
      *
+     * @uses    __
      * @uses    do_action
      * @uses    esc_attr
      * @uses    get_author_posts_url
@@ -622,8 +631,10 @@ class OpusPrimusPosts {
      * @param   string $more_link_text
      * @param   string $stripteaser
      *
+     * @uses    __
      * @uses    do_action
      * @uses    the_content
+     * @uses    the_title
      */
     function post_content( $more_link_text = '', $stripteaser = '' ) {
         /** Add empty hook before the content */
@@ -683,6 +694,8 @@ class OpusPrimusPosts {
      * @package OpusPrimus
      * @since   0.1
      *
+     * @uses    __
+     * @uses    apply_filters
      * @uses    get_post_format
      * @uses    get_post_format_link
      * @uses    get_post_format_string
@@ -718,6 +731,7 @@ class OpusPrimusPosts {
      * @param   string $after
      * @param   bool $echo
      *
+     * @uses    __
      * @uses    do_action
      * @uses    the_permalink
      * @uses    the_title
@@ -754,6 +768,7 @@ class OpusPrimusPosts {
      * @package OpusPrimus
      * @since   0.1
      *
+     * @uses    OpusPrimusPosts::status_update
      * @uses    do_action
      */
     function show_status_update() {
@@ -780,6 +795,7 @@ class OpusPrimusPosts {
      * @param   string $update_text
      * @param   int $time_ago - measured in seconds, default equals one week
      *
+     * @uses    __
      * @uses    apply_filters
      * @uses    current_time
      * @uses    get_the_modified_time
@@ -846,6 +862,7 @@ class OpusPrimusPosts {
      *
      * @param   string $sticky_text
      *
+     * @uses    __
      * @uses    apply_filters
      * @uses    is_sticky
      * @uses    get_permalink
@@ -889,6 +906,7 @@ class OpusPrimusPosts {
      * @internal used for conditional test in meta_tags method
      *
      * @uses    get_the_category
+     * @uses    is_page
      *
      * @return bool
      */
@@ -912,6 +930,7 @@ class OpusPrimusPosts {
 
 
 } /** End Opus Primus Posts class */
+
 
 /** @var $opus_posts - new instance of class */
 $opus_posts = new OpusPrimusPosts();

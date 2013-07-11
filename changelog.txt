@@ -45,6 +45,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * THA - Added 'tha-readme.txt' file
 
 = Miscellaneous =
+* Documentation Updates
 * Minor changes to text tense used in 'changelog.txt'
 * Removed 'style.less' file (compiled and merged into 'opus-primus.css' file)
 * Updated 'hooks-actions.txt'
