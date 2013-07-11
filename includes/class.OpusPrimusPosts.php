@@ -280,8 +280,8 @@ class OpusPrimusPosts {
      * @uses    uncategorized
      *
      * @version 1.2
-     * @date    March 28, 2013
-     * Changed `meta-byline` container from `p` to `h3`
+     * @date    July 11, 2013
+     * Changed `meta-byline` container from `p` to `div`
      */
     function meta_tags( $anchor ) {
         /** Add empty hook before meta tags */
@@ -305,7 +305,7 @@ class OpusPrimusPosts {
         } /** End if - tag list */
 
         /** Prints the "opus_posted_in" string, replacing the placeholders */
-        printf( '<h3 class="meta-tags">' . $opus_posted_in . '</h3>',
+        printf( '<div class="meta-tags">' . $opus_posted_in . '</div><!-- .meta-tags -->',
             $this->no_title_link( $anchor ),
             get_the_category_list( ', ' ),
             $opus_tag_list,
@@ -507,9 +507,8 @@ class OpusPrimusPosts {
      * @uses    wp_parse_args
      *
      * @version 1.2
-     * @date    April 8, 2013
+     * @date    July 11, 2013
      * Added individual filters for anchor, date, time, and author elements
-     * Changed `meta-byline` container from `div` to `h3`
      * Changed `opus_post_byline_details` filter to `opus_post_byline_phrase`
      */
     function post_byline( $byline_args = '' ) {
@@ -535,7 +534,7 @@ class OpusPrimusPosts {
         );
 
         /** Output post byline */
-        echo '<h3 class="meta-byline">';
+        echo '<div class="meta-byline">';
 
             /** Post By-Line filtered components */
             printf( $opus_post_byline,
@@ -573,7 +572,7 @@ class OpusPrimusPosts {
             echo $this->post_format_flag();
 
         /** Close CSS wrapper for the post byline */
-        echo '</h3><!-- .meta-byline -->';
+        echo '</div><!-- .meta-byline -->';
 
         /** Add empty hook after post by line */
         do_action( 'opus_post_byline_after' );

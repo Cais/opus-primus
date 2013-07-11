@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised July 6, 2013
+Last revised July 11, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2 ==
@@ -15,8 +15,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Changed `the_post_thumbnail` to use parameters which are set in the call to `OpusPrimusImage::featured_image`
 * Changed post thumbnail on pages to full size image and align to the center
 * Changed comment fields into an unordered list
-* Changed `meta-byline` container from `div` to `h3` (adjusted CSS as needed)
-* Changed `meta-tags` container from `p` to `h3` (adjusted CSS as needed)
+* Changed `meta-tags` container from `p` to `div` (adjusted CSS as needed)
 * Changed `opus_post_byline_details` filter to `opus_post_byline_phrase`
 * Moved `featured_image` method call into `is_single` conditional in post-format loops
 * Removed `featured_image` method call from post-formats link and video loops

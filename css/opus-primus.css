@@ -597,7 +597,7 @@ tt {
 .cf:after { clear: both; }
 .cf { zoom: 1; }
 
-h3.meta-byline,
+div.meta-byline,
 h2.post-title,
 ul.archive,
 ul.sidebar {
@@ -1301,7 +1301,7 @@ span.opus-author-about {
 /** End: Authors ------------------------------------------------------------ */
 
 /** === Post Formats === ---------------------------------------------------- */
-h3.meta-byline button {
+div.meta-byline button {
     float: right;
 }
 
@@ -1405,7 +1405,8 @@ div.post.format-video div.post-content p {
     line-height: 22.5px;
 }
 
-.archive.term-post-format-quote h3.meta-tags {
+.archive.term-post-format-quote div.meta-tags {
+    display: block;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 75%;
     line-height: 18px;
