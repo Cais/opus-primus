@@ -48,10 +48,12 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Documentation Updates
 * Minor changes to text tense used in 'changelog.txt'
 * Removed 'style.less' file (compiled and merged into 'opus-primus.css' file)
+* Removed license references related to LESS as all components were removed
 * Updated 'hooks-actions.txt'
 * Updated 'hooks-filters.txt'
 * Updated 'readme.txt' FAQ - What is the difference between how the "Featured Image" is used on a post and how it is used on a page?
 * Updated 'readme.txt' FAQ - What are Stanzas?
+* Updated 'readme.txt' FAQ - What happened to the LESS components of the theme?
 
 /** ------------------------------------------------------------------------- */
 == Version 1.1.1 ==
