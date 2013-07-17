@@ -317,6 +317,8 @@ class OpusPrimusComments {
      * @uses    comments_popup_link
      * @uses    is_page
      * @uses    post_password_required
+     *
+     * @todo Correct logic used to display messages - if comments exist and comments are closed nothing shows is not correct
      */
     function comments_link() {
         /** Add empty hook before comments link */
