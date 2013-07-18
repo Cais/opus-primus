@@ -31,6 +31,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Adjusted widths of comment form elements
 * Adjusted CSS to better handle large images with captions in large full-width displays
 * Change `table` elements from 'max-width: 100%' to 'width: 100%'
+* Minor tweaks and adjustments
 * Sorted out the adaptive layout for screens less than 480px wide
 
 = JavaScript =
