@@ -36,18 +36,53 @@
  * Set $content_width to 1000 (matches 'Full Size Video' maximum width)
  *
  * @version 1.2
- * @date    July 6, 2013
+ * @date    July 19, 2013
  * Removed 'style.less' related function and action calls
+ * Merge `opus-ignite.php` into `functions.php`
  */
 
-/**
- * Call the initialization file to get things fired-up!
- * - Define CONSTANTS
- * - Add Widgets
- * - Add Classes
- * - Add Stanzas (Extensions)
- */
-require_once( get_template_directory() . '/includes/opus-ignite.php' );
+
+/** Set CONSTANTS */
+define( 'OPUS_INC',         get_template_directory()        . '/includes/' );
+define( 'OPUS_JS',          get_template_directory_uri()    . '/js/' );
+define( 'OPUS_CSS',         get_template_directory_uri()    . '/css/' );
+define( 'OPUS_IMAGES',      get_template_directory_uri()    . '/images/' );
+define( 'OPUS_STANZAS',     get_template_directory()        . '/stanzas/' );
+define( 'OPUS_STANZAS_URI', get_template_directory_uri()    . '/stanzas/' );
+
+/** For Testing Purposes */
+define( 'OPUS_WIP', get_template_directory() . '/works-in-progress/' );
+
+
+/** Add Widgets */
+require_once( OPUS_INC . 'widgets.php' );
+
+/** Load the classes - in order of appearance/dependency */
+/** Add Global Defaults */
+require_once( OPUS_INC . 'class.OpusPrimusDefaults.php' );
+/** Add Navigation */
+require_once( OPUS_INC . 'class.OpusPrimusNavigation.php' );
+/** Add Structures */
+require_once( OPUS_INC . 'class.OpusPrimusStructures.php' );
+/** Add Headers */
+require_once( OPUS_INC . 'class.OpusPrimusHeaders.php' );
+/** Add Posts */
+require_once( OPUS_INC . 'class.OpusPrimusPosts.php' );
+/** Add Comments Hooks */
+require_once( OPUS_INC . 'class.OpusPrimusComments.php' );
+/** Add Images */
+require_once( OPUS_INC . 'class.OpusPrimusImages.php' );
+/** Add Gallery */
+require_once( OPUS_INC . 'class.OpusPrimusGallery.php' );
+/** Add Authors */
+require_once( OPUS_INC . 'class.OpusPrimusAuthors.php' );
+/** Add Archives */
+require_once( OPUS_INC . 'class.OpusPrimusArchives.php' );
+/** Add Breadcrumbs */
+require_once( OPUS_INC . 'class.OpusPrimusBreadcrumbs.php' );
+
+/** Add Stanzas */
+require_once( OPUS_STANZAS . 'stanzas.php' );
 
 
 if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {

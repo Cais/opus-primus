@@ -19,6 +19,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Changed `meta-tags` container from `p` to `div` (adjusted CSS as needed)
 * Changed `opus_post_byline_details` filter to `opus_post_byline_phrase`
 * Fixed call to wrong post navigation function in single view
+* Merge `opus-ignite.php` into `functions.php`
 * Moved `featured_image` method call into `is_single` conditional in post-format loops
 * Removed `featured_image` method call from post-formats link and video loops
 * Removed global `$opus_image_meta`; replaced with call to `exif_data` method

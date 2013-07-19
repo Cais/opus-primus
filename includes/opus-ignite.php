@@ -31,17 +31,15 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version 1.0.3
- * @date    February 28, 2013
- * Moved Taglines into its own Stanza
- *
- * @version 1.0.4
- * @date    March 1, 2013
- * Added call to 'Breadcrumbs' class
- *
  * @version 1.1
  * @date    March 9, 2013
  * Added call to 'Header' class
+ *
+ * @version 1.2
+ * @date    July 19, 2013
+ * Merged into `functions.php` retained for reference purposes only
+ *
+ * @todo Remove at version 1.3?
  */
 
 /** Set CONSTANTS */
