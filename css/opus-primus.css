@@ -50,7 +50,7 @@
  * Adjusted widths of comment form elements
  * Adjusted `meta-tags` CSS due to container change from `p` to `div`
  * Adjusted CSS to better handle large images with captions in large full-width displays
- * Change `table` elements from 'max-width: 100%' to 'width: 100%'
+ * Adjusted `table` elements from 'max-width: 100%' to 'width: 100%' and other minor changes
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -580,6 +580,7 @@ table {
 td { padding-left: 2px; }
 
 tr { border-top: 1px solid #e3e3e3; }
+tr:last-child { border-bottom: 1px solid #e3e3e3; }
 
 .table-stripe { background-color: #e3e3e3; }
 /** End: Tables and related Styles ------------------------------------------ */
