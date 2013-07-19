@@ -3,13 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="92756fba-9448-4539-aaa4-1deb2265cfe0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/opus-primus.css" afterPath="$PROJECT_DIR$/css/opus-primus.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/opus-primus.js" afterPath="$PROJECT_DIR$/js/opus-primus.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1374152188170" ignored="false" />
+    <file path="/Dummy.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1374236065278" ignored="false" />
     <file path="/a.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363106901363" ignored="false" />
     <file path="/a.html" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363107087453" ignored="false" />
     <file path="/a.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363107067982" ignored="false" />
@@ -21,9 +20,9 @@
     <file path="/opus-primus.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1374152715619" ignored="false" />
     <file path="/comments.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1374071612034" ignored="false" />
     <file path="/functions.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1374084913088" ignored="false" />
-    <file path="/changelog.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1374152796710" ignored="false" />
+    <file path="/changelog.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1374237178692" ignored="false" />
     <file path="/opus-primus-comment-tabs.js" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1363621396915" ignored="false" />
-    <file path="/readme.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1374087126301" ignored="false" />
+    <file path="/readme.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1374155727444" ignored="false" />
     <file path="/style.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1374084189084" ignored="false" />
     <file path="/class.OpusPrimusComments.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364918166258" ignored="false" />
     <file path="/opus-primus-media-queries.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1364215189861" ignored="false" />
@@ -81,6 +80,11 @@
     <file path="/image-width-content.js" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1374086398616" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../BNS-Projects/wp-content/themes/ground-floor/functions.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1374086676790" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../BNS-Projects/wp-content/themes/ground-floor/readme.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1374087126660" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../../BNS-Projects/wp-content/themes/multi/header.php" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1374154880374" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../../BNS-Projects/wp-content/themes/multi/changelog.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1374154876164" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../../BNS-Projects/wp-content/themes/multi/style.css" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1374154859076" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../../BNS-Projects/wp-content/themes/multi/readme.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1374155732434" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../../BNS-Projects/wp-content/themes/multi/support.txt" changelist="92756fba-9448-4539-aaa4-1deb2265cfe0" time="1374154884523" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,11 +104,87 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="opus-primus.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
+      <file leaf-file-name="class.OpusPrimusStructures.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1142" column="51" selection-start="23902" selection-end="23902" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="600" column="51" selection-start="24065" selection-end="24065" vertical-scroll-proportion="-4.1538463">
+              <folding>
+                <element signature="e#1760#2286#0" expanded="false" />
+                <element signature="e#2374#3093#0" expanded="false" />
+                <element signature="e#3098#4213#0" expanded="false" />
+                <element signature="e#3331#3390#0" expanded="false" />
+                <element signature="e#3758#3879#0" expanded="false" />
+                <element signature="e#3964#4111#0" expanded="false" />
+                <element signature="e#4256#4794#0" expanded="false" />
+                <element signature="e#4799#8171#0" expanded="false" />
+                <element signature="e#4946#5164#0" expanded="false" />
+                <element signature="e#5345#6023#0" expanded="false" />
+                <element signature="e#5683#6023#0" expanded="false" />
+                <element signature="e#6172#6394#0" expanded="false" />
+                <element signature="e#6438#6630#0" expanded="false" />
+                <element signature="e#6639#7996#0" expanded="false" />
+                <element signature="e#6890#6972#0" expanded="false" />
+                <element signature="e#8213#8348#0" expanded="false" />
+                <element signature="e#8353#8421#0" expanded="false" />
+                <element signature="e#8466#8710#0" expanded="false" />
+                <element signature="e#8715#8999#0" expanded="false" />
+                <element signature="e#9086#9321#0" expanded="false" />
+                <element signature="e#9326#9486#0" expanded="false" />
+                <element signature="e#9526#10279#0" expanded="false" />
+                <element signature="e#10284#12561#0" expanded="false" />
+                <element signature="e#10347#10405#0" expanded="false" />
+                <element signature="e#11008#11093#0" expanded="false" />
+                <element signature="e#11171#11526#0" expanded="false" />
+                <element signature="e#11395#11526#0" expanded="false" />
+                <element signature="e#11568#11727#0" expanded="false" />
+                <element signature="e#11736#12364#0" expanded="false" />
+                <element signature="e#12169#12364#0" expanded="false" />
+                <element signature="e#12600#13225#0" expanded="false" />
+                <element signature="e#13230#15279#0" expanded="false" />
+                <element signature="e#13273#13331#0" expanded="false" />
+                <element signature="e#13483#15182#0" expanded="false" />
+                <element signature="e#13595#14485#0" expanded="false" />
+                <element signature="e#14497#15182#0" expanded="false" />
+                <element signature="e#14527#15171#0" expanded="false" />
+                <element signature="e#15316#15668#0" expanded="false" />
+                <element signature="e#15673#17593#0" expanded="false" />
+                <element signature="e#15864#16107#0" expanded="false" />
+                <element signature="e#16288#17076#0" expanded="false" />
+                <element signature="e#16681#17076#0" expanded="false" />
+                <element signature="e#17225#17527#0" expanded="false" />
+                <element signature="e#17635#18070#0" expanded="false" />
+                <element signature="e#18075#19976#0" expanded="false" />
+                <element signature="e#18265#18505#0" expanded="false" />
+                <element signature="e#18686#19466#0" expanded="false" />
+                <element signature="e#19075#19466#0" expanded="false" />
+                <element signature="e#19615#19910#0" expanded="false" />
+                <element signature="e#20017#20608#0" expanded="false" />
+                <element signature="e#20613#22663#0" expanded="false" />
+                <element signature="tag#h2#0" expanded="false" />
+                <element signature="e#20880#21107#0" expanded="false" />
+                <element signature="e#20944#21105#0" expanded="false" />
+                <element signature="e#21169#21379#0" expanded="false" />
+                <element signature="e#21223#21377#0" expanded="false" />
+                <element signature="e#21417#21604#0" expanded="false" />
+                <element signature="e#21471#21602#0" expanded="false" />
+                <element signature="e#21763#22181#0" expanded="false" />
+                <element signature="e#21799#22179#1" expanded="false" />
+                <element signature="e#22245#22435#0" expanded="false" />
+                <element signature="e#22276#22433#1" expanded="false" />
+                <element signature="e#22710#22985#0" expanded="false" />
+                <element signature="e#22990#23533#0" expanded="false" />
+                <element signature="e#24833#25202#0" expanded="false" />
+                <element signature="e#25207#25942#0" expanded="false" />
+                <element signature="e#25277#25805#0" expanded="false" />
+                <element signature="e#25311#25708#0" expanded="false" />
+                <element signature="e#25749#25805#0" expanded="false" />
+                <element signature="e#25989#26305#0" expanded="false" />
+                <element signature="e#27043#27395#0" expanded="false" />
+                <element signature="e#27400#28105#0" expanded="false" />
+                <element signature="e#28425#28498#0" expanded="false" />
+                <element signature="e#28500#28541#0" expanded="false" />
+                <element signature="e#28543#28594#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,16 +192,7 @@
       <file leaf-file-name="changelog.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/changelog.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="1884" selection-end="1884" vertical-scroll-proportion="0.79970545">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="opus-primus.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/opus-primus.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="15" selection-start="2520" selection-end="2520" vertical-scroll-proportion="0.0">
+            <state line="19" column="0" selection-start="1102" selection-end="1102" vertical-scroll-proportion="0.47569954">
               <folding />
             </state>
           </provider>
@@ -150,7 +221,6 @@
         <option value="$PROJECT_DIR$/stanzas/stanzas.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
         <option value="$PROJECT_DIR$/page.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
         <option value="$PROJECT_DIR$/documentation/hooks-filters.txt" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" />
@@ -161,6 +231,7 @@
         <option value="$PROJECT_DIR$/js/opus-primus.js" />
         <option value="$PROJECT_DIR$/css/opus-primus.css" />
         <option value="$PROJECT_DIR$/changelog.txt" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
       </list>
     </option>
   </component>
@@ -197,7 +268,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -244,48 +314,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -302,16 +337,16 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../wp-includes" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="293" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="967" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="967" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="967" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="293" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="291" />
-    <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig" serverName="EAC" serverId="88425cc1-b13d-4494-840a-f6df54a8d41b">
     <servers>
@@ -467,14 +502,14 @@
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="59791a67-7e89-437b-b6d2-d013c0025a62" server_name="EAC">
-      <method />
-    </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
       <JSDebuggerConfigurationSettings>
         <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="59791a67-7e89-437b-b6d2-d013c0025a62" server_name="EAC">
       <method />
     </configuration>
     <list size="0" />
@@ -2028,7 +2063,11 @@
       <created>1374072877929</created>
       <updated>1374072877929</updated>
     </task>
-    <option name="localTasksCounter" value="382" />
+    <task id="LOCAL-00382" summary="* Minor tweaks and adjustments">
+      <created>1374152828224</created>
+      <updated>1374152828224</updated>
+    </task>
+    <option name="localTasksCounter" value="383" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -2074,15 +2113,15 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33783785" sideWeight="0.67877096" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25353926" sideWeight="0.67877096" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32664436" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277592" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
-      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32122904" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2134,7 +2173,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Add todo - Correct logic used to display comment messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Minor tweaks and adjustments" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -2148,7 +2187,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="* Added basic documentation explaining how to add a new custom Stanza" />
     <MESSAGE value="* Code refactoring - changed double-quotes to single-quote" />
     <MESSAGE value="* i18n corrections" />
     <MESSAGE value="* Code clean-up (removed todo items)&#10;* Added individual filters for anchor, date, time, and author elements&#10;* Updated 'hooks-filters.txt'" />
@@ -2173,6 +2211,7 @@
     <MESSAGE value="* Added script to create class to display tables with striped rows" />
     <MESSAGE value="* Removed LESS JavaScript library" />
     <MESSAGE value="* Add todo - Correct logic used to display comment messages" />
+    <MESSAGE value="* Minor tweaks and adjustments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2182,26 +2221,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/archive.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stanzas/stanzas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="0.02560241" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="29" selection-start="1386" selection-end="1386" vertical-scroll-proportion="0.51054215" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="39" selection-start="4353" selection-end="4353" vertical-scroll-proportion="-8.140325" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/comments.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -2229,49 +2248,166 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/opus-primus-header-image-position.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="0" selection-start="4501" selection-end="4501" vertical-scroll-proportion="0.02603369" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/opus-ignite.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="56" selection-start="1537" selection-end="1565" vertical-scroll-proportion="0.025525525" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/opus-primus-full-size-video.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="0" selection-start="2211" selection-end="2211" vertical-scroll-proportion="0.6069364" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/opus-primus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="15" selection-start="2520" selection-end="2520" vertical-scroll-proportion="0.82474226" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1142" column="51" selection-start="23902" selection-end="23902" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/single.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="0" selection-start="4501" selection-end="4501" vertical-scroll-proportion="0.02603369">
-          <folding />
+        <state line="600" column="51" selection-start="24065" selection-end="24065" vertical-scroll-proportion="-4.1538463">
+          <folding>
+            <element signature="e#1760#2286#0" expanded="false" />
+            <element signature="e#2374#3093#0" expanded="false" />
+            <element signature="e#3098#4213#0" expanded="false" />
+            <element signature="e#3331#3390#0" expanded="false" />
+            <element signature="e#3758#3879#0" expanded="false" />
+            <element signature="e#3964#4111#0" expanded="false" />
+            <element signature="e#4256#4794#0" expanded="false" />
+            <element signature="e#4799#8171#0" expanded="false" />
+            <element signature="e#4946#5164#0" expanded="false" />
+            <element signature="e#5345#6023#0" expanded="false" />
+            <element signature="e#5683#6023#0" expanded="false" />
+            <element signature="e#6172#6394#0" expanded="false" />
+            <element signature="e#6438#6630#0" expanded="false" />
+            <element signature="e#6639#7996#0" expanded="false" />
+            <element signature="e#6890#6972#0" expanded="false" />
+            <element signature="e#8213#8348#0" expanded="false" />
+            <element signature="e#8353#8421#0" expanded="false" />
+            <element signature="e#8466#8710#0" expanded="false" />
+            <element signature="e#8715#8999#0" expanded="false" />
+            <element signature="e#9086#9321#0" expanded="false" />
+            <element signature="e#9326#9486#0" expanded="false" />
+            <element signature="e#9526#10279#0" expanded="false" />
+            <element signature="e#10284#12561#0" expanded="false" />
+            <element signature="e#10347#10405#0" expanded="false" />
+            <element signature="e#11008#11093#0" expanded="false" />
+            <element signature="e#11171#11526#0" expanded="false" />
+            <element signature="e#11395#11526#0" expanded="false" />
+            <element signature="e#11568#11727#0" expanded="false" />
+            <element signature="e#11736#12364#0" expanded="false" />
+            <element signature="e#12169#12364#0" expanded="false" />
+            <element signature="e#12600#13225#0" expanded="false" />
+            <element signature="e#13230#15279#0" expanded="false" />
+            <element signature="e#13273#13331#0" expanded="false" />
+            <element signature="e#13483#15182#0" expanded="false" />
+            <element signature="e#13595#14485#0" expanded="false" />
+            <element signature="e#14497#15182#0" expanded="false" />
+            <element signature="e#14527#15171#0" expanded="false" />
+            <element signature="e#15316#15668#0" expanded="false" />
+            <element signature="e#15673#17593#0" expanded="false" />
+            <element signature="e#15864#16107#0" expanded="false" />
+            <element signature="e#16288#17076#0" expanded="false" />
+            <element signature="e#16681#17076#0" expanded="false" />
+            <element signature="e#17225#17527#0" expanded="false" />
+            <element signature="e#17635#18070#0" expanded="false" />
+            <element signature="e#18075#19976#0" expanded="false" />
+            <element signature="e#18265#18505#0" expanded="false" />
+            <element signature="e#18686#19466#0" expanded="false" />
+            <element signature="e#19075#19466#0" expanded="false" />
+            <element signature="e#19615#19910#0" expanded="false" />
+            <element signature="e#20017#20608#0" expanded="false" />
+            <element signature="e#20613#22663#0" expanded="false" />
+            <element signature="tag#h2#0" expanded="false" />
+            <element signature="e#20880#21107#0" expanded="false" />
+            <element signature="e#20944#21105#0" expanded="false" />
+            <element signature="e#21169#21379#0" expanded="false" />
+            <element signature="e#21223#21377#0" expanded="false" />
+            <element signature="e#21417#21604#0" expanded="false" />
+            <element signature="e#21471#21602#0" expanded="false" />
+            <element signature="e#21763#22181#0" expanded="false" />
+            <element signature="e#21799#22179#1" expanded="false" />
+            <element signature="e#22245#22435#0" expanded="false" />
+            <element signature="e#22276#22433#1" expanded="false" />
+            <element signature="e#22710#22985#0" expanded="false" />
+            <element signature="e#22990#23533#0" expanded="false" />
+            <element signature="e#24833#25202#0" expanded="false" />
+            <element signature="e#25207#25942#0" expanded="false" />
+            <element signature="e#25277#25805#0" expanded="false" />
+            <element signature="e#25311#25708#0" expanded="false" />
+            <element signature="e#25749#25805#0" expanded="false" />
+            <element signature="e#25989#26305#0" expanded="false" />
+            <element signature="e#27043#27395#0" expanded="false" />
+            <element signature="e#27400#28105#0" expanded="false" />
+            <element signature="e#28425#28498#0" expanded="false" />
+            <element signature="e#28500#28541#0" expanded="false" />
+            <element signature="e#28543#28594#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/opus-ignite.php">
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="56" selection-start="1537" selection-end="1565" vertical-scroll-proportion="0.025525525">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/opus-primus-full-size-video.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="2211" selection-end="2211" vertical-scroll-proportion="0.6069364">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/opus-primus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="15" selection-start="2520" selection-end="2520" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1142" column="51" selection-start="23902" selection-end="23902" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.6081081">
+          <folding>
+            <element signature="e#1458#1706#0" expanded="false" />
+            <element signature="n#comments_navigation#0;n#OpusPrimusNavigation#0;n#!!top" expanded="false" />
+            <element signature="tag#p#0" expanded="false" />
+            <element signature="e#2219#2629#0" expanded="false" />
+            <element signature="n#list_pages#0;n#OpusPrimusNavigation#0;n#!!top" expanded="false" />
+            <element signature="e#2695#2742#0" expanded="false" />
+            <element signature="e#2994#3203#0" expanded="false" />
+            <element signature="n#image_nav#0;n#OpusPrimusNavigation#0;n#!!top" expanded="false" />
+            <element signature="e#3896#4789#0" expanded="false" />
+            <element signature="n#multiple_pages_link#0;n#OpusPrimusNavigation#0;n#!!top" expanded="false" />
+            <element signature="e#4932#5121#0" expanded="false" />
+            <element signature="e#5595#5840#0" expanded="false" />
+            <element signature="e#6392#6646#0" expanded="false" />
+            <element signature="e#7160#7422#0" expanded="false" />
+            <element signature="n#primary_menu#0;n#OpusPrimusNavigation#0;n#!!top" expanded="false" />
+            <element signature="e#7630#7812#0" expanded="false" />
+            <element signature="e#8093#8393#0" expanded="false" />
+            <element signature="n#search_menu#0;n#OpusPrimusNavigation#0;n#!!top" expanded="false" />
+            <element signature="e#8596#8818#0" expanded="false" />
+            <element signature="e#9285#9525#0" expanded="false" />
+            <element signature="n#search_page_menu#0;n#OpusPrimusNavigation#0;n#!!top" expanded="false" />
+            <element signature="e#9597#9676#0" expanded="false" />
+            <element signature="tag#ul#0" expanded="false" />
+            <element signature="e#10011#10462#0" expanded="false" />
+            <element signature="n#secondary_menu#0;n#OpusPrimusNavigation#0;n#!!top" expanded="false" />
+            <element signature="e#10680#10866#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/changelog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="1884" selection-end="1884" vertical-scroll-proportion="0.79970545">
+        <state line="19" column="0" selection-start="1102" selection-end="1102" vertical-scroll-proportion="0.47569954">
           <folding />
         </state>
       </provider>

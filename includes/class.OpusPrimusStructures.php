@@ -588,13 +588,17 @@ class OpusPrimusStructures {
      * @package OpusPrimus
      * @since   0.1
      *
-     * @uses    $opus_navigation (global)
+     * @uses    OpusPrimusStructures::no_search_results
+     * @uses    OpusPrimusNavigation::post_link
+     * @uses    do_action
      * @uses    get_template_part
      * @uses    get_post_format
      * @uses    have_posts
-     * @uses    no_search_results
-     * @uses    posts_link
      * @uses    the_post
+     *
+     * @version 1.2
+     * @date    July 19, 2013
+     * Fixed call to wrong post navigation function
      */
     function the_loop() {
         /** the_Loop begins */
@@ -616,7 +620,7 @@ class OpusPrimusStructures {
         } /** End if - have posts */
 
         global $opus_navigation;
-        $opus_navigation->posts_link();
+        $opus_navigation->post_link();
         /** the_Loop ends */
 
     } /** End function - the loop */

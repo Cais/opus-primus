@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised July 11, 2013
+Last revised July 19, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2 ==
@@ -10,17 +10,18 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added full `featured_image` method call to single view of post formats audio, chat, quote, and status
 * Added `get_author_description` method in Authors class
 * Added filtered `comment_form_required_field_glyph` method in Comments class
-* Added many new filters - see http://opusprimus.com/under-the-page/hooks-filters/ of 'hooks-filters.txt' for a current list
+* Added many new filters - see http://opusprimus.com/under-the-page/hooks-filters/ of `hooks-filters.txt` for a current list
 * Added sanity conditional check to eliminate potential duplicate body classes
 * Changed `the_post_thumbnail` to use parameters which are set in the call to `OpusPrimusImage::featured_image`
 * Changed post thumbnail on pages to full size image and align to the center
 * Changed comment fields into an unordered list
 * Changed `meta-tags` container from `p` to `div` (adjusted CSS as needed)
 * Changed `opus_post_byline_details` filter to `opus_post_byline_phrase`
+* Fixed call to wrong post navigation function in single view
 * Moved `featured_image` method call into `is_single` conditional in post-format loops
 * Removed `featured_image` method call from post-formats link and video loops
 * Removed global `$opus_image_meta`; replaced with call to `exif_data` method
-* Removed 'style.less' related function and action calls
+* Removed `style.less` related function and action calls
 
 = CSS =
 * Added styles for comment form fields
@@ -30,31 +31,31 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Address both class and id usage for the sidebar search form
 * Adjusted widths of comment form elements
 * Adjusted CSS to better handle large images with captions in large full-width displays
-* Change `table` elements from 'max-width: 100%' to 'width: 100%'
+* Change `table` elements from `max-width: 100%` to `width: 100%`
 * Minor tweaks and adjustments
 * Sorted out the adaptive layout for screens less than 480px wide
 
 = JavaScript =
-* Added more specific selector used with .post.format-link when adding .link-symbol class
+* Added more specific selector used with `.post.format-link` when adding `.link-symbol` class
 * Added script to create class to display tables with striped rows
 * Removed LESS JavaScript library
 
 = Stanzas =
-* PullQuotes - Added 'pullquotes-readme.txt' file
+* PullQuotes - Added `pullquotes-readme.txt` file
 * PullQuotes - Added left-side placement with new `to` parameter
-* Taglines - Added 'taglines-readme.txt' file
-* THA - Added 'tha-readme.txt' file
+* Taglines - Added `taglines-readme.txt` file
+* THA - Added `tha-readme.txt` file
 
 = Miscellaneous =
 * Documentation Updates
-* Minor changes to text tense used in 'changelog.txt'
-* Removed 'style.less' file (compiled and merged into 'opus-primus.css' file)
+* Minor changes to text tense used in `changelog.txt`
+* Removed `style.less` file (compiled and merged into `opus-primus.css` file)
 * Removed license references related to LESS as all components were removed
-* Updated 'hooks-actions.txt'
-* Updated 'hooks-filters.txt'
-* Updated 'readme.txt' FAQ - What is the difference between how the "Featured Image" is used on a post and how it is used on a page?
-* Updated 'readme.txt' FAQ - What are Stanzas?
-* Updated 'readme.txt' FAQ - What happened to the LESS components of the theme?
+* Updated `hooks-actions.txt`
+* Updated `hooks-filters.txt`
+* Updated `readme.txt` FAQ - What is the difference between how the "Featured Image" is used on a post and how it is used on a page?
+* Updated `readme.txt` FAQ - What are Stanzas?
+* Updated `readme.txt` FAQ - What happened to the LESS components of the theme?
 
 /** ------------------------------------------------------------------------- */
 == Version 1.1.1 ==
