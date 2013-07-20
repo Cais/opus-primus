@@ -40,12 +40,13 @@
  * Removed unused element for non-existent 'comments-toggle' script
  *
  * @version 1.2
- * @date    July 11, 2013
+ * @date    July 20, 2013
  * Added more specific selector used with .post.format-link
  * Added more BNS Plugin Integration (BPI) adjustments
  * Added styles for Comment Form Fields
  * Added styles from compiled `style.less` file (file removed)
  * Added some basic table related styles
+ * Added `img` elements for captioned images and `wp-smiley` images
  * Address both class and id usage for the sidebar search form
  * Adjusted widths of comment form elements
  * Adjusted `meta-tags` CSS due to container change from `p` to `div`
@@ -1262,8 +1263,16 @@ p + div.wp-caption {
     margin-left: 5px;
 }
 
+.wp-caption img {
+    width: 100%;
+}
+
 img {
     height: auto;
+}
+
+img.wp-smiley {
+    width: auto;
 }
 
 /** Featured Image */
