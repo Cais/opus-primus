@@ -597,10 +597,13 @@ class OpusPrimusStructures {
      * @uses    the_post
      *
      * @version 1.2
-     * @date    July 19, 2013
-     * Fixed call to wrong post navigation function
+     * @date    July 20, 2013
+     * Added post to post navigation in single view
      */
     function the_loop() {
+        /** Get the navigation global class */
+        global $opus_navigation;
+
         /** the_Loop begins */
         if ( have_posts() ) {
             while ( have_posts() ) {
@@ -614,13 +617,18 @@ class OpusPrimusStructures {
                 /** Add empty hook after get_template_part */
                 do_action( 'opus_get_template_part_after' );
 
+                /** In single view add post to post navigation */
+                if ( is_single() ) {
+                    $opus_navigation->post_link();
+                } /** End if - is single */
+
             } /** End while - have posts */
         } else {
             $this->no_search_results();
         } /** End if - have posts */
 
-        global $opus_navigation;
-        $opus_navigation->post_link();
+        /** Display links to previous and next pages */
+        $opus_navigation->posts_link();
         /** the_Loop ends */
 
     } /** End function - the loop */
