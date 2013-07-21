@@ -153,8 +153,9 @@ class OpusPrimusBreadcrumbs {
                         : $post->post_title;
 
                     /** Check for long post titles and trim as needed */
-                    if ( strlen( $post_title ) > 50 ) {
-                        $post_title = substr( $post_title, 0, 50 ) . apply_filters( 'opus_breadcrumbs_shortened_title_suffix', '&hellip;' );
+                    $maximum_post_title_length = apply_filters( 'opus_post_breadcrumbs_maximum_post_title_length', 50 );
+                    if ( strlen( $post_title ) > intval( $maximum_post_title_length ) ) {
+                        $post_title = substr( $post_title, 0, $maximum_post_title_length ) . apply_filters( 'opus_post_breadcrumbs_shortened_title_suffix', '&hellip;' );
                     } /** End if - post title longer than 50 characters */
 
                     $post_trail .= '<li><a href="#">' . $post_title . '</a></li>';
