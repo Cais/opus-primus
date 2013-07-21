@@ -58,7 +58,7 @@ jQuery( document ).ready( function( $ ) {
     $( 'div.post.format-audio .post-content a').wrapInner( '<span class="audio-symbol" />' );
 
     /** Add a class to the form-allowed-tags code box */
-    $( 'p.form-allowed-tags code' ).addClass( "form-allowed-tags-code-box" );
+    $( 'p.form-allowed-tags code' ).addClass( 'form-allowed-tags-code-box' );
 
     /** Add a class to table rows to create a striped effect */
     $( 'tr:even' ).addClass( 'table-stripe' );
