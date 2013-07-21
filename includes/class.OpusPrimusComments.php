@@ -317,16 +317,21 @@ class OpusPrimusComments {
      * @uses    comments_open
      * @uses    comments_popup_link
      * @uses    do_action
+     * uses     get_comments_number
      * @uses    is_page
      * @uses    post_password_required
      *
-     * @todo Correct logic used to display messages - if comments exist and comments are closed nothing shows is not correct (1.2)
+     * @version 1.2
+     * @date    July 21, 2013
+     * Display comment count in meta details if comments exist and comments are
+     * closed
      */
     function comments_link() {
         /** Add empty hook before comments link */
         do_action( 'opus_comments_link_before' );
 
         echo '<h5 class="comments-link">';
+
         if ( ! post_password_required() && comments_open() ) {
             if ( is_page() ) {
                 comments_popup_link(
@@ -345,7 +350,18 @@ class OpusPrimusComments {
                     __( 'Comments are closed.', 'opusprimus' )
                 );
             } /** End if - is page */
-        } /** End if - not post password required */
+        } /** End if - not password required; comments open */
+
+        if ( ! post_password_required() && ! comments_open() && ( get_comments_number() > 0 ) ) {
+            comments_popup_link(
+                __( 'There are no comments for this post and comments are closed.', 'opusprimus' ),
+                __( 'There is 1 comment and comments are closed.', 'opusprimus' ),
+                __( 'There are % comments and comments are closed.', 'opusprimus' ),
+                'comments-link',
+                __( 'There are no comments and comments are closed.', 'opusprimus' )
+            );
+        } /** End if - not password required; comments closed; comments exist */
+
         echo '</h5><!-- .comments-link -->';
 
         /** Add empty hook after comments link */
