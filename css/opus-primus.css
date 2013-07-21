@@ -466,6 +466,7 @@ hr {
 }
 
 hr.pre-post-link-navigation {
+    clear: both;
     margin: 9px;
 }
 
