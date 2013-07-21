@@ -39,7 +39,7 @@
  * @date    July 19, 2013
  * Merged into `functions.php` retained for reference purposes only
  *
- * @todo Remove at version 1.3?
+ * @todo Remove at version 1.3? (1.2)
  */
 
 /** Set CONSTANTS */

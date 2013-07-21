@@ -45,8 +45,6 @@
  * Moved global variables call inside conditional statement as they are not
  * needed if we do not have comments.
  * Changed comments count to be display via a Comments class method
- *
- * @todo Review general commentary look and feel ... make more unique to OP
  */
 
 global $opus_comments; ?>

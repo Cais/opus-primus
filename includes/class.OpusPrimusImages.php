@@ -41,60 +41,13 @@
  * @date    April 9, 2013
  * Removed global `$opus_image_meta`; replaced with call to `exif_data` method
  *
- * @todo Review adding `opus_*_after` hooks; may also require `show_*` functions
+ * @todo Review adding `opus_*_after` hooks; may also require `show_*` functions (1.2)
  */
 
 class OpusPrimusImages {
 
     /** Construct */
-    function __construct() {
-
-        /** Restore Image Title */
-        // add_filter( 'media_send_to_editor', 'restore_image_title', 15, 2 );
-
-    } /** End function - constructor */
-
-
-    /** ---- Action and Filter Methods ---- */
-
-
-    /**
-     * Restore Image Title
-     * Adds the image title (attachment post title) to the HTML IMG element if
-     * it does not exist - a WordPress 3.5 issue
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @uses    get_post
-     *
-     * @param   $html
-     * @param   $id
-     *
-     * @return  mixed
-     *
-     * @version 1.1
-     * @date    March 19, 2013
-     * @internal Used with `media_send_to_editor` hook but apparently causing
-     * the "Add Media" functionality to fail. Filter hook commented out until
-     * further testing can solve ...
-     *
-     * @todo Review if this needs to be adjusted / removed / enhanced ...
-     */
-    function restore_image_title( $html, $id ) {
-        /** @var $attachment - get the attachment object */
-        $attachment = get_post( $id );
-        /** Check if there is a title */
-        if ( strpos( $html, "title=" ) ) {
-            return $html;
-        } else {
-            $title = esc_attr( $attachment->post_title );
-            return str_replace( '<img', '<img title="' . $title . '" '  , $html );
-        } /** End if - strpos html */
-    } /** End function - restore image title */
-
-
-    /** ---- Additional Methods ---- */
+    function __construct() {}
 
 
     /**
@@ -114,8 +67,8 @@ class OpusPrimusImages {
      * @uses    the_title_attribute
      * @uses    wp_get_attachment_image
      *
-     * @todo Address $archive_image message(s) once `first_linked_image` is sorted out
-     * @todo Address CSS aesthetics on images not attached ... or find a way to display the post excerpt details (much better choice!)
+     * @todo Address $archive_image message(s) once `first_linked_image` is sorted out (1.2)
+     * @todo Address CSS aesthetics on images not attached ... or find a way to display the post excerpt details (much better choice!) (1.2)
      *
      * @version 1.2
      * @date    April 11, 2013
@@ -836,7 +789,7 @@ class OpusPrimusImages {
      * Remove `is_single` conditional in conjunction with displaying full image
      * on single view of standard format posts
      *
-     * @todo clean up and have link display attachment archive
+     * @todo clean up and have link display attachment archive (1.2)
      */
     function featured_thumbnail( $size = 'thumbnail', $class = 'alignleft' ) {
         if ( has_post_thumbnail() /** && ! is_single() */ ) {
@@ -863,7 +816,7 @@ class OpusPrimusImages {
      *
      * @internal Inspired by http://css-tricks.com/snippets/wordpress/get-the-first-image-from-a-post/
      *
-     * @todo Return the same image "size" used in the "attachment" as found in the Post-Format: Image archive
+     * @todo Return the same image "size" used in the "attachment" as found in the Post-Format: Image archive (1.2)
      */
     function first_linked_image() {
 

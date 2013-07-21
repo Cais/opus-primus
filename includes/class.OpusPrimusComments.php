@@ -313,12 +313,14 @@ class OpusPrimusComments {
      * @package OpusPrimus
      * @since   0.1
      *
+     * @uses    __
      * @uses    comments_open
      * @uses    comments_popup_link
+     * @uses    do_action
      * @uses    is_page
      * @uses    post_password_required
      *
-     * @todo Correct logic used to display messages - if comments exist and comments are closed nothing shows is not correct
+     * @todo Correct logic used to display messages - if comments exist and comments are closed nothing shows is not correct (1.2)
      */
     function comments_link() {
         /** Add empty hook before comments link */

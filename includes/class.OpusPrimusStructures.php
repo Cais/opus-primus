@@ -498,7 +498,7 @@ class OpusPrimusStructures {
      * @uses    search_menu
      * @uses    top_10_categories_archive
      *
-     * @todo Add custom searchform.php
+     * @todo Add custom searchform.php (1.2)
      */
     function no_search_results(){
         /** Add empty hook before no posts results from the_loop query */
@@ -770,10 +770,7 @@ function show_opus_test() {
     echo opus_test();
 }
 
-/**
- * @todo Review as needed - no harm / no foul to leave in code as references
- * Un-comment the following for testing purposes
- */
+/** Un-comment the following for testing purposes */
 // add_action( 'opus_before_modified_post', 'show_opus_test' );
 // add_action( 'opus_before_get_template_part', 'show_opus_test' );
 

@@ -388,7 +388,7 @@ class OpusPrimusPosts {
 
         /**
          * @var $line_height - set value for use with `get_avatar`
-         * @todo Review if this can be set programmatically
+         * @todo Review if this can be set programmatically (1.2)
          */
         $line_height = 18;
 
