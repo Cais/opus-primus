@@ -110,6 +110,10 @@ class OpusPrimusBreadcrumbs {
      * @uses    is_sticky
      *
      * @return  null|string
+     *
+     * @version 1.2
+     * @date    July 21, 2013
+     * Check for long post titles and trim as needed
      */
     function post_breadcrumbs() {
 
@@ -147,6 +151,11 @@ class OpusPrimusBreadcrumbs {
                     $post_title = empty( $post->post_title )
                         ? sprintf( __( 'Post %1$s', 'opusprimus' ), $post_ID )
                         : $post->post_title;
+
+                    /** Check for long post titles and trim as needed */
+                    if ( strlen( $post_title ) > 50 ) {
+                        $post_title = substr( $post_title, 0, 50 ) . apply_filters( 'opus_breadcrumbs_shortened_title_suffix', '&hellip;' );
+                    } /** End if - post title longer than 50 characters */
 
                     $post_trail .= '<li><a href="#">' . $post_title . '</a></li>';
     
