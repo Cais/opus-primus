@@ -37,14 +37,15 @@
  * Fixed comments (only) count output
  *
  * @version 1.2
- * @date    March 22, 2013
+ * @date    July 21, 2013
+ * Added conditional check if not post password required when displaying
+ * Changed comments count to be display via a Comments class method
  * Moved `comments only tab`, `pingbacks only tab` and `trackbacks only tab`
  * functionality into Comments class methods
  * Moved `comments only panel`, `pingbacks only panel` and
  * `trackbacks only panel` functionality into Comments class methods
  * Moved global variables call inside conditional statement as they are not
  * needed if we do not have comments.
- * Changed comments count to be display via a Comments class method
  */
 
 global $opus_comments; ?>
@@ -52,7 +53,7 @@ global $opus_comments; ?>
 <!-- Show the comments -->
 <!-- Inspired by http://digwp.com/2010/02/separate-comments-pingbacks-trackbacks/ -->
 <div class="comments-wrapper">
-    <?php if ( have_comments() ) {
+    <?php if ( ! post_password_required() && have_comments() ) {
 
         /** Call the global variables needed */ ?>
 

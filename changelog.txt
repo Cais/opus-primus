@@ -14,6 +14,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added sanity conditional check to eliminate potential duplicate body classes
 * Added `is_single` conditional test before enqueue of Comment Tabs script
 * Added post to post navigation in single view
+* Added conditional check if not post password required when displaying comments
 * Changed `the_post_thumbnail` to use parameters which are set in the call to `OpusPrimusImage::featured_image`
 * Changed post thumbnail on pages to full size image and align to the center
 * Changed comment fields into an unordered list
