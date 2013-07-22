@@ -20,7 +20,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Changed comment fields into an unordered list
 * Changed `meta-tags` container from `p` to `div` (adjusted CSS as needed)
 * Changed `opus_post_byline_details` filter to `opus_post_byline_phrase`
-* Check for long post titles  in breadcrumbs and trim as needed
+* Check for long post titles in breadcrumbs and trim as needed
 * Display comment count in meta details if comments exist and comments are closed
 * Fixed call to wrong post navigation function in single view
 * Merge `opus-ignite.php` into `functions.php`
@@ -32,14 +32,14 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = CSS =
 * Added styles for comment form fields
-* Added more specific selector used with .post.format-link
+* Added more specific selector used with `.post.format-link`
 * Added more BNS Plugin Integration (BPI) adjustments
 * Added styles from compiled `style.less` file (file removed)
 * Added `img` elements for captioned images and `wp-smiley` images
 * Address both class and id usage for the sidebar search form
 * Adjusted widths of comment form elements
 * Adjusted CSS to better handle large images with captions in large full-width displays
-* Adjusted `table` elements from 'max-width: 100%' to 'width: 100%' and other minor changes
+* Adjusted `table` elements from `max-width: 100%` to `width: 100%` and other minor changes
 * Minor tweaks and adjustments
 * Sorted out the adaptive layout for screens less than 480px wide
 
