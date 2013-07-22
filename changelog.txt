@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised July 19, 2013
+Last revised July 22, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2 ==
@@ -10,7 +10,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added full `featured_image` method call to single view of post formats audio, chat, quote, and status
 * Added `get_author_description` method in Authors class
 * Added filtered `comment_form_required_field_glyph` method in Comments class
-* Added many new filters - see http://opusprimus.com/under-the-page/hooks-filters/ of `hooks-filters.txt` for a current list
+* Added many new filters - see http://opusprimus.com/under-the-page/hooks-filters/ or `hooks-filters.txt` for a current list
 * Added sanity conditional check to eliminate potential duplicate body classes
 * Added `is_single` conditional test before enqueue of Comment Tabs script
 * Added post to post navigation in single view
