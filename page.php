@@ -34,10 +34,14 @@
  * @date    February 21, 2013
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
+ *
+ * @version 1.2
+ * @date    July 24, 2013
+ * Added conditional for showing the page byline details
  */
 
 /** Call the class variables */
-global $opus_structures, $opus_posts, $opus_images, $opus_authors;
+global $opus_structures, $opus_posts, $opus_defaults, $opus_images, $opus_authors;
 get_header( 'page' );
 
 /** Add empty hook before content */
@@ -72,7 +76,14 @@ do_action( 'opus_content_before' ); ?>
                     $opus_posts->post_title();
                     $opus_images->featured_thumbnail( $size = 'full', $class = 'aligncenter' );
                     $opus_posts->post_content();
-                    $opus_posts->post_byline( array( 'show_mod_author' => true ) );
+
+                    /** Show page byline details */
+                    if ( $opus_defaults->show_page_byline() ) {
+                        $opus_posts->post_byline( array( 'show_mod_author' => true ) );
+                    } else {
+                        $opus_posts->post_byline( array( 'show_mod_author' => true, 'echo' => false ) );
+                    } /** End if - show page byline */
+
                     $opus_authors->post_author( array(
                         'show_mod_author'   => true,
                         'show_author_url'   => true,

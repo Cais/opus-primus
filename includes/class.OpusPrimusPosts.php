@@ -518,6 +518,8 @@ class OpusPrimusPosts {
      * @version 1.2
      * @date    July 11, 2013
      * Added individual filters for anchor, date, time, and author elements
+     * Added `echo` parameter to display the post coda instead of the byline
+     * meta details
      * Changed `opus_post_byline_details` filter to `opus_post_byline_phrase`
      */
     function post_byline( $byline_args = '' ) {
@@ -527,6 +529,7 @@ class OpusPrimusPosts {
             'show_mod_author'   => false,
             'sticky_flag'       => '',
             'tempus'            => 'date',
+            'echo'              => true,
         );
         $byline_args = wp_parse_args( (array) $byline_args, $defaults );
 
@@ -542,46 +545,50 @@ class OpusPrimusPosts {
             __( '%1$s %2$s %3$s %4$s', 'opusprimus' )
         );
 
-        /** Output post byline */
-        echo '<div class="meta-byline">';
+        if ( true == $byline_args['echo'] ) {
+            /** Output post byline */
+            echo '<div class="meta-byline">';
 
-            /** Post By-Line filtered components */
-            printf( $opus_post_byline,
-                apply_filters( 'opus_post_byline_anchor',
-                    $this->no_title_link( $byline_args['anchor'] )
-                ),
-                apply_filters( 'opus_post_byline_date',
-                    sprintf( __( 'on %1$s', 'opusprimus' ),
-                        get_the_date( get_option( 'date_format' ) )
+                /** Post By-Line filtered components */
+                printf( $opus_post_byline,
+                    apply_filters( 'opus_post_byline_anchor',
+                        $this->no_title_link( $byline_args['anchor'] )
+                    ),
+                    apply_filters( 'opus_post_byline_date',
+                        sprintf( __( 'on %1$s', 'opusprimus' ),
+                            get_the_date( get_option( 'date_format' ) )
+                        )
+                    ),
+                    apply_filters( 'opus_post_byline_time',
+                        sprintf( __( 'at %1$s', 'opusprimus' ),
+                            get_the_time( get_option( 'time_format' ) )
+                        )
+                    ),
+                    apply_filters( 'opus_post_byline_author',
+                        sprintf( __( 'by %1$s', 'opusprimus' ),
+                            $this->author_posts_link()
+                        )
                     )
-                ),
-                apply_filters( 'opus_post_byline_time',
-                    sprintf( __( 'at %1$s', 'opusprimus' ),
-                        get_the_time( get_option( 'time_format' ) )
-                    )
-                ),
-                apply_filters( 'opus_post_byline_author',
-                    sprintf( __( 'by %1$s', 'opusprimus' ),
-                        $this->author_posts_link()
-                    )
-                )
-            );
+                );
 
-            /**
-             * Show modified post author if set to true or if the time span is
-             * measured in hours
-             */
-            if ( $byline_args['show_mod_author'] || ( 'time' == $byline_args['tempus'] ) ) {
-                $this->modified_post( $byline_args['tempus'] );
-            } /** End if - byline args */
+                /**
+                 * Show modified post author if set to true or if the time span is
+                 * measured in hours
+                 */
+                if ( $byline_args['show_mod_author'] || ( 'time' == $byline_args['tempus'] ) ) {
+                    $this->modified_post( $byline_args['tempus'] );
+                } /** End if - byline args */
 
-            /** Add a sticky note flag to the byline */
-            echo $this->sticky_flag( $byline_args['sticky_flag'] );
-            /** Add a post-format flag to the byline */
-            echo $this->post_format_flag();
+                /** Add a sticky note flag to the byline */
+                echo $this->sticky_flag( $byline_args['sticky_flag'] );
+                /** Add a post-format flag to the byline */
+                echo $this->post_format_flag();
 
-        /** Close CSS wrapper for the post byline */
-        echo '</div><!-- .meta-byline -->';
+            /** Close CSS wrapper for the post byline */
+            echo '</div><!-- .meta-byline -->';
+        } else {
+            $this->post_coda();
+        } /** End if - echo the by line */
 
         /** Add empty hook after post by line */
         do_action( 'opus_post_byline_after' );
