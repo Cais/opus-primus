@@ -283,7 +283,7 @@ class OpusPrimusStructures {
      *
      * @return  mixed|null|void
      */
-    function copyright( $show = true, $by_author = true ){
+    function copyright( $show = true, $by_author = true ) {
         if ( false == $show ) {
             return null;
         } /** End if - show */
@@ -497,10 +497,8 @@ class OpusPrimusStructures {
      * @uses    get_search_query
      * @uses    search_menu
      * @uses    top_10_categories_archive
-     *
-     * @todo Add custom searchform.php (1.2)
      */
-    function no_search_results(){
+    function no_search_results() {
         /** Add empty hook before no posts results from the_loop query */
         do_action( 'opus_search_results_before' );
 

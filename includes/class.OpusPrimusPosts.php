@@ -376,7 +376,7 @@ class OpusPrimusPosts {
      * @date    February 22, 2013
      * Wrapped 'opus_modified_post_after' in conditional making it consistent with 'opus_modified_post_before'
      */
-    function modified_post( $tempus = 'date' ){
+    function modified_post( $tempus = 'date' ) {
         /** Grab the $post object and bring in the original post author ID */
         global $post, $opus_author_id;
 
@@ -606,7 +606,7 @@ class OpusPrimusPosts {
      * @uses    apply_filters
      * @uses    do_action
      */
-    function post_coda(){
+    function post_coda() {
         /** Add empty hook before post coda */
         do_action( 'opus_post_coda_before' );
 
@@ -813,7 +813,7 @@ class OpusPrimusPosts {
      *
      * @return  null|string
      */
-    function status_update( $update_text = '', $time_ago = 604800 ){
+    function status_update( $update_text = '', $time_ago = 604800 ) {
 
         /**
          * Set the default text if the update text is not passed to the function
