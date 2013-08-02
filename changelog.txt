@@ -1,9 +1,9 @@
 === Opus Primus changelog.txt ===
-Last revised July 22, 2013
+Last revised August 2, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2 ==
-* Released ...
+* Released August 2013
 
 = Code =
 * Added display of featured image centered at full size in single standard post format view

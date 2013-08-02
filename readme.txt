@@ -1,5 +1,5 @@
 === Opus Primus readme.txt ===
-* Last revised July 11, 2013
+* Last revised August 2, 2013
 
 == Contents ==
 * Copyright
@@ -152,10 +152,10 @@ be considered the most current at all times. The version of the guidelines
 included with the theme will simply be a copy of the noted page.
 
 == Review Tickets ==
-* http://themes.trac.wordpress.org/ticket/11106 - Version 1.0, February 2013
-* http://themes.trac.wordpress.org/ticket/11325 - Version 1.0.1, February 2013
-* http://themes.trac.wordpress.org/ticket/11367 - Version 1.0.2, February 2013
-* http://themes.trac.wordpress.org/ticket/11386 - Version 1.0.3, February 2013
-* http://themes.trac.wordpress.org/ticket/11417 - Version 1.0.4, March 2013
-* http://themes.trac.wordpress.org/ticket/11738 - Version 1.1, March 2013
-* http://themes.trac.wordpress.org/ticket/11803 - Version 1.1.1, March 2013
+* http://themes.trac.wordpress.org/ticket/11106 - Version 1.0   - February 2013
+* http://themes.trac.wordpress.org/ticket/11325 - Version 1.0.1 - February 2013
+* http://themes.trac.wordpress.org/ticket/11367 - Version 1.0.2 - February 2013
+* http://themes.trac.wordpress.org/ticket/11386 - Version 1.0.3 - February 2013
+* http://themes.trac.wordpress.org/ticket/11417 - Version 1.0.4 - March 2013
+* http://themes.trac.wordpress.org/ticket/11738 - Version 1.1   - March 2013
+* http://themes.trac.wordpress.org/ticket/11803 - Version 1.1.1 - March 2013
