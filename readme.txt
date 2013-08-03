@@ -159,3 +159,4 @@ included with the theme will simply be a copy of the noted page.
 * http://themes.trac.wordpress.org/ticket/11417 - Version 1.0.4 - March 2013
 * http://themes.trac.wordpress.org/ticket/11738 - Version 1.1   - March 2013
 * http://themes.trac.wordpress.org/ticket/11803 - Version 1.1.1 - March 2013
+* http://themes.trac.wordpress.org/ticket/13740 - Version 1.2   - August 2013

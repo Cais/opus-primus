@@ -4,7 +4,7 @@
  * A WordPress Framework Theme.
  *
  * @package     OpusPrimus
- * @version     1.2
+ * @version     1.3-alpha
  *
  * @internal    RECOMMENDED HTML5
  * @internal    RECOMMENDED CSS3
@@ -35,14 +35,11 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version 1.1
- * @date    March 19, 2013
- *
- * @version 1.1.1
- * @date    March 23, 2013
- *
  * @version 1.2
  * @date    August 2013
+ *
+ * @version 1.3
+ * @date    ...
  */
 
 global $opus_structures;
