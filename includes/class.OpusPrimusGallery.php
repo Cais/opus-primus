@@ -162,7 +162,7 @@ class OpusPrimusGallery {
         preg_match( "/$pattern/s", get_the_content(), $match );
 
         /** Find the gallery shortcode usages after a sanity check */
-        if (  isset( $match[2] ) && ( 'gallery' == $match[2] ) ) {
+        if ( isset( $match[2] ) && ( 'gallery' == $match[2] ) ) {
 
             /** @var $attrs - holds the gallery shortcode parameters used */
             $attrs = shortcode_parse_atts( $match[3] );
@@ -215,7 +215,7 @@ class OpusPrimusGallery {
         preg_match( "/$pattern/s", get_the_content(), $match );
 
         /** Find the gallery shortcode usages after a sanity check */
-        if (  isset( $match[2] ) && ( 'gallery' == $match[2] ) ) {
+        if ( isset( $match[2] ) && ( 'gallery' == $match[2] ) ) {
 
             /** @var $attrs - holds the gallery shortcode parameters used */
             $attrs = shortcode_parse_atts( $match[3] );
@@ -277,6 +277,11 @@ class OpusPrimusGallery {
      * @uses    the_title_attribute
      * @uses    wp_get_attachment_image
      * @uses    wp_parse_args
+     *
+     * @version 1.2.2
+     * @date    September 3, 2013
+     * Fixed issue with Gallery Post-Format being used when the `gallery`
+     * shortcode is not used.
      */
     function secondary_images( $secondary_images_args = '' ) {
         global $opus_thumb_id;
@@ -289,27 +294,21 @@ class OpusPrimusGallery {
         );
         $secondary_images_args = wp_parse_args( (array) $secondary_images_args, $defaults );
 
+        /** @var $pattern - holds the regex pattern used to check shortcode */
+        $pattern = get_shortcode_regex();
 
-        /** Add empty hook before secondary images */
-        do_action( 'opus_secondary_images_before' );
+        /** Find any shortcode being used in post */
+        preg_match( "/$pattern/s", get_the_content(), $match );
 
-        /** @var $images - object to hold images attached to post */
-        $images = new WP_Query( array(
-            'post_parent'               => get_the_ID(),
-            'post_status'               => 'inherit',
-            'post_type'                 => 'attachment',
-            'post_mime_type'            => 'image',
-            'order'                     => $secondary_images_args['order'],
-            'orderby'                   => $secondary_images_args['orderby'],
-            'posts_per_page'            => $secondary_images_args['images'],
-            'post__not_in'              => array( $opus_thumb_id ),
-            'update_post_term_cache'    => false,
-        ) );
+        /** Find the gallery shortcode usages after a sanity check */
+        if ( isset( $match[2] ) && ( 'gallery' == $match[2] ) ) {
 
-        /** No images attached to post? Rerun query using actual "ids" values */
-        if ( 0 == $images->found_posts ) {
+            /** Add empty hook before secondary images */
+            do_action( 'opus_secondary_images_before' );
+
+            /** @var $images - object to hold images attached to post */
             $images = new WP_Query( array(
-                'post__in'                  => $this->get_gallery_attr_secondary_ids(),
+                'post_parent'               => get_the_ID(),
                 'post_status'               => 'inherit',
                 'post_type'                 => 'attachment',
                 'post_mime_type'            => 'image',
@@ -319,51 +318,67 @@ class OpusPrimusGallery {
                 'post__not_in'              => array( $opus_thumb_id ),
                 'update_post_term_cache'    => false,
             ) );
-        } /** End if - no images */
 
-        /** Do not display default gallery if not in single view */
-        if ( ! is_single() ) {
-            add_filter('post_gallery', 'opus_primus_return_blank' );
-        } /** End if - not is single */
+            /** No images attached to post? Rerun query using actual "ids" values */
+            if ( 0 == $images->found_posts ) {
+                $images = new WP_Query( array(
+                    'post__in'                  => $this->get_gallery_attr_secondary_ids(),
+                    'post_status'               => 'inherit',
+                    'post_type'                 => 'attachment',
+                    'post_mime_type'            => 'image',
+                    'order'                     => $secondary_images_args['order'],
+                    'orderby'                   => $secondary_images_args['orderby'],
+                    'posts_per_page'            => $secondary_images_args['images'],
+                    'post__not_in'              => array( $opus_thumb_id ),
+                    'update_post_term_cache'    => false,
+                ) );
+            } /** End if - no images */
 
-        /**
-         * @var $size - standard WordPress image size; thumbnail in this case
-         * as the intent is to use these images as additional from gallery
-         */
-        $size = 'thumbnail';
+            /** Do not display default gallery if not in single view */
+            if ( ! is_single() ) {
+                add_filter('post_gallery', 'opus_primus_return_blank' );
+            } /** End if - not is single */
 
-        /** Only display when not in single view */
-        if ( ! is_single() ) {
             /**
-             * Cycle through images and display them linked to their permalink
+             * @var $size - standard WordPress image size; thumbnail in this case
+             * as the intent is to use these images as additional from gallery
              */
-            foreach ( $images->posts as $image ) {
-                echo '<a href="' . get_permalink( $image->ID ) . '">' . wp_get_attachment_image( $image->ID, $size ) . '</a>';
-            } /** End foreach - images */
+            $size = 'thumbnail';
 
-            /**
-             * Display a message indicating if more images are in the gallery
-             * than what are displayed in the post stream. If more images are
-             * in the gallery the text showing how many more will link to the
-             * single post.
-             */
-            if ( ( $images->found_posts + 1 ) > ( $secondary_images_args['images'] + 1 ) ) {
-                printf( '<p class="more-images">%1$s</p>',
-                    apply_filters( 'opus_more_images_text',
-                        sprintf( _n(
-                                __( 'There is %2$sone more image%3$s in addition to these in the gallery.', 'opusprimus' ),
-                                __( 'There are %2$s%1$s more images%3$s in addition to these in the gallery.', 'opusprimus' ),
-                                ( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 ) ),
-                            ( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 ),
-                            '<a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">',
-                            '</a>' )
-                    )
-                );
-            } /** End if - images found */
-        } /** End if - not is single */
+            /** Only display when not in single view */
+            if ( ! is_single() ) {
+                /**
+                 * Cycle through images and display them linked to their permalink
+                 */
+                foreach ( $images->posts as $image ) {
+                    echo '<a href="' . get_permalink( $image->ID ) . '">' . wp_get_attachment_image( $image->ID, $size ) . '</a>';
+                } /** End foreach - images */
 
-        /** Add empty hook after secondary images */
-        do_action( 'opus_secondary_images_after' );
+                /**
+                 * Display a message indicating if more images are in the gallery
+                 * than what are displayed in the post stream. If more images are
+                 * in the gallery the text showing how many more will link to the
+                 * single post.
+                 */
+                if ( ( $images->found_posts + 1 ) > ( $secondary_images_args['images'] + 1 ) ) {
+                    printf( '<p class="more-images">%1$s</p>',
+                        apply_filters( 'opus_more_images_text',
+                            sprintf( _n(
+                                    __( 'There is %2$sone more image%3$s in addition to these in the gallery.', 'opusprimus' ),
+                                    __( 'There are %2$s%1$s more images%3$s in addition to these in the gallery.', 'opusprimus' ),
+                                    ( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 ) ),
+                                ( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 ),
+                                '<a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">',
+                                '</a>' )
+                        )
+                    );
+                } /** End if - images found */
+            } /** End if - not is single */
+
+            /** Add empty hook after secondary images */
+            do_action( 'opus_secondary_images_after' );
+
+        } /** End if - gallery shortcode exists */
 
     } /** End function - secondary images */
 
