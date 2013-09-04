@@ -4,7 +4,7 @@
  * A WordPress Framework Theme.
  *
  * @package     OpusPrimus
- * @version     1.2.1
+ * @version     1.2.2-alpha
  *
  * @internal    RECOMMENDED HTML5
  * @internal    RECOMMENDED CSS3
@@ -41,6 +41,9 @@
  * @version 1.2.1
  * @date    August 4, 2013
  * Removed `translation-ready` tag
+ *
+ * @version 1.2.2
+ * @date    September 2013
  */
 
 global $opus_structures;

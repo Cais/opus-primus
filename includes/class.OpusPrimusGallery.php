@@ -148,6 +148,10 @@ class OpusPrimusGallery {
      * @uses    shortcode_parse_atts
      *
      * @return  null|int - array index value
+     *
+     * @version 1.2.2
+     * @date    September 3, 2013
+     * Add sanity check to make sure match variable is actually set
      */
     function get_gallery_attr_featured_ids() {
 
@@ -157,8 +161,8 @@ class OpusPrimusGallery {
         /** Find any shortcode being used in post */
         preg_match( "/$pattern/s", get_the_content(), $match );
 
-        /** Find the gallery shortcode usages */
-        if ( 'gallery' == $match[2] ) {
+        /** Find the gallery shortcode usages after a sanity check */
+        if (  isset( $match[2] ) && ( 'gallery' == $match[2] ) ) {
 
             /** @var $attrs - holds the gallery shortcode parameters used */
             $attrs = shortcode_parse_atts( $match[3] );
@@ -197,6 +201,10 @@ class OpusPrimusGallery {
      * @uses    shortcode_parse_atts
      *
      * @return  null|int - array index value
+     *
+     * @version 1.2.2
+     * @date    September 3, 2013
+     * Add sanity check to make sure match variable is actually set
      */
     function get_gallery_attr_secondary_ids() {
 
@@ -206,8 +214,8 @@ class OpusPrimusGallery {
         /** Find any shortcode being used in post */
         preg_match( "/$pattern/s", get_the_content(), $match );
 
-        /** Find the gallery shortcode usages */
-        if ( 'gallery' == $match[2] ) {
+        /** Find the gallery shortcode usages after a sanity check */
+        if (  isset( $match[2] ) && ( 'gallery' == $match[2] ) ) {
 
             /** @var $attrs - holds the gallery shortcode parameters used */
             $attrs = shortcode_parse_atts( $match[3] );
