@@ -261,6 +261,10 @@ class OpusPrimusImages {
      * @date    April 12, 2013
      * Added `opus_display_exif_table_header_text` filter
      * Added `opus_exif_*_label` filters for all details
+     *
+     * @version 1.2.2
+     * @date    September 12, 2013
+     * Corrected i18n code for EXIF data
      */
     function display_exif_table() {
         /** Add empty hook before exif table */
@@ -281,34 +285,34 @@ class OpusPrimusImages {
                 <?php
                 /** If the exif value is set display it */
                 if ( $this->exif_dimensions() ) {
-                    echo '<tr><td class="exif-dimensions">' . __( apply_filters( 'opus_exif_dimensions_label', 'Dimensions' ), 'opusprimus' ) . '</td><td>' . $this->exif_dimensions() . '</td></tr>';
+                    echo '<tr><td class="exif-dimensions">' . apply_filters( 'opus_exif_dimensions_label', __( 'Dimensions', 'opusprimus' ) ) . '</td><td>' . $this->exif_dimensions() . '</td></tr>';
                 } /** End if */
                 if ( $this->exif_copyright() ) {
-                    echo '<tr><td class="exif-copyright">' . __( apply_filters( 'opus_exif_copyright_label', 'Copyright' ), 'opusprimus' ) . '</td><td>' . $this->exif_copyright() . '</td></tr>';
+                    echo '<tr><td class="exif-copyright">' . apply_filters( 'opus_exif_copyright_label', __( 'Copyright', 'opusprimus' ) ) . '</td><td>' . $this->exif_copyright() . '</td></tr>';
                 } /** End if */
                 if ( $this->exif_timestamp() ) {
-                    echo '<tr><td class="exif-timestamp">' . __( apply_filters( 'opus_exif_timestamp_label', 'Uploaded' ), 'opusprimus' ) . '</td><td>' . $this->exif_timestamp() . '</td></tr>';
+                    echo '<tr><td class="exif-timestamp">' . apply_filters( 'opus_exif_timestamp_label', __( 'Uploaded', 'opusprimus' ) ) . '</td><td>' . $this->exif_timestamp() . '</td></tr>';
                 } /** End if */
                 if ( $this->exif_camera() ) {
-                    echo '<tr><td class="exif-camera">' . __( apply_filters( 'opus_exif_camera_label', 'Camera' ), 'opusprimus' ) . '</td><td>' . $this->exif_camera() . '</td></tr>';
+                    echo '<tr><td class="exif-camera">' . apply_filters( 'opus_exif_camera_label', __( 'Camera', 'opusprimus' ) ) . '</td><td>' . $this->exif_camera() . '</td></tr>';
                 } /** End if */
                 if ( $this->exif_shutter() ) {
-                    echo '<tr><td class="exif-shutter">' . __( apply_filters( 'opus_exif_shutter_label', 'Shutter Speed' ), 'opusprimus' ) . '</td><td>' . $this->exif_shutter() . '</td></tr>';
+                    echo '<tr><td class="exif-shutter">' . apply_filters( 'opus_exif_shutter_label', __( 'Shutter Speed', 'opusprimus' ) ) . '</td><td>' . $this->exif_shutter() . '</td></tr>';
                 } /** End if */
                 if ( $this->exif_aperture() ) {
-                    echo '<tr><td class="exif-aperture">' . __( apply_filters( 'opus_exif_aperture_label', 'Aperture' ), 'opusprimus' ) . '</td><td>' . 'F' . $this->exif_aperture() . '</td></tr>';
+                    echo '<tr><td class="exif-aperture">' . apply_filters( 'opus_exif_aperture_label', __( 'Aperture', 'opusprimus' ) ) . '</td><td>' . 'F' . $this->exif_aperture() . '</td></tr>';
                 } /** End if */
                 if ( $this->exif_caption() ) {
-                    echo '<tr><td class="exif-caption">' . __( apply_filters( 'opus_exif_caption_label', 'Caption' ), 'opusprimus' ) . '</td><td>' . $this->exif_caption() . '</td></tr>';
+                    echo '<tr><td class="exif-caption">' . apply_filters( 'opus_exif_caption_label', __( 'Caption', 'opusprimus' ) ) . '</td><td>' . $this->exif_caption() . '</td></tr>';
                 } /** End if */
                 if ( $this->exif_focal_length() ) {
-                    echo '<tr><td class="exif-focal-length">' . __( apply_filters( 'opus_exif_focal_length_label', 'Focal Length' ), 'opusprimus' ) . '</td><td>' . $this->exif_focal_length() . '</td></tr>';
+                    echo '<tr><td class="exif-focal-length">' . apply_filters( 'opus_exif_focal_length_label', __( 'Focal Length', 'opusprimus' ) ) . '</td><td>' . $this->exif_focal_length() . '</td></tr>';
                 } /** End if */
                 if ( $this->exif_iso_speed() ) {
-                    echo '<tr><td class="exif-iso-speed">' . __( apply_filters( 'opus_exif_iso_speed_label', 'ISO Speed' ), 'opusprimus' ) . '</td><td>' . $this->exif_iso_speed() . '</td></tr>';
+                    echo '<tr><td class="exif-iso-speed">' . apply_filters( 'opus_exif_iso_speed_label', __( 'ISO Speed', 'opusprimus' ) ) . '</td><td>' . $this->exif_iso_speed() . '</td></tr>';
                 } /** End if */
                 if ( $this->exif_title() ) {
-                    echo '<tr><td class="exif-title">' . __( apply_filters( 'opus_exif_title_label', 'Title' ), 'opusprimus' ) . '</td><td>' . $this->exif_title() . '</td></tr>';
+                    echo '<tr><td class="exif-title">' . apply_filters( 'opus_exif_title_label', __( 'Title', 'opusprimus' ) ) . '</td><td>' . $this->exif_title() . '</td></tr>';
                 } /** End if */ ?>
             </tbody><!-- End table body -->
             <tfoot></tfoot>
