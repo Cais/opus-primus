@@ -6,6 +6,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Released ...
 * Fixed issue with Gallery Post-Format being used when the `gallery` shortcode is not used.
 * Corrected i18n code for EXIF data
+* Additional i18n code corrections and enhancements
 
 /** ------------------------------------------------------------------------- */
 == Version 1.2.1 ==
