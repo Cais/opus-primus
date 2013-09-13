@@ -824,6 +824,10 @@ class OpusPrimusImages {
      *
      * @internal Inspired by http://css-tricks.com/snippets/wordpress/get-the-first-image-from-a-post/
      *
+     * @version 1.2.2
+     * @date    September 12, 2013
+     * Fixed undefined offset when there is no image found in post
+     *
      * @todo Return the same image "size" used in the "attachment" as found in the Post-Format: Image archive (1.2)
      */
     function first_linked_image() {
@@ -831,11 +835,15 @@ class OpusPrimusImages {
         global $post;
         preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
 
-        $image_url = $matches[1][0];
+        if ( ! $matches[0] == array() ) {
+            $image_url = $matches[1][0];
+        } /** End if - not an empty array */
 
-        $output = '<img class="linked-image" src="' . $image_url . '" alt="" />';
+        if ( isset ( $image_url ) ) {
+            return '<img class="linked-image" src="' . $image_url . '" alt="" />';
+        } /** End if - isset image url */
 
-        return $output;
+        return null;
 
     } /** End function - first linked image */
 
