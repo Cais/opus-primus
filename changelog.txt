@@ -9,6 +9,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Additional i18n code corrections and enhancements
 * Fixed undefined offset when there is no image found in post
 * Add documentation to the `first_linked_image` function
+* Removed `table-stripe` class from Post-Format: Image tables
 
 /** ------------------------------------------------------------------------- */
 == Version 1.2.1 ==

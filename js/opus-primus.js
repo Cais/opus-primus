@@ -33,6 +33,10 @@
  * @version 1.2
  * @date    April 1, 2013
  * Added more specific selector used with .post.format-link
+ *
+ * @version 1.2.2
+ * @date    September 13, 2013
+ * Removed `table-stripe` class from Post-Format: Image tables
  */
 
 jQuery( document ).ready( function( $ ) {
@@ -60,6 +64,7 @@ jQuery( document ).ready( function( $ ) {
     /** Add a class to the form-allowed-tags code box */
     $( 'p.form-allowed-tags code' ).addClass( 'form-allowed-tags-code-box' );
 
-    /** Add a class to table rows to create a striped effect */
+    /** Add a class to table rows to create a striped effect; except in Post-Format: Image posts */
     $( 'tr:even' ).addClass( 'table-stripe' );
+    $( '.format-image tr:even').removeClass( 'table-stripe' );
 } );

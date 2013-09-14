@@ -105,16 +105,17 @@ class OpusPrimusImages {
 
         <table>
             <thead>
-            <tr><th>
-                <?php
-                if ( ! empty( $archive_image_title ) ) {
-                    printf( '<span class="archive-image-title">%1$s</span>',
+
+                <?php if ( ! empty( $archive_image_title ) ) { ?>
+                    <tr><th>
+                    <?php printf( '<span class="archive-image-title">%1$s</span>',
                         apply_filters( 'opus_archive_image_title',
                             sprintf( __( 'Image Title: %1$s', 'opusprimus' ), $archive_image_title )
                         )
-                    );
-                } /** End if - not empty title */ ?>
-            </th></tr>
+                    ); ?>
+                    </th></tr>
+                <?php } /** End if - not empty title */ ?>
+
             </thead><!-- End table header -->
             <tbody>
             <tr>
@@ -124,6 +125,8 @@ class OpusPrimusImages {
                         echo '<span class="archive-image"><a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">'
                             . $archive_image
                             . '</a></span>';
+                        /**
+                         * @todo Review the following for use?
                         if ( empty( $attachments ) ) {
                             printf( '<div class="linked-image-message">%1$s</div>',
                                 apply_filters( 'opus_linked_image_message',
