@@ -8,6 +8,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Corrected i18n code for EXIF data
 * Additional i18n code corrections and enhancements
 * Fixed undefined offset when there is no image found in post
+* Add documentation to the `first_linked_image` function
 
 /** ------------------------------------------------------------------------- */
 == Version 1.2.1 ==

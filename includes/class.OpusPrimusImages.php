@@ -835,14 +835,17 @@ class OpusPrimusImages {
         global $post;
         preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
 
+        /** Make sure there was an image found before using it for the URL  */
         if ( ! $matches[0] == array() ) {
             $image_url = $matches[1][0];
         } /** End if - not an empty array */
 
+        /** Make sure the image URL is set before returning the image itself */
         if ( isset ( $image_url ) ) {
             return '<img class="linked-image" src="' . $image_url . '" alt="" />';
         } /** End if - isset image url */
 
+        /** Obviously if there is no image URL then return nothing */
         return null;
 
     } /** End function - first linked image */
