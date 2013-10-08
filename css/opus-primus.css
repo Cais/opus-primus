@@ -52,6 +52,11 @@
  * Adjusted `meta-tags` CSS due to container change from `p` to `div`
  * Adjusted CSS to better handle large images with captions in large full-width displays
  * Adjusted `table` elements from 'max-width: 100%' to 'width: 100%' and other minor changes
+ *
+ * @version 1.2.2
+ * @date    October 8, 2013
+ * Reduced all menu related elements with `z-index` property to a value of 1
+ * Removed `z-index` property from breadcrumb related elements
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -652,7 +657,7 @@ div#top-navigation-menu {
     padding: 0;
     position: absolute;
     /* Raise above all other elements */
-    z-index: 1000;
+    z-index: 1;
 }
 
 .nav-menu a, .nav-menu a:hover {
@@ -701,7 +706,8 @@ ul.nav-menu ul {
 ul.nav-menu {
     float: left;
     position: relative;
-    z-index: 1097;
+    /* z-index: 2; */
+    z-index: 1;
 }
 
 ul.nav-menu li {
@@ -714,7 +720,8 @@ ul.nav-menu li.hover,
 ul.nav-menu li:hover {
     cursor: default;
     position: relative;
-    z-index: 1099;
+    /* z-index: 4; */
+    z-index: 1;
 }
 
 ul.nav-menu ul {
@@ -724,7 +731,8 @@ ul.nav-menu ul {
     top: 100%;
     visibility: hidden;
     width: auto;
-    z-index: 1098;
+    /* z-index: 3; */
+    z-index: 1;
 }
 
 ul.nav-menu ul li { float: none; }
@@ -806,7 +814,7 @@ ul.breadcrumb li a:after {
     position: absolute;
     top: 50%;
     width: 0;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 ul.breadcrumb li a:before {
@@ -822,7 +830,7 @@ ul.breadcrumb li a:before {
     position: absolute;
     top: 50%;
     width: 0;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 ul.breadcrumb li:last-child a:before,

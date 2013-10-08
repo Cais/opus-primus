@@ -1,13 +1,21 @@
 === Opus Primus changelog.txt ===
-Last revised September 3, 2013
+Last revised October 8, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.2 ==
 * Released ...
+
+= Code =
 * Fixed issue with Gallery Post-Format being used when the `gallery` shortcode is not used.
 * Corrected i18n code for EXIF data
 * Additional i18n code corrections and enhancements
 * Fixed undefined offset when there is no image found in post
+
+= CSS =
+* Reduced all menu related elements with `z-index` property to a value of 1
+* Removed `z-index` property from breadcrumb related elements
+
+= Miscellaneous
 * Add documentation to the `first_linked_image` function
 * Removed `table-stripe` class from Post-Format: Image tables
 
