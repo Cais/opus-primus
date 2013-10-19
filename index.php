@@ -43,7 +43,7 @@
  * Removed `translation-ready` tag
  *
  * @version 1.2.2
- * @date    September 2013
+ * @date    October 2013
  */
 
 global $opus_structures;

@@ -54,9 +54,10 @@
  * Adjusted `table` elements from 'max-width: 100%' to 'width: 100%' and other minor changes
  *
  * @version 1.2.2
- * @date    October 8, 2013
+ * @date    October 19, 2013
  * Reduced all menu related elements with `z-index` property to a value of 1
  * Removed `z-index` property from breadcrumb related elements
+ * Set the breadcrumbs background color to #ffffff (white)
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -773,6 +774,7 @@ ul.nav-menu ul.sub-menu li, ul.nav-menu ul.children li, ul.nav-menu ul, ul.nav-m
 
 /** === Breadcrumbs === ----------------------------------------------------- */
 #breadcrumbs {
+    background-color: #ffffff;
     border-bottom: 1px solid #d3d3d3;
     border-top: 1px solid #d3d3d3;
     clear: both;

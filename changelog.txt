@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised October 8, 2013
+Last revised October 19, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.2 ==
@@ -14,10 +14,12 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = CSS =
 * Reduced all menu related elements with `z-index` property to a value of 1
 * Removed `z-index` property from breadcrumb related elements
+* Set the breadcrumbs background color to #ffffff (white)
 
 = Miscellaneous
 * Add documentation to the `first_linked_image` function
 * Removed `table-stripe` class from Post-Format: Image tables
+* Tested up to WordPress version 3.7
 
 /** ------------------------------------------------------------------------- */
 == Version 1.2.1 ==
