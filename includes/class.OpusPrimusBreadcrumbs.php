@@ -102,6 +102,7 @@ class OpusPrimusBreadcrumbs {
      * @since   1.1
      *
      * @uses    OpusPrimusBreadcrumbs::breadcrumb_categories
+     * @uses    OPusPrimusBreadcrumbs::breadcrumb_post_title
      * @uses    OpusPrimusBreadcrumbs::post_format_name
      * @uses    apply_filters
      * @uses    home_url
@@ -114,6 +115,10 @@ class OpusPrimusBreadcrumbs {
      * @version 1.2
      * @date    July 21, 2013
      * Check for long post titles and trim as needed
+     *
+     * @version 1.2.2
+     * @date    October 26, 2013
+     * Extracted the $post_title management into the `breadcrumb_post_title` method
      */
     function post_breadcrumbs() {
 
@@ -147,16 +152,7 @@ class OpusPrimusBreadcrumbs {
                             apply_filters( 'opus_post_breadcrumbs_sticky_text', __( 'Sticky Post', 'opusprimus' ) ) );
                     } /** Enf if - is sticky */
 
-                    /** @var $post_title - sets Post Title to ID if empty */
-                    $post_title = empty( $post->post_title )
-                        ? sprintf( __( 'Post %1$s', 'opusprimus' ), $post_ID )
-                        : $post->post_title;
-
-                    /** Check for long post titles and trim as needed */
-                    $maximum_post_title_length = apply_filters( 'opus_post_breadcrumbs_maximum_post_title_length', 50 );
-                    if ( strlen( $post_title ) > intval( $maximum_post_title_length ) ) {
-                        $post_title = substr( $post_title, 0, $maximum_post_title_length ) . apply_filters( 'opus_post_breadcrumbs_shortened_title_suffix', '&hellip;' );
-                    } /** End if - post title longer than 50 characters */
+                    $post_title = $this->breadcrumb_post_title( $post, $post_ID );
 
                     $post_trail .= '<li><a href="#">' . $post_title . '</a></li>';
     
@@ -297,6 +293,46 @@ class OpusPrimusBreadcrumbs {
         return null;
 
     } /** End function - the trail */
+
+
+    /**
+     * Breadcrumb Post Title
+     * Manages the creation of a post title reference for the breadcrumb by
+     * either using the existing title or by creating a post title using its ID
+     *
+     * @package     OpusPrimus
+     * @subpackage  Breadcrumbs
+     * @since       1.2.2
+     *
+     * @param       $post
+     * @param       $post_ID
+     *
+     * @return      string $post_title
+     */
+    function breadcrumb_post_title( $post, $post_ID ) {
+
+        /** @var $post_title - sets Post Title to ID if empty */
+        $post_title = empty( $post->post_title )
+            ? sprintf( __( 'Post %1$s', 'opusprimus' ), $post_ID )
+            : $post->post_title;
+
+        /** @var int $maximum_post_title_length - allowable length of post title */
+        $maximum_post_title_length = apply_filters( 'opus_post_breadcrumbs_maximum_post_title_length', 50 );
+
+        /**
+         * Check for long post titles after removing HTML tags and trim as
+         * needed afterward
+         */
+        if ( strlen( strip_tags( $post_title ) ) > intval( $maximum_post_title_length ) ) {
+            /** @var string $post_title - contains HTML stripped truncated post title */
+            $post_title = substr( strip_tags( $post_title ), 0, $maximum_post_title_length )
+                . apply_filters( 'opus_post_breadcrumbs_shortened_title_suffix', '&hellip;' );
+            return $post_title;
+        } /** End if - post title longer than 50 characters */
+
+        return $post_title;
+
+    } /** End function - breadcrumb post title */
 
 
     /**
