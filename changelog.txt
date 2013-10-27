@@ -1,9 +1,9 @@
 === Opus Primus changelog.txt ===
-Last revised October 26, 2013
+Last revised October 27, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.2 ==
-* Released ...
+* Released October 2013
 
 = Code =
 * Added conditional test rather than print both breadcrumbs (one empty)
