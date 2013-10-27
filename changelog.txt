@@ -6,6 +6,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Released ...
 
 = Code =
+* Added conditional test rather than print both breadcrumbs (one empty)
 * Additional i18n code corrections and enhancements
 * Corrected i18n code for EXIF data
 * Extracted $post_title management from `post_breadcrumb` method into the `breadcrumb_post_title` method

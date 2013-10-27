@@ -319,15 +319,14 @@ class OpusPrimusBreadcrumbs {
         /** @var int $maximum_post_title_length - allowable length of post title */
         $maximum_post_title_length = apply_filters( 'opus_post_breadcrumbs_maximum_post_title_length', 50 );
 
-        /**
-         * Check for long post titles after removing HTML tags and trim as
-         * needed afterward
-         */
+        /** Check for long post titles after removing HTML tags and trim as needed afterward */
         if ( strlen( strip_tags( $post_title ) ) > intval( $maximum_post_title_length ) ) {
+
             /** @var string $post_title - contains HTML stripped truncated post title */
-            $post_title = substr( strip_tags( $post_title ), 0, $maximum_post_title_length )
-                . apply_filters( 'opus_post_breadcrumbs_shortened_title_suffix', '&hellip;' );
+            $post_title = substr( strip_tags( $post_title ), 0, $maximum_post_title_length ) . apply_filters( 'opus_post_breadcrumbs_shortened_title_suffix', '&hellip;' );
+
             return $post_title;
+
         } /** End if - post title longer than 50 characters */
 
         return $post_title;
@@ -344,12 +343,18 @@ class OpusPrimusBreadcrumbs {
      * @since       1.0.4
      *
      * @uses        OpusPrimusBreadcrumbs::the_trail
+     *
+     * @version     1.2.2
+     * @date        October 26, 2013
+     * Added conditional test rather than print both breadcrumbs (one empty)
      */
     function show_the_trail() {
-        /** Used on pages */
-        echo $this->the_trail();
-        /** Used on posts */
-        echo $this->post_breadcrumbs();
+
+        if ( is_page() ) {
+            echo $this->the_trail();
+        } else {
+            echo $this->post_breadcrumbs();
+        } /** End if - is page */
 
     } /** End function - show the trail */
 
