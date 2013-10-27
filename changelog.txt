@@ -2,6 +2,14 @@
 Last revised October 27, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
+== Version 1.2.3 ==
+* Released ...
+
+= Code =
+= CSS =
+= Miscellaneous =
+
+/** ------------------------------------------------------------------------- */
 == Version 1.2.2 ==
 * Released October 2013
 
@@ -16,7 +24,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = CSS =
 * Reduced all menu related elements with `z-index` property to a value of 1
 * Removed `z-index` property from breadcrumb related elements
-* Set the breadcrumbs background color to #ffffff (white)
+* Set the breadcrumbs background color to `#ffffff` (white)
 
 = Miscellaneous
 * Add documentation to the `first_linked_image` function
