@@ -58,6 +58,10 @@
  * Reduced all menu related elements with `z-index` property to a value of 1
  * Removed `z-index` property from breadcrumb related elements
  * Set the breadcrumbs background color to #ffffff (white)
+ *
+ * #version 1.2.3
+ * @date    November 12, 2013
+ * Reduced the citation font-size for better aesthetics
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -182,6 +186,7 @@ blockquote:after {
 
 cite {
     font-style: normal;
+    font-size: 80%;
 }
 cite:before {
     content: "~";
