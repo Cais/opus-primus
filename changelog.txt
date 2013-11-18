@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised November 12, 2013
+Last revised November 18, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.3 ==
@@ -7,6 +7,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Code =
 = CSS =
+* Re-Adjust `z-index: 2;` for main navigation menu
 * Reduced the citation font-size for better aesthetics
 
 = Miscellaneous =

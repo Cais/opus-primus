@@ -61,6 +61,7 @@
  *
  * #version 1.2.3
  * @date    November 12, 2013
+ * Re-Adjust `z-index: 2;` for main navigation menu
  * Reduced the citation font-size for better aesthetics
  */
 
@@ -712,8 +713,8 @@ ul.nav-menu ul {
 ul.nav-menu {
     float: left;
     position: relative;
-    /* z-index: 2; */
-    z-index: 1;
+    z-index: 2;
+    /* z-index: 1; */
 }
 
 ul.nav-menu li {
