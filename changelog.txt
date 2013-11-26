@@ -6,8 +6,10 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Released ...
 
 = Code =
+* Removed `$sep_location` parameter as it was not used in `browser_title` method
+
 = CSS =
-* Re-Adjust `z-index: 2;` for main navigation menu
+* Re-Adjust `ul.nav-menu` and `.nav-menu` to `z-index: 3` for main menu
 * Reduced the citation font-size for better aesthetics
 
 = Miscellaneous =

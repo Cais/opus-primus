@@ -81,7 +81,6 @@ class OpusPrimusStructures {
      *
      * @param       string $old_title - default title text
      * @param       string $sep - separator character
-     * @param       string $sep_location - left|right - separator placement in relationship to title
      *
      * @uses        apply_filters
      * @uses        get_bloginfo - name, description
@@ -89,8 +88,12 @@ class OpusPrimusStructures {
      * @uses        is_front_page
      *
      * @return      string - original title|new title
+     *
+     * @version     1.2.3
+     * @date        November 26, 2013
+     * Removed $sep_location parameter as it was not used
      */
-    function browser_title( $old_title, $sep, $sep_location ) {
+    function browser_title( $old_title, $sep ) {
         /** Call the page globals for setting page number */
         global $page, $paged;
 
