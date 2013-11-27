@@ -49,6 +49,7 @@ define( 'OPUS_CSS',         get_template_directory_uri()    . '/css/' );
 define( 'OPUS_IMAGES',      get_template_directory_uri()    . '/images/' );
 define( 'OPUS_STANZAS',     get_template_directory()        . '/stanzas/' );
 define( 'OPUS_STANZAS_URI', get_template_directory_uri()    . '/stanzas/' );
+define( 'OPUS_COMPAT',      get_template_directory_uri()    . '/compatibility/' );
 
 /** For Testing Purposes */
 define( 'OPUS_WIP', get_template_directory() . '/works-in-progress/' );
@@ -236,3 +237,29 @@ if ( ! isset( $content_width ) ) {
 /** Miscellaneous Functions */
 /** Return a space when all other __return_* fail, use this?! */
 function opus_primus_return_blank() { return ' '; }
+
+/**
+ * Compatibility
+ * Main compatibility conditionals
+ *
+ * @package     Opus_Primus
+ * @subpackage  Compatibility
+ * @since       1.2.3
+ *
+ * @uses        is_plugin_active
+ * @uses        wp_enqueue_style
+ * @uses        wp_get_theme
+ */
+function opus_primus_compatibility() {
+
+    /**
+     * Soliloquy - slider plugin
+     * @link    http://soliloquywp.com/
+     */
+    if ( is_plugin_active( 'soliloquy/soliloquy.php' ) ) {
+        /** Enqueue Soliloquy Styles */
+        wp_enqueue_style( 'Opus-Primus-Soliloquy', OPUS_COMPAT . 'opus-primus-soliloquy.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
+    } /** End if - soliloquy plugin is active */
+
+} /** End function - Soliloquy Styles */
+add_action( 'wp_enqueue_scripts', 'opus_primus_compatibility' );
