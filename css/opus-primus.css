@@ -60,7 +60,8 @@
  * Set the breadcrumbs background color to #ffffff (white)
  *
  * #version 1.2.3
- * @date    November 12, 2013
+ * @date    December 5, 2013
+ * Adjust pixel measures to not use decimals
  * Re-Adjust `z-index: 3` for main navigation menu
  * Reduced the citation font-size for better aesthetics
  */
@@ -170,7 +171,7 @@ blockquote p {
     margin-bottom: 10px;
     font-size: 16px;
     font-weight: 300;
-    line-height: 22.5px;
+    line-height: 22px;
 }
 blockquote small {
     display: block;
@@ -223,14 +224,14 @@ legend {
     width: 100%;
     padding: 0;
     margin-bottom: 27px;
-    font-size: 19.5px;
+    font-size: 20px;
     line-height: 36px;
     color: #333333;
     border: 0;
     border-bottom: 1px solid #e5e5e5;
 }
 legend small {
-    font-size: 13.5px;
+    font-size: 13px;
     color: #999999;
 }
 label,
@@ -541,9 +542,9 @@ p small {
 
 pre {
     display: block;
-    padding: 8.5px;
+    padding: 8px;
     margin: 0 0 9px;
-    font-size: 12.025px;
+    font-size: 12px;
     line-height: 18px;
     word-break: break-all;
     word-wrap: break-word;
@@ -1423,7 +1424,7 @@ div.post.format-video div.post-content div.video-player div.videopress-placehold
     font-family: 'Merienda', courrier, serif;
     font-size: 24px;
     font-weight: 300;
-    line-height: 33.75px;
+    line-height: 34px;
     margin: 0 auto;
     padding: 0 5px;
     text-align: justify;
@@ -1431,13 +1432,13 @@ div.post.format-video div.post-content div.video-player div.videopress-placehold
 
 .single .format-quote blockquote p {
     font-size: 48px;
-    line-height: 67.5px;
+    line-height: 68px;
 }
 
 /** Post-Format: Quote Archive ---------------------------------------------- */
 .archive .format-quote blockquote p {
     font-size: 16px;
-    line-height: 22.5px;
+    line-height: 22px;
 }
 
 .archive.term-post-format-quote div.meta-tags {
@@ -1517,7 +1518,7 @@ div.post.format-audio .post-content a {
     font-family: 'Underwood-Champion', monospace, serif;
     font-size: 24px;
     font-weight: 300;
-    line-height: 33.75px;
+    line-height: 34px;
     margin: 0 auto;
     padding: 0 5px;
 }
