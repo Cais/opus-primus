@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised November 18, 2013
+Last revised December 13, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.3 ==
@@ -13,6 +13,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Reduced the citation font-size for better aesthetics
 
 = Miscellaneous =
+* Updated tags used in `style.css` header block to include responsive-layout and fluid-layout
 
 /** ------------------------------------------------------------------------- */
 == Version 1.2.2 ==
