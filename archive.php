@@ -34,15 +34,15 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version 1.0.1
- * @date    February 21, 2013
+ * @version     1.0.1
+ * @date        February 21, 2013
  * Replace `the_loop_archives` method and surrounding code with
  * `the_loop_archives_wrapped`
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
  *
- * @version 1.0.4
- * @date    March 1, 2013
+ * @version     1.0.4
+ * @date        March 1, 2013
  * Fixed problem with wrong loop method call
  */
 
@@ -53,28 +53,28 @@ get_header( 'archive' );
 /** Add empty hook before content */
 do_action( 'opus_content_before' ); ?>
 
-<div class="content-wrapper cf">
+	<div class="content-wrapper cf">
 
-    <?php
-    /** Add empty hook at top of the content */
-    do_action( 'opus_content_top' );
+		<?php
+		/** Add empty hook at top of the content */
+		do_action( 'opus_content_top' );
 
-    /** Open the necessary layout CSS classes */
-    echo $opus_structures->layout_open();
+		/** Open the necessary layout CSS classes */
+		echo $opus_structures->layout_open();
 
-    /** The complete archives loop section */
-    $opus_structures->the_loop_archives_wrapped();
+		/** The complete archives loop section */
+		$opus_structures->the_loop_archives_wrapped();
 
-    /** Calls the archive specific sidebar if it exists, else the default */
-    get_sidebar( 'archive' );
+		/** Calls the archive specific sidebar if it exists, else the default */
+		get_sidebar( 'archive' );
 
-    /** Close the classes written by the layout_open call */
-    echo $opus_structures->layout_close();
+		/** Close the classes written by the layout_open call */
+		echo $opus_structures->layout_close();
 
-    /** Add empty hook at the bottom of the content */
-    do_action( 'opus_content_bottom' ); ?>
+		/** Add empty hook at the bottom of the content */
+		do_action( 'opus_content_bottom' ); ?>
 
-</div><!-- #content-wrapper -->
+	</div><!-- #content-wrapper -->
 
 <?php
 /** Add empty hook after the content */

@@ -30,8 +30,8 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version 1.0.1
- * @date    February 21, 2013
+ * @version     1.0.1
+ * @date        February 21, 2013
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
  */
@@ -48,50 +48,56 @@ get_header( 'author' );
 /** Add empty hook before content */
 do_action( 'opus_content_before' ); ?>
 
-<div class="content-wrapper cf">
+	<div class="content-wrapper cf">
 
-    <?php
-    /** Add empty hook at top of the content */
-    do_action( 'opus_content_top' );
+		<?php
+		/** Add empty hook at top of the content */
+		do_action( 'opus_content_top' );
 
-    /** Open the necessary layout CSS classes */
-    echo $opus_structures->layout_open();
+		/** Open the necessary layout CSS classes */
+		echo $opus_structures->layout_open();
 
-    /** Add empty action before the_Loop */
-    do_action( 'opus_the_loop_before' ); ?>
+		/** Add empty action before the_Loop */
+		do_action( 'opus_the_loop_before' ); ?>
 
-    <div class="the-loop">
+		<div class="the-loop">
 
-        <!-- The Author Details block - inserted above the content -->
-        <div class="opus-author-header">
-            <?php $opus_authors->author_details( $current_author_id, true, true, true ); ?>
-        </div><!-- opus-author-header -->
+			<!-- The Author Details block - inserted above the content -->
+			<div class="opus-author-header">
+				<?php $opus_authors->author_details( $current_author_id, true, true, true ); ?>
+			</div>
+			<!-- opus-author-header -->
 
-        <?php
-        /** Add before loop sidebar */
-        if ( is_active_sidebar( 'before-loop' ) ) { dynamic_sidebar( 'before-loop' ); }
+			<?php
+			/** Add before loop sidebar */
+			if ( is_active_sidebar( 'before-loop' ) ) {
+				dynamic_sidebar( 'before-loop' );
+			}
 
-        /** the_Loop structure in its most basic form */
-        $opus_structures->the_loop();
+			/** the_Loop structure in its most basic form */
+			$opus_structures->the_loop();
 
-        /** Add after loop sidebar */
-        if ( is_active_sidebar( 'after-loop' ) ) { dynamic_sidebar( 'after-loop' ); } ?>
+			/** Add after loop sidebar */
+			if ( is_active_sidebar( 'after-loop' ) ) {
+				dynamic_sidebar( 'after-loop' );
+			} ?>
 
-    </div><!-- #the-loop -->
+		</div>
+		<!-- #the-loop -->
 
-    <?php
-    /** Add empty action after the_Loop */
-    do_action( 'opus_the_loop_after' );
+		<?php
+		/** Add empty action after the_Loop */
+		do_action( 'opus_the_loop_after' );
 
-    get_sidebar( 'author' );
+		get_sidebar( 'author' );
 
-    /** Close the classes written by the layout_open call */
-    echo $opus_structures->layout_close();
+		/** Close the classes written by the layout_open call */
+		echo $opus_structures->layout_close();
 
-    /** Add empty hook at the bottom of the content */
-    do_action( 'opus_content_bottom' ); ?>
+		/** Add empty hook at the bottom of the content */
+		do_action( 'opus_content_bottom' ); ?>
 
-</div><!-- #content-wrapper -->
+	</div><!-- #content-wrapper -->
 
 <?php
 /** Add empty hook after the content */
