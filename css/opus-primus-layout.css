@@ -38,385 +38,439 @@
 /** Holy Grail Layout - to be implemented */
 /** column container */
 .column-mask {
-    position: relative; /** This fixes the IE7 overflow hidden bug */
-    clear: both;
-    float: left;
-    width: 100%;        /** width of whole page */
-    overflow: hidden;   /** This chops off any overhanging divs */
+	position: relative; /** This fixes the IE7 overflow hidden bug */
+	clear: both;
+	float: left;
+	width: 100%; /** width of whole page */
+	overflow: hidden; /** This chops off any overhanging divs */
 }
+
 /** common column settings */
 .column-right,
 .column-middle,
 .column-left {
-    float: left;
-    width: 100%;        /** width of page */
-    position: relative;
+	float: left;
+	width: 100%; /** width of page */
+	position: relative;
 }
+
 .the-loop,
 .first-sidebar,
 .second-sidebar {
-    float: left;
-    position: relative;
-    padding: 0 0 1em 0;
-    /**
-     * no left and right padding on columns, we just make them narrower instead
-     * only padding top and bottom is included here, make it whatever value you
-     * need
-     */
-    overflow: hidden;
+	float: left;
+	position: relative;
+	padding: 0 0 1em 0;
+	/**
+	 * no left and right padding on columns, we just make them narrower instead
+	 * only padding top and bottom is included here, make it whatever value you
+	 * need
+	 */
+	overflow: hidden;
 }
+
 /** Holy Grail 3 Column settings */
 .three-columns {
-    background: #eee;       /** right column background colour */
+	background: #eee; /** right column background colour */
 }
+
 .three-columns .column-middle {
-    right: 25%;             /** width of the right column */
-    background: #fff;       /** center column background colour */
+	right: 25%; /** width of the right column */
+	background: #fff; /** center column background colour */
 }
+
 .three-columns .column-left {
-    right: 50%;             /** width of the middle column */
-    background: #f4f4f4;    /** left column background colour */
+	right: 50%; /** width of the middle column */
+	background: #f4f4f4; /** left column background colour */
 }
+
 .three-columns .the-loop {
-    width: 46%;             /** width of center column content (column width minus padding on either side) */
-    left: 102%;             /** 100% plus left padding of center column */
+	width: 46%; /** width of center column content (column width minus padding on either side) */
+	left: 102%; /** 100% plus left padding of center column */
 }
+
 .three-columns .first-sidebar {
-    width: 21%;             /** Width of left column content (column width minus padding on either side) */
-    left: 31%;              /** width of (right column) plus (center column left and right padding) plus (left column left padding) */
+	width: 21%; /** Width of left column content (column width minus padding on either side) */
+	left: 31%; /** width of (right column) plus (center column left and right padding) plus (left column left padding) */
 }
+
 .three-columns .second-sidebar {
-    width: 21%;             /** Width of right column content (column width minus padding on either side) */
-    left: 85%;
-    /**
-     * Please make note of the brackets here:
-     * (100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding)
-     */
+	width: 21%; /** Width of right column content (column width minus padding on either side) */
+	left: 85%;
+	/**
+	 * Please make note of the brackets here:
+	 * (100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding)
+	 */
 }
 
 /** Blog Style 3-Column Layout */
 /** column container */
 .column-mask {
-    position: relative;     /** This fixes the IE7 overflow hidden bug */
-    clear: both;
-    float: left;
-    width: 100%;            /** width of whole page */
-    overflow: hidden;       /** This chops off any overhanging divs */
+	position: relative; /** This fixes the IE7 overflow hidden bug */
+	clear: both;
+	float: left;
+	width: 100%; /** width of whole page */
+	overflow: hidden; /** This chops off any overhanging divs */
 }
+
 /** common column settings */
 .column-right,
 .column-middle,
 .column-left {
-    float: left;
-    width: 100%;            /** width of page */
-    position: relative;
+	float: left;
+	width: 100%; /** width of page */
+	position: relative;
 }
+
 .the-loop,
 .first-sidebar,
 .second-sidebar {
-    float: left;
-    position: relative;
-    padding: 0 0 1em 0;
-    /**
-     * no left and right padding on columns, we just make them narrower instead
-     * only padding top and bottom is included here, make it whatever value you
-     * need
-     */
-    overflow: hidden;
+	float: left;
+	position: relative;
+	padding: 0 0 1em 0;
+	/**
+	 * no left and right padding on columns, we just make them narrower instead
+	 * only padding top and bottom is included here, make it whatever value you
+	 * need
+	 */
+	overflow: hidden;
 }
+
 /** Blog Style 3 Column Settings */
 .blog-style {
-    background: #eee;       /** right column background colour */
+	background: #eee; /** right column background colour */
 }
+
 .blog-style .column-middle {
-    right: 25%;             /** width of the right column */
-    background: #f4f4f4;    /** center column background colour */
+	right: 25%; /** width of the right column */
+	background: #f4f4f4; /** center column background colour */
 }
+
 .blog-style .column-left {
-    right: 25%;             /** width of the middle column */
-    background: #fff;       /** left column background colour */
+	right: 25%; /** width of the middle column */
+	background: #fff; /** left column background colour */
 }
+
 .blog-style .the-loop {
-    width: 46%;             /** width of center column content (column width minus padding on either side) */
-    left: 52%;              /** 100% plus left padding of center column */
+	width: 46%; /** width of center column content (column width minus padding on either side) */
+	left: 52%; /** 100% plus left padding of center column */
 }
+
 .blog-style .first-sidebar {
-    width: 21%;             /** Width of left column content (column width minus padding on either side) */
-    left: 56%;              /** width of (right column) plus (center column left and right padding) plus (left column left padding) */
+	width: 21%; /** Width of left column content (column width minus padding on either side) */
+	left: 56%; /** width of (right column) plus (center column left and right padding) plus (left column left padding) */
 }
+
 .blog-style .second-sidebar {
-    width: 21%;             /** Width of right column content (column width minus padding on either side) */
-    left: 60%;
-    /**
-     * Please make note of the brackets here:
-     * (100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding)
-     */
+	width: 21%; /** Width of right column content (column width minus padding on either side) */
+	left: 60%;
+	/**
+	 * Please make note of the brackets here:
+	 * (100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding)
+	 */
 }
 
 /** Left Sidebar 2-Column Layout - to be implemented */
 /** column container */
 .column-mask {
-    position: relative;     /** This fixes the IE7 overflow hidden bug */
-    clear: both;
-    float: left;
-    width: 100%;            /** width of whole page */
-    overflow: hidden;       /** This chops off any overhanging divs */
+	position: relative; /** This fixes the IE7 overflow hidden bug */
+	clear: both;
+	float: left;
+	width: 100%; /** width of whole page */
+	overflow: hidden; /** This chops off any overhanging divs */
 }
+
 /** common column settings */
 .column-right,
 .column-middle,
 .column-left {
-    float: left;
-    width: 100%;
-    position: relative;
+	float: left;
+	width: 100%;
+	position: relative;
 }
+
 .the-loop,
 .first-sidebar,
 .second-sidebar {
-    float: left;
-    position: relative;
-    padding: 0 0 1em 0;
-    overflow: hidden;
+	float: left;
+	position: relative;
+	padding: 0 0 1em 0;
+	overflow: hidden;
 }
+
 /** 2 Column (left menu) settings */
 .left-menu {
-    background: #fff;       /** right column background colour */
+	background: #fff; /** right column background colour */
 }
+
 .left-menu .column-left {
-    right: 75%;             /** right column width */
-    background: #f4f4f4;    /** left column background colour */
+	right: 75%; /** right column width */
+	background: #f4f4f4; /** left column background colour */
 }
+
 .left-menu .the-loop {
-    width: 71%;             /** right column content width */
-    left:102%;              /** 100% plus left column left padding */
+	width: 71%; /** right column content width */
+	left: 102%; /** 100% plus left column left padding */
 }
+
 .left-menu .first-sidebar,
 .left-menu .second-sidebar {
-    width: 21%;             /** left column content width (column width minus left and right padding) */
-    left: 6%;               /** (right column left and right padding) plus (left column left padding) */
+	width: 21%; /** left column content width (column width minus left and right padding) */
+	left: 6%; /** (right column left and right padding) plus (left column left padding) */
 }
 
 /** Right Sidebar 2-Column Layout */
 /** column container */
 .column-mask {
-    position: relative;     /** This fixes the IE7 overflow hidden bug */
-    clear: both;
-    float: left;
-    width: 100%;            /** width of whole page */
-    overflow: hidden;       /** This chops off any overhanging divs */
+	position: relative; /** This fixes the IE7 overflow hidden bug */
+	clear: both;
+	float: left;
+	width: 100%; /** width of whole page */
+	overflow: hidden; /** This chops off any overhanging divs */
 }
+
 /** common column settings */
 .column-right,
 .column-middle,
 .column-left {
-    float: left;
-    width: 100%;
-    position: relative;
+	float: left;
+	width: 100%;
+	position: relative;
 }
+
 .the-loop,
 .first-sidebar {
-    float: left;
-    position: relative;
-    padding: 0 0 1em 0;
-    overflow: hidden;
+	float: left;
+	position: relative;
+	padding: 0 0 1em 0;
+	overflow: hidden;
 }
+
 /** 2 Column (right sidebar) settings */
 .right-sidebar {
-    background: #eee;       /** right column background colour */
+	background: #eee; /** right column background colour */
 }
+
 .right-sidebar .column-left {
-    right: 25%;             /** right column width */
-    background: #fff;       /** left column background colour */
+	right: 25%; /** right column width */
+	background: #fff; /** left column background colour */
 }
+
 .right-sidebar .the-loop {
-    width: 71%;             /** left column content width (left column width minus left and right padding) */
-    left: 27%;              /** (right column width) plus (left column left padding) */
+	width: 71%; /** left column content width (left column width minus left and right padding) */
+	left: 27%; /** (right column width) plus (left column left padding) */
 }
+
 .right-sidebar .first-sidebar,
 .right-sidebar .second-sidebar {
-    width: 21%;             /** right column content width (right column width minus left and right padding) */
-    left: 31%;              /** (right column width) plus (left column left and right padding) plus (right column left padding) */
+	width: 21%; /** right column content width (right column width minus left and right padding) */
+	left: 31%; /** (right column width) plus (left column left and right padding) plus (right column left padding) */
 }
 
 /** Double Page 2-Column Layout - to be implemented */
 /** column container */
 .column-mask {
-    clear: both;
-    float: left;
-    width: 100%;            /** width of whole page */
-    overflow: hidden;       /** This chops off any overhanging divs */
+	clear: both;
+	float: left;
+	width: 100%; /** width of whole page */
+	overflow: hidden; /** This chops off any overhanging divs */
 }
+
 /** common column settings */
 .column-right,
 .column-middle,
 .column-left {
-    float: left;
-    width: 100%;
-    position: relative;
+	float: left;
+	width: 100%;
+	position: relative;
 }
+
 .the-loop,
 .first-sidebar,
 .second-sidebar {
-    float: left;
-    position: relative;
-    padding: 0 0 1em 0;
-    overflow: hidden;
+	float: left;
+	position: relative;
+	padding: 0 0 1em 0;
+	overflow: hidden;
 }
+
 /** 2 Column (double page) settings */
 .doublepage {
-    background: #eee;       /** right column background colour */
+	background: #eee; /** right column background colour */
 }
+
 .doublepage .column-left {
-    right: 50%;             /** right column width */
-    background: #fff;       /** left column background colour */
+	right: 50%; /** right column width */
+	background: #fff; /** left column background colour */
 }
+
 .doublepage .the-loop {
-    width: 46%;             /** left column content width (column width minus left and right padding) */
-    left: 52%;              /** right column width plus left column left padding */
+	width: 46%; /** left column content width (column width minus left and right padding) */
+	left: 52%; /** right column width plus left column left padding */
 }
+
 .doublepage .first-sidebar {
-    width: 46%;             /** right column content width (column width minus left and right padding) */
-    left: 56%;              /** (right column width) plus (left column left and right padding) plus (right column left padding) */
+	width: 46%; /** right column content width (column width minus left and right padding) */
+	left: 56%; /** (right column width) plus (left column left and right padding) plus (right column left padding) */
 }
 
 /** Full Page 1-Column Layout */
 /** column container */
 .column-mask {
-    position: relative;     /** This fixes the IE7 overflow hidden bug */
-    clear: both;
-    float: left;
-    width: 100%;            /** width of whole page */
-    overflow: hidden;       /** This chops off any overhanging divs */
+	position: relative; /** This fixes the IE7 overflow hidden bug */
+	clear: both;
+	float: left;
+	width: 100%; /** width of whole page */
+	overflow: hidden; /** This chops off any overhanging divs */
 }
+
 /** common column settings */
 .column-right,
 .column-middle,
 .column-left {
-    float: left;
-    width: 100%;
-    position: relative;
+	float: left;
+	width: 100%;
+	position: relative;
 }
+
 .the-loop,
 .first-sidebar,
 .second-sidebar {
-    float: left;
-    position: relative;
-    padding: 0 0 1em 0;
-    overflow: hidden;
+	float: left;
+	position: relative;
+	padding: 0 0 1em 0;
+	overflow: hidden;
 }
+
 /** Full page settings */
 .full-page {
-    background: #fff;       /** page background colour */
+	background: #fff; /** page background colour */
 }
+
 .full-page .the-loop {
-    width: 96%;             /** page width minus left and right padding */
-    left: 2%;               /** page left padding */
+	width: 96%; /** page width minus left and right padding */
+	left: 2%; /** page left padding */
 }
 
 /** Header Widget Layout ----------------------------------------------------------- */
 .header-widget-area {
-    position: relative; /** This fixes the IE7 overflow hidden bug */
-    clear: both;
-    float: left;
-    width: 100%;        /** Width of whole section */
-    overflow: hidden;   /** This chops off any overhanging divs */
+	position: relative; /** This fixes the IE7 overflow hidden bug */
+	clear: both;
+	float: left;
+	width: 100%; /** Width of whole section */
+	overflow: hidden; /** This chops off any overhanging divs */
 }
 
 #header-sidebar-two,
 #header-sidebar-one,
 #header-sidebar-three {
-    float: left;
-    position: relative;
-    /**
-     * No left and right padding on columns, we just make them narrower instead
-     * only padding top and bottom is included here, make it whatever value you
-     * need.
-     */
-    padding: 0 0 1em 0;
-    overflow: hidden;
+	float: left;
+	position: relative;
+	/**
+	 * No left and right padding on columns, we just make them narrower instead
+	 * only padding top and bottom is included here, make it whatever value you
+	 * need.
+	 */
+	padding: 0 0 1em 0;
+	overflow: hidden;
 }
+
 /** 3 Column settings */
 .three-columns-header ul {
-    margin: 0 0 9px;        /** Remove default left margin */
+	margin: 0 0 9px; /** Remove default left margin */
 }
+
 .three-columns-header {
-    /** background: #eee;       /** Right column background colour */
+	/** background: #eee;       /** Right column background colour */
 }
+
 .three-columns-header .column-middle {
-    right: 33%;             /** Width of the right column */
-    /** background: #fff;       /** Center column background colour */
+	right: 33%; /** Width of the right column */
+	/** background: #fff;       /** Center column background colour */
 }
+
 .three-columns-header .column-left {
-    right: 33%;             /** Width of the middle column */
-    /** background: #f4f4f4;    /** Left column background colour */
+	right: 33%; /** Width of the middle column */
+	/** background: #f4f4f4;    /** Left column background colour */
 }
+
 .three-columns-header #header-sidebar-two {
-    width: 31%;             /** Width of center column content (column width minus padding on either side) */
-    left: 101%;             /** 100% plus left padding of center column */
+	width: 31%; /** Width of center column content (column width minus padding on either side) */
+	left: 101%; /** 100% plus left padding of center column */
 }
+
 .three-columns-header #header-sidebar-one {
-    width: 31%;             /** Width of left column content (column width minus padding on either side) */
-    left: 36%;              /** Width of (right column) plus (center column left and right padding) plus (left column left padding) */
+	width: 31%; /** Width of left column content (column width minus padding on either side) */
+	left: 36%; /** Width of (right column) plus (center column left and right padding) plus (left column left padding) */
 }
+
 .three-columns-header #header-sidebar-three {
-    width: 31%;             /** Width of right column content (column width minus padding on either side) */
-    left: 72%;              /** Please make note of the brackets here:
-        (100% - left column width)
-        plus (center column left and right padding)
-        plus (left column left and right padding)
-        plus (right column left padding) */
+	width: 31%; /** Width of right column content (column width minus padding on either side) */
+	left: 72%;
+	/** Please make note of the brackets here:
+(100% - left column width)
+plus (center column left and right padding)
+plus (left column left and right padding)
+plus (right column left padding) */
 }
 
 /** Footer Widget Layout ----------------------------------------------------------- */
 .footer-widget-area {
-    position: relative; /** This fixes the IE7 overflow hidden bug */
-    clear: both;
-    float: left;
-    width: 100%;        /** Width of whole section */
-    overflow: hidden;   /** This chops off any overhanging divs */
+	position: relative; /** This fixes the IE7 overflow hidden bug */
+	clear: both;
+	float: left;
+	width: 100%; /** Width of whole section */
+	overflow: hidden; /** This chops off any overhanging divs */
 }
 
 #footer-sidebar-two,
 #footer-sidebar-one,
 #footer-sidebar-three {
-    float: left;
-    position: relative;
-    /**
-     * No left and right padding on columns, we just make them narrower instead
-     * only padding top and bottom is included here, make it whatever value you
-     * need.
-     */
-    padding: 0 0 1em 0;
-    overflow: hidden;
+	float: left;
+	position: relative;
+	/**
+	 * No left and right padding on columns, we just make them narrower instead
+	 * only padding top and bottom is included here, make it whatever value you
+	 * need.
+	 */
+	padding: 0 0 1em 0;
+	overflow: hidden;
 }
+
 /** 3 Column settings */
 .three-columns-footer ul {
-    margin: 0 0 9px;        /** Remove default left margin */
+	margin: 0 0 9px; /** Remove default left margin */
 }
+
 .three-columns-footer {
-    /** background: #eee;       /** Right column background colour */
+	/** background: #eee;       /** Right column background colour */
 }
+
 .three-columns-footer .column-middle {
-    right: 33%;             /** Width of the right column */
-    /** background: #fff;       /** Center column background colour */
+	right: 33%; /** Width of the right column */
+	/** background: #fff;       /** Center column background colour */
 }
+
 .three-columns-footer .column-left {
-    right: 33%;             /** Width of the middle column */
-    /** background: #f4f4f4;    /** Left column background colour */
+	right: 33%; /** Width of the middle column */
+	/** background: #f4f4f4;    /** Left column background colour */
 }
+
 .three-columns-footer #footer-sidebar-two {
-    width: 31%;             /** Width of center column content (column width minus padding on either side) */
-    left: 101%;             /** 100% plus left padding of center column */
+	width: 31%; /** Width of center column content (column width minus padding on either side) */
+	left: 101%; /** 100% plus left padding of center column */
 }
+
 .three-columns-footer #footer-sidebar-one {
-    width: 31%;             /** Width of left column content (column width minus padding on either side) */
-    left: 36%;              /** Width of (right column) plus (center column left and right padding) plus (left column left padding) */
+	width: 31%; /** Width of left column content (column width minus padding on either side) */
+	left: 36%; /** Width of (right column) plus (center column left and right padding) plus (left column left padding) */
 }
+
 .three-columns-footer #footer-sidebar-three {
-    width: 31%;             /** Width of right column content (column width minus padding on either side) */
-    left: 72%;              /** Please make note of the brackets here:
-        (100% - left column width)
-        plus (center column left and right padding)
-        plus (left column left and right padding)
-        plus (right column left padding) */
+	width: 31%; /** Width of right column content (column width minus padding on either side) */
+	left: 72%;
+	/** Please make note of the brackets here:
+(100% - left column width)
+plus (center column left and right padding)
+plus (left column left and right padding)
+plus (right column left padding) */
 }
