@@ -30,14 +30,14 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version 1.1
- * @date    March 18, 2013
+ * @version     1.1
+ * @date        March 18, 2013
  * Added additional list wrapper around each comment type
  * Added Comment Tabs for each type (Comment, Pingback, and Trackback)
  * Fixed comments (only) count output
  *
- * @version 1.2
- * @date    July 21, 2013
+ * @version     1.2
+ * @date        July 21, 2013
  * Added conditional check if not post password required when displaying
  * Changed comments count to be display via a Comments class method
  * Moved `comments only tab`, `pingbacks only tab` and `trackbacks only tab`
@@ -53,35 +53,34 @@ global $opus_comments; ?>
 <!-- Show the comments -->
 <!-- Inspired by http://digwp.com/2010/02/separate-comments-pingbacks-trackbacks/ -->
 <div class="comments-wrapper">
-    <?php if ( ! post_password_required() && have_comments() ) {
+	<?php if ( ! post_password_required() && have_comments() ) { ?>
 
-        /** Call the global variables needed */ ?>
+		<h2 id="all-comments">
+			<?php $opus_comments->show_all_comments_count(); ?>
+		</h2><!-- #all-comments -->
 
-        <h2 id="all-comments">
-            <?php $opus_comments->show_all_comments_count(); ?>
-        </h2><!-- #all-comments -->
+		<div id="comment-tabs">
 
-        <div id="comment-tabs">
+			<ul id="comment-tabs-header">
 
-            <ul id="comment-tabs-header">
+				<?php
+				$opus_comments->comments_only_tab();
+				$opus_comments->pingbacks_only_tab();
+				$opus_comments->trackbacks_only_tab(); ?>
 
-                <?php
-                $opus_comments->comments_only_tab();
-                $opus_comments->pingbacks_only_tab();
-                $opus_comments->trackbacks_only_tab(); ?>
+			</ul>
 
-            </ul>
+			<?php
+			$opus_comments->comments_only_panel();
+			$opus_comments->pingbacks_only_panel();
+			$opus_comments->trackbacks_only_panel(); ?>
 
-            <?php
-            $opus_comments->comments_only_panel();
-            $opus_comments->pingbacks_only_panel();
-            $opus_comments->trackbacks_only_panel(); ?>
+		</div><!-- #comment-tabs -->
 
-        </div><!-- #comment-tabs -->
+	<?php
+	}
+	/** End if - have comments */
 
-    <?php
-    } /** End if - have comments */
-
-    comment_form(); ?>
+	comment_form(); ?>
 
 </div><!-- .comments-wrapper -->
