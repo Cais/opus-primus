@@ -186,12 +186,13 @@ blockquote:after {
     content: "";
 }
 
+blockquote cite:before {
+	content: "~";
+}
+
 cite {
     font-style: normal;
     font-size: 80%;
-}
-cite:before {
-    content: "~";
 }
 /** - End: Blockquote tags */
 

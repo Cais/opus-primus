@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised December 13, 2013
+Last revised December 21, 2013
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.3 ==
@@ -11,6 +11,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = CSS =
 * Re-Adjust `ul.nav-menu` and `.nav-menu` to `z-index: 3` for main menu
 * Reduced the citation font-size for better aesthetics
+* Change to only append to the `cite` tag when it is inside the `blockquote` tag
 
 = Miscellaneous =
 * Updated tags used in `style.css` header block to include responsive-layout and fluid-layout
