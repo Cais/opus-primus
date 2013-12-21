@@ -27,6 +27,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Extracted $post_title management from `post_breadcrumb` method into the `breadcrumb_post_title` method
 * Fixed issue with Gallery Post-Format being used when the `gallery` shortcode is not used.
 * Fixed undefined offset when there is no image found in post
+* Reformatted to be closer to (modified) WordPress Coding Standards - see https://gist.github.com/Cais/8023722
 
 = CSS =
 * Reduced all menu related elements with `z-index` property to a value of 1
