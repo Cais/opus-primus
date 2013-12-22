@@ -31,8 +31,8 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version 1.0.1
- * @date    February 21, 2013
+ * @version     1.0.1
+ * @date        February 21, 2013
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
  * Added 'opus_footer_after' action hook
@@ -44,10 +44,11 @@ do_action( 'opus_footer_before' );
 
 /** Call footer template based on post format */
 if ( is_singular() ) {
-    get_template_part( 'opus-primus-footer', get_post_format() );
+	get_template_part( 'opus-primus-footer', get_post_format() );
 } else {
-    get_template_part( 'opus-primus-footer' );
-} /** End if - is singular */
+	get_template_part( 'opus-primus-footer' );
+}
+/** End if - is singular */
 
 /** Add empty hook after footer */
 do_action( 'opus_footer_after' );

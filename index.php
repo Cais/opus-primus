@@ -35,15 +35,15 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version 1.2
- * @date    August 2013
+ * @version     1.2
+ * @date        August 2013
  *
- * @version 1.2.1
- * @date    August 4, 2013
+ * @version     1.2.1
+ * @date        August 4, 2013
  * Removed `translation-ready` tag
  *
- * @version 1.2.2
- * @date    October 2013
+ * @version     1.2.2
+ * @date        October 2013
  */
 
 global $opus_structures;
@@ -52,28 +52,28 @@ get_header();
 /** Add empty hook before content */
 do_action( 'opus_content_before' ); ?>
 
-<div class="content-wrapper cf">
+	<div class="content-wrapper cf">
 
-    <?php
-    /** Add empty hook at top of the content */
-    do_action( 'opus_content_top' );
+		<?php
+		/** Add empty hook at top of the content */
+		do_action( 'opus_content_top' );
 
-    /** Open the necessary layout CSS classes */
-    echo $opus_structures->layout_open();
+		/** Open the necessary layout CSS classes */
+		echo $opus_structures->layout_open();
 
-    /** The complete loop section */
-    $opus_structures->the_loop_wrapped();
+		/** The complete loop section */
+		$opus_structures->the_loop_wrapped();
 
-    /** Call the sidebar */
-    get_sidebar();
+		/** Call the sidebar */
+		get_sidebar();
 
-    /** Close the classes written by the layout_open call */
-    echo $opus_structures->layout_close();
+		/** Close the classes written by the layout_open call */
+		echo $opus_structures->layout_close();
 
-    /** Add empty hook at the bottom of the content */
-    do_action( 'opus_content_bottom' ); ?>
+		/** Add empty hook at the bottom of the content */
+		do_action( 'opus_content_bottom' ); ?>
 
-</div><!-- #content-wrapper -->
+	</div><!-- #content-wrapper -->
 
 <?php
 /** Add empty hook after the content */
