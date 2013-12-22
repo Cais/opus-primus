@@ -31,11 +31,11 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-jQuery( document ).ready( function( $ ) {
-    /** Note: $() will work as an alias for jQuery() inside of this function */
+jQuery(document).ready(function ($) {
+	/** Note: $() will work as an alias for jQuery() inside of this function */
 
-    $( '#comment-tabs').tabs({
-        selected: 0
-    });
+	$('#comment-tabs').tabs({
+		selected: 0
+	});
 
-} );
+});

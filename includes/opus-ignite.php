@@ -31,24 +31,24 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version 1.1
- * @date    March 9, 2013
+ * @version     1.1
+ * @date        March 9, 2013
  * Added call to 'Header' class
  *
- * @version 1.2
- * @date    July 19, 2013
+ * @version     1.2
+ * @date        July 19, 2013
  * Merged into `functions.php` retained for reference purposes only
  *
- * @todo Remove at version 1.3? (1.2)
+ * @todo        Remove at version 1.3? (1.2)
  */
 
 /** Set CONSTANTS */
-define( 'OPUS_INC',         get_template_directory()        . '/includes/' );
-define( 'OPUS_JS',          get_template_directory_uri()    . '/js/' );
-define( 'OPUS_CSS',         get_template_directory_uri()    . '/css/' );
-define( 'OPUS_IMAGES',      get_template_directory_uri()    . '/images/' );
-define( 'OPUS_STANZAS',     get_template_directory()        . '/stanzas/' );
-define( 'OPUS_STANZAS_URI', get_template_directory_uri()    . '/stanzas/' );
+define( 'OPUS_INC', get_template_directory() . '/includes/' );
+define( 'OPUS_JS', get_template_directory_uri() . '/js/' );
+define( 'OPUS_CSS', get_template_directory_uri() . '/css/' );
+define( 'OPUS_IMAGES', get_template_directory_uri() . '/images/' );
+define( 'OPUS_STANZAS', get_template_directory() . '/stanzas/' );
+define( 'OPUS_STANZAS_URI', get_template_directory_uri() . '/stanzas/' );
 
 /** Add Widgets */
 require_once( OPUS_INC . 'widgets.php' );

@@ -30,13 +30,13 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version 1.0.1
- * @date    February 21, 2013
+ * @version     1.0.1
+ * @date        February 21, 2013
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
  *
- * @version 1.2
- * @date    July 24, 2013
+ * @version     1.2
+ * @date        July 24, 2013
  * Added conditional for showing the page byline details
  */
 
@@ -47,80 +47,88 @@ get_header( 'page' );
 /** Add empty hook before content */
 do_action( 'opus_content_before' ); ?>
 
-<div class="content-wrapper cf">
+	<div class="content-wrapper cf">
 
-    <?php
-    /** Add empty hook at top of the content */
-    do_action( 'opus_content_top' );
+		<?php
+		/** Add empty hook at top of the content */
+		do_action( 'opus_content_top' );
 
-    /** Open the necessary layout CSS classes */
-    echo $opus_structures->layout_open();
+		/** Open the necessary layout CSS classes */
+		echo $opus_structures->layout_open();
 
-    /** Add empty hook before the_Loop */
-    do_action( 'opus_the_loop_before' ); ?>
+		/** Add empty hook before the_Loop */
+		do_action( 'opus_the_loop_before' ); ?>
 
-    <div class="the-loop">
+		<div class="the-loop">
 
-        <?php
-        /** Add before loop sidebar */
-        if ( is_active_sidebar( 'before-loop' ) ) { dynamic_sidebar( 'before-loop' ); }
+			<?php
+			/** Add before loop sidebar */
+			if ( is_active_sidebar( 'before-loop' ) ) {
+				dynamic_sidebar( 'before-loop' );
+			}
 
-        /** the_Loop - Starts */
-        if ( have_posts() ) {
-            while ( have_posts() ) {
-                the_post(); ?>
+			/** the_Loop - Starts */
+			if ( have_posts() ) {
+				while ( have_posts() ) {
+					the_post(); ?>
 
-                <div <?php post_class(); ?>>
+					<div <?php post_class(); ?>>
 
-                    <?php
-                    $opus_posts->post_title();
-                    $opus_images->featured_thumbnail( $size = 'full', $class = 'aligncenter' );
-                    $opus_posts->post_content();
+						<?php
+						$opus_posts->post_title();
+						$opus_images->featured_thumbnail( $size = 'full', $class = 'aligncenter' );
+						$opus_posts->post_content();
 
-                    /** Show page byline details */
-                    if ( $opus_defaults->show_page_byline() ) {
-                        $opus_posts->post_byline( array( 'show_mod_author' => true ) );
-                    } else {
-                        $opus_posts->post_byline( array( 'show_mod_author' => true, 'echo' => false ) );
-                    } /** End if - show page byline */
+						/** Show page byline details */
+						if ( $opus_defaults->show_page_byline() ) {
+							$opus_posts->post_byline( array( 'show_mod_author' => true ) );
+						} else {
+							$opus_posts->post_byline( array( 'show_mod_author' => true, 'echo' => false ) );
+						}
+						/** End if - show page byline */
 
-                    $opus_authors->post_author( array(
-                        'show_mod_author'   => true,
-                        'show_author_url'   => true,
-                        'show_author_email' => true,
-                        'show_author_desc'  => true,
-                    ) ); ?>
+						$opus_authors->post_author( array(
+							'show_mod_author'   => true,
+							'show_author_url'   => true,
+							'show_author_email' => true,
+							'show_author_desc'  => true,
+						) ); ?>
 
-                </div><!-- post classes -->
+					</div><!-- post classes -->
 
-            <?php
-            } /** End while - have posts */
-        } else {
-            $opus_structures->no_search_results();
-        } /** End if - have posts */
-        /** the_Loop - Ends */
+				<?php
+				}
+				/** End while - have posts */
+			} else {
+				$opus_structures->no_search_results();
+			}
+			/** End if - have posts */
+			/** the_Loop - Ends */
 
-        /** Add after loop sidebar */
-        if ( is_active_sidebar( 'after-loop' ) ) { dynamic_sidebar( 'after-loop' ); }
+			/** Add after loop sidebar */
+			if ( is_active_sidebar( 'after-loop' ) ) {
+				dynamic_sidebar( 'after-loop' );
+			}
 
-        /** Start comments section */
-        comments_template( '/comments.php', true ); ?>
+			/** Start comments section */
+			comments_template( '/comments.php', true ); ?>
 
-    </div><!-- #the-loop -->
+		</div>
+		<!-- #the-loop -->
 
-    <?php
-    /** Add empty hook after the_loop */
-    do_action( 'opus_the_loop_after' );
+		<?php
+		/** Add empty hook after the_loop */
+		do_action( 'opus_the_loop_after' );
 
-    get_sidebar( 'page' );
+		get_sidebar( 'page' );
 
-    /** Close the classes written by the layout_open call */
-    echo $opus_structures->layout_close();
+		/** Close the classes written by the layout_open call */
+		echo $opus_structures->layout_close();
 
-    /** Add empty hook at the bottom of the content */
-    do_action( 'opus_content_bottom' ); ?>
+		/** Add empty hook at the bottom of the content */
+		do_action( 'opus_content_bottom' ); ?>
 
-</div><!-- #content-wrapper -->
+	</div><!-- #content-wrapper -->
 
 <?php
 /** Add empty hook after the content */

@@ -42,8 +42,8 @@
  */
 ?>
 
-<!DOCTYPE html>
-<?php do_action( 'opus_html_before' ); ?>
+	<!DOCTYPE html>
+	<?php do_action( 'opus_html_before' ); ?>
 <html <?php language_attributes(); ?>>
 	<head>
 		<?php do_action( 'opus_head_top' ); ?>

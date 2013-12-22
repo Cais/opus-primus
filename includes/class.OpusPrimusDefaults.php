@@ -31,43 +31,60 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version 1.0.1
- * @date    February 18, 2013
+ * @version     1.0.1
+ * @date        February 18, 2013
  * Re-order methods: alphabetical
  *
- * @version 1.2
- * @date    July 24, 2013
+ * @version     1.2
+ * @date        July 24, 2013
  * Added `show_page_byline` default
  */
 
 if ( ! class_exists( 'OpusPrimusDefaults' ) ) {
-    /**
-     * The easiest method to use this in a Child-Theme would be:
-     * - Copy the entire OpusPrimusDefaults class
-     * - Copy the $opus_defaults line
-     * - Put both into the Child-Theme's 'functions.php' file
-     * - Then change the defaults as needed
-     *
-     * Note the conditional wrapper will allow the Child-Theme version of the
-     * class to be used while this version is ignored.
-     *
-     * Also to note, each default can be "toggled" by adding an exclamation mark
-     * (programmatic not) in front of the instance of the method call.
-     */
-    class OpusPrimusDefaults {
-        /** Constructor */
-        function __construct() {}
+	/**
+	 * The easiest method to use this in a Child-Theme would be:
+	 * - Copy the entire OpusPrimusDefaults class
+	 * - Copy the $opus_defaults line
+	 * - Put both into the Child-Theme's 'functions.php' file
+	 * - Then change the defaults as needed
+	 *
+	 * Note the conditional wrapper will allow the Child-Theme version of the
+	 * class to be used while this version is ignored.
+	 *
+	 * Also to note, each default can be "toggled" by adding an exclamation mark
+	 * (programmatic not) in front of the instance of the method call.
+	 */
+	class OpusPrimusDefaults {
+		/** Constructor */
+		function __construct() {
+		}
 
-        /** Post Byline and Post Author parameters */
-        function show_author_desc() { return true; }
-        function show_author_email() { return true; }
-        function show_author_url() { return true; }
-        function show_page_byline() { return false; }
-        function show_mod_author() { return true; }
+		/** Post Byline and Post Author parameters */
+		function show_author_desc() {
+			return true;
+		}
 
-    } /** End Opus Primus Defaults class */
+		function show_author_email() {
+			return true;
+		}
 
-    /** @var $opus_defaults - new instance of class */
-    $opus_defaults = new OpusPrimusDefaults();
+		function show_author_url() {
+			return true;
+		}
+
+		function show_page_byline() {
+			return false;
+		}
+
+		function show_mod_author() {
+			return true;
+		}
+
+	}
+
+	/** End Opus Primus Defaults class */
+
+	/** @var $opus_defaults - new instance of class */
+	$opus_defaults = new OpusPrimusDefaults();
 
 } /** End if - class exists */

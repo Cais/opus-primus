@@ -31,8 +31,8 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version 1.0.1
- * @date    February 21, 2013
+ * @version     1.0.1
+ * @date        February 21, 2013
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
  */
@@ -41,32 +41,46 @@
 do_action( 'opus_sidebar_header_before' );
 
 /** Only resolve public facing space if there is an active header widget area. */
-if ( is_active_sidebar( 'header-middle' ) || is_active_sidebar( 'header-left' ) || is_active_sidebar( 'header-right' ) ) { ?>
+if ( is_active_sidebar( 'header-middle' ) || is_active_sidebar( 'header-left' ) || is_active_sidebar( 'header-right' ) ) {
+	?>
 
-    <div id="header-sidebar">
-        <div class="header-widget-area three-columns-header">
-            <div class="column-middle">
-                <div class="column-left">
+	<div id="header-sidebar">
+		<div class="header-widget-area three-columns-header">
+			<div class="column-middle">
+				<div class="column-left">
 
-                    <ul id="header-sidebar-two">
-                        <?php if ( is_active_sidebar( 'header-middle' ) ) { dynamic_sidebar( 'header-middle' ); } ?>
-                    </ul><!-- #header-sidebar-two -->
+					<ul id="header-sidebar-two">
+						<?php if ( is_active_sidebar( 'header-middle' ) ) {
+							dynamic_sidebar( 'header-middle' );
+						} ?>
+					</ul>
+					<!-- #header-sidebar-two -->
 
-                    <ul id="header-sidebar-one">
-                        <?php if ( is_active_sidebar( 'header-left' ) ) { dynamic_sidebar( 'header-left' ); } ?>
-                    </ul><!-- #header-sidebar-one -->
+					<ul id="header-sidebar-one">
+						<?php if ( is_active_sidebar( 'header-left' ) ) {
+							dynamic_sidebar( 'header-left' );
+						} ?>
+					</ul>
+					<!-- #header-sidebar-one -->
 
-                    <ul id="header-sidebar-three">
-                        <?php if ( is_active_sidebar( 'header-right' ) ) { dynamic_sidebar( 'header-right' ); } ?>
-                    </ul><!-- #header-sidebar-three -->
+					<ul id="header-sidebar-three">
+						<?php if ( is_active_sidebar( 'header-right' ) ) {
+							dynamic_sidebar( 'header-right' );
+						} ?>
+					</ul>
+					<!-- #header-sidebar-three -->
 
-                </div><!-- .column-left -->
-            </div><!-- .column-middle -->
-        </div><!-- .header-widget-area.three-columns-header -->
-    </div><!-- #header-sidebar -->
+				</div>
+				<!-- .column-left -->
+			</div>
+			<!-- .column-middle -->
+		</div>
+		<!-- .header-widget-area.three-columns-header -->
+	</div><!-- #header-sidebar -->
 
 <?php
-} /** End if - is active sidebar */
+}
+/** End if - is active sidebar */
 
 /** Add empty hook after Sidebar-Header */
 do_action( 'opus_sidebar_header_after' );

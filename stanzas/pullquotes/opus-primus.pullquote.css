@@ -37,32 +37,32 @@
 
 span.pullquote,
 span.pullquote-left {
-    border-bottom: 5px solid #eeeeee;
-    border-top: 5px solid #eeeeee;
-    font-family: "Merienda", cursive;
-    font-size: 18px;
-    line-height: 24px;
-    width: 30%;
+	border-bottom: 5px solid #eeeeee;
+	border-top: 5px solid #eeeeee;
+	font-family: "Merienda", cursive;
+	font-size: 18px;
+	line-height: 24px;
+	width: 30%;
 }
 
 span.pullquote {
-    float: right;
-    margin-left: 10px;
-    padding: 10px 0 10px 15px;
+	float: right;
+	margin-left: 10px;
+	padding: 10px 0 10px 15px;
 }
 
 span.pullquote-left {
-    float: left;
-    margin-right: 10px;
-    padding: 10px 15px 10px 0;
+	float: left;
+	margin-right: 10px;
+	padding: 10px 15px 10px 0;
 }
 
 span.pq cite,
 span.pql cite {
-    display: none;
+	display: none;
 }
 
 span.pullquote cite,
 span.pullquote-left cite {
-    display: inline;
+	display: inline;
 }

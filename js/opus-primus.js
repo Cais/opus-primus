@@ -39,32 +39,32 @@
  * Removed `table-stripe` class from Post-Format: Image tables
  */
 
-jQuery( document ).ready( function( $ ) {
-    /** Note: $() will work as an alias for jQuery() inside of this function */
+jQuery(document).ready(function ($) {
+	/** Note: $() will work as an alias for jQuery() inside of this function */
 
-    /** Add a drop shadow to make gallery images pop */
-    $( '.format-gallery img.wp-post-image, .format-gallery img.attachment-thumbnail, .format-gallery .featured-image img' ).addClass( 'image-shadow' );
+	/** Add a drop shadow to make gallery images pop */
+	$('.format-gallery img.wp-post-image, .format-gallery img.attachment-thumbnail, .format-gallery .featured-image img').addClass('image-shadow');
 
-    /** Add a drop shadow to single attached images */
-    $( '.single .attached-image img, span.archive-image img' ).addClass( 'image-shadow' );
+	/** Add a drop shadow to single attached images */
+	$('.single .attached-image img, span.archive-image img').addClass('image-shadow');
 
-    /** Wrap the comment reply link text in a button */
-    $( 'div.reply a' ).wrapInner( '<button class="reply-button" />' );
+	/** Wrap the comment reply link text in a button */
+	$('div.reply a').wrapInner('<button class="reply-button" />');
 
-    /**
-     * Wrap specific anchors with link-symbol class; CSS will provide symbol
-     * - Post-Format: Link
-     * - Linked Image Message
-     */
-    $( 'div.post.format-link .post-content p a, div.linked-image-message').wrapInner( '<span class="link-symbol" />' );
+	/**
+	 * Wrap specific anchors with link-symbol class; CSS will provide symbol
+	 * - Post-Format: Link
+	 * - Linked Image Message
+	 */
+	$('div.post.format-link .post-content p a, div.linked-image-message').wrapInner('<span class="link-symbol" />');
 
-    /** Wrap post-format:audio anchors with audio-symbol class */
-    $( 'div.post.format-audio .post-content a').wrapInner( '<span class="audio-symbol" />' );
+	/** Wrap post-format:audio anchors with audio-symbol class */
+	$('div.post.format-audio .post-content a').wrapInner('<span class="audio-symbol" />');
 
-    /** Add a class to the form-allowed-tags code box */
-    $( 'p.form-allowed-tags code' ).addClass( 'form-allowed-tags-code-box' );
+	/** Add a class to the form-allowed-tags code box */
+	$('p.form-allowed-tags code').addClass('form-allowed-tags-code-box');
 
-    /** Add a class to table rows to create a striped effect; except in Post-Format: Image posts */
-    $( 'tr:even' ).addClass( 'table-stripe' );
-    $( '.format-image tr:even').removeClass( 'table-stripe' );
-} );
+	/** Add a class to table rows to create a striped effect; except in Post-Format: Image posts */
+	$('tr:even').addClass('table-stripe');
+	$('.format-image tr:even').removeClass('table-stripe');
+});

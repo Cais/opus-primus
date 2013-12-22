@@ -36,18 +36,23 @@
 
 class OpusPrimusNewCustomStanza {
 
-    function __construct() {
-        /** Test only - should not use as is */
-        // add_action( 'opus_the_content_before', array( $this, 'test' ) );
+	function __construct() {
+		/** Test only - should not use as is */
+		// add_action( 'opus_the_content_before', array( $this, 'test' ) );
 
-    } /** End function - constructor */
+	}
+
+	/** End function - constructor */
 
 
-    function test(){
-        echo 'New Custom Stanza ... the class test!!!';
-    } /** End function - test */
+	function test() {
+		echo 'New Custom Stanza ... the class test!!!';
+	}
+	/** End function - test */
 
-} /** End class - opus primus new stanza */
+}
+
+/** End class - opus primus new stanza */
 
 
 /** @var $opus_new_stanza - new class instance */

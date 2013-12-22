@@ -86,7 +86,7 @@ main,
 nav,
 section,
 summary {
-    display: block;
+	display: block;
 }
 
 /**
@@ -96,7 +96,7 @@ summary {
 audio,
 canvas,
 video {
-    display: inline-block;
+	display: inline-block;
 }
 
 /**
@@ -105,8 +105,8 @@ video {
  */
 
 audio:not([controls]) {
-    display: none;
-    height: 0;
+	display: none;
+	height: 0;
 }
 
 /**
@@ -114,7 +114,7 @@ audio:not([controls]) {
  */
 
 [hidden] {
-    display: none;
+	display: none;
 }
 
 /* ==========================================================================
@@ -128,9 +128,9 @@ audio:not([controls]) {
  */
 
 html {
-    font-family: sans-serif; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
-    -ms-text-size-adjust: 100%; /* 2 */
+	font-family: sans-serif; /* 1 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+	-ms-text-size-adjust: 100%; /* 2 */
 }
 
 /**
@@ -138,7 +138,7 @@ html {
  */
 
 body {
-    margin: 0;
+	margin: 0;
 }
 
 /* ==========================================================================
@@ -150,7 +150,7 @@ body {
  */
 
 a:focus {
-    outline: thin dotted;
+	outline: thin dotted;
 }
 
 /**
@@ -159,7 +159,7 @@ a:focus {
 
 a:active,
 a:hover {
-    outline: 0;
+	outline: 0;
 }
 
 /* ==========================================================================
@@ -172,8 +172,8 @@ a:hover {
  */
 
 h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
+	font-size: 2em;
+	margin: 0.67em 0;
 }
 
 /**
@@ -181,7 +181,7 @@ h1 {
  */
 
 abbr[title] {
-    border-bottom: 1px dotted;
+	border-bottom: 1px dotted;
 }
 
 /**
@@ -190,7 +190,7 @@ abbr[title] {
 
 b,
 strong {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 /**
@@ -198,7 +198,7 @@ strong {
  */
 
 dfn {
-    font-style: italic;
+	font-style: italic;
 }
 
 /**
@@ -206,9 +206,9 @@ dfn {
  */
 
 hr {
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    height: 0;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	height: 0;
 }
 
 /**
@@ -216,8 +216,8 @@ hr {
  */
 
 mark {
-    background: #ff0;
-    color: #000;
+	background: #ff0;
+	color: #000;
 }
 
 /**
@@ -228,8 +228,8 @@ code,
 kbd,
 pre,
 samp {
-    font-family: monospace, serif;
-    font-size: 1em;
+	font-family: monospace, serif;
+	font-size: 1em;
 }
 
 /**
@@ -237,7 +237,7 @@ samp {
  */
 
 pre {
-    white-space: pre-wrap;
+	white-space: pre-wrap;
 }
 
 /**
@@ -245,7 +245,7 @@ pre {
  */
 
 q {
-    quotes: "\201C" "\201D" "\2018" "\2019";
+	quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
 /**
@@ -253,7 +253,7 @@ q {
  */
 
 small {
-    font-size: 80%;
+	font-size: 80%;
 }
 
 /**
@@ -262,18 +262,18 @@ small {
 
 sub,
 sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
 }
 
 sup {
-    top: -0.5em;
+	top: -0.5em;
 }
 
 sub {
-    bottom: -0.25em;
+	bottom: -0.25em;
 }
 
 /* ==========================================================================
@@ -285,7 +285,7 @@ sub {
  */
 
 img {
-    border: 0;
+	border: 0;
 }
 
 /**
@@ -293,7 +293,7 @@ img {
  */
 
 svg:not(:root) {
-    overflow: hidden;
+	overflow: hidden;
 }
 
 /* ==========================================================================
@@ -305,7 +305,7 @@ svg:not(:root) {
  */
 
 figure {
-    margin: 0;
+	margin: 0;
 }
 
 /* ==========================================================================
@@ -317,9 +317,9 @@ figure {
  */
 
 fieldset {
-    border: 1px solid #c0c0c0;
-    margin: 0 2px;
-    padding: 0.35em 0.625em 0.75em;
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
 }
 
 /**
@@ -328,8 +328,8 @@ fieldset {
  */
 
 legend {
-    border: 0; /* 1 */
-    padding: 0; /* 2 */
+	border: 0; /* 1 */
+	padding: 0; /* 2 */
 }
 
 /**
@@ -342,9 +342,9 @@ button,
 input,
 select,
 textarea {
-    font-family: inherit; /* 1 */
-    font-size: 100%; /* 2 */
-    margin: 0; /* 3 */
+	font-family: inherit; /* 1 */
+	font-size: 100%; /* 2 */
+	margin: 0; /* 3 */
 }
 
 /**
@@ -354,7 +354,7 @@ textarea {
 
 button,
 input {
-    line-height: normal;
+	line-height: normal;
 }
 
 /**
@@ -366,7 +366,7 @@ input {
 
 button,
 select {
-    text-transform: none;
+	text-transform: none;
 }
 
 /**
@@ -381,8 +381,8 @@ button,
 html input[type="button"], /* 1 */
 input[type="reset"],
 input[type="submit"] {
-    -webkit-appearance: button; /* 2 */
-    cursor: pointer; /* 3 */
+	-webkit-appearance: button; /* 2 */
+	cursor: pointer; /* 3 */
 }
 
 /**
@@ -391,7 +391,7 @@ input[type="submit"] {
 
 button[disabled],
 html input[disabled] {
-    cursor: default;
+	cursor: default;
 }
 
 /**
@@ -401,8 +401,8 @@ html input[disabled] {
 
 input[type="checkbox"],
 input[type="radio"] {
-    box-sizing: border-box; /* 1 */
-    padding: 0; /* 2 */
+	box-sizing: border-box; /* 1 */
+	padding: 0; /* 2 */
 }
 
 /**
@@ -412,10 +412,10 @@ input[type="radio"] {
  */
 
 input[type="search"] {
-    -webkit-appearance: textfield; /* 1 */
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box; /* 2 */
-    box-sizing: content-box;
+	-webkit-appearance: textfield; /* 1 */
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box; /* 2 */
+	box-sizing: content-box;
 }
 
 /**
@@ -425,7 +425,7 @@ input[type="search"] {
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
+	-webkit-appearance: none;
 }
 
 /**
@@ -434,8 +434,8 @@ input[type="search"]::-webkit-search-decoration {
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-    border: 0;
-    padding: 0;
+	border: 0;
+	padding: 0;
 }
 
 /**
@@ -444,8 +444,8 @@ input::-moz-focus-inner {
  */
 
 textarea {
-    overflow: auto; /* 1 */
-    vertical-align: top; /* 2 */
+	overflow: auto; /* 1 */
+	vertical-align: top; /* 2 */
 }
 
 /* ==========================================================================
@@ -457,35 +457,74 @@ textarea {
  */
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
+
 /** End: normalize.css ------------------------------------------------------ */
 
 /** Minimum WordPress Style Requirements ------------------------------------ */
-div.aligncenter, .aligncenter, .center { margin: 0 auto; }
-.alignleft, .left { float: left; text-align: left; }
-.alignright, .right { float: right; text-align: right; }
-img.aligncenter, img.center { clear: both; display: block; }
-img.alignleft, img.left { display: inline; margin: 0 8px 8px 0; }
-img.alignright, img.right { display: inline; margin: 0 0 8px 8px; }
-.wp-caption {
-    background-color: #f3f3f3;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    /* margin: 10px; */
-    padding-top: 4px;
-    text-align: center;
-}
-.wp-caption img { margin: 0; padding: 0; border: 0 none; }
-.wp-caption p.wp-caption-text {
-    font-size: 11px;
-    line-height: 17px;
-    margin: 0;
-    padding: 0 4px 5px;
+div.aligncenter, .aligncenter, .center {
+	margin: 0 auto;
 }
 
-.sticky { /* Required by WordPress - may be defined in another section */ }
-.gallery-caption { /* Required by WordPress - may be defined in another section */ }
-.bypostauthor { /* Required by WordPress - may be defined in another section */ }
+.alignleft, .left {
+	float: left;
+	text-align: left;
+}
+
+.alignright, .right {
+	float: right;
+	text-align: right;
+}
+
+img.aligncenter, img.center {
+	clear: both;
+	display: block;
+}
+
+img.alignleft, img.left {
+	display: inline;
+	margin: 0 8px 8px 0;
+}
+
+img.alignright, img.right {
+	display: inline;
+	margin: 0 0 8px 8px;
+}
+
+.wp-caption {
+	background-color: #f3f3f3;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	/* margin: 10px; */
+	padding-top: 4px;
+	text-align: center;
+}
+
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	line-height: 17px;
+	margin: 0;
+	padding: 0 4px 5px;
+}
+
+.sticky {
+	/* Required by WordPress - may be defined in another section */
+}
+
+.gallery-caption {
+	/* Required by WordPress - may be defined in another section */
+}
+
+.bypostauthor {
+	/* Required by WordPress - may be defined in another section */
+}
+
 /** End: Minimum WordPress Style Requirements ------------------------------- */

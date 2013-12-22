@@ -30,8 +30,8 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version 1.0.1
- * @date    February 21, 2013
+ * @version     1.0.1
+ * @date        February 21, 2013
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
  */
@@ -42,17 +42,23 @@ do_action( 'opus_sidebars_before' );
 /** Add empty hook before first sidebar */
 do_action( 'opus_first_sidebar_before' ); ?>
 
-<div class="first-sidebar">
+	<div class="first-sidebar">
 
-    <ul id="sidebar-one">
-        <?php if ( is_active_sidebar( 'first-widget' ) ) { dynamic_sidebar( 'first-widget' ); } ?>
-    </ul><!-- #sidebar-one -->
+		<ul id="sidebar-one">
+			<?php if ( is_active_sidebar( 'first-widget' ) ) {
+				dynamic_sidebar( 'first-widget' );
+			} ?>
+		</ul>
+		<!-- #sidebar-one -->
 
-    <ul id="sidebar-two">
-        <?php if ( is_active_sidebar( 'second-widget' ) ) { dynamic_sidebar( 'second-widget' ); } ?>
-    </ul><!-- #sidebar-two -->
+		<ul id="sidebar-two">
+			<?php if ( is_active_sidebar( 'second-widget' ) ) {
+				dynamic_sidebar( 'second-widget' );
+			} ?>
+		</ul>
+		<!-- #sidebar-two -->
 
-</div><!-- #first-sidebar -->
+	</div><!-- #first-sidebar -->
 
 <?php
 /** Add empty hook after first sidebar */
@@ -61,17 +67,23 @@ do_action( 'opus_first_sidebar_after' );
 /** Add empty hook before second sidebar */
 do_action( 'opus_second_sidebar_before' ); ?>
 
-<div class="second-sidebar">
+	<div class="second-sidebar">
 
-    <ul id="sidebar-three">
-        <?php if ( is_active_sidebar( 'third-widget' ) ) { dynamic_sidebar( 'third-widget' ); } ?>
-    </ul><!-- #sidebar-three -->
+		<ul id="sidebar-three">
+			<?php if ( is_active_sidebar( 'third-widget' ) ) {
+				dynamic_sidebar( 'third-widget' );
+			} ?>
+		</ul>
+		<!-- #sidebar-three -->
 
-    <ul id="sidebar-four">
-        <?php if ( is_active_sidebar( 'fourth-widget' ) ) { dynamic_sidebar( 'fourth-widget' ); } ?>
-    </ul><!-- #sidebar-four -->
+		<ul id="sidebar-four">
+			<?php if ( is_active_sidebar( 'fourth-widget' ) ) {
+				dynamic_sidebar( 'fourth-widget' );
+			} ?>
+		</ul>
+		<!-- #sidebar-four -->
 
-</div><!-- #second-sidebar -->
+	</div><!-- #second-sidebar -->
 
 <?php
 /** Add empty hook after second sidebar */

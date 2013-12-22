@@ -31,46 +31,49 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version 1.2
- * @date    April 20, 2013
+ * @version     1.2
+ * @date        April 20, 2013
  * Adjusted conditional displaying the `featured_image`
  */
 
 /** Call the class variables */
 global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_images, $opus_authors;
 
-/** Display the post */ ?>
-<div <?php post_class(); ?>>
+/** Display the post */
+?>
+	<div <?php post_class(); ?>>
 
-    <?php
-    /** @var $anchor - set value for use in post_byline and meta_tags */
-    $anchor = __( 'Said', 'opusprimus' );
-    $opus_posts->post_byline( array(
-        'show_mod_author'   => $opus_defaults->show_mod_author(),
-        'anchor'            => $anchor,
-        'sticky_flag'       => __( 'Important', 'opusprimus' )
-    ) );
-    $opus_posts->post_title();
+		<?php
+		/** @var $anchor - set value for use in post_byline and meta_tags */
+		$anchor = __( 'Said', 'opusprimus' );
+		$opus_posts->post_byline( array(
+			'show_mod_author' => $opus_defaults->show_mod_author(),
+			'anchor'          => $anchor,
+			'sticky_flag'     => __( 'Important', 'opusprimus' )
+		) );
+		$opus_posts->post_title();
 
-    if ( ! is_single() ) {
-        $opus_comments->comments_link();
-        $opus_images->featured_thumbnail();
-    } /** End if - not is single */
+		if ( ! is_single() ) {
+			$opus_comments->comments_link();
+			$opus_images->featured_thumbnail();
+		}
+		/** End if - not is single */
 
-    $opus_posts->post_content();
-    $opus_navigation->multiple_pages_link( array(), $preface = __( 'Pages:', 'opusprimus' ) );
-    $opus_posts->meta_tags( $anchor );
-    $opus_posts->post_coda();
-    if ( is_single() ) {
-        $opus_authors->post_author( array(
-            'show_mod_author'   => $opus_defaults->show_mod_author(),
-            'show_author_url'   => $opus_defaults->show_author_url(),
-            'show_author_email' => $opus_defaults->show_author_email(),
-            'show_author_desc'  => $opus_defaults->show_author_desc(),
-        ) );
-    } /** End if - is single */ ?>
+		$opus_posts->post_content();
+		$opus_navigation->multiple_pages_link( array(), $preface = __( 'Pages:', 'opusprimus' ) );
+		$opus_posts->meta_tags( $anchor );
+		$opus_posts->post_coda();
+		if ( is_single() ) {
+			$opus_authors->post_author( array(
+				'show_mod_author'   => $opus_defaults->show_mod_author(),
+				'show_author_url'   => $opus_defaults->show_author_url(),
+				'show_author_email' => $opus_defaults->show_author_email(),
+				'show_author_desc'  => $opus_defaults->show_author_desc(),
+			) );
+		} /** End if - is single */
+		?>
 
-</div><!-- post classes -->
+	</div><!-- post classes -->
 
 <?php
 $opus_comments->wrapped_comments_template();

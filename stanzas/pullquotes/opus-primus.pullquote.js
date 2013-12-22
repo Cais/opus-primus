@@ -35,25 +35,25 @@
  * Added scripting to have left side Pull Quotes
  */
 
-jQuery( document ).ready( function( $ ) {
-    /** Note: $() will work as an alias for jQuery() inside of this function */
+jQuery(document).ready(function ($) {
+	/** Note: $() will work as an alias for jQuery() inside of this function */
 
-    /** Pull Quotes on (default) right side */
-    $( 'span.pq' ).each( function() {
-        var $parentParagraph = $(this).parent( 'p' );
-        $parentParagraph.css( 'position', 'relative' );
-        $(this).clone()
-            .addClass( 'pullquote' )
-            .prependTo( $parentParagraph );
-    } );
+	/** Pull Quotes on (default) right side */
+	$('span.pq').each(function () {
+		var $parentParagraph = $(this).parent('p');
+		$parentParagraph.css('position', 'relative');
+		$(this).clone()
+			.addClass('pullquote')
+			.prependTo($parentParagraph);
+	});
 
-    /** Pull Quotes on left side */
-    $( 'span.pql' ).each( function() {
-        var $parentParagraph = $(this).parent( 'p' );
-        $parentParagraph.css( 'position', 'relative' );
-        $(this).clone()
-            .addClass( 'pullquote-left' )
-            .prependTo( $parentParagraph );
-    } );
+	/** Pull Quotes on left side */
+	$('span.pql').each(function () {
+		var $parentParagraph = $(this).parent('p');
+		$parentParagraph.css('position', 'relative');
+		$(this).clone()
+			.addClass('pullquote-left')
+			.prependTo($parentParagraph);
+	});
 
-} );
+});

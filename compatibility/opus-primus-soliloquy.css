@@ -32,9 +32,15 @@
  */
 
 /** Shift the Opus Primus Menu higher into the z */
-ul.nav-menu { z-index: 4 !important; }
+ul.nav-menu {
+	z-index: 4 !important;
+}
 
 /** Force the Soliloquy navigation down from 30 */
-ol.soliloquy-control-nav.soliloquy-control-paging { z-index: 3 !important; }
+ol.soliloquy-control-nav.soliloquy-control-paging {
+	z-index: 3 !important;
+}
 
-.soliloquy { clear: both; }
+.soliloquy {
+	clear: both;
+}

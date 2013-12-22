@@ -32,334 +32,358 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version 1.0.1
- * @date    February 21, 2013
+ * @version     1.0.1
+ * @date        February 21, 2013
  * Re-order methods: alphabetical
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
  */
 
 class OpusPrimusNavigation {
-    /** Construct */
-    function __construct() {}
+	/** Construct */
+	function __construct() {
+	}
 
-    /**
-     * Comments Navigation
-     * Displays a link between pages of comments
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @uses    do_action
-     * @uses    next_comments_link
-     * @uses    previous_comments_link
-     */
-    function comments_navigation() {
-        /** Add empty hook before comments link */
-        do_action( 'opus_comments_link_before' ); ?>
+	/**
+	 * Comments Navigation
+	 * Displays a link between pages of comments
+	 *
+	 * @package OpusPrimus
+	 * @since   0.1
+	 *
+	 * @uses    do_action
+	 * @uses    next_comments_link
+	 * @uses    previous_comments_link
+	 */
+	function comments_navigation() {
+		/** Add empty hook before comments link */
+		do_action( 'opus_comments_link_before' ); ?>
 
-        <p class="navigation comment-link cf">
-            <span class="left"><?php previous_comments_link() ?></span>
-            <span class="right"><?php next_comments_link() ?></span>
-        </p>
+		<p class="navigation comment-link cf">
+			<span class="left"><?php previous_comments_link() ?></span>
+			<span class="right"><?php next_comments_link() ?></span>
+		</p>
 
-        <?php
-        /** Add empty hook after comments link */
-        do_action( 'opus_comments_link_after' );
+		<?php
+		/** Add empty hook after comments link */
+		do_action( 'opus_comments_link_after' );
 
-    } /** End function - comments navigation */
+	}
 
-
-    /**
-     * List Pages
-     * Callback function for the wp_nav_menu call; accepts wp_nav_menu arguments
-     * passed through the callback function.
-     *
-     * @link    http://codex.wordpress.org/Function_Reference/wp_page_menu
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @param   string|array $page_menu_args
-     *
-     * @uses    wp_list_pages
-     * @uses    wp_parse_args
-     */
-    function list_pages( $page_menu_args ) {
-        $defaults = array(
-            'title_li'  => '',
-        );
-        $page_menu_args = wp_parse_args( (array) $defaults, $page_menu_args );
-
-        echo '<ul class="nav-menu">';
-            wp_list_pages( $page_menu_args );
-        echo '</ul><!-- .nav-menu -->';
-
-    } /** End function - list pages */
+	/** End function - comments navigation */
 
 
-    /**
-     * Image Navigation
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @uses    __
-     * @uses    do_action
-     * @uses    next_image_link
-     * @uses    previous_image_link
-     */
-    function image_nav() {
-        /** Add empty hook before the image navigation */
-        do_action( 'opus_image_nav_before' );
+	/**
+	 * List Pages
+	 * Callback function for the wp_nav_menu call; accepts wp_nav_menu arguments
+	 * passed through the callback function.
+	 *
+	 * @link    http://codex.wordpress.org/Function_Reference/wp_page_menu
+	 *
+	 * @package OpusPrimus
+	 * @since   0.1
+	 *
+	 * @param   string|array $page_menu_args
+	 *
+	 * @uses    wp_list_pages
+	 * @uses    wp_parse_args
+	 */
+	function list_pages( $page_menu_args ) {
+		$defaults       = array(
+			'title_li' => '',
+		);
+		$page_menu_args = wp_parse_args( (array) $defaults, $page_menu_args );
 
-        /** Add navigation links between pictures in the gallery */
-        echo '<div class="opus-image-navigation cf">';
-            echo previous_image_link( false, '<span class="left">' . __( 'Previous Photo', 'opusprimus' ) . '</span>' );
-            echo next_image_link( false, '<span class="right">' . __( 'Next Photo', 'opusprimus' ) . '</span>' );
-        echo '</div><!-- .opus-image-navigation -->';
+		echo '<ul class="nav-menu">';
+		wp_list_pages( $page_menu_args );
+		echo '</ul><!-- .nav-menu -->';
 
-        /** Add empty hook after the image navigation */
-        do_action( 'opus_image_nav_after' );
+	}
 
-    } /** End function - image nav */
-
-
-    /**
-     * Multiple Pages Link
-     * Outputs the navigation structure to move between multiple pages from the
-     * same post. All parameters used by `wp_link_pages` can be passed through
-     * the function.
-     *
-     * @link    http://codex.wordpress.org/Function_Reference/wp_link_pages
-     * @example multiple_pages_link( array( 'before' => '<p class="navigation link-pages cf">', 'after' => '</p>' ) );
-     * @internal The above example will output the `wp_link_pages` output in a
-     * wrapper consisting of a `p` tag with `classes`
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @param   string|array $link_pages_args
-     * @param   string $preface - leading word or phrase before display of post page index - MUST set $link_pages_args for this to display.
-     *
-     * @uses    do_action
-     * @uses    wp_link_pages
-     * @uses    wp_parse_args
-     */
-    function multiple_pages_link( $link_pages_args = '', $preface = '' ) {
-        /** @var $defaults - initial values */
-        $defaults = array(
-            'before'    => '<p class="navigation opus-link-pages cf">' . '<span class="opus-link-pages-preface">' . $preface . '</span>',
-            'after'     => '</p>',
-        );
-        $link_pages_args = wp_parse_args( (array) $defaults, $link_pages_args );
-
-        /** Add empty hook before linking pages navigation of a multi-page post */
-        do_action( 'opus_links_pages_before' );
-
-        /** Linking pages navigation */
-        wp_link_pages( $link_pages_args );
-
-        /** Add empty hook after linking pages navigation of a multi-page post */
-        do_action( 'opus_link_pages_after' );
-
-    } /** End function - link pages */
+	/** End function - list pages */
 
 
-    /**
-     * Post Link
-     * Outputs the navigation structure to move between posts
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @uses    do_action
-     * @uses    next_posts_link
-     * @uses    previous_posts_link
-     */
-    function post_link() {
-        /** Add empty hook before post link */
-        do_action( 'opus_post_link_before' );
+	/**
+	 * Image Navigation
+	 *
+	 * @package OpusPrimus
+	 * @since   0.1
+	 *
+	 * @uses    __
+	 * @uses    do_action
+	 * @uses    next_image_link
+	 * @uses    previous_image_link
+	 */
+	function image_nav() {
+		/** Add empty hook before the image navigation */
+		do_action( 'opus_image_nav_before' );
 
-        /** Post link navigation */ ?>
-        <hr class="pre-post-link-navigation" />
-        <p class="navigation post-link cf">
-            <span class="right"><?php next_post_link(); ?></span>
-            <span class="left"><?php previous_post_link(); ?></span>
-        </p>
+		/** Add navigation links between pictures in the gallery */
+		echo '<div class="opus-image-navigation cf">';
+		echo previous_image_link( false, '<span class="left">' . __( 'Previous Photo', 'opusprimus' ) . '</span>' );
+		echo next_image_link( false, '<span class="right">' . __( 'Next Photo', 'opusprimus' ) . '</span>' );
+		echo '</div><!-- .opus-image-navigation -->';
 
-        <?php
-        /** Add empty hook after post link */
-        do_action( 'opus_post_link_after' );
+		/** Add empty hook after the image navigation */
+		do_action( 'opus_image_nav_after' );
 
-    } /** End function - post link */
+	}
 
-
-    /**
-     * Posts Link
-     * Outputs the navigation structure to move between archive pages
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @uses    do_action
-     * @uses    next_posts_link
-     * @uses    previous_posts_link
-     */
-    function posts_link() {
-        /** Add empty hook before posts link */
-        do_action( 'opus_posts_link_before' );
-
-        /** Posts link navigation */ ?>
-        <p class="navigation posts-link cf">
-            <span class="right"><?php next_posts_link(); ?></span>
-            <span class="left"><?php previous_posts_link(); ?></span>
-        </p>
-
-        <?php
-        /** Add empty hook after posts link */
-        do_action( 'opus_posts_link_after' );
-
-    } /** End function - posts link */
+	/** End function - image nav */
 
 
-    /**
-     * Primary Menu
-     * Primary navigation menu
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @param   string|array $primary_menu_args
-     *
-     * @uses    do_action
-     * @uses    wp_nav_menu
-     * @uses    wp_parse_args
-     */
-    function primary_menu( $primary_menu_args = '' ) {
-        /** Add empty hook before the primary menu */
-        do_action( 'opus_primary_menu_before' );
+	/**
+	 * Multiple Pages Link
+	 * Outputs the navigation structure to move between multiple pages from the
+	 * same post. All parameters used by `wp_link_pages` can be passed through
+	 * the function.
+	 *
+	 * @link     http://codex.wordpress.org/Function_Reference/wp_link_pages
+	 * @example  multiple_pages_link( array( 'before' => '<p class="navigation link-pages cf">', 'after' => '</p>' ) );
+	 * @internal The above example will output the `wp_link_pages` output in a
+	 * wrapper consisting of a `p` tag with `classes`
+	 *
+	 * @package  OpusPrimus
+	 * @since    0.1
+	 *
+	 * @param   string|array $link_pages_args
+	 * @param   string       $preface - leading word or phrase before display of post page index - MUST set $link_pages_args for this to display.
+	 *
+	 * @uses     do_action
+	 * @uses     wp_link_pages
+	 * @uses     wp_parse_args
+	 */
+	function multiple_pages_link( $link_pages_args = '', $preface = '' ) {
+		/** @var $defaults - initial values */
+		$defaults        = array(
+			'before' => '<p class="navigation opus-link-pages cf">' . '<span class="opus-link-pages-preface">' . $preface . '</span>',
+			'after'  => '</p>',
+		);
+		$link_pages_args = wp_parse_args( (array) $defaults, $link_pages_args );
 
-        /** Primary Menu */
-        $defaults = array(
-            'theme_location'    => 'primary',
-            'menu_class'        => 'nav-menu primary',
-            'fallback_cb'       => array( $this, 'list_pages' ),
-        );
-        $primary_menu_args = wp_parse_args( (array) $defaults, $primary_menu_args );
+		/** Add empty hook before linking pages navigation of a multi-page post */
+		do_action( 'opus_links_pages_before' );
 
-        wp_nav_menu( $primary_menu_args );
+		/** Linking pages navigation */
+		wp_link_pages( $link_pages_args );
 
-        /** Add empty hook after the primary menu */
-        do_action( 'opus_primary_menu_after' );
+		/** Add empty hook after linking pages navigation of a multi-page post */
+		do_action( 'opus_link_pages_after' );
 
-    } /** End function - primary menu */
+	}
 
-
-    /**
-     * Search Menu
-     * Search results navigation menu
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @param   string|array $search_menu_args
-     *
-     * @uses    do_action
-     * @uses    search_page_menu
-     * @uses    wp_nav_menu
-     * @uses    wp_parse_args
-     */
-    function search_menu( $search_menu_args = '' ) {
-        /** Add empty hook before the search menu */
-        do_action( 'opus_search_menu_before' );
-
-        /** Search Menu */
-        $defaults = array(
-            'theme_location'    => 'search',
-            'container'         => 'li',
-            'menu_class'        => 'nav search',
-            'fallback_cb'       => array( $this, 'search_page_menu' ),
-        );
-        $search_menu_args = wp_parse_args( (array) $defaults, $search_menu_args );
-
-        printf( '<ul class="featured search pages"><li><span class="title">%1$s</span>', __( 'Featured Pages:', 'opusprimus' ) );
-            wp_nav_menu( $search_menu_args );
-        echo '</li></ul><!-- .featured-search-pages -->';
-
-        /** Add empty hook after the search menu */
-        do_action( 'opus_search_menu_after' );
-
-    } /** End function - search menu */
+	/** End function - link pages */
 
 
-    /**
-     * Search Page Menu
-     * Callback function for the menu
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @param   string|array $list_args
-     *
-     * @uses    wp_page_menu
-     * @uses    wp_parse_args
-     */
-    function search_page_menu( $list_args = '' ) {
-        $defaults = array(
-            'depth'     => 1,
-            'show_home' => true,
-        );
-        $list_args = wp_parse_args( (array) $defaults, $list_args ); ?>
+	/**
+	 * Post Link
+	 * Outputs the navigation structure to move between posts
+	 *
+	 * @package OpusPrimus
+	 * @since   0.1
+	 *
+	 * @uses    do_action
+	 * @uses    next_posts_link
+	 * @uses    previous_posts_link
+	 */
+	function post_link() {
+		/** Add empty hook before post link */
+		do_action( 'opus_post_link_before' );
 
-        <ul class="nav search">
-            <?php wp_page_menu( $list_args ); ?>
-        </ul><!-- .nav.search -->
+		/** Post link navigation */
+		?>
+		<hr class="pre-post-link-navigation" />
+		<p class="navigation post-link cf">
+			<span class="right"><?php next_post_link(); ?></span>
+			<span class="left"><?php previous_post_link(); ?></span>
+		</p>
 
-    <?php
-    } /** End function - search page menu */
+		<?php
+		/** Add empty hook after post link */
+		do_action( 'opus_post_link_after' );
 
+	}
 
-    /** --- Future Usage ---------------------------------------------------- */
-
-
-    /**
-     * Secondary Menu
-     * Secondary navigation menu pre-configured and available for use in
-     * Child-Themes or as part of other customizations and/or modifications.
-     *
-     * @package OpusPrimus
-     * @since   0.1
-     *
-     * @param   string|array $secondary_menu_args
-     *
-     * @internal Not used with the Parent-Theme by default
-     *
-     * @uses    do_action
-     * @uses    wp_nav_menu
-     * @uses    wp_parse_args
-     */
-    function secondary_menu( $secondary_menu_args = '' ) {
-        /** Add empty hook before the secondary menu */
-        do_action( 'opus_secondary_menu_before' );
-
-        /** Secondary Menu */
-        $defaults = array(
-            'theme_location'    => 'secondary',
-            'menu_class'        => 'nav-menu secondary',
-            'fallback_cb'       => array( $this, 'list_pages' ),
-        );
-        $secondary_menu_args = wp_parse_args( (array) $defaults, $secondary_menu_args );
-
-        wp_nav_menu( $secondary_menu_args );
-
-        /** Add empty hook after the secondary menu */
-        do_action( 'opus_secondary_menu_after' );
-
-    } /** End function - secondary menu */
+	/** End function - post link */
 
 
-} /** End Opus Primus Navigation class */
+	/**
+	 * Posts Link
+	 * Outputs the navigation structure to move between archive pages
+	 *
+	 * @package OpusPrimus
+	 * @since   0.1
+	 *
+	 * @uses    do_action
+	 * @uses    next_posts_link
+	 * @uses    previous_posts_link
+	 */
+	function posts_link() {
+		/** Add empty hook before posts link */
+		do_action( 'opus_posts_link_before' );
+
+		/** Posts link navigation */
+		?>
+		<p class="navigation posts-link cf">
+			<span class="right"><?php next_posts_link(); ?></span>
+			<span class="left"><?php previous_posts_link(); ?></span>
+		</p>
+
+		<?php
+		/** Add empty hook after posts link */
+		do_action( 'opus_posts_link_after' );
+
+	}
+
+	/** End function - posts link */
+
+
+	/**
+	 * Primary Menu
+	 * Primary navigation menu
+	 *
+	 * @package OpusPrimus
+	 * @since   0.1
+	 *
+	 * @param   string|array $primary_menu_args
+	 *
+	 * @uses    do_action
+	 * @uses    wp_nav_menu
+	 * @uses    wp_parse_args
+	 */
+	function primary_menu( $primary_menu_args = '' ) {
+		/** Add empty hook before the primary menu */
+		do_action( 'opus_primary_menu_before' );
+
+		/** Primary Menu */
+		$defaults          = array(
+			'theme_location' => 'primary',
+			'menu_class'     => 'nav-menu primary',
+			'fallback_cb'    => array( $this, 'list_pages' ),
+		);
+		$primary_menu_args = wp_parse_args( (array) $defaults, $primary_menu_args );
+
+		wp_nav_menu( $primary_menu_args );
+
+		/** Add empty hook after the primary menu */
+		do_action( 'opus_primary_menu_after' );
+
+	}
+
+	/** End function - primary menu */
+
+
+	/**
+	 * Search Menu
+	 * Search results navigation menu
+	 *
+	 * @package OpusPrimus
+	 * @since   0.1
+	 *
+	 * @param   string|array $search_menu_args
+	 *
+	 * @uses    do_action
+	 * @uses    search_page_menu
+	 * @uses    wp_nav_menu
+	 * @uses    wp_parse_args
+	 */
+	function search_menu( $search_menu_args = '' ) {
+		/** Add empty hook before the search menu */
+		do_action( 'opus_search_menu_before' );
+
+		/** Search Menu */
+		$defaults         = array(
+			'theme_location' => 'search',
+			'container'      => 'li',
+			'menu_class'     => 'nav search',
+			'fallback_cb'    => array( $this, 'search_page_menu' ),
+		);
+		$search_menu_args = wp_parse_args( (array) $defaults, $search_menu_args );
+
+		printf( '<ul class="featured search pages"><li><span class="title">%1$s</span>', __( 'Featured Pages:', 'opusprimus' ) );
+		wp_nav_menu( $search_menu_args );
+		echo '</li></ul><!-- .featured-search-pages -->';
+
+		/** Add empty hook after the search menu */
+		do_action( 'opus_search_menu_after' );
+
+	}
+
+	/** End function - search menu */
+
+
+	/**
+	 * Search Page Menu
+	 * Callback function for the menu
+	 *
+	 * @package OpusPrimus
+	 * @since   0.1
+	 *
+	 * @param   string|array $list_args
+	 *
+	 * @uses    wp_page_menu
+	 * @uses    wp_parse_args
+	 */
+	function search_page_menu( $list_args = '' ) {
+		$defaults  = array(
+			'depth'     => 1,
+			'show_home' => true,
+		);
+		$list_args = wp_parse_args( (array) $defaults, $list_args ); ?>
+
+		<ul class="nav search">
+			<?php wp_page_menu( $list_args ); ?>
+		</ul><!-- .nav.search -->
+
+	<?php
+	}
+
+	/** End function - search page menu */
+
+
+	/** --- Future Usage ---------------------------------------------------- */
+
+
+	/**
+	 * Secondary Menu
+	 * Secondary navigation menu pre-configured and available for use in
+	 * Child-Themes or as part of other customizations and/or modifications.
+	 *
+	 * @package  OpusPrimus
+	 * @since    0.1
+	 *
+	 * @param   string|array $secondary_menu_args
+	 *
+	 * @internal Not used with the Parent-Theme by default
+	 *
+	 * @uses     do_action
+	 * @uses     wp_nav_menu
+	 * @uses     wp_parse_args
+	 */
+	function secondary_menu( $secondary_menu_args = '' ) {
+		/** Add empty hook before the secondary menu */
+		do_action( 'opus_secondary_menu_before' );
+
+		/** Secondary Menu */
+		$defaults            = array(
+			'theme_location' => 'secondary',
+			'menu_class'     => 'nav-menu secondary',
+			'fallback_cb'    => array( $this, 'list_pages' ),
+		);
+		$secondary_menu_args = wp_parse_args( (array) $defaults, $secondary_menu_args );
+
+		wp_nav_menu( $secondary_menu_args );
+
+		/** Add empty hook after the secondary menu */
+		do_action( 'opus_secondary_menu_after' );
+
+	}
+	/** End function - secondary menu */
+
+
+}
+
+/** End Opus Primus Navigation class */
 
 /** @var $opus_navigation - new instance of class */
 $opus_navigation = new OpusPrimusNavigation();

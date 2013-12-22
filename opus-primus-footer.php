@@ -31,24 +31,27 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
- */ ?>
+ */
+?>
 
 <footer>
 
-    <?php do_action( 'opus_footer_top' ); ?>
+	<?php do_action( 'opus_footer_top' ); ?>
 
-    <div id="footer-widgets">
-        <?php get_sidebar( 'footer' ); ?>
-    </div><!-- #footer-widgets -->
+	<div id="footer-widgets">
+		<?php get_sidebar( 'footer' ); ?>
+	</div>
+	<!-- #footer-widgets -->
 
-    <h6 id="site-generator">
-        <?php global $opus_structures; echo $opus_structures->credits(); ?>
-    </h6><!-- #site-generator -->
+	<h6 id="site-generator">
+		<?php global $opus_structures;
+		echo $opus_structures->credits(); ?>
+	</h6><!-- #site-generator -->
 
-    <h6 id="site-copyright">
-        <?php echo $opus_structures->copyright(); ?>
-    </h6><!-- #site-copyright -->
+	<h6 id="site-copyright">
+		<?php echo $opus_structures->copyright(); ?>
+	</h6><!-- #site-copyright -->
 
-    <?php do_action( 'opus_footer_bottom' ); ?>
+	<?php do_action( 'opus_footer_bottom' ); ?>
 
 </footer><!-- End footer section -->

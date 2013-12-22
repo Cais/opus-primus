@@ -32,60 +32,66 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version 1.0.1
- * @date    February 21, 2013
+ * @version     1.0.1
+ * @date        February 21, 2013
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
  *
- * @version 1.0.4
- * @date    March 1, 2013
+ * @version     1.0.4
+ * @date        March 1, 2013
  * Added 'Breadcrumbs' for pages
  * Removed `hgroup` container
  *
- * @version 1.1
- * @date    March 9, 2013
+ * @version     1.1
+ * @date        March 9, 2013
  * Refactored the site title and description to use Header class methods
  */
 
 /** Call global class variables */
 global $opus_headers; ?>
 
-<header>
+	<header>
 
-    <?php do_action( 'opus_header_top' ); ?>
+		<?php do_action( 'opus_header_top' ); ?>
 
-    <div class="masthead">
+		<div class="masthead">
 
-        <div id="header-text">
+			<div id="header-text">
 
-            <?php
-            $opus_headers->site_title_block();
-            $opus_headers->site_description_block(); ?>
+				<?php
+				$opus_headers->site_title_block();
+				$opus_headers->site_description_block(); ?>
 
-        </div><!-- #header-text -->
+			</div>
+			<!-- #header-text -->
 
-        <?php $opus_headers->show_custom_header_image_block(); ?>
+			<?php $opus_headers->show_custom_header_image_block(); ?>
 
-    </div><!-- .masthead -->
+		</div>
+		<!-- .masthead -->
 
-    <div id="header-widgets">
-        <?php get_sidebar( 'header' ); ?>
-    </div><!-- #header-widgets -->
+		<div id="header-widgets">
+			<?php get_sidebar( 'header' ); ?>
+		</div>
+		<!-- #header-widgets -->
 
-    <?php
-    /** Add empty hook before primary navigation */
-    do_action( 'opus_nav_before' ); ?>
+		<?php
+		/** Add empty hook before primary navigation */
+		do_action( 'opus_nav_before' ); ?>
 
-    <nav>
-        <?php global $opus_navigation; $opus_navigation->primary_menu(); ?>
-    </nav><!-- End navigation section -->
+		<nav>
+			<?php global $opus_navigation;
+			$opus_navigation->primary_menu(); ?>
+		</nav>
+		<!-- End navigation section -->
 
-    <?php
-    /** Add empty hook after primary navigation */
-    do_action( 'opus_nav_after' );
+		<?php
+		/** Add empty hook after primary navigation */
+		do_action( 'opus_nav_after' );
 
-    do_action( 'opus_header_bottom' ); ?>
+		do_action( 'opus_header_bottom' ); ?>
 
-</header><!-- End header section -->
+	</header><!-- End header section -->
 
-<?php global $opus_breadcrumbs; $opus_breadcrumbs->show_the_trail();
+<?php global $opus_breadcrumbs;
+$opus_breadcrumbs->show_the_trail();

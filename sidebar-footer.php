@@ -30,8 +30,8 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version 1.0.1
- * @date    February 21, 2013
+ * @version     1.0.1
+ * @date        February 21, 2013
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
  */
@@ -40,32 +40,46 @@
 do_action( 'opus_sidebar_footer_before' );
 
 /** Only resolve public facing space if there is an active footer widget area. */
-if ( is_active_sidebar( 'footer-middle' ) || is_active_sidebar( 'footer-left' ) || is_active_sidebar( 'footer-right' ) ) { ?>
+if ( is_active_sidebar( 'footer-middle' ) || is_active_sidebar( 'footer-left' ) || is_active_sidebar( 'footer-right' ) ) {
+	?>
 
-    <div id="footer-sidebar">
-        <div class="footer-widget-area three-columns-footer">
-            <div class="column-middle">
-                <div class="column-left">
+	<div id="footer-sidebar">
+		<div class="footer-widget-area three-columns-footer">
+			<div class="column-middle">
+				<div class="column-left">
 
-                    <ul id="footer-sidebar-two">
-                        <?php if ( is_active_sidebar( 'footer-middle' ) ) { dynamic_sidebar( 'footer-middle' ); } ?>
-                    </ul><!-- #footer-sidebar-two -->
+					<ul id="footer-sidebar-two">
+						<?php if ( is_active_sidebar( 'footer-middle' ) ) {
+							dynamic_sidebar( 'footer-middle' );
+						} ?>
+					</ul>
+					<!-- #footer-sidebar-two -->
 
-                    <ul id="footer-sidebar-one">
-                        <?php if ( is_active_sidebar( 'footer-left' ) ) { dynamic_sidebar( 'footer-left' ); } ?>
-                    </ul><!-- #footer-sidebar-one -->
+					<ul id="footer-sidebar-one">
+						<?php if ( is_active_sidebar( 'footer-left' ) ) {
+							dynamic_sidebar( 'footer-left' );
+						} ?>
+					</ul>
+					<!-- #footer-sidebar-one -->
 
-                    <ul id="footer-sidebar-three">
-                        <?php if ( is_active_sidebar( 'footer-right' ) ) { dynamic_sidebar( 'footer-right' ); } ?>
-                    </ul><!-- #footer-sidebar-three -->
+					<ul id="footer-sidebar-three">
+						<?php if ( is_active_sidebar( 'footer-right' ) ) {
+							dynamic_sidebar( 'footer-right' );
+						} ?>
+					</ul>
+					<!-- #footer-sidebar-three -->
 
-                </div><!-- .column-left -->
-            </div><!-- .column-middle -->
-        </div><!-- .footer-widget-area.three-columns-footer -->
-    </div><!-- #footer-sidebar -->
+				</div>
+				<!-- .column-left -->
+			</div>
+			<!-- .column-middle -->
+		</div>
+		<!-- .footer-widget-area.three-columns-footer -->
+	</div><!-- #footer-sidebar -->
 
 <?php
-} /** End if - is active sidebar */
+}
+/** End if - is active sidebar */
 
 /** Add empty hook after Sidebar-Footer */
 do_action( 'opus_sidebar_footer_after' );
