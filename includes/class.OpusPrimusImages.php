@@ -893,10 +893,14 @@ class OpusPrimusImages {
 	 * Remove `is_single` conditional in conjunction with displaying full image
 	 * on single view of standard format posts
 	 *
+	 * @version	1.2.3
+	 * @date	December 30, 2013
+	 * Removed Featured Image thumbnail from index view
+	 *
 	 * @todo    clean up and have link display attachment archive (1.2)
 	 */
 	function featured_thumbnail( $size = 'thumbnail', $class = 'alignleft' ) {
-		if ( has_post_thumbnail() /** && ! is_single() */ ) {
+		if ( has_post_thumbnail() && is_single() ) {
 
 			$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
 
