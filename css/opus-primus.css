@@ -65,6 +65,7 @@
  * Re-Adjust `z-index: 3` for main navigation menu
  * Reduced the citation font-size for better aesthetics
  * Change to only append to the `cite` tag when it is inside the `blockquote` tag
+ * General clean-up and removal of excess/over-writing properties
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -212,8 +213,6 @@ pre {
 	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 	font-size: 13px; /** Changed from 12px */
 	color: #333333;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 }
 
@@ -322,8 +321,6 @@ input[type="tel"],
 input[type="color"] {
 	background-color: #ffffff;
 	border: 1px solid #cccccc;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -604,13 +601,9 @@ pre {
 	line-height: 18px;
 	word-break: break-all;
 	word-wrap: break-word;
-	white-space: pre;
 	white-space: pre-wrap;
 	background-color: #f5f5f5;
 	border: 1px solid #ccc;
-	border: 1px solid rgba(0, 0, 0, 0.15);
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
 	border-radius: 4px;
 }
 
@@ -687,7 +680,6 @@ tt {
 }
 
 .cf {
-	zoom: 1;
 }
 
 div.meta-byline,
@@ -803,7 +795,6 @@ ul.nav-menu {
 ul.nav-menu li {
 	float: left;
 	vertical-align: middle;
-	zoom: 1;
 }
 
 ul.nav-menu li.hover,
@@ -850,9 +841,6 @@ ul.nav-menu ul.children li {
 /* -- Rounded Corners for Menu -- */
 .nav-menu a, .nav-menu a:visited, .nav-menu a:hover, .nav-menu a:active,
 ul.nav-menu ul.sub-menu li, ul.nav-menu ul.children li, ul.nav-menu ul, ul.nav-menu ul ul {
-	-moz-border-radius: 3px;
-	-khtml-border-radius: 3px;
-	-webkit-border-radius: 3px;
 	border-radius: 3px;
 }
 
@@ -1323,8 +1311,6 @@ ul.archive.cloud.list li,
 ul.archive.category.list li,
 ul.nav.search li {
 	border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
 	border: 1px solid #000000;
 	float: left;
 	list-style-type: none;
@@ -1348,8 +1334,6 @@ ul.archive.cloud.list ul {
 
 .error404 div.widget_recent_entries {
 	border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
 	border: 1px solid #000000;
 	margin: 0 0 9px 25px;
 }
@@ -1604,16 +1588,12 @@ blockquote + div.sharing {
 
 /** === Post-Format: Status === --------------------------------------------- */
 .post.format-status span.opus-status-update {
-	filter: alpha(opacity=50);
 	line-height: 0;
 	opacity: 0.5;
 	text-align: center;
-	zoom: 1;
 }
 
 .transparent {
-	zoom: 1;
-	filter: alpha(opacity=50);
 	opacity: 0.5;
 }
 
