@@ -1266,6 +1266,10 @@ table#wp-calendar thead {
 	text-align: center;
 }
 
+table#wp-calendar thead th {
+	text-align: center;
+}
+
 table#wp-calendar tbody tr {
 	text-align: center;
 }
