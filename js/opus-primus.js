@@ -37,6 +37,10 @@
  * @version 1.2.2
  * @date    September 13, 2013
  * Removed `table-stripe` class from Post-Format: Image tables
+ *
+ * @version	1.2.3
+ * @date	December 30, 2013
+ * Removed `table-stripe` class from specific Calendar elements
  */
 
 jQuery(document).ready(function ($) {
@@ -66,5 +70,6 @@ jQuery(document).ready(function ($) {
 
 	/** Add a class to table rows to create a striped effect; except in Post-Format: Image posts */
 	$('tr:even').addClass('table-stripe');
+	$('table#wp-calendar thead tr:even, table#wp-calendar tfoot tr:even').removeClass('table-stripe');
 	$('.format-image tr:even').removeClass('table-stripe');
 });

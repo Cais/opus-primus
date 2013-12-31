@@ -15,6 +15,9 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Center align Calendar Day table header cells
 * General clean-up and removal of excess/over-writing properties
 
+= JavaScript =
+* Removed `table-stripe` class from specific Calendar elements
+
 = Miscellaneous =
 * Updated tags used in `style.css` header block to include responsive-layout and fluid-layout
 
