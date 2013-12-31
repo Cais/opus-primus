@@ -874,33 +874,34 @@ class OpusPrimusImages {
 	 * Adds the featured image / post thumbnail to the post if not in the single
 	 * view
 	 *
-	 * @package OpusPrimus
-	 * @since   0.1
+	 * @package    OpusPrimus
+	 * @since      0.1
 	 *
 	 * @param   $size  - default: thumbnail (uses WordPress sizes)
 	 * @param   $class - default: alignleft (can be any CSS class)
 	 *
-	 * @uses    get_post_thumbnail_id
-	 * @uses    has_post_thumbnail
-	 * @uses    is_single
-	 * @uses    the_post_thumbnail
-	 * @uses    the_title_attribute
+	 * @uses       get_post_thumbnail_id
+	 * @uses       has_post_thumbnail
+	 * @uses       is_single
+	 * @uses       the_post_thumbnail
+	 * @uses       the_title_attribute
 	 *
-	 * @version 1.2
-	 * @date    April 18, 2013
+	 * @version    1.2
+	 * @date       April 18, 2013
 	 * Changed `the_post_thumbnail` to use parameters which are set in the call
 	 * to this method
 	 * Remove `is_single` conditional in conjunction with displaying full image
 	 * on single view of standard format posts
 	 *
-	 * @version	1.2.3
-	 * @date	December 30, 2013
+	 * @version    1.2.3
+	 * @date       December 30, 2013
 	 * Removed Featured Image thumbnail from index view
+	 * Added Featured Image Thumbnail to archive views
 	 *
-	 * @todo    clean up and have link display attachment archive (1.2)
+	 * @todo       clean up and have link display attachment archive (1.2)
 	 */
 	function featured_thumbnail( $size = 'thumbnail', $class = 'alignleft' ) {
-		if ( has_post_thumbnail() && is_single() ) {
+		if ( has_post_thumbnail() && is_single() || is_archive() ) {
 
 			$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
 

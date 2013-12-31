@@ -8,6 +8,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = Code =
 * Removed `$sep_location` parameter as it was not used in `browser_title` method
 * Removed Featured Image thumbnail from index view
+* Added Featured Image thumbnail to standard post-format archive views
 
 = CSS =
 * Re-Adjust `ul.nav-menu` and `.nav-menu` to `z-index: 3` for main menu

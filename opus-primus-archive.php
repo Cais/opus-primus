@@ -33,10 +33,14 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version     1.2.3
+ * @date        December 30, 2013
+ * Added Featured Image thumbnail to standard post-format archive views
  */
 
 /** Get the class variables */
-global $opus_structures, $opus_posts, $opus_comments, $opus_navigation; ?>
+global $opus_structures, $opus_posts, $opus_comments, $opus_images, $opus_navigation; ?>
 
 <div <?php post_class(); ?>>
 
@@ -46,6 +50,7 @@ global $opus_structures, $opus_posts, $opus_comments, $opus_navigation; ?>
 	$opus_posts->post_byline( array( 'tempus' => 'time' ) );
 	$opus_posts->post_title();
 	$opus_comments->comments_link();
+	$opus_images->featured_thumbnail( $size = 'thumbnail', $class = 'alignright' );
 	$opus_posts->post_excerpt();
 	$opus_navigation->multiple_pages_link( array(), $preface = __( 'Pages:', 'opusprimus' ) );
 	$opus_posts->meta_tags( $anchor );
