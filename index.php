@@ -4,14 +4,14 @@
  * A WordPress Framework Theme.
  *
  * @package     OpusPrimus
- * @version     1.2.2-beta
+ * @version     1.2.3
  *
  * @internal    RECOMMENDED HTML5
  * @internal    RECOMMENDED CSS3
  * @internal    REQUIRED    WordPress 3.4
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2013, Opus Primus
+ * @copyright   Copyright (c) 2012-2014, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -44,6 +44,9 @@
  *
  * @version     1.2.2
  * @date        October 2013
+ *
+ * @version		1.2.3
+ * @date		January 2014
  */
 
 global $opus_structures;
