@@ -5,7 +5,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2013, Opus Primus
+ * @copyright   Copyright (c) 2012-2014, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -60,12 +60,14 @@
  * Set the breadcrumbs background color to #ffffff (white)
  *
  * #version 1.2.3
- * @date    December 21, 2013
+ * @date	January 12, 2014
  * Adjust pixel measures to not use decimals
  * Re-Adjust `z-index: 3` for main navigation menu
  * Reduced the citation font-size for better aesthetics
  * Change to only append to the `cite` tag when it is inside the `blockquote` tag
  * General clean-up and removal of excess/over-writing properties
+ * Added post coda post format classes
+ * Fixed really long Post Titles and Words not wrapping as expected
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -956,6 +958,12 @@ ul.breadcrumb li ul.post-trail-categories li:first-child {
 	padding-left: 7px;
 }
 
+/** Really long Post Titles and Words --------------------------------------- */
+h2.post-title,
+div.post-content p {
+	word-wrap: break-word;
+}
+
 /** Post Content ------------------------------------------------------------ */
 div.post-content {
 	padding-bottom: 5px;
@@ -970,7 +978,16 @@ div.post-content {
 	text-align: center;
 }
 
-.post-coda {
+.post-coda,
+.post-coda-aside,
+.post-coda-audio,
+.post-coda-chat,
+.post-coda-gallery,
+.post-coda-image,
+.post-coda-link,
+.post-coda-quote,
+.post-coda-status,
+.post-coda-video {
 	font-size: 200%;
 	line-height: 25%;
 	margin-bottom: 9px;

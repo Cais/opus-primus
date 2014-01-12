@@ -6,17 +6,19 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Released ...
 
 = Code =
+* Added Featured Image thumbnail to standard post-format archive views
 * Removed `$sep_location` parameter as it was not used in `browser_title` method
 * Removed Featured Image thumbnail from index view
-* Added Featured Image thumbnail to standard post-format archive views
 * Set `show_page_byline` to true as theme author aesthetic choice
 
 = CSS =
-* Re-Adjust `ul.nav-menu` and `.nav-menu` to `z-index: 3` for main menu
-* Reduced the citation font-size for better aesthetics
+* Added post coda post format classes
 * Change to only append to the `cite` tag when it is inside the `blockquote` tag
 * Center align Calendar Day table header cells
+* Fixed really long Post Titles and Words not wrapping as expected
 * General clean-up and removal of excess/over-writing properties
+* Re-Adjust `ul.nav-menu` and `.nav-menu` to `z-index: 3` for main menu
+* Reduced the citation font-size for better aesthetics
 
 = JavaScript =
 * Removed `table-stripe` class from specific Calendar elements
@@ -214,6 +216,8 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = CSS =
 * Centered top level menu items only - better aesthetics with short page titles
 * Added `clear: both;` to 'img.aligncenter, img.center' to address Firefox issue when when a Featured Image and a large in post image are too close together.
+* Added post coda post format classes
+* Fixed really long Post Titles and Words not wrapping as expected
 
 = Miscellaneous =
 * Fixed no comments message

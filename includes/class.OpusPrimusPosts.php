@@ -3,11 +3,11 @@
  * Opus Primus Posts
  * Controls for the organization and layout of the post and its content.
  *
- * @package     OpusPrimus
- * @since       0.1
+ * @package        OpusPrimus
+ * @since          0.1
  *
- * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2013, Opus Primus
+ * @author         Opus Primus <in.opus.primus@gmail.com>
+ * @copyright      Copyright (c) 2012-2014, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -31,16 +31,20 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version     1.0.1
- * @date        February 21, 2013
+ * @version        1.0.1
+ * @date           February 21, 2013
  * Re-order methods: action and filter calls by request order, then alphabetical
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
  *
- * @version     1.1
- * @date        March 7, 2013
+ * @version        1.1
+ * @date           March 7, 2013
  * Added `excerpt_more_link` and attached to `excerpt_more` filter
  * Added `anchor_title_text` for use with `excerpt_more_link` and permalinks in the post meta details
+ *
+ * @version        1.2.3
+ * @date           January 12, 2014
+ * Provide unique class for post coda if the post has a post format
  */
 
 class OpusPrimusPosts {
@@ -639,6 +643,8 @@ class OpusPrimusPosts {
 	 *
 	 * @uses    apply_filters
 	 * @uses    do_action
+	 * @uses    has_post_format
+	 * @uses    get_post_format
 	 */
 	function post_coda() {
 		/** Add empty hook before post coda */
@@ -646,7 +652,15 @@ class OpusPrimusPosts {
 
 		/** Create the text art */
 		$post_coda = '* * * * *';
-		printf( '<div class="post-coda">%1$s</div>',
+
+		if ( has_post_format() ) {
+			$post_coda_class = 'post-coda-' . get_post_format();
+		} else {
+			$post_coda_class = 'post-coda';
+		}
+		/** End if - has post format */
+
+		printf( '<div class="' . $post_coda_class . '">%1$s</div>',
 			apply_filters( 'opus_post_coda', $post_coda )
 		);
 
