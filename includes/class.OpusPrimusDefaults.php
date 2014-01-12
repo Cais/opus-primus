@@ -3,11 +3,11 @@
  * Opus Primus Defaults
  * Set global defaults for boolean options used in theme
  *
- * @package     OpusPrimus
- * @since       0.1
+ * @package        OpusPrimus
+ * @since          0.1
  *
- * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2013, Opus Primus
+ * @author         Opus Primus <in.opus.primus@gmail.com>
+ * @copyright      Copyright (c) 2013-2014, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -31,13 +31,17 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version     1.0.1
- * @date        February 18, 2013
+ * @version        1.0.1
+ * @date           February 18, 2013
  * Re-order methods: alphabetical
  *
- * @version     1.2
- * @date        July 24, 2013
+ * @version        1.2
+ * @date           July 24, 2013
  * Added `show_page_byline` default
+ *
+ * @version        1.2.3
+ * @date           January 12, 2014
+ * Set `show_page_byline` to true as theme author aesthetic choice
  */
 
 if ( ! class_exists( 'OpusPrimusDefaults' ) ) {
@@ -73,7 +77,8 @@ if ( ! class_exists( 'OpusPrimusDefaults' ) ) {
 		}
 
 		function show_page_byline() {
-			return false;
+			/** return false; */
+			return true;
 		}
 
 		function show_mod_author() {

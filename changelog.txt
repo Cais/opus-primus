@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised December 30, 2013
+Last revised January 12, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.3 ==
@@ -9,6 +9,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Removed `$sep_location` parameter as it was not used in `browser_title` method
 * Removed Featured Image thumbnail from index view
 * Added Featured Image thumbnail to standard post-format archive views
+* Set `show_page_byline` to true as theme author aesthetic choice
 
 = CSS =
 * Re-Adjust `ul.nav-menu` and `.nav-menu` to `z-index: 3` for main menu
@@ -235,7 +236,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 /** ------------------------------------------------------------------------- */
 == Copyright ==
-Copyright (c) 2012-2013, Opus Primus
+Copyright (c) 2012-2014, Opus Primus
 
 This file is part of Opus Primus.
 
