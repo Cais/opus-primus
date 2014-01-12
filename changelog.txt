@@ -21,6 +21,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Reduced the citation font-size for better aesthetics
 
 = JavaScript =
+* Re-format code structures
 * Removed `table-stripe` class from specific Calendar elements
 
 = Miscellaneous =

@@ -7,7 +7,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2013, Opus Primus
+ * @copyright   Copyright (c) 2013-2014, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -32,22 +32,22 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-jQuery(document).ready(function ($) {
+jQuery( document ).ready( function ( $ ) {
 	/** Note: $() will work as an alias for jQuery() inside of this function */
-	var image_selector = $('img.opus-custom-header');
+	var image_selector = $( 'img.opus-custom-header' );
 
 	/** Get widths of image and the parent container */
 	var image_width = image_selector.width();
-	var container_width = $('.masthead').width();
+	var container_width = $( '.masthead' ).width();
 
 	/**
 	 * Compare widths - if the image is great than half of its parent container
 	 * then center the header image and the header text (via the site-* ids)
 	 */
-	if (container_width * 0.50 < image_width) {
-		$('h1#site-title, h2#site-description').css('text-align', 'center');
-		image_selector.addClass('aligncenter');
+	if ( container_width * 0.50 < image_width ) {
+		$( 'h1#site-title, h2#site-description' ).css( 'text-align', 'center' );
+		image_selector.addClass( 'aligncenter' );
 	}
 	/** End if - conditional width */
 
-});
+} );

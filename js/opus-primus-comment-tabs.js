@@ -6,7 +6,7 @@
  * @since       1.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2013, Opus Primus
+ * @copyright   Copyright (c) 2013-2014, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -31,11 +31,11 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-jQuery(document).ready(function ($) {
+jQuery( document ).ready( function ( $ ) {
 	/** Note: $() will work as an alias for jQuery() inside of this function */
 
-	$('#comment-tabs').tabs({
-		selected: 0
-	});
+	$( '#comment-tabs' ).tabs( {
+		selected : 0
+	} );
 
-});
+} );
