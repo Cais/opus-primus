@@ -119,7 +119,14 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 		wp_enqueue_script( 'opus-primus-full-size-video', OPUS_JS . 'opus-primus-full-size-video.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
 		/** Enqueue Opus Primus Comment Tabs which will enqueue jQuery, jQuery UI Core, jQuery UI Widget, and jQuery UI Tabs as dependencies */
 		if ( is_single() ) {
-			wp_enqueue_script( 'opus-primus-comment-tabs', OPUS_JS . 'opus-primus-comment-tabs.js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-tabs' ), wp_get_theme()->get( 'Version' ), 'true' );
+			wp_enqueue_script(
+				'opus-primus-comment-tabs', OPUS_JS . 'opus-primus-comment-tabs.js', array(
+					'jquery',
+					'jquery-ui-core',
+					'jquery-ui-widget',
+					'jquery-ui-tabs'
+				), wp_get_theme()->get( 'Version' ), 'true'
+			);
 		}
 		/** End if - is single */
 		/** Enqueue Opus Primus Header Image Position (if there is a header image) which will enqueue jQuery as a dependency */
@@ -181,14 +188,27 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 		add_editor_style();
 
 		/** This theme allows users to set a custom background */
-		add_theme_support( 'custom-background', array(
+		add_theme_support(
+			'custom-background', array(
 				'default-color' => 'ffffff',
 				/** 'default-image' => get_stylesheet_directory_uri() . '/images/background.png' */
 			)
 		);
 
 		/** Add support for ALL post-formats */
-		add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video' ) );
+		add_theme_support(
+			'post-formats', array(
+				'aside',
+				'audio',
+				'chat',
+				'gallery',
+				'image',
+				'link',
+				'quote',
+				'status',
+				'video'
+			)
+		);
 
 		/** @var $opus_custom_header_support - holds custom header parameters */
 		$opus_custom_header_support = array(
@@ -209,11 +229,13 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 		add_theme_support( 'custom-header', $opus_custom_header_support );
 
 		/** Add custom menu support (Primary and Secondary) */
-		register_nav_menus( array(
-			'primary'   => 'Primary (Parent-Theme) Menu',
-			'secondary' => 'Secondary Menu (not used in Parent-Theme)',
-			'search'    => 'Search Results Menu',
-		) );
+		register_nav_menus(
+			array(
+				'primary'   => 'Primary (Parent-Theme) Menu',
+				'secondary' => 'Secondary Menu (not used in Parent-Theme)',
+				'search'    => 'Search Results Menu',
+			)
+		);
 
 		/**
 		 * Make theme available for translation
@@ -262,6 +284,9 @@ function opus_primus_return_blank() {
  * @uses        wp_get_theme
  */
 function opus_primus_compatibility() {
+
+	/** Call the wp-admin plugin code */
+	require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
 
 	/**
 	 * Soliloquy - slider plugin
