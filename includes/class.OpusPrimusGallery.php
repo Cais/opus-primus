@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Opus Primus Gallery
  * Gallery and other related image functionality
@@ -7,7 +8,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2013, Opus Primus
+ * @copyright   Copyright (c) 2012-2014, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -37,7 +38,6 @@
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
  */
-
 class OpusPrimusGallery {
 
 	/** Construct */
@@ -86,7 +86,13 @@ class OpusPrimusGallery {
 				/** @var $opus_thumb_id int|string */
 				$opus_thumb_id = get_post_thumbnail_id();
 				if ( ! is_single() ) {
-					echo '<p class="featured-image"><a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">';
+					echo '<p class="featured-image"><a href="' . get_permalink() . '" title="' . the_title_attribute(
+							array(
+								'before' => __( 'View', 'opusprimus' ) . ' ',
+								'after'  => ' ' . __( 'only', 'opusprimus' ),
+								'echo'   => '0'
+							)
+						) . '">';
 					the_post_thumbnail( $size );
 					echo '</a></p>';
 				} else {
@@ -94,21 +100,29 @@ class OpusPrimusGallery {
 				}
 				/** End if - not is single */
 			} else {
-				$attachments = get_children( array(
-					'post_parent'    => get_the_ID(),
-					'post_status'    => 'inherit',
-					'post_type'      => 'attachment',
-					'post_mime_type' => 'image',
-					'order'          => 'ASC',
-					'orderby'        => 'menu_order ID',
-					'numberposts'    => 1
-				) );
+				$attachments = get_children(
+					array(
+						'post_parent'    => get_the_ID(),
+						'post_status'    => 'inherit',
+						'post_type'      => 'attachment',
+						'post_mime_type' => 'image',
+						'order'          => 'ASC',
+						'orderby'        => 'menu_order ID',
+						'numberposts'    => 1
+					)
+				);
 
 				foreach ( $attachments as $opus_thumb_id => $attachment ) {
 					if ( ! is_single() ) {
-						echo '<p class="featured-image"><a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">'
-							. wp_get_attachment_image( $opus_thumb_id, $size )
-							. '</a></p>';
+						echo '<p class="featured-image"><a href="' . get_permalink() . '" title="' . the_title_attribute(
+								array(
+									'before' => __( 'View', 'opusprimus' ) . ' ',
+									'after'  => ' ' . __( 'only', 'opusprimus' ),
+									'echo'   => '0'
+								)
+							) . '">'
+							 . wp_get_attachment_image( $opus_thumb_id, $size )
+							 . '</a></p>';
 					} else {
 						echo wp_get_attachment_image( $opus_thumb_id, $size );
 					}
@@ -120,9 +134,15 @@ class OpusPrimusGallery {
 				if ( empty( $attachments ) ) {
 					$opus_thumb_id = intval( $this->get_gallery_attr_featured_ids() );
 					if ( ! is_single() ) {
-						echo '<p class="featured-image"><a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">'
-							. wp_get_attachment_image( $opus_thumb_id, $size )
-							. '</a></p>';
+						echo '<p class="featured-image"><a href="' . get_permalink() . '" title="' . the_title_attribute(
+								array(
+									'before' => __( 'View', 'opusprimus' ) . ' ',
+									'after'  => ' ' . __( 'only', 'opusprimus' ),
+									'echo'   => '0'
+								)
+							) . '">'
+							 . wp_get_attachment_image( $opus_thumb_id, $size )
+							 . '</a></p>';
 					} else {
 						echo wp_get_attachment_image( $opus_thumb_id, $size );
 					}
@@ -306,6 +326,10 @@ class OpusPrimusGallery {
 	 * @date             September 3, 2013
 	 * Fixed issue with Gallery Post-Format being used when the `gallery`
 	 * shortcode is not used.
+	 *
+	 * @version          1.2.3
+	 * @date             February 2, 2014
+	 * Moved `secondary_images` wrapper into method
 	 */
 	function secondary_images( $secondary_images_args = '' ) {
 		global $opus_thumb_id;
@@ -373,6 +397,10 @@ class OpusPrimusGallery {
 
 			/** Only display when not in single view */
 			if ( ! is_single() ) {
+
+				/** Wrap the output in its own DIV */
+				echo '<div class="gallery-secondary-images">';
+
 				/**
 				 * Cycle through images and display them linked to their permalink
 				 */
@@ -388,19 +416,33 @@ class OpusPrimusGallery {
 				 * single post.
 				 */
 				if ( ( $images->found_posts + 1 ) > ( $secondary_images_args['images'] + 1 ) ) {
-					printf( '<p class="more-images">%1$s</p>',
-						apply_filters( 'opus_more_images_text',
-							sprintf( _n(
+					printf(
+						'<p class="more-images">%1$s</p>',
+						apply_filters(
+							'opus_more_images_text',
+							sprintf(
+								_n(
 									__( 'There is %2$sone more image%3$s in addition to these in the gallery.', 'opusprimus' ),
 									__( 'There are %2$s%1$s more images%3$s in addition to these in the gallery.', 'opusprimus' ),
-									( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 ) ),
+									( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 )
+								),
 								( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 ),
-								'<a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'View', 'opusprimus' ) . ' ', 'after' => ' ' . __( 'only', 'opusprimus' ), 'echo' => '0' ) ) . '">',
-								'</a>' )
+								'<a href="' . get_permalink() . '" title="' . the_title_attribute(
+									array(
+										'before' => __( 'View', 'opusprimus' ) . ' ',
+										'after'  => ' ' . __( 'only', 'opusprimus' ),
+										'echo'   => '0'
+									)
+								) . '">',
+								'</a>'
+							)
 						)
 					);
 				}
 				/** End if - images found */
+
+				/** Close wrapping DIV element */
+				echo '</div><!-- gallery-secondary-images -->';
 			}
 			/** End if - not is single */
 

@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised January 12, 2014
+Last revised February 2, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.3 ==
@@ -7,6 +7,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Code =
 * Added Featured Image thumbnail to standard post-format archive views
+* Moved `secondary_images` wrapper into OpusPrimusGallery::secondary_images method
 * Removed `$sep_location` parameter as it was not used in `browser_title` method
 * Removed Featured Image thumbnail from index view
 * Set `show_page_byline` to true as theme author aesthetic choice

@@ -7,7 +7,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2013, Opus Primus
+ * @copyright   Copyright (c) 2012-2014, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -30,6 +30,10 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version     1.2.3
+ * @date        February 2, 2014
+ * Moved `secondary_images` wrapper into OpusPrimusGallery::secondary_images method
  */
 
 /** Call the class variables */
@@ -42,11 +46,13 @@ global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_gall
 		<?php
 		/** @var $anchor - set value for use in post_byline and meta_tags */
 		$anchor = __( 'Displayed', 'opusprimus' );
-		$opus_posts->post_byline( array(
-			'show_mod_author' => $opus_defaults->show_mod_author(),
-			'anchor'          => $anchor,
-			'sticky_flag'     => __( 'Exhibition', 'opusprimus' )
-		) );
+		$opus_posts->post_byline(
+				   array(
+					   'show_mod_author' => $opus_defaults->show_mod_author(),
+					   'anchor'          => $anchor,
+					   'sticky_flag'     => __( 'Exhibition', 'opusprimus' )
+				   )
+		);
 		$opus_posts->post_title();
 
 		if ( ! is_single() ) {
@@ -58,9 +64,7 @@ global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_gall
 			<?php $opus_gallery->featured_image(); ?>
 		</div>
 
-		<div class="gallery-secondary-images">
-			<?php $opus_gallery->secondary_images(); ?>
-		</div>
+		<?php $opus_gallery->secondary_images(); ?>
 
 		<?php
 		$opus_posts->post_content();
@@ -68,12 +72,14 @@ global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_gall
 		$opus_posts->meta_tags( $anchor );
 		$opus_posts->post_coda();
 		if ( is_single() ) {
-			$opus_authors->post_author( array(
-				'show_mod_author'   => $opus_defaults->show_mod_author(),
-				'show_author_url'   => $opus_defaults->show_author_url(),
-				'show_author_email' => $opus_defaults->show_author_email(),
-				'show_author_desc'  => $opus_defaults->show_author_desc(),
-			) );
+			$opus_authors->post_author(
+						 array(
+							 'show_mod_author'   => $opus_defaults->show_mod_author(),
+							 'show_author_url'   => $opus_defaults->show_author_url(),
+							 'show_author_email' => $opus_defaults->show_author_email(),
+							 'show_author_desc'  => $opus_defaults->show_author_desc(),
+						 )
+			);
 		} /** End if - is single */
 		?>
 
