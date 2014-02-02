@@ -70,6 +70,8 @@ class OpusPrimusGallery {
 	 * @version    1.2.3
 	 * @date       February 2, 2014
 	 * Moved `featured_image` wrapper into method
+	 *
+	 * @todo Review hooks and when they they should be usable.
 	 */
 	function featured_image( $size = 'large' ) {
 		global $opus_thumb_id;
