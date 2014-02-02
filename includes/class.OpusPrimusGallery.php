@@ -70,6 +70,7 @@ class OpusPrimusGallery {
 	 *
 	 * @version    1.2.3
 	 * @date       February 2, 2014
+	 * Moved `featured_image` wrapper into method
 	 * Moved `opus_featured_image_*` hooks inside the `has_post_thumbnail` conditional; they should only fire if a featured image exists
 	 */
 	function featured_image( $size = 'large' ) {
@@ -77,6 +78,9 @@ class OpusPrimusGallery {
 
 		/** Show Featured Image when not in single view */
 		if ( ! is_single() ) {
+
+			/** Add CSS Wrapper */
+			echo '<div class="gallery-featured-image">';
 
 			/**
 			 * @var $size - standard WordPress image size; large as the intent is
@@ -170,6 +174,9 @@ class OpusPrimusGallery {
 
 			}
 			/** End if - has post thumbnail */
+
+			/** Close CSS Wrapper */
+			echo '</div><!-- gallery-featured-image -->';
 
 		}
 		/** End if - not is single */

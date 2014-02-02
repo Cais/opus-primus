@@ -7,6 +7,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Code =
 * Added Featured Image thumbnail to standard post-format archive views
+* Moved `featured_image` wrapper into OpusPrimusGallery::featured_image method
 * Moved `secondary_images` wrapper into OpusPrimusGallery::secondary_images method
 * Moved `opus_featured_image_*` hooks inside the `has_post_thumbnail` conditional
 * Removed `$sep_location` parameter as it was not used in `browser_title` method

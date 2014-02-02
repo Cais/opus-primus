@@ -33,6 +33,7 @@
  *
  * @version     1.2.3
  * @date        February 2, 2014
+ * Moved `featured_image` wrapper into OpusPrimusGallery::featured_image method
  * Moved `secondary_images` wrapper into OpusPrimusGallery::secondary_images method
  */
 
@@ -60,9 +61,7 @@ global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_gall
 		} /** End if - not is single */
 		?>
 
-		<div class="gallery-featured-image">
-			<?php $opus_gallery->featured_image(); ?>
-		</div>
+		<?php $opus_gallery->featured_image(); ?>
 
 		<?php $opus_gallery->secondary_images(); ?>
 
