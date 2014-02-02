@@ -58,14 +58,15 @@ global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_gall
 
 		if ( ! is_single() ) {
 			$opus_comments->comments_link();
-		} /** End if - not is single */
-		?>
+		}
+		/** End if - not is single */
 
-		<?php $opus_gallery->featured_image(); ?>
+		/** Display Featured Image */
+		$opus_gallery->featured_image();
 
-		<?php $opus_gallery->secondary_images(); ?>
+		/** Display Secondary Images */
+		$opus_gallery->secondary_images();
 
-		<?php
 		$opus_posts->post_content();
 		$opus_navigation->multiple_pages_link( array(), $preface = __( 'Pages:', 'opusprimus' ) );
 		$opus_posts->meta_tags( $anchor );
