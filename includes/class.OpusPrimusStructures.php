@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Opus Primus Post Structures
  * Controls for the organization and layout of the site and its content.
@@ -7,7 +8,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2013, Opus Primus
+ * @copyright   Copyright (c) 2012-2014, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -31,25 +32,14 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version     1.0.1
- * @date        February 21, 2013
- * Re-order methods: action and filter calls by request order, then alphabetical
- * Modified action hooks to more semantic naming convention:
- * `opus_<section>_<placement>`
- *
- * @version     1.0.3-alpha
- * @date        February 28, 2013
- * Add `breadcrumbs` function as a stepping stone to on screen breadcrumbs
- *
- * @version     1.0.4-alpha
- * @date        March 1, 2013
- * Move `breadcrumbs` into its own class
- *
  * @version     1.2
  * @date        April 9, 2013
  * Added new test function `opus_number`
+ *
+ * @version     1.2.3
+ * @date        February 2, 2014
+ * Added more tests
  */
-
 class OpusPrimusStructures {
 	/** Construct */
 	function __construct() {
@@ -160,13 +150,13 @@ class OpusPrimusStructures {
 
 		/** Test if the first-sidebar or second-sidebar is active by testing their component widget areas for a two column layout */
 		if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
-			&& ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
-				&& ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) )
+			 && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
+					&& ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) )
 		) {
 			$classes[] = 'two-column';
 		} elseif ( ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) )
-			&& ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
-				&& ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) )
+				   && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
+						  && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) )
 		) {
 			$classes[] = 'two-column';
 		}
@@ -453,13 +443,13 @@ class OpusPrimusStructures {
 
 		/** Test if the first-sidebar or second-sidebar is active by testing their component widget areas for a two column layout */
 		if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
-			&& ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
-				&& ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) )
+			 && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
+					&& ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) )
 		) {
 			$layout = '</div><!-- .column-mask .right-sidebar --></div><!--.column-left -->';
 		} elseif ( ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) )
-			&& ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
-				&& ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) )
+				   && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
+						  && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) )
 		) {
 			$layout = '</div><!-- .column-mask .right-sidebar --></div><!--.column-left -->';
 		}
@@ -508,13 +498,13 @@ class OpusPrimusStructures {
 
 		/** Test if the first-sidebar or second-sidebar is active by testing their component widget areas for a two column layout */
 		if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
-			&& ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
-				&& ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) )
+			 && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
+					&& ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) )
 		) {
 			$layout = '<div class="column-mask right-sidebar"><div class="column-left">';
 		} elseif ( ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) )
-			&& ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
-				&& ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) )
+				   && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
+						  && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) )
 		) {
 			$layout = '<div class="column-mask right-sidebar"><div class="column-left">';
 		}
@@ -562,44 +552,57 @@ class OpusPrimusStructures {
 		?>
 		<h2 class="post-title">
 			<?php
-			printf( __( 'Search Results for: %s', 'opus' ),
-				apply_filters( 'opus_search_results_for_text',
+			printf(
+				__( 'Search Results for: %s', 'opus' ),
+				apply_filters(
+					'opus_search_results_for_text',
 					'<span class="search-results">' . esc_html( get_search_query() ) . '</span>'
-				) ); ?>
+				)
+			); ?>
 		</h2><!-- .post-title -->
 
 		<?php
-		printf( '<p class="no-results">%1$s</p>',
-			apply_filters( 'opus_no_results_text',
+		printf(
+			'<p class="no-results">%1$s</p>',
+			apply_filters(
+				'opus_no_results_text',
 				__( 'No results were found, would you like to try another search ...', 'opusprimus' )
-			) );
+			)
+		);
 		get_search_form();
 
-		printf( '<p class="no-results">%1$s</p>',
-			apply_filters( 'opus_no_results_links_text',
+		printf(
+			'<p class="no-results">%1$s</p>',
+			apply_filters(
+				'opus_no_results_links_text',
 				__( '... or try one of the links below.', 'opusprimus' )
-			) );
+			)
+		);
 
 		/** Get the class variables */
 		global $opus_archives, $opus_navigation;
 
 		/** Display a list of categories to choose from */
-		$opus_archives->categories_archive( array(
-			'orderby'      => 'count',
-			'order'        => 'desc',
-			'show_count'   => 1,
-			'hierarchical' => 0,
-			'title_li'     => sprintf( '<span class="title">%1$s</span>', apply_filters( 'opus_category_archives_title', __( 'Top 10 Categories by Post Count:', 'opusprimus' ) ) ),
-			'number'       => 10,
-		) );
+		$opus_archives->categories_archive(
+					  array(
+						  'orderby'      => 'count',
+						  'order'        => 'desc',
+						  'show_count'   => 1,
+						  'hierarchical' => 0,
+						  'title_li'     => sprintf( '<span class="title">%1$s</span>', apply_filters( 'opus_category_archives_title', __( 'Top 10 Categories by Post Count:', 'opusprimus' ) ) ),
+						  'number'       => 10,
+					  )
+		);
 
 		/** Display a list of tags to choose from */
-		$opus_archives->archive_cloud( array(
-			'taxonomy' => 'post_tag',
-			'orderby'  => 'count',
-			'order'    => 'DESC',
-			'number'   => 10,
-		) );
+		$opus_archives->archive_cloud(
+					  array(
+						  'taxonomy' => 'post_tag',
+						  'orderby'  => 'count',
+						  'order'    => 'DESC',
+						  'number'   => 10,
+					  )
+		);
 
 		/** Display a list of pages to choose from */
 		$opus_navigation->search_menu();
@@ -859,6 +862,6 @@ function show_opus_test() {
 // add_filter( 'opus_post_byline_date', 'opus_test' );
 // add_filter( 'opus_author_coda', 'opus_test' );
 // add_filter( 'opus_author_description_excerpt_link', 'opus_test' );
-add_filter( 'opus_featured_image_before', 'show_opus_test' );
-add_filter( 'opus_featured_image_after', 'show_opus_test' );
+// add_filter( 'opus_featured_image_before', 'show_opus_test' );
+// add_filter( 'opus_featured_image_after', 'show_opus_test' );
 // add_filter( 'opus_author_description_excerpt_length', 'opus_number' );

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Opus Primus Gallery
  * Gallery and other related image functionality
@@ -122,25 +121,7 @@ class OpusPrimusGallery {
 					)
 				);
 
-				foreach ( $attachments as $opus_thumb_id => $attachment ) {
-					if ( ! is_single() ) {
-						echo '<p class="featured-image no-post-thumbnail"><a href="' . get_permalink() . '" title="' . the_title_attribute(
-								array(
-									'before' => __( 'View', 'opusprimus' ) . ' ',
-									'after'  => ' ' . __( 'only', 'opusprimus' ),
-									'echo'   => '0'
-								)
-							) . '">'
-							 . wp_get_attachment_image( $opus_thumb_id, $size )
-							 . '</a></p>';
-					} else {
-						echo wp_get_attachment_image( $opus_thumb_id, $size );
-					}
-					/** End if - not is single */
-				}
-				/** End foreach - attachments */
-
-				/** If there are no attachments then use a random image from the gallery */
+				/** If there are no attachments then use a random(?) image from the gallery */
 				if ( empty( $attachments ) ) {
 
 					$opus_thumb_id = intval( $this->get_gallery_attr_featured_ids() );
@@ -158,6 +139,26 @@ class OpusPrimusGallery {
 						echo wp_get_attachment_image( $opus_thumb_id, $size );
 					}
 					/** End if - not is single */
+
+				} else {
+
+					foreach ( $attachments as $opus_thumb_id => $attachment ) {
+						if ( ! is_single() ) {
+							echo '<p class="featured-image no-post-thumbnail"><a href="' . get_permalink() . '" title="' . the_title_attribute(
+									array(
+										'before' => __( 'View', 'opusprimus' ) . ' ',
+										'after'  => ' ' . __( 'only', 'opusprimus' ),
+										'echo'   => '0'
+									)
+								) . '">'
+								 . wp_get_attachment_image( $opus_thumb_id, $size )
+								 . '</a></p>';
+						} else {
+							echo wp_get_attachment_image( $opus_thumb_id, $size );
+						}
+						/** End if - not is single */
+					}
+					/** End foreach - attachments */
 
 				}
 				/** End if - empty */

@@ -6,6 +6,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Released ...
 
 = Code =
+* Added more tests
 * Added Featured Image thumbnail to standard post-format archive views
 * Moved `featured_image` wrapper into OpusPrimusGallery::featured_image method
 * Moved `secondary_images` wrapper into OpusPrimusGallery::secondary_images method
