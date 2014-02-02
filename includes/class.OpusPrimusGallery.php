@@ -50,23 +50,27 @@ class OpusPrimusGallery {
 	 * If a featured image is assigned then return it's ID; wrap it in anchor
 	 * tags if not in the single view, otherwise just output the picture itself
 	 *
-	 * @package OpusPrimus
-	 * @since   0.1
+	 * @package    OpusPrimus
+	 * @since      0.1
 	 *
 	 * @param   string $size - thumbnail|medium|large|full (default WordPress image sizes)
 	 *
-	 * @uses    $opus_thumb_id (global)
-	 * @uses    do_action
-	 * @uses    get_children
-	 * @uses    get_permalink
-	 * @uses    get_post_thumbnail_id
-	 * @uses    get_the_ID
-	 * @uses    has_post_thumbnail
-	 * @uses    the_post_thumbnail
-	 * @uses    the_title_attribute
-	 * @uses    wp_get_attachment_image
+	 * @uses       $opus_thumb_id (global)
+	 * @uses       do_action
+	 * @uses       get_children
+	 * @uses       get_permalink
+	 * @uses       get_post_thumbnail_id
+	 * @uses       get_the_ID
+	 * @uses       has_post_thumbnail
+	 * @uses       the_post_thumbnail
+	 * @uses       the_title_attribute
+	 * @uses       wp_get_attachment_image
 	 *
 	 * @return  int|string - featured image ID
+	 *
+	 * @version    1.2.3
+	 * @date       February 2, 2014
+	 * Moved `opus_featured_image_*` hooks inside the `has_post_thumbnail` conditional; they should only fire if a featured image exists
 	 */
 	function featured_image( $size = 'large' ) {
 		global $opus_thumb_id;
@@ -74,14 +78,15 @@ class OpusPrimusGallery {
 		/** Show Featured Image when not in single view */
 		if ( ! is_single() ) {
 
-			/** Add empty hook before featured image */
-			do_action( 'opus_featured_image_before' );
-
 			/**
 			 * @var $size - standard WordPress image size; large as the intent is
 			 * to use as the featured image for gallery posts
 			 */
 			if ( has_post_thumbnail() ) {
+
+				/** Add empty hook before featured image */
+				do_action( 'opus_featured_image_before' );
+
 				/** use the thumbnail ("featured image") */
 				/** @var $opus_thumb_id int|string */
 				$opus_thumb_id = get_post_thumbnail_id();
@@ -99,7 +104,12 @@ class OpusPrimusGallery {
 					the_post_thumbnail( $size );
 				}
 				/** End if - not is single */
+
+				/** Add empty hook after featured image */
+				do_action( 'opus_featured_image_after' );
+
 			} else {
+
 				$attachments = get_children(
 					array(
 						'post_parent'    => get_the_ID(),
@@ -132,6 +142,10 @@ class OpusPrimusGallery {
 
 				/** If there are no attachments then use a random image from the gallery */
 				if ( empty( $attachments ) ) {
+
+					/** Add empty hook before featured image */
+					do_action( 'opus_featured_image_before' );
+
 					$opus_thumb_id = intval( $this->get_gallery_attr_featured_ids() );
 					if ( ! is_single() ) {
 						echo '<p class="featured-image"><a href="' . get_permalink() . '" title="' . the_title_attribute(
@@ -147,14 +161,15 @@ class OpusPrimusGallery {
 						echo wp_get_attachment_image( $opus_thumb_id, $size );
 					}
 					/** End if - not is single */
+
+					/** Add empty hook after featured image */
+					do_action( 'opus_featured_image_after' );
+
 				}
 				/** End if - empty */
 
 			}
 			/** End if - has post thumbnail */
-
-			/** Add empty hook after featured image */
-			do_action( 'opus_featured_image_after' );
 
 		}
 		/** End if - not is single */
