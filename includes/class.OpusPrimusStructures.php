@@ -859,4 +859,6 @@ function show_opus_test() {
 // add_filter( 'opus_post_byline_date', 'opus_test' );
 // add_filter( 'opus_author_coda', 'opus_test' );
 // add_filter( 'opus_author_description_excerpt_link', 'opus_test' );
+add_filter( 'opus_featured_image_before', 'show_opus_test' );
+add_filter( 'opus_featured_image_after', 'show_opus_test' );
 // add_filter( 'opus_author_description_excerpt_length', 'opus_number' );

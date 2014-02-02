@@ -71,7 +71,6 @@ class OpusPrimusGallery {
 	 * @version    1.2.3
 	 * @date       February 2, 2014
 	 * Moved `featured_image` wrapper into method
-	 * Moved `opus_featured_image_*` hooks inside the `has_post_thumbnail` conditional; they should only fire if a featured image exists
 	 */
 	function featured_image( $size = 'large' ) {
 		global $opus_thumb_id;
@@ -82,20 +81,20 @@ class OpusPrimusGallery {
 			/** Add CSS Wrapper */
 			echo '<div class="gallery-featured-image">';
 
+			/** Add empty hook before featured image */
+			do_action( 'opus_featured_image_before' );
+
 			/**
 			 * @var $size - standard WordPress image size; large as the intent is
 			 * to use as the featured image for gallery posts
 			 */
 			if ( has_post_thumbnail() ) {
 
-				/** Add empty hook before featured image */
-				do_action( 'opus_featured_image_before' );
-
 				/** use the thumbnail ("featured image") */
 				/** @var $opus_thumb_id int|string */
 				$opus_thumb_id = get_post_thumbnail_id();
 				if ( ! is_single() ) {
-					echo '<p class="featured-image"><a href="' . get_permalink() . '" title="' . the_title_attribute(
+					echo '<p class="featured-image has-post-thumbnail"><a href="' . get_permalink() . '" title="' . the_title_attribute(
 							array(
 								'before' => __( 'View', 'opusprimus' ) . ' ',
 								'after'  => ' ' . __( 'only', 'opusprimus' ),
@@ -108,9 +107,6 @@ class OpusPrimusGallery {
 					the_post_thumbnail( $size );
 				}
 				/** End if - not is single */
-
-				/** Add empty hook after featured image */
-				do_action( 'opus_featured_image_after' );
 
 			} else {
 
@@ -128,7 +124,7 @@ class OpusPrimusGallery {
 
 				foreach ( $attachments as $opus_thumb_id => $attachment ) {
 					if ( ! is_single() ) {
-						echo '<p class="featured-image"><a href="' . get_permalink() . '" title="' . the_title_attribute(
+						echo '<p class="featured-image no-post-thumbnail"><a href="' . get_permalink() . '" title="' . the_title_attribute(
 								array(
 									'before' => __( 'View', 'opusprimus' ) . ' ',
 									'after'  => ' ' . __( 'only', 'opusprimus' ),
@@ -147,12 +143,9 @@ class OpusPrimusGallery {
 				/** If there are no attachments then use a random image from the gallery */
 				if ( empty( $attachments ) ) {
 
-					/** Add empty hook before featured image */
-					do_action( 'opus_featured_image_before' );
-
 					$opus_thumb_id = intval( $this->get_gallery_attr_featured_ids() );
 					if ( ! is_single() ) {
-						echo '<p class="featured-image"><a href="' . get_permalink() . '" title="' . the_title_attribute(
+						echo '<p class="featured-image no-attachments"><a href="' . get_permalink() . '" title="' . the_title_attribute(
 								array(
 									'before' => __( 'View', 'opusprimus' ) . ' ',
 									'after'  => ' ' . __( 'only', 'opusprimus' ),
@@ -166,14 +159,14 @@ class OpusPrimusGallery {
 					}
 					/** End if - not is single */
 
-					/** Add empty hook after featured image */
-					do_action( 'opus_featured_image_after' );
-
 				}
 				/** End if - empty */
 
 			}
 			/** End if - has post thumbnail */
+
+			/** Add empty hook after featured image */
+			do_action( 'opus_featured_image_after' );
 
 			/** Close CSS Wrapper */
 			echo '</div><!-- gallery-featured-image -->';
