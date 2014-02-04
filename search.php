@@ -82,7 +82,7 @@ do_action( 'opus_content_before' ); ?>
 						<div <?php post_class(); ?>>
 
 							<?php
-							$opus_posts->post_byline( array( 'show_mod_author' => true ) );
+							$opus_posts->post_byline( array( 'display_mod_author' => true ) );
 							$opus_posts->post_title();
 							$opus_posts->post_excerpt(); ?>
 

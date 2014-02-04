@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Opus Primus Authors
  * Controls for the organization and layout of the author sections of the site.
@@ -7,7 +8,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2013, Opus Primus
+ * @copyright   Copyright (c) 2012-2014, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -41,7 +42,6 @@
  * @date        April 17, 2013
  * Added `get_author_description` method
  */
-
 class OpusPrimusAuthors {
 	/** Constructor */
 	function __construct() {
@@ -163,13 +163,19 @@ class OpusPrimusAuthors {
 
 			/** @var $user_desc - manipulated string */
 			$user_desc = substr( $user_desc, 0, intval( $characters ) )
-				. apply_filters( 'opus_author_description_excerpt_extender', '&hellip;' )
-				. apply_filters( 'opus_author_description_excerpt_link',
-					sprintf( '<span class="opus-author-about">%1$s</span>',
-						sprintf( '<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
+						 . apply_filters( 'opus_author_description_excerpt_extender', '&hellip;' )
+						 . apply_filters(
+					'opus_author_description_excerpt_link',
+					sprintf(
+						'<span class="opus-author-about">%1$s</span>',
+						sprintf(
+							'<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
 							home_url( '/?author=' . $author_id ),
-							esc_attr( sprintf( __( 'View the full biography ... and all posts by %1$s', 'opusprimus' ),
-									get_the_author_meta( 'display_name', $author_id ) )
+							esc_attr(
+								sprintf(
+									__( 'View the full biography ... and all posts by %1$s', 'opusprimus' ),
+									get_the_author_meta( 'display_name', $author_id )
+								)
 							),
 							'&infin;'
 						)
@@ -231,11 +237,15 @@ class OpusPrimusAuthors {
 				}
 				/** End if - not empty author id */
 
-				printf( '<span class="opus-author-about">%1$s</span>',
-					sprintf( '<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
+				printf(
+					'<span class="opus-author-about">%1$s</span>',
+					sprintf(
+						'<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
 						home_url( '/?author=' . $author_id ),
 						esc_attr( sprintf( __( 'View all posts by %1$s', 'opusprimus' ), $author_display_name ) ),
-						$author_display_name ) ); ?>
+						$author_display_name
+					)
+				); ?>
 			</h2><!-- opus-author-details-header -->
 
 			<ul class="opus-author-detail-items">
@@ -248,7 +258,8 @@ class OpusPrimusAuthors {
 					?>
 					<li class="opus-author-contact">
 						<?php
-						printf( '<span class="opus-author-contact-text">' . __( 'Visit the web site of %1$s or email %2$s.', 'opusprimus' ) . '</span>',
+						printf(
+							'<span class="opus-author-contact-text">' . __( 'Visit the web site of %1$s or email %2$s.', 'opusprimus' ) . '</span>',
 							'<a class="opus-author-url" href="' . $author_url . '">' . $author_display_name . '</a>',
 							'<a class="opus-author-email" href="mailto:' . $author_email . '">' . $author_display_name . '</a>'
 						); ?>
@@ -262,7 +273,8 @@ class OpusPrimusAuthors {
 					?>
 					<li class="opus-author-contact">
 						<?php
-						printf( '<span class="opus-author-contact-text">' . __( 'Visit the web site of %1$s.', 'opusprimus' ) . '</span>',
+						printf(
+							'<span class="opus-author-contact-text">' . __( 'Visit the web site of %1$s.', 'opusprimus' ) . '</span>',
 							'<a class="opus-author-url" href="' . $author_url . '">' . $author_display_name . '</a>'
 						); ?>
 					</li><!-- opus-author-contact -->
@@ -275,7 +287,8 @@ class OpusPrimusAuthors {
 					?>
 					<li class="opus-author-contact">
 						<?php
-						printf( '<span class="opus-author-contact-text">' . __( 'Email: %1$s.', 'opusprimus' ) . '</span>',
+						printf(
+							'<span class="opus-author-contact-text">' . __( 'Email: %1$s.', 'opusprimus' ) . '</span>',
 							'<a class="opus-author-email" href="mailto:' . $author_email . '">' . $author_display_name . '</a>'
 						); ?>
 					</li><!-- opus-author-contact -->
@@ -288,7 +301,8 @@ class OpusPrimusAuthors {
 					?>
 					<li class="opus-author-contact">
 						<?php
-						printf( '<span class="opus-author-contact-text">' . __( 'Email: %1$s.', 'opusprimus' ) . '</span>',
+						printf(
+							'<span class="opus-author-contact-text">' . __( 'Email: %1$s.', 'opusprimus' ) . '</span>',
 							'<a class="opus-author-email" href="mailto:' . $author_email . '">' . $author_display_name . '</a>'
 						); ?>
 					</li><!-- opus-author-contact -->
@@ -302,7 +316,8 @@ class OpusPrimusAuthors {
 				if ( ! empty( $author_desc ) && $show_author_desc ) {
 					?>
 					<li class="opus-author-biography">
-						<?php printf( '<span class="opus-author-biography-text">' . __( 'Biography: %1$s', 'opusprimus' ) . '</span>',
+						<?php printf(
+							'<span class="opus-author-biography-text">' . __( 'Biography: %1$s', 'opusprimus' ) . '</span>',
 							$author_desc
 						); ?>
 					</li><!-- opus-author-biography -->
@@ -333,7 +348,7 @@ class OpusPrimusAuthors {
 	 *
 	 * @param   $post_author_args
 	 *
-	 * @internal @param show_mod_author
+	 * @internal @param display_mod_author
 	 * @internal @param show_mod_url
 	 * @internal @param show_mod_email
 	 * @internal @param show_mod_desc
@@ -350,10 +365,10 @@ class OpusPrimusAuthors {
 	function post_author( $post_author_args ) {
 		/** Defaults */
 		$defaults         = array(
-			'show_mod_author'   => true,
-			'show_author_url'   => true,
-			'show_author_email' => true,
-			'show_author_desc'  => true
+			'display_mod_author'   => true,
+			'display_author_url'   => true,
+			'display_author_email' => true,
+			'display_author_desc'  => true
 		);
 		$post_author_args = wp_parse_args( (array) $post_author_args, $defaults );
 
@@ -372,12 +387,14 @@ class OpusPrimusAuthors {
 
 		/** Output author details */
 		echo '<div class="first-author-details">';
-		printf( '<div class="first-author-details-text">%1$s</div><!-- .first-author-details-text -->',
-			apply_filters( 'opus_first_author_by_text',
+		printf(
+			'<div class="first-author-details-text">%1$s</div><!-- .first-author-details-text -->',
+			apply_filters(
+				'opus_first_author_by_text',
 				__( 'Author:', 'opusprimus' )
 			)
 		);
-		$this->author_details( $opus_author_id, $post_author_args['show_author_url'], $post_author_args['show_author_email'], $post_author_args['show_author_desc'] );
+		$this->author_details( $opus_author_id, $post_author_args['display_author_url'], $post_author_args['display_author_email'], $post_author_args['display_author_desc'] );
 		echo '</div><!-- .first-author-details -->';
 		$this->author_coda();
 
@@ -392,18 +409,20 @@ class OpusPrimusAuthors {
 		 * the same as the original author; and, showing the modified author is
 		 * set to true
 		 */
-		if ( ( get_the_date() <> get_the_modified_date() ) && ( $opus_author_id <> $last_id ) && $post_author_args['show_mod_author'] ) {
+		if ( ( get_the_date() <> get_the_modified_date() ) && ( $opus_author_id <> $last_id ) && $post_author_args['display_mod_author'] ) {
 			/** Add empty hook before modified author details */
 			do_action( 'opus_modified_author_details_before' );
 
 			/** Output author details based on the last one to edit the post */
 			echo '<div class="modified-author-details">';
-			printf( '<div class="modified-author-details-text">%1$s</div><!-- modified-author-details-text -->',
-				apply_filters( 'opus_modified_author_by_text',
+			printf(
+				'<div class="modified-author-details-text">%1$s</div><!-- modified-author-details-text -->',
+				apply_filters(
+					'opus_modified_author_by_text',
 					__( 'Modified by:', 'opusprimus' )
 				)
 			);
-			$this->author_details( $last_id, $post_author_args['show_author_url'], $post_author_args['show_author_email'], $post_author_args['show_author_desc'] );
+			$this->author_details( $last_id, $post_author_args['display_author_url'], $post_author_args['display_author_email'], $post_author_args['display_author_desc'] );
 			echo '</div><!-- .modified-author-details -->';
 			$this->author_coda();
 

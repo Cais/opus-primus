@@ -533,7 +533,7 @@ class OpusPrimusPosts {
 	 * @param   array|string $byline_args - function controls
 	 *
 	 * @internal    @param string $anchor ( default = Posted )
-	 * @internal    @param string $show_mod_author ( default = false )
+	 * @internal    @param string $display_mod_author ( default = false )
 	 * @internal    @param string $sticky_flag ( default = '' )
 	 * @internal    @param string $tempus ( default = date ) - date|time
 	 *
@@ -542,7 +542,7 @@ class OpusPrimusPosts {
 	 * if there is no title for the post; using 'time' will show the modified
 	 * post author if there is any difference in time while using the default
 	 * 'date' will only show if there is a difference of more than one (1) day.
-	 * Also note, 'show_mod_author' is not needed if 'tempus' is set to 'time'.
+	 * Also note, 'display_mod_author' is not needed if 'tempus' is set to 'time'.
 	 *
 	 * @uses        __
 	 * @uses        do_action
@@ -568,11 +568,11 @@ class OpusPrimusPosts {
 	function post_byline( $byline_args = '' ) {
 		/** Set defaults */
 		$defaults    = array(
-			'anchor'          => 'Posted',
-			'show_mod_author' => false,
-			'sticky_flag'     => '',
-			'tempus'          => 'date',
-			'echo'            => true,
+			'anchor'             => 'Posted',
+			'display_mod_author' => false,
+			'sticky_flag'        => '',
+			'tempus'             => 'date',
+			'echo'               => true,
 		);
 		$byline_args = wp_parse_args( (array) $byline_args, $defaults );
 
@@ -627,7 +627,7 @@ class OpusPrimusPosts {
 			 * Show modified post author if set to true or if the time span is
 			 * measured in hours
 			 */
-			if ( $byline_args['show_mod_author'] || ( 'time' == $byline_args['tempus'] ) ) {
+			if ( $byline_args['display_mod_author'] || ( 'time' == $byline_args['tempus'] ) ) {
 				$this->modified_post( $byline_args['tempus'] );
 			}
 			/** End if - byline args */

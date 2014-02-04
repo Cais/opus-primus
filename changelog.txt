@@ -14,7 +14,8 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Removed unused parameter `$more` from `OpusPrimusPosts::excerpt_more_link` method
 * Removed `$sep_location` parameter as it was not used in `browser_title` method
 * Removed Featured Image thumbnail from index view
-* Set `show_page_byline` to true as theme author aesthetic choice
+* Renamed `OpusPrimusDefaults` methods from `show_*` to `display_*`
+* Set `display_page_byline` to true as theme author aesthetic choice
 
 = CSS =
 * Added post coda post format classes
@@ -75,7 +76,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added post to post navigation in single view
 * Added conditional check if not post password required when displaying comments
 * Added conditional for showing the page byline details
-* Added `show_page_byline` default and set as false
+* Added `display_page_byline` default and set as false
 * Changed `the_post_thumbnail` to use parameters which are set in the call to `OpusPrimusImage::featured_image`
 * Changed post thumbnail on pages to full size image and align to the center
 * Changed comment fields into an unordered list

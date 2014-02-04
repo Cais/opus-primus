@@ -37,11 +37,12 @@
  *
  * @version        1.2
  * @date           July 24, 2013
- * Added `show_page_byline` default
+ * Added `display_page_byline` default
  *
  * @version        1.2.3
  * @date           January 12, 2014
- * Set `show_page_byline` to true as theme author aesthetic choice
+ * Set `display_page_byline` to true as theme author aesthetic choice
+ * Renamed methods from `show_*` to `display_*`
  */
 
 if ( ! class_exists( 'OpusPrimusDefaults' ) ) {
@@ -64,24 +65,24 @@ if ( ! class_exists( 'OpusPrimusDefaults' ) ) {
 		}
 
 		/** Post Byline and Post Author parameters */
-		function show_author_desc() {
+		function display_author_desc() {
 			return true;
 		}
 
-		function show_author_email() {
+		function display_author_email() {
 			return true;
 		}
 
-		function show_author_url() {
+		function display_author_url() {
 			return true;
 		}
 
-		function show_page_byline() {
+		function display_page_byline() {
 			/** return false; */
 			return true;
 		}
 
-		function show_mod_author() {
+		function display_mod_author() {
 			return true;
 		}
 

@@ -49,9 +49,9 @@ global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_gall
 		$anchor = __( 'Displayed', 'opusprimus' );
 		$opus_posts->post_byline(
 				   array(
-					   'show_mod_author' => $opus_defaults->show_mod_author(),
-					   'anchor'          => $anchor,
-					   'sticky_flag'     => __( 'Exhibition', 'opusprimus' )
+					   'display_mod_author' => $opus_defaults->display_mod_author(),
+					   'anchor'             => $anchor,
+					   'sticky_flag'        => __( 'Exhibition', 'opusprimus' )
 				   )
 		);
 		$opus_posts->post_title();
@@ -74,10 +74,10 @@ global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_gall
 		if ( is_single() ) {
 			$opus_authors->post_author(
 						 array(
-							 'show_mod_author'   => $opus_defaults->show_mod_author(),
-							 'show_author_url'   => $opus_defaults->show_author_url(),
-							 'show_author_email' => $opus_defaults->show_author_email(),
-							 'show_author_desc'  => $opus_defaults->show_author_desc(),
+							 'display_mod_author'   => $opus_defaults->display_mod_author(),
+							 'display_author_url'   => $opus_defaults->display_author_url(),
+							 'display_author_email' => $opus_defaults->display_author_email(),
+							 'display_author_desc'  => $opus_defaults->display_author_desc(),
 						 )
 			);
 		} /** End if - is single */

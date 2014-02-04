@@ -8,7 +8,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2013, Opus Primus
+ * @copyright   Copyright (c) 2012-2014, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -77,13 +77,19 @@ do_action( 'opus_content_before' ); ?>
 
 						<?php
 						/** Make it clear this is an attachment being displayed */
-						printf( '<h2 id="attachment-notice">'
+						printf(
+							'<h2 id="attachment-notice">'
 							. __( 'You are viewing an image attached to %1$s', 'opusprimus' )
 							. '</h2>',
 							'<a href="' . get_permalink( $post->post_parent ) . '">' . get_the_title( $post->post_parent ) . '</a>'
 						);
 
-						$opus_posts->post_byline( array( 'show_mod_author' => true, 'anchor' => __( 'Displayed', 'opusprimus' ) ) );
+						$opus_posts->post_byline(
+								   array(
+									   'display_mod_author' => true,
+									   'anchor'             => __( 'Displayed', 'opusprimus' )
+								   )
+						);
 						$opus_navigation->image_nav();
 
 						/** Image Title from media library */

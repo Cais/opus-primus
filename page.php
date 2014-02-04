@@ -80,18 +80,18 @@ do_action( 'opus_content_before' ); ?>
 						$opus_posts->post_content();
 
 						/** Show page byline details */
-						if ( $opus_defaults->show_page_byline() ) {
-							$opus_posts->post_byline( array( 'show_mod_author' => true ) );
+						if ( $opus_defaults->display_page_byline() ) {
+							$opus_posts->post_byline( array( 'display_mod_author' => true ) );
 						} else {
-							$opus_posts->post_byline( array( 'show_mod_author' => true, 'echo' => false ) );
+							$opus_posts->post_byline( array( 'display_mod_author' => true, 'echo' => false ) );
 						}
 						/** End if - show page byline */
 
 						$opus_authors->post_author( array(
-							'show_mod_author'   => true,
-							'show_author_url'   => true,
-							'show_author_email' => true,
-							'show_author_desc'  => true,
+							'display_mod_author'   => true,
+							'display_author_url'   => true,
+							'display_author_email' => true,
+							'display_author_desc'  => true,
 						) ); ?>
 
 					</div><!-- post classes -->

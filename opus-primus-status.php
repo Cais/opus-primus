@@ -7,7 +7,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2013, Opus Primus
+ * @copyright   Copyright (c) 2012-2014, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -46,11 +46,13 @@ global $opus_defaults, $opus_structures, $opus_posts, $opus_comments, $opus_navi
 		<?php
 		/** @var $anchor - set value for use in post_byline and meta_tags */
 		$anchor = __( 'Updated', 'opusprimus' );
-		$opus_posts->post_byline( array(
-			'show_mod_author' => $opus_defaults->show_mod_author(),
-			'anchor'          => $anchor,
-			'sticky_flag'     => __( 'Breaking News', 'opusprimus' )
-		) );
+		$opus_posts->post_byline(
+				   array(
+					   'display_mod_author' => $opus_defaults->display_mod_author(),
+					   'anchor'             => $anchor,
+					   'sticky_flag'        => __( 'Breaking News', 'opusprimus' )
+				   )
+		);
 		$opus_posts->post_title();
 
 		if ( ! is_single() ) {
@@ -66,12 +68,14 @@ global $opus_defaults, $opus_structures, $opus_posts, $opus_comments, $opus_navi
 		$opus_posts->meta_tags( $anchor );
 		$opus_posts->post_coda();
 		if ( is_single() ) {
-			$opus_authors->post_author( array(
-				'show_mod_author'   => $opus_defaults->show_mod_author(),
-				'show_author_url'   => $opus_defaults->show_author_url(),
-				'show_author_email' => $opus_defaults->show_author_email(),
-				'show_author_desc'  => $opus_defaults->show_author_desc(),
-			) );
+			$opus_authors->post_author(
+						 array(
+							 'display_mod_author'   => $opus_defaults->display_mod_author(),
+							 'display_author_url'   => $opus_defaults->display_author_url(),
+							 'display_author_email' => $opus_defaults->display_author_email(),
+							 'display_author_desc'  => $opus_defaults->display_author_desc(),
+						 )
+			);
 		} /** End if - is single */
 		?>
 
