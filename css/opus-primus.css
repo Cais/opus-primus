@@ -29,16 +29,6 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version 1.1
- * @date    March 18, 2013
- * Add minor comments styles
- *
- * @version 1.1.1
- * @date    March 20, 2013
- * Add rounded corners for the comment type tabs and the comments panel
- * Add `#d3d3d3` color as default tab background color; active is transparent
- * Removed unused element for non-existent 'comments-toggle' script
- *
  * @version 1.2
  * @date    July 20, 2013
  * Added more specific selector used with .post.format-link
@@ -68,6 +58,7 @@
  * General clean-up and removal of excess/over-writing properties
  * Added post coda post format classes
  * Fixed really long Post Titles and Words not wrapping as expected
+ * Added style to the read more link
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -967,6 +958,14 @@ div.post-content p {
 /** Post Content ------------------------------------------------------------ */
 div.post-content {
 	padding-bottom: 5px;
+}
+
+/** Read More Link ---------------------------------------------------------- */
+a.excerpt-more-link:hover {
+	font-size: 200%;
+	font-weight: bold;
+	vertical-align: bottom;
+	text-decoration: none;
 }
 
 /** Codas ------------------------------------------------------------------- */
