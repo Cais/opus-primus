@@ -7,7 +7,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2013, Opus Primus
+ * @copyright   Copyright (c) 2012-2014, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -43,7 +43,9 @@
 ?>
 
 	<!DOCTYPE html>
+
 	<?php do_action( 'opus_html_before' ); ?>
+
 <html <?php language_attributes(); ?>>
 	<head>
 		<?php do_action( 'opus_head_top' ); ?>
@@ -65,16 +67,16 @@
 do_action( 'opus_body_top' ); ?>
 
 	<div id="opus-primus"><!-- Unique theme identifier -->
-		<?php
-		/** Add empty hook before header */
-		do_action( 'opus_header_before' );
+				<?php
+				/** Add empty hook before header */
+				do_action( 'opus_header_before' );
 
-		/** Call header template with reference to post format */
-		if ( is_singular() ) {
-			get_template_part( 'opus-primus-header', get_post_format() );
-		} else {
-			get_template_part( 'opus-primus-header' );
-		} /** End if - is singular */
+				/** Call header template with reference to post format */
+				if ( is_singular() ) {
+					get_template_part( 'opus-primus-header', get_post_format() );
+				} else {
+					get_template_part( 'opus-primus-header' );
+				} /** End if - is singular */
 
-		/** Add empty hook after header */
-		do_action( 'opus_header_after' );
+				/** Add empty hook after header */
+				do_action( 'opus_header_after' );

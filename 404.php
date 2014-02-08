@@ -7,7 +7,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012, Opus Primus
+ * @copyright   Copyright (c) 2012-2014, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -59,18 +59,21 @@ do_action( 'opus_content_before' ); ?>
 		<div class="the-loop">
 
 			<?php
-			printf( '<h1 class="opus-404-title-text">%1$s</h1>',
+			printf(
+				'<h1 class="opus-404-title-text">%1$s</h1>',
 				apply_filters( 'opus_404_title_text', __( 'Something seems to have gone bust ...', 'opusprimus' ) )
 			);
 
 			/** Use action hook to add image - see Structures class for hook call */
 			do_action( 'opus_404_image' );
 
-			printf( '<p class="opus-404-message-text">%1$s</p>',
+			printf(
+				'<p class="opus-404-message-text">%1$s</p>',
 				apply_filters( 'opus_404_message_text', __( 'This is the 404 error page; we seemed to have lost what you are looking for.', 'opusprimus' ) )
 			);
 
-			printf( '<p class="opus-404-posts-text">%1$s</p>',
+			printf(
+				'<p class="opus-404-posts-text">%1$s</p>',
 				apply_filters( 'opus_404_posts_text', __( 'Were you looking for a recent post?', 'opusprimus' ) )
 			);
 
@@ -85,31 +88,37 @@ do_action( 'opus_content_before' ); ?>
 			);
 
 			/** Display links to archives */
-			printf( '<p class="opus-404-category-text">%1$s</p>',
+			printf(
+				'<p class="opus-404-category-text">%1$s</p>',
 				apply_filters( 'opus_404_category_text', __( 'Maybe you were looking for one these categories ...', 'opusprimus' ) )
 			);
 
 			/** Display a list of categories to choose from */
-			$opus_archives->categories_archive( array(
-				'orderby'      => 'count',
-				'order'        => 'desc',
-				'show_count'   => 1,
-				'hierarchical' => 0,
-				'title_li'     => '<span class="title">' . apply_filters( 'opus_404_top_10_title', __( 'Top 10 Categories by Post Count:', 'opusprimus' ) ) . '</span>',
-				'number'       => 10,
-			) );
+			$opus_archives->categories_archive(
+						  array(
+							  'orderby'      => 'count',
+							  'order'        => 'desc',
+							  'show_count'   => 1,
+							  'hierarchical' => 0,
+							  'title_li'     => '<span class="title">' . apply_filters( 'opus_404_top_10_title', __( 'Top 10 Categories by Post Count:', 'opusprimus' ) ) . '</span>',
+							  'number'       => 10,
+						  )
+			);
 
-			printf( '<p class="opus-404-tag-text">%1$s</p>',
+			printf(
+				'<p class="opus-404-tag-text">%1$s</p>',
 				apply_filters( 'opus_404_tag_text', __( '... or maybe you are interested in one of these tags?', 'opusprimus' ) )
 			);
 
 			/** Display a list of tags to choose from */
-			$opus_archives->archive_cloud( array(
-				'taxonomy' => 'post_tag',
-				'orderby'  => 'count',
-				'order'    => 'DESC',
-				'number'   => 10,
-			) ); ?>
+			$opus_archives->archive_cloud(
+						  array(
+							  'taxonomy' => 'post_tag',
+							  'orderby'  => 'count',
+							  'order'    => 'DESC',
+							  'number'   => 10,
+						  )
+			); ?>
 
 		</div>
 		<!-- #the-loop -->

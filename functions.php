@@ -7,7 +7,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2013, Opus Primus
+ * @copyright   Copyright (c) 2012-2014, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -94,12 +94,14 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 	 * @package            OpusPrimus
 	 * @since              0.1
 	 *
-	 * @uses    (constant) OPUS_CSS
-	 * @uses    (constant) OPUS_JS
+	 * @uses    (CONSTANT) OPUS_CSS
+	 * @uses    (CONSTANT) OPUS_JS
+	 * @uses               get_header_image
 	 * @uses               is_readable
 	 * @uses               is_single
 	 * @uses               wp_enqueue_script
 	 * @uses               wp_enqueue_style
+	 * @uses               wp_get_theme
 	 *
 	 * @internal           jQuery is enqueued as a dependency
 	 *
@@ -169,6 +171,7 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 	 * @uses    add_editor_style
 	 * @uses    add_theme_support: automatic-feed-links
 	 * @uses    add_theme_support: custom-background
+	 * @uses    add_theme_support: custom-header
 	 * @uses    add_theme_support: post-formats
 	 * @uses    add_theme_support: post-thumbnails
 	 * @uses    load_theme_textdomain
@@ -245,7 +248,6 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 		$locale      = get_locale();
 		$locale_file = get_template_directory_uri() . "/languages/$locale.php";
 		if ( is_readable( $locale_file ) ) {
-			/** @noinspection PhpIncludeInspection */
 			require_once( $locale_file );
 		}
 		/** End if - is readable */
@@ -275,13 +277,14 @@ function opus_primus_return_blank() {
  * Compatibility
  * Main compatibility conditionals
  *
- * @package     Opus_Primus
- * @subpackage  Compatibility
- * @since       1.2.3
+ * @package            Opus_Primus
+ * @subpackage         Compatibility
+ * @since              1.2.3
  *
- * @uses        is_plugin_active
- * @uses        wp_enqueue_style
- * @uses        wp_get_theme
+ * @uses    (CONSTANT) OPUS_COMPAT
+ * @uses               is_plugin_active
+ * @uses               wp_enqueue_style
+ * @uses               wp_get_theme
  */
 function opus_primus_compatibility() {
 
@@ -300,5 +303,5 @@ function opus_primus_compatibility() {
 
 }
 
-/** End function - Soliloquy Styles */
+/** End function - opus primus compatibility */
 add_action( 'wp_enqueue_scripts', 'opus_primus_compatibility' );
