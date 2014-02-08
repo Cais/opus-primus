@@ -8,7 +8,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2013, Opus Primus
+ * @copyright   Copyright (c) 2012-2014, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -32,6 +32,9 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
+
+/** Call the necessary globals for the template */
+global $opus_structures;
 ?>
 
 <footer>
@@ -44,8 +47,7 @@
 	<!-- #footer-widgets -->
 
 	<h6 id="site-generator">
-		<?php global $opus_structures;
-		echo $opus_structures->credits(); ?>
+		<?php echo $opus_structures->credits(); ?>
 	</h6><!-- #site-generator -->
 
 	<h6 id="site-copyright">
