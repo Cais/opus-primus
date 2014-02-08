@@ -6,7 +6,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2013, Opus Primus
+ * @copyright   Copyright (c) 2012-2014, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -83,16 +83,23 @@ do_action( 'opus_content_before' ); ?>
 						if ( $opus_defaults->display_page_byline() ) {
 							$opus_posts->post_byline( array( 'display_mod_author' => true ) );
 						} else {
-							$opus_posts->post_byline( array( 'display_mod_author' => true, 'echo' => false ) );
+							$opus_posts->post_byline(
+									   array(
+										   'display_mod_author' => true,
+										   'echo'               => false
+									   )
+							);
 						}
 						/** End if - show page byline */
 
-						$opus_authors->post_author( array(
-							'display_mod_author'   => true,
-							'display_author_url'   => true,
-							'display_author_email' => true,
-							'display_author_desc'  => true,
-						) ); ?>
+						$opus_authors->post_author(
+									 array(
+										 'display_mod_author' => true,
+										 'display_author_url' => true,
+										 'display_author_email' => true,
+										 'display_author_desc' => true,
+									 )
+						); ?>
 
 					</div><!-- post classes -->
 

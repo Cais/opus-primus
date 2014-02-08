@@ -7,7 +7,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2013, Opus Primus
+ * @copyright   Copyright (c) 2012-2014, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -65,12 +65,18 @@ do_action( 'opus_content_before' ); ?>
 
 			/** the_Loop - Starts */
 			if ( have_posts() ) {
-				printf( sprintf( '<h2 class="search-found-pre-text">%1$s <span class="search-query">%2$s</span></h2>',
-					apply_filters( 'opus_search_found_pre_text', __( 'We found it!<br />It looks like you searched for ...', 'opusprimus' ) ),
-					get_search_query()
-				) );
-				_e( apply_filters( 'opus_search_found_post_text',
-						__( '<div class="opus-search-found-post-text">Here are the results:</div>', 'opusprimus' ) )
+				printf(
+					sprintf(
+						'<h2 class="search-found-pre-text">%1$s <span class="search-query">%2$s</span></h2>',
+						apply_filters( 'opus_search_found_pre_text', __( 'We found it!<br />It looks like you searched for ...', 'opusprimus' ) ),
+						get_search_query()
+					)
+				);
+				_e(
+					apply_filters(
+						'opus_search_found_post_text',
+						__( '<div class="opus-search-found-post-text">Here are the results:</div>', 'opusprimus' )
+					)
 				);
 				while ( have_posts() ) {
 
