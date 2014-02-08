@@ -9,7 +9,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012, Opus Primus
+ * @copyright   Copyright (c) 2012-2014, Opus Primus
  *
  * @link        http://codex.wordpress.org/Template_Hierarchy - URI reference
  *
@@ -45,11 +45,13 @@ global $opus_posts, $opus_comments, $opus_navigation, $opus_images;?>
 	<?php
 	/** @var $anchor - set value for use in post_byline and meta_tags */
 	$anchor = __( 'Displayed', 'opusprimus' );
-	$opus_posts->post_byline( array(
-		'tempus'      => 'time',
-		'anchor'      => $anchor,
-		'sticky_flag' => __( 'Matted', 'opusprimus' )
-	) );
+	$opus_posts->post_byline(
+			   array(
+				   'tempus'      => 'time',
+				   'anchor'      => $anchor,
+				   'sticky_flag' => __( 'Matted', 'opusprimus' )
+			   )
+	);
 	$opus_posts->post_title();
 	$opus_comments->comments_link();
 
