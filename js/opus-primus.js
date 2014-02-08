@@ -2,11 +2,11 @@
  * Opus Primus General jQuery Scripts
  * Contains mostly one-line jQuery calls within one main script
  *
- * @package		OpusPrimus
- * @since		0.1
+ * @package        OpusPrimus
+ * @since        0.1
  *
- * @author		Opus Primus <in.opus.primus@gmail.com>
- * @copyright	Copyright (c) 2012-2014, Opus Primus
+ * @author        Opus Primus <in.opus.primus@gmail.com>
+ * @copyright    Copyright (c) 2012-2014, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -30,16 +30,16 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version		1.2
- * @date		April 1, 2013
+ * @version        1.2
+ * @date        April 1, 2013
  * Added more specific selector used with .post.format-link
  *
- * @version		1.2.2
- * @date		September 13, 2013
+ * @version        1.2.2
+ * @date        September 13, 2013
  * Removed `table-stripe` class from Post-Format: Image tables
  *
- * @version		1.2.3
- * @date		December 30, 2013
+ * @version        1.2.3
+ * @date        December 30, 2013
  * Removed `table-stripe` class from specific Calendar elements
  */
 

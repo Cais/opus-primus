@@ -41,7 +41,15 @@
  * Added more tests
  */
 class OpusPrimusStructures {
-	/** Construct */
+	/**
+	 * Construct
+	 *
+	 * @package    OpusPrimus
+	 * @since      0.1
+	 *
+	 * @uses       add_action
+	 * @uses       add_filter
+	 */
 	function __construct() {
 		/** Restructure the browser title */
 		add_filter( 'wp_title', array( $this, 'browser_title' ), 10, 3 );
@@ -65,24 +73,27 @@ class OpusPrimusStructures {
 	 * Browser Title
 	 * Utilizes the `wp_title` filter to add text to the default output
 	 *
-	 * @package     OpusPrimus
-	 * @since       0.1
+	 * @package          OpusPrimus
+	 * @since            0.1
 	 *
-	 * @internal    Originally author by Edward Caissie
-	 * @link        https://gist.github.com/1410493
+	 * @internal         Originally author by Edward Caissie
+	 * @link             https://gist.github.com/1410493
 	 *
 	 * @param       string $old_title - default title text
 	 * @param       string $sep       - separator character
 	 *
-	 * @uses        apply_filters
-	 * @uses        get_bloginfo - name, description
-	 * @uses        is_home
-	 * @uses        is_front_page
+	 * @uses    (GLOBAL) $page
+	 * @uses    (GLOBAL) $paged
+	 * @uses             apply_filters
+	 * @uses             get_bloginfo - name, description
+	 * @uses             is_home
+	 * @uses             is_feed
+	 * @uses             is_front_page
 	 *
 	 * @return      string - original title|new title
 	 *
-	 * @version     1.2.3
-	 * @date        November 26, 2013
+	 * @version          1.2.3
+	 * @date             November 26, 2013
 	 * Removed $sep_location parameter as it was not used
 	 */
 	function browser_title( $old_title, $sep ) {
@@ -125,19 +136,19 @@ class OpusPrimusStructures {
 	 * Body Classes
 	 * A collection of classes added to the HTML body tag for various purposes
 	 *
-	 * @package OpusPrimus
-	 * @since   0.1
+	 * @package          OpusPrimus
+	 * @since            0.1
 	 *
 	 * @param   $classes - existing body classes
 	 *
-	 * @uses    $content_width (global)
-	 * @uses    apply_filters
-	 * @uses    is_active_sidebar
+	 * @uses    (GLOBAL) $content_width
+	 * @uses             apply_filters
+	 * @uses             is_active_sidebar
 	 *
 	 * @return  string - specific class based on active columns
 	 *
-	 * @version 1.2
-	 * @date    April 9, 2013
+	 * @version          1.2
+	 * @date             April 9, 2013
 	 * Added sanity conditional check to eliminate potential duplicate classes
 	 */
 	function body_classes( $classes ) {
@@ -224,6 +235,8 @@ class OpusPrimusStructures {
 	 *
 	 * @package OpusPrimus
 	 * @since   0.1
+	 *
+	 * @uses    OpusPrimusStructures::bust_image
 	 */
 	function show_bust_image() {
 		echo $this->bust_image();
@@ -262,10 +275,10 @@ class OpusPrimusStructures {
 	 * Bust Image
 	 * Returns the url for the image used on the 404 page
 	 *
-	 * @package OpusPrimus
-	 * @since   0.1
+	 * @package            OpusPrimus
+	 * @since              0.1
 	 *
-	 * @uses    get_template_directory_uri
+	 * @uses    (CONSTANT) OPUS_IMAGES
 	 *
 	 * @return string - URL of image
 	 */
@@ -291,7 +304,9 @@ class OpusPrimusStructures {
 	 *
 	 * @internal $output can be filtered via the `opus_copyright` hook
 	 *
+	 * @uses     __
 	 * @uses     apply_filters
+	 * @uses     esc_attr
 	 * @uses     get_bloginfo
 	 * @uses     get_posts
 	 * @uses     home_url
@@ -368,6 +383,7 @@ class OpusPrimusStructures {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
+	 * @uses    __
 	 * @uses    apply_filters
 	 * @uses    esc_attr__
 	 * @uses    esc_attr
@@ -422,12 +438,13 @@ class OpusPrimusStructures {
 	 * Layout - Close
 	 * Closes appropriate CSS containers depending on the layout structure.
 	 *
-	 * @package     OpusPrimus
-	 * @since       0.1
+	 * @package              OpusPrimus
+	 * @since                0.1
 	 *
-	 * @uses        $content_width (global)
-	 * @uses        is_active_sidebar
-	 * @internal    works in conjunction with layout_open
+	 * @uses        (GLOBAL) $content_width
+	 * @uses                 is_active_sidebar
+	 *
+	 * @internal             works in conjunction with layout_open
 	 *
 	 * @return      string
 	 */
@@ -531,18 +548,15 @@ class OpusPrimusStructures {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @uses    $opus_archives (global)
-	 * @uses    $opus_navigation (global)
+	 * @uses    OpusPrimusArchives::archive_cloud
+	 * @uses    OpusPrimusArchives::categories_archives
+	 * @uses    OpusPrimusNavigation::search_menu
 	 * @uses    __
 	 * @uses    apply_filters
-	 * @uses    archive_cloud
-	 * @uses    categories_archives
 	 * @uses    do_action
 	 * @uses    esc_html
 	 * @uses    get_search_form
 	 * @uses    get_search_query
-	 * @uses    search_menu
-	 * @uses    top_10_categories_archive
 	 */
 	function no_search_results() {
 		/** Add empty hook before no posts results from the_loop query */
@@ -653,6 +667,7 @@ class OpusPrimusStructures {
 	 *
 	 * @uses    OpusPrimusStructures::no_search_results
 	 * @uses    OpusPrimusNavigation::post_link
+	 * @uses    OpusPrimusNavigation::posts_link
 	 * @uses    do_action
 	 * @uses    get_template_part
 	 * @uses    get_post_format
@@ -706,16 +721,16 @@ class OpusPrimusStructures {
 	 * the_Loop Archives
 	 * The most basic structure for the posts loop
 	 *
-	 * @package OpusPrimus
-	 * @since   0.1
+	 * @package    OpusPrimus
+	 * @since      0.1
 	 *
-	 * @uses    $opus_navigation (global)
-	 * @uses    get_template_part
-	 * @uses    get_post_format
-	 * @uses    have_posts
-	 * @uses    no_search_results
-	 * @uses    posts_link
-	 * @uses    the_post
+	 * @uses       OpusPrimusNavigation::post_link
+	 * @uses       OpusPrimusStructures::no_search_results
+	 * @uses       do_action
+	 * @uses       get_template_part
+	 * @uses       get_post_format
+	 * @uses       have_posts
+	 * @uses       the_post
 	 */
 	function the_loop_archives() {
 		/** the_Loop begins */

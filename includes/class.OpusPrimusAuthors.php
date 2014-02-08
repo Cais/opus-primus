@@ -57,8 +57,9 @@ class OpusPrimusAuthors {
 	 *
 	 * @param   $author_id
 	 *
+	 * @uses    OpusPrimusStructures::replace_spaces
 	 * @uses    get_the_author_meta
-	 * @uses    replace_spaces
+	 * @uses    user_can
 	 */
 	function author_classes( $author_id ) {
 		/** Call the structure class to use replace spaces */
@@ -127,16 +128,16 @@ class OpusPrimusAuthors {
 	 * description will also be shortened on author archive pages after the
 	 * first page.
 	 *
-	 * @package OpusPrimus
-	 * @since   1.2
+	 * @package          OpusPrimus
+	 * @since            1.2
 	 *
 	 * @param   $author_id
 	 *
-	 * @uses    $paged (GLOBAL)
-	 * @uses    apply_filters
-	 * @uses    get_the_author_meta
-	 * @uses    home_url
-	 * @uses    is_author
+	 * @uses    (GLOBAL) $paged
+	 * @uses             apply_filters
+	 * @uses             get_the_author_meta
+	 * @uses             home_url
+	 * @uses             is_author
 	 *
 	 * @return  string
 	 */
@@ -343,24 +344,26 @@ class OpusPrimusAuthors {
 	 * Outputs the author details: web address, email, and biography from the
 	 * user profile information - not designed for use in the post meta section.
 	 *
-	 * @package  OpusPrimus
-	 * @since    0.1
+	 * @package           OpusPrimus
+	 * @since             0.1
 	 *
 	 * @param   $post_author_args
 	 *
-	 * @internal @param display_mod_author
-	 * @internal @param show_mod_url
-	 * @internal @param show_mod_email
-	 * @internal @param show_mod_desc
+	 * @internal          @param display_mod_author
+	 * @internal          @param show_mod_url
+	 * @internal          @param show_mod_email
+	 * @internal          @param show_mod_desc
 	 *
-	 * @uses     $opus_author_id (global) - from OpusPrimusPosts::post_byline
-	 * @uses     $post (global)
-	 * @uses     apply_filters
-	 * @uses     do_action
-	 * @uses     get_post_meta
-	 * @uses     get_the_date
-	 * @uses     get_the_modified_date
-	 * @uses     author_details
+	 * @uses     (GLOBAL) $opus_author_id - from OpusPrimusPosts::post_byline
+	 * @uses     (GLOBAL) $post
+	 * @uses              OpusPrimusAuthors::author_details
+	 * @uses              OpusPrimusAuthors::author_coda
+	 * @uses              apply_filters
+	 * @uses              do_action
+	 * @uses              get_post_meta
+	 * @uses              get_the_date
+	 * @uses              get_the_modified_date
+	 * @uses              wp_parse_args
 	 */
 	function post_author( $post_author_args ) {
 		/** Defaults */

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Opus Primus Archives
  * Site archives for categories, tags, pages, etc.
@@ -7,7 +8,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2013, Opus Primus
+ * @copyright   Copyright (c) 2012-2014, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -37,7 +38,6 @@
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
  */
-
 class OpusPrimusArchives {
 	/** Construct */
 	function __construct() {
@@ -61,6 +61,7 @@ class OpusPrimusArchives {
 	 *
 	 * @internal defaults = show post tags and categories, formatted as a list, in a random order
 	 *
+	 * @uses     do_action
 	 * @uses     wp_parse_args
 	 * @uses     wp_tag_cloud
 	 */
@@ -138,6 +139,7 @@ class OpusPrimusArchives {
 	 *
 	 * @param   array|string $category_args
 	 *
+	 * @uses     do_action
 	 * @uses     wp_list_categories
 	 * @uses     wp_parse_args
 	 */

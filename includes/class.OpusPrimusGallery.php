@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Opus Primus Gallery
  * Gallery and other related image functionality
@@ -49,29 +50,32 @@ class OpusPrimusGallery {
 	 * If a featured image is assigned then return it's ID; wrap it in anchor
 	 * tags if not in the single view, otherwise just output the picture itself
 	 *
-	 * @package    OpusPrimus
-	 * @since      0.1
+	 * @package             OpusPrimus
+	 * @since               0.1
 	 *
 	 * @param   string $size - thumbnail|medium|large|full (default WordPress image sizes)
 	 *
-	 * @uses       $opus_thumb_id (global)
-	 * @uses       do_action
-	 * @uses       get_children
-	 * @uses       get_permalink
-	 * @uses       get_post_thumbnail_id
-	 * @uses       get_the_ID
-	 * @uses       has_post_thumbnail
-	 * @uses       the_post_thumbnail
-	 * @uses       the_title_attribute
-	 * @uses       wp_get_attachment_image
+	 * @uses                OpusPrimusGallery::get_gallery_attr_featured_ids
+	 * @uses       (GLOBAL) $opus_thumb_id
+	 * @uses                __
+	 * @uses                do_action
+	 * @uses                get_children
+	 * @uses                get_permalink
+	 * @uses                get_post_thumbnail_id
+	 * @uses                get_the_ID
+	 * @uses                has_post_thumbnail
+	 * @uses                is_single
+	 * @uses                the_post_thumbnail
+	 * @uses                the_title_attribute
+	 * @uses                wp_get_attachment_image
 	 *
 	 * @return  int|string - featured image ID
 	 *
-	 * @version    1.2.3
-	 * @date       February 2, 2014
+	 * @version             1.2.3
+	 * @date                February 2, 2014
 	 * Moved `featured_image` wrapper into method
 	 *
-	 * @todo Review hooks and when they they should be usable.
+	 * @todo                Review hooks and when they they should be usable.
 	 */
 	function featured_image( $size = 'large' ) {
 		global $opus_thumb_id;
@@ -250,6 +254,7 @@ class OpusPrimusGallery {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
+	 * @uses    OpusPrimusGallery::get_gallery_attr_featured_ids
 	 * @uses    get_shortcode_regex
 	 * @uses    get_the_content
 	 * @uses    shortcode_parse_atts
@@ -330,12 +335,13 @@ class OpusPrimusGallery {
 	 * @package          OpusPrimus
 	 * @since            0.1
 	 *
-	 * @uses    (global) $opus_thumb_id
+	 * @uses    (GLOBAL) $opus_thumb_id
 	 * @uses             WP_Query
 	 * @uses             apply_filters
 	 * @uses             do_action
 	 * @uses             get_permalink
 	 * @uses             get_the_ID
+	 * @uses             is_single
 	 * @uses             the_title_attribute
 	 * @uses             wp_get_attachment_image
 	 * @uses             wp_parse_args

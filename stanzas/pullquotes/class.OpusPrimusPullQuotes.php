@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Opus Primus PullQuotes Stanza
  * This provides pull quote functionality to the Opus Primus theme as a feature
@@ -9,7 +10,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2013, Opus Primus
+ * @copyright   Copyright (c) 2012-2014, Opus Primus
  *
  * This file is part of Opus Primus PullQuotes, a part of Opus Primus.
  *
@@ -37,7 +38,6 @@
  * @date        March 25, 2012
  * Added block termination comments
  */
-
 class OpusPrimusPullQuotes {
 
 	/**
@@ -51,7 +51,12 @@ class OpusPrimusPullQuotes {
 	 */
 	function __construct() {
 		/** Enqueue Scripts and Styles */
-		add_action( 'wp_enqueue_scripts', array( $this, 'scripts_and_styles' ) );
+		add_action(
+			'wp_enqueue_scripts', array(
+				$this,
+				'scripts_and_styles'
+			)
+		);
 
 		/** Add Shortcode */
 		add_shortcode( 'pullquote', array( $this, 'pull_quotes_shortcode' ) );
@@ -65,13 +70,15 @@ class OpusPrimusPullQuotes {
 	 * Enqueue Scripts and Styles
 	 * Use to enqueue the extension scripts and stylesheets, if they exists
 	 *
-	 * @package     OpusPrimus
-	 * @since       0.1
+	 * @package            OpusPrimus
+	 * @since              0.1
 	 *
-	 * @uses        wp_enqueue_script
-	 * @uses        wp_enqueue_style
+	 * @uses    (CONSTANT) OPUS_STANZAS_URI
+	 * @uses               wp_enqueue_script
+	 * @uses               wp_enqueue_style
+	 * @uses               wp_get_theme
 	 *
-	 * @internal    jQuery is enqueued as a dependency
+	 * @internal           jQuery is enqueued as a dependency
 	 */
 	function scripts_and_styles() {
 		/** Enqueue Scripts */
@@ -104,11 +111,12 @@ class OpusPrimusPullQuotes {
 		extract(
 			shortcode_atts(
 				array(
-					'to'   => 'right',
-					'by'   => '',
+					'to' => 'right',
+					'by' => '',
 					'from' => '',
 				),
-				$atts )
+				$atts
+			)
 		);
 
 		if ( ! empty( $by ) ) {

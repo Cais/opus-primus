@@ -6,7 +6,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2013, Opus Primus
+ * @copyright   Copyright (c) 2012-2014, Opus Primus
  *
  * This file is part of Opus Primus PullQuotes, a part of Opus Primus.
  *
@@ -35,25 +35,25 @@
  * Added scripting to have left side Pull Quotes
  */
 
-jQuery(document).ready(function ($) {
+jQuery( document ).ready( function ( $ ) {
 	/** Note: $() will work as an alias for jQuery() inside of this function */
 
 	/** Pull Quotes on (default) right side */
-	$('span.pq').each(function () {
-		var $parentParagraph = $(this).parent('p');
-		$parentParagraph.css('position', 'relative');
-		$(this).clone()
-			.addClass('pullquote')
-			.prependTo($parentParagraph);
-	});
+	$( 'span.pq' ).each( function () {
+		var $parentParagraph = $( this ).parent( 'p' );
+		$parentParagraph.css( 'position', 'relative' );
+		$( this ).clone()
+			.addClass( 'pullquote' )
+			.prependTo( $parentParagraph );
+	} );
 
 	/** Pull Quotes on left side */
-	$('span.pql').each(function () {
-		var $parentParagraph = $(this).parent('p');
-		$parentParagraph.css('position', 'relative');
-		$(this).clone()
-			.addClass('pullquote-left')
-			.prependTo($parentParagraph);
-	});
+	$( 'span.pql' ).each( function () {
+		var $parentParagraph = $( this ).parent( 'p' );
+		$parentParagraph.css( 'position', 'relative' );
+		$( this ).clone()
+			.addClass( 'pullquote-left' )
+			.prependTo( $parentParagraph );
+	} );
 
-});
+} );

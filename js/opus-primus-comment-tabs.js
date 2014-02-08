@@ -35,7 +35,7 @@ jQuery( document ).ready( function ( $ ) {
 	/** Note: $() will work as an alias for jQuery() inside of this function */
 
 	$( '#comment-tabs' ).tabs( {
-		selected : 0
+		selected: 0
 	} );
 
 } );

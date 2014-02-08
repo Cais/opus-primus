@@ -73,18 +73,19 @@ class OpusPrimusPosts {
 	/**
 	 * Excerpt More Link
 	 *
-	 * @package    OpusPrimus
-	 * @class      Posts
-	 * @since      1.0.5
+	 * @package          OpusPrimus
+	 * @class            Posts
+	 * @since            1.0.5
 	 *
-	 * @uses       OpusPrimusPosts::anchor_title_text
-	 * @uses       apply_filters
-	 * @uses       get_permalink
+	 * @uses             OpusPrimusPosts::anchor_title_text
+	 * @uses    (GLOBAL) $post
+	 * @uses             apply_filters
+	 * @uses             get_permalink
 	 *
 	 * @return  string
 	 *
-	 * @version    1.2.3
-	 * @date       February 3, 2014
+	 * @version          1.2.3
+	 * @date             February 3, 2014
 	 * Moved the ellipsis out of the read more link
 	 * Removed unused parameter `$more`
 	 */
@@ -239,6 +240,7 @@ class OpusPrimusPosts {
 	 * @since   0.1
 	 *
 	 * @uses    __
+	 * @uses    esc_attr
 	 * @uses    get_author_posts_url
 	 * @uses    get_the_author_meta
 	 * @uses    get_the_author
@@ -362,6 +364,7 @@ class OpusPrimusPosts {
 	 * @since   0.1
 	 *
 	 * @uses    __
+	 * @uses    esc_attr
 	 * @uses    home_url
 	 *
 	 * @param   $last_user - passed from OpusPrimusPosts::modified_post
@@ -385,26 +388,27 @@ class OpusPrimusPosts {
 	 * If the post time and the last modified time are different display
 	 * modified date and time and the modifying author
 	 *
-	 * @package OpusPrimus
-	 * @since   0.1
+	 * @package          OpusPrimus
+	 * @since            0.1
 	 *
 	 * @param   string $tempus - date|time ( default = date )
 	 *
-	 * @uses    $opus_author_id (global)
-	 * @uses    $post (global)
-	 * @uses    __
-	 * @uses    apply_filters
-	 * @uses    do_action
-	 * @uses    get_post_meta
-	 * @uses    get_the_date
-	 * @uses    get_the_modified_date
-	 * @uses    get_the_modified_time
-	 * @uses    get_the_time
-	 * @uses    get_userdata
-	 * @uses    home_url
+	 * @uses    (GLOBAL) $opus_author_id
+	 * @uses    (GLOBAL) $post
+	 * @uses             __
+	 * @uses             apply_filters
+	 * @uses             do_action
+	 * @uses             get_avatar
+	 * @uses             get_post_meta
+	 * @uses             get_the_date
+	 * @uses             get_the_modified_date
+	 * @uses             get_the_modified_time
+	 * @uses             get_the_time
+	 * @uses             get_userdata
+	 * @uses             home_url
 	 *
-	 * @version 1.0.1
-	 * @date    February 22, 2013
+	 * @version          1.0.1
+	 * @date             February 22, 2013
 	 * Wrapped 'opus_modified_post_after' in conditional making it consistent with 'opus_modified_post_before'
 	 */
 	function modified_post( $tempus = 'date' ) {
@@ -501,6 +505,7 @@ class OpusPrimusPosts {
 	 * @param       string $anchor - word or phrase to use as anchor text when no title is present
 	 *
 	 * @uses        apply_filters
+	 * @uses        esc_attr
 	 * @uses        get_permalink
 	 * @uses        get_the_excerpt
 	 * @uses        get_the_title
@@ -544,6 +549,12 @@ class OpusPrimusPosts {
 	 * 'date' will only show if there is a difference of more than one (1) day.
 	 * Also note, 'display_mod_author' is not needed if 'tempus' is set to 'time'.
 	 *
+	 * @uses        OpusPrimusPosts::author_posts_link
+	 * @uses        OpusPrimusPosts::modified_post
+	 * @uses        OpusPrimusPosts::no_title_link
+	 * @uses        OpusPrimusPosts::post_coda
+	 * @uses        OpusPrimusPosts::post_format_flag
+	 * @uses        OpusPrimusPosts::sticky_flag
 	 * @uses        __
 	 * @uses        do_action
 	 * @uses        esc_attr
@@ -553,9 +564,6 @@ class OpusPrimusPosts {
 	 * @uses        get_the_author_meta ( ID )
 	 * @uses        get_the_date
 	 * @uses        get_the_time
-	 * @uses        no_title_link
-	 * @uses        post_format_flag
-	 * @uses        sticky_flag
 	 * @uses        wp_parse_args
 	 *
 	 * @version     1.2

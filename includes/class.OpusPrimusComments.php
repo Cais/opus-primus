@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Opus Primus Comments
  * Comments related functions
@@ -7,7 +8,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2013, Opus Primus
+ * @copyright   Copyright (c) 2012-2014, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -44,25 +45,68 @@
  * Added filtered `comment_form_required_field_glyph` method for comment fields
  * Change comment fields into an unordered list
  */
-
 class OpusPrimusComments {
-	/** Constructor */
+	/**
+	 * Constructor
+	 *
+	 * @package    OpusPrimus
+	 * @since      0.1
+	 *
+	 * @uses       add_action
+	 * @uses       add_filter
+	 *
+	 */
 	function __construct() {
 		/** Add comment actions */
-		add_action( 'comment_form_before', array( $this, 'enqueue_comment_reply' ) );
-		add_action( 'comment_form_before', array( $this, 'before_comment_form' ) );
-		add_action( 'comment_form_comments_closed', array( $this, 'comments_form_closed' ) );
+		add_action(
+			'comment_form_before', array(
+				$this,
+				'enqueue_comment_reply'
+			)
+		);
+		add_action(
+			'comment_form_before', array(
+				$this,
+				'before_comment_form'
+			)
+		);
+		add_action(
+			'comment_form_comments_closed', array(
+				$this,
+				'comments_form_closed'
+			)
+		);
 
 		/** Add comment actions - wrap comment fields in unordered list */
-		add_action( 'comment_form_before_fields', array( $this, 'comment_fields_wrapper_start' ) );
-		add_action( 'comment_form_after_fields', array( $this, 'comment_fields_wrapper_end' ) );
+		add_action(
+			'comment_form_before_fields', array(
+				$this,
+				'comment_fields_wrapper_start'
+			)
+		);
+		add_action(
+			'comment_form_after_fields', array(
+				$this,
+				'comment_fields_wrapper_end'
+			)
+		);
 
 		/** Add comment filters - NB: Order of these filters is important! */
 		add_filter( 'comment_class', array( $this, 'comment_author_class' ) );
-		add_filter( 'comment_form_defaults', array( $this, 'change_comment_form_required_field_glyph' ) );
+		add_filter(
+			'comment_form_defaults', array(
+				$this,
+				'change_comment_form_required_field_glyph'
+			)
+		);
 
 		/** Add comment filters - change fields to list items from paragraphs */
-		add_filter( 'comment_form_default_fields', array( $this, 'comment_fields_as_list_items' ) );
+		add_filter(
+			'comment_form_default_fields', array(
+				$this,
+				'comment_fields_as_list_items'
+			)
+		);
 
 	}
 
@@ -104,7 +148,7 @@ class OpusPrimusComments {
 	 * @package  OpusPrimus
 	 * @since    0.1
 	 *
-	 * @uses     _e
+	 * @uses     __
 	 * @uses     apply_filters
 	 * @uses     have_comments
 	 * @uses     post_password_required
@@ -122,7 +166,8 @@ class OpusPrimusComments {
 			printf(
 				'<span class="comments-password-message">' .
 				apply_filters( 'opus_comments_password_required', __( 'This post is password protected. Enter the password to view comments.', 'opusprimus' ) ) .
-				'</span>' );
+				'</span>'
+			);
 
 			return;
 		}
@@ -133,7 +178,8 @@ class OpusPrimusComments {
 			printf(
 				'<span class="no-comments-message">' .
 				apply_filters( 'opus_no_comments_message', __( 'Start a discussion ...', 'opusprimus' ) ) .
-				'</span>' );
+				'</span>'
+			);
 		}
 		/** End if - not have comments */
 
@@ -198,7 +244,7 @@ class OpusPrimusComments {
 	 * @package  OpusPrimus
 	 * @since    0.1
 	 *
-	 * @uses     _e
+	 * @uses     __
 	 * @uses     apply_filters
 	 * @uses     is_page
 	 *
@@ -223,11 +269,11 @@ class OpusPrimusComments {
 	 * Comment Author Class
 	 * Add additional classes to the comment based on the author
 	 *
-	 * @package OpusPrimus
-	 * @since   0.1
+	 * @package          OpusPrimus
+	 * @since            0.1
 	 *
-	 * @uses    $comment (global)
-	 * @uses    user_can
+	 * @uses    (GLOBAL) $comment
+	 * @uses             user_can
 	 *
 	 * @param   array $classes
 	 *
@@ -286,11 +332,11 @@ class OpusPrimusComments {
 
 		$fields = array(
 			'author' => '<li class="comment-form-author">' . '<label for="author">' . __( 'Name', 'opusprimus' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-				'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></li>',
+						'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></li>',
 			'email'  => '<li class="comment-form-email"><label for="email">' . __( 'Email', 'opusprimus' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-				'<input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></li>',
+						'<input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></li>',
 			'url'    => '<li class="comment-form-url"><label for="url">' . __( 'Website', 'opusprimus' ) . '</label>' .
-				'<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></li>',
+						'<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></li>',
 		);
 
 		return $fields;
@@ -452,7 +498,8 @@ class OpusPrimusComments {
 							_n(
 								__( '%1$s Comment', 'opusprimus' ),
 								__( '%1$s Comments', 'opusprimus' ),
-								count( $comments_only ) ),
+								count( $comments_only )
+							),
 							count( $comments_only )
 						); ?>
 					</h3><!-- #comments -->
@@ -492,7 +539,8 @@ class OpusPrimusComments {
 							_n(
 								__( '%1$s Pingback', 'opusprimus' ),
 								__( '%1$s Pingbacks', 'opusprimus' ),
-								count( $pingbacks_only ) ),
+								count( $pingbacks_only )
+							),
 							count( $pingbacks_only )
 						); ?>
 					</h3><!-- #pingbacks -->
@@ -532,7 +580,8 @@ class OpusPrimusComments {
 							_n(
 								__( '%1$s Trackback', 'opusprimus' ),
 								__( '%1$s Trackbacks', 'opusprimus' ),
-								count( $trackbacks_only ) ),
+								count( $trackbacks_only )
+							),
 							count( $trackbacks_only )
 						); ?>
 					</h3><!-- #trackbacks -->

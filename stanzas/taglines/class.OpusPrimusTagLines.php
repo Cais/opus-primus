@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Opus Primus TagLines
  * Add a meta box for a tagline to various places in the administration panels
@@ -8,7 +9,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2013, Opus Primus
+ * @copyright   Copyright (c) 2012-2014, Opus Primus
  *
  * This file is part of Opus Primus Taglines, a part of Opus Primus.
  *
@@ -41,12 +42,24 @@
  * @date        February 28, 2013
  * Changed name from "Meta_Boxes" to "TagLines" and moved to Stanzas
  */
-
 class OpusPrimusTagLines {
-	/** Constructor */
+	/**
+	 * Constructor
+	 *
+	 * @package        OpusPrimus
+	 * @sub-package    TagLines
+	 * @since          0.1
+	 *
+	 * @uses           add_action
+	 */
 	function __construct() {
 		/** Enqueue Styles */
-		add_action( 'wp_enqueue_scripts', array( $this, 'scripts_and_styles' ) );
+		add_action(
+			'wp_enqueue_scripts', array(
+				$this,
+				'scripts_and_styles'
+			)
+		);
 
 		/** Add taglines meta boxes */
 		add_action( 'add_meta_boxes', array( $this, 'tagline_create_boxes' ) );
@@ -69,12 +82,14 @@ class OpusPrimusTagLines {
 	 * Enqueue Scripts and Styles
 	 * Use to enqueue the extension scripts and stylesheets, if they exists
 	 *
-	 * @package     OpusPrimus
-	 * @subpackage  TagLines
-	 * @since       1.0.3
+	 * @package            OpusPrimus
+	 * @subpackage         TagLines
+	 * @since              1.0.3
 	 *
-	 * @uses        wp_enqueue_script
-	 * @uses        wp_enqueue_style
+	 * @uses    (CONSTANT) OPUS_STANZAS_URI
+	 * @uses               wp_enqueue_script
+	 * @uses               wp_enqueue_style
+	 * @uses               wp_get_theme
 	 */
 	function scripts_and_styles() {
 		/** Enqueue Styles */
@@ -87,12 +102,14 @@ class OpusPrimusTagLines {
 	 * Create Tagline Boxes
 	 * Create Meta Boxes for use with the taglines feature
 	 *
-	 * @package  OpusPrimus
-	 * @since    0.1
+	 * @package           OpusPrimus
+	 * @since             0.1
 	 *
-	 * @uses     $post (global) - post_type
-	 * @uses     add_meta_box
-	 * @internal used with action hook add_meta_boxes
+	 * @uses              OpusPrimusTagLines::tagline_callback
+	 * @uses     (GLOBAL) $post - post_type
+	 * @uses              add_meta_box
+	 *
+	 * @internal          used with action hook add_meta_boxes
 	 */
 	function tagline_create_boxes() {
 		global $post;
@@ -125,7 +142,7 @@ class OpusPrimusTagLines {
 	 *
 	 * @param   $post_id
 	 *
-	 * @uses    (constant) DOING_AUTOSAVE
+	 * @uses    (CONSTANT) DOING_AUTOSAVE
 	 * @uses               check_admin_referrer
 	 * @uses               current_user_can
 	 * @uses               update_post_meta
@@ -167,12 +184,12 @@ class OpusPrimusTagLines {
 	 * Tagline Output
 	 * Create output to be used
 	 *
-	 * @package OpusPrimus
-	 * @since   0.1
+	 * @package          OpusPrimus
+	 * @since            0.1
 	 *
-	 * @uses    $post (global) - ID, post_type
-	 * @uses    apply_filters
-	 * @uses    get_post_meta
+	 * @uses    (GLOBAL) $post - ID, post_type
+	 * @uses             apply_filters
+	 * @uses             get_post_meta
 	 */
 	function tagline_output() {
 		/** Since we are not inside the loop grab the global post object */
@@ -202,6 +219,8 @@ class OpusPrimusTagLines {
 	 *
 	 * @param   $post -> ID, post_type
 	 *
+	 * @uses    __
+	 * @uses    apply_filters
 	 * @uses    get_post_meta
 	 */
 	function tagline_callback( $post ) {

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Opus Primus Headers
  * Functionality specifically found in the header area / templates
@@ -7,7 +8,7 @@
  * @since       1.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2013, Opus Primus
+ * @copyright   Copyright (c) 2012-2014, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -31,7 +32,6 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
-
 class OpusPrimusHeader {
 
 	function __construct() {
@@ -165,6 +165,7 @@ class OpusPrimusHeader {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
+	 * @uses    OpusPrimusHeaders::custom_header_image
 	 * @uses    get_header_image
 	 */
 	function show_custom_header_image() {

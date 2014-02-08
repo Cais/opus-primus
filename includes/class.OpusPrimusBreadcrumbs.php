@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Opus Primus Breadcrumbs
  * Creates and display a breadcrumb trail for pages
@@ -7,7 +8,7 @@
  * @since       1.0.4
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2013, Opus Primus
+ * @copyright   Copyright (c) 2013-2014, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -31,7 +32,6 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
-
 class OpusPrimusBreadcrumbs {
 
 	function __construct() {
@@ -46,6 +46,7 @@ class OpusPrimusBreadcrumbs {
 	 * @subpackage  Structures
 	 * @since       1.0.3-alpha
 	 *
+	 * @uses        is_single
 	 * @uses        is_singular
 	 * @uses        get_post
 	 *
@@ -142,8 +143,8 @@ class OpusPrimusBreadcrumbs {
 			$post_trail .= '<ul class="breadcrumb">';
 
 			$post_trail .= '<li class="post-breadcrumbs-home-text">'
-				. '<a href="' . home_url( '/' ) . '">' . apply_filters( 'opus_post_breadcrumbs_home_text', __( 'Home', 'opusprimus' ) ) . '</a>'
-				. '</li>';
+						   . '<a href="' . home_url( '/' ) . '">' . apply_filters( 'opus_post_breadcrumbs_home_text', __( 'Home', 'opusprimus' ) ) . '</a>'
+						   . '</li>';
 
 			/** @var $post_trail - add breadcrumb categories */
 			$post_trail = $this->breadcrumb_categories( $post_trail, $post_ID );
@@ -153,8 +154,10 @@ class OpusPrimusBreadcrumbs {
 
 			/** If post is sticky add Sticky Post text */
 			if ( is_sticky( $post_ID ) ) {
-				$post_trail .= sprintf( '<li class="post-breadcrumbs-sticky-text"><a href="#">%1$s</a></li>',
-					apply_filters( 'opus_post_breadcrumbs_sticky_text', __( 'Sticky Post', 'opusprimus' ) ) );
+				$post_trail .= sprintf(
+					'<li class="post-breadcrumbs-sticky-text"><a href="#">%1$s</a></li>',
+					apply_filters( 'opus_post_breadcrumbs_sticky_text', __( 'Sticky Post', 'opusprimus' ) )
+				);
 			}
 			/** Enf if - is sticky */
 
@@ -286,8 +289,8 @@ class OpusPrimusBreadcrumbs {
 			$trail .= '<ul class="breadcrumb">';
 
 			$trail .= '<li>'
-				. '<a href="' . home_url( '/' ) . '">' . __( 'Home', 'opusprimus' ) . '</a>'
-				. '</li>';
+					  . '<a href="' . home_url( '/' ) . '">' . __( 'Home', 'opusprimus' ) . '</a>'
+					  . '</li>';
 
 			foreach ( $this->breadcrumbs() as $steps ) {
 
@@ -296,8 +299,8 @@ class OpusPrimusBreadcrumbs {
 					: get_post( $steps )->post_title;
 
 				$trail .= '<li>'
-					. '<a title="' . $post_title . '" href="' . home_url( '/?page_id=' ) . get_post( $steps )->ID . '">' . $post_title . '</a>'
-					. '</li>';
+						  . '<a title="' . $post_title . '" href="' . home_url( '/?page_id=' ) . get_post( $steps )->ID . '">' . $post_title . '</a>'
+						  . '</li>';
 
 			}
 			/** End foreach - steps */
@@ -329,6 +332,8 @@ class OpusPrimusBreadcrumbs {
 	 *
 	 * @param       $post
 	 * @param       $post_ID
+	 *
+	 * @uses        apply_filters
 	 *
 	 * @return      string $post_title
 	 */
@@ -370,6 +375,7 @@ class OpusPrimusBreadcrumbs {
 	 * @since       1.0.4
 	 *
 	 * @uses        OpusPrimusBreadcrumbs::the_trail
+	 * @uses        OpusPrimusBreadcrumbs::post_breadcrumbs
 	 *
 	 * @version     1.2.2
 	 * @date        October 26, 2013
