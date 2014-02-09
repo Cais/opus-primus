@@ -1,5 +1,5 @@
 === Opus Primus readme.txt ===
-* Last revised October 27, 2013
+* Last revised February 9, 2014
 
 == Contents ==
 * Copyright
@@ -7,10 +7,11 @@
 * Screenshots
 * Basic FAQ
 * Notes
+* Changelog
 * Review Tickets
 
 == Copyright ==
-Copyright (c) 2012-2013, Opus Primus
+Copyright (c) 2012-2014, Opus Primus
 
 This file is part of Opus Primus.
 
@@ -34,8 +35,9 @@ this program; if not, write to:
 The license for this software can also likely be found here:
 http://www.gnu.org/licenses/gpl-2.0.html
 
-Note: Opus Primus file Copyright years start with the first year of use and are
-amended with subsequent years based on file modification as the case may be.
+Note: All Opus Primus file Copyright years start with the first year of use and
+are amended with subsequent years based on theme publication regardless of any
+change or modification to the actual file.
 
 == Licenses ==
 All items are licensed under the GNU General Public License v2; or, as the case
@@ -150,6 +152,9 @@ necessarily be recorded in the changelog. The "Theme Version Guidelines" page
 found at http://opusprimus.com/under-the-page/theme-version-guidelines/ will
 be considered the most current at all times. The version of the guidelines
 included with the theme will simply be a copy of the noted page.
+
+== Changelog ==
+See `changelog.txt` in theme root folder
 
 == Review Tickets ==
 * http://themes.trac.wordpress.org/ticket/11106 - Version 1.0   - February 2013

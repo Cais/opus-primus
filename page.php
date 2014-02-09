@@ -94,10 +94,10 @@ do_action( 'opus_content_before' ); ?>
 
 						$opus_authors->post_author(
 									 array(
-										 'display_mod_author' => true,
-										 'display_author_url' => true,
+										 'display_mod_author'   => true,
+										 'display_author_url'   => true,
 										 'display_author_email' => true,
-										 'display_author_desc' => true,
+										 'display_author_desc'  => true,
 									 )
 						); ?>
 

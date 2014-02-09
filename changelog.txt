@@ -32,6 +32,8 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Miscellaneous =
 * Updated tags used in `style.css` header block to include responsive-layout and fluid-layout
+* Updated `readme.txt` to note existence and location of `changelog.txt`
+* Updated `readme.txt` copyright notice to clarify copyright years used by individual files.
 
 /** ------------------------------------------------------------------------- */
 == Version 1.2.2 ==
