@@ -101,7 +101,7 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 	 * @uses               is_single
 	 * @uses               wp_enqueue_script
 	 * @uses               wp_enqueue_style
-	 * @uses               wp_get_theme
+	 * @uses               wp_get_theme->get
 	 *
 	 * @internal           jQuery is enqueued as a dependency
 	 *
@@ -112,6 +112,10 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 	 * @version            1.2
 	 * @date               July 19, 2013
 	 * Added `is_single` conditional test before enqueue of Comment Tabs script
+	 *
+	 * @version            1.2.3
+	 * @date               February 19, 2014
+	 * Added `dashicons` dependency to main `Opus-Primus` stylesheet
 	 */
 	function opus_primus_enqueue_scripts() {
 		/** Enqueue Theme Scripts */
@@ -140,8 +144,8 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 		/** Enqueue Theme Stylesheets */
 		/** Theme Layouts */
 		wp_enqueue_style( 'Opus-Primus-Layout', OPUS_CSS . 'opus-primus-layout.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
-		/** Main Theme Elements */
-		wp_enqueue_style( 'Opus-Primus', OPUS_CSS . 'opus-primus.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
+		/** Main Theme Elements with dashicons dependency */
+		wp_enqueue_style( 'Opus-Primus', OPUS_CSS . 'opus-primus.css', array( 'dashicons' ), wp_get_theme()->get( 'Version' ), 'screen' );
 		/** Media Queries and Responsive Elements */
 		wp_enqueue_style( 'Opus-Primus-Media-Queries', OPUS_CSS . 'opus-primus-media-queries.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
 

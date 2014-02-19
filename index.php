@@ -8,7 +8,7 @@
  *
  * @internal       RECOMMENDED HTML5
  * @internal       RECOMMENDED CSS3
- * @internal       REQUIRED    WordPress 3.4
+ * @internal       REQUIRED    WordPress 3.8 for `dashicons` dependency of `Opus-Primus` stylesheet
  *
  * @author         Opus Primus <in.opus.primus@gmail.com>
  * @copyright      Copyright (c) 2012-2014, Opus Primus
@@ -46,7 +46,7 @@
  * @date           October 2013
  *
  * @version        1.2.3
- * @date           January 2014
+ * @date           February 2014
  */
 
 global $opus_structures;

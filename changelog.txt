@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised February 9, 2014
+Last revised February 19, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.3 ==
@@ -19,6 +19,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = CSS =
 * Added post coda post format classes
+* Added `dashicons` dependency to main `Opus-Primus` stylesheet
 * Change to only append to the `cite` tag when it is inside the `blockquote` tag
 * Center align Calendar Day table header cells
 * Fixed really long Post Titles and Words not wrapping as expected
@@ -34,6 +35,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Updated tags used in `style.css` header block to include responsive-layout and fluid-layout
 * Updated `readme.txt` to note existence and location of `changelog.txt`
 * Updated `readme.txt` copyright notice to clarify copyright years used by individual files.
+* Updated Required WordPress version to 3.8 for `dashicons` dependency
 
 /** ------------------------------------------------------------------------- */
 == Version 1.2.2 ==
