@@ -1514,7 +1514,7 @@ div.meta-byline button {
 
 /** === Post-Format: Gallery === -------------------------------------------- */
 .format-gallery .meta-byline:before {
-	font-family: "dashicons";
+	font-family: dashicons, sans-serif;
 	content: "\f161";
 	padding-right: 4px;
 }
@@ -1556,7 +1556,7 @@ p.more-images,
 
 /** === Post-Format: Image === ---------------------------------------------- */
 .format-image .meta-byline:before {
-	font-family: "dashicons";
+	font-family: dashicons, sans-serif;
 	content: "\f128";
 	padding-right: 4px;
 }
@@ -1593,7 +1593,7 @@ td.archive-image-excerpt {
 
 /** === Post-Format: Video === ---------------------------------------------- */
 .format-video .meta-byline:before {
-	font-family: "dashicons";
+	font-family: dashicons, sans-serif;
 	content: "\f126";
 	padding-right: 4px;
 }
@@ -1610,7 +1610,7 @@ div.post.format-video div.post-content div.video-player div.videopress-placehold
 
 /** === Post-Format: Quote === ---------------------------------------------- */
 .format-quote .meta-byline:before {
-	font-family: "dashicons";
+	font-family: dashicons, sans-serif;
 	content: "\f122";
 	padding-right: 4px;
 }
@@ -1667,7 +1667,7 @@ blockquote + div.sharing {
 
 /** === Post-Format: Status === --------------------------------------------- */
 .format-status .meta-byline:before {
-	font-family: "dashicons";
+	font-family: dashicons, sans-serif;
 	content: "\f130";
 	padding-right: 4px;
 }
@@ -1686,7 +1686,7 @@ blockquote + div.sharing {
 
 /** === Post-Format: Link === ----------------------------------------------- */
 .format-link .meta-byline:before {
-	font-family: "dashicons";
+	font-family: dashicons, sans-serif;
 	content: "\f103";
 	padding-right: 4px;
 }
@@ -1707,7 +1707,7 @@ div.post.format-link .post-content p a {
 
 /** === Post-Format: Audio === ---------------------------------------------- */
 .format-audio .meta-byline:before {
-	font-family: "dashicons";
+	font-family: dashicons, sans-serif;
 	content: "\f127";
 	padding-right: 4px;
 }
@@ -1732,7 +1732,7 @@ div.post.format-audio .post-content a {
 
 /** === Post-Format: Chat === ----------------------------------------------- */
 .format-chat .meta-byline:before {
-	font-family: "dashicons";
+	font-family: dashicons, sans-serif;
 	content: "\f125";
 	padding-right: 4px;
 }
