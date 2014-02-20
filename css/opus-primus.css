@@ -72,6 +72,8 @@
  * === Menu Related Elements ===
  * === Breadcrumbs ===
  * === Post Elements ===
+ * Meta Byline
+ * Buttons
  * === Page Elements ===
  * === Search ===
  *
@@ -954,6 +956,28 @@ ul.breadcrumb li ul.post-trail-categories li:first-child {
 	font-family: 'dashicons';
 	content: "\f112";
 	padding-left: 4px;
+}
+
+/** Buttons ----------------------------------------------------------------- */
+.button {
+	background: inherit;
+	border: 1px outset buttonface;
+	color: buttontext;
+	cursor: pointer;
+	font-size: 15px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 21px;
+	min-width: 64px;
+	padding: 1px 5px 2px;
+	text-align: center;
+}
+
+a.button:hover {
+	text-decoration: none;
+}
+
+.meta-byline .button {
+	float: right;
 }
 
 /** Really long Post Titles and Words --------------------------------------- */

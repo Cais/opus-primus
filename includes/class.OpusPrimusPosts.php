@@ -781,16 +781,20 @@ class OpusPrimusPosts {
 	 * Returns a string with the post-format type; optionally can not display a
 	 * flag for the standard post-format (default).
 	 *
-	 * @package OpusPrimus
-	 * @since   0.1
+	 * @package    OpusPrimus
+	 * @since      0.1
 	 *
-	 * @uses    __
-	 * @uses    apply_filters
-	 * @uses    get_post_format
-	 * @uses    get_post_format_link
-	 * @uses    get_post_format_string
+	 * @uses       __
+	 * @uses       apply_filters
+	 * @uses       get_post_format
+	 * @uses       get_post_format_link
+	 * @uses       get_post_format_string
 	 *
 	 * @return  string - link to the post-format specific archive
+	 *
+	 * @version    1.2.3
+	 * @date       February 20, 2014
+	 * Refactored `$output` to use `button` class versus the button element
 	 */
 	function post_format_flag() {
 		/** @var $flag_text - post-format */
@@ -799,12 +803,12 @@ class OpusPrimusPosts {
 		if ( 'Standard' == $flag_text ) {
 			return null;
 		} else {
-			$flag_text = '<button><span class="post-format-flag">' . $flag_text . '</span></button>';
+			$flag_text = '<span class="post-format-flag">' . $flag_text . '</span>';
 		}
 		/** End if - flag text */
 
 		/** @var $output - the post format type linked to its archive */
-		$output = '<a href="' . get_post_format_link( get_post_format() ) . '" title="' . sprintf( __( 'View the %1$s archive.', 'opusprimus' ), $title_text ) . '">' . $flag_text . '</a>';
+		$output = '<a class="button" href="' . get_post_format_link( get_post_format() ) . '" title="' . sprintf( __( 'View the %1$s archive.', 'opusprimus' ), $title_text ) . '">' . $flag_text . '</a>';
 
 		return apply_filters( 'opus_post_format_flag', $output );
 
@@ -973,17 +977,21 @@ class OpusPrimusPosts {
 	 * Returns a text string as a button that links to the post, used with the
 	 * "sticky" post functionality of WordPress
 	 *
-	 * @package OpusPrimus
-	 * @since   0.1
+	 * @package    OpusPrimus
+	 * @since      0.1
 	 *
 	 * @param   string $sticky_text
 	 *
-	 * @uses    __
-	 * @uses    apply_filters
-	 * @uses    is_sticky
-	 * @uses    get_permalink
+	 * @uses       __
+	 * @uses       apply_filters
+	 * @uses       is_sticky
+	 * @uses       get_permalink
 	 *
 	 * @return  string
+	 *
+	 * @version    1.2.3
+	 * @date       February 20, 2014
+	 * Refactored `$output` to use `button` class versus the button element
 	 */
 	function sticky_flag( $sticky_text = '' ) {
 
@@ -994,13 +1002,13 @@ class OpusPrimusPosts {
 		/** End if - sticky text */
 
 		if ( is_sticky() ) {
-			$output = '<a href="' . get_permalink() . '" title="' . sprintf( __( 'Go to %1$s post', 'opusprimus' ), strtolower( $sticky_text ) ) . '">'
-					  . '<button><span class="sticky-flag-text">'
+			$output = '<a class="button" href="' . get_permalink() . '" title="' . sprintf( __( 'Go to %1$s post', 'opusprimus' ), strtolower( $sticky_text ) ) . '">'
+					  . '<span class="sticky-flag-text">'
 					  . $sticky_text
-					  . '</span></button>'
+					  . '</span>'
 					  . '</a>';
 		} else {
-			$output = '';
+			$output = null;
 		}
 
 		/** End if - is sticky */

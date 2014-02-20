@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised February 19, 2014
+Last revised February 20, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.3 ==
@@ -11,6 +11,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Moved `featured_image` wrapper into OpusPrimusGallery::featured_image method
 * Moved `secondary_images` wrapper into OpusPrimusGallery::secondary_images method
 * Moved the ellipsis out of the read more link
+* Refactored `$output` to use `button` class versus the button element in meta byline flags
 * Removed unused parameter `$more` from `OpusPrimusPosts::excerpt_more_link` method
 * Removed `$sep_location` parameter as it was not used in `browser_title` method
 * Removed Featured Image thumbnail from index view
@@ -20,6 +21,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = CSS =
 * Added post coda post format classes
 * Added `dashicons` dependency to main `Opus-Primus` stylesheet
+* Added `button` class to replace the button element styles
 * Change to only append to the `cite` tag when it is inside the `blockquote` tag
 * Center align Calendar Day table header cells
 * Fixed really long Post Titles and Words not wrapping as expected
