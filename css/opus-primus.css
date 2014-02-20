@@ -50,7 +50,7 @@
  * Set the breadcrumbs background color to #ffffff (white)
  *
  * #version 1.2.3
- * @date	January 12, 2014
+ * @date	February 19, 2014
  * Adjust pixel measures to not use decimals
  * Re-Adjust `z-index: 3` for main navigation menu
  * Reduced the citation font-size for better aesthetics
@@ -59,6 +59,7 @@
  * Added post coda post format classes
  * Fixed really long Post Titles and Words not wrapping as expected
  * Added style to the read more link
+ * Prepended Post Byline with matching Post-Format dashicons
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -1473,7 +1474,19 @@ div.meta-byline button {
 	float: right;
 }
 
+.format-standard .meta-byline:before {
+	font-family: "dashicons";
+	content: "\f109";
+	padding-right: 4px;
+}
+
 /** === Post-Format: Gallery === -------------------------------------------- */
+.format-gallery .meta-byline:before {
+	font-family: "dashicons";
+	content: "\f161";
+	padding-right: 4px;
+}
+
 .format-gallery img.wp-post-image,
 .format-gallery img.attachment-thumbnail {
 	border: medium double #000000;
@@ -1510,6 +1523,12 @@ p.more-images,
 /** End: Post-Format: Gallery ----------------------------------------------- */
 
 /** === Post-Format: Image === ---------------------------------------------- */
+.format-image .meta-byline:before {
+	font-family: "dashicons";
+	content: "\f128";
+	padding-right: 4px;
+}
+
 div.post.format-image h2.image-title {
 	text-align: center;
 }
@@ -1541,6 +1560,12 @@ td.archive-image-excerpt {
 /** End: Post-Format: Image ------------------------------------------------- */
 
 /** === Post-Format: Video === ---------------------------------------------- */
+.format-video .meta-byline:before {
+	font-family: "dashicons";
+	content: "\f126";
+	padding-right: 4px;
+}
+
 div.post.format-video div.post-content p {
 	text-align: center;
 }
@@ -1552,6 +1577,12 @@ div.post.format-video div.post-content div.video-player div.videopress-placehold
 /** End: Post-Format: Video ------------------------------------------------- */
 
 /** === Post-Format: Quote === ---------------------------------------------- */
+.format-quote .meta-byline:before {
+	font-family: "dashicons";
+	content: "\f122";
+	padding-right: 4px;
+}
+
 @font-face {
 	font-family: 'Merienda';
 	src: url('../fonts/Merienda/Merienda.ttf') format('truetype');
@@ -1603,6 +1634,12 @@ blockquote + div.sharing {
 /** End: Post-Format: Quote ------------------------------------------------- */
 
 /** === Post-Format: Status === --------------------------------------------- */
+.format-status .meta-byline:before {
+	font-family: "dashicons";
+	content: "\f130";
+	padding-right: 4px;
+}
+
 .post.format-status span.opus-status-update {
 	line-height: 0;
 	opacity: 0.5;
@@ -1616,6 +1653,12 @@ blockquote + div.sharing {
 /** End: Post-Format: Status ------------------------------------------------ */
 
 /** === Post-Format: Link === ----------------------------------------------- */
+.format-link .meta-byline:before {
+	font-family: "dashicons";
+	content: "\f103";
+	padding-right: 4px;
+}
+
 div.post.format-link .post-content p a {
 	font-size: 18px;
 }
@@ -1631,6 +1674,12 @@ div.post.format-link .post-content p a {
 /** End: Post-Format: Link -------------------------------------------------- */
 
 /** === Post-Format: Audio === ---------------------------------------------- */
+.format-audio .meta-byline:before {
+	font-family: "dashicons";
+	content: "\f127";
+	padding-right: 4px;
+}
+
 div.post.format-audio .post-content a {
 	font-size: 18px;
 }
@@ -1650,6 +1699,12 @@ div.post.format-audio .post-content a {
 /** End: Post-Format: Audio ------------------------------------------------- */
 
 /** === Post-Format: Chat === ----------------------------------------------- */
+.format-chat .meta-byline:before {
+	font-family: "dashicons";
+	content: "\f125";
+	padding-right: 4px;
+}
+
 @font-face {
 	font-family: 'Underwood-Champion';
 	src: url('../fonts/Underwood-Champion/underwood_champion.ttf') format('truetype');

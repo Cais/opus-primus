@@ -24,6 +24,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Center align Calendar Day table header cells
 * Fixed really long Post Titles and Words not wrapping as expected
 * General clean-up and removal of excess/over-writing properties
+* Prepended Post Byline with matching Post-Format dashicons
 * Re-Adjust `ul.nav-menu` and `.nav-menu` to `z-index: 3` for main menu
 * Reduced the citation font-size for better aesthetics
 
