@@ -950,6 +950,12 @@ ul.breadcrumb li ul.post-trail-categories li:first-child {
 	padding-left: 7px;
 }
 
+.post-password-required .meta-byline:after {
+	font-family: 'dashicons';
+	content: "\f112";
+	padding-left: 4px;
+}
+
 /** Really long Post Titles and Words --------------------------------------- */
 h2.post-title,
 div.post-content p {
@@ -1474,11 +1480,13 @@ div.meta-byline button {
 	float: right;
 }
 
+/** Commented out but retained for consistency
 .format-standard .meta-byline:before {
 	font-family: "dashicons";
 	content: "\f109";
 	padding-right: 4px;
 }
+*/
 
 /** === Post-Format: Gallery === -------------------------------------------- */
 .format-gallery .meta-byline:before {
