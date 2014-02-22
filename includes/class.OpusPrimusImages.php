@@ -93,7 +93,7 @@ class OpusPrimusImages {
 		);
 
 		/** @var $archive_image - initial value (when there is no attachment) */
-		$archive_image = '<p class="archive-image">' . __( 'The Image archive looks much better if the image is set as an attachment of the post.', 'opusprimus' ) . '</p>';
+		$archive_image = '<p class="archive-image">' . __( 'The Image archive looks much better if the image is set as an attachment of the post.', 'opus-primus' ) . '</p>';
 		/** @var $archive_image_title , $archive_image_excerpt, $archive_image_content - initialized as an empty string */
 		$archive_image_title = $archive_image_excerpt = $archive_image_content = '';
 
@@ -120,7 +120,7 @@ class OpusPrimusImages {
 							'<span class="archive-image-title">%1$s</span>',
 							apply_filters(
 								'opus_archive_image_title',
-								sprintf( __( 'Image Title: %1$s', 'opusprimus' ), $archive_image_title )
+								sprintf( __( 'Image Title: %1$s', 'opus-primus' ), $archive_image_title )
 							)
 						); ?>
 					</th>
@@ -136,8 +136,8 @@ class OpusPrimusImages {
 					if ( ! is_single() ) {
 						echo '<span class="archive-image"><a href="' . get_permalink() . '" title="' . the_title_attribute(
 								array(
-									'before' => __( 'View', 'opusprimus' ) . ' ',
-									'after'  => ' ' . __( 'only', 'opusprimus' ),
+									'before' => __( 'View', 'opus-primus' ) . ' ',
+									'after'  => ' ' . __( 'only', 'opus-primus' ),
 									'echo'   => '0'
 								)
 							) . '">'
@@ -148,7 +148,7 @@ class OpusPrimusImages {
 						 * if ( empty( $attachments ) ) {
 						 * printf( '<div class="linked-image-message">%1$s</div>',
 						 * apply_filters( 'opus_linked_image_message',
-						 * __( 'This is a linked image.', 'opusprimus' )
+						 * __( 'This is a linked image.', 'opus-primus' )
 						 * )
 						 * );
 						 * } /** End if - empty attachments */
@@ -163,7 +163,7 @@ class OpusPrimusImages {
 						'<td class="archive-image-excerpt">%1$s</td>',
 						apply_filters(
 							'opus_archive_image_excerpt',
-							sprintf( __( 'Image Caption: %1$s', 'opusprimus' ), $archive_image_excerpt )
+							sprintf( __( 'Image Caption: %1$s', 'opus-primus' ), $archive_image_excerpt )
 						)
 					);
 				} /** End if - not empty excerpt */
@@ -176,7 +176,7 @@ class OpusPrimusImages {
 						'<td class="archive-image-content">%1$s</td>',
 						apply_filters(
 							'opus_archive_image_content',
-							sprintf( __( 'Image Description: %1$s', 'opusprimus' ), $archive_image_content )
+							sprintf( __( 'Image Description: %1$s', 'opus-primus' ), $archive_image_content )
 						)
 					);
 				} /** End if - not empty content */
@@ -238,7 +238,7 @@ class OpusPrimusImages {
 		if ( $this->exif_copyright() ) {
 			printf(
 				'<p class="exif-copyright">%1$s %2$s</p>',
-				apply_filters( 'opus_exif_copyright_label', __( 'Copyright:', 'opusprimus' ) ),
+				apply_filters( 'opus_exif_copyright_label', __( 'Copyright:', 'opus-primus' ) ),
 				$this->exif_copyright()
 			);
 		}
@@ -246,7 +246,7 @@ class OpusPrimusImages {
 		if ( $this->exif_timestamp() ) {
 			printf(
 				'<p class="exif-timestamp">%1$s %2$s</p>',
-				apply_filters( 'opus_exif_timestamp_label', __( 'Uploaded:', 'opusprimus' ) ),
+				apply_filters( 'opus_exif_timestamp_label', __( 'Uploaded:', 'opus-primus' ) ),
 				$this->exif_timestamp()
 			);
 		}
@@ -254,7 +254,7 @@ class OpusPrimusImages {
 		if ( $this->exif_camera() ) {
 			printf(
 				'<p class="exif-camera">%1$s %2$s</p>',
-				apply_filters( 'opus_exif_camera_label', __( 'Camera:', 'opusprimus' ) ),
+				apply_filters( 'opus_exif_camera_label', __( 'Camera:', 'opus-primus' ) ),
 				$this->exif_camera()
 			);
 		}
@@ -262,7 +262,7 @@ class OpusPrimusImages {
 		if ( $this->exif_shutter() ) {
 			printf(
 				'<p class="exif-shutter">%1$s %2$s</p>',
-				apply_filters( 'opus_exif_shutter_label', __( 'Shutter Speed:', 'opusprimus' ) ),
+				apply_filters( 'opus_exif_shutter_label', __( 'Shutter Speed:', 'opus-primus' ) ),
 				$this->exif_shutter()
 			);
 		}
@@ -270,7 +270,7 @@ class OpusPrimusImages {
 		if ( $this->exif_aperture() ) {
 			printf(
 				'<p class="exif-aperture">%1$s F%2$s</p>',
-				apply_filters( 'opus_exif_aperture_label', __( 'Aperture:', 'opusprimus' ) ),
+				apply_filters( 'opus_exif_aperture_label', __( 'Aperture:', 'opus-primus' ) ),
 				$this->exif_aperture()
 			);
 		}
@@ -278,7 +278,7 @@ class OpusPrimusImages {
 		if ( $this->exif_caption() ) {
 			printf(
 				'<p class="exif-caption">%1$s %2$s</p>',
-				apply_filters( 'opus_exif_caption_label', __( 'Caption:', 'opusprimus' ) ),
+				apply_filters( 'opus_exif_caption_label', __( 'Caption:', 'opus-primus' ) ),
 				$this->exif_caption()
 			);
 		}
@@ -286,7 +286,7 @@ class OpusPrimusImages {
 		if ( $this->exif_focal_length() ) {
 			printf(
 				'<p class="exif-focal-length">%1$s %2$s</p>',
-				apply_filters( 'opus_exif_focal_length_label', __( 'Focal Length:', 'opusprimus' ) ),
+				apply_filters( 'opus_exif_focal_length_label', __( 'Focal Length:', 'opus-primus' ) ),
 				$this->exif_focal_length()
 			);
 		}
@@ -294,7 +294,7 @@ class OpusPrimusImages {
 		if ( $this->exif_iso_speed() ) {
 			printf(
 				'<p class="exif-iso-speed">%1$s %2$s</p>',
-				apply_filters( 'opus_exif_iso_speed_label', __( 'ISO Speed:', 'opusprimus' ) ),
+				apply_filters( 'opus_exif_iso_speed_label', __( 'ISO Speed:', 'opus-primus' ) ),
 				$this->exif_iso_speed()
 			);
 		}
@@ -302,7 +302,7 @@ class OpusPrimusImages {
 		if ( $this->exif_title() ) {
 			printf(
 				'<p class="exif-title">%1$s %2$s</p>',
-				apply_filters( 'opus_exif_title_label', __( 'Title:', 'opusprimus' ) ),
+				apply_filters( 'opus_exif_title_label', __( 'Title:', 'opus-primus' ) ),
 				$this->exif_title()
 			);
 		}
@@ -362,7 +362,7 @@ class OpusPrimusImages {
 				<th>
 					<?php printf(
 						'<span class="display-exif-table-header-text">%1$s</span>',
-						apply_filters( 'opus_display_exif_table_header_text', __( 'Image Details', 'opusprimus' ) )
+						apply_filters( 'opus_display_exif_table_header_text', __( 'Image Details', 'opus-primus' ) )
 					); ?>
 				</th>
 			</tr>
@@ -372,43 +372,43 @@ class OpusPrimusImages {
 			<?php
 			/** If the exif value is set display it */
 			if ( $this->exif_dimensions() ) {
-				echo '<tr><td class="exif-dimensions">' . apply_filters( 'opus_exif_dimensions_label', __( 'Dimensions', 'opusprimus' ) ) . '</td><td>' . $this->exif_dimensions() . '</td></tr>';
+				echo '<tr><td class="exif-dimensions">' . apply_filters( 'opus_exif_dimensions_label', __( 'Dimensions', 'opus-primus' ) ) . '</td><td>' . $this->exif_dimensions() . '</td></tr>';
 			}
 			/** End if */
 			if ( $this->exif_copyright() ) {
-				echo '<tr><td class="exif-copyright">' . apply_filters( 'opus_exif_copyright_label', __( 'Copyright', 'opusprimus' ) ) . '</td><td>' . $this->exif_copyright() . '</td></tr>';
+				echo '<tr><td class="exif-copyright">' . apply_filters( 'opus_exif_copyright_label', __( 'Copyright', 'opus-primus' ) ) . '</td><td>' . $this->exif_copyright() . '</td></tr>';
 			}
 			/** End if */
 			if ( $this->exif_timestamp() ) {
-				echo '<tr><td class="exif-timestamp">' . apply_filters( 'opus_exif_timestamp_label', __( 'Uploaded', 'opusprimus' ) ) . '</td><td>' . $this->exif_timestamp() . '</td></tr>';
+				echo '<tr><td class="exif-timestamp">' . apply_filters( 'opus_exif_timestamp_label', __( 'Uploaded', 'opus-primus' ) ) . '</td><td>' . $this->exif_timestamp() . '</td></tr>';
 			}
 			/** End if */
 			if ( $this->exif_camera() ) {
-				echo '<tr><td class="exif-camera">' . apply_filters( 'opus_exif_camera_label', __( 'Camera', 'opusprimus' ) ) . '</td><td>' . $this->exif_camera() . '</td></tr>';
+				echo '<tr><td class="exif-camera">' . apply_filters( 'opus_exif_camera_label', __( 'Camera', 'opus-primus' ) ) . '</td><td>' . $this->exif_camera() . '</td></tr>';
 			}
 			/** End if */
 			if ( $this->exif_shutter() ) {
-				echo '<tr><td class="exif-shutter">' . apply_filters( 'opus_exif_shutter_label', __( 'Shutter Speed', 'opusprimus' ) ) . '</td><td>' . $this->exif_shutter() . '</td></tr>';
+				echo '<tr><td class="exif-shutter">' . apply_filters( 'opus_exif_shutter_label', __( 'Shutter Speed', 'opus-primus' ) ) . '</td><td>' . $this->exif_shutter() . '</td></tr>';
 			}
 			/** End if */
 			if ( $this->exif_aperture() ) {
-				echo '<tr><td class="exif-aperture">' . apply_filters( 'opus_exif_aperture_label', __( 'Aperture', 'opusprimus' ) ) . '</td><td>' . 'F' . $this->exif_aperture() . '</td></tr>';
+				echo '<tr><td class="exif-aperture">' . apply_filters( 'opus_exif_aperture_label', __( 'Aperture', 'opus-primus' ) ) . '</td><td>' . 'F' . $this->exif_aperture() . '</td></tr>';
 			}
 			/** End if */
 			if ( $this->exif_caption() ) {
-				echo '<tr><td class="exif-caption">' . apply_filters( 'opus_exif_caption_label', __( 'Caption', 'opusprimus' ) ) . '</td><td>' . $this->exif_caption() . '</td></tr>';
+				echo '<tr><td class="exif-caption">' . apply_filters( 'opus_exif_caption_label', __( 'Caption', 'opus-primus' ) ) . '</td><td>' . $this->exif_caption() . '</td></tr>';
 			}
 			/** End if */
 			if ( $this->exif_focal_length() ) {
-				echo '<tr><td class="exif-focal-length">' . apply_filters( 'opus_exif_focal_length_label', __( 'Focal Length', 'opusprimus' ) ) . '</td><td>' . $this->exif_focal_length() . '</td></tr>';
+				echo '<tr><td class="exif-focal-length">' . apply_filters( 'opus_exif_focal_length_label', __( 'Focal Length', 'opus-primus' ) ) . '</td><td>' . $this->exif_focal_length() . '</td></tr>';
 			}
 			/** End if */
 			if ( $this->exif_iso_speed() ) {
-				echo '<tr><td class="exif-iso-speed">' . apply_filters( 'opus_exif_iso_speed_label', __( 'ISO Speed', 'opusprimus' ) ) . '</td><td>' . $this->exif_iso_speed() . '</td></tr>';
+				echo '<tr><td class="exif-iso-speed">' . apply_filters( 'opus_exif_iso_speed_label', __( 'ISO Speed', 'opus-primus' ) ) . '</td><td>' . $this->exif_iso_speed() . '</td></tr>';
 			}
 			/** End if */
 			if ( $this->exif_title() ) {
-				echo '<tr><td class="exif-title">' . apply_filters( 'opus_exif_title_label', __( 'Title', 'opusprimus' ) ) . '</td><td>' . $this->exif_title() . '</td></tr>';
+				echo '<tr><td class="exif-title">' . apply_filters( 'opus_exif_title_label', __( 'Title', 'opus-primus' ) ) . '</td><td>' . $this->exif_title() . '</td></tr>';
 			} /** End if */
 			?>
 			</tbody>
@@ -592,7 +592,7 @@ class OpusPrimusImages {
 		}
 		/** End if - credit & copyright */
 		if ( $image_data['image_meta']['copyright'] ) {
-			$copyright .= sprintf( __( '&copy; %1$s %2$s', 'opusprimus' ), get_the_time( 'Y' ), $image_data['image_meta']['copyright'] );
+			$copyright .= sprintf( __( '&copy; %1$s %2$s', 'opus-primus' ), get_the_time( 'Y' ), $image_data['image_meta']['copyright'] );
 		}
 
 		/** End if - copyright */
@@ -673,8 +673,8 @@ class OpusPrimusImages {
 		if ( $width && $height ) {
 			global $post;
 			$dimensions .= sprintf(
-				__( '%1$s (Size: %2$s by %3$s)', 'opusprimus' ),
-				'<a href="' . wp_get_attachment_url( $post->ID ) . '">' . sprintf( __( 'Original image', 'opusprimus' ) ) . '</a>',
+				__( '%1$s (Size: %2$s by %3$s)', 'opus-primus' ),
+				'<a href="' . wp_get_attachment_url( $post->ID ) . '">' . sprintf( __( 'Original image', 'opus-primus' ) ) . '</a>',
 				$width . 'px',
 				$height . 'px'
 			);
@@ -809,12 +809,12 @@ class OpusPrimusImages {
 			if ( ( 1 / $image_data['image_meta']['shutter_speed'] ) > 1 ) {
 				$shutter .= "1/";
 				if ( number_format( ( 1 / $image_data['image_meta']['shutter_speed'] ), 1 ) == number_format( ( 1 / $image_data['image_meta']['shutter_speed'] ), 0 ) ) {
-					$shutter .= number_format( ( 1 / $image_data['image_meta']['shutter_speed'] ), 0, '.', '' ) . ' ' . __( 'sec', 'opusprimus' );
+					$shutter .= number_format( ( 1 / $image_data['image_meta']['shutter_speed'] ), 0, '.', '' ) . ' ' . __( 'sec', 'opus-primus' );
 				} else {
-					$shutter .= number_format( ( 1 / $image_data['image_meta']['shutter_speed'] ), 1, '.', '' ) . ' ' . __( 'sec', 'opusprimus' );
+					$shutter .= number_format( ( 1 / $image_data['image_meta']['shutter_speed'] ), 1, '.', '' ) . ' ' . __( 'sec', 'opus-primus' );
 				}
 			} else {
-				$shutter .= $image_data['image_meta']['shutter_speed'] . ' ' . __( 'sec', 'opusprimus' );
+				$shutter .= $image_data['image_meta']['shutter_speed'] . ' ' . __( 'sec', 'opus-primus' );
 			}
 			/** End if - calculated shutter speed */
 		}
@@ -865,7 +865,7 @@ class OpusPrimusImages {
 		/** Creation timestamp in end-user settings format */
 		if ( $image_data['image_meta']['created_timestamp'] ) {
 			$timestamp .= sprintf(
-				__( '%1$s @ %2$s', 'opusprimus' ),
+				__( '%1$s @ %2$s', 'opus-primus' ),
 				get_the_time( get_option( 'date_format' ), $image_data['image_meta']['created_timestamp'] ),
 				get_the_time( get_option( 'time_format' ), $image_data['image_meta']['created_timestamp'] )
 			);
@@ -1059,8 +1059,8 @@ class OpusPrimusImages {
 			?>
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(
 				array(
-					'before' => __( 'View', 'opusprimus' ) . ' ',
-					'after'  => ' ' . __( 'only', 'opusprimus' )
+					'before' => __( 'View', 'opus-primus' ) . ' ',
+					'after'  => ' ' . __( 'only', 'opus-primus' )
 				)
 			); ?>">
 				<?php the_title( $before, $after, $echo ); ?>

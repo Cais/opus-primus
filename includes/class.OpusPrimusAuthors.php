@@ -174,7 +174,7 @@ class OpusPrimusAuthors {
 							home_url( '/?author=' . $author_id ),
 							esc_attr(
 								sprintf(
-									__( 'View the full biography ... and all posts by %1$s', 'opusprimus' ),
+									__( 'View the full biography ... and all posts by %1$s', 'opus-primus' ),
 									get_the_author_meta( 'display_name', $author_id )
 								)
 							),
@@ -243,7 +243,7 @@ class OpusPrimusAuthors {
 					sprintf(
 						'<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
 						home_url( '/?author=' . $author_id ),
-						esc_attr( sprintf( __( 'View all posts by %1$s', 'opusprimus' ), $author_display_name ) ),
+						esc_attr( sprintf( __( 'View all posts by %1$s', 'opus-primus' ), $author_display_name ) ),
 						$author_display_name
 					)
 				); ?>
@@ -260,7 +260,7 @@ class OpusPrimusAuthors {
 					<li class="opus-author-contact">
 						<?php
 						printf(
-							'<span class="opus-author-contact-text">' . __( 'Visit the web site of %1$s or email %2$s.', 'opusprimus' ) . '</span>',
+							'<span class="opus-author-contact-text">' . __( 'Visit the web site of %1$s or email %2$s.', 'opus-primus' ) . '</span>',
 							'<a class="opus-author-url" href="' . $author_url . '">' . $author_display_name . '</a>',
 							'<a class="opus-author-email" href="mailto:' . $author_email . '">' . $author_display_name . '</a>'
 						); ?>
@@ -275,7 +275,7 @@ class OpusPrimusAuthors {
 					<li class="opus-author-contact">
 						<?php
 						printf(
-							'<span class="opus-author-contact-text">' . __( 'Visit the web site of %1$s.', 'opusprimus' ) . '</span>',
+							'<span class="opus-author-contact-text">' . __( 'Visit the web site of %1$s.', 'opus-primus' ) . '</span>',
 							'<a class="opus-author-url" href="' . $author_url . '">' . $author_display_name . '</a>'
 						); ?>
 					</li><!-- opus-author-contact -->
@@ -289,7 +289,7 @@ class OpusPrimusAuthors {
 					<li class="opus-author-contact">
 						<?php
 						printf(
-							'<span class="opus-author-contact-text">' . __( 'Email: %1$s.', 'opusprimus' ) . '</span>',
+							'<span class="opus-author-contact-text">' . __( 'Email: %1$s.', 'opus-primus' ) . '</span>',
 							'<a class="opus-author-email" href="mailto:' . $author_email . '">' . $author_display_name . '</a>'
 						); ?>
 					</li><!-- opus-author-contact -->
@@ -303,7 +303,7 @@ class OpusPrimusAuthors {
 					<li class="opus-author-contact">
 						<?php
 						printf(
-							'<span class="opus-author-contact-text">' . __( 'Email: %1$s.', 'opusprimus' ) . '</span>',
+							'<span class="opus-author-contact-text">' . __( 'Email: %1$s.', 'opus-primus' ) . '</span>',
 							'<a class="opus-author-email" href="mailto:' . $author_email . '">' . $author_display_name . '</a>'
 						); ?>
 					</li><!-- opus-author-contact -->
@@ -318,7 +318,7 @@ class OpusPrimusAuthors {
 					?>
 					<li class="opus-author-biography">
 						<?php printf(
-							'<span class="opus-author-biography-text">' . __( 'Biography: %1$s', 'opusprimus' ) . '</span>',
+							'<span class="opus-author-biography-text">' . __( 'Biography: %1$s', 'opus-primus' ) . '</span>',
 							$author_desc
 						); ?>
 					</li><!-- opus-author-biography -->
@@ -394,7 +394,7 @@ class OpusPrimusAuthors {
 			'<div class="first-author-details-text">%1$s</div><!-- .first-author-details-text -->',
 			apply_filters(
 				'opus_first_author_by_text',
-				__( 'Author:', 'opusprimus' )
+				__( 'Author:', 'opus-primus' )
 			)
 		);
 		$this->author_details( $opus_author_id, $post_author_args['display_author_url'], $post_author_args['display_author_email'], $post_author_args['display_author_desc'] );
@@ -422,7 +422,7 @@ class OpusPrimusAuthors {
 				'<div class="modified-author-details-text">%1$s</div><!-- modified-author-details-text -->',
 				apply_filters(
 					'opus_modified_author_by_text',
-					__( 'Modified by:', 'opusprimus' )
+					__( 'Modified by:', 'opus-primus' )
 				)
 			);
 			$this->author_details( $last_id, $post_author_args['display_author_url'], $post_author_args['display_author_email'], $post_author_args['display_author_desc'] );

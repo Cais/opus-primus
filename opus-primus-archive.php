@@ -46,13 +46,13 @@ global $opus_structures, $opus_posts, $opus_comments, $opus_images, $opus_naviga
 
 	<?php
 	/** @var $anchor - set value for use in meta_tags (post_byline default) */
-	$anchor = __( 'Posted', 'opusprimus' );
+	$anchor = __( 'Posted', 'opus-primus' );
 	$opus_posts->post_byline( array( 'tempus' => 'time' ) );
 	$opus_posts->post_title();
 	$opus_comments->comments_link();
 	$opus_images->featured_thumbnail( $size = 'thumbnail', $class = 'alignright' );
 	$opus_posts->post_excerpt();
-	$opus_navigation->multiple_pages_link( array(), $preface = __( 'Pages:', 'opusprimus' ) );
+	$opus_navigation->multiple_pages_link( array(), $preface = __( 'Pages:', 'opus-primus' ) );
 	$opus_posts->meta_tags( $anchor );
 	$opus_posts->post_coda(); ?>
 

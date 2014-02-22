@@ -95,7 +95,7 @@ class OpusPrimusPosts {
 		global $post;
 
 		/** @var $link_text - text for the title attribute */
-		$link_text = sprintf( __( 'Read more of %1$s', 'opusprimus' ), $this->anchor_title_text() );
+		$link_text = sprintf( __( 'Read more of %1$s', 'opus-primus' ), $this->anchor_title_text() );
 
 		/** @var $link_url - URL to single view */
 		$link_url = apply_filters(
@@ -251,7 +251,7 @@ class OpusPrimusPosts {
 		return sprintf(
 			'<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
 			get_author_posts_url( get_the_author_meta( 'ID' ) ),
-			esc_attr( sprintf( __( 'View all posts by %1$s', 'opusprimus' ), get_the_author() ) ),
+			esc_attr( sprintf( __( 'View all posts by %1$s', 'opus-primus' ), get_the_author() ) ),
 			get_the_author()
 		);
 	}
@@ -279,7 +279,7 @@ class OpusPrimusPosts {
 
 		/** Return the string */
 
-		return empty( $link_title_text ) ? __( 'post', 'opusprimus' ) : $link_title_text;
+		return empty( $link_title_text ) ? __( 'post', 'opus-primus' ) : $link_title_text;
 
 	}
 
@@ -327,13 +327,13 @@ class OpusPrimusPosts {
 		$opus_tag_list = get_the_tag_list( '', ', ', '' );
 
 		if ( ( $opus_tag_list ) && ( ! $this->uncategorized() ) ) {
-			$opus_posted_in = __( '%1$s in %2$s and tagged %3$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark. %6$s', 'opusprimus' );
+			$opus_posted_in = __( '%1$s in %2$s and tagged %3$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark. %6$s', 'opus-primus' );
 		} elseif ( ( $opus_tag_list ) && ( $this->uncategorized() ) ) {
-			$opus_posted_in = __( '%1$s and tagged %3$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark. %6$s', 'opusprimus' );
+			$opus_posted_in = __( '%1$s and tagged %3$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark. %6$s', 'opus-primus' );
 		} elseif ( ( ! $opus_tag_list ) && ( ! $this->uncategorized() ) ) {
-			$opus_posted_in = __( '%1$s in %2$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark. %6$s', 'opusprimus' );
+			$opus_posted_in = __( '%1$s in %2$s. Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark. %6$s', 'opus-primus' );
 		} else {
-			$opus_posted_in = __( 'Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark. %6$s', 'opusprimus' );
+			$opus_posted_in = __( 'Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark. %6$s', 'opus-primus' );
 		}
 		/** End if - tag list */
 
@@ -375,7 +375,7 @@ class OpusPrimusPosts {
 		return sprintf(
 			'<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
 			home_url( '?author=' . $last_user->ID ),
-			esc_attr( sprintf( __( 'View all posts by %1$s', 'opusprimus' ), $last_user->display_name ) ),
+			esc_attr( sprintf( __( 'View all posts by %1$s', 'opus-primus' ), $last_user->display_name ) ),
 			$last_user->display_name
 		);
 	}
@@ -440,7 +440,7 @@ class OpusPrimusPosts {
 		 * not be noted ( per developer prerogative ).
 		 */
 		if ( ( ! empty( $last_user ) ) && ( $opus_author_id <> $last_id ) ) {
-			$mod_author_phrase .= apply_filters( 'opus_mod_different_author_phrase', __( 'Last modified by %1$s %2$s %3$s %4$s.', 'opusprimus' ) );
+			$mod_author_phrase .= apply_filters( 'opus_mod_different_author_phrase', __( 'Last modified by %1$s %2$s %3$s %4$s.', 'opus-primus' ) );
 			$mod_author_avatar = get_avatar( $last_user->user_email, $line_height );
 
 			/**
@@ -450,7 +450,7 @@ class OpusPrimusPosts {
 			do_action( 'opus_modified_post_before' );
 
 		} else {
-			$mod_author_phrase .= apply_filters( 'opus_mod_same_author_phrase', __( 'and modified %3$s %4$s.', 'opusprimus' ) );
+			$mod_author_phrase .= apply_filters( 'opus_mod_same_author_phrase', __( 'and modified %3$s %4$s.', 'opus-primus' ) );
 			$mod_author_avatar = '';
 		}
 		/** End if - not empty last user */
@@ -463,8 +463,8 @@ class OpusPrimusPosts {
 					'<span class="author-modified-time">' . $mod_author_phrase . '</span>',
 					$mod_author_avatar,
 					apply_filters( 'opus_post_byline_mod_author', $this->modified_author_posts_link( $last_user ) ),
-					apply_filters( 'opus_post_byline_mod_date', sprintf( __( 'on %1$s', 'opusprimus' ), get_the_modified_date( get_option( 'date_format' ) ) ) ),
-					apply_filters( 'opus_post_byline_mod_time', sprintf( __( 'at %1$s', 'opusprimus' ), get_the_modified_time( get_option( 'time_format' ) ) ) )
+					apply_filters( 'opus_post_byline_mod_date', sprintf( __( 'on %1$s', 'opus-primus' ), get_the_modified_date( get_option( 'date_format' ) ) ) ),
+					apply_filters( 'opus_post_byline_mod_time', sprintf( __( 'at %1$s', 'opus-primus' ), get_the_modified_time( get_option( 'time_format' ) ) ) )
 				);
 			}
 			/** End if - get the time */
@@ -474,8 +474,8 @@ class OpusPrimusPosts {
 					'<span class="author-modified-date">' . $mod_author_phrase . '</span>',
 					$mod_author_avatar,
 					apply_filters( 'opus_post_byline_mod_author', $this->modified_author_posts_link( $last_user ) ),
-					apply_filters( 'opus_post_byline_mod_date', sprintf( __( 'on %1$s', 'opusprimus' ), get_the_modified_date( get_option( 'date_format' ) ) ) ),
-					apply_filters( 'opus_post_byline_mod_time', sprintf( __( 'at %1$s', 'opusprimus' ), get_the_modified_time( get_option( 'time_format' ) ) ) )
+					apply_filters( 'opus_post_byline_mod_date', sprintf( __( 'on %1$s', 'opus-primus' ), get_the_modified_date( get_option( 'date_format' ) ) ) ),
+					apply_filters( 'opus_post_byline_mod_time', sprintf( __( 'at %1$s', 'opus-primus' ), get_the_modified_time( get_option( 'time_format' ) ) ) )
 				);
 			}
 			/** End if - get the date */
@@ -576,7 +576,7 @@ class OpusPrimusPosts {
 	function post_byline( $byline_args = '' ) {
 		/** Set defaults */
 		$defaults    = array(
-			'anchor'             => 'Posted',
+			'anchor'             => __( 'Posted', 'opus-primus' ),
 			'display_mod_author' => false,
 			'sticky_flag'        => '',
 			'tempus'             => 'date',
@@ -594,7 +594,7 @@ class OpusPrimusPosts {
 		/** @var string $opus_post_byline - create byline phrase string */
 		$opus_post_byline = apply_filters(
 			'opus_post_byline_phrase',
-			__( '%1$s %2$s %3$s %4$s', 'opusprimus' )
+			__( '%1$s %2$s %3$s %4$s', 'opus-primus' )
 		);
 
 		if ( true == $byline_args['echo'] ) {
@@ -611,21 +611,21 @@ class OpusPrimusPosts {
 				apply_filters(
 					'opus_post_byline_date',
 					sprintf(
-						__( 'on %1$s', 'opusprimus' ),
+						__( 'on %1$s', 'opus-primus' ),
 						get_the_date( get_option( 'date_format' ) )
 					)
 				),
 				apply_filters(
 					'opus_post_byline_time',
 					sprintf(
-						__( 'at %1$s', 'opusprimus' ),
+						__( 'at %1$s', 'opus-primus' ),
 						get_the_time( get_option( 'time_format' ) )
 					)
 				),
 				apply_filters(
 					'opus_post_byline_author',
 					sprintf(
-						__( 'by %1$s', 'opusprimus' ),
+						__( 'by %1$s', 'opus-primus' ),
 						$this->author_posts_link()
 					)
 				)
@@ -704,7 +704,7 @@ class OpusPrimusPosts {
 	 * Outputs `the_content` and allows for the_content parameters to be used
 	 *
 	 * @link     http://codex.wordpress.org/Function_Reference/the_content
-	 * @example  post_content( __( 'Read more of ... ', 'opusprimus' ) . the_title( '', '', false ) )
+	 * @example  post_content( __( 'Read more of ... ', 'opus-primus' ) . the_title( '', '', false ) )
 	 * @internal The above example, when the <!--more--> tag is used, will
 	 * provide a link to the single view of the post with the anchor text of:
 	 * "Read more of ... <the-post-title>"
@@ -726,7 +726,7 @@ class OpusPrimusPosts {
 
 		/** Check if there the more_link_text parameter has been set */
 		if ( empty( $more_link_text ) ) {
-			$more_link_text = __( 'Continue reading ... ', 'opusprimus' ) . the_title( '', '', false );
+			$more_link_text = __( 'Continue reading ... ', 'opus-primus' ) . the_title( '', '', false );
 		}
 		/** End if - empty - more link text */
 
@@ -808,7 +808,7 @@ class OpusPrimusPosts {
 		/** End if - flag text */
 
 		/** @var $output - the post format type linked to its archive */
-		$output = '<a class="button" href="' . get_post_format_link( get_post_format() ) . '" title="' . sprintf( __( 'View the %1$s archive.', 'opusprimus' ), $title_text ) . '">' . $flag_text . '</a>';
+		$output = '<a class="button" href="' . get_post_format_link( get_post_format() ) . '" title="' . sprintf( __( 'View the %1$s archive.', 'opus-primus' ), $title_text ) . '">' . $flag_text . '</a>';
 
 		return apply_filters( 'opus_post_format_flag', $output );
 
@@ -852,8 +852,8 @@ class OpusPrimusPosts {
 		?>
 		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(
 			array(
-				'before' => __( 'View', 'opusprimus' ) . ' ',
-				'after'  => ' ' . __( 'only', 'opusprimus' )
+				'before' => __( 'View', 'opus-primus' ) . ' ',
+				'after'  => ' ' . __( 'only', 'opus-primus' )
 			)
 		); ?>">
 			<?php the_title( $before, $after, $echo ); ?>
@@ -924,7 +924,7 @@ class OpusPrimusPosts {
 		if ( empty( $update_text ) ) {
 			$update_text = sprintf(
 				'<span class="status-update-text">%1$s</span>',
-				apply_filters( 'opus_status_update_text', __( 'Updated again', 'opusprimus' ) )
+				apply_filters( 'opus_status_update_text', __( 'Updated again', 'opus-primus' ) )
 			);
 		}
 		/** End if - empty update text */
@@ -946,7 +946,7 @@ class OpusPrimusPosts {
 				apply_filters(
 					'opus_status_update',
 					sprintf(
-						__( '%1$s %2$s ago.', 'opusprimus' ),
+						__( '%1$s %2$s ago.', 'opus-primus' ),
 						$update_text,
 						human_time_diff( get_the_modified_time( 'U' ), current_time( 'timestamp' ) )
 					)
@@ -955,7 +955,7 @@ class OpusPrimusPosts {
 		} elseif ( $time_diff >= 31449600 ) {
 			$output = sprintf(
 				'<span class="opus-status-update">%1$s</span>',
-				apply_filters( 'opus_status_update_over_year', $update_text . ' ' . __( 'over a year ago.', 'opusprimus' ) )
+				apply_filters( 'opus_status_update_over_year', $update_text . ' ' . __( 'over a year ago.', 'opus-primus' ) )
 			);
 		}
 		/** End if - time diff */
@@ -996,13 +996,13 @@ class OpusPrimusPosts {
 	function sticky_flag( $sticky_text = '' ) {
 
 		if ( '' == $sticky_text ) {
-			$sticky_text = __( 'Featured', 'opusprimus' );
+			$sticky_text = __( 'Featured', 'opus-primus' );
 			$sticky_text = apply_filters( 'opus_default_sticky_flag', $sticky_text );
 		}
 		/** End if - sticky text */
 
 		if ( is_sticky() ) {
-			$output = '<a class="button" href="' . get_permalink() . '" title="' . sprintf( __( 'Go to %1$s post', 'opusprimus' ), strtolower( $sticky_text ) ) . '">'
+			$output = '<a class="button" href="' . get_permalink() . '" title="' . sprintf( __( 'Go to %1$s post', 'opus-primus' ), strtolower( $sticky_text ) ) . '">'
 					  . '<span class="sticky-flag-text">'
 					  . $sticky_text
 					  . '</span>'

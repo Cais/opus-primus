@@ -41,19 +41,19 @@ global $opus_posts, $opus_comments, $opus_navigation; ?>
 
 	<?php
 	/** @var $anchor - set value for use in post_byline and meta_tags */
-	$anchor = __( 'Said', 'opusprimus' );
+	$anchor = __( 'Said', 'opus-primus' );
 	$opus_posts->post_byline(
 			   array(
 				   'tempus'      => 'time',
 				   'anchor'      => $anchor,
-				   'sticky_flag' => __( 'Exclaimed', 'opusprimus' )
+				   'sticky_flag' => __( 'Exclaimed', 'opus-primus' )
 			   )
 	);
 	$opus_posts->post_title();
 	$opus_comments->comments_link();
 	$opus_posts->post_excerpt();
 	$opus_posts->status_update();
-	$opus_navigation->multiple_pages_link( array(), $preface = __( 'Pages:', 'opusprimus' ) );
+	$opus_navigation->multiple_pages_link( array(), $preface = __( 'Pages:', 'opus-primus' ) );
 	$opus_posts->meta_tags( $anchor );
 	$opus_posts->post_coda(); ?>
 

@@ -143,7 +143,7 @@ class OpusPrimusBreadcrumbs {
 			$post_trail .= '<ul class="breadcrumb">';
 
 			$post_trail .= '<li class="post-breadcrumbs-home-text">'
-						   . '<a href="' . home_url( '/' ) . '">' . apply_filters( 'opus_post_breadcrumbs_home_text', __( 'Home', 'opusprimus' ) ) . '</a>'
+						   . '<a href="' . home_url( '/' ) . '">' . apply_filters( 'opus_post_breadcrumbs_home_text', __( 'Home', 'opus-primus' ) ) . '</a>'
 						   . '</li>';
 
 			/** @var $post_trail - add breadcrumb categories */
@@ -156,7 +156,7 @@ class OpusPrimusBreadcrumbs {
 			if ( is_sticky( $post_ID ) ) {
 				$post_trail .= sprintf(
 					'<li class="post-breadcrumbs-sticky-text"><a href="#">%1$s</a></li>',
-					apply_filters( 'opus_post_breadcrumbs_sticky_text', __( 'Sticky Post', 'opusprimus' ) )
+					apply_filters( 'opus_post_breadcrumbs_sticky_text', __( 'Sticky Post', 'opus-primus' ) )
 				);
 			}
 			/** Enf if - is sticky */
@@ -204,7 +204,7 @@ class OpusPrimusBreadcrumbs {
 		$post_format_name = get_post_format_string( get_post_format( $post_ID ) );
 
 		/** @var $post_format_output - create link to Post Format archive */
-		$post_format_output = '<a href="' . get_post_format_link( get_post_format( $post_ID ) ) . '" title="' . sprintf( __( 'View the %1$s archive.', 'opusprimus' ), $post_format_name ) . '">' . $post_format_name . '</a>';
+		$post_format_output = '<a href="' . get_post_format_link( get_post_format( $post_ID ) ) . '" title="' . sprintf( __( 'View the %1$s archive.', 'opus-primus' ), $post_format_name ) . '">' . $post_format_name . '</a>';
 
 		/** Only show Post Format if it is not the Standard */
 		if ( 'Standard' == $post_format_name ) {
@@ -289,13 +289,13 @@ class OpusPrimusBreadcrumbs {
 			$trail .= '<ul class="breadcrumb">';
 
 			$trail .= '<li>'
-					  . '<a href="' . home_url( '/' ) . '">' . __( 'Home', 'opusprimus' ) . '</a>'
+					  . '<a href="' . home_url( '/' ) . '">' . __( 'Home', 'opus-primus' ) . '</a>'
 					  . '</li>';
 
 			foreach ( $this->breadcrumbs() as $steps ) {
 
 				$post_title = empty( get_post( $steps )->post_title )
-					? sprintf( __( 'Page ID: %1$s', 'opusprimus' ), get_post( $steps )->ID )
+					? sprintf( __( 'Page ID: %1$s', 'opus-primus' ), get_post( $steps )->ID )
 					: get_post( $steps )->post_title;
 
 				$trail .= '<li>'
@@ -341,7 +341,7 @@ class OpusPrimusBreadcrumbs {
 
 		/** @var $post_title - sets Post Title to ID if empty */
 		$post_title = empty( $post->post_title )
-			? sprintf( __( 'Post %1$s', 'opusprimus' ), $post_ID )
+			? sprintf( __( 'Post %1$s', 'opus-primus' ), $post_ID )
 			: $post->post_title;
 
 		/** @var int $maximum_post_title_length - allowable length of post title */

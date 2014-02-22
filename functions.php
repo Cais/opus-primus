@@ -238,9 +238,9 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 		/** Add custom menu support (Primary and Secondary) */
 		register_nav_menus(
 			array(
-				'primary'   => 'Primary (Parent-Theme) Menu',
-				'secondary' => 'Secondary Menu (not used in Parent-Theme)',
-				'search'    => 'Search Results Menu',
+				'primary'   => __( 'Primary (Parent-Theme) Menu', 'opus-primus' ),
+				'secondary' => __( 'Secondary Menu (not used in Parent-Theme)', 'opus-primus' ),
+				'search'    => __( 'Search Results Menu', 'opus-primus' )
 			)
 		);
 
@@ -248,7 +248,7 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 		 * Make theme available for translation
 		 * Translations can be filed in the /languages/ directory
 		 */
-		load_theme_textdomain( 'opusprimus', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'opus-primus', get_template_directory() . '/languages' );
 		$locale      = get_locale();
 		$locale_file = get_template_directory_uri() . "/languages/$locale.php";
 		if ( is_readable( $locale_file ) ) {

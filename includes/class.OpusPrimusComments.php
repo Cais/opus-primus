@@ -165,7 +165,7 @@ class OpusPrimusComments {
 		if ( post_password_required() ) {
 			printf(
 				'<span class="comments-password-message">' .
-				apply_filters( 'opus_comments_password_required', __( 'This post is password protected. Enter the password to view comments.', 'opusprimus' ) ) .
+				apply_filters( 'opus_comments_password_required', __( 'This post is password protected. Enter the password to view comments.', 'opus-primus' ) ) .
 				'</span>'
 			);
 
@@ -177,7 +177,7 @@ class OpusPrimusComments {
 		if ( ! have_comments() ) {
 			printf(
 				'<span class="no-comments-message">' .
-				apply_filters( 'opus_no_comments_message', __( 'Start a discussion ...', 'opusprimus' ) ) .
+				apply_filters( 'opus_no_comments_message', __( 'Start a discussion ...', 'opus-primus' ) ) .
 				'</span>'
 			);
 		}
@@ -201,7 +201,7 @@ class OpusPrimusComments {
 	 * @return  mixed|void - default glyph - asterisk (*)
 	 */
 	function comment_form_required_field_glyph() {
-		$glyph = apply_filters( 'opus_comment_form_required_field_glyph', __( '*', 'opusprimus' ) );
+		$glyph = apply_filters( 'opus_comment_form_required_field_glyph', __( '*', 'opus-primus' ) );
 
 		return $glyph;
 	}
@@ -254,7 +254,7 @@ class OpusPrimusComments {
 		if ( ! is_page() ) {
 			printf(
 				'<span class="comments-closed-message">' .
-				apply_filters( 'opus_comments_form_closed', __( 'New comments are not being accepted at this time, please feel free to contact the post author directly.', 'opusprimus' ) ) .
+				apply_filters( 'opus_comments_form_closed', __( 'New comments are not being accepted at this time, please feel free to contact the post author directly.', 'opus-primus' ) ) .
 				'</span>'
 			);
 		}
@@ -331,11 +331,11 @@ class OpusPrimusComments {
 		$aria_req  = ( $req ? " aria-required='true'" : '' );
 
 		$fields = array(
-			'author' => '<li class="comment-form-author">' . '<label for="author">' . __( 'Name', 'opusprimus' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+			'author' => '<li class="comment-form-author">' . '<label for="author">' . __( 'Name', 'opus-primus' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
 						'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></li>',
-			'email'  => '<li class="comment-form-email"><label for="email">' . __( 'Email', 'opusprimus' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+			'email'  => '<li class="comment-form-email"><label for="email">' . __( 'Email', 'opus-primus' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
 						'<input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></li>',
-			'url'    => '<li class="comment-form-url"><label for="url">' . __( 'Website', 'opusprimus' ) . '</label>' .
+			'url'    => '<li class="comment-form-url"><label for="url">' . __( 'Website', 'opus-primus' ) . '</label>' .
 						'<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></li>',
 		);
 
@@ -409,19 +409,19 @@ class OpusPrimusComments {
 		if ( ! post_password_required() && comments_open() ) {
 			if ( is_page() ) {
 				comments_popup_link(
-					__( 'There are no comments for this page.', 'opusprimus' ),
-					__( 'There is 1 comment.', 'opusprimus' ),
-					__( 'There are % comments.', 'opusprimus' ),
+					__( 'There are no comments for this page.', 'opus-primus' ),
+					__( 'There is 1 comment.', 'opus-primus' ),
+					__( 'There are % comments.', 'opus-primus' ),
 					'comments-link',
 					''
 				);
 			} else {
 				comments_popup_link(
-					__( 'There are no comments for this post.', 'opusprimus' ),
-					__( 'There is 1 comment.', 'opusprimus' ),
-					__( 'There are % comments.', 'opusprimus' ),
+					__( 'There are no comments for this post.', 'opus-primus' ),
+					__( 'There is 1 comment.', 'opus-primus' ),
+					__( 'There are % comments.', 'opus-primus' ),
 					'comments-link',
-					__( 'Comments are closed.', 'opusprimus' )
+					__( 'Comments are closed.', 'opus-primus' )
 				);
 			}
 			/** End if - is page */
@@ -430,11 +430,11 @@ class OpusPrimusComments {
 
 		if ( ! post_password_required() && ! comments_open() && ( get_comments_number() > 0 ) ) {
 			comments_popup_link(
-				__( 'There are no comments for this post and comments are closed.', 'opusprimus' ),
-				__( 'There is 1 comment and comments are closed.', 'opusprimus' ),
-				__( 'There are % comments and comments are closed.', 'opusprimus' ),
+				__( 'There are no comments for this post and comments are closed.', 'opus-primus' ),
+				__( 'There is 1 comment and comments are closed.', 'opus-primus' ),
+				__( 'There are % comments and comments are closed.', 'opus-primus' ),
 				'comments-link',
-				__( 'There are no comments and comments are closed.', 'opusprimus' )
+				__( 'There are no comments and comments are closed.', 'opus-primus' )
 			);
 		}
 		/** End if - not password required; comments closed; comments exist */
@@ -496,8 +496,8 @@ class OpusPrimusComments {
 						<?php
 						printf(
 							_n(
-								__( '%1$s Comment', 'opusprimus' ),
-								__( '%1$s Comments', 'opusprimus' ),
+								__( '%1$s Comment', 'opus-primus' ),
+								__( '%1$s Comments', 'opus-primus' ),
 								count( $comments_only )
 							),
 							count( $comments_only )
@@ -537,8 +537,8 @@ class OpusPrimusComments {
 						<?php
 						printf(
 							_n(
-								__( '%1$s Pingback', 'opusprimus' ),
-								__( '%1$s Pingbacks', 'opusprimus' ),
+								__( '%1$s Pingback', 'opus-primus' ),
+								__( '%1$s Pingbacks', 'opus-primus' ),
 								count( $pingbacks_only )
 							),
 							count( $pingbacks_only )
@@ -578,8 +578,8 @@ class OpusPrimusComments {
 						<?php
 						printf(
 							_n(
-								__( '%1$s Trackback', 'opusprimus' ),
-								__( '%1$s Trackbacks', 'opusprimus' ),
+								__( '%1$s Trackback', 'opus-primus' ),
+								__( '%1$s Trackbacks', 'opus-primus' ),
 								count( $trackbacks_only )
 							),
 							count( $trackbacks_only )
@@ -772,9 +772,9 @@ class OpusPrimusComments {
 
 		/** Check if there are any comments */
 		if ( $total_comments > 0 ) {
-			$show_all_comments_count = sprintf( _n( '%s Response', '%s Responses', $total_comments ), $total_comments );
+			$show_all_comments_count = sprintf( _n( __( '%s Response', 'opus-primus' ), __( '%s Responses', 'opus-primus' ), $total_comments ), $total_comments );
 		} else {
-			$show_all_comments_count = __( 'No Responses', 'opusprimus' );
+			$show_all_comments_count = __( 'No Responses', 'opus-primus' );
 		}
 		/** End if - total comments greater than zero */
 

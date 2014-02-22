@@ -120,8 +120,8 @@ class OpusPrimusNavigation {
 
 		/** Add navigation links between pictures in the gallery */
 		echo '<div class="opus-image-navigation cf">';
-		echo previous_image_link( false, '<span class="left">' . __( 'Previous Photo', 'opusprimus' ) . '</span>' );
-		echo next_image_link( false, '<span class="right">' . __( 'Next Photo', 'opusprimus' ) . '</span>' );
+		echo previous_image_link( false, '<span class="left">' . __( 'Previous Photo', 'opus-primus' ) . '</span>' );
+		echo next_image_link( false, '<span class="right">' . __( 'Next Photo', 'opus-primus' ) . '</span>' );
 		echo '</div><!-- .opus-image-navigation -->';
 
 		/** Add empty hook after the image navigation */
@@ -300,7 +300,7 @@ class OpusPrimusNavigation {
 		);
 		$search_menu_args = wp_parse_args( (array) $defaults, $search_menu_args );
 
-		printf( '<ul class="featured search pages"><li><span class="title">%1$s</span>', __( 'Featured Pages:', 'opusprimus' ) );
+		printf( '<ul class="featured search pages"><li><span class="title">%1$s</span>', __( 'Featured Pages:', 'opus-primus' ) );
 		wp_nav_menu( $search_menu_args );
 		echo '</li></ul><!-- .featured-search-pages -->';
 

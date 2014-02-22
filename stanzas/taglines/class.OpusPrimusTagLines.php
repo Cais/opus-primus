@@ -118,7 +118,7 @@ class OpusPrimusTagLines {
 		if ( 'attachment' <> $post->post_type ) {
 			add_meta_box(
 				'opus_tagline',
-				apply_filters( 'opus_taglines_meta_box_title', sprintf( __( '%1$s Tagline', 'opusprimus' ), ucfirst( $post->post_type ) ) ),
+				apply_filters( 'opus_taglines_meta_box_title', sprintf( __( '%1$s Tagline', 'opus-primus' ), ucfirst( $post->post_type ) ) ),
 				array( $this, 'tagline_callback' ),
 				$post->post_type,
 				'advanced',
@@ -226,7 +226,7 @@ class OpusPrimusTagLines {
 	function tagline_callback( $post ) {
 		/** Create and display input for tagline text field */
 		echo '<label for="tagline_text_field">';
-		echo apply_filters( 'opus_taglines_text_field_description', sprintf( __( 'Add custom tagline to this %1$s: ', 'opusprimus' ), $post->post_type ) );
+		echo apply_filters( 'opus_taglines_text_field_description', sprintf( __( 'Add custom tagline to this %1$s: ', 'opus-primus' ), $post->post_type ) );
 		echo '</label>';
 		echo '<input type="text" id="tagline_text_field" name="tagline_text_field" value="' . get_post_meta( $post->ID, 'tagline_text_field', true ) . '" size="100%" />';
 

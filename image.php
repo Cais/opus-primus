@@ -79,7 +79,7 @@ do_action( 'opus_content_before' ); ?>
 						/** Make it clear this is an attachment being displayed */
 						printf(
 							'<h2 id="attachment-notice">'
-							. __( 'You are viewing an image attached to %1$s', 'opusprimus' )
+							. __( 'You are viewing an image attached to %1$s', 'opus-primus' )
 							. '</h2>',
 							'<a href="' . get_permalink( $post->post_parent ) . '">' . get_the_title( $post->post_parent ) . '</a>'
 						);
@@ -87,7 +87,7 @@ do_action( 'opus_content_before' ); ?>
 						$opus_posts->post_byline(
 								   array(
 									   'display_mod_author' => true,
-									   'anchor'             => __( 'Displayed', 'opusprimus' )
+									   'anchor'             => __( 'Displayed', 'opus-primus' )
 								   )
 						);
 						$opus_navigation->image_nav();

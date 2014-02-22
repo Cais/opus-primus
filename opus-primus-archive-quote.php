@@ -41,18 +41,18 @@ global $opus_structures, $opus_posts, $opus_comments, $opus_navigation; ?>
 
 	<?php
 	/** @var $anchor - set value for use in post_byline and meta_tags */
-	$anchor = __( 'Recited', 'opusprimus' );
+	$anchor = __( 'Recited', 'opus-primus' );
 	$opus_posts->post_byline(
 			   array(
 				   'tempus'      => 'time',
 				   'anchor'      => $anchor,
-				   'sticky_flag' => __( 'Proclaimed', 'opusprimus' )
+				   'sticky_flag' => __( 'Proclaimed', 'opus-primus' )
 			   )
 	);
 	$opus_posts->post_title();
 	$opus_comments->comments_link();
 	$opus_posts->post_content();
-	$opus_navigation->multiple_pages_link( array(), $preface = __( 'Pages:', 'opusprimus' ) );
+	$opus_navigation->multiple_pages_link( array(), $preface = __( 'Pages:', 'opus-primus' ) );
 	$opus_posts->meta_tags( $anchor );
 	$opus_posts->post_coda(); ?>
 

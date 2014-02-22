@@ -101,8 +101,8 @@ class OpusPrimusGallery {
 				if ( ! is_single() ) {
 					echo '<p class="featured-image has-post-thumbnail"><a href="' . get_permalink() . '" title="' . the_title_attribute(
 							array(
-								'before' => __( 'View', 'opusprimus' ) . ' ',
-								'after'  => ' ' . __( 'only', 'opusprimus' ),
+								'before' => __( 'View', 'opus-primus' ) . ' ',
+								'after'  => ' ' . __( 'only', 'opus-primus' ),
 								'echo'   => '0'
 							)
 						) . '">';
@@ -134,8 +134,8 @@ class OpusPrimusGallery {
 					if ( ! is_single() ) {
 						echo '<p class="featured-image no-attachments"><a href="' . get_permalink() . '" title="' . the_title_attribute(
 								array(
-									'before' => __( 'View', 'opusprimus' ) . ' ',
-									'after'  => ' ' . __( 'only', 'opusprimus' ),
+									'before' => __( 'View', 'opus-primus' ) . ' ',
+									'after'  => ' ' . __( 'only', 'opus-primus' ),
 									'echo'   => '0'
 								)
 							) . '">'
@@ -152,8 +152,8 @@ class OpusPrimusGallery {
 						if ( ! is_single() ) {
 							echo '<p class="featured-image no-post-thumbnail"><a href="' . get_permalink() . '" title="' . the_title_attribute(
 									array(
-										'before' => __( 'View', 'opusprimus' ) . ' ',
-										'after'  => ' ' . __( 'only', 'opusprimus' ),
+										'before' => __( 'View', 'opus-primus' ) . ' ',
+										'after'  => ' ' . __( 'only', 'opus-primus' ),
 										'echo'   => '0'
 									)
 								) . '">'
@@ -446,15 +446,15 @@ class OpusPrimusGallery {
 							'opus_more_images_text',
 							sprintf(
 								_n(
-									__( 'There is %2$sone more image%3$s in addition to these in the gallery.', 'opusprimus' ),
-									__( 'There are %2$s%1$s more images%3$s in addition to these in the gallery.', 'opusprimus' ),
+									__( 'There is %2$sone more image%3$s in addition to these in the gallery.', 'opus-primus' ),
+									__( 'There are %2$s%1$s more images%3$s in addition to these in the gallery.', 'opus-primus' ),
 									( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 )
 								),
 								( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 ),
 								'<a href="' . get_permalink() . '" title="' . the_title_attribute(
 									array(
-										'before' => __( 'View', 'opusprimus' ) . ' ',
-										'after'  => ' ' . __( 'only', 'opusprimus' ),
+										'before' => __( 'View', 'opus-primus' ) . ' ',
+										'after'  => ' ' . __( 'only', 'opus-primus' ),
 										'echo'   => '0'
 									)
 								) . '">',

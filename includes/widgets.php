@@ -76,97 +76,97 @@ function opus_primus_widgets() {
 
 	register_sidebar(
 		array(
-			'name'        => __( 'First Widget Area', 'opusprimus' ),
+			'name'        => __( 'First Widget Area', 'opus-primus' ),
 			'id'          => 'first-widget',
-			'description' => __( 'This widget area is in "Sidebar Area One". If no sidebar widget areas are active, the web site will be one column. If the Third Widget Area and/or Fourth Widget Area is active in addition to this First Widget Area, the web site will display three columns with this area on the left side of the sidebar.', 'opusprimus' ),
+			'description' => __( 'This widget area is in "Sidebar Area One". If no sidebar widget areas are active, the web site will be one column. If the Third Widget Area and/or Fourth Widget Area is active in addition to this First Widget Area, the web site will display three columns with this area on the left side of the sidebar.', 'opus-primus' ),
 		)
 	);
 
 	register_sidebar(
 		array(
-			'name'        => __( 'Second Widget Area', 'opusprimus' ),
+			'name'        => __( 'Second Widget Area', 'opus-primus' ),
 			'id'          => 'second-widget',
-			'description' => __( 'This widget area is in "Sidebar Area One". If no sidebar widget areas are active, the web site will be one column. If the Third Widget Area and/or Fourth Widget Area is active in addition to this Second Widget Area, the web site will display three columns with this area on the left side of the sidebar.', 'opusprimus' ),
+			'description' => __( 'This widget area is in "Sidebar Area One". If no sidebar widget areas are active, the web site will be one column. If the Third Widget Area and/or Fourth Widget Area is active in addition to this Second Widget Area, the web site will display three columns with this area on the left side of the sidebar.', 'opus-primus' ),
 		)
 	);
 
 	register_sidebar(
 		array(
-			'name'        => __( 'Third Widget Area', 'opusprimus' ),
+			'name'        => __( 'Third Widget Area', 'opus-primus' ),
 			'id'          => 'third-widget',
-			'description' => __( 'This widget area is in "Sidebar Area Two". If no sidebar widget areas are active, the web site will be one column. If the First Widget Area and/or Second Widget Area is active in addition to this Third Widget Area, the web site will display three columns with this area on the right side of the sidebar.', 'opusprimus' ),
+			'description' => __( 'This widget area is in "Sidebar Area Two". If no sidebar widget areas are active, the web site will be one column. If the First Widget Area and/or Second Widget Area is active in addition to this Third Widget Area, the web site will display three columns with this area on the right side of the sidebar.', 'opus-primus' ),
 		)
 	);
 
 	register_sidebar(
 		array(
-			'name'        => __( 'Fourth Widget Area', 'opusprimus' ),
+			'name'        => __( 'Fourth Widget Area', 'opus-primus' ),
 			'id'          => 'fourth-widget',
-			'description' => __( 'This widget area is in "Sidebar Area Two". If no sidebar widget areas are active, the web site will be one column. If the First Widget Area and/or Second Widget Area is active in addition to this Fourth Widget Area, the web site will display three columns with this area on the right side of the sidebar.', 'opusprimus' ),
+			'description' => __( 'This widget area is in "Sidebar Area Two". If no sidebar widget areas are active, the web site will be one column. If the First Widget Area and/or Second Widget Area is active in addition to this Fourth Widget Area, the web site will display three columns with this area on the right side of the sidebar.', 'opus-primus' ),
 		)
 	);
 
 	register_sidebar(
 		array(
-			'name'        => __( 'Before Loop Widget Area', 'opusprimus' ),
+			'name'        => __( 'Before Loop Widget Area', 'opus-primus' ),
 			'id'          => 'before-loop',
-			'description' => __( 'This widget area displays just before the_Loop begins on all templates (index, archive, author, image, page, search, and single).', 'opusprimus' ),
+			'description' => __( 'This widget area displays just before the_Loop begins on all templates (index, archive, author, image, page, search, and single).', 'opus-primus' ),
 		)
 	);
 
 	register_sidebar(
 		array(
-			'name'        => __( 'After Loop Widget Area', 'opusprimus' ),
+			'name'        => __( 'After Loop Widget Area', 'opus-primus' ),
 			'id'          => 'after-loop',
-			'description' => __( 'This widget area displays just after the_Loop ends on all templates (index, archive, author, image, page, search, and single).', 'opusprimus' ),
+			'description' => __( 'This widget area displays just after the_Loop ends on all templates (index, archive, author, image, page, search, and single).', 'opus-primus' ),
 		)
 	);
 
 	register_sidebar(
 		array(
-			'name'        => __( 'First Header Widget Area', 'opusprimus' ),
+			'name'        => __( 'First Header Widget Area', 'opus-primus' ),
 			'id'          => 'header-left',
-			'description' => __( 'This widget area appears in the header above the menu on the left side of the theme.', 'opusprimus' ),
+			'description' => __( 'This widget area appears in the header above the menu on the left side of the theme.', 'opus-primus' ),
 		)
 	);
 
 	register_sidebar(
 		array(
-			'name'        => __( 'Second Header Widget Area', 'opusprimus' ),
+			'name'        => __( 'Second Header Widget Area', 'opus-primus' ),
 			'id'          => 'header-middle',
-			'description' => __( 'This widget area appears in the header above the menu in the middle of the theme.', 'opusprimus' ),
+			'description' => __( 'This widget area appears in the header above the menu in the middle of the theme.', 'opus-primus' ),
 		)
 	);
 
 	register_sidebar(
 		array(
-			'name'        => __( 'Third Header Widget Area', 'opusprimus' ),
+			'name'        => __( 'Third Header Widget Area', 'opus-primus' ),
 			'id'          => 'header-right',
-			'description' => __( 'This widget area appears in the header above the menu on the right side of the theme.', 'opusprimus' ),
+			'description' => __( 'This widget area appears in the header above the menu on the right side of the theme.', 'opus-primus' ),
 		)
 	);
 
 	register_sidebar(
 		array(
-			'name'        => __( 'First Footer Widget Area', 'opusprimus' ),
+			'name'        => __( 'First Footer Widget Area', 'opus-primus' ),
 			'id'          => 'footer-left',
-			'description' => __( 'This widget area appears in the footer on the left side of the theme.', 'opusprimus' ),
+			'description' => __( 'This widget area appears in the footer on the left side of the theme.', 'opus-primus' ),
 		)
 	);
 
 	register_sidebar(
 		array(
-			'name'        => __( 'Second Footer Widget Area', 'opusprimus' ),
+			'name'        => __( 'Second Footer Widget Area', 'opus-primus' ),
 			'id'          => 'footer-middle',
-			'description' => __( 'This widget area appears in the footer in the middle of the theme.', 'opusprimus' ),
+			'description' => __( 'This widget area appears in the footer in the middle of the theme.', 'opus-primus' ),
 		)
 	);
 
 	register_sidebar(
 		array(
-			'name'        => __( 'Third Footer Widget Area', 'opusprimus' ),
+			'name'        => __( 'Third Footer Widget Area', 'opus-primus' ),
 			'id'          => 'footer-right',
-			'description' => __( 'This widget area appears in the footer on the right side of the theme.', 'opusprimus' ),
+			'description' => __( 'This widget area appears in the footer on the right side of the theme.', 'opus-primus' ),
 		)
 	);
 

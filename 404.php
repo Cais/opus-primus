@@ -61,7 +61,7 @@ do_action( 'opus_content_before' ); ?>
 			<?php
 			printf(
 				'<h1 class="opus-404-title-text">%1$s</h1>',
-				apply_filters( 'opus_404_title_text', __( 'Something seems to have gone bust ...', 'opusprimus' ) )
+				apply_filters( 'opus_404_title_text', __( 'Something seems to have gone bust ...', 'opus-primus' ) )
 			);
 
 			/** Use action hook to add image - see Structures class for hook call */
@@ -69,19 +69,19 @@ do_action( 'opus_content_before' ); ?>
 
 			printf(
 				'<p class="opus-404-message-text">%1$s</p>',
-				apply_filters( 'opus_404_message_text', __( 'This is the 404 error page; we seemed to have lost what you are looking for.', 'opusprimus' ) )
+				apply_filters( 'opus_404_message_text', __( 'This is the 404 error page; we seemed to have lost what you are looking for.', 'opus-primus' ) )
 			);
 
 			printf(
 				'<p class="opus-404-posts-text">%1$s</p>',
-				apply_filters( 'opus_404_posts_text', __( 'Were you looking for a recent post?', 'opusprimus' ) )
+				apply_filters( 'opus_404_posts_text', __( 'Were you looking for a recent post?', 'opus-primus' ) )
 			);
 
 			/** Use the_widget to display a list of recent posts */
 			the_widget(
 				'WP_Widget_Recent_Posts',
 				$instance = array(
-					'title'     => __( '', 'opusprimus' ),
+					'title'     => __( '', 'opus-primus' ),
 					'number'    => '5',
 					'show_date' => true
 				)
@@ -90,7 +90,7 @@ do_action( 'opus_content_before' ); ?>
 			/** Display links to archives */
 			printf(
 				'<p class="opus-404-category-text">%1$s</p>',
-				apply_filters( 'opus_404_category_text', __( 'Maybe you were looking for one these categories ...', 'opusprimus' ) )
+				apply_filters( 'opus_404_category_text', __( 'Maybe you were looking for one these categories ...', 'opus-primus' ) )
 			);
 
 			/** Display a list of categories to choose from */
@@ -100,14 +100,14 @@ do_action( 'opus_content_before' ); ?>
 							  'order'        => 'desc',
 							  'show_count'   => 1,
 							  'hierarchical' => 0,
-							  'title_li'     => '<span class="title">' . apply_filters( 'opus_404_top_10_title', __( 'Top 10 Categories by Post Count:', 'opusprimus' ) ) . '</span>',
+							  'title_li'     => '<span class="title">' . apply_filters( 'opus_404_top_10_title', __( 'Top 10 Categories by Post Count:', 'opus-primus' ) ) . '</span>',
 							  'number'       => 10,
 						  )
 			);
 
 			printf(
 				'<p class="opus-404-tag-text">%1$s</p>',
-				apply_filters( 'opus_404_tag_text', __( '... or maybe you are interested in one of these tags?', 'opusprimus' ) )
+				apply_filters( 'opus_404_tag_text', __( '... or maybe you are interested in one of these tags?', 'opus-primus' ) )
 			);
 
 			/** Display a list of tags to choose from */

@@ -45,12 +45,12 @@ global $opus_defaults, $opus_structures, $opus_posts, $opus_comments, $opus_navi
 
 		<?php
 		/** @var $anchor - set value for use in post_byline and meta_tags */
-		$anchor = __( 'Added', 'opusprimus' );
+		$anchor = __( 'Added', 'opus-primus' );
 		$opus_posts->post_byline(
 				   array(
 					   'display_mod_author' => $opus_defaults->display_mod_author(),
 					   'anchor'             => $anchor,
-					   'sticky_flag'        => __( 'Watch', 'opusprimus' )
+					   'sticky_flag'        => __( 'Watch', 'opus-primus' )
 				   )
 		);
 		$opus_posts->post_title();
@@ -61,7 +61,7 @@ global $opus_defaults, $opus_structures, $opus_posts, $opus_comments, $opus_navi
 		/** End if - not is single */
 
 		$opus_posts->post_content();
-		$opus_navigation->multiple_pages_link( array(), $preface = __( 'Pages:', 'opusprimus' ) );
+		$opus_navigation->multiple_pages_link( array(), $preface = __( 'Pages:', 'opus-primus' ) );
 		$opus_posts->meta_tags( $anchor );
 		$opus_posts->post_coda();
 		if ( is_single() ) {

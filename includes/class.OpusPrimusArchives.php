@@ -86,7 +86,7 @@ class OpusPrimusArchives {
 		/** Top 'number' of displayed tags set */
 		if ( isset( $cloud_args['number'] ) && ( 'DESC' == $cloud_args['order'] ) ) {
 			$cloud_classes .= 'top-' . $cloud_args['number'];
-			$cloud_title = sprintf( __( 'The Top %1$s Tags Cloud:', 'opusprimus' ), $cloud_args['number'] );
+			$cloud_title = sprintf( __( 'The Top %1$s Tags Cloud:', 'opus-primus' ), $cloud_args['number'] );
 		}
 		/** End if - isset */
 
@@ -98,7 +98,7 @@ class OpusPrimusArchives {
 
 		/** Default title */
 		if ( empty( $cloud_title ) ) {
-			$cloud_title = __( 'The Cloud:', 'opusprimus' );
+			$cloud_title = __( 'The Cloud:', 'opus-primus' );
 		}
 		/** End if empty */
 
@@ -152,7 +152,7 @@ class OpusPrimusArchives {
 			'orderby'      => 'name',
 			'order'        => 'ASC',
 			'hierarchical' => 0,
-			'title_li'     => __( 'All Categories:', 'opusprimus' ),
+			'title_li'     => __( 'All Categories:', 'opus-primus' ),
 		);
 		$category_args = wp_parse_args( (array) $category_args, $defaults );
 

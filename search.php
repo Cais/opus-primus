@@ -68,14 +68,14 @@ do_action( 'opus_content_before' ); ?>
 				printf(
 					sprintf(
 						'<h2 class="search-found-pre-text">%1$s <span class="search-query">%2$s</span></h2>',
-						apply_filters( 'opus_search_found_pre_text', __( 'We found it!<br />It looks like you searched for ...', 'opusprimus' ) ),
+						apply_filters( 'opus_search_found_pre_text', __( 'We found it!<br />It looks like you searched for ...', 'opus-primus' ) ),
 						get_search_query()
 					)
 				);
 				_e(
 					apply_filters(
 						'opus_search_found_post_text',
-						__( '<div class="opus-search-found-post-text">Here are the results:</div>', 'opusprimus' )
+						__( '<div class="opus-search-found-post-text">Here are the results:</div>', 'opus-primus' )
 					)
 				);
 				while ( have_posts() ) {

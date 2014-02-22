@@ -120,7 +120,7 @@ class OpusPrimusStructures {
 
 		/** Add a page number if necessary */
 		if ( $paged >= 2 || $page >= 2 ) {
-			$opus_title_text .= $sep . sprintf( __( 'Page %s', 'opusprimus' ), max( $paged, $page ) );
+			$opus_title_text .= $sep . sprintf( __( 'Page %s', 'opus-primus' ), max( $paged, $page ) );
 		}
 
 		/** End if - paged */
@@ -343,9 +343,9 @@ class OpusPrimusStructures {
 		/** Add to output string */
 		if ( $first_post_year == date( 'Y' ) ) {
 			/** Only use current year if no published posts in previous years */
-			$output .= sprintf( __( 'Copyright &copy; %1$s', 'opusprimus' ), date( 'Y' ) );
+			$output .= sprintf( __( 'Copyright &copy; %1$s', 'opus-primus' ), date( 'Y' ) );
 		} else {
-			$output .= sprintf( __( 'Copyright &copy; %1$s-%2$s', 'opusprimus' ), $first_post_year, date( 'Y' ) );
+			$output .= sprintf( __( 'Copyright &copy; %1$s-%2$s', 'opus-primus' ), $first_post_year, date( 'Y' ) );
 		}
 		/** End if - first post year */
 
@@ -358,14 +358,14 @@ class OpusPrimusStructures {
 			global $post;
 			$author     = get_the_author_meta( 'display_name', $post->post_author );
 			$author_url = get_the_author_meta( 'user_url', $post->post_author );
-			$output .= ' <a href="' . $author_url . '" title="' . esc_attr( sprintf( __( 'To the web site of %1$s', 'opusprimus' ), $author ) ) . '" rel="author">' . $author . '</a>';
+			$output .= ' <a href="' . $author_url . '" title="' . esc_attr( sprintf( __( 'To the web site of %1$s', 'opus-primus' ), $author ) ) . '" rel="author">' . $author . '</a>';
 		} else {
 			$output .= ' <a href="' . home_url( '/' ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" rel="home">' . get_bloginfo( 'name', 'display' ) . '</a>';
 		}
 		/** End if - is single */
 
 		/** Append usage terms */
-		$output .= ' ' . __( 'All Rights Reserved.', 'opusprimus' );
+		$output .= ' ' . __( 'All Rights Reserved.', 'opus-primus' );
 
 		return apply_filters( 'opus_copyright', $output );
 
@@ -409,19 +409,19 @@ class OpusPrimusStructures {
 			$parent_theme_data = $active_theme_data->parent();
 			$credits           = sprintf(
 				'<div class="generator"><span class="credit-phrase">'
-				. __( 'Played on %1$s; tuned to %2$s; and, conducted by %3$s.', 'opusprimus' )
+				. __( 'Played on %1$s; tuned to %2$s; and, conducted by %3$s.', 'opus-primus' )
 				. '</span></div>',
 				'<span id="parent-theme"><a href="' . esc_url( $parent_theme_data->get( 'ThemeURI' ) ) . '" title="' . esc_attr( $parent_theme_data->get( 'Description' ) ) . '">' . $parent_theme_data->get( 'Name' ) . '</a></span>',
 				'<span id="child-theme"><a href="' . esc_url( $active_theme_data->get( 'ThemeURI' ) ) . '" title="' . esc_attr( $active_theme_data->get( 'Description' ) ) . '">' . $active_theme_data->get( 'Name' ) . '</a></span>',
-				'<span id="wordpress-link"><a href="http://wordpress.org/" title="' . esc_attr__( 'Semantic Personal Publishing Platform', 'opusprimus' ) . '" rel="generator">WordPress</a></span>'
+				'<span id="wordpress-link"><a href="http://wordpress.org/" title="' . esc_attr__( 'Semantic Personal Publishing Platform', 'opus-primus' ) . '" rel="generator">WordPress</a></span>'
 			);
 		} else {
 			$credits = sprintf(
 				'<div class="generator"><span class="credit-phrase">'
-				. __( 'Played on %1$s; and, conducted by %2$s.', 'opusprimus' )
+				. __( 'Played on %1$s; and, conducted by %2$s.', 'opus-primus' )
 				. '</span></div>',
 				'<span id="parent-theme"><a href="' . esc_url( $active_theme_data->get( 'ThemeURI' ) ) . '" title="' . esc_attr( $active_theme_data->get( 'Description' ) ) . '">' . $active_theme_data->get( 'Name' ) . '</a></span>',
-				'<span id="wordpress-link"><a href="http://wordpress.org/" title="' . esc_attr__( 'Semantic Personal Publishing Platform', 'opusprimus' ) . '" rel="generator">WordPress</a></span>'
+				'<span id="wordpress-link"><a href="http://wordpress.org/" title="' . esc_attr__( 'Semantic Personal Publishing Platform', 'opus-primus' ) . '" rel="generator">WordPress</a></span>'
 			);
 		}
 
@@ -567,7 +567,7 @@ class OpusPrimusStructures {
 		<h2 class="post-title">
 			<?php
 			printf(
-				__( 'Search Results for: %s', 'opus' ),
+				__( 'Search Results for: %s', 'opus-primus' ),
 				apply_filters(
 					'opus_search_results_for_text',
 					'<span class="search-results">' . esc_html( get_search_query() ) . '</span>'
@@ -580,7 +580,7 @@ class OpusPrimusStructures {
 			'<p class="no-results">%1$s</p>',
 			apply_filters(
 				'opus_no_results_text',
-				__( 'No results were found, would you like to try another search ...', 'opusprimus' )
+				__( 'No results were found, would you like to try another search ...', 'opus-primus' )
 			)
 		);
 		get_search_form();
@@ -589,7 +589,7 @@ class OpusPrimusStructures {
 			'<p class="no-results">%1$s</p>',
 			apply_filters(
 				'opus_no_results_links_text',
-				__( '... or try one of the links below.', 'opusprimus' )
+				__( '... or try one of the links below.', 'opus-primus' )
 			)
 		);
 
@@ -603,7 +603,7 @@ class OpusPrimusStructures {
 						  'order'        => 'desc',
 						  'show_count'   => 1,
 						  'hierarchical' => 0,
-						  'title_li'     => sprintf( '<span class="title">%1$s</span>', apply_filters( 'opus_category_archives_title', __( 'Top 10 Categories by Post Count:', 'opusprimus' ) ) ),
+						  'title_li'     => sprintf( '<span class="title">%1$s</span>', apply_filters( 'opus_category_archives_title', __( 'Top 10 Categories by Post Count:', 'opus-primus' ) ) ),
 						  'number'       => 10,
 					  )
 		);
