@@ -1,9 +1,12 @@
 === Opus Primus changelog.txt ===
-Last revised February 21, 2014
+Last revised February 22, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.4 ==
 * Released ...
+
+= Code =
+* Change `$output = null` to `$output = ''` in `OpusPrimusPosts::sticky_flag` method
 
 = Miscellaneous =
 * Change textdomain to match theme slug
