@@ -993,8 +993,8 @@ class OpusPrimusPosts {
 	 * @date       February 20, 2014
 	 * Refactored `$output` to use `button` class versus the button element
 	 *
-	 * @version	1.2.4
-	 * @date	February 22, 2014
+	 * @version    1.2.4
+	 * @date       February 22, 2014
 	 * Change `$output = null` to `$output = ''`
 	 */
 	function sticky_flag( $sticky_text = '' ) {

@@ -1,5 +1,5 @@
 Hooks – Actions
-Currently available: 99
+Currently available: 111
 
 There are many action hooks available for use with Opus Primus.
 The naming convention follows this general guideline: opus-< code block >-< location, if relevant >
@@ -27,6 +27,8 @@ The following is an alphabetical listing (with the exception of the location bei
     opus_content_after
     opus_content_top
     opus_content_bottom
+    opus_custom_header_image_before
+    opus_custom_header_image_after
     opus_exif_aperture_before
     opus_exif_box_before
     opus_exif_box_after
@@ -55,19 +57,23 @@ The following is an alphabetical listing (with the exception of the location bei
     opus_head_bottom
     opus_header_before
     opus_header_after
+    opus_header_top
+    opus_header_bottom
     opus_html_before
     opus_image_nav_before
     opus_image_nav_after
     opus_image_title_before
     opus_image_title_after
     opus_links_pages_before
-    opus_link_pages_after
+    opus_links_pages_after
     opus_meta_tags_before
     opus_meta_tags_after
     opus_modified_author_details_before
     opus_modified_author_details_after
     opus_modified_post_before
     opus_modified_post_after
+    opus_nav_before
+    opus_nav_after
     opus_post_author_top
     opus_post_author_bottom
     opus_post_byline_before
@@ -98,8 +104,14 @@ The following is an alphabetical listing (with the exception of the location bei
     opus_sidebar_header_after
     opus_sidebars_before
     opus_sidebars_after
+    opus_site_description_before
+    opus_site_description_after
+    opus_site_title_before
+    Opus_site_title_after
     opus_status_update_before
     opus_status_update_after
+    opus_the_content_before
+    opus_the_content_after
     opus_the_excerpt_before
     opus_the_excerpt_after
     opus_the_loop_before

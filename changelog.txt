@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised February 22, 2014
+Last revised February 23, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.4 ==
@@ -7,9 +7,11 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Code =
 * Change `$output = null` to `$output = ''` in `OpusPrimusPosts::sticky_flag` method
+* Corrected typo in `'opus_links_pages_after'` hook
 
 = Miscellaneous =
 * Change textdomain to match theme slug
+* Updated `hooks-actions.txt`
 
 /** ------------------------------------------------------------------------- */
 == Version 1.2.3 ==

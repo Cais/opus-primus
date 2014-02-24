@@ -152,6 +152,10 @@ class OpusPrimusNavigation {
 	 * @uses     do_action
 	 * @uses     wp_link_pages
 	 * @uses     wp_parse_args
+	 *
+	 * @version	1.2.4
+	 * @date	February 23, 2014
+	 * Corrected typo in `'opus_links_pages_after'` hook
 	 */
 	function multiple_pages_link( $link_pages_args = '', $preface = '' ) {
 		/** @var $defaults - initial values */
@@ -168,7 +172,7 @@ class OpusPrimusNavigation {
 		wp_link_pages( $link_pages_args );
 
 		/** Add empty hook after linking pages navigation of a multi-page post */
-		do_action( 'opus_link_pages_after' );
+		do_action( 'opus_links_pages_after' );
 
 	}
 
