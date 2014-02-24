@@ -12,6 +12,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = Miscellaneous =
 * Change textdomain to match theme slug
 * Updated `hooks-actions.txt`
+* Updated `hooks-filters.txt` (corrected reference to `opus_first_author_details_text`)
 
 /** ------------------------------------------------------------------------- */
 == Version 1.2.3 ==

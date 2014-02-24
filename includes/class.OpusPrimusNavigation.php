@@ -138,23 +138,23 @@ class OpusPrimusNavigation {
 	 * same post. All parameters used by `wp_link_pages` can be passed through
 	 * the function.
 	 *
-	 * @link     http://codex.wordpress.org/Function_Reference/wp_link_pages
-	 * @example  multiple_pages_link( array( 'before' => '<p class="navigation link-pages cf">', 'after' => '</p>' ) );
-	 * @internal The above example will output the `wp_link_pages` output in a
+	 * @link       http://codex.wordpress.org/Function_Reference/wp_link_pages
+	 * @example    multiple_pages_link( array( 'before' => '<p class="navigation link-pages cf">', 'after' => '</p>' ) );
+	 * @internal   The above example will output the `wp_link_pages` output in a
 	 * wrapper consisting of a `p` tag with `classes`
 	 *
-	 * @package  OpusPrimus
-	 * @since    0.1
+	 * @package    OpusPrimus
+	 * @since      0.1
 	 *
 	 * @param   string|array $link_pages_args
 	 * @param   string       $preface - leading word or phrase before display of post page index - MUST set $link_pages_args for this to display.
 	 *
-	 * @uses     do_action
-	 * @uses     wp_link_pages
-	 * @uses     wp_parse_args
+	 * @uses       do_action
+	 * @uses       wp_link_pages
+	 * @uses       wp_parse_args
 	 *
-	 * @version	1.2.4
-	 * @date	February 23, 2014
+	 * @version    1.2.4
+	 * @date       February 23, 2014
 	 * Corrected typo in `'opus_links_pages_after'` hook
 	 */
 	function multiple_pages_link( $link_pages_args = '', $preface = '' ) {
