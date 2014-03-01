@@ -10,7 +10,6 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Corrected typo in `'opus_links_pages_after'` hook
 
 = CSS =
-* Add theme name as a body class
 
 = Miscellaneous =
 * Change textdomain to match theme slug
