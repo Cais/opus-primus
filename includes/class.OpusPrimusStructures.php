@@ -150,6 +150,10 @@ class OpusPrimusStructures {
 	 * @version          1.2
 	 * @date             April 9, 2013
 	 * Added sanity conditional check to eliminate potential duplicate classes
+	 *
+	 * @version          1.2.4
+	 * @date             March 1, 2014
+	 * Add theme name as a body class
 	 */
 	function body_classes( $classes ) {
 		/** Theme Layout */
@@ -185,6 +189,9 @@ class OpusPrimusStructures {
 		 * plugin.
 		 */
 		if ( ! class_exists( 'BNS_Body_Classes' ) ) {
+			/** Add theme name as a body class */
+			$classes[] = 'opus-primus';
+
 			/** Current Date Classes */
 			/** Year */
 			$current_year = date( 'Y' );
