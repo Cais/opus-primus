@@ -410,6 +410,10 @@ class OpusPrimusPosts {
 	 * @version          1.0.1
 	 * @date             February 22, 2013
 	 * Wrapped 'opus_modified_post_after' in conditional making it consistent with 'opus_modified_post_before'
+	 *
+	 * @version          1.2.6
+	 * @date             March 22, 2014
+	 * Corrected modified date/time output for scheduled posts so they do not show a modified date/time until after they have been published
 	 */
 	function modified_post( $tempus = 'date' ) {
 		/** Grab the $post object and bring in the original post author ID */
@@ -457,7 +461,7 @@ class OpusPrimusPosts {
 
 		/** Check if there is a time difference from the original post date */
 		if ( 'time' == $tempus ) {
-			if ( get_the_time() <> get_the_modified_time() ) {
+			if ( ( get_the_time() <> get_the_modified_time() ) && ( get_the_time() < get_the_modified_time() ) ) {
 				/** @var $mod_author_phrase string */
 				printf(
 					'<span class="author-modified-time">' . $mod_author_phrase . '</span>',
@@ -469,7 +473,7 @@ class OpusPrimusPosts {
 			}
 			/** End if - get the time */
 		} else {
-			if ( get_the_date() <> get_the_modified_date() ) {
+			if ( ( get_the_date() <> get_the_modified_date() ) && ( get_the_date() < get_the_modified_date() ) ) {
 				printf(
 					'<span class="author-modified-date">' . $mod_author_phrase . '</span>',
 					$mod_author_avatar,
