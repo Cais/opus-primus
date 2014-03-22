@@ -111,8 +111,8 @@ class OpusPrimusPullQuotes {
 		extract(
 			shortcode_atts(
 				array(
-					'to' => 'right',
-					'by' => '',
+					'to'   => 'right',
+					'by'   => '',
 					'from' => '',
 				),
 				$atts
