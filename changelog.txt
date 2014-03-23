@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised March 1, 2014
+Last revised March 23, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.4 ==
@@ -8,8 +8,12 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = Code =
 * Change `$output = null` to `$output = ''` in `OpusPrimusPosts::sticky_flag` method
 * Corrected typo in `'opus_links_pages_after'` hook
+* Corrected modified date/time output for scheduled posts so they do not show a modified date/time until after they have been published
 
 = CSS =
+* Added Format-Aside Dashicons to Post-Format: Aside posts
+* Added Flag Dashicons to Sticky Posts
+* Changed Password Protected Dashicons to use the Lock
 
 = Miscellaneous =
 * Change textdomain to match theme slug
@@ -148,7 +152,6 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Updated `readme.txt` FAQ - What is the difference between how the "Featured Image" is used on a post and how it is used on a page?
 * Updated `readme.txt` FAQ - What are Stanzas?
 * Updated `readme.txt` FAQ - What happened to the LESS components of the theme?
-* Updated outstanding @todo items with version (number added at end of line)
 
 /** ------------------------------------------------------------------------- */
 == Version 1.1.1 ==

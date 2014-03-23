@@ -411,7 +411,7 @@ class OpusPrimusPosts {
 	 * @date             February 22, 2013
 	 * Wrapped 'opus_modified_post_after' in conditional making it consistent with 'opus_modified_post_before'
 	 *
-	 * @version          1.2.6
+	 * @version          1.2.4
 	 * @date             March 22, 2014
 	 * Corrected modified date/time output for scheduled posts so they do not show a modified date/time until after they have been published
 	 */

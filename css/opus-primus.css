@@ -49,7 +49,7 @@
  * Removed `z-index` property from breadcrumb related elements
  * Set the breadcrumbs background color to #ffffff (white)
  *
- * #version 1.2.3
+ * @version 1.2.3
  * @date	February 19, 2014
  * Adjust pixel measures to not use decimals
  * Re-Adjust `z-index: 3` for main navigation menu
@@ -60,6 +60,12 @@
  * Fixed really long Post Titles and Words not wrapping as expected
  * Added style to the read more link
  * Prepended Post Byline with matching Post-Format dashicons
+ *
+ * @version	1.2.4
+ * @date	March 23, 2014
+ * Added "Format-Aside" Dashicons to Post-Format: Aside posts
+ * Added "Flag" Dashicons to Sticky Posts
+ * Changed Password Protected Dashicons to use the "Lock"
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -952,9 +958,17 @@ ul.breadcrumb li ul.post-trail-categories li:first-child {
 	padding-left: 7px;
 }
 
+/** Use Lock */
 .post-password-required .meta-byline:after {
-	font-family: 'dashicons';
-	content: "\f112";
+	font-family: 'dashicons', sans-serif;
+	content: "\f160";
+	padding-left: 4px;
+}
+
+/** Use Flag */
+.sticky .meta-byline:after {
+	font-family: 'dashicons', sans-serif;
+	content: "\f227";
 	padding-left: 4px;
 }
 
@@ -1504,6 +1518,7 @@ div.meta-byline button {
 	float: right;
 }
 
+/** Use Pin */
 /** Commented out but retained for consistency
 .format-standard .meta-byline:before {
 	font-family: "dashicons";
@@ -1512,7 +1527,18 @@ div.meta-byline button {
 }
 */
 
+/** === Post-Format: Aside === ---------------------------------------------- */
+/** Use Format-Aside */
+.format-aside .meta-byline:before {
+	font-family: dashicons, sans-serif;
+	content: "\f123";
+	padding-right: 4px;
+}
+
+/** End: Post-Format: Aside ------------------------------------------------- */
+
 /** === Post-Format: Gallery === -------------------------------------------- */
+/** Use Format-Gallery */
 .format-gallery .meta-byline:before {
 	font-family: dashicons, sans-serif;
 	content: "\f161";
@@ -1555,6 +1581,7 @@ p.more-images,
 /** End: Post-Format: Gallery ----------------------------------------------- */
 
 /** === Post-Format: Image === ---------------------------------------------- */
+/** Use Format-Image */
 .format-image .meta-byline:before {
 	font-family: dashicons, sans-serif;
 	content: "\f128";
@@ -1592,6 +1619,7 @@ td.archive-image-excerpt {
 /** End: Post-Format: Image ------------------------------------------------- */
 
 /** === Post-Format: Video === ---------------------------------------------- */
+/** Use Format-Video */
 .format-video .meta-byline:before {
 	font-family: dashicons, sans-serif;
 	content: "\f126";
@@ -1609,6 +1637,7 @@ div.post.format-video div.post-content div.video-player div.videopress-placehold
 /** End: Post-Format: Video ------------------------------------------------- */
 
 /** === Post-Format: Quote === ---------------------------------------------- */
+/** Use Format-Quote */
 .format-quote .meta-byline:before {
 	font-family: dashicons, sans-serif;
 	content: "\f122";
@@ -1666,6 +1695,7 @@ blockquote + div.sharing {
 /** End: Post-Format: Quote ------------------------------------------------- */
 
 /** === Post-Format: Status === --------------------------------------------- */
+/** Use Format-Status */
 .format-status .meta-byline:before {
 	font-family: dashicons, sans-serif;
 	content: "\f130";
@@ -1685,6 +1715,7 @@ blockquote + div.sharing {
 /** End: Post-Format: Status ------------------------------------------------ */
 
 /** === Post-Format: Link === ----------------------------------------------- */
+/** Use Format-Link */
 .format-link .meta-byline:before {
 	font-family: dashicons, sans-serif;
 	content: "\f103";
@@ -1706,6 +1737,7 @@ div.post.format-link .post-content p a {
 /** End: Post-Format: Link -------------------------------------------------- */
 
 /** === Post-Format: Audio === ---------------------------------------------- */
+/** Use Format-Audio */
 .format-audio .meta-byline:before {
 	font-family: dashicons, sans-serif;
 	content: "\f127";
@@ -1731,6 +1763,7 @@ div.post.format-audio .post-content a {
 /** End: Post-Format: Audio ------------------------------------------------- */
 
 /** === Post-Format: Chat === ----------------------------------------------- */
+/** Use Format-Chat */
 .format-chat .meta-byline:before {
 	font-family: dashicons, sans-serif;
 	content: "\f125";
