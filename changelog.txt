@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised March 23, 2014
+Last revised April 3, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.4 ==
@@ -8,7 +8,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = Code =
 * Change `$output = null` to `$output = ''` in `OpusPrimusPosts::sticky_flag` method
 * Corrected typo in `'opus_links_pages_after'` hook
-* Corrected modified date/time output for scheduled posts so they do not show a modified date/time until after they have been published
+* Corrected modified date/time output to account for scheduled posts being modified earlier than they are posted
 
 = CSS =
 * Added Format-Aside Dashicons to Post-Format: Aside posts
