@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="opus-primus.iws" />
@@ -31,20 +31,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="class.OpusPrimusPosts.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPosts.php">
+      <file leaf-file-name="changelog.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/changelog.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="396" column="62" selection-start="12375" selection-end="12375" vertical-scroll-proportion="0.2311248" vertical-offset="5790" max-vertical-offset="16380">
+            <state line="1" column="20" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4545">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="changelog.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/changelog.txt">
+      <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="20" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4530">
-              <folding />
+            <state line="148" column="5" selection-start="4821" selection-end="4821" vertical-scroll-proportion="0.52155775" vertical-offset="1845" max-vertical-offset="5205">
+              <folding>
+                <element signature="e#6#1394#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,11 +115,11 @@
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" />
         <option value="$PROJECT_DIR$/documentation/hooks-filters.txt" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
-        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/js/opus-primus.js" />
         <option value="$PROJECT_DIR$/css/opus-primus.css" />
-        <option value="$PROJECT_DIR$/changelog.txt" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
+        <option value="$PROJECT_DIR$/changelog.txt" />
+        <option value="$PROJECT_DIR$/functions.php" />
       </list>
     </option>
   </component>
@@ -125,7 +127,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1440" />
-    <option name="height" value="804" />
+    <option name="height" value="874" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -171,18 +173,8 @@
               <option name="myItemId" value="opus-primus" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
+              <option name="myItemId" value="wp-includes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -195,12 +187,18 @@
               <option name="myItemId" value="opus-primus" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -217,7 +215,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="293" />
-    <property name="options.lastSelected" value="web.server" />
+    <property name="options.lastSelected" value="preferences.sourceCode.PHP" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../wp-admin" />
@@ -2004,7 +2002,11 @@
       <created>1395602913792</created>
       <updated>1395602913793</updated>
     </task>
-    <option name="localTasksCounter" value="424" />
+    <task id="LOCAL-00424" summary="* Corrected modified date/time output to account for scheduled posts being modified earlier than they are posted">
+      <created>1396575740100</created>
+      <updated>1396575740100</updated>
+    </task>
+    <option name="localTasksCounter" value="425" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -2042,22 +2044,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="804" extended-state="6" />
+    <frame x="0" y="22" width="1440" height="874" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31932774" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32212886" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32664436" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32681563" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33008358" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24678111" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2539342" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32664436" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32681563" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31932774" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2107,7 +2109,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* Code clean-up" />
     <MESSAGE value="* Set version to 1.2; and tagged." />
     <MESSAGE value="* Update `readme.txt` and set version to 1.3-alpha" />
     <MESSAGE value="* Removed `translation-ready` tag" />
@@ -2132,7 +2133,8 @@
     <MESSAGE value="Change to &quot;Default&quot; changelist" />
     <MESSAGE value="* Corrected modified date/time output for scheduled posts so they do not show a modified date/time until after they have been published" />
     <MESSAGE value="* Added Format-Aside Dashicons to Post-Format: Aside posts&#10;* Added Flag Dashicons to Sticky Posts&#10;* Changed Password Protected Dashicons to use the Lock&#10;- Corrected a version reference in Opus Primus Posts" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Added Format-Aside Dashicons to Post-Format: Aside posts&#10;* Added Flag Dashicons to Sticky Posts&#10;* Changed Password Protected Dashicons to use the Lock&#10;- Corrected a version reference in Opus Primus Posts" />
+    <MESSAGE value="* Corrected modified date/time output to account for scheduled posts being modified earlier than they are posted" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Corrected modified date/time output to account for scheduled posts being modified earlier than they are posted" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -2143,11 +2145,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/opus-primus-archive-gallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="83" selection-start="1980" selection-end="1980" vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="595" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/opus-primus-archive-image.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="60" column="83" selection-start="1959" selection-end="1959" vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="595" />
@@ -2368,11 +2365,6 @@
         <state line="73" column="63" selection-start="2968" selection-end="2968" vertical-scroll-proportion="0.86725664" vertical-offset="409" max-vertical-offset="1200" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="310" column="64" selection-start="10758" selection-end="10758" vertical-scroll-proportion="0.88265973" vertical-offset="3373" max-vertical-offset="4140" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="503" column="66" selection-start="16580" selection-end="16580" vertical-scroll-proportion="-5.571056" vertical-offset="11818" max-vertical-offset="13305" />
@@ -2388,20 +2380,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="158" column="0" selection-start="4651" selection-end="4651" vertical-scroll-proportion="0.34927535" vertical-offset="2129" max-vertical-offset="28020" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changelog.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="20" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4530">
-          <folding />
-        </state>
+        <state line="1509" column="5" selection-start="28317" selection-end="28317" vertical-scroll-proportion="0.35818714" vertical-offset="22390" max-vertical-offset="28020" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPosts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="396" column="62" selection-start="12375" selection-end="12375" vertical-scroll-proportion="0.2311248" vertical-offset="5790" max-vertical-offset="16380">
+        <state line="657" column="47" selection-start="21783" selection-end="21783" vertical-scroll-proportion="0.48686245" vertical-offset="9540" max-vertical-offset="16380" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../wp-includes/version.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="629" selection-end="629" vertical-scroll-proportion="0.7172131" vertical-offset="0" max-vertical-offset="732">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changelog.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="20" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4545">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="5" selection-start="4821" selection-end="4821" vertical-scroll-proportion="0.52155775" vertical-offset="1845" max-vertical-offset="5205">
+          <folding>
+            <element signature="e#6#1394#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

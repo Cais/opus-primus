@@ -86,6 +86,32 @@ require_once( OPUS_INC . 'class.OpusPrimusBreadcrumbs.php' );
 require_once( OPUS_STANZAS . 'stanzas.php' );
 
 
+/**
+ * Opus Primus Scripts Version
+ * Returns a unique version number to be used with JavaScript and Style Sheet
+ * enqueue statement. It combines the current installed WordPress version with
+ * the current theme version.
+ *
+ * @package    Opus_Primus
+ * @since      1.2.4
+ *
+ * @uses       GLOBAL $wp_version
+ * @uses       wp_get_theme
+ *
+ * @return string
+ *
+ * @todo       Review if a plugin parameter would be useful to pass into the function
+ */
+function opus_primus_scripts_version() {
+	global $wp_version;
+
+	return $wp_version . '_' . wp_get_theme()->get( 'Version' );
+
+}
+
+/** End function - scripts version */
+
+
 if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 	/**
 	 * Opus Primus Enqueue Scripts
@@ -96,6 +122,7 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 	 *
 	 * @uses    (CONSTANT) OPUS_CSS
 	 * @uses    (CONSTANT) OPUS_JS
+	 * @uses               opus_primus_scripts_version
 	 * @uses               get_header_image
 	 * @uses               is_readable
 	 * @uses               is_single
@@ -116,13 +143,17 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 	 * @version            1.2.3
 	 * @date               February 19, 2014
 	 * Added `dashicons` dependency to main `Opus-Primus` stylesheet
+	 *
+	 * @version            1.2.4
+	 * @date               April 7, 2014
+	 * Replaced `wp_get_theme()->get( 'Version' )` version call with `opus_primus_scripts_version` call as a more unique and informative value
 	 */
 	function opus_primus_enqueue_scripts() {
 		/** Enqueue Theme Scripts */
 		/** Enqueue Opus Primus JavaScripts which will enqueue jQuery as a dependency */
-		wp_enqueue_script( 'opus-primus', OPUS_JS . 'opus-primus.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
+		wp_enqueue_script( 'opus-primus', OPUS_JS . 'opus-primus.js', array( 'jquery' ), opus_primus_scripts_version(), 'true' );
 		/** Enqueue Opus Primus Full Size Video which will enqueue jQuery as a dependency */
-		wp_enqueue_script( 'opus-primus-full-size-video', OPUS_JS . 'opus-primus-full-size-video.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
+		wp_enqueue_script( 'opus-primus-full-size-video', OPUS_JS . 'opus-primus-full-size-video.js', array( 'jquery' ), opus_primus_scripts_version(), 'true' );
 		/** Enqueue Opus Primus Comment Tabs which will enqueue jQuery, jQuery UI Core, jQuery UI Widget, and jQuery UI Tabs as dependencies */
 		if ( is_single() ) {
 			wp_enqueue_script(
@@ -131,27 +162,27 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 					'jquery-ui-core',
 					'jquery-ui-widget',
 					'jquery-ui-tabs'
-				), wp_get_theme()->get( 'Version' ), 'true'
+				), opus_primus_scripts_version(), 'true'
 			);
 		}
 		/** End if - is single */
 		/** Enqueue Opus Primus Header Image Position (if there is a header image) which will enqueue jQuery as a dependency */
 		if ( get_header_image() ) {
-			wp_enqueue_script( 'opus-primus-header-image-position', OPUS_JS . 'opus-primus-header-image-position.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
+			wp_enqueue_script( 'opus-primus-header-image-position', OPUS_JS . 'opus-primus-header-image-position.js', array( 'jquery' ), opus_primus_scripts_version(), 'true' );
 		}
 		/** End if - get header image */
 
 		/** Enqueue Theme Stylesheets */
 		/** Theme Layouts */
-		wp_enqueue_style( 'Opus-Primus-Layout', OPUS_CSS . 'opus-primus-layout.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
+		wp_enqueue_style( 'Opus-Primus-Layout', OPUS_CSS . 'opus-primus-layout.css', array(), opus_primus_scripts_version(), 'screen' );
 		/** Main Theme Elements with dashicons dependency */
-		wp_enqueue_style( 'Opus-Primus', OPUS_CSS . 'opus-primus.css', array( 'dashicons' ), wp_get_theme()->get( 'Version' ), 'screen' );
+		wp_enqueue_style( 'Opus-Primus', OPUS_CSS . 'opus-primus.css', array( 'dashicons' ), opus_primus_scripts_version(), 'screen' );
 		/** Media Queries and Responsive Elements */
-		wp_enqueue_style( 'Opus-Primus-Media-Queries', OPUS_CSS . 'opus-primus-media-queries.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
+		wp_enqueue_style( 'Opus-Primus-Media-Queries', OPUS_CSS . 'opus-primus-media-queries.css', array(), opus_primus_scripts_version(), 'screen' );
 
 		/** Enqueue custom stylesheet after to maintain expected specificity */
 		if ( is_readable( OPUS_CSS . 'opus-primus-custom-style.css' ) ) {
-			wp_enqueue_style( 'Opus-Primus-Custom-Style', OPUS_CSS . 'opus-primus-custom-style.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
+			wp_enqueue_style( 'Opus-Primus-Custom-Style', OPUS_CSS . 'opus-primus-custom-style.css', array(), opus_primus_scripts_version(), 'screen' );
 		}
 		/** End if - is readable */
 
@@ -301,7 +332,7 @@ function opus_primus_compatibility() {
 	 */
 	if ( is_plugin_active( 'soliloquy/soliloquy.php' ) ) {
 		/** Enqueue Soliloquy Styles */
-		wp_enqueue_style( 'Opus-Primus-Soliloquy', OPUS_COMPAT . 'opus-primus-soliloquy.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
+		wp_enqueue_style( 'Opus-Primus-Soliloquy', OPUS_COMPAT . 'opus-primus-soliloquy.css', array(), opus_primus_scripts_version(), 'screen' );
 	}
 	/** End if - soliloquy plugin is active */
 

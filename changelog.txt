@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised April 3, 2014
+Last revised April 7, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.4 ==
@@ -9,6 +9,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Change `$output = null` to `$output = ''` in `OpusPrimusPosts::sticky_flag` method
 * Corrected typo in `'opus_links_pages_after'` hook
 * Corrected modified date/time output to account for scheduled posts being modified earlier than they are posted
+* Replaced `wp_get_theme()->get( 'Version' )` version call with `opus_primus_scripts_version` call as a more unique and informative value
 
 = CSS =
 * Added Format-Aside Dashicons to Post-Format: Aside posts
