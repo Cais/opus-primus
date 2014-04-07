@@ -9,7 +9,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Change `$output = null` to `$output = ''` in `OpusPrimusPosts::sticky_flag` method
 * Corrected typo in `'opus_links_pages_after'` hook
 * Corrected modified date/time output to account for scheduled posts being modified earlier than they are posted
-* Replaced `wp_get_theme()->get( 'Version' )` version call with `opus_primus_scripts_version` call as a more unique and informative value
+* Replaced `wp_get_theme()->get( 'Version' )` call with `opus_primus_plugin_version()` call as a more accessible text string
 
 = CSS =
 * Added Format-Aside Dashicons to Post-Format: Aside posts
@@ -17,6 +17,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Changed Password Protected Dashicons to use the Lock
 
 = Miscellaneous =
+* Added filter `opus_plugin_version_text`
 * Change textdomain to match theme slug
 * Updated `hooks-actions.txt`
 * Updated `hooks-filters.txt` (corrected reference to `opus_first_author_details_text`)
