@@ -40,8 +40,8 @@
  * Removed 'style.less' related function and action calls
  * Merge `opus-ignite.php` into `functions.php`
  *
- * @version	1.2.4
- * @date	April 7, 2014
+ * @version     1.2.4
+ * @date        April 7, 2014
  * Added `opus_primus_plugin_version` function
  */
 
@@ -95,16 +95,14 @@ require_once( OPUS_STANZAS . 'stanzas.php' );
  * Returns a filtered version of the plugin version number to be used with
  * JavaScript and Style Sheet enqueue statements.
  *
- * @package    Opus_Primus
- * @since      1.2.4
+ * @package             Opus_Primus
+ * @since               1.2.4
  *
- * @uses       GLOBAL $wp_version
- * @uses       apply_filters
- * @uses       wp_get_theme
+ * @uses       (GLOBAL) $wp_version
+ * @uses                apply_filters
+ * @uses                wp_get_theme
  *
  * @return string
- *
- * @todo       Review if a plugin parameter would be useful to pass into the function
  */
 function opus_primus_plugin_version() {
 
