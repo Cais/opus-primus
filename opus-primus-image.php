@@ -33,7 +33,7 @@
  */
 
 /** Get the classes variables */
-global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_images, $opus_authors;
+global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_authors;
 
 /** Display the post */
 ?>
