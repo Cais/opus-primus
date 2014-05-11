@@ -32,10 +32,14 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version     1.2.4
+ * @date        May 11, 2014
+ * Added `show_featured_thumbnail` method (set to false)
  */
 
 /** Get the class variables */
-global $opus_structures, $opus_posts, $opus_comments, $opus_navigation; ?>
+global $opus_structures, $opus_posts, $opus_comments, $opus_images, $opus_navigation; ?>
 
 <div <?php post_class(); ?>>
 
@@ -51,6 +55,7 @@ global $opus_structures, $opus_posts, $opus_comments, $opus_navigation; ?>
 	);
 	$opus_posts->post_title();
 	$opus_comments->comments_link();
+	$opus_images->show_featured_thumbnail( false );
 	$opus_posts->post_content();
 	$opus_navigation->multiple_pages_link( array(), $preface = __( 'Pages:', 'opus-primus' ) );
 	$opus_posts->meta_tags( $anchor );
