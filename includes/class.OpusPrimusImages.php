@@ -959,21 +959,33 @@ class OpusPrimusImages {
 	 * Show Featured Thumbnail
 	 * Used to display the featured thumbnail image in templates
 	 *
-	 * @package    Opus_Primus
-	 * @since      1.2.4
+	 * @package     Opus_Primus
+	 * @since       1.2.4
 	 *
-	 * @uses       OpusPrimusImages::featured_thumbnail
-	 * @uses       is_archive
-	 * @uses       is_single
+	 * @param    bool $echo
+	 *
+	 * @internal    One can just as easily not use this method in the template
+	 * instead of setting the parameter to "false" but this parameter allows for
+	 * better future proofing and possible expansion
+	 *
+	 * @uses        OpusPrimusImages::featured_thumbnail
+	 * @uses        is_archive
+	 * @uses        is_single
 	 */
-	function show_featured_thumbnail() {
-		/** Sanity check - are we in the right view to show the image? */
-		if ( ! is_single() || is_archive() ) {
-			$this->featured_thumbnail();
-		} else {
-			$this->featured_thumbnail( $size = 'full', $class = 'aligncenter' );
+	function show_featured_thumbnail( $echo = true ) {
+
+		if ( $echo ) {
+
+			/** Sanity check - are we in the right view to show the image? */
+			if ( ! is_single() || is_archive() ) {
+				$this->featured_thumbnail();
+			} else {
+				$this->featured_thumbnail( $size = 'full', $class = 'aligncenter' );
+			}
+			/** End if - not is single */
+
 		}
-		/** End if - not is single */
+		/** End if - echo is true */
 
 	}
 	/** End function - show featured thumbnail */

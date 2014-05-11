@@ -4,11 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/css/opus-primus.css" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="* Bring the Featured Image Thumbnail back into the index view ... can you say &quot;waffle&quot;?&#10;* Added sanity check to only display comments_link when not in single view or in an archive view&#10;* Refactored conditional comments and featured thumbnail checks into the `comments_link` and `show_featured_thumbnail` methods">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" />
+    <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus.php" afterPath="$PROJECT_DIR$/opus-primus.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-aside.php" afterPath="$PROJECT_DIR$/opus-primus-aside.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="opus-primus.iws" />
@@ -32,10 +30,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="changelog.txt" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="changelog.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/changelog.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="19" selection-start="53" selection-end="53" vertical-scroll-proportion="0.022222223" vertical-offset="0" max-vertical-offset="4605">
+            <state line="4" column="19" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4605">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="opus-primus-aside.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/opus-primus-aside.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="58" column="48" selection-start="1920" selection-end="1920" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="750">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class.OpusPrimusImages.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusImages.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="966" column="52" selection-start="27758" selection-end="27758" vertical-scroll-proportion="0.3686636" vertical-offset="14250" max-vertical-offset="16770">
               <folding />
             </state>
           </provider>
@@ -86,7 +102,6 @@
         <option value="$PROJECT_DIR$/opus-primus-archive-quote.php" />
         <option value="$PROJECT_DIR$/opus-primus-archive-status.php" />
         <option value="$PROJECT_DIR$/opus-primus-archive-video.php" />
-        <option value="$PROJECT_DIR$/opus-primus-aside.php" />
         <option value="$PROJECT_DIR$/opus-primus-audio.php" />
         <option value="$PROJECT_DIR$/opus-primus-chat.php" />
         <option value="$PROJECT_DIR$/opus-primus-gallery.php" />
@@ -107,9 +122,10 @@
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
         <option value="$PROJECT_DIR$/changelog.txt" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" />
         <option value="$PROJECT_DIR$/opus-primus.php" />
+        <option value="$PROJECT_DIR$/opus-primus-aside.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
       </list>
     </option>
   </component>
@@ -145,6 +161,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -161,6 +178,38 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="opus-primus" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -197,7 +246,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2008,7 +2056,11 @@
       <created>1399251025926</created>
       <updated>1399251025926</updated>
     </task>
-    <option name="localTasksCounter" value="427" />
+    <task id="LOCAL-00427" summary="* Bring the Featured Image Thumbnail back into the index view ... can you say &quot;waffle&quot;?&#10;* Added sanity check to only display comments_link when not in single view or in an archive view&#10;* Refactored conditional comments and featured thumbnail checks into the `comments_link` and `show_featured_thumbnail` methods">
+      <created>1399771625611</created>
+      <updated>1399771625613</updated>
+    </task>
+    <option name="localTasksCounter" value="428" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -2052,7 +2104,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32142857" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31505102" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31424582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32664436" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
@@ -2060,18 +2112,18 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32681563" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33008358" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26466382" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26824033" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31932774" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2086,17 +2138,17 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32664436" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32664436" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32681563" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33008358" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21758665" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -2111,7 +2163,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* Removed `translation-ready` tag" />
     <MESSAGE value="* Updated `readme.txt` with trac reference http://themes.trac.wordpress.org/ticket/13740" />
     <MESSAGE value="* Update version to 1.2.2-alpha&#10;* Add sanity check to make sure match variable is actually set" />
     <MESSAGE value="* Fixed issue with Gallery Post-Format being used when the `gallery` shortcode is not used." />
@@ -2136,7 +2187,8 @@
     <MESSAGE value="* Corrected modified date/time output to account for scheduled posts being modified earlier than they are posted" />
     <MESSAGE value="* Replaced `wp_get_theme()-&gt;get( 'Version' )` version call with `opus_primus_scripts_version` call as a more unique and informative value" />
     <MESSAGE value="- minor documentation updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="- minor documentation updates" />
+    <MESSAGE value="* Bring the Featured Image Thumbnail back into the index view ... can you say &quot;waffle&quot;?&#10;* Added sanity check to only display comments_link when not in single view or in an archive view&#10;* Refactored conditional comments and featured thumbnail checks into the `comments_link` and `show_featured_thumbnail` methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Bring the Featured Image Thumbnail back into the index view ... can you say &quot;waffle&quot;?&#10;* Added sanity check to only display comments_link when not in single view or in an archive view&#10;* Refactored conditional comments and featured thumbnail checks into the `comments_link` and `show_featured_thumbnail` methods" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -2147,26 +2199,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/opus-primus-footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="671" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opus-primus-gallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="87" selection-start="2303" selection-end="2303" vertical-scroll-proportion="-9.115385" vertical-offset="341" max-vertical-offset="986" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opus-primus-header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="0" selection-start="2400" selection-end="2400" vertical-scroll-proportion="-22.0" vertical-offset="176" max-vertical-offset="952" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1870" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/opus-primus-video.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="63" column="87" selection-start="2067" selection-end="2067" vertical-scroll-proportion="0.3873874" vertical-offset="218" max-vertical-offset="884" />
@@ -2332,16 +2364,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../wp-includes/author-template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="426" column="61" selection-start="12871" selection-end="12871" vertical-scroll-proportion="-4.7916665" vertical-offset="6140" max-vertical-offset="6840">
-          <folding />
-        </state>
+        <state line="426" column="61" selection-start="12871" selection-end="12871" vertical-scroll-proportion="-4.7916665" vertical-offset="6140" max-vertical-offset="6840" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/comments.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="692">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="692" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../wp-includes/post-template.php">
@@ -2353,57 +2381,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="17" selection-start="3523" selection-end="3523" vertical-scroll-proportion="-4.6049004" vertical-offset="4567" max-vertical-offset="5220">
-          <folding>
-            <element signature="e#6#1496#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../wp-includes/default-constants.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.23041475" vertical-offset="150" max-vertical-offset="4785">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.23041475" vertical-offset="150" max-vertical-offset="4785" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusGallery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="444" column="24" selection-start="13929" selection-end="13929" vertical-scroll-proportion="8.525346" vertical-offset="1110" max-vertical-offset="7395">
-          <folding />
-        </state>
+        <state line="444" column="24" selection-start="13929" selection-end="13929" vertical-scroll-proportion="8.525346" vertical-offset="1110" max-vertical-offset="7395" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../wp-includes/media.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2913" column="23" selection-start="98876" selection-end="98876" vertical-scroll-proportion="67.25" vertical-offset="45234" max-vertical-offset="46590">
-          <folding>
-            <marker date="1399765521000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1399765521000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1399765521000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1399765521000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1399765521000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1399765521000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1399765521000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1399765521000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1399765521000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1399765521000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1399765521000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1399765521000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1399765521000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1399765521000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1399765521000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1399765521000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1399765521000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1399765521000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1399765521000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1399765521000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1399765521000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1399765521000" expanded="true" signature="-1:-1" placeholder="Insert into ..." />
-            <marker date="1399765521000" expanded="true" signature="-1:-1" placeholder="Insert into ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2416,14 +2407,82 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="691" column="0" selection-start="22271" selection-end="22271" vertical-scroll-proportion="-8.041667" vertical-offset="10172" max-vertical-offset="13305">
+        <state line="691" column="0" selection-start="22271" selection-end="22271" vertical-scroll-proportion="-8.041667" vertical-offset="10172" max-vertical-offset="13305" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusComments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="784" column="1" selection-start="20805" selection-end="20805" vertical-scroll-proportion="10.861752" vertical-offset="4689" max-vertical-offset="11925" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opus-primus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="48" selection-start="2035" selection-end="2035" vertical-scroll-proportion="0.36746988" vertical-offset="611" max-vertical-offset="1320" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="17" selection-start="3523" selection-end="3523" vertical-scroll-proportion="0.023041476" vertical-offset="885" max-vertical-offset="4560">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opus-primus-aside.php">
+    <entry file="file://$PROJECT_DIR$/../../../wp-includes/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-41.91398" vertical-offset="27286" max-vertical-offset="66720">
+          <folding>
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT meta_..$wpdb-&gt;postmeta WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT post_..$wpdb-&gt;postmeta WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT optio..$wpdb-&gt;options WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT id FR..$wpdb-&gt;site ORDER..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT post_..$wpdb-&gt;postmeta WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT comme..$wpdb-&gt;commentmeta WHERE..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../wp-includes/post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4726" column="9" selection-start="151612" selection-end="151612" vertical-scroll-proportion="-0.1056338" vertical-offset="70845" max-vertical-offset="85275">
+          <folding>
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..$wpdb-&gt;posts WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT post_..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT post_..$wpdb-&gt;posts WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..$wpdb-&gt;posts WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..$wpdb-&gt;posts WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..$wpdb-&gt;posts WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..$wpdb-&gt;posts WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT comme..$wpdb-&gt;comments WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT meta_..$wpdb-&gt;postmeta WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT comme..$wpdb-&gt;comments WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..$wpdb-&gt;posts WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT post_..$wpdb-&gt;posts WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT post_..$wpdb-&gt;posts WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT pinge..$wpdb-&gt;posts WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT pinge..$wpdb-&gt;posts WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT to_pi..$wpdb-&gt;posts WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..$wpdb-&gt;posts WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT ID, p..$wpdb-&gt;posts&#10;&#9;&#9;WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..$wpdb-&gt;posts&#10;&#9;&#9;&#9;WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..$wpdb-&gt;posts&#10;&#9;&#9;&#9;WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..$wpdb-&gt;posts WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..$wpdb-&gt;posts WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT comme..$wpdb-&gt;comments WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT meta_..$wpdb-&gt;postmeta WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT meta_..$wpdb-&gt;postmeta WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT post_..$wpdb-&gt;posts WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT post_..$wpdb-&gt;posts WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT DATE_..$wpdb-&gt;posts WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..$wpdb-&gt;posts WHERE..." />
+            <marker date="1397834819000" expanded="true" signature="-1:-1" placeholder="SELECT $wpdb..$wpdb-&gt;posts WHERE..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../wp-admin/includes/image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-5.705069" vertical-offset="3714" max-vertical-offset="8385">
           <folding />
         </state>
       </provider>
@@ -2435,32 +2494,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusImages.php">
+    <entry file="file://$PROJECT_DIR$/opus-primus-archive-aside.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1097" column="34" selection-start="31117" selection-end="31117" vertical-scroll-proportion="25.276497" vertical-offset="0" max-vertical-offset="16590">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="688">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusComments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="784" column="1" selection-start="20805" selection-end="20805" vertical-scroll-proportion="10.861752" vertical-offset="4689" max-vertical-offset="11925">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opus-primus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="48" selection-start="2035" selection-end="2035" vertical-scroll-proportion="0.36746988" vertical-offset="611" max-vertical-offset="1320">
-          <folding>
-            <element signature="e#6#1508#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/changelog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="19" selection-start="53" selection-end="53" vertical-scroll-proportion="0.022222223" vertical-offset="0" max-vertical-offset="4605">
+        <state line="4" column="19" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4605">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opus-primus-aside.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="48" selection-start="1920" selection-end="1920" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusImages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="966" column="52" selection-start="27758" selection-end="27758" vertical-scroll-proportion="0.3686636" vertical-offset="14250" max-vertical-offset="16770">
           <folding />
         </state>
       </provider>
