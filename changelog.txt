@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised May 10, 2014
+Last revised May 11, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.4 ==
@@ -7,7 +7,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Code =
 * Added sanity check to only display comments_link when not in single view or in an archive view
-* Added Featured Image Thumbnails to post-format templates
+* Added Featured Image Thumbnails to post-format single and archive view templates (except Post-Formats: Image and Gallery)
 * Bring the Featured Image Thumbnail back into the index view ... can you say "waffle"?
 * Change `$output = null` to `$output = ''` in `OpusPrimusPosts::sticky_flag` method
 * Corrected typo in `'opus_links_pages_after'` hook

@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive-video.php" afterPath="$PROJECT_DIR$/opus-primus-archive-video.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-video.php" afterPath="$PROJECT_DIR$/opus-primus-video.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-image.php" afterPath="$PROJECT_DIR$/opus-primus-image.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="opus-primus.iws" />
@@ -30,30 +30,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="changelog.txt" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="changelog.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/changelog.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="14" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4620">
+            <state line="9" column="114" selection-start="394" selection-end="394" vertical-scroll-proportion="0.20059435" vertical-offset="0" max-vertical-offset="4620">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="opus-primus-video.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/opus-primus-video.php">
+      <file leaf-file-name="opus-primus-archive-image.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/opus-primus-archive-image.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="21" selection-start="1289" selection-end="1289" vertical-scroll-proportion="0.16163142" vertical-offset="448" max-vertical-offset="1305">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="525">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="opus-primus-archive-video.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/opus-primus-archive-video.php">
+      <file leaf-file-name="opus-primus-image.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/opus-primus-image.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="3" selection-start="1328" selection-end="1328" vertical-scroll-proportion="-23.75" vertical-offset="0" max-vertical-offset="1050">
+            <state line="51" column="34" selection-start="1707" selection-end="1707" vertical-scroll-proportion="-31.875" vertical-offset="0" max-vertical-offset="1170">
               <folding>
-                <element signature="e#6#1328#0" expanded="true" />
+                <element signature="e#6#1146#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -114,12 +114,10 @@
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
         <option value="$PROJECT_DIR$/opus-primus-archive.php" />
         <option value="$PROJECT_DIR$/opus-primus-archive-aside.php" />
-        <option value="$PROJECT_DIR$/changelog.txt" />
         <option value="$PROJECT_DIR$/opus-primus-archive-audio.php" />
         <option value="$PROJECT_DIR$/opus-primus-audio.php" />
         <option value="$PROJECT_DIR$/opus-primus-chat.php" />
         <option value="$PROJECT_DIR$/opus-primus-archive-chat.php" />
-        <option value="$PROJECT_DIR$/opus-primus-image.php" />
         <option value="$PROJECT_DIR$/opus-primus-archive-link.php" />
         <option value="$PROJECT_DIR$/opus-primus-link.php" />
         <option value="$PROJECT_DIR$/opus-primus-quote.php" />
@@ -128,6 +126,8 @@
         <option value="$PROJECT_DIR$/opus-primus-archive-status.php" />
         <option value="$PROJECT_DIR$/opus-primus-video.php" />
         <option value="$PROJECT_DIR$/opus-primus-archive-video.php" />
+        <option value="$PROJECT_DIR$/changelog.txt" />
+        <option value="$PROJECT_DIR$/opus-primus-image.php" />
       </list>
     </option>
   </component>
@@ -193,24 +193,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2058,7 +2040,11 @@
       <created>1399830145304</created>
       <updated>1399830145305</updated>
     </task>
-    <option name="localTasksCounter" value="435" />
+    <task id="LOCAL-00435" summary="- added featured image thumbnail to Video post-format">
+      <created>1399830422009</created>
+      <updated>1399830422009</updated>
+    </task>
+    <option name="localTasksCounter" value="436" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -2161,7 +2147,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* Add documentation to the `first_linked_image` function" />
     <MESSAGE value="* Removed `table-stripe` class from Post-Format: Image tables" />
     <MESSAGE value="* Reduced all menu related elements with `z-index` property to a value of 1&#10;* Removed `z-index` property from breadcrumb related elements" />
     <MESSAGE value="* Set the breadcrumbs background color to #ffffff (white)&#10;* Tested up to WordPress version 3.7" />
@@ -2186,7 +2171,8 @@
     <MESSAGE value="- added featured image thumbnail to Link post-format" />
     <MESSAGE value="- added featured image thumbnail to Quote post-format" />
     <MESSAGE value="- added featured image thumbnail to Status post-format" />
-    <option name="LAST_COMMIT_MESSAGE" value="- added featured image thumbnail to Status post-format" />
+    <MESSAGE value="- added featured image thumbnail to Video post-format" />
+    <option name="LAST_COMMIT_MESSAGE" value="- added featured image thumbnail to Video post-format" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -2509,22 +2495,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opus-primus-archive-image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="686">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opus-primus-image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="84" selection-start="1265" selection-end="1265" vertical-scroll-proportion="0.20392749" vertical-offset="390" max-vertical-offset="1245">
-          <folding>
-            <element signature="e#6#1146#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/opus-primus-archive-link.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="56" selection-start="1322" selection-end="1322" vertical-scroll-proportion="-23.125" vertical-offset="0" max-vertical-offset="1050">
@@ -2567,13 +2537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/changelog.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="14" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4620">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/opus-primus-archive-video.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="3" selection-start="1328" selection-end="1328" vertical-scroll-proportion="-23.75" vertical-offset="0" max-vertical-offset="1050">
@@ -2586,6 +2549,29 @@
     <entry file="file://$PROJECT_DIR$/opus-primus-video.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="21" selection-start="1289" selection-end="1289" vertical-scroll-proportion="0.16163142" vertical-offset="448" max-vertical-offset="1305">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opus-primus-archive-image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="686">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opus-primus-image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="34" selection-start="1707" selection-end="1707" vertical-scroll-proportion="-31.875" vertical-offset="0" max-vertical-offset="1170">
+          <folding>
+            <element signature="e#6#1146#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changelog.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="114" selection-start="394" selection-end="394" vertical-scroll-proportion="0.20059435" vertical-offset="0" max-vertical-offset="4620">
           <folding />
         </state>
       </provider>
