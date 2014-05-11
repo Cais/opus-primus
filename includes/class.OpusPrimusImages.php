@@ -188,7 +188,6 @@ class OpusPrimusImages {
 
 	<?php
 	}
-
 	/** End function - archive image details */
 
 
@@ -315,7 +314,6 @@ class OpusPrimusImages {
 		do_action( 'opus_exif_box_after' );
 
 	}
-
 	/** End function - exif box */
 
 
@@ -421,7 +419,6 @@ class OpusPrimusImages {
 		do_action( 'opus_exif_table_after' );
 
 	}
-
 	/** End function - exif table */
 
 
@@ -456,7 +453,6 @@ class OpusPrimusImages {
 		if ( $image_data['image_meta']['aperture'] ) {
 			$aperture .= $image_data['image_meta']['aperture'];
 		}
-
 		/** End if - aperture */
 
 		/** Return Aperture string */
@@ -464,7 +460,6 @@ class OpusPrimusImages {
 		return apply_filters( 'opus_exif_aperture', $aperture );
 
 	}
-
 	/** End function - exif aperture */
 
 
@@ -499,7 +494,6 @@ class OpusPrimusImages {
 		if ( $image_data['image_meta']['camera'] ) {
 			$camera .= $image_data['image_meta']['camera'];
 		}
-
 		/** End if - camera */
 
 		/** Return Camera string */
@@ -507,7 +501,6 @@ class OpusPrimusImages {
 		return apply_filters( 'opus_exif_camera', $camera );
 
 	}
-
 	/** End function - exif camera */
 
 
@@ -542,7 +535,6 @@ class OpusPrimusImages {
 		if ( $image_data['image_meta']['caption'] ) {
 			$exif_caption .= $image_data['image_meta']['caption'];
 		}
-
 		/** End if - caption */
 
 		/** Return Caption string */
@@ -550,7 +542,6 @@ class OpusPrimusImages {
 		return apply_filters( 'opus_exif_caption', $exif_caption );
 
 	}
-
 	/** End function - exif caption */
 
 
@@ -594,7 +585,6 @@ class OpusPrimusImages {
 		if ( $image_data['image_meta']['copyright'] ) {
 			$copyright .= sprintf( __( '&copy; %1$s %2$s', 'opus-primus' ), get_the_time( 'Y' ), $image_data['image_meta']['copyright'] );
 		}
-
 		/** End if - copyright */
 
 		/** Return Copyright string */
@@ -602,7 +592,6 @@ class OpusPrimusImages {
 		return apply_filters( 'opus_exif_copyright', $copyright );
 
 	}
-
 	/** End function - exif copyright */
 
 
@@ -634,7 +623,6 @@ class OpusPrimusImages {
 		/** End if - isset */
 
 	}
-
 	/** End function  - exif data */
 
 
@@ -685,7 +673,6 @@ class OpusPrimusImages {
 		return apply_filters( 'opus_exif_dimensions', $dimensions );
 
 	}
-
 	/** End function - exif dimensions */
 
 
@@ -722,7 +709,6 @@ class OpusPrimusImages {
 		if ( $image_data['image_meta']['focal_length'] ) {
 			$focal_length .= $image_data['image_meta']['focal_length'] . 'mm';
 		}
-
 		/** End if - focal length */
 
 		/** Return Focal Length string */
@@ -730,7 +716,6 @@ class OpusPrimusImages {
 		return apply_filters( 'opus_exif_focal_length', $focal_length );
 
 	}
-
 	/** End function - exif focal length */
 
 
@@ -765,7 +750,6 @@ class OpusPrimusImages {
 		if ( $image_data['image_meta']['iso'] ) {
 			$iso_speed .= $image_data['image_meta']['iso'];
 		}
-
 		/** End if - iso */
 
 		/** Return ISO Speed */
@@ -773,7 +757,6 @@ class OpusPrimusImages {
 		return apply_filters( 'opus_exif_iso_speed', $iso_speed );
 
 	}
-
 	/** End function - exif iso speed */
 
 
@@ -818,7 +801,6 @@ class OpusPrimusImages {
 			}
 			/** End if - calculated shutter speed */
 		}
-
 		/** End if - shutter speed */
 
 		/** Return Shutter string */
@@ -826,7 +808,6 @@ class OpusPrimusImages {
 		return apply_filters( 'opus_exif_shutter', $shutter );
 
 	}
-
 	/** End function - exif shutter */
 
 
@@ -870,7 +851,6 @@ class OpusPrimusImages {
 				get_the_time( get_option( 'time_format' ), $image_data['image_meta']['created_timestamp'] )
 			);
 		}
-
 		/** End if - timestamp */
 
 		/** Return Timestamp string */
@@ -878,7 +858,6 @@ class OpusPrimusImages {
 		return apply_filters( 'opus_exif_timestamp', $timestamp );
 
 	}
-
 	/** End function - exif timestamp */
 
 
@@ -913,15 +892,13 @@ class OpusPrimusImages {
 		if ( $image_data['image_meta']['title'] ) {
 			$exif_title .= $image_data['image_meta']['title'];
 		}
-
-		/** ENd if - title */
+		/** End if - title */
 
 		/** Return Title string */
 
 		return apply_filters( 'opus_exif_title', $exif_title );
 
 	}
-
 	/** End function - exif title */
 
 
@@ -956,10 +933,12 @@ class OpusPrimusImages {
 	 * Removed Featured Image thumbnail from index view
 	 * Added Featured Image Thumbnail to archive views
 	 *
-	 * @todo       clean up and have link display attachment archive (1.2)
+	 * @version    1.2.4
+	 * @date       May 10, 2014
+	 * Bring the Featured Image Thumbnail back into the index view ... can you say "waffle"?
 	 */
 	function featured_thumbnail( $size = 'thumbnail', $class = 'alignleft' ) {
-		if ( has_post_thumbnail() && is_single() || is_archive() ) {
+		if ( has_post_thumbnail() ) {
 
 			$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
 
@@ -973,8 +952,31 @@ class OpusPrimusImages {
 		/** End if - has post thumbnail and not is single */
 
 	}
-
 	/** End function - featured thumbnail */
+
+
+	/**
+	 * Show Featured Thumbnail
+	 * Used to display the featured thumbnail image in templates
+	 *
+	 * @package    Opus_Primus
+	 * @since      1.2.4
+	 *
+	 * @uses       OpusPrimusImages::featured_thumbnail
+	 * @uses       is_archive
+	 * @uses       is_single
+	 */
+	function show_featured_thumbnail() {
+		/** Sanity check - are we in the right view to show the image? */
+		if ( ! is_single() || is_archive() ) {
+			$this->featured_thumbnail();
+		} else {
+			$this->featured_thumbnail( $size = 'full', $class = 'aligncenter' );
+		}
+		/** End if - not is single */
+
+	}
+	/** End function - show featured thumbnail */
 
 
 	/**
@@ -1009,7 +1011,6 @@ class OpusPrimusImages {
 		if ( isset ( $image_url ) ) {
 			return '<img class="linked-image" src="' . $image_url . '" alt="" />';
 		}
-
 		/** End if - isset image url */
 
 		/** Obviously if there is no image URL then return nothing */
@@ -1017,7 +1018,6 @@ class OpusPrimusImages {
 		return null;
 
 	}
-
 	/** End function - first linked image */
 
 
@@ -1075,7 +1075,6 @@ class OpusPrimusImages {
 		do_action( 'opus_image_title_after' );
 
 	}
-
 	/** End function - image title */
 
 
@@ -1096,7 +1095,7 @@ class OpusPrimusImages {
 
 }
 
-/** End of Opus Primus Images class */
+/** End class - Opus Primus Images */
 
 /** @var $opus_images - new instance of class */
 $opus_images = new OpusPrimusImages();

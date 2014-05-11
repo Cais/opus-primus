@@ -109,7 +109,6 @@ class OpusPrimusComments {
 		);
 
 	}
-
 	/** End function - construct */
 
 
@@ -137,7 +136,6 @@ class OpusPrimusComments {
 		/** End if - is singular */
 
 	}
-
 	/** End function - enqueue comment reply */
 
 
@@ -184,7 +182,6 @@ class OpusPrimusComments {
 		/** End if - not have comments */
 
 	}
-
 	/** End function - before comment form */
 
 
@@ -205,7 +202,6 @@ class OpusPrimusComments {
 
 		return $glyph;
 	}
-
 	/** End function - required fields glyph */
 
 
@@ -233,7 +229,6 @@ class OpusPrimusComments {
 
 		return $defaults;
 	}
-
 	/** End function - change required fields glyph */
 
 
@@ -261,7 +256,6 @@ class OpusPrimusComments {
 		/** End if - not is page */
 
 	}
-
 	/** End function - comments form closed */
 
 
@@ -309,7 +303,6 @@ class OpusPrimusComments {
 		return $classes;
 
 	}
-
 	/** End function - comment author class */
 
 
@@ -340,8 +333,8 @@ class OpusPrimusComments {
 		);
 
 		return $fields;
-	}
 
+	}
 	/** End function - comment fields as list items */
 
 
@@ -357,7 +350,6 @@ class OpusPrimusComments {
 	function comment_fields_wrapper_start() {
 		echo '<ul id="comment-fields-listed-wrapper">';
 	}
-
 	/** End function - comment fields wrapper start */
 
 
@@ -373,7 +365,6 @@ class OpusPrimusComments {
 	function comment_fields_wrapper_end() {
 		echo '</ul><!-- #comment-fields-listed-wrapper -->';
 	}
-
 	/** End function - comment fields wrapper end */
 
 
@@ -384,68 +375,77 @@ class OpusPrimusComments {
 	 * Comments Link
 	 * Displays amount of approved comments the post or page has
 	 *
-	 * @package OpusPrimus
-	 * @since   0.1
+	 * @package    OpusPrimus
+	 * @since      0.1
 	 *
-	 * @uses    __
-	 * @uses    comments_open
-	 * @uses    comments_popup_link
-	 * @uses    do_action
+	 * @uses       __
+	 * @uses       comments_open
+	 * @uses       comments_popup_link
+	 * @uses       do_action
 	 * uses     get_comments_number
-	 * @uses    is_page
-	 * @uses    post_password_required
+	 * @uses       is_page
+	 * @uses       post_password_required
 	 *
-	 * @version 1.2
-	 * @date    July 21, 2013
-	 * Display comment count in meta details if comments exist and comments are
-	 * closed
+	 * @version    1.2
+	 * @date       July 21, 2013
+	 * Display comment count in meta details if comments exist and comments are closed
+	 *
+	 * @version    1.2.4
+	 * @date       May 10, 2014
+	 * Added sanity check to only display comments_link when not in single view or in an archive view
 	 */
 	function comments_link() {
-		/** Add empty hook before comments link */
-		do_action( 'opus_comments_link_before' );
 
-		echo '<h5 class="comments-link">';
+		/** Only show the comments_link when not in single views or in archive views */
+		if ( ! is_single() || is_archive() ) {
 
-		if ( ! post_password_required() && comments_open() ) {
-			if ( is_page() ) {
+			/** Add empty hook before comments link */
+			do_action( 'opus_comments_link_before' );
+
+			echo '<h5 class="comments-link">';
+
+			if ( ! post_password_required() && comments_open() ) {
+				if ( is_page() ) {
+					comments_popup_link(
+						__( 'There are no comments for this page.', 'opus-primus' ),
+						__( 'There is 1 comment.', 'opus-primus' ),
+						__( 'There are % comments.', 'opus-primus' ),
+						'comments-link',
+						''
+					);
+				} else {
+					comments_popup_link(
+						__( 'There are no comments for this post.', 'opus-primus' ),
+						__( 'There is 1 comment.', 'opus-primus' ),
+						__( 'There are % comments.', 'opus-primus' ),
+						'comments-link',
+						__( 'Comments are closed.', 'opus-primus' )
+					);
+				}
+				/** End if - is page */
+			}
+			/** End if - not password required; comments open */
+
+			if ( ! post_password_required() && ! comments_open() && ( get_comments_number() > 0 ) ) {
 				comments_popup_link(
-					__( 'There are no comments for this page.', 'opus-primus' ),
-					__( 'There is 1 comment.', 'opus-primus' ),
-					__( 'There are % comments.', 'opus-primus' ),
+					__( 'There are no comments for this post and comments are closed.', 'opus-primus' ),
+					__( 'There is 1 comment and comments are closed.', 'opus-primus' ),
+					__( 'There are % comments and comments are closed.', 'opus-primus' ),
 					'comments-link',
-					''
-				);
-			} else {
-				comments_popup_link(
-					__( 'There are no comments for this post.', 'opus-primus' ),
-					__( 'There is 1 comment.', 'opus-primus' ),
-					__( 'There are % comments.', 'opus-primus' ),
-					'comments-link',
-					__( 'Comments are closed.', 'opus-primus' )
+					__( 'There are no comments and comments are closed.', 'opus-primus' )
 				);
 			}
-			/** End if - is page */
+			/** End if - not password required; comments closed; comments exist */
+
+			echo '</h5><!-- .comments-link -->';
+
+			/** Add empty hook after comments link */
+			do_action( 'opus_comments_link_after' );
+
 		}
-		/** End if - not password required; comments open */
-
-		if ( ! post_password_required() && ! comments_open() && ( get_comments_number() > 0 ) ) {
-			comments_popup_link(
-				__( 'There are no comments for this post and comments are closed.', 'opus-primus' ),
-				__( 'There is 1 comment and comments are closed.', 'opus-primus' ),
-				__( 'There are % comments and comments are closed.', 'opus-primus' ),
-				'comments-link',
-				__( 'There are no comments and comments are closed.', 'opus-primus' )
-			);
-		}
-		/** End if - not password required; comments closed; comments exist */
-
-		echo '</h5><!-- .comments-link -->';
-
-		/** Add empty hook after comments link */
-		do_action( 'opus_comments_link_after' );
+		/** End if - is not single */
 
 	}
-
 	/** End function - comments link */
 
 
@@ -469,7 +469,6 @@ class OpusPrimusComments {
 		do_action( 'opus_comments_after' );
 
 	}
-
 	/** End function - wrapped comments template */
 
 
@@ -510,7 +509,6 @@ class OpusPrimusComments {
 		}
 		/** End if - comments by type - comment */
 	}
-
 	/** End function - comments only tab */
 
 
@@ -551,7 +549,6 @@ class OpusPrimusComments {
 		}
 		/** End if - pingbacks only */
 	}
-
 	/** End function - pingbacks only tab */
 
 
@@ -592,7 +589,6 @@ class OpusPrimusComments {
 		}
 		/** End if - trackbacks only */
 	}
-
 	/** End function - trackbacks only tab */
 
 
@@ -630,8 +626,8 @@ class OpusPrimusComments {
 		<?php
 		}
 		/** End if - not empty - comments */
-	}
 
+	}
 	/** End function - comments only panel */
 
 
@@ -670,7 +666,6 @@ class OpusPrimusComments {
 		}
 		/** End if - not empty - pingbacks */
 	}
-
 	/** End function - pingbacks only panel */
 
 
@@ -708,8 +703,8 @@ class OpusPrimusComments {
 		<?php
 		}
 		/** End if - not empty - trackbacks */
-	}
 
+	}
 	/** End function - trackbacks only panel */
 
 
@@ -747,7 +742,6 @@ class OpusPrimusComments {
 		return $all_comments;
 
 	}
-
 	/** End function - all comments count */
 
 
@@ -790,8 +784,7 @@ class OpusPrimusComments {
 
 }
 
-/** End class Opus Primus Comments */
-
+/** End class - Opus Primus Comments */
 
 /** @var $opus_comments - new instance of class */
 $opus_comments = new OpusPrimusComments();

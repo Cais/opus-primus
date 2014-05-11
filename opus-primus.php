@@ -36,6 +36,10 @@
  * @version     1.2
  * @date        April 18, 2013
  * Adjusted conditional displaying the `featured_image`
+ *
+ * @version     1.2.4
+ * @date        May 10, 2014
+ * Refactored conditional comments and featured thumbnail checks into the `comments_link` and `show_featured_thumbnail` methods
  */
 
 /** Call the class variables */
@@ -50,15 +54,8 @@ global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_imag
 		$anchor = __( 'Posted', 'opus-primus' );
 		$opus_posts->post_byline( array( 'display_mod_author' => $opus_defaults->display_mod_author() ) );
 		$opus_posts->post_title();
-
-		if ( ! is_single() ) {
-			$opus_comments->comments_link();
-			$opus_images->featured_thumbnail();
-		} else {
-			$opus_images->featured_thumbnail( $size = 'full', $class = 'aligncenter' );
-		}
-		/** End if - not is single */
-
+		$opus_comments->comments_link();
+		$opus_images->show_featured_thumbnail();
 		$opus_posts->post_content();
 		$opus_navigation->multiple_pages_link( array(), $preface = __( 'Pages:', 'opus-primus' ) );
 		$opus_posts->meta_tags( $anchor );
