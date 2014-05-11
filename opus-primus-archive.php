@@ -37,6 +37,10 @@
  * @version     1.2.3
  * @date        December 30, 2013
  * Added Featured Image thumbnail to standard post-format archive views
+ *
+ * @version	1.2.4
+ * @date	May 11, 2014
+ * Use `show_featured_thumbnail` method
  */
 
 /** Get the class variables */
@@ -50,7 +54,7 @@ global $opus_structures, $opus_posts, $opus_comments, $opus_images, $opus_naviga
 	$opus_posts->post_byline( array( 'tempus' => 'time' ) );
 	$opus_posts->post_title();
 	$opus_comments->comments_link();
-	$opus_images->featured_thumbnail( $size = 'thumbnail', $class = 'alignright' );
+	$opus_images->show_featured_thumbnail();
 	$opus_posts->post_excerpt();
 	$opus_navigation->multiple_pages_link( array(), $preface = __( 'Pages:', 'opus-primus' ) );
 	$opus_posts->meta_tags( $anchor );
