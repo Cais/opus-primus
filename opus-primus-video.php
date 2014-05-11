@@ -34,6 +34,10 @@
  * @version     1.2
  * @date        April 20, 2013
  * Removed `featured_image` from this post format loop
+ *
+ * @version     1.2.4
+ * @date        May 11, 2014
+ * Added `show_featured_thumbnail` method (set to false)
  */
 
 /** Call the class variables */
@@ -54,12 +58,8 @@ global $opus_defaults, $opus_structures, $opus_posts, $opus_comments, $opus_navi
 				   )
 		);
 		$opus_posts->post_title();
-
-		if ( ! is_single() ) {
-			$opus_comments->comments_link();
-		}
-		/** End if - not is single */
-
+		$opus_comments->comments_link();
+		$opus_images->show_featured_thumbnail( false );
 		$opus_posts->post_content();
 		$opus_navigation->multiple_pages_link( array(), $preface = __( 'Pages:', 'opus-primus' ) );
 		$opus_posts->meta_tags( $anchor );
