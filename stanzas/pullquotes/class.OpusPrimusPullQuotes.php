@@ -100,24 +100,40 @@ class OpusPrimusPullQuotes {
 	 * @package Opus_Primus
 	 * @since   0.1
 	 *
+	 * @uses	esc_html
 	 * @uses    shortcode_atts
 	 *
 	 * @version 1.2
 	 * @date    March 25, 2013
-	 * Added `to` attribute to allow for left-side or right-side (default)
-	 * pull quote placements
+	 * Added `to` attribute to allow for left-side or right-side (default) pull quote placements
+	 *
+	 * @version	1.2.4
+	 * @date	May 17, 2014
+	 * Removed `extract` function call and escaped attributes
 	 */
 	function pull_quotes_shortcode( $atts, $content = null ) {
-		extract(
-			shortcode_atts(
-				array(
-					'to'   => 'right',
-					'by'   => '',
-					'from' => '',
-				),
-				$atts
-			)
+
+		/** If there is no content jump out immediately */
+		if ( empty( $content ) ) {
+			return null;
+		}
+		/** End if - empty content */
+
+		shortcode_atts(
+			array(
+				'to'   => 'right',
+				'by'   => '',
+				'from' => '',
+			),
+			$atts
 		);
+
+		/** @var string $to - sanitized placement string (not really needed) */
+		$to   = esc_html( $atts['to'] );
+		/** @var string $by - sanitized for HTML inclusion */
+		$by   = esc_html( $atts['by'] );
+		/** @var string $from - sanitized for HTML inclusion */
+		$from =  esc_html( $atts['from'] );
 
 		if ( ! empty( $by ) ) {
 			$content .= '<br />' . '<cite>' . $by . '</cite>';
@@ -128,11 +144,6 @@ class OpusPrimusPullQuotes {
 			$content .= '<br />' . '<cite>' . $from . '</cite>';
 		}
 		/** End if - not empty - from */
-
-		if ( empty( $content ) ) {
-			return null;
-		}
-		/** End if - empty content */
 
 		if ( ! empty( $to ) && ( 'left' == $to ) ) {
 			$content = '<span class="pql">' . $content . "</span>";
