@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised May 11, 2014
+Last revised May 17, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.4 ==
@@ -13,6 +13,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Corrected typo in `'opus_links_pages_after'` hook
 * Corrected modified date/time output to account for scheduled posts being modified earlier than they are posted
 * Refactored conditional comments and featured thumbnail checks into the `comments_link` and `show_featured_thumbnail` methods
+* Removed `extract` function call and escaped attributes in PullQuotes Stanza
 * Replaced `wp_get_theme()->get( 'Version' )` call with `opus_primus_plugin_version()` call as a more accessible text string
 
 = CSS =
@@ -25,6 +26,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Change textdomain to match theme slug
 * Updated `hooks-actions.txt`
 * Updated `hooks-filters.txt` (corrected reference to `opus_first_author_details_text`)
+* Updated Opus Primus PullQuotes `readme.txt`
 
 /** ------------------------------------------------------------------------- */
 == Version 1.2.3 ==

@@ -1,5 +1,5 @@
 === Opus Primus PullQuotes readme.txt ===
-* Last revised March 29, 2013
+* Last revised May 17, 2014
 
 == Contents ==
 * Copyright and License
@@ -7,7 +7,7 @@
 * Notes
 
 == Copyright ==
-Copyright (c) 2012-2013, Opus Primus
+Copyright (c) 2012-2014, Opus Primus
 
 This file is part of the Opus Primus PullQuotes Stanza, a part of Opus Primus.
 
@@ -32,7 +32,7 @@ The license for this software can also likely be found here:
 http://www.gnu.org/licenses/gpl-2.0.html
 
 Note: Opus Primus file Copyright years start with the first year of use and are
-amended with subsequent years based on file modification as the case may be.
+amended with subsequent years based on file modifications as the case may be.
 
 == Basic FAQ ==
 Q: Who wrote the Opus Primus PullQuotes Stanza?
@@ -54,10 +54,18 @@ text being emphasized.
 Q: When was the Opus Primus PullQuote Stanza added to the core theme files?
 Opus Primus PullQuotes was a part of the initial release of the theme.
 
+Q: Why was the Opus Primus PullQuotes Stanza added to the core theme files?
+PullQuotes was added an an example of extensibility for the theme. It is not
+meant as a staple or reason to choose the theme on its own.
+
 Q: How does the Opus Primus PullQuote Stanza work?
 The Stanza works by implementing a WordPress shortcode designated as `pullquote`
 with the additional `to` parameter. By default `to` is equal to "right" but can
 be set to "left" to place the PullQuote on the side of the content.
+
+Q: Can I add any other details to the pullquote, like a byline?
+Currently you can use both the `by` parameter and the `from` parameter to add
+citation like details to the pullquote.
 
 == Notes ==
 * The Opus Primus PullQuotes Stanza, although fully functional, is meant as an
