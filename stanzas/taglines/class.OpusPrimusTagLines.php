@@ -87,14 +87,19 @@ class OpusPrimusTagLines {
 	 * @since              1.0.3
 	 *
 	 * @uses    (CONSTANT) OPUS_STANZAS_URI
+	 * @uses               opus_primus_theme_version
 	 * @uses               wp_enqueue_script
 	 * @uses               wp_enqueue_style
 	 * @uses               wp_get_theme
+	 *
+	 * @version            1.2.4
+	 * @date               May 17, 2014
+	 * Use `opus_primus_theme_version` in place of `wp_get_theme` call
 	 */
 	function scripts_and_styles() {
 		/** Enqueue Styles */
 		/** Enqueue Taglines Stanza Stylesheets */
-		wp_enqueue_style( 'Opus-Primus-TagLines', OPUS_STANZAS_URI . 'taglines/opus-primus.taglines.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
+		wp_enqueue_style( 'Opus-Primus-TagLines', OPUS_STANZAS_URI . 'taglines/opus-primus.taglines.css', array(), opus_primus_theme_version(), 'screen' );
 	}
 
 

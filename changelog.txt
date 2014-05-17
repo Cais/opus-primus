@@ -8,13 +8,14 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = Code =
 * Added sanity check to only display comments_link when not in single view or in an archive view
 * Added Featured Image Thumbnails to post-format single and archive view templates (except Post-Formats: Image and Gallery)
+* Added `opus_primus_theme_version()` call as an accessible text string
 * Bring the Featured Image Thumbnail back into the index view ... can you say "waffle"?
 * Change `$output = null` to `$output = ''` in `OpusPrimusPosts::sticky_flag` method
 * Corrected typo in `'opus_links_pages_after'` hook
 * Corrected modified date/time output to account for scheduled posts being modified earlier than they are posted
 * Refactored conditional comments and featured thumbnail checks into the `comments_link` and `show_featured_thumbnail` methods
 * Removed `extract` function call and escaped attributes in PullQuotes Stanza
-* Replaced `wp_get_theme()->get( 'Version' )` call with `opus_primus_plugin_version()` call as a more accessible text string
+* Use `opus_primus_theme_version` in place of `wp_get_theme` calls
 
 = CSS =
 * Added Format-Aside Dashicons to Post-Format: Aside posts

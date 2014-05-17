@@ -74,20 +74,25 @@ class OpusPrimusPullQuotes {
 	 * @since              0.1
 	 *
 	 * @uses    (CONSTANT) OPUS_STANZAS_URI
+	 * @uses               opus_primus_theme_version
 	 * @uses               wp_enqueue_script
 	 * @uses               wp_enqueue_style
 	 * @uses               wp_get_theme
 	 *
 	 * @internal           jQuery is enqueued as a dependency
+	 *
+	 * @version            1.2.4
+	 * @date               May 17, 2014
+	 * Use `opus_primus_theme_version` in place of `wp_get_theme` call
 	 */
 	function scripts_and_styles() {
 		/** Enqueue Scripts */
 		/** Enqueue Opus Primus PullQuotes JavaScripts which will enqueue jQuery as a dependency */
-		wp_enqueue_script( 'opus-primus-pullquote', OPUS_STANZAS_URI . 'pullquotes/opus-primus.pullquote.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), 'true' );
+		wp_enqueue_script( 'opus-primus-pullquote', OPUS_STANZAS_URI . 'pullquotes/opus-primus.pullquote.js', array( 'jquery' ), opus_primus_theme_version(), 'true' );
 
 		/** Enqueue Styles */
 		/** Enqueue PullQuotes Stanza Stylesheets */
-		wp_enqueue_style( 'Opus-Primus-PullQuote', OPUS_STANZAS_URI . 'pullquotes/opus-primus.pullquote.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
+		wp_enqueue_style( 'Opus-Primus-PullQuote', OPUS_STANZAS_URI . 'pullquotes/opus-primus.pullquote.css', array(), opus_primus_theme_version(), 'screen' );
 
 	}
 
@@ -97,18 +102,18 @@ class OpusPrimusPullQuotes {
 	/**
 	 * PullQuotes Shortcode
 	 *
-	 * @package Opus_Primus
-	 * @since   0.1
+	 * @package    Opus_Primus
+	 * @since      0.1
 	 *
-	 * @uses	esc_html
-	 * @uses    shortcode_atts
+	 * @uses       esc_html
+	 * @uses       shortcode_atts
 	 *
-	 * @version 1.2
-	 * @date    March 25, 2013
+	 * @version    1.2
+	 * @date       March 25, 2013
 	 * Added `to` attribute to allow for left-side or right-side (default) pull quote placements
 	 *
-	 * @version	1.2.4
-	 * @date	May 17, 2014
+	 * @version    1.2.4
+	 * @date       May 17, 2014
 	 * Removed `extract` function call and escaped attributes
 	 */
 	function pull_quotes_shortcode( $atts, $content = null ) {
@@ -128,12 +133,12 @@ class OpusPrimusPullQuotes {
 			$atts
 		);
 
-		/** @var string $to - sanitized placement string (not really needed) */
-		$to   = esc_html( $atts['to'] );
+		/** @var string $to - sanitized (not really needed) placement string */
+		$to = esc_html( $atts['to'] );
 		/** @var string $by - sanitized for HTML inclusion */
-		$by   = esc_html( $atts['by'] );
+		$by = esc_html( $atts['by'] );
 		/** @var string $from - sanitized for HTML inclusion */
-		$from =  esc_html( $atts['from'] );
+		$from = esc_html( $atts['from'] );
 
 		if ( ! empty( $by ) ) {
 			$content .= '<br />' . '<cite>' . $by . '</cite>';

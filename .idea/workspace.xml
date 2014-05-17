@@ -4,9 +4,11 @@
     <bookmark url="file://$PROJECT_DIR$/css/opus-primus.css" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="* Updated Opus Primus PullQuotes `readme.txt`">
+    <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="* Use `opus_primus_theme_version` in place of `wp_get_theme` call">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stanzas/pullquotes/pullquotes-readme.txt" afterPath="$PROJECT_DIR$/stanzas/pullquotes/pullquotes-readme.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stanzas/pullquotes/class.OpusPrimusPullQuotes.php" afterPath="$PROJECT_DIR$/stanzas/pullquotes/class.OpusPrimusPullQuotes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php" afterPath="$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="opus-primus.iws" />
@@ -33,7 +35,7 @@
       <file leaf-file-name="changelog.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/changelog.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="19" selection-start="53" selection-end="53" vertical-scroll-proportion="0.022156574" vertical-offset="0" max-vertical-offset="4650">
+            <state line="10" column="71" selection-start="475" selection-end="475" vertical-scroll-proportion="0.22156574" vertical-offset="0" max-vertical-offset="4665">
               <folding />
             </state>
           </provider>
@@ -42,21 +44,27 @@
       <file leaf-file-name="class.OpusPrimusPullQuotes.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stanzas/pullquotes/class.OpusPrimusPullQuotes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="5" selection-start="3153" selection-end="3153" vertical-scroll-proportion="5.9166665" vertical-offset="1807" max-vertical-offset="2595">
+            <state line="86" column="7" selection-start="2424" selection-end="2424" vertical-scroll-proportion="-17.208334" vertical-offset="877" max-vertical-offset="2670">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pullquotes-readme.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stanzas/pullquotes/pullquotes-readme.txt">
+      <file leaf-file-name="class.OpusPrimusTagLines.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="59" selection-start="2340" selection-end="2340" vertical-scroll-proportion="-21.11111" vertical-offset="300" max-vertical-offset="1155">
+            <state line="89" column="52" selection-start="2594" selection-end="2594" vertical-scroll-proportion="36.25" vertical-offset="2205" max-vertical-offset="3780">
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="94" column="42" selection-start="3235" selection-end="3235" vertical-scroll-proportion="-4.7083335" vertical-offset="637" max-vertical-offset="4560">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -100,14 +108,12 @@
         <option value="$PROJECT_DIR$/opus-primus-gallery.php" />
         <option value="$PROJECT_DIR$/page.php" />
         <option value="$PROJECT_DIR$/search.php" />
-        <option value="$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php" />
         <option value="$PROJECT_DIR$/documentation/hooks-actions.txt" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" />
         <option value="$PROJECT_DIR$/js/opus-primus.js" />
         <option value="$PROJECT_DIR$/css/opus-primus.css" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
         <option value="$PROJECT_DIR$/documentation/hooks-filters.txt" />
-        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" />
         <option value="$PROJECT_DIR$/opus-primus.php" />
@@ -128,8 +134,10 @@
         <option value="$PROJECT_DIR$/opus-primus-video.php" />
         <option value="$PROJECT_DIR$/opus-primus-archive-video.php" />
         <option value="$PROJECT_DIR$/opus-primus-image.php" />
-        <option value="$PROJECT_DIR$/stanzas/pullquotes/class.OpusPrimusPullQuotes.php" />
         <option value="$PROJECT_DIR$/stanzas/pullquotes/pullquotes-readme.txt" />
+        <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/stanzas/pullquotes/class.OpusPrimusPullQuotes.php" />
+        <option value="$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php" />
         <option value="$PROJECT_DIR$/changelog.txt" />
       </list>
     </option>
@@ -263,11 +271,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="stanzas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pullquotes" />
+              <option name="myItemId" value="includes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2145,7 +2149,11 @@
       <created>1400344824566</created>
       <updated>1400344824566</updated>
     </task>
-    <option name="localTasksCounter" value="438" />
+    <task id="LOCAL-00438" summary="* Updated Opus Primus PullQuotes `readme.txt`">
+      <created>1400346580711</created>
+      <updated>1400346580711</updated>
+    </task>
+    <option name="localTasksCounter" value="439" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -2189,7 +2197,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32142857" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3119777" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32664436" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
@@ -2248,7 +2256,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* Set the breadcrumbs background color to #ffffff (white)&#10;* Tested up to WordPress version 3.7" />
     <MESSAGE value="* Extracted $post_title management from `post_breadcrumb` method into the `breadcrumb_post_title` method" />
     <MESSAGE value="- Line separator correction" />
     <MESSAGE value="* Change textdomain to match theme slug" />
@@ -2273,7 +2280,8 @@
     <MESSAGE value="- added featured image thumbnail to Video post-format" />
     <MESSAGE value="- minor code clean up and documentation clarification" />
     <MESSAGE value="* Removed `extract` function call and escaped attributes in PullQuotes Stanza" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Removed `extract` function call and escaped attributes in PullQuotes Stanza" />
+    <MESSAGE value="* Updated Opus Primus PullQuotes `readme.txt`" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Updated Opus Primus PullQuotes `readme.txt`" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -2284,21 +2292,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../wp-includes/media-template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="230" selection-start="1718" selection-end="1718" vertical-scroll-proportion="-27.461538" vertical-offset="34" max-vertical-offset="8687" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../wp-includes/theme.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1822" column="27" selection-start="55822" selection-end="55822" vertical-scroll-proportion="-5.769231" vertical-offset="30739" max-vertical-offset="32198" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../wp-includes/vars.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="9" selection-start="4405" selection-end="4405" vertical-scroll-proportion="0.27105665" vertical-offset="1659" max-vertical-offset="2312" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="0" selection-start="2099" selection-end="2099" vertical-scroll-proportion="0.57462686" vertical-offset="35" max-vertical-offset="705" />
@@ -2400,11 +2393,6 @@
     <entry file="file://$PROJECT_DIR$/opus-primus.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="48" selection-start="2035" selection-end="2035" vertical-scroll-proportion="0.36746988" vertical-offset="611" max-vertical-offset="1320" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="17" selection-start="3523" selection-end="3523" vertical-scroll-proportion="0.023041476" vertical-offset="885" max-vertical-offset="4560" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../wp-includes/functions.php">
@@ -2527,16 +2515,9 @@
         <state line="1254" column="0" selection-start="23460" selection-end="23460" vertical-scroll-proportion="0.86376023" vertical-offset="18176" max-vertical-offset="28020" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stanzas/pullquotes/class.OpusPrimusPullQuotes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="5" selection-start="3153" selection-end="3153" vertical-scroll-proportion="5.9166665" vertical-offset="1807" max-vertical-offset="2595">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stanzas/pullquotes/pullquotes-readme.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="59" selection-start="2340" selection-end="2340" vertical-scroll-proportion="-21.11111" vertical-offset="300" max-vertical-offset="1155">
+        <state line="58" column="59" selection-start="2340" selection-end="2340" vertical-scroll-proportion="1.3122172" vertical-offset="0" max-vertical-offset="1155">
           <folding />
         </state>
       </provider>
@@ -2544,9 +2525,44 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="42" selection-start="3235" selection-end="3235" vertical-scroll-proportion="-4.7083335" vertical-offset="637" max-vertical-offset="4560">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stanzas/pullquotes/class.OpusPrimusPullQuotes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="7" selection-start="2424" selection-end="2424" vertical-scroll-proportion="-17.208334" vertical-offset="877" max-vertical-offset="2670">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stanzas/stanzas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stanzas/new-custom-stanza.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="52" selection-start="2594" selection-end="2594" vertical-scroll-proportion="36.25" vertical-offset="2205" max-vertical-offset="3780">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/changelog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="19" selection-start="53" selection-end="53" vertical-scroll-proportion="0.022156574" vertical-offset="0" max-vertical-offset="4650">
+        <state line="10" column="71" selection-start="475" selection-end="475" vertical-scroll-proportion="0.22156574" vertical-offset="0" max-vertical-offset="4665">
           <folding />
         </state>
       </provider>
