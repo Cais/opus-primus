@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,23 +29,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="changelog.txt" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="changelog.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/changelog.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="1086" selection-end="1086" vertical-scroll-proportion="0.3988183" vertical-offset="0" max-vertical-offset="4680">
+            <state line="18" column="0" selection-start="1086" selection-end="1086" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4680">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="class.OpusPrimusStructures.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="class.OpusPrimusStructures.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="324" column="5" selection-start="9651" selection-end="9651" vertical-scroll-proportion="-9.708333" vertical-offset="4627" max-vertical-offset="13530">
+            <state line="293" column="0" selection-start="8790" selection-end="8790" vertical-scroll-proportion="0.022970904" vertical-offset="4380" max-vertical-offset="13590">
               <folding>
-                <marker date="1400434316000" expanded="true" signature="19605:19634" placeholder="..." />
-                <marker date="1400434316000" expanded="true" signature="24842:24914" placeholder="..." />
-                <marker date="1400434316000" expanded="true" signature="25807:25879" placeholder="..." />
+                <marker date="1400437440000" expanded="true" signature="19873:19902" placeholder="..." />
+                <marker date="1400437440000" expanded="true" signature="25110:25182" placeholder="..." />
+                <marker date="1400437440000" expanded="true" signature="26075:26147" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -121,8 +120,8 @@
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/documentation/hooks-filters.txt" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
         <option value="$PROJECT_DIR$/changelog.txt" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
       </list>
     </option>
   </component>
@@ -2078,7 +2077,11 @@
       <created>1400429438851</created>
       <updated>1400429438852</updated>
     </task>
-    <option name="localTasksCounter" value="441" />
+    <task id="LOCAL-00441" summary="* Use transients to improve performance impact of the `OpusPrimusStructures::copyright` method">
+      <created>1400434360153</created>
+      <updated>1400434360153</updated>
+    </task>
+    <option name="localTasksCounter" value="442" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -2181,7 +2184,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* Change textdomain to match theme slug" />
     <MESSAGE value="* Change `$output = null` to `$output = ''` in `OpusPrimusPosts::sticky_flag` method" />
     <MESSAGE value="* Corrected typo in `'opus_links_pages_after'` hook&#10;* Updated `hooks-actions.txt`&#10;" />
     <MESSAGE value="* Updated `hooks-filters.txt` (corrected reference to `opus_first_author_details_text`)" />
@@ -2206,7 +2208,8 @@
     <MESSAGE value="* Updated Opus Primus PullQuotes `readme.txt`" />
     <MESSAGE value="* Use `opus_primus_theme_version` in place of `wp_get_theme` calls" />
     <MESSAGE value="- corrected `opus_primus_theme_version_text` references from `*_plugin_*` references" />
-    <option name="LAST_COMMIT_MESSAGE" value="- corrected `opus_primus_theme_version_text` references from `*_plugin_*` references" />
+    <MESSAGE value="* Use transients to improve performance impact of the `OpusPrimusStructures::copyright` method" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Use transients to improve performance impact of the `OpusPrimusStructures::copyright` method" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -2491,21 +2494,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
+    <entry file="file://$PROJECT_DIR$/changelog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="324" column="5" selection-start="9651" selection-end="9651" vertical-scroll-proportion="-9.708333" vertical-offset="4627" max-vertical-offset="13530">
-          <folding>
-            <marker date="1400434316000" expanded="true" signature="19605:19634" placeholder="..." />
-            <marker date="1400434316000" expanded="true" signature="24842:24914" placeholder="..." />
-            <marker date="1400434316000" expanded="true" signature="25807:25879" placeholder="..." />
-          </folding>
+        <state line="18" column="0" selection-start="1086" selection-end="1086" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4680">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/changelog.txt">
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="1086" selection-end="1086" vertical-scroll-proportion="0.3988183" vertical-offset="0" max-vertical-offset="4680">
-          <folding />
+        <state line="293" column="0" selection-start="8790" selection-end="8790" vertical-scroll-proportion="0.022970904" vertical-offset="4380" max-vertical-offset="13590">
+          <folding>
+            <marker date="1400437440000" expanded="true" signature="19873:19902" placeholder="..." />
+            <marker date="1400437440000" expanded="true" signature="25110:25182" placeholder="..." />
+            <marker date="1400437440000" expanded="true" signature="26075:26147" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

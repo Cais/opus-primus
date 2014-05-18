@@ -299,20 +299,22 @@ class OpusPrimusStructures {
 	 * the post is specifically noted as the copyright holder in the single
 	 * view of the page or post.
 	 *
-	 * @package  OpusPrimus
-	 * @since    0.1
+	 * @package     OpusPrimus
+	 * @since       0.1
 	 *
-	 * @internal $output can be filtered via the `opus_copyright` hook
+	 * @internal    $output can be filtered via the `opus_copyright` hook
+	 * @internal    $transient_refresh is set to one month (2592000s = 30 days)
+	 * for $first_post as a default since it will rarely, if ever, change
 	 *
-	 * @uses     __
-	 * @uses     apply_filters
-	 * @uses     esc_attr
-	 * @uses     get_bloginfo
-	 * @uses     get_posts
-	 * @uses	get_transient
-	 * @uses     home_url
-	 * @uses     post_date_gmt
-	 * @uses	set_transient
+	 * @uses        __
+	 * @uses        apply_filters
+	 * @uses        esc_attr
+	 * @uses        get_bloginfo
+	 * @uses        get_posts
+	 * @uses        get_transient
+	 * @uses        home_url
+	 * @uses        post_date_gmt
+	 * @uses        set_transient
 	 *
 	 * @param   bool $show
 	 * @param   bool $by_author
@@ -320,11 +322,13 @@ class OpusPrimusStructures {
 	 *
 	 * @return  mixed|null|void
 	 *
-	 * @version	1.2.4
-	 * @date	May 18, 2014
+	 * @version     1.2.4
+	 * @date        May 18, 2014
 	 * Used transients to improve performance impact of the method
 	 */
 	function copyright( $show = true, $by_author = true, $transient_refresh = 2592000 ) {
+
+		/** If we are not going to show the copyright jump out now */
 		if ( false == $show ) {
 			return null;
 		}
