@@ -14,7 +14,7 @@ The filters are listed below by file, in order of appearance:
         opus_404_top_10_title
         opus_404_tag_text
 	functions.php
-		opus_plugin_version_text
+		opus_primus_theme_version_text
     search.php
         opus_search_found_pre_text
         opus_search_found_post_text

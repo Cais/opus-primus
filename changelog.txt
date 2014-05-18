@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised May 17, 2014
+Last revised May 18, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.4 ==
@@ -23,7 +23,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Changed Password Protected Dashicons to use the Lock
 
 = Miscellaneous =
-* Added filter `opus_plugin_version_text`
+* Added filter `opus_primus_theme_version_text`
 * Change textdomain to match theme slug
 * Updated `hooks-actions.txt`
 * Updated `hooks-filters.txt` (corrected reference to `opus_first_author_details_text`)

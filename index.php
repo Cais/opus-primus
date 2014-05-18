@@ -4,9 +4,9 @@
  * A WordPress Framework Theme.
  *
  * @package        OpusPrimus
- * @version        1.2.4-alpha
+ * @version        1.2.4-beta
  *
- * @internal       RECOMMENDED HTML5
+ * @internal       RECOMMENDED HTML5 compatible browser for <!DOCTYPE html>
  * @internal       RECOMMENDED CSS3
  * @internal       REQUIRED    WordPress 3.8 for `dashicons` dependency of `Opus-Primus` stylesheet
  *
@@ -47,6 +47,9 @@
  *
  * @version        1.2.3
  * @date           February 2014
+ *
+ * @version        1.2.4
+ * @date           May 2014
  */
 
 global $opus_structures;
