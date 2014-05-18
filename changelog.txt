@@ -16,6 +16,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Refactored conditional comments and featured thumbnail checks into the `comments_link` and `show_featured_thumbnail` methods
 * Removed `extract` function call and escaped attributes in PullQuotes Stanza
 * Use `opus_primus_theme_version` in place of `wp_get_theme` calls
+* Use transients to improve performance impact of the `OpusPrimusStructures::copyright` method
 
 = CSS =
 * Added Format-Aside Dashicons to Post-Format: Aside posts
@@ -24,7 +25,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Miscellaneous =
 * Added filter `opus_primus_theme_version_text`
-* Change textdomain to match theme slug
+* Change text domain to match theme slug
 * Updated `hooks-actions.txt`
 * Updated `hooks-filters.txt` (corrected reference to `opus_first_author_details_text`)
 * Updated Opus Primus PullQuotes `readme.txt`

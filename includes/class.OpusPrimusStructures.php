@@ -309,15 +309,22 @@ class OpusPrimusStructures {
 	 * @uses     esc_attr
 	 * @uses     get_bloginfo
 	 * @uses     get_posts
+	 * @uses	get_transient
 	 * @uses     home_url
 	 * @uses     post_date_gmt
+	 * @uses	set_transient
 	 *
 	 * @param   bool $show
 	 * @param   bool $by_author
+	 * @param    int $transient_refresh
 	 *
 	 * @return  mixed|null|void
+	 *
+	 * @version	1.2.4
+	 * @date	May 18, 2014
+	 * Used transients to improve performance impact of the method
 	 */
-	function copyright( $show = true, $by_author = true ) {
+	function copyright( $show = true, $by_author = true, $transient_refresh = 2592000 ) {
 		if ( false == $show ) {
 			return null;
 		}
@@ -326,12 +333,20 @@ class OpusPrimusStructures {
 		/** @var $output - initialize output variable to empty */
 		$output = '';
 
-		/** @var $all_posts - retrieve all published posts in ascending order */
-		$all_posts = get_posts( 'post_status=publish&order=ASC' );
-		/** @var $first_post - get the first post */
-		$first_post = $all_posts[0];
+		/** Take some of the load off with a transient of the first post */
+		if ( ! get_transient( 'opus_primus_copyright_first_post' ) ) {
+
+			/** @var $all_posts - retrieve all published posts in ascending order */
+			$all_posts = get_posts( 'post_status=publish&order=ASC' );
+			/** @var $first_post - get the first post */
+			$first_post = $all_posts[0];
+
+			/** Set the transient (default: one month) */
+			set_transient( 'opus_primus_copyright_first_post', $first_post, $transient_refresh );
+		}
+
 		/** @var $first_post_date - get the date in a standardized format */
-		$first_post_date = $first_post->post_date_gmt;
+		$first_post_date = get_transient( 'opus_primus_copyright_first_post' )->post_date_gmt;
 
 		/** First post year versus current year */
 		$first_post_year = substr( $first_post_date, 0, 4 );
