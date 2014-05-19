@@ -1,9 +1,9 @@
 === Opus Primus changelog.txt ===
-Last revised May 18, 2014
+Last revised May 19, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.4 ==
-* Released ...
+* Released May 2014
 
 = Code =
 * Added sanity check to only display comments_link when not in single view or in an archive view
@@ -23,6 +23,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added Flag Dashicons to Sticky Posts
 * Changed Password Protected Dashicons to use the Lock
 * Separated the Tagline output class into two different classes
+* Updated normalize.css to 3.0.1 (copy and pasted from git.io/normalize)
 
 = Miscellaneous =
 * Added filter `opus_primus_theme_version_text`
