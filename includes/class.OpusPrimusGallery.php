@@ -356,13 +356,13 @@ class OpusPrimusGallery {
 	 * Moved `secondary_images` wrapper into method
 	 */
 	function secondary_images( $secondary_images_args = '' ) {
-		global $opus_thumb_id;
+		global $opus_thumb_id, $opus_defaults;
 
 		/** Set defaults */
 		$defaults              = array(
 			'order'   => 'ASC',
 			'orderby' => 'menu_order ID',
-			'images'  => 3,
+			'images'  => $opus_defaults->number_of_secondary_images(),
 		);
 		$secondary_images_args = wp_parse_args( (array) $secondary_images_args, $defaults );
 

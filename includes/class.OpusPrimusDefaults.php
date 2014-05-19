@@ -43,6 +43,10 @@
  * @date           January 12, 2014
  * Set `display_page_byline` to true as theme author aesthetic choice
  * Renamed methods from `show_*` to `display_*`
+ *
+ * @version	1.2.4
+ * @date	May 19, 2014
+ * Added `number_of_secondary_images` method under Gallery parameters
  */
 
 if ( ! class_exists( 'OpusPrimusDefaults' ) ) {
@@ -84,6 +88,11 @@ if ( ! class_exists( 'OpusPrimusDefaults' ) ) {
 
 		function display_mod_author() {
 			return true;
+		}
+
+		/** Gallery parameters */
+		function number_of_secondary_images() {
+			return 3;
 		}
 
 	}
