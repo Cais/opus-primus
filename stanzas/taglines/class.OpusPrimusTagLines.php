@@ -195,6 +195,10 @@ class OpusPrimusTagLines {
 	 * @uses    (GLOBAL) $post - ID, post_type
 	 * @uses             apply_filters
 	 * @uses             get_post_meta
+	 *
+	 * @version          1.2.4
+	 * @date             May 19, 2014
+	 * Separated the output class into two different classes
 	 */
 	function tagline_output() {
 		/** Since we are not inside the loop grab the global post object */
@@ -203,7 +207,7 @@ class OpusPrimusTagLines {
 
 		/** Make sure there is a tagline before sending anything to the screen */
 		if ( ! empty( $tagline ) ) {
-			echo '<div class="opus-primus-' . $post->post_type . '-tagline">' . $tagline . '</div>';
+			echo '<div class="opus-primus-tagline"><span class="' . $post->post_type . '-tagline">' . $tagline . '</span></div>';
 		}
 		/** End if - not empty */
 

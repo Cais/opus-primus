@@ -29,10 +29,13 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version	1.2.4
+ * @date	May 19, 2014
+ * Adjusted CSS to match new output classes
  */
 
-.opus-primus-post-tagline,
-.opus-primus-page-tagline {
+.opus-primus-tagline {
 	font-size: 14px;
 	font-variant: small-caps;
 	margin-left: 9px;

@@ -22,6 +22,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added Format-Aside Dashicons to Post-Format: Aside posts
 * Added Flag Dashicons to Sticky Posts
 * Changed Password Protected Dashicons to use the Lock
+* Separated the Tagline output class into two different classes
 
 = Miscellaneous =
 * Added filter `opus_primus_theme_version_text`
