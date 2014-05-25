@@ -37,6 +37,11 @@
  * @version     1.2
  * @date        March 25, 2012
  * Added block termination comments
+ *
+ * @version     1.2.4
+ * @date        May 25, 2014
+ * Use `opus_primus_theme_version` in place of `wp_get_theme` call
+ * Removed `extract` function, escaped attributes, and refactored conditional checks
  */
 class OpusPrimusPullQuotes {
 
