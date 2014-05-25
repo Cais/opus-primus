@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised May 19, 2014
+Last revised May 25, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.4 ==
@@ -15,7 +15,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Corrected typo in `'opus_links_pages_after'` hook
 * Corrected modified date/time output to account for scheduled posts being modified earlier than they are posted
 * Refactored conditional comments and featured thumbnail checks into the `comments_link` and `show_featured_thumbnail` methods
-* Removed `extract` function call and escaped attributes in PullQuotes Stanza
+* Removed `extract` function, escaped attributes, and refactored conditional checks in PullQuotes Stanza
 * Use `opus_primus_theme_version` in place of `wp_get_theme` calls
 * Use transients to improve performance impact of the `OpusPrimusStructures::copyright` method
 

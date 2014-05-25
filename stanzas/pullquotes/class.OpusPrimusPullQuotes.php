@@ -113,8 +113,8 @@ class OpusPrimusPullQuotes {
 	 * Added `to` attribute to allow for left-side or right-side (default) pull quote placements
 	 *
 	 * @version    1.2.4
-	 * @date       May 17, 2014
-	 * Removed `extract` function call and escaped attributes
+	 * @date       May 25, 2014
+	 * Removed `extract` function, escaped attributes, and refactored conditional checks
 	 */
 	function pull_quotes_shortcode( $atts, $content = null ) {
 
@@ -133,36 +133,28 @@ class OpusPrimusPullQuotes {
 			$atts
 		);
 
-		/** @var string $to - sanitized (not really needed) placement string */
-		$to = esc_html( $atts['to'] );
-		/** @var string $by - sanitized for HTML inclusion */
-		$by = esc_html( $atts['by'] );
-		/** @var string $from - sanitized for HTML inclusion */
-		$from = esc_html( $atts['from'] );
-
-		if ( ! empty( $by ) ) {
-			$content .= '<br />' . '<cite>' . $by . '</cite>';
-		}
-		/** End if - not empty - by */
-
-		if ( ! empty( $from ) ) {
-			$content .= '<br />' . '<cite>' . $from . '</cite>';
-		}
-		/** End if - not empty - from */
-
-		if ( ! empty( $to ) && ( 'left' == $to ) ) {
-			$content = '<span class="pql">' . $content . "</span>";
+		/** Sanity check - ensure "to" is set */
+		if ( isset( $atts['to'] ) && ( 'left' == strtolower( $atts['to'] ) ) ) {
+			$content = '<span class="pql">' . $content . '</span>';
 		} else {
-			$content = '<span class="pq">' . $content . "</span>";
+			$content = '<span class="pq">' . $content . '</span>';
 		}
+		/** End if - isset "to" and set to left */
 
-		/** End if - not empty - to left|right(default) */
+		if ( isset( $atts['by'] ) ) {
+			$content .= '<br />' . '<cite>' . esc_html( $atts['by'] ) . '</cite>';
+		}
+		/** End if - isset "by" */
+
+		if ( isset( $atts['from'] ) ) {
+			$content .= '<br />' . '<cite>' . esc_html( $atts['from'] ) . '</cite>';
+		}
+		/** End if - isset "from" */
 
 		return $content;
 
 	}
 	/** End function - pull quotes shortcode */
-
 
 }
 
