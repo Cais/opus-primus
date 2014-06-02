@@ -55,6 +55,10 @@ define( 'OPUS_STANZAS', get_template_directory() . '/stanzas/' );
 define( 'OPUS_STANZAS_URI', get_template_directory_uri() . '/stanzas/' );
 define( 'OPUS_COMPAT', get_template_directory_uri() . '/compatibility/' );
 
+/** Set Customization path and URL CONSTANTS */
+define( 'OPUS_CUSTOM_PATH', WP_CONTENT_DIR . '/opus-primus-customs/' );
+define( 'OPUS_CUSTOM_URL', content_url( '/opus-primus-customs/' ) );
+
 /** For Testing Purposes */
 define( 'OPUS_WIP', get_template_directory() . '/works-in-progress/' );
 
@@ -186,6 +190,8 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 			wp_enqueue_style( 'Opus-Primus-Custom-Style', OPUS_CSS . 'opus-primus-custom-style.css', array(), opus_primus_theme_version(), 'screen' );
 		}
 		/** End if - is readable */
+
+		/** @todo - read custom styles/scripts from a more update safe location */
 
 	}
 	/** End function - opus primus enqueue scripts */
