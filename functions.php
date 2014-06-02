@@ -31,10 +31,6 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version     1.1.1
- * @date        March 23, 2013
- * Set $content_width to 1000 (matches 'Full Size Video' maximum width)
- *
  * @version     1.2
  * @date        July 19, 2013
  * Removed 'style.less' related function and action calls
@@ -43,6 +39,10 @@
  * @version     1.2.4
  * @date        April 7, 2014
  * Added `opus_primus_theme_version` function
+ *
+ * @version	1.2.5
+ * @date	June 2, 2014
+ * Set Customization path and URL CONSTANTS
  */
 
 
@@ -186,12 +186,18 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 		wp_enqueue_style( 'Opus-Primus-Media-Queries', OPUS_CSS . 'opus-primus-media-queries.css', array(), opus_primus_theme_version(), 'screen' );
 
 		/** Enqueue custom stylesheet after to maintain expected specificity */
+		/** @todo - verify this conditional statement is correct and/or remove it */
 		if ( is_readable( OPUS_CSS . 'opus-primus-custom-style.css' ) ) {
 			wp_enqueue_style( 'Opus-Primus-Custom-Style', OPUS_CSS . 'opus-primus-custom-style.css', array(), opus_primus_theme_version(), 'screen' );
 		}
 		/** End if - is readable */
 
 		/** @todo - read custom styles/scripts from a more update safe location */
+		/** Enqueue custom stylesheet after to maintain expected specificity */
+		if ( is_readable( OPUS_CUSTOM_PATH . 'opus-primus-custom-style.css' ) ) {
+			wp_enqueue_style( 'Opus-Primus-Custom-Style', OPUS_CUSTOM_URL . 'opus-primus-custom-style.css', array(), opus_primus_theme_version(), 'screen' );
+		}
+		/** End if - is readable */
 
 	}
 	/** End function - opus primus enqueue scripts */

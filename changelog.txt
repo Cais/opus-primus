@@ -7,6 +7,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Code =
 * Set Customization path and URL CONSTANTS
+* Enqueue custom stylesheets in a more upgrade safe location `/wp-content/opus-primus-customs/`
 
 == Version 1.2.4 ==
 * Released May 2014
