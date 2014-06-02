@@ -193,7 +193,7 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 		/** End if - is readable */
 
 		/** @todo - read custom styles/scripts from a more update safe location */
-		/** Enqueue custom stylesheet after to maintain expected specificity */
+		/** Enqueue custom stylesheet in a more update safe location */
 		if ( is_readable( OPUS_CUSTOM_PATH . 'opus-primus-custom-style.css' ) ) {
 			wp_enqueue_style( 'Opus-Primus-Custom-Style', OPUS_CUSTOM_URL . 'opus-primus-custom-style.css', array(), opus_primus_theme_version(), 'screen' );
 		}
