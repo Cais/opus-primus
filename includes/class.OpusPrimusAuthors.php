@@ -209,6 +209,7 @@ class OpusPrimusAuthors {
 	 * @param   $show_author_desc  boolean - default: true
 	 *
 	 * @uses    OpusPrimusAuthors::get_author_description
+	 * @uses	antispambot
 	 * @uses    get_avatar
 	 * @uses    get_the_author_meta
 	 * @uses    home_url
@@ -217,12 +218,16 @@ class OpusPrimusAuthors {
 	 * @version 1.1
 	 * @date    March 7, 2013
 	 * Added classes to `h2`, `ul`, and `li` elements
+	 *
+	 * @version	1.2.5
+	 * @date	June 5, 2014
+	 * Added `antispambot` email protection
 	 */
 	function author_details( $author_id, $show_author_url, $show_author_email, $show_author_desc ) {
 		/** Collect details from the author's profile */
 		$author_display_name = get_the_author_meta( 'display_name', $author_id );
 		$author_url          = get_the_author_meta( 'user_url', $author_id );
-		$author_email        = get_the_author_meta( 'user_email', $author_id );
+		$author_email        = antispambot( get_the_author_meta( 'user_email', $author_id ) );
 		$author_desc         = $this->get_author_description( $author_id );
 
 		/** Add empty hook before author details */

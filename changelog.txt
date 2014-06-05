@@ -1,11 +1,12 @@
 === Opus Primus changelog.txt ===
-Last revised May 25, 2014
+Last revised June 5, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.5 ==
 * Released ...
 
 = Code =
+* Added `antispambot` email protection
 * Set Customization path and URL CONSTANTS
 * Enqueue custom stylesheets in a more upgrade safe location `/wp-content/opus-primus-customs/`
 
