@@ -979,10 +979,12 @@ class OpusPrimusImages {
 			/** Sanity check - are we in the right view to show the image? */
 			if ( ! is_single() && is_archive() ) {
 				$this->featured_thumbnail( $size = 'thumbnail', $class = 'alignright' );
-			} else if ( ! is_single() ) {
-				$this->featured_thumbnail();
 			} else {
-				$this->featured_thumbnail( $size = 'full', $class = 'aligncenter' );
+				if ( ! is_single() ) {
+					$this->featured_thumbnail();
+				} else {
+					$this->featured_thumbnail( $size = 'full', $class = 'aligncenter' );
+				}
 			}
 			/** End if - not is single and is archive */
 

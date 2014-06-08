@@ -44,8 +44,8 @@
  * Set `display_page_byline` to true as theme author aesthetic choice
  * Renamed methods from `show_*` to `display_*`
  *
- * @version	1.2.4
- * @date	May 19, 2014
+ * @version        1.2.4
+ * @date           May 19, 2014
  * Added `number_of_secondary_images` method under Gallery parameters
  */
 

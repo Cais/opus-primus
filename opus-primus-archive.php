@@ -38,8 +38,8 @@
  * @date        December 30, 2013
  * Added Featured Image thumbnail to standard post-format archive views
  *
- * @version	1.2.4
- * @date	May 11, 2014
+ * @version     1.2.4
+ * @date        May 11, 2014
  * Use `show_featured_thumbnail` method
  */
 

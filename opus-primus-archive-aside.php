@@ -33,8 +33,8 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version	1.2.4
- * @date	May 11, 2014
+ * @version     1.2.4
+ * @date        May 11, 2014
  * Added `show_featured_thumbnail` method (set to false)
  */
 

@@ -200,27 +200,27 @@ class OpusPrimusAuthors {
 	 * details to be used when outputting author information, by default,
 	 * at the end of the post or page single view.
 	 *
-	 * @package OpusPrimus
-	 * @since   0.1
+	 * @package    OpusPrimus
+	 * @since      0.1
 	 *
 	 * @param   $author_id         - from OpusPrimusAuthors::post_author
 	 * @param   $show_author_url   boolean - default: true
 	 * @param   $show_author_email boolean - default: true
 	 * @param   $show_author_desc  boolean - default: true
 	 *
-	 * @uses    OpusPrimusAuthors::get_author_description
-	 * @uses	antispambot
-	 * @uses    get_avatar
-	 * @uses    get_the_author_meta
-	 * @uses    home_url
-	 * @uses    user_can
+	 * @uses       OpusPrimusAuthors::get_author_description
+	 * @uses       antispambot
+	 * @uses       get_avatar
+	 * @uses       get_the_author_meta
+	 * @uses       home_url
+	 * @uses       user_can
 	 *
-	 * @version 1.1
-	 * @date    March 7, 2013
+	 * @version    1.1
+	 * @date       March 7, 2013
 	 * Added classes to `h2`, `ul`, and `li` elements
 	 *
-	 * @version	1.2.5
-	 * @date	June 5, 2014
+	 * @version    1.2.5
+	 * @date       June 5, 2014
 	 * Added `antispambot` email protection
 	 */
 	function author_details( $author_id, $show_author_url, $show_author_email, $show_author_desc ) {

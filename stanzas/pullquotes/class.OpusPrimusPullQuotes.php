@@ -154,6 +154,7 @@ class OpusPrimusPullQuotes {
 		if ( isset( $atts['from'] ) ) {
 			$content .= '<br />' . '<cite>' . esc_html( $atts['from'] ) . '</cite>';
 		}
+
 		/** End if - isset "from" */
 
 		return $content;

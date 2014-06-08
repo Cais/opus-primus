@@ -40,8 +40,8 @@
  * @date        April 7, 2014
  * Added `opus_primus_theme_version` function
  *
- * @version	1.2.5
- * @date	June 2, 2014
+ * @version     1.2.5
+ * @date        June 2, 2014
  * Set Customization path and URL CONSTANTS
  */
 
