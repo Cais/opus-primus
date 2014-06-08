@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/opus-primus-media-queries.css" afterPath="$PROJECT_DIR$/css/opus-primus-media-queries.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="opus-primus.iws" />
@@ -41,7 +40,7 @@
       <file leaf-file-name="opus-primus-media-queries.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/opus-primus-media-queries.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="192" column="1" selection-start="5274" selection-end="5274" vertical-scroll-proportion="0.95555556" vertical-offset="2235" max-vertical-offset="2970">
+            <state line="192" column="1" selection-start="5274" selection-end="5274" vertical-scroll-proportion="0.8666667" vertical-offset="2295" max-vertical-offset="2970">
               <folding />
             </state>
           </provider>
@@ -2144,7 +2143,11 @@
       <created>1402270145693</created>
       <updated>1402270145693</updated>
     </task>
-    <option name="localTasksCounter" value="455" />
+    <task id="LOCAL-00455" summary="- aesthetic commentary">
+      <created>1402270482539</created>
+      <updated>1402270482539</updated>
+    </task>
+    <option name="localTasksCounter" value="456" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -2247,7 +2250,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="- added featured image thumbnail to Aside post-format" />
     <MESSAGE value="- added featured image thumbnail to Audio post-format" />
     <MESSAGE value="- added featured image thumbnail to Chat post-format" />
     <MESSAGE value="- added featured image thumbnail to Link post-format" />
@@ -2272,7 +2274,8 @@
     <MESSAGE value="* Added `antispambot` email protection" />
     <MESSAGE value="- code formatting" />
     <MESSAGE value="- corrections" />
-    <option name="LAST_COMMIT_MESSAGE" value="- corrections" />
+    <MESSAGE value="- aesthetic commentary" />
+    <option name="LAST_COMMIT_MESSAGE" value="- aesthetic commentary" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -2551,7 +2554,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/opus-primus-media-queries.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="1" selection-start="5274" selection-end="5274" vertical-scroll-proportion="0.95555556" vertical-offset="2235" max-vertical-offset="2970">
+        <state line="192" column="1" selection-start="5274" selection-end="5274" vertical-scroll-proportion="0.8666667" vertical-offset="2295" max-vertical-offset="2970">
           <folding />
         </state>
       </provider>
