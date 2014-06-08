@@ -32,133 +32,126 @@
  * @version 1.2
  * @date    March 25, 2013
  * Sorted out the adaptive layout for screens less than 480px wide
+ *
+ * @version	1.2.5
+ * @date	June 8, 2014
+ * Complete refactoring of the styles for better responsiveness
  */
 
 /** ------------------------------------------------------------------------- */
 
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	/* Styles */
+	/* Copy @media only screen and (min-width : 321px) */
+	body {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	.right-sidebar .the-loop,
+	.right-sidebar .first-sidebar,
+	.blog-style .the-loop,
+	.blog-style .first-sidebar,
+	.blog-style .second-sidebar {
+		width: 96%;
+	}
+
+	.blog-style .first-sidebar,
+	.blog-style .second-sidebar {
+		left: 52%;
+	}
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+	/* Styles */
+	body {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	.right-sidebar .the-loop,
+	.right-sidebar .first-sidebar,
+	.blog-style .the-loop,
+	.blog-style .first-sidebar,
+	.blog-style .second-sidebar {
+		width: 96%;
+	}
+
+	.blog-style .first-sidebar,
+	.blog-style .second-sidebar {
+		left: 52%;
+	}
+
+}
+
 /* Smartphones (portrait) ----------- */
-@media only screen
-and ( max-width: 478px ) {
+@media only screen and (max-width: 320px) {
 	/* Styles */
-	.two-column .the-loop,
-	.three-column .the-loop {
-		width: 98%;
+	/* Copy @media only screen and (min-width : 321px) */
+	body {
+		padding-left: 5px;
+		padding-right: 5px;
 	}
 
-	.two-column .first-sidebar,
-	.three-column .first-sidebar,
-	.two-column .second-sidebar,
-	.three-column .second-sidebar {
-		width: 98%;
-	}
-
-	.three-column .blog-style .first-sidebar,
-	.three-column .blog-style .second-sidebar {
-		left: 53%;
-	}
-
-	/* More */
-	#opus-primus {
-		padding: 0 5px;
-	}
-
-}
-
-/** iPads (portrait and landscape) */
-@media only screen
-and (min-device-width: 768px)
-and (max-device-width: 1024px) {
-	/* Styles */
-}
-
-/** iPads (landscape) */
-@media only screen
-and (min-device-width: 768px)
-and (max-device-width: 1024px)
-and (orientation: landscape) {
-	/* Styles */
-}
-
-/** iPads (portrait) */
-@media only screen
-and (min-device-width: 768px)
-and (max-device-width: 1024px)
-and (orientation: portrait) {
-	/** Layout */
-	.two-column .the-loop,
-	.three-column .the-loop {
-		width: 98%;
+	.right-sidebar .the-loop,
+	.right-sidebar .first-sidebar,
+	.blog-style .the-loop,
+	.blog-style .first-sidebar,
+	.blog-style .second-sidebar {
+		width: 96%;
 	}
 
 	.blog-style .first-sidebar,
 	.blog-style .second-sidebar {
-		left: 53%;
-		width: 360px;
+		left: 52%;
 	}
 
 }
 
-/** Small Desktop / Laptop Screen */
-@media screen
-and ( min-width: 481px )
-and ( max-width: 1023px ) {
-	/** Layout */
-	.two-column .the-loop,
-	.three-column .the-loop {
-		width: 98%;
-	}
-
-	.two-column .first-sidebar,
-	.three-column .first-sidebar,
-	.two-column .second-sidebar,
-	.three-column .second-sidebar {
-		width: 360px;
-	}
-
-	.blog-style .first-sidebar,
-	.blog-style .second-sidebar {
-		left: 53%;
-	}
-
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	/* Styles */
 }
 
-@media screen
-and ( min-width: 769px )
-and ( max-width: 1023px ) {
-	/** Layout */
-	.blog-style .second-sidebar {
-		left: 56%;
-	}
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+	/* Styles */
 }
 
-/** Width from 768px to 1023px */
-@media screen
-and ( min-width: 768px )
-and ( max-width: 1023px ) {
-	/** Viewport not at full screen */
-	.three-column .gallery-secondary-images a img {
-		max-width: 125px;
-	}
-
-	/** More */
-	#opus-primus {
-		padding: 0 5px;
-	}
-
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+	/* Styles */
 }
 
-/** Width from 1024px to 1280px */
-@media screen
-and ( min-width: 1024px )
-and ( max-width: 1280px ) {
-	.three-column .gallery-secondary-images a img {
-		max-width: 125px;
-	}
-
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+	/* Styles */
 }
 
-/** Width from 1281px to ... */
-@media screen
-and ( min-width: 1281px ) {
-	/** Wide Screens */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+	/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width: 1224px) {
+	/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width: 1824px) {
+	/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+	/* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+	/* Styles */
 }
