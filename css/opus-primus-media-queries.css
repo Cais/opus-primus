@@ -52,6 +52,7 @@
 
 	.right-sidebar .the-loop,
 	.right-sidebar .first-sidebar,
+	.right-sidebar .second-sidebar,
 	.blog-style .the-loop,
 	.blog-style .first-sidebar,
 	.blog-style .second-sidebar {
@@ -75,6 +76,7 @@
 
 	.right-sidebar .the-loop,
 	.right-sidebar .first-sidebar,
+	.right-sidebar .second-sidebar,
 	.blog-style .the-loop,
 	.blog-style .first-sidebar,
 	.blog-style .second-sidebar {
@@ -99,6 +101,7 @@
 
 	.right-sidebar .the-loop,
 	.right-sidebar .first-sidebar,
+	.right-sidebar .second-sidebar,
 	.blog-style .the-loop,
 	.blog-style .first-sidebar,
 	.blog-style .second-sidebar {
@@ -123,6 +126,7 @@
 
 	.right-sidebar .the-loop,
 	.right-sidebar .first-sidebar,
+	.right-sidebar .second-sidebar,
 	.blog-style .the-loop,
 	.blog-style .first-sidebar,
 	.blog-style .second-sidebar {
@@ -146,6 +150,7 @@
 
 	.right-sidebar .the-loop,
 	.right-sidebar .first-sidebar,
+	.right-sidebar .second-sidebar,
 	.blog-style .the-loop,
 	.blog-style .first-sidebar,
 	.blog-style .second-sidebar {
@@ -186,6 +191,29 @@
 /** Desktops and laptops ---------------------------------------------------- */
 @media only screen  and (min-width: 1224px) {
 	/* Styles */
+	.right-sidebar .the-loop {
+		width: 71%;
+	}
+
+	.blog-style .the-loop {
+		width: 46%;
+	}
+
+	.right-sidebar .first-sidebar,
+	.right-sidebar .second-sidebar {
+		width: 21%;
+	}
+
+	.blog-style .first-sidebar {
+		width: 21%;
+		left: 56%;
+	}
+
+	.blog-style .second-sidebar {
+		width: 21%;
+		left: 60%;
+	}
+
 }
 
 /** Large screens ----------------------------------------------------------- */
