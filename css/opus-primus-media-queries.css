@@ -45,6 +45,7 @@
 	/* Styles */
 	/* Copy @media only screen and (min-width : 321px) */
 	body {
+		max-width: 480px;
 		padding-left: 5px;
 		padding-right: 5px;
 	}
@@ -90,8 +91,8 @@
 /** Smartphones (portrait) -------------------------------------------------- */
 @media only screen and (max-width: 320px) {
 	/* Styles */
-	/* Copy @media only screen and (min-width : 321px) */
 	body {
+		max-width: 320px;
 		padding-left: 5px;
 		padding-right: 5px;
 	}
@@ -114,8 +115,8 @@
 /** iPhone 4 ---------------------------------------------------------------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
 	/* Styles */
-	/* Copy @media only screen and (min-width : 321px) */
 	body {
+		max-width: 480px;
 		padding-left: 5px;
 		padding-right: 5px;
 	}
@@ -137,8 +138,8 @@
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 	/* Styles */
-	/* Copy @media only screen and (min-width : 321px) */
 	body {
+		max-width: 320px;
 		padding-left: 5px;
 		padding-right: 5px;
 	}
