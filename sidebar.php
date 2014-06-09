@@ -30,17 +30,31 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
+ * @package     Opus_Primus
+ * @since       0.1
+ *
+ * @uses        do_action
+ * @uses        dynamic_sidebar
+ * @uses        is_active_sidebar
+ *
  * @version     1.0.1
  * @date        February 21, 2013
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
+ *
+ * @version     1.2.5
+ * @date        June 8, 2014
+ * Added sanity checks to ensure widgets are active before rendering sidebars
  */
 
 /** Add empty hook before sidebars */
 do_action( 'opus_sidebars_before' );
 
-/** Add empty hook before first sidebar */
-do_action( 'opus_first_sidebar_before' ); ?>
+/** Sanity check - do we have any active widgets in "Sidebar Area One" */
+if ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) ) {
+
+	/** Add empty hook before first sidebar */
+	do_action( 'opus_first_sidebar_before' ); ?>
 
 	<div class="first-sidebar">
 
@@ -60,12 +74,18 @@ do_action( 'opus_first_sidebar_before' ); ?>
 
 	</div><!-- #first-sidebar -->
 
-<?php
-/** Add empty hook after first sidebar */
-do_action( 'opus_first_sidebar_after' );
+	<?php
+	/** Add empty hook after first sidebar */
+	do_action( 'opus_first_sidebar_after' );
 
-/** Add empty hook before second sidebar */
-do_action( 'opus_second_sidebar_before' ); ?>
+}
+/** End if - active check in Sidebar Area One */
+
+/** Sanity check - do we have any active widgets in "Sidebar Area Two" */
+if ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) {
+
+	/** Add empty hook before second sidebar */
+	do_action( 'opus_second_sidebar_before' ); ?>
 
 	<div class="second-sidebar">
 
@@ -85,9 +105,12 @@ do_action( 'opus_second_sidebar_before' ); ?>
 
 	</div><!-- #second-sidebar -->
 
-<?php
-/** Add empty hook after second sidebar */
-do_action( 'opus_second_sidebar_after' );
+	<?php
+	/** Add empty hook after second sidebar */
+	do_action( 'opus_second_sidebar_after' );
+
+}
+/** End if - active check in Sidebar Area Two */
 
 /** Add empty hook after sidebars */
 do_action( 'opus_sidebars_after' );
