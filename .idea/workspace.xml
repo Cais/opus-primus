@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sidebar.php" afterPath="$PROJECT_DIR$/sidebar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/opus-primus.css" afterPath="$PROJECT_DIR$/css/opus-primus.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="opus-primus.iws" />
@@ -30,19 +30,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="sidebar.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sidebar.php">
+      <file leaf-file-name="changelog.txt" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/changelog.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="77" selection-start="1509" selection-end="1509" vertical-scroll-proportion="-5.0" vertical-offset="570" max-vertical-offset="1815">
+            <state line="15" column="66" selection-start="576" selection-end="576" vertical-scroll-proportion="0.33333334" vertical-offset="0" max-vertical-offset="4920">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="changelog.txt" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/changelog.txt">
+      <file leaf-file-name="opus-primus.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="173" selection-end="173" vertical-scroll-proportion="0.13333334" vertical-offset="0" max-vertical-offset="4905">
+            <state line="834" column="0" selection-start="14690" selection-end="14690" vertical-scroll-proportion="0.0" vertical-offset="12405" max-vertical-offset="28110">
               <folding />
             </state>
           </provider>
@@ -112,7 +112,6 @@
         <option value="$PROJECT_DIR$/documentation/hooks-filters.txt" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
         <option value="$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php" />
-        <option value="$PROJECT_DIR$/css/opus-primus.css" />
         <option value="$PROJECT_DIR$/stanzas/taglines/opus-primus.taglines.css" />
         <option value="$PROJECT_DIR$/opus-primus-gallery.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" />
@@ -125,6 +124,7 @@
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/css/opus-primus-media-queries.css" />
         <option value="$PROJECT_DIR$/sidebar.php" />
+        <option value="$PROJECT_DIR$/css/opus-primus.css" />
         <option value="$PROJECT_DIR$/changelog.txt" />
       </list>
     </option>
@@ -190,6 +190,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2135,7 +2153,11 @@
       <created>1402274396602</created>
       <updated>1402274396602</updated>
     </task>
-    <option name="localTasksCounter" value="459" />
+    <task id="LOCAL-00459" summary="* Added sanity checks to ensure widgets are active before rendering sidebars">
+      <created>1402274991580</created>
+      <updated>1402274991580</updated>
+    </task>
+    <option name="localTasksCounter" value="460" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -2187,7 +2209,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3783977" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3783977" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.316156" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2238,7 +2260,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="- added featured image thumbnail to Quote post-format" />
     <MESSAGE value="- added featured image thumbnail to Status post-format" />
     <MESSAGE value="- added featured image thumbnail to Video post-format" />
     <MESSAGE value="- minor code clean up and documentation clarification" />
@@ -2263,7 +2284,8 @@
     <MESSAGE value="* Complete refactoring of the styles for better responsiveness" />
     <MESSAGE value="- added a few more size limits" />
     <MESSAGE value="- additional CSS for responsive missed in the merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="- additional CSS for responsive missed in the merge" />
+    <MESSAGE value="* Added sanity checks to ensure widgets are active before rendering sidebars" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Added sanity checks to ensure widgets are active before rendering sidebars" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -2510,11 +2532,6 @@
         <state line="562" column="80" selection-start="3154" selection-end="12149" vertical-scroll-proportion="0.0" vertical-offset="7843" max-vertical-offset="8520" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="593" column="4" selection-start="11061" selection-end="11061" vertical-scroll-proportion="0.0" vertical-offset="1635" max-vertical-offset="28020" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="705" />
@@ -2534,9 +2551,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="834" column="0" selection-start="14690" selection-end="14690" vertical-scroll-proportion="0.0" vertical-offset="12405" max-vertical-offset="28110">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/changelog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="173" selection-end="173" vertical-scroll-proportion="0.13333334" vertical-offset="0" max-vertical-offset="4905">
+        <state line="15" column="66" selection-start="576" selection-end="576" vertical-scroll-proportion="0.33333334" vertical-offset="0" max-vertical-offset="4920">
           <folding />
         </state>
       </provider>
