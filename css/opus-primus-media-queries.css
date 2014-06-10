@@ -218,6 +218,11 @@
 /** Desktops and laptops ---------------------------------------------------- */
 @media only screen  and (min-width: 1224px) {
 	/* Styles */
+	body {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
 	.right-sidebar .the-loop {
 		width: 71%;
 	}

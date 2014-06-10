@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/opus-primus-media-queries.css" afterPath="$PROJECT_DIR$/css/opus-primus-media-queries.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,19 +29,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="changelog.txt" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="changelog.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/changelog.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="52" selection-start="562" selection-end="562" vertical-scroll-proportion="0.33333334" vertical-offset="0" max-vertical-offset="4935">
+            <state line="15" column="52" selection-start="562" selection-end="562" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4935">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="opus-primus-media-queries.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="opus-primus-media-queries.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/opus-primus-media-queries.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="53" selection-start="1379" selection-end="1379" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="3810">
+            <state line="224" column="4" selection-start="5520" selection-end="5520" vertical-scroll-proportion="0.5777778" vertical-offset="2970" max-vertical-offset="3885">
               <folding />
             </state>
           </provider>
@@ -124,8 +123,8 @@
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/sidebar.php" />
         <option value="$PROJECT_DIR$/css/opus-primus.css" />
-        <option value="$PROJECT_DIR$/css/opus-primus-media-queries.css" />
         <option value="$PROJECT_DIR$/changelog.txt" />
+        <option value="$PROJECT_DIR$/css/opus-primus-media-queries.css" />
       </list>
     </option>
   </component>
@@ -2161,7 +2160,11 @@
       <created>1402276860903</created>
       <updated>1402276860903</updated>
     </task>
-    <option name="localTasksCounter" value="461" />
+    <task id="LOCAL-00461" summary="* Fixed white space on right side of iPhone displays">
+      <created>1402365290633</created>
+      <updated>1402365290633</updated>
+    </task>
+    <option name="localTasksCounter" value="462" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -2211,6 +2214,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32664436" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32681563" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38340485" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
@@ -2221,7 +2225,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31111112" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -2264,7 +2267,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="- added featured image thumbnail to Video post-format" />
     <MESSAGE value="- minor code clean up and documentation clarification" />
     <MESSAGE value="* Removed `extract` function call and escaped attributes in PullQuotes Stanza" />
     <MESSAGE value="* Updated Opus Primus PullQuotes `readme.txt`" />
@@ -2289,7 +2291,8 @@
     <MESSAGE value="- additional CSS for responsive missed in the merge" />
     <MESSAGE value="* Added sanity checks to ensure widgets are active before rendering sidebars" />
     <MESSAGE value="* Monster be gone! - Fixed special case many level menu in sidebar" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Monster be gone! - Fixed special case many level menu in sidebar" />
+    <MESSAGE value="* Fixed white space on right side of iPhone displays" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Fixed white space on right side of iPhone displays" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -2551,16 +2554,16 @@
         <state line="945" column="0" selection-start="16981" selection-end="16981" vertical-scroll-proportion="0.24444444" vertical-offset="14010" max-vertical-offset="28110" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/opus-primus-media-queries.css">
+    <entry file="file://$PROJECT_DIR$/changelog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="53" selection-start="1379" selection-end="1379" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="3810">
+        <state line="15" column="52" selection-start="562" selection-end="562" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4935">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/changelog.txt">
+    <entry file="file://$PROJECT_DIR$/css/opus-primus-media-queries.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="52" selection-start="562" selection-end="562" vertical-scroll-proportion="0.33333334" vertical-offset="0" max-vertical-offset="4935">
+        <state line="224" column="4" selection-start="5520" selection-end="5520" vertical-scroll-proportion="0.5777778" vertical-offset="2970" max-vertical-offset="3885">
           <folding />
         </state>
       </provider>
