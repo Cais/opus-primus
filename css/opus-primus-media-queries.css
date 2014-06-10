@@ -34,8 +34,9 @@
  * Sorted out the adaptive layout for screens less than 480px wide
  *
  * @version	1.2.5
- * @date	June 8, 2014
+ * @date	June 9, 2014
  * Complete refactoring of the styles for better responsiveness
+ * Fixed white space on right side of iPhone displays
  */
 
 /** ------------------------------------------------------------------------- */
@@ -44,8 +45,13 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 	/* Styles */
 	/* Copy @media only screen and (min-width : 321px) */
+	html,
 	body {
-		max-width: 480px;
+		width: 100%;
+		overflow-x: hidden;
+	}
+
+	body {
 		padding-left: 5px;
 		padding-right: 5px;
 	}
@@ -69,6 +75,12 @@
 /** Smartphones (landscape) ------------------------------------------------- */
 @media only screen and (min-width: 321px) {
 	/* Styles */
+	html,
+	body {
+		width: 100%;
+		overflow-x: hidden;
+	}
+
 	body {
 		padding-left: 5px;
 		padding-right: 5px;
@@ -93,8 +105,13 @@
 /** Smartphones (portrait) -------------------------------------------------- */
 @media only screen and (max-width: 320px) {
 	/* Styles */
+	html,
 	body {
-		max-width: 320px;
+		width: 100%;
+		overflow-x: hidden;
+	}
+
+	body {
 		padding-left: 5px;
 		padding-right: 5px;
 	}
@@ -118,8 +135,13 @@
 /** iPhone 4 ---------------------------------------------------------------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
 	/* Styles */
+	html,
 	body {
-		max-width: 480px;
+		width: 100%;
+		overflow-x: hidden;
+	}
+
+	body {
 		padding-left: 5px;
 		padding-right: 5px;
 	}
@@ -142,8 +164,13 @@
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 	/* Styles */
+	html,
 	body {
-		max-width: 320px;
+		width: 100%;
+		overflow-x: hidden;
+	}
+
+	body {
 		padding-left: 5px;
 		padding-right: 5px;
 	}
