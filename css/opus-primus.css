@@ -66,6 +66,10 @@
  * Added "Format-Aside" Dashicons to Post-Format: Aside posts
  * Added "Flag" Dashicons to Sticky Posts
  * Changed Password Protected Dashicons to use the "Lock"
+ *
+ * @version	1.2.5
+ * @date	June 14, 2014
+ * Corrected `select` element to use "max-width" rather than "width"
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -617,7 +621,7 @@ pre code {
 }
 
 select {
-	width: 98%;
+	max-width: 100%;
 }
 
 small {
