@@ -325,6 +325,10 @@ class OpusPrimusStructures {
 	 * @version     1.2.4
 	 * @date        May 18, 2014
 	 * Used transients to improve performance impact of the method
+	 *
+	 * @version	1.2.5
+	 * @date	June 15, 2014
+	 * Use single view published date for first year of copyright
 	 */
 	function copyright( $show = true, $by_author = true, $transient_refresh = 2592000 ) {
 
@@ -358,6 +362,15 @@ class OpusPrimusStructures {
 			$first_post_year = date( 'Y' );
 		}
 		/** End if - first post year */
+
+		/**
+		 * If this is a single view then the copyright year should start at its
+		 * published date rather than the site's first publish date
+		 */
+		if ( ( is_single() || is_page() ) && $by_author ) {
+			global $post;
+			$first_post_year = substr( $post->post_date, 0, 4 );
+		} /** End if - single view display */
 
 		/** Add to output string */
 		if ( $first_post_year == date( 'Y' ) ) {

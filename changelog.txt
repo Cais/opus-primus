@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised June 14, 2014
+Last revised June 15, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.5 ==
@@ -10,6 +10,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added sanity checks to ensure widgets are active before rendering sidebars
 * Set Customization path and URL CONSTANTS
 * Enqueue custom stylesheets in a more upgrade safe location `/wp-content/opus-primus-customs/`
+* Use single view published date for first year of copyright
 
 = CSS =
 * Corrected `select` element to use "max-width" rather than "width"
