@@ -9,7 +9,8 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added `antispambot` email protection
 * Added sanity checks to ensure widgets are active before rendering sidebars
 * Set Customization path and URL CONSTANTS
-* Enqueue custom stylesheets in a more upgrade safe location `/wp-content/opus-primus-customs/`
+* Enqueue custom stylesheet in an update safe location `/wp-content/opus-primus-customs/`
+* Enqueue custom JavaScript in an update safe location `/wp-content/opus-primus-customs/`
 * Use single view published date for first year of copyright
 * Remove conditional customization enqueue using internal theme folder as not working (or update safe)
 

@@ -93,7 +93,7 @@ class OpusPrimusPullQuotes {
 	function scripts_and_styles() {
 		/** Enqueue Scripts */
 		/** Enqueue Opus Primus PullQuotes JavaScripts which will enqueue jQuery as a dependency */
-		wp_enqueue_script( 'opus-primus-pullquote', OPUS_STANZAS_URI . 'pullquotes/opus-primus.pullquote.js', array( 'jquery' ), opus_primus_theme_version(), 'true' );
+		wp_enqueue_script( 'opus-primus-pullquote', OPUS_STANZAS_URI . 'pullquotes/opus-primus.pullquote.js', array( 'jquery' ), opus_primus_theme_version(), true );
 
 		/** Enqueue Styles */
 		/** Enqueue PullQuotes Stanza Stylesheets */

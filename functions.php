@@ -155,15 +155,16 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 	 *
 	 * @version            1.2.5
 	 * @date               June 15, 2014
-	 * Enqueue custom stylesheets in a more upgrade safe location `/wp-content/opus-primus-customs/`
+	 * Enqueue custom stylesheet in an update safe location `/wp-content/opus-primus-customs/`
+	 * Enqueue custom JavaScript in an update safe location `/wp-content/opus-primus-customs/`
 	 * Remove conditional customization enqueue using internal theme folder as not working (or update safe)
 	 */
 	function opus_primus_enqueue_scripts() {
 		/** Enqueue Theme Scripts */
 		/** Enqueue Opus Primus JavaScripts which will enqueue jQuery as a dependency */
-		wp_enqueue_script( 'opus-primus', OPUS_JS . 'opus-primus.js', array( 'jquery' ), opus_primus_theme_version(), 'true' );
+		wp_enqueue_script( 'opus-primus', OPUS_JS . 'opus-primus.js', array( 'jquery' ), opus_primus_theme_version(), true );
 		/** Enqueue Opus Primus Full Size Video which will enqueue jQuery as a dependency */
-		wp_enqueue_script( 'opus-primus-full-size-video', OPUS_JS . 'opus-primus-full-size-video.js', array( 'jquery' ), opus_primus_theme_version(), 'true' );
+		wp_enqueue_script( 'opus-primus-full-size-video', OPUS_JS . 'opus-primus-full-size-video.js', array( 'jquery' ), opus_primus_theme_version(), true );
 		/** Enqueue Opus Primus Comment Tabs which will enqueue jQuery, jQuery UI Core, jQuery UI Widget, and jQuery UI Tabs as dependencies */
 		if ( is_single() ) {
 			wp_enqueue_script(
@@ -172,13 +173,13 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 					'jquery-ui-core',
 					'jquery-ui-widget',
 					'jquery-ui-tabs'
-				), opus_primus_theme_version(), 'true'
+				), opus_primus_theme_version(), true
 			);
 		}
 		/** End if - is single */
 		/** Enqueue Opus Primus Header Image Position (if there is a header image) which will enqueue jQuery as a dependency */
 		if ( get_header_image() ) {
-			wp_enqueue_script( 'opus-primus-header-image-position', OPUS_JS . 'opus-primus-header-image-position.js', array( 'jquery' ), opus_primus_theme_version(), 'true' );
+			wp_enqueue_script( 'opus-primus-header-image-position', OPUS_JS . 'opus-primus-header-image-position.js', array( 'jquery' ), opus_primus_theme_version(), true );
 		}
 		/** End if - get header image */
 
@@ -190,10 +191,18 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 		/** Media Queries and Responsive Elements */
 		wp_enqueue_style( 'Opus-Primus-Media-Queries', OPUS_CSS . 'opus-primus-media-queries.css', array(), opus_primus_theme_version(), 'screen' );
 
-		/** Enqueue custom stylesheet after to maintain expected specificity */
-		/** @todo - read custom styles/scripts from a more update safe location */
+		/**
+		 * Enqueue custom stylesheet after other stylesheets in an update safe
+		 * location to maintain expected specificity
+		 */
 		if ( is_readable( OPUS_CUSTOM_PATH . 'opus-primus-custom-style.css' ) ) {
 			wp_enqueue_style( 'Opus-Primus-Custom-Style', OPUS_CUSTOM_URL . 'opus-primus-custom-style.css', array(), opus_primus_theme_version(), 'screen' );
+		}
+		/** End if - is readable */
+
+		/** Enqueue custom JavaScript in an update safe location */
+		if ( is_readable( OPUS_CUSTOM_PATH . 'opus-primus-custom-script.js' ) ) {
+			wp_enqueue_script( 'opus-primus-custom-script', OPUS_CUSTOM_URL . 'opus-primus-custom-script.js', array( 'jquery' ), opus_primus_theme_version(), true );
 		}
 		/** End if - is readable */
 

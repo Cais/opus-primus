@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stanzas/pullquotes/class.OpusPrimusPullQuotes.php" afterPath="$PROJECT_DIR$/stanzas/pullquotes/class.OpusPrimusPullQuotes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -33,7 +34,7 @@
       <file leaf-file-name="changelog.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/changelog.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4980">
+            <state line="12" column="0" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4995">
               <folding />
             </state>
           </provider>
@@ -42,10 +43,19 @@
       <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="158" column="4" selection-start="5306" selection-end="5306" vertical-scroll-proportion="0.36753446" vertical-offset="2130" max-vertical-offset="5370">
+            <state line="158" column="94" selection-start="5390" selection-end="5390" vertical-scroll-proportion="0.41347626" vertical-offset="2100" max-vertical-offset="5505">
               <folding>
                 <element signature="e#6#1465#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class.OpusPrimusPullQuotes.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stanzas/pullquotes/class.OpusPrimusPullQuotes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="95" column="8" selection-start="2785" selection-end="2785" vertical-scroll-proportion="-12.5" vertical-offset="1125" max-vertical-offset="2640">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -117,7 +127,6 @@
         <option value="$PROJECT_DIR$/opus-primus-gallery.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusDefaults.php" />
-        <option value="$PROJECT_DIR$/stanzas/pullquotes/class.OpusPrimusPullQuotes.php" />
         <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/index.php" />
@@ -128,6 +137,7 @@
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
         <option value="$PROJECT_DIR$/changelog.txt" />
         <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/stanzas/pullquotes/class.OpusPrimusPullQuotes.php" />
       </list>
     </option>
   </component>
@@ -2161,7 +2171,11 @@
       <created>1402853474555</created>
       <updated>1402853474555</updated>
     </task>
-    <option name="localTasksCounter" value="465" />
+    <task id="LOCAL-00465" summary="* Remove conditional customization enqueue using internal theme folder as not working (or update safe)&#10;- inline documentation updates">
+      <created>1402858610152</created>
+      <updated>1402858610152</updated>
+    </task>
+    <option name="localTasksCounter" value="466" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -2214,7 +2228,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286908" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964234" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964234" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2264,7 +2278,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* Use `opus_primus_theme_version` in place of `wp_get_theme` calls" />
     <MESSAGE value="- corrected `opus_primus_theme_version_text` references from `*_plugin_*` references" />
     <MESSAGE value="* Use transients to improve performance impact of the `OpusPrimusStructures::copyright` method" />
     <MESSAGE value="- documentation updates and corrections" />
@@ -2289,7 +2302,8 @@
     <MESSAGE value="- update date reference" />
     <MESSAGE value="* Corrected `select` element to use &quot;max-width&quot; rather than &quot;width&quot;" />
     <MESSAGE value="* Use single view published date for first year of copyright" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Use single view published date for first year of copyright" />
+    <MESSAGE value="* Remove conditional customization enqueue using internal theme folder as not working (or update safe)&#10;- inline documentation updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Remove conditional customization enqueue using internal theme folder as not working (or update safe)&#10;- inline documentation updates" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -2411,11 +2425,6 @@
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusGallery.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="433" column="43" selection-start="13595" selection-end="13595" vertical-scroll-proportion="0.10687023" vertical-offset="6425" max-vertical-offset="7395" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stanzas/pullquotes/class.OpusPrimusPullQuotes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="66" selection-start="1494" selection-end="1494" vertical-scroll-proportion="0.46841294" vertical-offset="326" max-vertical-offset="2625" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.txt">
@@ -2578,14 +2587,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/changelog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4980">
+        <state line="12" column="0" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4995">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stanzas/pullquotes/class.OpusPrimusPullQuotes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="8" selection-start="2785" selection-end="2785" vertical-scroll-proportion="-12.5" vertical-offset="1125" max-vertical-offset="2640">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="158" column="4" selection-start="5306" selection-end="5306" vertical-scroll-proportion="0.36753446" vertical-offset="2130" max-vertical-offset="5370">
+        <state line="158" column="94" selection-start="5390" selection-end="5390" vertical-scroll-proportion="0.41347626" vertical-offset="2100" max-vertical-offset="5505">
           <folding>
             <element signature="e#6#1465#0" expanded="true" />
           </folding>
