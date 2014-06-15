@@ -114,7 +114,7 @@ function opus_primus_theme_version() {
 
 }
 
-/** End function - plugin version */
+/** End function - theme version */
 
 
 if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
@@ -152,6 +152,11 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 	 * @version            1.2.4
 	 * @date               April 7, 2014
 	 * Replaced `wp_get_theme()->get( 'Version' )` version call with `opus_primus_theme_version` call as a more unique and informative value
+	 *
+	 * @version            1.2.5
+	 * @date               June 15, 2014
+	 * Enqueue custom stylesheets in a more upgrade safe location `/wp-content/opus-primus-customs/`
+	 * Remove conditional customization enqueue using internal theme folder as not working (or update safe)
 	 */
 	function opus_primus_enqueue_scripts() {
 		/** Enqueue Theme Scripts */
@@ -186,14 +191,7 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 		wp_enqueue_style( 'Opus-Primus-Media-Queries', OPUS_CSS . 'opus-primus-media-queries.css', array(), opus_primus_theme_version(), 'screen' );
 
 		/** Enqueue custom stylesheet after to maintain expected specificity */
-		/** @todo - verify this conditional statement is correct and/or remove it */
-		if ( is_readable( OPUS_CSS . 'opus-primus-custom-style.css' ) ) {
-			wp_enqueue_style( 'Opus-Primus-Custom-Style', OPUS_CSS . 'opus-primus-custom-style.css', array(), opus_primus_theme_version(), 'screen' );
-		}
-		/** End if - is readable */
-
 		/** @todo - read custom styles/scripts from a more update safe location */
-		/** Enqueue custom stylesheet in a more update safe location */
 		if ( is_readable( OPUS_CUSTOM_PATH . 'opus-primus-custom-style.css' ) ) {
 			wp_enqueue_style( 'Opus-Primus-Custom-Style', OPUS_CUSTOM_URL . 'opus-primus-custom-style.css', array(), opus_primus_theme_version(), 'screen' );
 		}
