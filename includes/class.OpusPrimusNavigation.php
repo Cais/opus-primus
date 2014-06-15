@@ -38,6 +38,10 @@
  * Re-order methods: alphabetical
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
+ *
+ * @version	1.2.5
+ * @date	June 15, 2014
+ * Added new method `pagination` for moving between pages of posts
  */
 class OpusPrimusNavigation {
 	/** Construct */
@@ -240,6 +244,72 @@ class OpusPrimusNavigation {
 	}
 
 	/** End function - posts link */
+
+
+	/**
+	 * Pagination
+	 * Creates a pagination structure to navigate between site pages.
+	 *
+	 * @package          Opus_Primus
+	 * @since            1.2.5
+	 *
+	 * @internal         Inspired by the Remi Corson post
+	 * @link             http://www.remicorson.com/create-a-custom-wordpress-pagination-in-less-than-10-lines-of-code/
+	 *
+	 * @internal         Output is wrapped in `ul.page-numbers`
+	 *
+	 * @uses    (global) $wp_query
+	 * @uses             get_option
+	 * @uses             get_pagenum_link
+	 * @uses             get_query_var
+	 *
+	 * @return mixed|void
+	 */
+	function pagination() {
+
+		/** @var string $pagination - initialize results variable */
+		$pagination = '';
+
+		/** get the current query object */
+		global $wp_query;
+
+		/** @var int $total - get the total number of pages */
+		$total = $wp_query->max_num_pages;
+
+		/** Sanity check: is there more than one page? */
+		if ( $total > 1 ) {
+
+			/** Get the current page */
+			if ( ! $current_page = get_query_var( 'paged' ) ) {
+				$current_page = 1;
+			}
+			/** End if - not current page */
+
+			/** 'format' structure depends on Permalinks structure */
+			if ( get_option( 'permalink_structure' ) ) {
+				$format = 'page/%#%/';
+			} else {
+				$format = '?paged=%#%';
+			}
+			/** End if - using Permalinks other than "Default" */
+
+			/** @var string $pagination - results variable */
+			$pagination = paginate_links(
+				array(
+					'base'     => get_pagenum_link( 1 ) . '%_%',
+					'format'   => $format,
+					'current'  => $current_page,
+					'total'    => $total,
+					'mid_size' => 4,
+					'type'     => 'list'
+				)
+			);
+
+		}
+
+		return apply_filters( 'opus_primus_navigation_pagination', $pagination );
+
+	} /** End function - pagination */
 
 
 	/**

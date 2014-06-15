@@ -69,6 +69,7 @@
  *
  * @version	1.2.5
  * @date	June 14, 2014
+ * Added Navigation Section and Page Numbers sub-section
  * Corrected `select` element to use "max-width" rather than "width"
  */
 
@@ -81,6 +82,8 @@
  * === Clearance ===
  * === Menu Related Elements ===
  * === Breadcrumbs ===
+ * === Navigation ===
+ * Page Links
  * === Post Elements ===
  * Meta Byline
  * Buttons
@@ -953,6 +956,43 @@ ul.breadcrumb li ul.post-trail-categories li:first-child {
 }
 
 /** End: Breadcrumbs -------------------------------------------------------- */
+
+/** === Navigation === ------------------------------------------------------ */
+/** Page Links -------------------------------------------------------------- */
+ul.page-numbers {
+	font-size: 12px;
+	list-style: none;
+}
+
+ul.page-numbers li {
+	display: inline;
+}
+
+ul.page-numbers li a {
+	border: 1px solid #efefef;
+	display: block;
+	float: left;
+	margin-right: 7px;
+	padding: 4px 9px;
+}
+
+ul.page-numbers li span.current {
+	background-color: #f5f5f5;
+	border: 1px solid #efefef;
+	display: block;
+	float: left;
+	margin-right: 7px;
+	padding: 4px 9px;
+}
+
+ul.page-numbers li span.dots {
+	display: block;
+	float: left;
+	margin-right: 7px;
+	padding: 4px 9px;
+}
+
+/** End: Navigation --------------------------------------------------------- */
 
 /** === Post Elements === --------------------------------------------------- */
 /** Meta Byline ------------------------------------------------------------- */

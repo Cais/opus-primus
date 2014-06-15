@@ -13,6 +13,7 @@
       <w>commentlist</w>
       <w>compat</w>
       <w>contactmethods</w>
+      <w>corson</w>
       <w>coyier</w>
       <w>curauth</w>
       <w>dashicons</w>
@@ -27,9 +28,12 @@
       <w>jetpack</w>
       <w>mailto</w>
       <w>opusprimus</w>
+      <w>pagenum</w>
+      <w>permalinks</w>
       <w>pingback</w>
       <w>primus</w>
       <w>pullquote</w>
+      <w>remi</w>
       <w>screenshots</w>
       <w>sergey</w>
       <w>singlecomments</w>

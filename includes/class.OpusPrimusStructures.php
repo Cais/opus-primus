@@ -741,7 +741,8 @@ class OpusPrimusStructures {
 		/** End if - have posts */
 
 		/** Display links to previous and next pages */
-		$opus_navigation->posts_link();
+		// $opus_navigation->posts_link();
+		echo $opus_navigation->pagination();
 		/** the_Loop ends */
 
 	}
