@@ -7,6 +7,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Code =
 * Added new method `OpusPrimusNavigation::pagination` for moving between pages of posts
+* Changed navigation method from `posts_link` to `pagination`
 * Added `antispambot` email protection
 * Added sanity checks to ensure widgets are active before rendering sidebars
 * Set Customization path and URL CONSTANTS
@@ -16,7 +17,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Remove conditional customization enqueue using internal theme folder as not working (or update safe)
 
 = CSS =
-* Added Navigation Section and Page Numbers sub-section
+* Added `Navigation` section and `Pagination Method` sub-section
 * Corrected `select` element to use "max-width" rather than "width"
 * Complete refactoring of the styles for better responsiveness
 * Fixed white space on right side of iPhone displays

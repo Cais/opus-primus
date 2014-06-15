@@ -326,8 +326,8 @@ class OpusPrimusStructures {
 	 * @date        May 18, 2014
 	 * Used transients to improve performance impact of the method
 	 *
-	 * @version	1.2.5
-	 * @date	June 15, 2014
+	 * @version     1.2.5
+	 * @date        June 15, 2014
 	 * Use single view published date for first year of copyright
 	 */
 	function copyright( $show = true, $by_author = true, $transient_refresh = 2592000 ) {
@@ -370,7 +370,8 @@ class OpusPrimusStructures {
 		if ( ( is_single() || is_page() ) && $by_author ) {
 			global $post;
 			$first_post_year = substr( $post->post_date, 0, 4 );
-		} /** End if - single view display */
+		}
+		/** End if - single view display */
 
 		/** Add to output string */
 		if ( $first_post_year == date( 'Y' ) ) {
@@ -764,6 +765,10 @@ class OpusPrimusStructures {
 	 * @uses       get_post_format
 	 * @uses       have_posts
 	 * @uses       the_post
+	 *
+	 * @version    1.2.5
+	 * @date       June 15, 2014
+	 * Changed navigation method from `posts_link` to `pagination`
 	 */
 	function the_loop_archives() {
 		/** the_Loop begins */
@@ -787,7 +792,7 @@ class OpusPrimusStructures {
 		/** End if - have posts */
 
 		global $opus_navigation;
-		$opus_navigation->posts_link();
+		echo $opus_navigation->pagination();
 		/** the_Loop ends */
 
 	}

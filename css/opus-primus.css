@@ -83,7 +83,7 @@
  * === Menu Related Elements ===
  * === Breadcrumbs ===
  * === Navigation ===
- * Page Links
+ * Pagination Method
  * === Post Elements ===
  * Meta Byline
  * Buttons
@@ -958,7 +958,15 @@ ul.breadcrumb li ul.post-trail-categories li:first-child {
 /** End: Breadcrumbs -------------------------------------------------------- */
 
 /** === Navigation === ------------------------------------------------------ */
-/** Page Links -------------------------------------------------------------- */
+/** Pagination Method ------------------------------------------------------- */
+.opus-primus-navigation-pagination {
+	text-align: center;
+}
+
+.opus-primus-navigation-pagination ul {
+	display: inline-block;
+}
+
 ul.page-numbers {
 	font-size: 12px;
 	list-style: none;

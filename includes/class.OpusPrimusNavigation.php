@@ -39,8 +39,8 @@
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
  *
- * @version	1.2.5
- * @date	June 15, 2014
+ * @version     1.2.5
+ * @date        June 15, 2014
  * Added new method `pagination` for moving between pages of posts
  */
 class OpusPrimusNavigation {
@@ -300,10 +300,13 @@ class OpusPrimusNavigation {
 					'format'   => $format,
 					'current'  => $current_page,
 					'total'    => $total,
-					'mid_size' => 4,
+					'end_size' => 2,
+					'mid_size' => 3,
 					'type'     => 'list'
 				)
 			);
+
+			$pagination = '<div class="opus-primus-navigation-pagination">' . $pagination . '</div>';
 
 		}
 
