@@ -301,16 +301,15 @@ class OpusPrimusNavigation {
 					'current'  => $current_page,
 					'total'    => $total,
 					'end_size' => 2,
-					'mid_size' => 3,
 					'type'     => 'list'
 				)
 			);
 
-			$pagination = '<div class="opus-primus-navigation-pagination">' . $pagination . '</div>';
+			$pagination = '<div class="navigation-pagination">' . $pagination . '</div>';
 
 		}
 
-		return apply_filters( 'opus_primus_navigation_pagination', $pagination );
+		return apply_filters( 'opus_navigation_pagination', $pagination );
 
 	} /** End function - pagination */
 

@@ -23,6 +23,9 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Fixed white space on right side of iPhone displays
 * Monster be gone! - addressed special case many level menu in sidebar
 
+= Miscellaneous =
+* Updated `hooks-filter.txt` documentation to note new filter `opus_navigation_pagination`
+
 == Version 1.2.4 ==
 * Released May 2014
 
