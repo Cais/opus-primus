@@ -71,6 +71,7 @@
  * @date	June 14, 2014
  * Added Navigation Section and Page Numbers sub-section
  * Corrected `select` element to use "max-width" rather than "width"
+ * Minor adjustments to `img` tag related items
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -537,7 +538,7 @@ hr.pre-post-link-navigation {
 }
 
 img {
-	max-width: 97%;
+	max-width: 100%;
 	vertical-align: middle;
 }
 
@@ -1500,7 +1501,7 @@ p + div.wp-caption {
 
 .wp-caption {
 	max-width: 100%;
-	padding-top: 8px;
+	/* padding-top: 8px; */
 }
 
 .wp-caption p.wp-caption-text {
@@ -1519,7 +1520,7 @@ p + div.wp-caption {
 }
 
 .wp-caption img {
-	width: 100%;
+	/* width: 100%; */
 }
 
 img {
