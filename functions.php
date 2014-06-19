@@ -234,6 +234,10 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 	 * @uses    get_template_directory
 	 * @uses    get_template_directory_uri
 	 * @uses    register_nav_menus
+	 *
+	 * @version	1.2.5
+	 * @date	June 19, 2014
+	 * Moved $content_width definition into theme setup function
 	 */
 	function opus_primus_theme_setup() {
 		/** This theme uses post thumbnails */
@@ -307,19 +311,18 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 		}
 		/** End if - is readable */
 
+		/** Set content width to 1000 - see Full Size Video script */
+		if ( ! isset( $content_width ) ) {
+			$content_width = 1000;
+		}
+		/** End if - not isset - content width */
+
 	}
 	/** End function - opus primus theme setup */
 
 }
 /** End if - function exists - opus primus theme setup */
 add_action( 'after_setup_theme', 'opus_primus_theme_setup' );
-
-
-/** Set content width to 1000 - see Full Size Video script */
-if ( ! isset( $content_width ) ) {
-	$content_width = 1000;
-}
-/** End if - not isset - content width */
 
 
 /** Miscellaneous Functions */

@@ -141,7 +141,6 @@ class OpusPrimusStructures {
 	 *
 	 * @param   $classes - existing body classes
 	 *
-	 * @uses    (GLOBAL) $content_width
 	 * @uses             apply_filters
 	 * @uses             is_active_sidebar
 	 *
@@ -474,7 +473,6 @@ class OpusPrimusStructures {
 	 * @package              OpusPrimus
 	 * @since                0.1
 	 *
-	 * @uses        (GLOBAL) $content_width
 	 * @uses                 is_active_sidebar
 	 *
 	 * @internal             works in conjunction with layout_open
