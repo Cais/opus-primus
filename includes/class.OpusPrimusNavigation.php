@@ -225,8 +225,12 @@ class OpusPrimusNavigation {
 	 * @uses    do_action
 	 * @uses    next_posts_link
 	 * @uses    previous_posts_link
+	 *
+	 * @version	1.2.5
+	 * @date	June 22, 2014
+	 * Changed method to be explicitly public and static to address E-STRICT error if called by Child-Theme
 	 */
-	function posts_link() {
+	public static function posts_link() {
 		/** Add empty hook before posts link */
 		do_action( 'opus_posts_link_before' );
 
