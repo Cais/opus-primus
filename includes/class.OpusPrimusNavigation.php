@@ -219,15 +219,15 @@ class OpusPrimusNavigation {
 	 * Posts Link
 	 * Outputs the navigation structure to move between archive pages
 	 *
-	 * @package OpusPrimus
-	 * @since   0.1
+	 * @package    OpusPrimus
+	 * @since      0.1
 	 *
-	 * @uses    do_action
-	 * @uses    next_posts_link
-	 * @uses    previous_posts_link
+	 * @uses       do_action
+	 * @uses       next_posts_link
+	 * @uses       previous_posts_link
 	 *
-	 * @version	1.2.5
-	 * @date	June 22, 2014
+	 * @version    1.2.5
+	 * @date       June 22, 2014
 	 * Changed method to be explicitly public and static to address E-STRICT error if called by Child-Theme
 	 */
 	public static function posts_link() {
@@ -255,6 +255,7 @@ class OpusPrimusNavigation {
 	 * Creates a pagination structure to navigate between site pages.
 	 *
 	 * @package          Opus_Primus
+	 * @sub-package      Navigation
 	 * @since            1.2.5
 	 *
 	 * @internal         Inspired by the Remi Corson post
@@ -316,6 +317,30 @@ class OpusPrimusNavigation {
 		return apply_filters( 'opus_navigation_pagination', $pagination );
 
 	} /** End function - pagination */
+
+
+	/**
+	 * Pagination Wrapped
+	 * Wraps the pagination method in action hooks
+	 *
+	 * @package        Opus_Primus
+	 * @sub-package    Navigation
+	 * @since          1.2.5
+	 *
+	 * @uses           OpusPrimusNavigation::pagination
+	 * @uses           do_action
+	 */
+	function pagination_wrapped() {
+
+		/** Add empty hook before pagination */
+		do_action( 'opus_navigation_pagination_before' );
+
+		echo $this->pagination();
+
+		/** Add empty hook after pagination */
+		do_action( 'opus_navigation_pagination_after' );
+
+	} /** End function - wrapped pagination */
 
 
 	/**

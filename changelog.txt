@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised June 15, 2014
+Last revised June 22, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.5 ==
@@ -7,6 +7,8 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Code =
 * Added new method `OpusPrimusNavigation::pagination` for moving between pages of posts
+* Added new method `OpusPrimusNavigation::pagination_wrapped` to provide actions hooks before and after the `pagination` method
+* Adjusted the `OpusPrimusStructures::the_loop` and `OpusPrimusStructures::the_loop_archives` to use the `pagination_wrapped` method
 * Changed navigation method from `posts_link` to `pagination`
 * Added `antispambot` email protection
 * Added sanity checks to ensure widgets are active before rendering sidebars
@@ -26,6 +28,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Miscellaneous =
 * Updated `hooks-filter.txt` documentation to note new filter `opus_navigation_pagination`
+* Updated `hooks-actions.txt` documentation to note new actions `opus_navigation_pagination_before` and `opus_navigation_pagination_after`
 
 == Version 1.2.4 ==
 * Released May 2014

@@ -698,7 +698,7 @@ class OpusPrimusStructures {
 	 *
 	 * @uses    OpusPrimusStructures::no_search_results
 	 * @uses    OpusPrimusNavigation::post_link
-	 * @uses    OpusPrimusNavigation::posts_link
+	 * @uses    OpusPrimusNavigation::pagination_wrapped
 	 * @uses    do_action
 	 * @uses    get_template_part
 	 * @uses    get_post_format
@@ -740,8 +740,7 @@ class OpusPrimusStructures {
 		/** End if - have posts */
 
 		/** Display links to previous and next pages */
-		// $opus_navigation->posts_link();
-		echo $opus_navigation->pagination();
+		$opus_navigation->pagination_wrapped();
 		/** the_Loop ends */
 
 	}
@@ -756,7 +755,7 @@ class OpusPrimusStructures {
 	 * @package    OpusPrimus
 	 * @since      0.1
 	 *
-	 * @uses       OpusPrimusNavigation::post_link
+	 * @uses       OpusPrimusNavigation::pagination_wrapped
 	 * @uses       OpusPrimusStructures::no_search_results
 	 * @uses       do_action
 	 * @uses       get_template_part
@@ -765,8 +764,8 @@ class OpusPrimusStructures {
 	 * @uses       the_post
 	 *
 	 * @version    1.2.5
-	 * @date       June 15, 2014
-	 * Changed navigation method from `posts_link` to `pagination`
+	 * @date       June 22, 2014
+	 * Changed navigation method from `posts_link` to `pagination_wrapped`
 	 */
 	function the_loop_archives() {
 		/** the_Loop begins */
@@ -790,7 +789,7 @@ class OpusPrimusStructures {
 		/** End if - have posts */
 
 		global $opus_navigation;
-		echo $opus_navigation->pagination();
+		$opus_navigation->pagination_wrapped();
 		/** the_Loop ends */
 
 	}
