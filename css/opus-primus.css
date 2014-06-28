@@ -1015,6 +1015,7 @@ ul.page-numbers li span.dots {
 	font-weight: normal;
 	line-height: 200%;
 	padding-left: 7px;
+	padding-right: 1px;
 }
 
 /** Use Lock */
@@ -1617,6 +1618,7 @@ div.meta-byline button {
 
 .gallery-featured-image img {
 	height: auto;
+	max-width: 98%;
 }
 
 .gallery-secondary-images a {
