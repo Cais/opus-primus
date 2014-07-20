@@ -83,7 +83,7 @@ if ( ! class_exists( 'OpusPrimusDefaults' ) ) {
 
 		function display_author_url() {
 			return true;
-		}
+		} /* delete */
 
 		function display_page_byline() {
 			return true;
@@ -110,3 +110,4 @@ if ( ! class_exists( 'OpusPrimusDefaults' ) ) {
 /** Post Byline and Post Author parameters */
 define( 'OPUS_DISPLAY_AUTHOR_DESCRIPTION', apply_filters( 'opus_display_author_description_value', '__return_true' ) );
 define( 'OPUS_DISPLAY_AUTHOR_EMAIL', apply_filters( 'opus_display_author_email_value', '__return_true' ) );
+define( 'OPUS_DISPLAY_AUTHOR_URL', apply_filters( 'opus_display_author_url_value', '__return_true' ) );

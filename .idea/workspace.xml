@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusDefaults.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusDefaults.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-aside.php" afterPath="$PROJECT_DIR$/opus-primus-aside.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-audio.php" afterPath="$PROJECT_DIR$/opus-primus-audio.php" />
@@ -40,11 +39,99 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="changelog.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/changelog.txt">
+      <file leaf-file-name="opus-primus-audio.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/opus-primus-audio.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="20" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5160">
+            <state line="70" column="78" selection-start="2400" selection-end="2400" vertical-scroll-proportion="-8.958333" vertical-offset="250" max-vertical-offset="720">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="opus-primus-chat.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/opus-primus-chat.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="78" selection-start="2521" selection-end="2521" vertical-scroll-proportion="-8.958333" vertical-offset="895" max-vertical-offset="1365">
+              <folding>
+                <element signature="e#6#1483#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="opus-primus-gallery.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/opus-primus-gallery.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="78" selection-start="2700" selection-end="2700" vertical-scroll-proportion="-8.958333" vertical-offset="1000" max-vertical-offset="1470">
+              <folding>
+                <element signature="e#6#1494#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="opus-primus-image.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/opus-primus-image.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="65" column="78" selection-start="2252" selection-end="2252" vertical-scroll-proportion="-8.0" vertical-offset="783" max-vertical-offset="1230">
+              <folding>
+                <element signature="e#6#1268#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="opus-primus-link.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/opus-primus-link.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="78" selection-start="2553" selection-end="2553" vertical-scroll-proportion="-8.0" vertical-offset="918" max-vertical-offset="1365">
+              <folding>
+                <element signature="e#6#1516#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="opus-primus-quote.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/opus-primus-quote.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="78" selection-start="2529" selection-end="2529" vertical-scroll-proportion="-8.0" vertical-offset="918" max-vertical-offset="1365">
+              <folding>
+                <element signature="e#6#1485#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="opus-primus-status.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/opus-primus-status.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="78" selection-start="2537" selection-end="2537" vertical-scroll-proportion="-8.0" vertical-offset="918" max-vertical-offset="1365">
+              <folding>
+                <element signature="e#6#1474#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="opus-primus-video.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/opus-primus-video.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="78" selection-start="2561" selection-end="2561" vertical-scroll-proportion="-8.0" vertical-offset="918" max-vertical-offset="1365">
+              <folding>
+                <element signature="e#6#1501#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="opus-primus.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/opus-primus.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="75" column="79" selection-start="2704" selection-end="2704" vertical-scroll-proportion="-7.375" vertical-offset="948" max-vertical-offset="1380">
+              <folding>
+                <element signature="e#6#1630#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -52,8 +139,10 @@
       <file leaf-file-name="class.OpusPrimusDefaults.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusDefaults.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="1" selection-start="1707" selection-end="1707" vertical-scroll-proportion="-0.4552239" vertical-offset="1085" max-vertical-offset="1755">
-              <folding />
+            <state line="85" column="22" selection-start="2706" selection-end="2706" vertical-scroll-proportion="0.41843972" vertical-offset="1098" max-vertical-offset="1770">
+              <folding>
+                <element signature="e#6#1787#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,18 +213,18 @@
         <option value="$PROJECT_DIR$/documentation/hooks-actions.txt" />
         <option value="$PROJECT_DIR$/css/opus-primus.css" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" />
+        <option value="$PROJECT_DIR$/changelog.txt" />
+        <option value="$PROJECT_DIR$/opus-primus-aside.php" />
         <option value="$PROJECT_DIR$/opus-primus-audio.php" />
-        <option value="$PROJECT_DIR$/opus-primus.php" />
-        <option value="$PROJECT_DIR$/opus-primus-video.php" />
-        <option value="$PROJECT_DIR$/opus-primus-status.php" />
-        <option value="$PROJECT_DIR$/opus-primus-quote.php" />
-        <option value="$PROJECT_DIR$/opus-primus-link.php" />
+        <option value="$PROJECT_DIR$/opus-primus-chat.php" />
         <option value="$PROJECT_DIR$/opus-primus-gallery.php" />
         <option value="$PROJECT_DIR$/opus-primus-image.php" />
-        <option value="$PROJECT_DIR$/opus-primus-chat.php" />
-        <option value="$PROJECT_DIR$/opus-primus-aside.php" />
+        <option value="$PROJECT_DIR$/opus-primus-link.php" />
+        <option value="$PROJECT_DIR$/opus-primus-quote.php" />
+        <option value="$PROJECT_DIR$/opus-primus-status.php" />
+        <option value="$PROJECT_DIR$/opus-primus-video.php" />
+        <option value="$PROJECT_DIR$/opus-primus.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusDefaults.php" />
-        <option value="$PROJECT_DIR$/changelog.txt" />
       </list>
     </option>
   </component>
@@ -2223,7 +2312,11 @@
       <created>1403481081883</created>
       <updated>1403481081883</updated>
     </task>
-    <option name="localTasksCounter" value="474" />
+    <task id="LOCAL-00474" summary="* Refactored defaults using true/false to use filtered define statements: author_email and author_description">
+      <created>1405883871515</created>
+      <updated>1405883871515</updated>
+    </task>
+    <option name="localTasksCounter" value="475" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -2267,12 +2360,13 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32122904" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30886427" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30833334" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32664436" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32681563" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29256082" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
@@ -2283,7 +2377,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2326,7 +2419,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="- update to version 1.2.5-alpha (post 1.2.4 release)" />
     <MESSAGE value="* Set Customization path and URL CONSTANTS" />
     <MESSAGE value="* Enqueue custom stylesheets in a more upgrade safe location `/wp-content/opus-primus-customs/`" />
     <MESSAGE value="* Added `antispambot` email protection" />
@@ -2351,7 +2443,8 @@
     <MESSAGE value="* Minor adjustments to `img` tag related items" />
     <MESSAGE value="* Changed `OpusPrimusNavigation::posts_link` method to be explicitly public and static to address E-STRICT error if called by Child-Theme" />
     <MESSAGE value="* Updated `hooks-actions.txt` documentation to note new actions `opus_navigation_pagination_before` and `opus_navigation_pagination_after`&#10;* Added new method `OpusPrimusNavigation::pagination_wrapped` to provide actions hooks before and after the `pagination` method&#10;* Adjusted the `OpusPrimusStructures::the_loop` and `OpusPrimusStructures::the_loop_archives` to use the `pagination_wrapped` method" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Updated `hooks-actions.txt` documentation to note new actions `opus_navigation_pagination_before` and `opus_navigation_pagination_after`&#10;* Added new method `OpusPrimusNavigation::pagination_wrapped` to provide actions hooks before and after the `pagination` method&#10;* Adjusted the `OpusPrimusStructures::the_loop` and `OpusPrimusStructures::the_loop_archives` to use the `pagination_wrapped` method" />
+    <MESSAGE value="* Refactored defaults using true/false to use filtered define statements: author_email and author_description" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Refactored defaults using true/false to use filtered define statements: author_email and author_description" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -2559,61 +2652,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opus-primus-audio.php">
+    <entry file="file://$PROJECT_DIR$/changelog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="55" selection-start="2449" selection-end="2449" vertical-scroll-proportion="-9.625" vertical-offset="249" max-vertical-offset="720">
+        <state line="1" column="20" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5160">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opus-primus.php">
+    <entry file="file://$PROJECT_DIR$/opus-primus-aside.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="3" selection-start="1630" selection-end="1630" vertical-scroll-proportion="0.6367925" vertical-offset="420" max-vertical-offset="1380">
+        <state line="72" column="78" selection-start="2431" selection-end="2431" vertical-scroll-proportion="-8.958333" vertical-offset="865" max-vertical-offset="1335">
           <folding>
-            <element signature="e#6#1630#0" expanded="true" />
+            <element signature="e#6#1391#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opus-primus-video.php">
+    <entry file="file://$PROJECT_DIR$/opus-primus-audio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="3" selection-start="1501" selection-end="1501" vertical-scroll-proportion="0.7429245" vertical-offset="345" max-vertical-offset="1365">
-          <folding>
-            <element signature="e#6#1501#0" expanded="true" />
-          </folding>
+        <state line="70" column="78" selection-start="2400" selection-end="2400" vertical-scroll-proportion="-8.958333" vertical-offset="250" max-vertical-offset="720">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opus-primus-status.php">
+    <entry file="file://$PROJECT_DIR$/opus-primus-chat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="3" selection-start="1474" selection-end="1474" vertical-scroll-proportion="0.31839624" vertical-offset="525" max-vertical-offset="1365">
+        <state line="74" column="78" selection-start="2521" selection-end="2521" vertical-scroll-proportion="-8.958333" vertical-offset="895" max-vertical-offset="1365">
           <folding>
-            <element signature="e#6#1474#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opus-primus-quote.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="3" selection-start="1485" selection-end="1485" vertical-scroll-proportion="0.7783019" vertical-offset="330" max-vertical-offset="1365">
-          <folding>
-            <element signature="e#6#1485#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opus-primus-link.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="3" selection-start="1516" selection-end="1516" vertical-scroll-proportion="0.45990565" vertical-offset="465" max-vertical-offset="1365">
-          <folding>
-            <element signature="e#6#1516#0" expanded="true" />
+            <element signature="e#6#1483#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/opus-primus-gallery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="3" selection-start="1494" selection-end="1494" vertical-scroll-proportion="0.67114097" vertical-offset="315" max-vertical-offset="1470">
+        <state line="81" column="78" selection-start="2700" selection-end="2700" vertical-scroll-proportion="-8.958333" vertical-offset="1000" max-vertical-offset="1470">
           <folding>
             <element signature="e#6#1494#0" expanded="true" />
           </folding>
@@ -2622,42 +2695,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/opus-primus-image.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="3" selection-start="1268" selection-end="1268" vertical-scroll-proportion="-0.30201343" vertical-offset="675" max-vertical-offset="1230">
+        <state line="65" column="78" selection-start="2252" selection-end="2252" vertical-scroll-proportion="-8.0" vertical-offset="783" max-vertical-offset="1230">
           <folding>
             <element signature="e#6#1268#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opus-primus-chat.php">
+    <entry file="file://$PROJECT_DIR$/opus-primus-link.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="3" selection-start="1483" selection-end="1483" vertical-scroll-proportion="0.53691274" vertical-offset="420" max-vertical-offset="1365">
+        <state line="74" column="78" selection-start="2553" selection-end="2553" vertical-scroll-proportion="-8.0" vertical-offset="918" max-vertical-offset="1365">
           <folding>
-            <element signature="e#6#1483#0" expanded="true" />
+            <element signature="e#6#1516#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opus-primus-aside.php">
+    <entry file="file://$PROJECT_DIR$/opus-primus-quote.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="3" selection-start="1391" selection-end="1391" vertical-scroll-proportion="0.7986577" vertical-offset="243" max-vertical-offset="1335">
+        <state line="74" column="78" selection-start="2529" selection-end="2529" vertical-scroll-proportion="-8.0" vertical-offset="918" max-vertical-offset="1365">
           <folding>
-            <element signature="e#6#1391#0" expanded="true" />
+            <element signature="e#6#1485#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/changelog.txt">
+    <entry file="file://$PROJECT_DIR$/opus-primus-status.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="20" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5160">
-          <folding />
+        <state line="74" column="78" selection-start="2537" selection-end="2537" vertical-scroll-proportion="-8.0" vertical-offset="918" max-vertical-offset="1365">
+          <folding>
+            <element signature="e#6#1474#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opus-primus-video.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="78" selection-start="2561" selection-end="2561" vertical-scroll-proportion="-8.0" vertical-offset="918" max-vertical-offset="1365">
+          <folding>
+            <element signature="e#6#1501#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opus-primus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="79" selection-start="2704" selection-end="2704" vertical-scroll-proportion="-7.375" vertical-offset="948" max-vertical-offset="1380">
+          <folding>
+            <element signature="e#6#1630#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusDefaults.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="1" selection-start="1707" selection-end="1707" vertical-scroll-proportion="-0.4552239" vertical-offset="1085" max-vertical-offset="1755">
-          <folding />
+        <state line="85" column="22" selection-start="2706" selection-end="2706" vertical-scroll-proportion="0.41843972" vertical-offset="1098" max-vertical-offset="1770">
+          <folding>
+            <element signature="e#6#1787#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

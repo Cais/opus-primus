@@ -72,7 +72,7 @@ global $opus_defaults, $opus_structures, $opus_posts, $opus_comments, $opus_navi
 			$opus_authors->post_author(
 						 array(
 							 'display_mod_author'   => $opus_defaults->display_mod_author(),
-							 'display_author_url'   => $opus_defaults->display_author_url(),
+							 'display_author_url'   => OPUS_DISPLAY_AUTHOR_URL,
 							 'display_author_email' => OPUS_DISPLAY_AUTHOR_EMAIL,
 							 'display_author_desc'  => OPUS_DISPLAY_AUTHOR_DESCRIPTION,
 						 )
