@@ -54,6 +54,7 @@ define( 'OPUS_DISPLAY_PAGE_BYLINE', apply_filters( 'opus_display_page_byline_boo
  * call within a child theme. The below will change the number of secondary
  * images used (those below the large gallery featured image) to five (5) images:
  *
- * @example    add_filter( 'opus_number_of_secondary_images_value', 5 );
+ * @example    function new_number_of_images() { return 5; }
+ * @example    add_filter( 'opus_number_of_secondary_images_value', 'new_number_of_images' );
  */
 define( 'OPUS_NUMBER_OF_SECONDARY_IMAGES', apply_filters( 'opus_number_of_secondary_images_value', 3 ) );

@@ -4,10 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/css/opus-primus.css" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="* Renamed `opus-ignite.php` to `opus-primus-ignite.php` and moved to theme root&#10;* Added `opus-primus-ignite.php` back into theme core to reduce clutter in `functions.php`">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/includes/opus-ignite.php" afterPath="$PROJECT_DIR$/opus-primus-ignite.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
+    <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/opus-primus-defaults.php" afterPath="$PROJECT_DIR$/includes/opus-primus-defaults.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="opus-primus.iws" />
@@ -40,10 +38,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="193" column="38" selection-start="7511" selection-end="7511" vertical-scroll-proportion="3.6535552" vertical-offset="480" max-vertical-offset="4905">
+            <state line="193" column="38" selection-start="7511" selection-end="7511" vertical-scroll-proportion="-100.625" vertical-offset="480" max-vertical-offset="4905">
               <folding>
                 <element signature="e#6#1500#0" expanded="true" />
               </folding>
@@ -51,11 +49,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="opus-primus-ignite.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/opus-primus-ignite.php">
+      <file leaf-file-name="opus-primus-defaults.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/opus-primus-defaults.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="43" selection-start="1614" selection-end="1614" vertical-scroll-proportion="-6.25" vertical-offset="525" max-vertical-offset="1485">
-              <folding />
+            <state line="57" column="93" selection-start="2367" selection-end="2367" vertical-scroll-proportion="0.8467262" vertical-offset="286" max-vertical-offset="975">
+              <folding>
+                <element signature="e#6#1145#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class.OpusPrimusDefaults.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusDefaults.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="105" column="0" selection-start="3034" selection-end="3093" vertical-scroll-proportion="-18.625" vertical-offset="1128" max-vertical-offset="1800">
+              <folding>
+                <element signature="e#6#1989#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,7 +98,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/includes/widgets.php" />
         <option value="$PROJECT_DIR$/404.php" />
         <option value="$PROJECT_DIR$/image.php" />
         <option value="$PROJECT_DIR$/opus-primus-archive-gallery.php" />
@@ -138,6 +148,7 @@
         <option value="$PROJECT_DIR$/changelog.txt" />
         <option value="$PROJECT_DIR$/opus-primus-ignite.php" />
         <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/includes/opus-primus-defaults.php" />
       </list>
     </option>
   </component>
@@ -2241,7 +2252,11 @@
       <created>1405888738860</created>
       <updated>1405888738860</updated>
     </task>
-    <option name="localTasksCounter" value="478" />
+    <task id="LOCAL-00478" summary="* Renamed `opus-ignite.php` to `opus-primus-ignite.php` and moved to theme root&#10;* Added `opus-primus-ignite.php` back into theme core to reduce clutter in `functions.php`">
+      <created>1405891360271</created>
+      <updated>1405891360271</updated>
+    </task>
+    <option name="localTasksCounter" value="479" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -2284,16 +2299,17 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32122904" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29685265" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32664436" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32681563" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263889" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29685265" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3109137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -2301,7 +2317,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30833334" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263889" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -2344,7 +2359,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="- code formatting" />
     <MESSAGE value="- aesthetic commentary" />
     <MESSAGE value="- more aesthetic commentary" />
     <MESSAGE value="* Complete refactoring of the styles for better responsiveness" />
@@ -2369,7 +2383,8 @@
     <MESSAGE value="* Refactored defaults using true/false to use filtered define statements: author_url" />
     <MESSAGE value="* Refactored defaults using true/false to use filtered define statements: page_byline" />
     <MESSAGE value="* Refactored defaults using true/false to use filtered define statements: mod_author&#10;* Deprecated $opus_defaults class (file removal pending)&#10;* Added `opus_primus_defaults.php` to replace $opus_defaults class" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Refactored defaults using true/false to use filtered define statements: mod_author&#10;* Deprecated $opus_defaults class (file removal pending)&#10;* Added `opus_primus_defaults.php` to replace $opus_defaults class" />
+    <MESSAGE value="* Renamed `opus-ignite.php` to `opus-primus-ignite.php` and moved to theme root&#10;* Added `opus-primus-ignite.php` back into theme core to reduce clutter in `functions.php`" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Renamed `opus-ignite.php` to `opus-primus-ignite.php` and moved to theme root&#10;* Added `opus-primus-ignite.php` back into theme core to reduce clutter in `functions.php`" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -2610,16 +2625,6 @@
         <state line="43" column="82" selection-start="1518" selection-end="1518" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="750" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusDefaults.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="32" selection-start="1907" selection-end="1907" vertical-scroll-proportion="0.35928145" vertical-offset="600" max-vertical-offset="1800" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/opus-primus-defaults.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="81" selection-start="2209" selection-end="2209" vertical-scroll-proportion="0.7979042" vertical-offset="277" max-vertical-offset="960" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/changelog.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="52" selection-start="1731" selection-end="1731" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="5220">
@@ -2629,16 +2634,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/opus-primus-ignite.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="43" selection-start="1614" selection-end="1614" vertical-scroll-proportion="-6.25" vertical-offset="525" max-vertical-offset="1485">
+        <state line="45" column="43" selection-start="1614" selection-end="1614" vertical-scroll-proportion="0.3080357" vertical-offset="468" max-vertical-offset="1485">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="193" column="38" selection-start="7511" selection-end="7511" vertical-scroll-proportion="3.6535552" vertical-offset="480" max-vertical-offset="4905">
+        <state line="193" column="38" selection-start="7511" selection-end="7511" vertical-scroll-proportion="-100.625" vertical-offset="480" max-vertical-offset="4905">
           <folding>
             <element signature="e#6#1500#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusDefaults.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="0" selection-start="3034" selection-end="3093" vertical-scroll-proportion="-18.625" vertical-offset="1128" max-vertical-offset="1800">
+          <folding>
+            <element signature="e#6#1989#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/opus-primus-defaults.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="93" selection-start="2367" selection-end="2367" vertical-scroll-proportion="0.8467262" vertical-offset="286" max-vertical-offset="975">
+          <folding>
+            <element signature="e#6#1145#0" expanded="true" />
           </folding>
         </state>
       </provider>
