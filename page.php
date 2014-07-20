@@ -38,6 +38,10 @@
  * @version     1.2
  * @date        July 24, 2013
  * Added conditional for showing the page byline details
+ *
+ * @version     1.2.5
+ * @date        July 20, 2014
+ * Refactored all defaults using true/false to use filtered define statements
  */
 
 /** Call the class variables */
@@ -80,12 +84,12 @@ do_action( 'opus_content_before' ); ?>
 						$opus_posts->post_content();
 
 						/** Show page byline details */
-						if ( $opus_defaults->display_page_byline() ) {
-							$opus_posts->post_byline( array( 'display_mod_author' => true ) );
+						if ( OPUS_DISPLAY_PAGE_BYLINE ) {
+							$opus_posts->post_byline( array( 'display_mod_author' => $opus_defaults->display_mod_author() ) );
 						} else {
 							$opus_posts->post_byline(
 									   array(
-										   'display_mod_author' => true,
+										   'display_mod_author' => $opus_defaults->display_mod_author(),
 										   'echo'               => false
 									   )
 							);
@@ -94,10 +98,10 @@ do_action( 'opus_content_before' ); ?>
 
 						$opus_authors->post_author(
 									 array(
-										 'display_mod_author'   => true,
-										 'display_author_url'   => true,
-										 'display_author_email' => true,
-										 'display_author_desc'  => true,
+										 'display_mod_author'   => $opus_defaults->display_mod_author(),
+										 'display_author_url'   => OPUS_DISPLAY_AUTHOR_URL,
+										 'display_author_email' => OPUS_DISPLAY_AUTHOR_EMAIL,
+										 'display_author_desc'  => OPUS_DISPLAY_AUTHOR_DESCRIPTION,
 									 )
 						); ?>
 
