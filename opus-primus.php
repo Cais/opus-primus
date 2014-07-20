@@ -41,13 +41,13 @@
  * @date        May 10, 2014
  * Refactored conditional comments and featured thumbnail checks into the `comments_link` and `show_featured_thumbnail` methods
  *
- * @version	1.2.5
- * @date	July 20, 2014
+ * @version     1.2.5
+ * @date        July 20, 2014
  * Refactored all defaults using true/false to use filtered define statements
  */
 
 /** Call the class variables */
-global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_images, $opus_authors;
+global $opus_posts, $opus_comments, $opus_navigation, $opus_images, $opus_authors;
 
 /** Display the post */
 ?>
@@ -56,7 +56,7 @@ global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_imag
 		<?php
 		/** @var $anchor - set value for use in meta_tags (post_byline default) */
 		$anchor = __( 'Posted', 'opus-primus' );
-		$opus_posts->post_byline( array( 'display_mod_author' => $opus_defaults->display_mod_author() ) );
+		$opus_posts->post_byline( array( 'display_mod_author' => OPUS_DISPLAY_MOD_AUTHOR ) );
 		$opus_posts->post_title();
 		$opus_comments->comments_link();
 		$opus_images->show_featured_thumbnail();
@@ -72,7 +72,7 @@ global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_imag
 			 */
 			$opus_authors->post_author(
 						 array(
-							 'display_mod_author'   => $opus_defaults->display_mod_author(),
+							 'display_mod_author'   => OPUS_DISPLAY_MOD_AUTHOR,
 							 'display_author_url'   => OPUS_DISPLAY_AUTHOR_URL,
 							 'display_author_email' => OPUS_DISPLAY_AUTHOR_EMAIL,
 							 'display_author_desc'  => OPUS_DISPLAY_AUTHOR_DESCRIPTION,

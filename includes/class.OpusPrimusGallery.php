@@ -332,37 +332,42 @@ class OpusPrimusGallery {
 	 * Displays additional images from the gallery while excluding the image
 	 * with ID = $opus_thumb_id
 	 *
-	 * @package          OpusPrimus
-	 * @since            0.1
+	 * @package            OpusPrimus
+	 * @since              0.1
 	 *
-	 * @uses    (GLOBAL) $opus_thumb_id
-	 * @uses             WP_Query
-	 * @uses             apply_filters
-	 * @uses             do_action
-	 * @uses             get_permalink
-	 * @uses             get_the_ID
-	 * @uses             is_single
-	 * @uses             the_title_attribute
-	 * @uses             wp_get_attachment_image
-	 * @uses             wp_parse_args
+	 * @uses    (CONSTANT) OPUS_NUMBER_OF_SECONDARY_IMAGES
+	 * @uses    (GLOBAL)   $opus_thumb_id
+	 * @uses               WP_Query
+	 * @uses               apply_filters
+	 * @uses               do_action
+	 * @uses               get_permalink
+	 * @uses               get_the_ID
+	 * @uses               is_single
+	 * @uses               the_title_attribute
+	 * @uses               wp_get_attachment_image
+	 * @uses               wp_parse_args
 	 *
-	 * @version          1.2.2
-	 * @date             September 3, 2013
+	 * @version            1.2.2
+	 * @date               September 3, 2013
 	 * Fixed issue with Gallery Post-Format being used when the `gallery`
 	 * shortcode is not used.
 	 *
-	 * @version          1.2.3
-	 * @date             February 2, 2014
+	 * @version            1.2.3
+	 * @date               February 2, 2014
 	 * Moved `secondary_images` wrapper into method
+	 *
+	 * @version            1.2.5
+	 * @date               July 20, 2014
+	 * Changed call to `$opus_defaults->number_of_secondary_images` to use `OPUS_NUMBER_OF_SECONDARY_IMAGES` constant
 	 */
 	function secondary_images( $secondary_images_args = '' ) {
-		global $opus_thumb_id, $opus_defaults;
+		global $opus_thumb_id;
 
 		/** Set defaults */
 		$defaults              = array(
 			'order'   => 'ASC',
 			'orderby' => 'menu_order ID',
-			'images'  => $opus_defaults->number_of_secondary_images(),
+			'images'  => OPUS_NUMBER_OF_SECONDARY_IMAGES,
 		);
 		$secondary_images_args = wp_parse_args( (array) $secondary_images_args, $defaults );
 

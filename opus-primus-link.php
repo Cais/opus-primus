@@ -39,13 +39,13 @@
  * @date        May 11, 2014
  * Re-added Featured Image Thumbnail via `show_featured_thumbnail` method
  *
- * @version	1.2.5
- * @date	July 20, 2014
+ * @version     1.2.5
+ * @date        July 20, 2014
  * Refactored all defaults using true/false to use filtered define statements
  */
 
 /** Call the class variables */
-global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_images, $opus_authors;
+global $opus_posts, $opus_comments, $opus_navigation, $opus_images, $opus_authors;
 
 /** Display the post */
 ?>
@@ -56,7 +56,7 @@ global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_imag
 		$anchor = __( 'Linked', 'opus-primus' );
 		$opus_posts->post_byline(
 				   array(
-					   'display_mod_author' => $opus_defaults->display_mod_author(),
+					   'display_mod_author' => OPUS_DISPLAY_MOD_AUTHOR,
 					   'anchor'             => $anchor,
 					   'sticky_flag'        => __( 'Follow', 'opus-primus' )
 				   )
@@ -71,7 +71,7 @@ global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_imag
 		if ( is_single() ) {
 			$opus_authors->post_author(
 						 array(
-							 'display_mod_author'   => $opus_defaults->display_mod_author(),
+							 'display_mod_author'   => OPUS_DISPLAY_MOD_AUTHOR,
 							 'display_author_url'   => OPUS_DISPLAY_AUTHOR_URL,
 							 'display_author_email' => OPUS_DISPLAY_AUTHOR_EMAIL,
 							 'display_author_desc'  => OPUS_DISPLAY_AUTHOR_DESCRIPTION,

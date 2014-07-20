@@ -45,7 +45,6 @@
  * Set Customization path and URL CONSTANTS
  */
 
-
 /** Set CONSTANTS */
 define( 'OPUS_INC', get_template_directory() . '/includes/' );
 define( 'OPUS_JS', get_template_directory_uri() . '/js/' );
@@ -68,7 +67,8 @@ require_once( OPUS_INC . 'widgets.php' );
 
 /** Load the classes - in order of appearance/dependency */
 /** Add Global Defaults */
-require_once( OPUS_INC . 'class.OpusPrimusDefaults.php' );
+// require_once( OPUS_INC . 'class.OpusPrimusDefaults.php' );
+require_once( OPUS_INC . 'opus-primus-defaults.php' );
 /** Add Navigation */
 require_once( OPUS_INC . 'class.OpusPrimusNavigation.php' );
 /** Add Structures */

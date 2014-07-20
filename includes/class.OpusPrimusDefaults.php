@@ -48,9 +48,14 @@
  * @date           May 19, 2014
  * Added `number_of_secondary_images` method under Gallery parameters
  *
- * @version	1.2.5
- * @date	July 20, 2014
- * Refactored all defaults using true/false to use filtered define statements
+ * @version        1.2.5
+ * @date           July 20, 2014
+ * Refactored all defaults to use filtered define statements
+ * Deprecated class ... see /includes/opus-primus-defaults.php
+ *
+ * @deprecated     1.2.5
+ * @date           July 20, 2014
+ * @internal       File retained for reference ... removal from theme pending
  */
 
 if ( ! class_exists( 'OpusPrimusDefaults' ) ) {
@@ -75,19 +80,20 @@ if ( ! class_exists( 'OpusPrimusDefaults' ) ) {
 		/** Post Byline and Post Author parameters */
 		function display_author_desc() {
 			return true;
-		} /* delete */
+		}
 
 		function display_author_email() {
 			return true;
-		} /* delete */
+		}
 
 		function display_author_url() {
 			return true;
-		} /* delete */
+		}
 
 		function display_page_byline() {
+			/** return false; */
 			return true;
-		} /* delete */
+		}
 
 		function display_mod_author() {
 			return true;
@@ -105,10 +111,5 @@ if ( ! class_exists( 'OpusPrimusDefaults' ) ) {
 	/** @var $opus_defaults - new instance of class */
 	$opus_defaults = new OpusPrimusDefaults();
 
-} /** End if - class exists */
-
-/** Post Byline and Post Author parameters */
-define( 'OPUS_DISPLAY_AUTHOR_DESCRIPTION', apply_filters( 'opus_display_author_description_bool', '__return_true' ) );
-define( 'OPUS_DISPLAY_AUTHOR_EMAIL', apply_filters( 'opus_display_author_email_bool', '__return_true' ) );
-define( 'OPUS_DISPLAY_AUTHOR_URL', apply_filters( 'opus_display_author_url_bool', '__return_true' ) );
-define( 'OPUS_DISPLAY_PAGE_BYLINE', apply_filters( 'opus_display_page_byline_bool', '__return_true' ) );
+}
+/** End if - class exists */
