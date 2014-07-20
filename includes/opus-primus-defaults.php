@@ -36,16 +36,16 @@
  * Post Byline and Post Author default parameters
  *
  * These can easily be over-written by way of using the `add_filter` function
- * call within a child theme.
+ * call within a Child-Theme and the WordPress `__return_false()` function.
  *
  * @example    add_filter( 'opus_display_author_description_bool', '__return_false' );
  */
-define( 'OPUS_DISPLAY_AUTHOR_DESCRIPTION', apply_filters( 'opus_display_author_description_bool', '__return_true' ) );
-define( 'OPUS_DISPLAY_AUTHOR_EMAIL', apply_filters( 'opus_display_author_email_bool', '__return_true' ) );
-define( 'OPUS_DISPLAY_AUTHOR_URL', apply_filters( 'opus_display_author_url_bool', '__return_true' ) );
-define( 'OPUS_DISPLAY_MOD_AUTHOR', apply_filters( 'opus_display_mod_author_bool', '__return_true' ) );
+define( 'OPUS_DISPLAY_AUTHOR_DESCRIPTION', apply_filters( 'opus_display_author_description_bool', true ) );
+define( 'OPUS_DISPLAY_AUTHOR_EMAIL', apply_filters( 'opus_display_author_email_bool', true ) );
+define( 'OPUS_DISPLAY_AUTHOR_URL', apply_filters( 'opus_display_author_url_bool', true ) );
+define( 'OPUS_DISPLAY_MOD_AUTHOR', apply_filters( 'opus_display_mod_author_bool', true ) );
 
-define( 'OPUS_DISPLAY_PAGE_BYLINE', apply_filters( 'opus_display_page_byline_bool', '__return_true' ) );
+define( 'OPUS_DISPLAY_PAGE_BYLINE', apply_filters( 'opus_display_page_byline_bool', true ) );
 
 /**
  * Gallery Parameters
