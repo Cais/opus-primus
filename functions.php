@@ -34,7 +34,7 @@
  * @version     1.2
  * @date        July 19, 2013
  * Removed 'style.less' related function and action calls
- * Merge `opus-ignite.php` into `functions.php`
+ * Merge `opus-primus-ignite.php` into `functions.php`
  *
  * @version     1.2.4
  * @date        April 7, 2014
@@ -42,57 +42,11 @@
  *
  * @version     1.2.5
  * @date        June 2, 2014
- * Set Customization path and URL CONSTANTS
+ * Added `opus-primus-ignite.php` for theme initialization requirements
  */
 
-/** Set CONSTANTS */
-define( 'OPUS_INC', get_template_directory() . '/includes/' );
-define( 'OPUS_JS', get_template_directory_uri() . '/js/' );
-define( 'OPUS_CSS', get_template_directory_uri() . '/css/' );
-define( 'OPUS_IMAGES', get_template_directory_uri() . '/images/' );
-define( 'OPUS_STANZAS', get_template_directory() . '/stanzas/' );
-define( 'OPUS_STANZAS_URI', get_template_directory_uri() . '/stanzas/' );
-define( 'OPUS_COMPAT', get_template_directory_uri() . '/compatibility/' );
-
-/** Set Customization path and URL CONSTANTS */
-define( 'OPUS_CUSTOM_PATH', WP_CONTENT_DIR . '/opus-primus-customs/' );
-define( 'OPUS_CUSTOM_URL', content_url( '/opus-primus-customs/' ) );
-
-/** For Testing Purposes */
-define( 'OPUS_WIP', get_template_directory() . '/works-in-progress/' );
-
-
-/** Add Widgets */
-require_once( OPUS_INC . 'widgets.php' );
-
-/** Load the classes - in order of appearance/dependency */
-/** Add Global Defaults */
-// require_once( OPUS_INC . 'class.OpusPrimusDefaults.php' );
-require_once( OPUS_INC . 'opus-primus-defaults.php' );
-/** Add Navigation */
-require_once( OPUS_INC . 'class.OpusPrimusNavigation.php' );
-/** Add Structures */
-require_once( OPUS_INC . 'class.OpusPrimusStructures.php' );
-/** Add Headers */
-require_once( OPUS_INC . 'class.OpusPrimusHeaders.php' );
-/** Add Posts */
-require_once( OPUS_INC . 'class.OpusPrimusPosts.php' );
-/** Add Comments Hooks */
-require_once( OPUS_INC . 'class.OpusPrimusComments.php' );
-/** Add Images */
-require_once( OPUS_INC . 'class.OpusPrimusImages.php' );
-/** Add Gallery */
-require_once( OPUS_INC . 'class.OpusPrimusGallery.php' );
-/** Add Authors */
-require_once( OPUS_INC . 'class.OpusPrimusAuthors.php' );
-/** Add Archives */
-require_once( OPUS_INC . 'class.OpusPrimusArchives.php' );
-/** Add Breadcrumbs */
-require_once( OPUS_INC . 'class.OpusPrimusBreadcrumbs.php' );
-
-/** Add Stanzas */
-require_once( OPUS_STANZAS . 'stanzas.php' );
-
+/** Fire up the theme with its classes, widgets, and defaults */
+require_once( get_template_directory() . '/opus-primus-ignite.php' );
 
 /**
  * Opus Primus Theme Version
@@ -220,23 +174,25 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 	 * Add theme support for: post-thumbnails, automatic feed links, TinyMCE
 	 * editor style, custom background, post formats
 	 *
-	 * @package OpusPrimus
-	 * @since   0.1
+	 * @package          OpusPrimus
+	 * @since            0.1
 	 *
-	 * @uses    add_editor_style
-	 * @uses    add_theme_support: automatic-feed-links
-	 * @uses    add_theme_support: custom-background
-	 * @uses    add_theme_support: custom-header
-	 * @uses    add_theme_support: post-formats
-	 * @uses    add_theme_support: post-thumbnails
-	 * @uses    load_theme_textdomain
-	 * @uses    get_locale
-	 * @uses    get_template_directory
-	 * @uses    get_template_directory_uri
-	 * @uses    register_nav_menus
+	 * @uses    (GLOBAL) $content_width
+	 * @uses             add_editor_style
+	 * @uses             add_theme_support: automatic-feed-links
+	 * @uses             add_theme_support: custom-background
+	 * @uses             add_theme_support: custom-header
+	 * @uses             add_theme_support: post-formats
+	 * @uses             add_theme_support: post-thumbnails
+	 * @uses             load_theme_textdomain
+	 * @uses             get_locale
+	 * @uses             get_template_directory
+	 * @uses             get_template_directory_uri
+	 * @uses             register_nav_menus
 	 *
-	 * @version	1.2.5
-	 * @date	June 19, 2014
+	 * @version          1.2.5
+	 * @date             July 20, 2014
+	 * Added global $content_width
 	 * Moved $content_width definition into theme setup function
 	 */
 	function opus_primus_theme_setup() {
@@ -312,6 +268,7 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 		/** End if - is readable */
 
 		/** Set content width to 1000 - see Full Size Video script */
+		global $content_width;
 		if ( ! isset( $content_width ) ) {
 			$content_width = 1000;
 		}

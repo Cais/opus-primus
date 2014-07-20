@@ -18,6 +18,10 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Use single view published date for first year of copyright
 * Remove conditional customization enqueue using internal theme folder as not working (or update safe)
 * Refactored all defaults using true/false to use filtered define statements
+* Deprecated `$opus_defaults` class (file removal pending)
+* Added `opus_primus_defaults.php` to replace `$opus_defaults` class
+* Renamed `opus-ignite.php` to `opus-primus-ignite.php` and moved to theme root
+* Added `opus-primus-ignite.php` back into theme core to reduce clutter in `functions.php`
 
 = CSS =
 * Added `Navigation` section and `Pagination Method` sub-section

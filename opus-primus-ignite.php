@@ -1,6 +1,6 @@
 <?php
 /**
- * Opus Ignite
+ * Opus Primus Ignite
  * Initialization file for the theme: defined CONSTANTS; and, included classes.
  *
  * @package     OpusPrimus
@@ -39,7 +39,11 @@
  * @date        July 19, 2013
  * Merged into `functions.php` retained for reference purposes only
  *
- * @todo        Remove at version 1.3? (1.2)
+ * @version     1.2.5
+ * @date        July 14, 2014
+ * Renamed `opus-ignite.php` to `opus-primus-ignite.php` and moved to theme root
+ * Added back into theme core to reduce clutter in `functions.php`
+ * Set Customization path and URL CONSTANTS
  */
 
 /** Set CONSTANTS */
@@ -49,13 +53,22 @@ define( 'OPUS_CSS', get_template_directory_uri() . '/css/' );
 define( 'OPUS_IMAGES', get_template_directory_uri() . '/images/' );
 define( 'OPUS_STANZAS', get_template_directory() . '/stanzas/' );
 define( 'OPUS_STANZAS_URI', get_template_directory_uri() . '/stanzas/' );
+define( 'OPUS_COMPAT', get_template_directory_uri() . '/compatibility/' );
+
+/** Set Customization path and URL CONSTANTS */
+define( 'OPUS_CUSTOM_PATH', WP_CONTENT_DIR . '/opus-primus-customs/' );
+define( 'OPUS_CUSTOM_URL', content_url( '/opus-primus-customs/' ) );
+
+/** For Testing Purposes */
+define( 'OPUS_WIP', get_template_directory() . '/works-in-progress/' );
+
 
 /** Add Widgets */
 require_once( OPUS_INC . 'widgets.php' );
 
-/** Load the classes - in order or appearance/dependency */
+/** Load the classes - in order of appearance/dependency */
 /** Add Global Defaults */
-require_once( OPUS_INC . 'class.OpusPrimusDefaults.php' );
+require_once( OPUS_INC . 'opus-primus-defaults.php' );
 /** Add Navigation */
 require_once( OPUS_INC . 'class.OpusPrimusNavigation.php' );
 /** Add Structures */
@@ -79,6 +92,3 @@ require_once( OPUS_INC . 'class.OpusPrimusBreadcrumbs.php' );
 
 /** Add Stanzas */
 require_once( OPUS_STANZAS . 'stanzas.php' );
-
-/** Testing Purposes */
-define( 'OPUS_WIP', get_template_directory() . '/works-in-progress/' );
