@@ -38,6 +38,10 @@
  * @version     1.2.4
  * @date        May 11, 2014
  * Use `show_featured_thumbnail` method
+ *
+ * @version	1.2.5
+ * @date	July 20, 2014
+ * Refactored all defaults using true/false to use filtered define statements
  */
 
 /** Call the class variables */
@@ -69,8 +73,8 @@ global $opus_defaults, $opus_structures, $opus_posts, $opus_comments, $opus_navi
 						 array(
 							 'display_mod_author'   => $opus_defaults->display_mod_author(),
 							 'display_author_url'   => $opus_defaults->display_author_url(),
-							 'display_author_email' => $opus_defaults->display_author_email(),
-							 'display_author_desc'  => $opus_defaults->display_author_desc(),
+							 'display_author_email' => OPUS_DISPLAY_AUTHOR_EMAIL,
+							 'display_author_desc'  => OPUS_DISPLAY_AUTHOR_DESCRIPTION,
 						 )
 			);
 		} /** End if - is single */

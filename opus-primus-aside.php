@@ -34,6 +34,10 @@
  * @version     1.2
  * @date        April 20, 2013
  * Adjusted conditional displaying the `featured_image`
+ *
+ * @version	1.2.5
+ * @date	July 20, 2014
+ * Refactored all defaults using true/false to use filtered define statements
  */
 
 /** Call the class variables */
@@ -67,8 +71,8 @@ global $opus_defaults, $opus_posts, $opus_comments, $opus_navigation, $opus_imag
 						 array(
 							 'display_mod_author'   => $opus_defaults->display_mod_author(),
 							 'display_author_url'   => $opus_defaults->display_author_url(),
-							 'display_author_email' => $opus_defaults->display_author_email(),
-							 'display_author_desc'  => $opus_defaults->display_author_desc(),
+							 'display_author_email' => OPUS_DISPLAY_AUTHOR_EMAIL,
+							 'display_author_desc'  => OPUS_DISPLAY_AUTHOR_DESCRIPTION,
 						 )
 			);
 		} /** End if - is single */

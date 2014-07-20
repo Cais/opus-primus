@@ -47,6 +47,10 @@
  * @version        1.2.4
  * @date           May 19, 2014
  * Added `number_of_secondary_images` method under Gallery parameters
+ *
+ * @version	1.2.5
+ * @date	July 20, 2014
+ * Refactored all defaults using true/false to use filtered define statements
  */
 
 if ( ! class_exists( 'OpusPrimusDefaults' ) ) {
@@ -71,18 +75,17 @@ if ( ! class_exists( 'OpusPrimusDefaults' ) ) {
 		/** Post Byline and Post Author parameters */
 		function display_author_desc() {
 			return true;
-		}
+		} /* delete */
 
 		function display_author_email() {
 			return true;
-		}
+		} /* delete */
 
 		function display_author_url() {
 			return true;
 		}
 
 		function display_page_byline() {
-			/** return false; */
 			return true;
 		}
 
@@ -103,3 +106,7 @@ if ( ! class_exists( 'OpusPrimusDefaults' ) ) {
 	$opus_defaults = new OpusPrimusDefaults();
 
 } /** End if - class exists */
+
+/** Post Byline and Post Author parameters */
+define( 'OPUS_DISPLAY_AUTHOR_DESCRIPTION', apply_filters( 'opus_display_author_description_value', '__return_true' ) );
+define( 'OPUS_DISPLAY_AUTHOR_EMAIL', apply_filters( 'opus_display_author_email_value', '__return_true' ) );
