@@ -305,7 +305,7 @@ class OpusPrimusNavigation {
 					'format'   => $format,
 					'current'  => $current_page,
 					'total'    => $total,
-					'end_size' => 2,
+					'mid_size' => 1,
 					'type'     => 'list'
 				)
 			);
