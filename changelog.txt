@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised July 23, 2014
+Last revised July 24, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.5 ==
@@ -35,7 +35,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Minor adjustments to `img` tag related items
 
 = Miscellaneous =
-* Updated `hooks-filter.txt` documentation to note seven (7) new filters
+* Updated `hooks-filter.txt` documentation to note seven (8) new filters
 * Updated `hooks-actions.txt` documentation to note new actions `opus_navigation_pagination_before` and `opus_navigation_pagination_after`
 
 == Version 1.2.4 ==

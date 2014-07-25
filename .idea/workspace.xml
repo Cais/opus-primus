@@ -4,11 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/css/opus-primus.css" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="* Replaced `OpusPrimusStructures::replace_spaces` with `sanitize_html_class`">
+    <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="opus-primus.iws" />
@@ -32,37 +29,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="changelog.txt" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="changelog.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/changelog.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="76" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5265">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="class.OpusPrimusStructures.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="676" column="30" selection-start="22230" selection-end="22230" vertical-scroll-proportion="-10.125" vertical-offset="9897" max-vertical-offset="13860">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="class.OpusPrimusAuthors.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="38" selection-start="1829" selection-end="1829" vertical-scroll-proportion="-6.25" vertical-offset="765" max-vertical-offset="6810">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="class.OpusPrimusPosts.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPosts.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="31" selection-start="3500" selection-end="3500" vertical-scroll-proportion="-3.8015268" vertical-offset="4275" max-vertical-offset="15870">
+            <state line="1" column="20" selection-start="54" selection-end="54" vertical-scroll-proportion="0.02209131" vertical-offset="0" max-vertical-offset="5265">
               <folding />
             </state>
           </provider>
@@ -143,9 +113,9 @@
         <option value="$PROJECT_DIR$/documentation/hooks-filters.txt" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
-        <option value="$PROJECT_DIR$/changelog.txt" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" />
+        <option value="$PROJECT_DIR$/changelog.txt" />
       </list>
     </option>
   </component>
@@ -2259,7 +2229,11 @@
       <created>1406255556040</created>
       <updated>1406255556040</updated>
     </task>
-    <option name="localTasksCounter" value="485" />
+    <task id="LOCAL-00485" summary="* Replaced `OpusPrimusStructures::replace_spaces` with `sanitize_html_class`">
+      <created>1406256963231</created>
+      <updated>1406256963231</updated>
+    </task>
+    <option name="localTasksCounter" value="486" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -2362,7 +2336,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* Monster be gone! - Fixed special case many level menu in sidebar" />
     <MESSAGE value="* Fixed white space on right side of iPhone displays" />
     <MESSAGE value="- update date reference" />
     <MESSAGE value="* Corrected `select` element to use &quot;max-width&quot; rather than &quot;width&quot;" />
@@ -2387,7 +2360,8 @@
     <MESSAGE value="- change parameters of pagination method" />
     <MESSAGE value="- updated hooks-filters.txt and tested up to version" />
     <MESSAGE value="* Renamed `OpusPrimusNavigation::image_nav` to `OpusPrimusNavigation::image_link_navigation`&#10;- updated and improved inline documentation&#10;* Added `opus_image_link_navigation_output` filter hook to provide access to navigation output" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Renamed `OpusPrimusNavigation::image_nav` to `OpusPrimusNavigation::image_link_navigation`&#10;- updated and improved inline documentation&#10;* Added `opus_image_link_navigation_output` filter hook to provide access to navigation output" />
+    <MESSAGE value="* Replaced `OpusPrimusStructures::replace_spaces` with `sanitize_html_class`" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Replaced `OpusPrimusStructures::replace_spaces` with `sanitize_html_class`" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -2649,13 +2623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/changelog.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="76" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5265">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="676" column="30" selection-start="22230" selection-end="22230" vertical-scroll-proportion="-10.125" vertical-offset="9897" max-vertical-offset="13860">
@@ -2673,6 +2640,13 @@
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPosts.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="119" column="31" selection-start="3500" selection-end="3500" vertical-scroll-proportion="-3.8015268" vertical-offset="4275" max-vertical-offset="15870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changelog.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="20" selection-start="54" selection-end="54" vertical-scroll-proportion="0.02209131" vertical-offset="0" max-vertical-offset="5265">
           <folding />
         </state>
       </provider>
