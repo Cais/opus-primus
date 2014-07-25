@@ -62,9 +62,7 @@ class OpusPrimusPosts {
 
 		/** Add classes to post tag */
 		add_filter( 'post_class', array( $this, 'post_classes' ) );
-	}
-
-	/** End function - construct */
+	} /** End function - construct */
 
 
 	/** ---- Action and Filter Methods ---- */
@@ -105,32 +103,32 @@ class OpusPrimusPosts {
 
 		return $link_url;
 
-	}
-
-	/** End function - excerpt more link */
+	} /** End function - excerpt more link */
 
 
 	/**
 	 * Post Classes
 	 * A collection of classes added to the post_class for various purposes
 	 *
-	 * @package OpusPrimus
-	 * @since   0.1
+	 * @package    OpusPrimus
+	 * @since      0.1
 	 *
 	 * @param   $classes - existing post classes
 	 *
-	 * @uses    OpusPrimusStructures::replace_spaces
-	 * @uses    get_post_meta
-	 * @uses    get_the_author_meta
-	 * @uses    get_the_date
-	 * @uses    get_the_modified_date
-	 * @uses    get_userdata
+	 * @uses       get_post_meta
+	 * @uses       get_the_author_meta
+	 * @uses       get_the_date
+	 * @uses       get_the_modified_date
+	 * @uses       get_userdata
+	 * @uses       sanitize_html_class
 	 *
 	 * @return  string - specific class based on active columns
+	 *
+	 * @version    1.2.5
+	 * @date       July 24, 2014
+	 * Replaced `OpusPrimusStructures::replace_spaces` with `sanitize_html_class`
 	 */
 	function post_classes( $classes ) {
-		/** Call the structure class to use replace spaces */
-		global $opus_structures;
 
 		/** Original Post Classes */
 		/** Year */
@@ -167,7 +165,7 @@ class OpusPrimusPosts {
 		/** Author */
 		$opus_author_id = get_the_author_meta( 'ID' );
 		$classes[]      = 'author-' . $opus_author_id;
-		$display_name   = $opus_structures->replace_spaces( strtolower( get_the_author_meta( 'display_name', $opus_author_id ) ) );
+		$display_name   = sanitize_html_class( strtolower( get_the_author_meta( 'display_name', $opus_author_id ) ), 'noah-body' );
 		$classes[]      = 'author-' . $display_name;
 
 		/** Modified Post Classes */
@@ -216,7 +214,7 @@ class OpusPrimusPosts {
 			/** @var $mod_author_id - ID of the last user */
 			$mod_author_id           = $last_user->ID;
 			$classes[]               = 'modified-author-' . $mod_author_id;
-			$mod_author_display_name = $opus_structures->replace_spaces( $last_user->display_name );
+			$mod_author_display_name = sanitize_html_class( $last_user->display_name, 'noah-body' );
 			$classes[]               = 'modified-author-' . $mod_author_display_name;
 		}
 
@@ -224,9 +222,7 @@ class OpusPrimusPosts {
 
 		return $classes;
 
-	}
-
-	/** End function - post classes */
+	} /** End function - post classes */
 
 
 	/** ---- Additional Methods ---- */
@@ -254,9 +250,7 @@ class OpusPrimusPosts {
 			esc_attr( sprintf( __( 'View all posts by %1$s', 'opus-primus' ), get_the_author() ) ),
 			get_the_author()
 		);
-	}
-
-	/** End function - author posts link */
+	} /** End function - author posts link */
 
 
 	/**
@@ -281,9 +275,7 @@ class OpusPrimusPosts {
 
 		return empty( $link_title_text ) ? __( 'post', 'opus-primus' ) : $link_title_text;
 
-	}
-
-	/** End function - anchor title text */
+	} /** End function - anchor title text */
 
 
 	/**
@@ -351,9 +343,7 @@ class OpusPrimusPosts {
 		/** Add empty hook after meta tags */
 		do_action( 'opus_meta_tags_after' );
 
-	}
-
-	/** End function - meta tags */
+	} /** End function - meta tags */
 
 
 	/**
@@ -378,9 +368,7 @@ class OpusPrimusPosts {
 			esc_attr( sprintf( __( 'View all posts by %1$s', 'opus-primus' ), $last_user->display_name ) ),
 			$last_user->display_name
 		);
-	}
-
-	/** End function - modified posts link */
+	} /** End function - modified posts link */
 
 
 	/**
@@ -497,9 +485,7 @@ class OpusPrimusPosts {
 		}
 		/** End if - not empty */
 
-	}
-
-	/** End function - modified post */
+	} /** End function - modified post */
 
 
 	/**
@@ -530,9 +516,7 @@ class OpusPrimusPosts {
 
 		return apply_filters( 'opus_no_title_link', $opus_no_title );
 
-	}
-
-	/** End function - no title link */
+	} /** End function - no title link */
 
 
 	/**
@@ -667,9 +651,7 @@ class OpusPrimusPosts {
 		/** Add empty hook after post by line */
 		do_action( 'opus_post_byline_after' );
 
-	}
-
-	/** End function - post byline */
+	} /** End function - post byline */
 
 
 	/**
@@ -706,9 +688,7 @@ class OpusPrimusPosts {
 		/** Add empty hook after the post coda */
 		do_action( 'opus_post_coda_after' );
 
-	}
-
-	/** End function - post coda */
+	} /** End function - post coda */
 
 
 	/**
@@ -756,9 +736,7 @@ class OpusPrimusPosts {
 		/** Add empty hook after the content */
 		do_action( 'opus_the_content_after' );
 
-	}
-
-	/** End function - post content */
+	} /** End function - post content */
 
 
 	/**
@@ -783,9 +761,7 @@ class OpusPrimusPosts {
 		/** Add empty hook after the excerpt */
 		do_action( 'opus_the_excerpt_after' );
 
-	}
-
-	/** End function - post excerpt */
+	} /** End function - post excerpt */
 
 
 	/**
@@ -824,9 +800,7 @@ class OpusPrimusPosts {
 
 		return apply_filters( 'opus_post_format_flag', $output );
 
-	}
-
-	/** End function - post format flag */
+	} /** End function - post format flag */
 
 
 	/**
@@ -875,9 +849,7 @@ class OpusPrimusPosts {
 		/** Add empty hook after the post title */
 		do_action( 'opus_post_title_after' );
 
-	}
-
-	/** End function - post title */
+	} /** End function - post title */
 
 
 	/**
@@ -900,9 +872,7 @@ class OpusPrimusPosts {
 		/** Add empty hook after status update output */
 		do_action( 'opus_status_update_after' );
 
-	}
-
-	/** End function - show status update */
+	} /** End function - show status update */
 
 
 	/**
@@ -979,9 +949,7 @@ class OpusPrimusPosts {
 		}
 		/** End if - format is status */
 
-	}
-
-	/** End function - status update */
+	} /** End function - status update */
 
 
 	/**
@@ -1031,9 +999,7 @@ class OpusPrimusPosts {
 
 		return apply_filters( 'opus_sticky_flag', $output );
 
-	}
-
-	/** End function - sticky flag */
+	} /** End function - sticky flag */
 
 
 	/**

@@ -664,13 +664,17 @@ class OpusPrimusStructures {
 	 * Replace Spaces
 	 * Takes a string and replaces the spaces with a single hyphen by default
 	 *
-	 * @package OpusPrimus
-	 * @since   0.1
+	 * @package       OpusPrimus
+	 * @since         0.1
 	 *
 	 * @param   string $text
 	 * @param   string $replacement
 	 *
 	 * @return  string - class
+	 *
+	 * @deprecated    1.2.5
+	 * @date          July 24, 2014
+	 * Replaced all instances with `sanitize_html_class`
 	 */
 	function replace_spaces( $text, $replacement = '-' ) {
 		/** @var $new_text - initial text set to lower case */
@@ -684,9 +688,7 @@ class OpusPrimusStructures {
 
 		return $new_text;
 
-	}
-
-	/** End function - replace spaces */
+	} /** End function - replace spaces */
 
 
 	/**

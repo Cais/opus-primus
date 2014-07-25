@@ -24,6 +24,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added `opus-primus-ignite.php` back into theme core to reduce clutter in `functions.php`
 * Renamed `OpusPrimusNavigation::image_nav` to `OpusPrimusNavigation::image_link_navigation`
 * Added `opus_image_link_navigation_output` filter hook to provide access to navigation output
+* Replaced `OpusPrimusStructures::replace_spaces` with `sanitize_html_class`
 
 = CSS =
 * Added `Navigation` section and `Pagination Method` sub-section

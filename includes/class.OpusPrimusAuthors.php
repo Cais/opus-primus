@@ -52,18 +52,21 @@ class OpusPrimusAuthors {
 	 * Author Classes
 	 * Additional author classes related to the use and their capabilities
 	 *
-	 * @package OpusPrimus
-	 * @since   0.1
+	 * @package    OpusPrimus
+	 * @since      0.1
 	 *
 	 * @param   $author_id
 	 *
-	 * @uses    OpusPrimusStructures::replace_spaces
-	 * @uses    get_the_author_meta
-	 * @uses    user_can
+	 * @uses       OpusPrimusStructures::replace_spaces
+	 * @uses       get_the_author_meta
+	 * @uses       sanitize_html_class
+	 * @uses       user_can
+	 *
+	 * @version    1.2.5
+	 * @date       July 24, 2014
+	 * Replaced `OpusPrimusStructures::replace_spaces` with `sanitize_html_class`
 	 */
 	function author_classes( $author_id ) {
-		/** Call the structure class to use replace spaces */
-		global $opus_structures;
 		/**
 		 * Add class as related to the user role
 		 * - see 'Role:' drop-down in User options
@@ -86,11 +89,9 @@ class OpusPrimusAuthors {
 		}
 		/** End if - author id */
 		echo ' author-' . $author_id;
-		echo ' author-' . $opus_structures->replace_spaces( get_the_author_meta( 'display_name', $author_id ) );
+		echo ' author-' . sanitize_html_class( get_the_author_meta( 'display_name', $author_id ), 'noah-body' );
 
-	}
-
-	/** End function  - author classes */
+	} /** End function  - author classes */
 
 
 	/**
@@ -115,9 +116,7 @@ class OpusPrimusAuthors {
 		/** Add empty hook after the post coda */
 		do_action( 'opus_author_coda_after' );
 
-	}
-
-	/** End function  - author coda */
+	} /** End function  - author coda */
 
 
 	/**
@@ -189,9 +188,7 @@ class OpusPrimusAuthors {
 
 		return $user_desc;
 
-	}
-
-	/** End function - get author desc */
+	} /** End function - get author desc */
 
 
 	/**
@@ -339,9 +336,7 @@ class OpusPrimusAuthors {
 
 		return;
 
-	}
-
-	/** End function - author details */
+	} /** End function - author details */
 
 
 	/**
