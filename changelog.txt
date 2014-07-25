@@ -22,6 +22,8 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added `opus_primus_defaults.php` to replace `$opus_defaults` class
 * Renamed `opus-ignite.php` to `opus-primus-ignite.php` and moved to theme root
 * Added `opus-primus-ignite.php` back into theme core to reduce clutter in `functions.php`
+* Renamed `OpusPrimusNavigation::image_nav` to `OpusPrimusNavigation::image_link_navigation`
+* Added `opus_image_link_navigation_output` filter hook to provide access to navigation output
 
 = CSS =
 * Added `Navigation` section and `Pagination Method` sub-section

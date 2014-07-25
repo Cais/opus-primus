@@ -1,5 +1,5 @@
 Hooks – Filters
-Currently available: 85
+Currently available: 86
 
 There are many filter hooks available for use with Opus Primus.
 The naming convention follows this general guideline: opus-< relevant text description >
@@ -64,6 +64,7 @@ The filters are listed below by file, in order of appearance:
         opus_exif_timestamp
         opus_exif_title
 	includes\class.OpusPrimusNavigation.php
+		opus_image_link_navigation_output
 		opus_navigation_pagination
     includes\class.OpusPrimusPosts.php
         opus_excerpt_more_link

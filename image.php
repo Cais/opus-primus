@@ -90,7 +90,9 @@ do_action( 'opus_content_before' ); ?>
 									   'anchor'             => __( 'Displayed', 'opus-primus' )
 								   )
 						);
-						$opus_navigation->image_nav();
+
+						/** Provide navigation between images */
+						$opus_navigation->image_link_navigation();
 
 						/** Image Title from media library */
 						$opus_images->image_title();

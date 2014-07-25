@@ -60,8 +60,8 @@ The following is an alphabetical listing (with the exception of the location bei
     opus_header_top
     opus_header_bottom
     opus_html_before
-    opus_image_nav_before
-    opus_image_nav_after
+    opus_image_link_navigation_before
+    opus_image_link_navigation_after
     opus_image_title_before
     opus_image_title_after
     opus_links_pages_before

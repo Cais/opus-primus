@@ -72,9 +72,7 @@ class OpusPrimusNavigation {
 		/** Add empty hook after comments link */
 		do_action( 'opus_comments_link_after' );
 
-	}
-
-	/** End function - comments navigation */
+	} /** End function - comments navigation */
 
 
 	/**
@@ -102,38 +100,43 @@ class OpusPrimusNavigation {
 		wp_list_pages( $page_menu_args );
 		echo '</ul><!-- .nav-menu -->';
 
-	}
-
-	/** End function - list pages */
+	} /** End function - list pages */
 
 
 	/**
-	 * Image Navigation
+	 * Image Link Navigation
+	 * Method to move between images when shown via the `image.php` template
 	 *
-	 * @package OpusPrimus
-	 * @since   0.1
+	 * @package    OpusPrimus
+	 * @since      0.1
 	 *
-	 * @uses    __
-	 * @uses    do_action
-	 * @uses    next_image_link
-	 * @uses    previous_image_link
+	 * @uses       __
+	 * @uses       apply_filters
+	 * @uses       do_action
+	 * @uses       next_image_link
+	 * @uses       previous_image_link
+	 *
+	 * @version    1.2.5
+	 * @date       July 24, 2014
+	 * Renamed `OpusPrimusNavigation::image_nav` to `OpusPrimusNavigation::image_link_navigation`
+	 * Added `opus_image_link_navigation_output` filter hook to provide access to navigation output
 	 */
-	function image_nav() {
-		/** Add empty hook before the image navigation */
-		do_action( 'opus_image_nav_before' );
+	function image_link_navigation() {
+		/** Add empty hook before the image link navigation */
+		do_action( 'opus_image_link_navigation_before' );
 
 		/** Add navigation links between pictures in the gallery */
-		echo '<div class="opus-image-navigation cf">';
-		echo previous_image_link( false, '<span class="left">' . __( 'Previous Photo', 'opus-primus' ) . '</span>' );
-		echo next_image_link( false, '<span class="right">' . __( 'Next Photo', 'opus-primus' ) . '</span>' );
-		echo '</div><!-- .opus-image-navigation -->';
+		$output = '<div class="opus-image-link-navigation cf">';
+		$output .= previous_image_link( false, '<span class="left">' . __( 'Previous Photo', 'opus-primus' ) . '</span>' );
+		$output .= next_image_link( false, '<span class="right">' . __( 'Next Photo', 'opus-primus' ) . '</span>' );
+		$output .= '</div><!-- .opus-image-link-navigation -->';
 
-		/** Add empty hook after the image navigation */
-		do_action( 'opus_image_nav_after' );
+		echo apply_filters( 'opus_image_link_navigation_output', $output );
 
-	}
+		/** Add empty hook after the image link navigation */
+		do_action( 'opus_image_link_navigation_after' );
 
-	/** End function - image nav */
+	} /** End function - image link navigation */
 
 
 	/**
@@ -178,9 +181,7 @@ class OpusPrimusNavigation {
 		/** Add empty hook after linking pages navigation of a multi-page post */
 		do_action( 'opus_links_pages_after' );
 
-	}
-
-	/** End function - link pages */
+	} /** End function - link pages */
 
 
 	/**
@@ -210,9 +211,7 @@ class OpusPrimusNavigation {
 		/** Add empty hook after post link */
 		do_action( 'opus_post_link_after' );
 
-	}
-
-	/** End function - post link */
+	} /** End function - post link */
 
 
 	/**
@@ -245,9 +244,7 @@ class OpusPrimusNavigation {
 		/** Add empty hook after posts link */
 		do_action( 'opus_posts_link_after' );
 
-	}
-
-	/** End function - posts link */
+	} /** End function - posts link */
 
 
 	/**
@@ -373,9 +370,7 @@ class OpusPrimusNavigation {
 		/** Add empty hook after the primary menu */
 		do_action( 'opus_primary_menu_after' );
 
-	}
-
-	/** End function - primary menu */
+	} /** End function - primary menu */
 
 
 	/**
@@ -412,9 +407,7 @@ class OpusPrimusNavigation {
 		/** Add empty hook after the search menu */
 		do_action( 'opus_search_menu_after' );
 
-	}
-
-	/** End function - search menu */
+	} /** End function - search menu */
 
 
 	/**
@@ -441,9 +434,7 @@ class OpusPrimusNavigation {
 		</ul><!-- .nav.search -->
 
 	<?php
-	}
-
-	/** End function - search page menu */
+	} /** End function - search page menu */
 
 
 	/** --- Future Usage ---------------------------------------------------- */
@@ -484,7 +475,6 @@ class OpusPrimusNavigation {
 
 	}
 	/** End function - secondary menu */
-
 
 }
 
