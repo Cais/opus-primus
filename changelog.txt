@@ -1,42 +1,42 @@
 === Opus Primus changelog.txt ===
-Last revised July 24, 2014
+Last revised July 26, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.2.5 ==
-* Released ...
+* Released July 2014
 
 = Code =
 * Added new method `OpusPrimusNavigation::pagination` for moving between pages of posts
 * Added new method `OpusPrimusNavigation::pagination_wrapped` to provide actions hooks before and after the `pagination` method
-* Adjusted the `OpusPrimusStructures::the_loop` and `OpusPrimusStructures::the_loop_archives` to use the `pagination_wrapped` method
-* Changed navigation method from `posts_link` to `pagination`
 * Added `antispambot` email protection
 * Added sanity checks to ensure widgets are active before rendering sidebars
-* Set Customization path and URL CONSTANTS
+* Added `opus_primus_defaults.php` to replace `$opus_defaults` class
+* Added `opus-primus-ignite.php` back into theme core to reduce clutter in `functions.php`
+* Added `opus_image_link_navigation_output` filter hook to provide access to navigation output
+* Adjusted the `OpusPrimusStructures::the_loop` and `OpusPrimusStructures::the_loop_archives` to use the `pagination_wrapped` method
+* Changed navigation method from `posts_link` to `pagination`
+* Deprecated `OpusPrimusDefaults` class (file may be removed in a future release)
 * Enqueue custom stylesheet in an update safe location `/wp-content/opus-primus-customs/`
 * Enqueue custom JavaScript in an update safe location `/wp-content/opus-primus-customs/`
-* Use single view published date for first year of copyright
-* Remove conditional customization enqueue using internal theme folder as not working (or update safe)
 * Refactored all defaults using true/false to use filtered define statements
-* Deprecated `$opus_defaults` class (file removal pending)
-* Added `opus_primus_defaults.php` to replace `$opus_defaults` class
+* Remove conditional customization enqueue using internal theme folder as not working (or update safe)
 * Renamed `opus-ignite.php` to `opus-primus-ignite.php` and moved to theme root
-* Added `opus-primus-ignite.php` back into theme core to reduce clutter in `functions.php`
 * Renamed `OpusPrimusNavigation::image_nav` to `OpusPrimusNavigation::image_link_navigation`
-* Added `opus_image_link_navigation_output` filter hook to provide access to navigation output
 * Replaced `OpusPrimusStructures::replace_spaces` with `sanitize_html_class`
+* Set Customization path and URL CONSTANTS
+* Use single view published date for first year of copyright
 
 = CSS =
 * Added `Navigation` section and `Pagination Method` sub-section
+* Complete refactoring of the `@media` query styles for better responsiveness
 * Corrected `select` element to use "max-width" rather than "width"
-* Complete refactoring of the styles for better responsiveness
 * Fixed white space on right side of iPhone displays
-* Monster be gone! - addressed special case many level menu in sidebar
 * Minor adjustments to `img` tag related items
+* Monster be gone!? - addressed special case many level menu in sidebar
 
 = Miscellaneous =
 * Updated `hooks-filter.txt` documentation to note seven (8) new filters
-* Updated `hooks-actions.txt` documentation to note new actions `opus_navigation_pagination_before` and `opus_navigation_pagination_after`
+* Updated `hooks-actions.txt` documentation to note two (2) new actions
 
 == Version 1.2.4 ==
 * Released May 2014
