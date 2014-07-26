@@ -1,8 +1,8 @@
 /*
 Theme Name: Opus Primus
 Theme URI: http://opusprimus.com/
-Description: A WordPress Framework Theme ... the first work. It works first. Designed and developed to be extensible and easily modified, based in the principles of decisions not options. Opus Primus supports all of the current Post-Formats as well as automagically converting between one, two, and three column layouts. You have access to custom backgrounds as well as a flexible custom header, too. Feel free to visit the Opus Primus website for more details and information about the theme and how it is built. Also, in the near future, you will be able to find tutorials on how to modify and work with Opus Primus Child-Themes.
-Version: 1.2.5-alpha
+Description: A WordPress Framework Theme ... the first work. It works first. Designed and developed to be extensible and easily modified, based in the principles of decisions not options. Opus Primus supports all of the current Post-Formats as well as auto-magically converting between one, two, and three column layouts. You have access to custom backgrounds as well as a flexible custom header, too. Feel free to visit the Opus Primus website for more details and information about the theme and how it is built. You will also find tutorials on how to modify and work with Opus Primus Child-Themes.
+Version: 1.2.5-beta
 Author: Edward Caissie
 Author URI: http://edwardcaissie.com/
 WordPress Required Version: 3.8
@@ -44,17 +44,11 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version 1.0.1
- * @date    February 24, 2013
- * Changed header details to use 'WordPress Required Version' and 'WordPress
- * Tested Version' to reflect WordPress core trac ticket #16868
- * Added `clear: both;` to 'img.aligncenter, img.center' to address Firefox
- * issue when when a Featured Image and a large in post image are too close
- * together.
- *
  * @version	1.2.4
  * @date	May 19, 2014
- * Updated normalize.css to 3.0.1 (copy and pasted from git.io/normalize)
+ *
+ * @version	1.2.5
+ * @date	July 26, 2014
  */
 
 /** Table of Contents ------------------------------------------------------- */

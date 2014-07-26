@@ -4,7 +4,7 @@
  * A WordPress Framework Theme.
  *
  * @package        OpusPrimus
- * @version        1.2.5-alpha
+ * @version        1.2.5-beta
  *
  * @internal       RECOMMENDED HTML5 compatible browser for <!DOCTYPE html>
  * @internal       RECOMMENDED CSS3
