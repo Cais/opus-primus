@@ -8,23 +8,23 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = Code =
 * Added new method `OpusPrimusNavigation::pagination` for moving between pages of posts
 * Added new method `OpusPrimusNavigation::pagination_wrapped` to provide actions hooks before and after the `pagination` method
-* Added `antispambot` email protection
+* Added `antispambot` email protection to author biography email addresses
 * Added sanity checks to ensure widgets are active before rendering sidebars
 * Added `opus_primus_defaults.php` to replace `$opus_defaults` class
-* Added `opus-primus-ignite.php` back into theme core to reduce clutter in `functions.php`
+* Added `opus-primus-ignite.php` to reduce clutter in `functions.php`
 * Added `opus_image_link_navigation_output` filter hook to provide access to navigation output
 * Adjusted the `OpusPrimusStructures::the_loop` and `OpusPrimusStructures::the_loop_archives` to use the `pagination_wrapped` method
 * Changed navigation method from `posts_link` to `pagination`
+* Changed single view first year of copyright to published year of post/page in `OpusPrimusStructures::copyright` method
 * Deprecated `OpusPrimusDefaults` class (file may be removed in a future release)
 * Enqueue custom stylesheet in an update safe location `/wp-content/opus-primus-customs/`
 * Enqueue custom JavaScript in an update safe location `/wp-content/opus-primus-customs/`
 * Refactored all defaults using true/false to use filtered define statements
-* Remove conditional customization enqueue using internal theme folder as not working (or update safe)
+* Remove conditional customization enqueue using internal theme folder
 * Renamed `opus-ignite.php` to `opus-primus-ignite.php` and moved to theme root
 * Renamed `OpusPrimusNavigation::image_nav` to `OpusPrimusNavigation::image_link_navigation`
 * Replaced `OpusPrimusStructures::replace_spaces` with `sanitize_html_class`
 * Set Customization path and URL CONSTANTS
-* Use single view published date for first year of copyright
 
 = CSS =
 * Added `Navigation` section and `Pagination Method` sub-section
