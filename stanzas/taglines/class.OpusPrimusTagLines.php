@@ -70,6 +70,14 @@ class OpusPrimusTagLines {
 		/** Send tagline to screen after post title */
 		add_action( 'opus_post_title_after', array( $this, 'tagline_output' ) );
 
+		/** Set Opus Primus Tagline stanza off by default */
+		add_filter(
+			'default_hidden_meta_boxes', array(
+				$this,
+				'default_screen_option'
+			), 10, 2
+		);
+
 	}
 
 	/** End function - construct */
@@ -239,8 +247,31 @@ class OpusPrimusTagLines {
 		echo '</label>';
 		echo '<input type="text" id="tagline_text_field" name="tagline_text_field" value="' . get_post_meta( $post->ID, 'tagline_text_field', true ) . '" size="100%" />';
 
+	} /** End function - tagline callback */
+
+
+	/**
+	 * Default Screen Option
+	 * Used to set Opus Primus Tagline off by default in editor screen options
+	 *
+	 * @package       OpusPrimus
+	 * @subpackage    TagLines
+	 * @since         1.2.5
+	 *
+	 * @param $hidden
+	 * @param $screen
+	 *
+	 * @return array
+	 */
+	function default_screen_option( $hidden, $screen ) {
+
+		/** Add `opus_tagline` to default hidden screen options array */
+		$hidden[] = 'opus_tagline';
+
+		return $hidden;
+
 	}
-	/** End function - tagline callback */
+	/** End function - default screen option */
 
 
 }
