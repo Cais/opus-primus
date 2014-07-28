@@ -2,6 +2,14 @@
 Last revised July 27, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
+== Version 1.3 ==
+* Released ...
+
+= Code =
+= CSS =
+= Miscellaneous
+
+/** ------------------------------------------------------------------------- */
 == Version 1.2.5 ==
 * Released July 2014
 
@@ -41,6 +49,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Updated `hooks-actions.txt` documentation to note two (2) new actions
 * Updated `screenshot.png` to show a bit more of the theme display
 
+/** ------------------------------------------------------------------------- */
 == Version 1.2.4 ==
 * Released May 2014
 

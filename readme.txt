@@ -1,5 +1,5 @@
 === Opus Primus readme.txt ===
-* Last revised May 25, 2014
+* Last revised July 27, 2014
 
 == Contents ==
 * Copyright
@@ -169,3 +169,4 @@ See `changelog.txt` in theme root folder
 * http://themes.trac.wordpress.org/ticket/15017 - Version 1.2.2 - October 2013
 * https://themes.trac.wordpress.org/ticket/16874 - Version 1.2.3 - February 2014
 * https://themes.trac.wordpress.org/ticket/18889 - Version 1.2.4 - May 2014
+* https://themes.trac.wordpress.org/ticket/19955 - Version 1.2.5 - July 2014

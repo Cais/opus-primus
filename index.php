@@ -53,6 +53,9 @@
  *
  * @version        1.2.5
  * @date           July 2014
+ *
+ * @version        1.3
+ * @date           ...
  */
 
 global $opus_structures;
