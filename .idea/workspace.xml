@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php" afterPath="$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,19 +29,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="changelog.txt" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="changelog.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/changelog.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="1509" selection-end="1509" vertical-scroll-proportion="0.50810015" vertical-offset="0" max-vertical-offset="5295">
+            <state line="23" column="0" selection-start="1509" selection-end="1509" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5295">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="class.OpusPrimusTagLines.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="class.OpusPrimusTagLines.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="268" column="45" selection-start="7883" selection-end="7883" vertical-scroll-proportion="-25.416666" vertical-offset="3410" max-vertical-offset="4350">
+            <state line="138" column="83" selection-start="4203" selection-end="4203" vertical-scroll-proportion="0.5648855" vertical-offset="1700" max-vertical-offset="4350">
               <folding />
             </state>
           </provider>
@@ -2303,7 +2302,11 @@
       <created>1406480981539</created>
       <updated>1406480981539</updated>
     </task>
-    <option name="localTasksCounter" value="491" />
+    <task id="LOCAL-00491" summary="* Refactored `OpusPrimusTaglines::tagline_create_boxes` to clarify the parameter usage">
+      <created>1406508295209</created>
+      <updated>1406508295209</updated>
+    </task>
+    <option name="localTasksCounter" value="492" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -2356,7 +2359,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263889" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3404864" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3404864" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2406,7 +2409,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* Enqueue custom JavaScript in an update safe location `/wp-content/opus-primus-customs/`&#10;- change JavaScript location parameter from 'true' to true (no quotes)" />
     <MESSAGE value="* Added new method `OpusPrimusNavigation::pagination` for moving between pages of posts&#10;* Added Navigation Section and Page Numbers sub-section" />
     <MESSAGE value="* Changed navigation method from `posts_link` to `pagination`&#10;- center `pagination` output&#10;- adjust `pagination` output to taste" />
     <MESSAGE value="* Updated `hooks-filter.txt` documentation to note new filter `opus_navigation_pagination`&#10;- tweaks to pagination style" />
@@ -2431,7 +2433,8 @@
     <MESSAGE value="- re-organized current changelog into better alphabetized list" />
     <MESSAGE value="- more documentation updates and re-organization" />
     <MESSAGE value="* Added `opus_tagline` to default hidden screen options array" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Added `opus_tagline` to default hidden screen options array" />
+    <MESSAGE value="* Refactored `OpusPrimusTaglines::tagline_create_boxes` to clarify the parameter usage" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Refactored `OpusPrimusTaglines::tagline_create_boxes` to clarify the parameter usage" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -2442,11 +2445,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/author.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="17.791666" vertical-offset="427" max-vertical-offset="1140" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/comments.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690" />
@@ -2689,16 +2687,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php">
+    <entry file="file://$PROJECT_DIR$/stanzas/taglines/opus-primus.taglines.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="268" column="45" selection-start="7883" selection-end="7883" vertical-scroll-proportion="-25.416666" vertical-offset="3410" max-vertical-offset="4350">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/changelog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="1509" selection-end="1509" vertical-scroll-proportion="0.50810015" vertical-offset="0" max-vertical-offset="5295">
+        <state line="23" column="0" selection-start="1509" selection-end="1509" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5295">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="138" column="83" selection-start="4203" selection-end="4203" vertical-scroll-proportion="0.5648855" vertical-offset="1700" max-vertical-offset="4350">
           <folding />
         </state>
       </provider>

@@ -136,7 +136,7 @@ class OpusPrimusTagLines {
 			/** @var string $priority - valid values: default, high, low, or core */
 			$priority = 'high';
 
-			/** $context / $priority = normal / high should put this above revisions on the editor pages */
+			/** $context / $priority = normal / high should put this above excerpts on the editor pages */
 
 			add_meta_box(
 				'opus_tagline',
