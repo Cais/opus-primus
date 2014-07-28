@@ -41,7 +41,7 @@
       <file leaf-file-name="class.OpusPrimusTagLines.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="83" selection-start="4203" selection-end="4203" vertical-scroll-proportion="0.5648855" vertical-offset="1700" max-vertical-offset="4350">
+            <state line="138" column="0" selection-start="4129" selection-end="4129" vertical-scroll-proportion="0.6870229" vertical-offset="1620" max-vertical-offset="4350">
               <folding />
             </state>
           </provider>
@@ -2306,7 +2306,11 @@
       <created>1406508295209</created>
       <updated>1406508295209</updated>
     </task>
-    <option name="localTasksCounter" value="492" />
+    <task id="LOCAL-00492" summary="- corrected inline documentation">
+      <created>1406508431439</created>
+      <updated>1406508431439</updated>
+    </task>
+    <option name="localTasksCounter" value="493" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -2359,7 +2363,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263889" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3404864" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3404864" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2409,7 +2413,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* Added new method `OpusPrimusNavigation::pagination` for moving between pages of posts&#10;* Added Navigation Section and Page Numbers sub-section" />
     <MESSAGE value="* Changed navigation method from `posts_link` to `pagination`&#10;- center `pagination` output&#10;- adjust `pagination` output to taste" />
     <MESSAGE value="* Updated `hooks-filter.txt` documentation to note new filter `opus_navigation_pagination`&#10;- tweaks to pagination style" />
     <MESSAGE value="* Moved $content_width definition into theme setup function" />
@@ -2434,7 +2437,8 @@
     <MESSAGE value="- more documentation updates and re-organization" />
     <MESSAGE value="* Added `opus_tagline` to default hidden screen options array" />
     <MESSAGE value="* Refactored `OpusPrimusTaglines::tagline_create_boxes` to clarify the parameter usage" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Refactored `OpusPrimusTaglines::tagline_create_boxes` to clarify the parameter usage" />
+    <MESSAGE value="- corrected inline documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="- corrected inline documentation" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -2703,7 +2707,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="83" selection-start="4203" selection-end="4203" vertical-scroll-proportion="0.5648855" vertical-offset="1700" max-vertical-offset="4350">
+        <state line="138" column="0" selection-start="4129" selection-end="4129" vertical-scroll-proportion="0.6870229" vertical-offset="1620" max-vertical-offset="4350">
           <folding />
         </state>
       </provider>
