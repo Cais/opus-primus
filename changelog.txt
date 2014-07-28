@@ -45,7 +45,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Monster be gone!? - addressed special case many level menu in sidebar
 
 = Miscellaneous =
-* Updated `hooks-filter.txt` documentation to note seven (8) new filters
+* Updated `hooks-filter.txt` documentation to note eight (8) new filters
 * Updated `hooks-actions.txt` documentation to note two (2) new actions
 * Updated `screenshot.png` to show a bit more of the theme display
 
