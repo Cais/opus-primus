@@ -39,6 +39,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = Miscellaneous =
 * Updated `hooks-filter.txt` documentation to note seven (8) new filters
 * Updated `hooks-actions.txt` documentation to note two (2) new actions
+* Updated `screenshot.png` to show a bit more of the theme display
 
 == Version 1.2.4 ==
 * Released May 2014
