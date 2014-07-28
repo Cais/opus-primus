@@ -78,9 +78,7 @@ class OpusPrimusTagLines {
 			), 10, 2
 		);
 
-	}
-
-	/** End function - construct */
+	} /** End function - construct */
 
 
 	/** ---- Action and Filter Methods ---- */
@@ -108,7 +106,7 @@ class OpusPrimusTagLines {
 		/** Enqueue Styles */
 		/** Enqueue Taglines Stanza Stylesheets */
 		wp_enqueue_style( 'Opus-Primus-TagLines', OPUS_STANZAS_URI . 'taglines/opus-primus.taglines.css', array(), opus_primus_theme_version(), 'screen' );
-	}
+	} /** End function - scripts and styles */
 
 
 	/**
@@ -123,27 +121,36 @@ class OpusPrimusTagLines {
 	 * @uses              add_meta_box
 	 *
 	 * @internal          used with action hook add_meta_boxes
+	 *
+	 * @version           1.2.5
+	 * @date              July 27, 2014
+	 * Refactored to clarify the parameter usage
 	 */
 	function tagline_create_boxes() {
 		global $post;
 
 		/** May not work with attachments */
 		if ( 'attachment' <> $post->post_type ) {
+			/** @var string $context - valid values: advanced, normal, or side */
+			$context = 'normal';
+			/** @var string $priority - valid values: default, high, low, or core */
+			$priority = 'high';
+
+			/** $context / $priority = normal / high should put this above revisions on the editor pages */
+
 			add_meta_box(
 				'opus_tagline',
 				apply_filters( 'opus_taglines_meta_box_title', sprintf( __( '%1$s Tagline', 'opus-primus' ), ucfirst( $post->post_type ) ) ),
 				array( $this, 'tagline_callback' ),
 				$post->post_type,
-				'advanced',
-				'default',
+				$context,
+				$priority,
 				null
 			);
 		}
 		/** End if - attachment */
 
-	}
-
-	/** End function - tagline create boxes */
+	} /** End function - tagline create boxes */
 
 
 	/**
@@ -188,9 +195,7 @@ class OpusPrimusTagLines {
 		}
 		/** End if - isset */
 
-	}
-
-	/** End function - tagline save postdata */
+	} /** End function - tagline save postdata */
 
 
 	/**
@@ -219,9 +224,7 @@ class OpusPrimusTagLines {
 		}
 		/** End if - not empty */
 
-	}
-
-	/** End function - tagline output */
+	} /** End function - tagline output */
 
 
 	/** ---- Additional Methods ---- */

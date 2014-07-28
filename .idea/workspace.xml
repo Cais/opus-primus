@@ -33,7 +33,7 @@
       <file leaf-file-name="changelog.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/changelog.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="61" selection-start="792" selection-end="853" vertical-scroll-proportion="0.4859611" vertical-offset="0" max-vertical-offset="5280">
+            <state line="23" column="0" selection-start="1509" selection-end="1509" vertical-scroll-proportion="0.50810015" vertical-offset="0" max-vertical-offset="5295">
               <folding />
             </state>
           </provider>
@@ -42,16 +42,7 @@
       <file leaf-file-name="class.OpusPrimusTagLines.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="267" column="69" selection-start="7515" selection-end="7515" vertical-scroll-proportion="-15.166667" vertical-offset="3641" max-vertical-offset="4305">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="screen.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../wp-admin/includes/screen.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="60" selection-start="3551" selection-end="3578" vertical-scroll-proportion="-14.541667" vertical-offset="1466" max-vertical-offset="17610">
+            <state line="268" column="45" selection-start="7883" selection-end="7883" vertical-scroll-proportion="-25.416666" vertical-offset="3410" max-vertical-offset="4350">
               <folding />
             </state>
           </provider>
@@ -133,8 +124,8 @@
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php" />
         <option value="$PROJECT_DIR$/changelog.txt" />
+        <option value="$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php" />
       </list>
     </option>
   </component>
@@ -2308,7 +2299,11 @@
       <created>1406407835753</created>
       <updated>1406407835753</updated>
     </task>
-    <option name="localTasksCounter" value="490" />
+    <task id="LOCAL-00490" summary="* Added `opus_tagline` to default hidden screen options array">
+      <created>1406480981539</created>
+      <updated>1406480981539</updated>
+    </task>
+    <option name="localTasksCounter" value="491" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -2352,12 +2347,13 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32122904" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30193907" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30277777" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32664436" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32681563" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263889" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3404864" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
@@ -2368,7 +2364,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263889" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2411,7 +2406,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* Remove conditional customization enqueue using internal theme folder as not working (or update safe)&#10;- inline documentation updates" />
     <MESSAGE value="* Enqueue custom JavaScript in an update safe location `/wp-content/opus-primus-customs/`&#10;- change JavaScript location parameter from 'true' to true (no quotes)" />
     <MESSAGE value="* Added new method `OpusPrimusNavigation::pagination` for moving between pages of posts&#10;* Added Navigation Section and Page Numbers sub-section" />
     <MESSAGE value="* Changed navigation method from `posts_link` to `pagination`&#10;- center `pagination` output&#10;- adjust `pagination` output to taste" />
@@ -2436,7 +2430,8 @@
     <MESSAGE value="- update to version 1.2.5-beta (ready for release)" />
     <MESSAGE value="- re-organized current changelog into better alphabetized list" />
     <MESSAGE value="- more documentation updates and re-organization" />
-    <option name="LAST_COMMIT_MESSAGE" value="- more documentation updates and re-organization" />
+    <MESSAGE value="* Added `opus_tagline` to default hidden screen options array" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Added `opus_tagline` to default hidden screen options array" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -2689,21 +2684,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../wp-admin/includes/screen.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="60" selection-start="3551" selection-end="3578" vertical-scroll-proportion="-14.541667" vertical-offset="1466" max-vertical-offset="17610">
+        <state line="126" column="60" selection-start="3551" selection-end="3578" vertical-scroll-proportion="0.53282446" vertical-offset="1466" max-vertical-offset="17610">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="267" column="69" selection-start="7515" selection-end="7515" vertical-scroll-proportion="-15.166667" vertical-offset="3641" max-vertical-offset="4305">
+        <state line="268" column="45" selection-start="7883" selection-end="7883" vertical-scroll-proportion="-25.416666" vertical-offset="3410" max-vertical-offset="4350">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/changelog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="61" selection-start="792" selection-end="853" vertical-scroll-proportion="0.4859611" vertical-offset="0" max-vertical-offset="5280">
+        <state line="23" column="0" selection-start="1509" selection-end="1509" vertical-scroll-proportion="0.50810015" vertical-offset="0" max-vertical-offset="5295">
           <folding />
         </state>
       </provider>
