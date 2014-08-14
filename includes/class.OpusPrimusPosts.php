@@ -819,6 +819,10 @@ class OpusPrimusPosts {
 	 * @uses    the_permalink
 	 * @uses    the_title
 	 * @uses    the_title_attribute
+	 *
+	 * @version	1.3
+	 * @date	August 14, 2014
+	 * Added `post-title-link` wrapper class to better manage output
 	 */
 	function post_title( $before = '', $after = '', $echo = true ) {
 		/** Add empty hook before the post title */
@@ -836,14 +840,16 @@ class OpusPrimusPosts {
 
 		/** Wrap the title in an anchor tag and provide a nice tool tip */
 		?>
-		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(
-			array(
-				'before' => __( 'View', 'opus-primus' ) . ' ',
-				'after'  => ' ' . __( 'only', 'opus-primus' )
-			)
-		); ?>">
-			<?php the_title( $before, $after, $echo ); ?>
-		</a>
+		<div class="post-title-link">
+			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(
+				array(
+					'before' => __( 'View', 'opus-primus' ) . ' ',
+					'after'  => ' ' . __( 'only', 'opus-primus' )
+				)
+			); ?>">
+				<?php the_title( $before, $after, $echo ); ?>
+			</a>
+		</div>
 
 		<?php
 		/** Add empty hook after the post title */

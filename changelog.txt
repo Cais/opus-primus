@@ -1,11 +1,13 @@
 === Opus Primus changelog.txt ===
-Last revised July 27, 2014
+Last revised August 14, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.3 ==
 * Released ...
 
 = Code =
+* Added `post-title-link` wrapper class to better manage Post Title output
+
 = CSS =
 = Miscellaneous
 
