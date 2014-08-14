@@ -9,6 +9,8 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added `post-title-link` wrapper class to better manage Post Title output
 
 = CSS =
+* Add new typography styles for better reading
+
 = Miscellaneous
 
 /** ------------------------------------------------------------------------- */
