@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/opus-primus.css" afterPath="$PROJECT_DIR$/css/opus-primus.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stanzas/pullquotes/opus-primus.pullquote.css" afterPath="$PROJECT_DIR$/stanzas/pullquotes/opus-primus.pullquote.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stanzas/taglines/opus-primus.taglines.css" afterPath="$PROJECT_DIR$/stanzas/taglines/opus-primus.taglines.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="opus-primus.iws" />
@@ -36,33 +33,6 @@
         <entry file="file://$PROJECT_DIR$/changelog.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state line="11" column="46" selection-start="314" selection-end="314" vertical-scroll-proportion="0.24444444" vertical-offset="0" max-vertical-offset="5505">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="opus-primus.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="3" selection-start="987" selection-end="987" vertical-scroll-proportion="10.384615" vertical-offset="690" max-vertical-offset="29025">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="opus-primus.pullquote.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stanzas/pullquotes/opus-primus.pullquote.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="1259" selection-end="1259" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1155">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="opus-primus.taglines.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stanzas/taglines/opus-primus.taglines.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="2" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.0" vertical-offset="122" max-vertical-offset="810">
               <folding />
             </state>
           </provider>
@@ -144,8 +114,8 @@
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
         <option value="$PROJECT_DIR$/stanzas/pullquotes/opus-primus.pullquote.css" />
         <option value="$PROJECT_DIR$/stanzas/taglines/opus-primus.taglines.css" />
-        <option value="$PROJECT_DIR$/css/opus-primus.css" />
         <option value="$PROJECT_DIR$/changelog.txt" />
+        <option value="$PROJECT_DIR$/css/opus-primus.css" />
       </list>
     </option>
   </component>
@@ -2391,7 +2361,11 @@
       <created>1408035228161</created>
       <updated>1408035228161</updated>
     </task>
-    <option name="localTasksCounter" value="498" />
+    <task id="LOCAL-00498" summary="* Add new typography styles for better reading">
+      <created>1408060465439</created>
+      <updated>1408060465439</updated>
+    </task>
+    <option name="localTasksCounter" value="499" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -2434,16 +2408,17 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32122904" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3125894" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32664436" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32681563" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263889" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3125894" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31058496" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -2451,7 +2426,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29711142" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263889" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -2494,7 +2468,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* Changed `OpusPrimusNavigation::posts_link` method to be explicitly public and static to address E-STRICT error if called by Child-Theme" />
     <MESSAGE value="* Updated `hooks-actions.txt` documentation to note new actions `opus_navigation_pagination_before` and `opus_navigation_pagination_after`&#10;* Added new method `OpusPrimusNavigation::pagination_wrapped` to provide actions hooks before and after the `pagination` method&#10;* Adjusted the `OpusPrimusStructures::the_loop` and `OpusPrimusStructures::the_loop_archives` to use the `pagination_wrapped` method" />
     <MESSAGE value="* Refactored defaults using true/false to use filtered define statements: author_email and author_description" />
     <MESSAGE value="* Refactored defaults using true/false to use filtered define statements: author_url" />
@@ -2519,7 +2492,8 @@
     <MESSAGE value="- update `readme.txt` with https://themes.trac.wordpress.org/ticket/19955 reference&#10;- increased version to 1.3-alpha&#10;- noted new version number in `style.css`, `index.php`, and `changelog.txt`" />
     <MESSAGE value="- fix typo" />
     <MESSAGE value="* Added `post-title-link` wrapper class to better manage Post Title output" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Added `post-title-link` wrapper class to better manage Post Title output" />
+    <MESSAGE value="* Add new typography styles for better reading" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Add new typography styles for better reading" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -2765,13 +2739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="3" selection-start="987" selection-end="987" vertical-scroll-proportion="10.384615" vertical-offset="690" max-vertical-offset="29025">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stanzas/pullquotes/opus-primus.pullquote.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="0" selection-start="1259" selection-end="1259" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1155">
@@ -2789,6 +2756,13 @@
     <entry file="file://$PROJECT_DIR$/stanzas/taglines/opus-primus.taglines.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="2" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.0" vertical-offset="32" max-vertical-offset="810">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1328" column="0" selection-start="25072" selection-end="25072" vertical-scroll-proportion="0.5755814" vertical-offset="19524" max-vertical-offset="29235">
           <folding />
         </state>
       </provider>

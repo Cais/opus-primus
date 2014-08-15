@@ -267,9 +267,9 @@ input,
 button,
 select,
 textarea {
-	font-size: 22px; /** Changed from 15px */
+	font-size: 15px; /** Changed from 15px */
 	font-weight: normal;
-	line-height: 35px; /** Changed from 21px */
+	line-height: 28px; /** Changed from 21px */
 }
 
 input,
@@ -301,11 +301,11 @@ input[type="search"],
 input[type="tel"],
 input[type="color"] {
 	display: inline-block;
-	height: 18px;
+	height: 25px;
 	padding: 4px;
 	margin-bottom: 9px;
-	font-size: 85%;
-	line-height: 85%;
+	font-size: 13px;
+	line-height: 29px;
 	color: #555555;
 }
 
@@ -883,7 +883,8 @@ ul.nav-menu ul.sub-menu li, ul.nav-menu ul.children li, ul.nav-menu ul, ul.nav-m
 }
 
 ul.breadcrumb {
-	font-size: .875em;
+	font-size: 15px;
+	line-height: 29px;
 	list-style: none;
 	margin-bottom: 0;
 	overflow: hidden;
@@ -891,6 +892,7 @@ ul.breadcrumb {
 
 ul.breadcrumb li {
 	float: left;
+	line-height: 29px;
 }
 
 ul.breadcrumb li a {
@@ -1006,6 +1008,12 @@ ul.page-numbers li span.dots {
 	padding: 4px 9px;
 }
 
+/** Post Link --------------------------------------------------------------- */
+p.navigation.post-link {
+	font-size: 15px;
+	line-height: 29px;
+}
+
 /** End: Navigation --------------------------------------------------------- */
 
 /** === Post Elements === --------------------------------------------------- */
@@ -1045,7 +1053,7 @@ ul.page-numbers li span.dots {
 	cursor: pointer;
 	font-size: 15px;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	line-height: 25px;
+	line-height: 23px;
 	min-width: 64px;
 	padding: 1px 5px 2px;
 	text-align: center;
@@ -1081,8 +1089,8 @@ a.excerpt-more-link:hover {
 /** Codas ------------------------------------------------------------------- */
 .author-coda {
 	border-bottom: 1px solid #d3d3d3;
-	font-size: 150%;
-	line-height: 27px;
+	font-size: 33px;
+	line-height: 48px;
 	margin-bottom: 5px;
 	text-align: center;
 }
@@ -1318,6 +1326,12 @@ ul#comment-fields-listed-wrapper li label {
 }
 
 /** End: Comment Form Fields ------------------------------------------------ */
+
+/** Comments Closed --------------------------------------------------------- */
+.comments-closed-message {
+	font-size: 18px;
+	line-height: 32px;
+}
 
 /** End: Comments ----------------------------------------------------------- */
 
