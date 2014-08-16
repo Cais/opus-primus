@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised August 14, 2014
+Last revised August 16, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.3 ==
@@ -10,6 +10,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = CSS =
 * Add new typography styles for better reading
+* Updated `editor-style.css` to match new typography of theme
 
 = Miscellaneous
 

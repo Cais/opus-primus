@@ -28,6 +28,10 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version	1.3
+ * @date	August 16, 2014
+ * Updated to match new typography of theme
  */
 @import url('style.css');
 
@@ -35,8 +39,8 @@
 html .mceContentBody {
 	margin: 0;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 15px;
-	line-height: 21px;
+	font-size: 22px;
+	line-height: 35px;
 	color: #333333;
 }
 
@@ -67,7 +71,7 @@ address {
 	display: block;
 	margin-bottom: 18px;
 	font-style: normal;
-	line-height: 18px;
+	line-height: 35px;
 }
 
 big {
@@ -83,14 +87,14 @@ blockquote {
 
 blockquote p {
 	margin-bottom: 10px;
-	font-size: 16px;
+	font-size: 23px;
 	font-weight: 300;
-	line-height: 23px;
+	line-height: 36px;
 }
 
 blockquote small {
 	display: block;
-	line-height: 18px;
+	line-height: 30px;
 	color: #999999;
 }
 
@@ -117,11 +121,12 @@ code,
 pre {
 	padding: 0 3px 2px;
 	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-	font-size: 12px;
+	font-size: 19px;
 	color: #333333;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
+	line-height: 32px;
 }
 
 code {
@@ -159,53 +164,59 @@ h6 small {
 }
 
 h1 {
-	font-size: 30px;
-	line-height: 36px;
+	font-size: 44px;
+	line-height: 61px;
 }
 
 h1 small {
-	font-size: 18px;
+	font-size: 35px;
+	line-height: 50px;
 }
 
 h2 {
-	font-size: 24px;
-	line-height: 36px;
+	font-size: 35px;
+	line-height: 50px;
 }
 
 h2 small {
-	font-size: 18px;
+	font-size: 27px;
+	line-height: 41px;
 }
 
 h3 {
-	font-size: 18px;
-	line-height: 27px;
+	font-size: 27px;
+	line-height: 41px;
 }
 
 h3 small {
-	font-size: 14px;
-}
-
-h4,
-h5,
-h6 {
-	line-height: 18px;
+	font-size: 19px;
+	line-height: 32px;
 }
 
 h4 {
-	font-size: 14px;
+	font-size: 19px;
+	line-height: 32px;
 }
 
 h4 small {
-	font-size: 12px;
+	font-size: 18px;
+	line-height: 32px;
 }
 
 h5 {
-	font-size: 12px;
+	font-size: 18px;
+	line-height: 32px;
+}
+
+h5 small {
+	font-size: 16px;
+	line-height: 30px;
 }
 
 h6 {
-	font-size: 11px;
+	font-size: 16px;
 	color: #999999;
+	line-height: 30px;
 	text-transform: uppercase;
 }
 
@@ -236,7 +247,7 @@ kbd {
 ul,
 ol {
 	padding: 0;
-	margin: 0 0 9px 25px;
+	margin: 0 0 9px 35px;
 }
 
 ul ul,
@@ -247,15 +258,15 @@ ol ul {
 }
 
 ul {
-	list-style: disc;
+	list-style: disc inside;
 }
 
 ol {
-	list-style: decimal;
+	list-style: decimal inside;
 }
 
 li {
-	line-height: 18px;
+	line-height: 35px;
 }
 
 /** -- definition */
@@ -265,12 +276,12 @@ dl {
 
 dt,
 dd {
-	line-height: 18px;
+	line-height: 35px;
 }
 
 dt {
 	font-weight: bold;
-	line-height: 17px;
+	line-height: 35px;
 }
 
 dd {
@@ -284,25 +295,21 @@ p {
 }
 
 p small {
-	font-size: 11px;
+	font-size: 16px;
 	color: #999999;
 }
 
 pre {
 	display: block;
-	padding: 9px;
+	padding: 8px;
 	margin: 0 0 9px;
-	font-size: 12px;
-	line-height: 18px;
+	font-size: 18px;
+	line-height: 32px;
 	word-break: break-all;
 	word-wrap: break-word;
-	white-space: pre;
 	white-space: pre-wrap;
 	background-color: #f5f5f5;
 	border: 1px solid #ccc;
-	border: 1px solid rgba(0, 0, 0, 0.15);
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
 	border-radius: 4px;
 }
 
@@ -458,17 +465,17 @@ div.attached-image + div.post-content {
 
 .format-quote blockquote p {
 	font-family: 'Merienda', courrier, serif;
-	font-size: 24px;
+	font-size: 33px;
 	font-weight: 300;
-	line-height: 34px;
+	line-height: 48px;
 	margin: 0 auto;
 	padding: 0 5px;
 	text-align: justify;
 }
 
 .single .format-quote blockquote p {
-	font-size: 48px;
-	line-height: 68px;
+	font-size: 66px;
+	line-height: 89px;
 }
 
 /** End: Post-Format: Quote ------------------------------------------------- */
@@ -491,8 +498,9 @@ div.attached-image + div.post-content {
 /** End: Post-Format: Status ------------------------------------------------ */
 
 /** === Post-Format: Link === ----------------------------------------------- */
-div.post.format-link .post-content a {
-	font-size: 18px;
+div.post.format-link .post-content p a {
+	font-size: 26px;
+	line-height: 40px;
 }
 
 .link-symbol:before {
@@ -507,7 +515,8 @@ div.post.format-link .post-content a {
 
 /** === Post-Format: Audio === ---------------------------------------------- */
 div.post.format-audio .post-content a {
-	font-size: 18px;
+	font-size: 26px;
+	line-height: 40px;
 }
 
 .format-audio p iframe {
@@ -532,9 +541,9 @@ div.post.format-audio .post-content a {
 
 .format-chat .post-content {
 	font-family: 'Underwood-Champion', monospace, serif;
-	font-size: 24px;
+	font-size: 33px;
 	font-weight: 300;
-	line-height: 34px;
+	line-height: 48px;
 	margin: 0 auto;
 	padding: 0 5px;
 }

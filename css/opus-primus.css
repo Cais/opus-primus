@@ -190,14 +190,14 @@ blockquote {
 
 blockquote p {
 	margin-bottom: 10px;
-	font-size: 105%;
+	font-size: 23px;
 	font-weight: 300;
-	line-height: 105%;
+	line-height: 36px;
 }
 
 blockquote small {
 	display: block;
-	line-height: 85%;
+	line-height: 30px;
 	color: #999999;
 }
 
@@ -614,7 +614,7 @@ p {
 }
 
 p small {
-	font-size: 72%;
+	font-size: 16px;
 	color: #999999;
 }
 
@@ -1846,7 +1846,8 @@ div.post.format-link .post-content p a {
 }
 
 div.post.format-audio .post-content a {
-	font-size: 120%;
+	font-size: 26px;
+	line-height: 40px;
 }
 
 .format-audio p iframe {
