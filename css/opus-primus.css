@@ -487,7 +487,8 @@ h1 {
 }
 
 h1 small {
-	font-size: 27px;
+	font-size: 35px;
+	line-height: 50px;
 }
 
 h2 {
@@ -497,6 +498,7 @@ h2 {
 
 h2 small {
 	font-size: 27px;
+	line-height: 41px;
 }
 
 h3 {
@@ -504,26 +506,29 @@ h3 {
 	line-height: 41px;
 }
 
-h3,
-h4,
-h5 {
-	line-height: 32px; /** Changed from 21px */
-}
-
 h3 small {
 	font-size: 19px;
+	line-height: 32px;
 }
 
 h4 {
 	font-size: 19px;
+	line-height: 32px;
 }
 
 h4 small {
 	font-size: 18px;
+	line-height: 32px;
 }
 
 h5 {
 	font-size: 18px;
+	line-height: 32px;
+}
+
+h5 small {
+	font-size: 16px;
+	line-height: 30px;
 }
 
 h6 {
@@ -1094,8 +1099,8 @@ a.excerpt-more-link:hover {
 /** Codas ------------------------------------------------------------------- */
 .author-coda {
 	border-bottom: 1px solid #d3d3d3;
-	font-size: 33px;
-	line-height: 48px;
+	font-size: 30px;
+	line-height: 44px;
 	margin-bottom: 5px;
 	text-align: center;
 }
@@ -1234,6 +1239,8 @@ p.comment-form-comment textarea#comment {
 code.form-allowed-tags-code-box {
 	float: left;
 	width: 98%;
+	font-size: 13px;
+	line-height: 28px;
 }
 
 /** Place the "Post Comment" button on the right side of the content */
@@ -1659,6 +1666,10 @@ div.meta-byline button {
 p.more-images,
 .gallery-caption {
 	padding-top: 4px;
+}
+
+.gallery-caption {
+	word-wrap: break-word;
 }
 
 /** Post-Format: Gallery Archive -------------------------------------------- */
