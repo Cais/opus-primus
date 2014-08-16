@@ -29,10 +29,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="changelog.txt" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="changelog.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/changelog.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="46" selection-start="314" selection-end="314" vertical-scroll-proportion="0.24444444" vertical-offset="0" max-vertical-offset="5505">
+            <state line="11" column="46" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5505">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="opus-primus.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="76" column="21" selection-start="3087" selection-end="3087" vertical-scroll-proportion="0.5164671" vertical-offset="795" max-vertical-offset="29370">
               <folding />
             </state>
           </provider>
@@ -123,7 +132,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1440" />
-    <option name="height" value="808" />
+    <option name="height" value="812" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -197,68 +206,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="stanzas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stanzas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taglines" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stanzas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pullquotes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -280,7 +227,7 @@
     <property name="options.lastSelected" value="web.server" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wpfirstaid" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../plugins/woocommerce" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="293" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="967" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="967" />
@@ -2365,7 +2312,11 @@
       <created>1408060465439</created>
       <updated>1408060465439</updated>
     </task>
-    <option name="localTasksCounter" value="499" />
+    <task id="LOCAL-00499" summary="- Add new typography styles for better reading">
+      <created>1408061946371</created>
+      <updated>1408061946371</updated>
+    </task>
+    <option name="localTasksCounter" value="500" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -2403,22 +2354,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="808" extended-state="0" />
+    <frame x="0" y="22" width="1440" height="812" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32122904" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32664436" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32681563" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263889" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3125894" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3211731" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32664436" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32681563" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31058496" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -2426,6 +2376,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29711142" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263889" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -2468,7 +2419,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* Updated `hooks-actions.txt` documentation to note new actions `opus_navigation_pagination_before` and `opus_navigation_pagination_after`&#10;* Added new method `OpusPrimusNavigation::pagination_wrapped` to provide actions hooks before and after the `pagination` method&#10;* Adjusted the `OpusPrimusStructures::the_loop` and `OpusPrimusStructures::the_loop_archives` to use the `pagination_wrapped` method" />
     <MESSAGE value="* Refactored defaults using true/false to use filtered define statements: author_email and author_description" />
     <MESSAGE value="* Refactored defaults using true/false to use filtered define statements: author_url" />
     <MESSAGE value="* Refactored defaults using true/false to use filtered define statements: page_byline" />
@@ -2493,7 +2443,8 @@
     <MESSAGE value="- fix typo" />
     <MESSAGE value="* Added `post-title-link` wrapper class to better manage Post Title output" />
     <MESSAGE value="* Add new typography styles for better reading" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Add new typography styles for better reading" />
+    <MESSAGE value="- Add new typography styles for better reading" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Add new typography styles for better reading" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -2659,11 +2610,6 @@
         <state line="126" column="60" selection-start="3551" selection-end="3578" vertical-scroll-proportion="0.53282446" vertical-offset="1466" max-vertical-offset="17610" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="0" selection-start="4129" selection-end="4129" vertical-scroll-proportion="0.6870229" vertical-offset="1620" max-vertical-offset="4350" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/readme.txt">
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
@@ -2734,42 +2680,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="195" column="34" selection-start="5080" selection-end="5089" vertical-scroll-proportion="4.4838214" vertical-offset="15" max-vertical-offset="8475">
-          <folding />
-        </state>
+        <state line="195" column="34" selection-start="5080" selection-end="5089" vertical-scroll-proportion="4.4838214" vertical-offset="15" max-vertical-offset="8475" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stanzas/pullquotes/opus-primus.pullquote.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1259" selection-end="1259" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1155">
-          <folding />
-        </state>
+        <state line="35" column="0" selection-start="1259" selection-end="1259" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1155" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/opus-primus-media-queries.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="10" selection-start="2236" selection-end="2236" vertical-scroll-proportion="-2.2222223" vertical-offset="2670" max-vertical-offset="3870">
-          <folding />
-        </state>
+        <state line="78" column="10" selection-start="2236" selection-end="2236" vertical-scroll-proportion="-2.2222223" vertical-offset="2670" max-vertical-offset="3870" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stanzas/taglines/opus-primus.taglines.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="2" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.0" vertical-offset="32" max-vertical-offset="810">
-          <folding />
-        </state>
+        <state line="35" column="2" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.0" vertical-offset="32" max-vertical-offset="810" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
+    <entry file="file://$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1328" column="0" selection-start="25072" selection-end="25072" vertical-scroll-proportion="0.5755814" vertical-offset="19524" max-vertical-offset="29235">
+        <state line="138" column="0" selection-start="4129" selection-end="4129" vertical-scroll-proportion="-2.4185693" vertical-offset="3659" max-vertical-offset="4350">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/changelog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="46" selection-start="314" selection-end="314" vertical-scroll-proportion="0.24444444" vertical-offset="0" max-vertical-offset="5505">
+        <state line="11" column="46" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5505">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="21" selection-start="3087" selection-end="3087" vertical-scroll-proportion="0.5164671" vertical-offset="795" max-vertical-offset="29370">
           <folding />
         </state>
       </provider>

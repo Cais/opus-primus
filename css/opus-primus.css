@@ -74,7 +74,7 @@
  * Minor adjustments to `img` tag related items
  *
  * @version	1.3
- * @date	August 14, 2014
+ * @date	August 16, 2014
  * Add new typography styles for better reading
  */
 
@@ -174,7 +174,7 @@ address {
 	display: block;
 	margin-bottom: 18px;
 	font-style: normal;
-	line-height: 18px;
+	line-height: 35px;
 }
 
 big {
@@ -225,9 +225,10 @@ code,
 pre {
 	padding: 0 3px 2px;
 	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-	font-size: 85%; /** Changed from 13px */
+	font-size: 19px; /** Changed from 13px */
 	color: #333333;
 	border-radius: 3px;
+	line-height: 32px;
 }
 
 code {
@@ -243,6 +244,10 @@ em {
 /** - Forms */
 form {
 	margin: 0 0 18px;
+}
+
+form.post-password-form p label {
+	display: inline-block;
 }
 
 legend {
@@ -556,7 +561,7 @@ kbd {
 ul,
 ol {
 	padding: 0;
-	margin: 0 0 9px 25px;
+	margin: 0 0 9px 35px;
 }
 
 ul ul,
@@ -567,11 +572,11 @@ ol ul {
 }
 
 ul {
-	list-style: disc;
+	list-style: disc inside;
 }
 
 ol {
-	list-style: decimal;
+	list-style: decimal inside;
 }
 
 li {
@@ -585,12 +590,12 @@ dl {
 
 dt,
 dd {
-	line-height: 18px;
+	line-height: 35px;
 }
 
 dt {
 	font-weight: bold;
-	line-height: 17px;
+	line-height: 35px;
 }
 
 dd {
@@ -1528,6 +1533,8 @@ p + div.wp-caption {
 .wp-caption p.wp-caption-text {
 	margin: 0;
 	padding: 0;
+	font-size: 12px;
+	line-height: 28px;
 }
 
 .wp-caption.alignleft,
@@ -1707,7 +1714,8 @@ td.archive-image-excerpt {
 	padding-right: 4px;
 }
 
-div.post.format-video div.post-content p {
+div.post.format-video div.post-content p iframe,
+div.post.format-video div.post-content p embed {
 	text-align: center;
 }
 
@@ -1804,7 +1812,8 @@ blockquote + div.sharing {
 }
 
 div.post.format-link .post-content p a {
-	font-size: 120%;
+	font-size: 26px;
+	line-height: 40px;
 }
 
 .link-symbol:before {
