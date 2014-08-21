@@ -75,7 +75,8 @@
  *
  * @version	1.3
  * @date	August 16, 2014
- * Add new typography styles for better reading
+ * Added new typography styles for better reading
+ * Added styles for the "BNS Login" plugin
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -125,6 +126,8 @@
  * === Style.LESS Compiled to CSS ===
  *
  * === BNS Plugin Integrations ===
+ * BNS Asides
+ * BNS Login
  *
  * === Ain't Miss B. Haven ===
  * Jetpack
@@ -986,7 +989,8 @@ ul.breadcrumb li ul.post-trail-categories li:first-child {
 }
 
 ul.page-numbers {
-	font-size: 80%;
+	font-size: 18px;
+	line-height: 32px;
 	list-style: none;
 }
 
@@ -999,7 +1003,7 @@ ul.page-numbers li a {
 	display: block;
 	float: left;
 	margin-right: 7px;
-	padding: 4px 9px;
+	padding: 0 9px;
 }
 
 ul.page-numbers li span.current {
@@ -1008,14 +1012,14 @@ ul.page-numbers li span.current {
 	display: block;
 	float: left;
 	margin-right: 7px;
-	padding: 4px 9px;
+	padding: 0 9px;
 }
 
 ul.page-numbers li span.dots {
 	display: block;
 	float: left;
 	margin-right: 7px;
-	padding: 4px 9px;
+	padding: 0 9px;
 }
 
 /** Post Link --------------------------------------------------------------- */
@@ -1777,14 +1781,12 @@ div.post.format-video div.post-content div.video-player div.videopress-placehold
 .archive.term-post-format-quote div.meta-tags {
 	display: block;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 75%;
-	line-height: 80%;
 }
 
 /**
  * Another JetPack hack ...
  * Navigator: Captain, there's an iceberg ahead!
- * Captain: Hold your course! Engine room, ramming speed!
+ * Captain: Hold your course! Engine room ... ramming speed!
  */
 blockquote + div.sharing {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1937,6 +1939,12 @@ div.aside-toggler,
 blockquote.aside.nb,
 blockquote.aside.nota-bene {
 	background-color: #e3e3e3;
+}
+
+/** BNS Login */
+.bns-login {
+	font-size: 16px;
+	line-height: 30px;
 }
 
 /** End: BNS Plugin Integrations -------------------------------------------- */
