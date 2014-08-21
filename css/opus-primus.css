@@ -1120,9 +1120,9 @@ a.excerpt-more-link:hover {
 .post-coda-status,
 .post-coda-video {
 	font-size: 30px;
-	line-height: 25%;
+	line-height: 8px;
 	margin-bottom: 9px;
-	margin-top: 15px;
+	margin-top: 6px;
 	text-align: center;
 	border-bottom: 1px solid #d3d3d3;
 }
