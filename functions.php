@@ -182,6 +182,7 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 	 * @uses             add_theme_support: automatic-feed-links
 	 * @uses             add_theme_support: custom-background
 	 * @uses             add_theme_support: custom-header
+	 * @uses             add_theme_support: html5 (search form)
 	 * @uses             add_theme_support: post-formats
 	 * @uses             add_theme_support: post-thumbnails
 	 * @uses             load_theme_textdomain
@@ -194,6 +195,10 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 	 * @date             July 20, 2014
 	 * Added global $content_width
 	 * Moved $content_width definition into theme setup function
+	 *
+	 * @version          1.3
+	 * @date             August 22, 2014
+	 * Added WordPress HTML5 markup support
 	 */
 	function opus_primus_theme_setup() {
 		/** This theme uses post thumbnails */
@@ -245,6 +250,10 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 		);
 		/** Add support for Custom Header images */
 		add_theme_support( 'custom-header', $opus_custom_header_support );
+
+		/** Add WordPress HTML5 markup support */
+		$html_items = array( 'search-form' );
+		add_theme_support( 'html5', $html_items );
 
 		/** Add custom menu support (Primary and Secondary) */
 		register_nav_menus(
