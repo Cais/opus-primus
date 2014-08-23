@@ -13,6 +13,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added new typography styles for better reading
 * Added styles for the "BNS Login" plugin
 * Updated `editor-style.css` to match new typography of theme
+* Updated galleries styles to use HTML5 markup
 
 = Miscellaneous
 

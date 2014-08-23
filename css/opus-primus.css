@@ -77,6 +77,7 @@
  * @date	August 16, 2014
  * Added new typography styles for better reading
  * Added styles for the "BNS Login" plugin
+ * Updated galleries styles to use HTML5 markup
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -106,6 +107,7 @@
  * === 404 Layout ===
  *
  * === General Images ===
+ * Galleries - One to Nine columns
  * === Attachment: Image ===
  *
  * === Authors ===
@@ -1574,9 +1576,100 @@ img.wp-smiley {
 	width: auto;
 }
 
-/** Featured Image */
-/* a.featured-thumbnail + div.post-content { float: left; } */
+/** Galleries - One to Nine columns ----------------------------------------- */
+.gallery {
+	clear: both;
+	text-align: center;
+	width: 100%;
+}
 
+.gallery-item img {
+	margin-top: 10px;
+}
+
+.gallery-columns-2,
+.gallery-columns-3,
+.gallery-columns-4,
+.gallery-columns-5,
+.gallery-columns-6,
+.gallery-columns-7,
+.gallery-columns-8,
+.gallery-columns-9 {
+	float: left;
+	width: 100%;
+}
+
+.gallery-columns-2 figure.gallery-item:nth-of-type(2n+1),
+.gallery-columns-3 figure.gallery-item:nth-of-type(3n+1),
+.gallery-columns-4 figure.gallery-item:nth-of-type(4n+1),
+.gallery-columns-5 figure.gallery-item:nth-of-type(5n+1),
+.gallery-columns-6 figure.gallery-item:nth-of-type(6n+1),
+.gallery-columns-7 figure.gallery-item:nth-of-type(7n+1),
+.gallery-columns-8 figure.gallery-item:nth-of-type(8n+1),
+.gallery-columns-9 figure.gallery-item:nth-of-type(9n+1) {
+	clear: left;
+}
+
+.gallery-columns-2 figure.gallery-item,
+.gallery-columns-3 figure.gallery-item,
+.gallery-columns-4 figure.gallery-item,
+.gallery-columns-5 figure.gallery-item,
+.gallery-columns-6 figure.gallery-item,
+.gallery-columns-7 figure.gallery-item,
+.gallery-columns-8 figure.gallery-item,
+.gallery-columns-9 figure.gallery-item {
+	float: left;
+}
+
+.gallery-columns-6 img,
+.gallery-columns-7 img,
+.gallery-columns-8 img,
+.gallery-columns-9 img {
+	width: 90%;
+	height: auto;
+}
+
+.gallery-columns-2 figure.gallery-item {
+	width: 50%;
+}
+
+.gallery-columns-3 figure.gallery-item {
+	width: 33.3%;
+}
+
+.gallery-columns-4 figure.gallery-item {
+	width: 25%;
+}
+
+.gallery-columns-5 figure.gallery-item {
+	width: 20%;
+}
+
+.gallery-columns-6 figure.gallery-item {
+	width: 16.6%;
+}
+
+.gallery-columns-7 figure.gallery-item {
+	width: 14.2%;
+}
+
+.gallery-columns-8 figure.gallery-item {
+	width: 12.5%;
+}
+
+.gallery-columns-9 figure.gallery-item {
+	width: 11.1%;
+}
+
+/** Hide captions on galleries with large column counts */
+.gallery-columns-6 figcaption,
+.gallery-columns-7 figcaption,
+.gallery-columns-8 figcaption,
+.gallery-columns-9 figcaption {
+	display: none;
+}
+
+/** End: Galleries - One to Nine columns ------------------------------------ */
 /** End: General Images ----------------------------------------------------- */
 
 /** === Attachment: Image === ----------------------------------------------- */

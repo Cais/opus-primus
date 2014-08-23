@@ -182,7 +182,7 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 	 * @uses             add_theme_support: automatic-feed-links
 	 * @uses             add_theme_support: custom-background
 	 * @uses             add_theme_support: custom-header
-	 * @uses             add_theme_support: html5 (search form, comment form, comment list, caption)
+	 * @uses             add_theme_support: html5 (search form, comment form, comment list, caption, gallery)
 	 * @uses             add_theme_support: post-formats
 	 * @uses             add_theme_support: post-thumbnails
 	 * @uses             load_theme_textdomain
@@ -256,7 +256,8 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 			'search-form',
 			'comment-form',
 			'comment-list',
-			'caption'
+			'caption',
+			'gallery'
 		);
 		add_theme_support( 'html5', $html_items );
 

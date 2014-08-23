@@ -31,28 +31,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="changelog.txt" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="changelog.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/changelog.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="259" selection-end="259" vertical-scroll-proportion="0.1988218" vertical-offset="0" max-vertical-offset="5550">
+            <state line="15" column="0" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5565">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="opus-primus.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="opus-primus.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1529" column="41" selection-start="28988" selection-end="28988" vertical-scroll-proportion="0.0" vertical-offset="22807" max-vertical-offset="29730">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="184" column="99" selection-start="7169" selection-end="7217" vertical-scroll-proportion="-12.5" vertical-offset="1800" max-vertical-offset="4455">
+            <state line="79" column="47" selection-start="3234" selection-end="3234" vertical-scroll-proportion="0.2817919" vertical-offset="990" max-vertical-offset="31125">
               <folding />
             </state>
           </provider>
@@ -133,9 +124,9 @@
         <option value="$PROJECT_DIR$/stanzas/pullquotes/opus-primus.pullquote.css" />
         <option value="$PROJECT_DIR$/stanzas/taglines/opus-primus.taglines.css" />
         <option value="$PROJECT_DIR$/editor-style.css" />
-        <option value="$PROJECT_DIR$/css/opus-primus.css" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/changelog.txt" />
+        <option value="$PROJECT_DIR$/css/opus-primus.css" />
       </list>
     </option>
   </component>
@@ -238,7 +229,7 @@
     <property name="options.lastSelected" value="web.server" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../plugins/woocommerce" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../twentythirteen" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="293" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="967" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="967" />
@@ -2347,7 +2338,11 @@
       <created>1408749702003</created>
       <updated>1408749702003</updated>
     </task>
-    <option name="localTasksCounter" value="505" />
+    <task id="LOCAL-00505" summary="* Added WordPress HTML5 markup support for search form, comment form, comment list, and caption">
+      <created>1408754415194</created>
+      <updated>1408754415194</updated>
+    </task>
+    <option name="localTasksCounter" value="506" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -2450,7 +2445,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* Refactored defaults using true/false to use filtered define statements: mod_author&#10;* Deprecated $opus_defaults class (file removal pending)&#10;* Added `opus_primus_defaults.php` to replace $opus_defaults class" />
     <MESSAGE value="* Renamed `opus-ignite.php` to `opus-primus-ignite.php` and moved to theme root&#10;* Added `opus-primus-ignite.php` back into theme core to reduce clutter in `functions.php`" />
     <MESSAGE value="- updated example in documentation" />
     <MESSAGE value="- use `true` instead of `__return_true()` function for `apply_filters()` calls" />
@@ -2475,7 +2469,8 @@
     <MESSAGE value="* Updated `editor-style.css` to match new typography of theme" />
     <MESSAGE value="- adjust post codas" />
     <MESSAGE value="* Added WordPress HTML5 markup support" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Added WordPress HTML5 markup support" />
+    <MESSAGE value="* Added WordPress HTML5 markup support for search form, comment form, comment list, and caption" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Added WordPress HTML5 markup support for search form, comment form, comment list, and caption" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -2713,7 +2708,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1305">
           <folding>
-            <element signature="e#6#1387#0" expanded="true" />
+            <element signature="e#6#1387#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2739,23 +2734,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1529" column="41" selection-start="28988" selection-end="28988" vertical-scroll-proportion="0.0" vertical-offset="22807" max-vertical-offset="29730">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="184" column="99" selection-start="7169" selection-end="7217" vertical-scroll-proportion="-12.5" vertical-offset="1800" max-vertical-offset="4455">
+        <state line="184" column="108" selection-start="7226" selection-end="7226" vertical-scroll-proportion="0.18320611" vertical-offset="1980" max-vertical-offset="4470">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/changelog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="259" selection-end="259" vertical-scroll-proportion="0.1988218" vertical-offset="0" max-vertical-offset="5550">
+        <state line="15" column="0" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5565">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="47" selection-start="3234" selection-end="3234" vertical-scroll-proportion="0.2817919" vertical-offset="990" max-vertical-offset="31125">
           <folding />
         </state>
       </provider>
