@@ -7,7 +7,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Code =
 * Added `post-title-link` wrapper class to better manage Post Title output
-* Added WordPress HTML5 markup support
+* Added WordPress HTML5 markup support for search form, comment form, comment list, and caption
 
 = CSS =
 * Added new typography styles for better reading

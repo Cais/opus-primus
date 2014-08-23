@@ -1517,6 +1517,10 @@ ul.archive.cloud.list ul {
 /** End: General Archives --------------------------------------------------- */
 
 /** === General Images === -------------------------------------------------- */
+figure {
+	margin: 0;
+}
+
 .gallery-item img {
 	height: auto;
 }
@@ -1541,7 +1545,7 @@ p + div.wp-caption {
 	/* padding-top: 8px; */
 }
 
-.wp-caption p.wp-caption-text {
+.wp-caption .wp-caption-text {
 	margin: 0;
 	padding: 0;
 	font-size: 12px;
@@ -1559,7 +1563,7 @@ p + div.wp-caption {
 }
 
 .wp-caption img {
-	/* width: 100%; */
+	width: 98%;
 }
 
 img {

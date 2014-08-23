@@ -182,7 +182,7 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 	 * @uses             add_theme_support: automatic-feed-links
 	 * @uses             add_theme_support: custom-background
 	 * @uses             add_theme_support: custom-header
-	 * @uses             add_theme_support: html5 (search form)
+	 * @uses             add_theme_support: html5 (search form, comment form, comment list, caption)
 	 * @uses             add_theme_support: post-formats
 	 * @uses             add_theme_support: post-thumbnails
 	 * @uses             load_theme_textdomain
@@ -252,7 +252,12 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 		add_theme_support( 'custom-header', $opus_custom_header_support );
 
 		/** Add WordPress HTML5 markup support */
-		$html_items = array( 'search-form' );
+		$html_items = array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'caption'
+		);
 		add_theme_support( 'html5', $html_items );
 
 		/** Add custom menu support (Primary and Secondary) */
