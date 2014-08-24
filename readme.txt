@@ -1,5 +1,5 @@
 === Opus Primus readme.txt ===
-* Last revised July 27, 2014
+* Last revised August 24, 2014
 
 == Contents ==
 * Copyright
@@ -61,6 +61,12 @@ This license can also be found at this permalink: http://www.fontsquirrel.com/li
 Licensed as GNU General Public License, v2 (or newer)
 The details of the copyright and license of this work may be found internal to
 the relevant files found under ..\stanzas\tha\ or at this website: https://github.com/zamoose/themehookalliance
+
+* SlickNav - Responsive Mobile Menu jQuery Plugin - Version 1.0.1
+Copyright (c) 2014, Josh Cope (http://slicknav.com)
+Opus Primus uses an adaptation of the plugin which is under a MIT License
+The details of the license can be found under ../js/SlickNav/MIT-LICENSE.txt
+Only the relevant files have been included, a complete download can be found at https://github.com/ComputerWolf/SlickNav
 
 This above may not be construed as overriding any item with a previously written
 and applied license, stated or not, which will take precedence over anything

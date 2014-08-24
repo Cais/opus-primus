@@ -112,6 +112,10 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 	 * Enqueue custom stylesheet in an update safe location `/wp-content/opus-primus-customs/`
 	 * Enqueue custom JavaScript in an update safe location `/wp-content/opus-primus-customs/`
 	 * Remove conditional customization enqueue using internal theme folder as not working (or update safe)
+	 *
+	 * @version            1.3
+	 * @since              August 24, 2014
+	 * Enqueue JavaScripts and CSS for SlickNav JavaScript plugin integration to handle mobile menus
 	 */
 	function opus_primus_enqueue_scripts() {
 		/** Enqueue Theme Scripts */
@@ -159,6 +163,23 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 			wp_enqueue_script( 'opus-primus-custom-script', OPUS_CUSTOM_URL . 'opus-primus-custom-script.js', array( 'jquery' ), opus_primus_theme_version(), true );
 		}
 		/** End if - is readable */
+
+		/** Mobile Menu via SlickNav JavaScript plugin integration */
+		/** @todo - Can JS and CSS have the same handle? */
+		/** @todo - Should is_mobile be checked? */
+		/** Enqueue the SlickNav styles */
+		wp_enqueue_style( 'SlickNav-CSS-main', OPUS_JS . 'SlickNav/slicknav.css', array(), '1.0.1', 'screen' );
+		/** Enqueue the SlickNav JavaScript with jQuery dependency */
+		wp_enqueue_script( 'SlickNav-JS-main', OPUS_JS . 'SlickNav/jquery.slicknav.min.js', array( 'jquery' ), '1.0.1', true );
+		/** Enqueue SlickNav initialization script with jQuery and SlickNav dependencies */
+		wp_enqueue_script(
+			'SlickNav-init', OPUS_JS . 'opus-primus-slicknav-init.js', array(
+				'jquery',
+				'SlickNav-JS-main'
+			), opus_primus_theme_version(), true
+		);
+		/** Enqueue SlickNav mobile layout only styles with SlickNav dependency */
+		wp_enqueue_style( 'SlickNav-layout', OPUS_CSS . 'opus-primus-slicknav.css', array( 'SlickNav-CSS-main' ), opus_primus_theme_version(), 'screen' );
 
 	}
 	/** End function - opus primus enqueue scripts */
