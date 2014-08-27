@@ -290,7 +290,7 @@ textarea {
 }
 
 label {
-	display: block;
+	display: inline-block;
 	margin-bottom: 5px;
 }
 

@@ -13,6 +13,8 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = CSS =
 * Added new typography styles for better reading
 * Added styles for the "BNS Login" plugin
+* Hide the post/page breadcrumbs in mobile displays
+* Removed duplicate definitions from media queries stylesheet
 * Updated `editor-style.css` to match new typography of theme
 * Updated galleries styles to use HTML5 markup
 
