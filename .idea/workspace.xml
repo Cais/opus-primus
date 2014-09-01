@@ -4,20 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/css/opus-primus.css" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="* Added `OpusPrimusRouter` class to replace path and URL CONSTANTS&#10;* Removed `works-in-progress` folder from theme">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusRouter.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/works-in-progress/comments-toggle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/works-in-progress/readme.txt" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/stanzas/new-custom-stanza/class.OpusPrimusNewCustomCustomStanza.php" afterPath="$PROJECT_DIR$/stanzas/new-custom-stanza/class.OpusPrimusNewCustomStanza.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stanzas/pullquotes/class.OpusPrimusPullQuotes.php" afterPath="$PROJECT_DIR$/stanzas/pullquotes/class.OpusPrimusPullQuotes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php" afterPath="$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stanzas/new-custom-stanza/new-custom-stanza.php" afterPath="$PROJECT_DIR$/stanzas/new-custom-stanza/new-custom-stanza.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-ignite.php" afterPath="$PROJECT_DIR$/opus-primus-ignite.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stanzas/stanzas.php" afterPath="$PROJECT_DIR$/stanzas/stanzas.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stanzas/tha/tha-support.php" afterPath="$PROJECT_DIR$/stanzas/tha/tha-support.php" />
+    <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="opus-primus.iws" />
@@ -2342,7 +2329,11 @@
       <created>1409597900366</created>
       <updated>1409597900367</updated>
     </task>
-    <option name="localTasksCounter" value="510" />
+    <task id="LOCAL-00510" summary="* Added `OpusPrimusRouter` class to replace path and URL CONSTANTS&#10;* Removed `works-in-progress` folder from theme">
+      <created>1409606692503</created>
+      <updated>1409606692503</updated>
+    </task>
+    <option name="localTasksCounter" value="511" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -2445,7 +2436,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="- change parameters of pagination method" />
     <MESSAGE value="- updated hooks-filters.txt and tested up to version" />
     <MESSAGE value="* Renamed `OpusPrimusNavigation::image_nav` to `OpusPrimusNavigation::image_link_navigation`&#10;- updated and improved inline documentation&#10;* Added `opus_image_link_navigation_output` filter hook to provide access to navigation output" />
     <MESSAGE value="* Replaced `OpusPrimusStructures::replace_spaces` with `sanitize_html_class`" />
@@ -2470,7 +2460,8 @@
     <MESSAGE value="* Integrated &quot;SlickNav&quot; (Created by Josh Cope - @computerwolf) for mobile menu support" />
     <MESSAGE value="* Removed duplicate definitions from media queries stylesheet" />
     <MESSAGE value="* Added sanity checks to ensure constants are not already defined" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Added sanity checks to ensure constants are not already defined" />
+    <MESSAGE value="* Added `OpusPrimusRouter` class to replace path and URL CONSTANTS&#10;* Removed `works-in-progress` folder from theme" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Added `OpusPrimusRouter` class to replace path and URL CONSTANTS&#10;* Removed `works-in-progress` folder from theme" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
