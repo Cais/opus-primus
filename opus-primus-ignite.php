@@ -44,9 +44,14 @@
  * Renamed `opus-ignite.php` to `opus-primus-ignite.php` and moved to theme root
  * Added back into theme core to reduce clutter in `functions.php`
  * Set Customization path and URL CONSTANTS
+ *
+ * @version     1.3
+ * @date        September 1, 2014
+ * Added `OPUS_LIB` constant for use with bundled libraries
  */
 
 /** Set CONSTANTS */
+define( 'OPUS_LIB', get_template_directory_uri() . '/lib/' );
 define( 'OPUS_INC', get_template_directory() . '/includes/' );
 define( 'OPUS_JS', get_template_directory_uri() . '/js/' );
 define( 'OPUS_CSS', get_template_directory_uri() . '/css/' );

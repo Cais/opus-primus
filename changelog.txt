@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised August 24, 2014
+Last revised September 1, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.3 ==
@@ -8,6 +8,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = Code =
 * Added `post-title-link` wrapper class to better manage Post Title output
 * Added WordPress HTML5 markup support for search form, comment form, comment list, and caption
+* Create `/lib/` folder to store bundled libraries and ancillary files
 * Enqueue JavaScripts and CSS for SlickNav JavaScript plugin integration to handle mobile menus
 
 = CSS =
