@@ -47,25 +47,65 @@
  *
  * @version     1.3
  * @date        September 1, 2014
+ * Added sanity checks to ensure constants are not already defined
  * Added `OPUS_LIB` constant for use with bundled libraries
  */
 
-/** Set CONSTANTS */
-define( 'OPUS_LIB', get_template_directory_uri() . '/lib/' );
-define( 'OPUS_INC', get_template_directory() . '/includes/' );
-define( 'OPUS_JS', get_template_directory_uri() . '/js/' );
-define( 'OPUS_CSS', get_template_directory_uri() . '/css/' );
-define( 'OPUS_IMAGES', get_template_directory_uri() . '/images/' );
-define( 'OPUS_STANZAS', get_template_directory() . '/stanzas/' );
-define( 'OPUS_STANZAS_URI', get_template_directory_uri() . '/stanzas/' );
-define( 'OPUS_COMPAT', get_template_directory_uri() . '/compatibility/' );
+/**
+ * Set CONSTANTS with Sanity Checks
+ * Although there really should not be any significant cases where the following
+ * constants would be defined elsewhere, there does exist the possibility a
+ * Child-Theme may want to provide a definition using a different path.
+ */
+if ( ! defined( 'OPUS_LIB' ) ) {
+	define( 'OPUS_LIB', get_template_directory_uri() . '/lib/' );
+}
+/** End if - not defined */
+if ( ! defined( 'OPUS_INC' ) ) {
+	define( 'OPUS_INC', get_template_directory() . '/includes/' );
+}
+/** End if - not defined */
+if ( ! defined( 'OPUS_JS' ) ) {
+	define( 'OPUS_JS', get_template_directory_uri() . '/js/' );
+}
+/** End if - not defined */
+if ( ! defined( 'OPUS_CSS' ) ) {
+	define( 'OPUS_CSS', get_template_directory_uri() . '/css/' );
+}
+/** End if - not defined */
+if ( ! defined( 'OPUS_IMAGES' ) ) {
+	define( 'OPUS_IMAGES', get_template_directory_uri() . '/images/' );
+}
+/** End if - not defined */
+if ( ! defined( 'OPUS_STANZAS' ) ) {
+	define( 'OPUS_STANZAS', get_template_directory() . '/stanzas/' );
+}
+/** End if - not defined */
+if ( ! defined( 'OPUS_STANZAS_URI' ) ) {
+	define( 'OPUS_STANZAS_URI', get_template_directory_uri() . '/stanzas/' );
+}
+/** End if - not defined */
+if ( ! defined( 'OPUS_COMPAT' ) ) {
+	define( 'OPUS_COMPAT', get_template_directory_uri() . '/compatibility/' );
+}
+/** End if - not defined */
 
-/** Set Customization path and URL CONSTANTS */
-define( 'OPUS_CUSTOM_PATH', WP_CONTENT_DIR . '/opus-primus-customs/' );
-define( 'OPUS_CUSTOM_URL', content_url( '/opus-primus-customs/' ) );
+/** Set Customization path and URL CONSTANTS with Sanity Checks */
+if ( ! defined( 'OPUS_CUSTOM_PATH' ) ) {
+	define( 'OPUS_CUSTOM_PATH', WP_CONTENT_DIR . '/opus-primus-customs/' );
+}
+/** End if - not defined */
+if ( ! defined( 'OPUS_CUSTOM_URL' ) ) {
+	define( 'OPUS_CUSTOM_URL', content_url( '/opus-primus-customs/' ) );
+}
+/** End if - not defined */
 
 /** For Testing Purposes */
-define( 'OPUS_WIP', get_template_directory() . '/works-in-progress/' );
+if ( ! defined( 'OPUS_WIP' ) ) {
+	define( 'OPUS_WIP', get_template_directory() . '/works-in-progress/' );
+}
+/** End if - not defined */
+/** End: CONSTANTS ---------------------------------------------------------- */
 
 
 /** Add Widgets */
