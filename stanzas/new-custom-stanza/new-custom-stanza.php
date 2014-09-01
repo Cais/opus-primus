@@ -31,6 +31,14 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version	1.3
+ * @date	September 1, 2014
+ * Replaced CONSTANT with OpusPrimusRouter method
+ * Corrected incorrect file reference
  */
 
-require_once( OPUS_STANZAS . 'new-custom-stanza/class.OpusPrimusNewCustomCustomStanza.php' );
+/** Call OpusPrimusRouter global class */
+global $opus_router;
+
+require_once( $opus_router->path( 'stanzas' ) . 'new-custom-stanza/class.OpusPrimusNewCustomStanza.php' );

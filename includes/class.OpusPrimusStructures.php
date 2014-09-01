@@ -274,15 +274,21 @@ class OpusPrimusStructures {
 	 * Bust Image
 	 * Returns the url for the image used on the 404 page
 	 *
-	 * @package            OpusPrimus
-	 * @since              0.1
+	 * @package    OpusPrimus
+	 * @since      0.1
 	 *
-	 * @uses    (CONSTANT) OPUS_IMAGES
+	 * @uses       OpusPrimusRouter::path_uri
 	 *
 	 * @return string - URL of image
+	 *
+	 * @version    1.3
+	 * Replace CONSTANT with OpusPrimusRouter method
 	 */
 	function bust_image() {
-		$bust_image_location = OPUS_IMAGES . 'broken_beethoven.png';
+		/** Call global class variable for the router */
+		global $opus_router;
+
+		$bust_image_location = $opus_router->path_uri( 'images' ) . 'broken_beethoven.png';
 
 		return '<img src="' . $bust_image_location . '" />';
 	}

@@ -6,6 +6,8 @@
  * @package     OpusPrimus
  * @since       0.1
  *
+ * @uses        OpusPrimusRouter::path
+ *
  * @author      Opus Primus <in.opus.primus@gmail.com>
  * @copyright   Copyright (c) 2012-2014, Opus Primus
  *
@@ -38,26 +40,33 @@
  * @version     1.2
  * @date        April 5, 2013
  * Added mechanism to find and include new custom stanzas
+ *
+ * @version     1.3
+ * @date        September 1, 2014
+ * Replaced CONSTANTS with OpusPrimusRouter method
  */
 
+/** Call OpusPrimusRouter global class */
+global $opus_router;
+
 /** Add Pull Quotes */
-require_once( OPUS_STANZAS . 'pullquotes/class.OpusPrimusPullQuotes.php' );
+require_once( $opus_router->path( 'stanzas' ) . 'pullquotes/class.OpusPrimusPullQuotes.php' );
 
 /** Add TagLines */
-require_once( OPUS_STANZAS . 'taglines/class.OpusPrimusTagLines.php' );
+require_once( $opus_router->path( 'stanzas' ) . 'taglines/class.OpusPrimusTagLines.php' );
 
 /** Add Theme Hook Alliance Support */
-require_once( OPUS_STANZAS . 'tha/tha-support.php' );
+require_once( $opus_router->path( 'stanzas' ) . 'tha/tha-support.php' );
 
 
 /** === New Custom Stanzas === ---------------------------------------------- */
 /** Get all files with a .txt extension. */
-$stanzas = glob( OPUS_STANZAS . '*.txt' );
+$stanzas = glob( $opus_router->path( 'stanzas' ) . '*.txt' );
 
 /** Sanity check ... make sure there are custom stanzas to be added first */
 if ( $stanzas ) {
 	foreach ( $stanzas as $stanza ) {
-		require_once( OPUS_STANZAS . basename( $stanza, '.txt' ) . '/' . basename( $stanza, '.txt' ) . '.php' );
+		require_once( $opus_router->path( 'stanzas' ) . basename( $stanza, '.txt' ) . '/' . basename( $stanza, '.txt' ) . '.php' );
 	}
 	/** End foreach - add each custom stanza */
 } /** End if - stanzas */

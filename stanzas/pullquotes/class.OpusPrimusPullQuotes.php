@@ -75,29 +75,36 @@ class OpusPrimusPullQuotes {
 	 * Enqueue Scripts and Styles
 	 * Use to enqueue the extension scripts and stylesheets, if they exists
 	 *
-	 * @package            OpusPrimus
-	 * @since              0.1
+	 * @package     OpusPrimus
+	 * @since       0.1
 	 *
-	 * @uses    (CONSTANT) OPUS_STANZAS_URI
-	 * @uses               opus_primus_theme_version
-	 * @uses               wp_enqueue_script
-	 * @uses               wp_enqueue_style
-	 * @uses               wp_get_theme
+	 * @uses        OpusPrimusRouter::path_uri
+	 * @uses        opus_primus_theme_version
+	 * @uses        wp_enqueue_script
+	 * @uses        wp_enqueue_style
+	 * @uses        wp_get_theme
 	 *
-	 * @internal           jQuery is enqueued as a dependency
+	 * @internal    jQuery is enqueued as a dependency
 	 *
-	 * @version            1.2.4
-	 * @date               May 17, 2014
+	 * @version     1.2.4
+	 * @date        May 17, 2014
 	 * Use `opus_primus_theme_version` in place of `wp_get_theme` call
+	 *
+	 * @version     1.3
+	 * @date        September 1, 2014
+	 * Replace CONSTANTS with OpusPrimusRouter method
 	 */
 	function scripts_and_styles() {
+		/** Call OpusPrimusRouter class global */
+		global $opus_router;
+
 		/** Enqueue Scripts */
 		/** Enqueue Opus Primus PullQuotes JavaScripts which will enqueue jQuery as a dependency */
-		wp_enqueue_script( 'opus-primus-pullquote', OPUS_STANZAS_URI . 'pullquotes/opus-primus.pullquote.js', array( 'jquery' ), opus_primus_theme_version(), true );
+		wp_enqueue_script( 'opus-primus-pullquote', $opus_router->path_uri( 'stanzas' ) . 'pullquotes/opus-primus.pullquote.js', array( 'jquery' ), opus_primus_theme_version(), true );
 
 		/** Enqueue Styles */
 		/** Enqueue PullQuotes Stanza Stylesheets */
-		wp_enqueue_style( 'Opus-Primus-PullQuote', OPUS_STANZAS_URI . 'pullquotes/opus-primus.pullquote.css', array(), opus_primus_theme_version(), 'screen' );
+		wp_enqueue_style( 'Opus-Primus-PullQuote', $opus_router->path_uri( 'stanzas' ) . 'pullquotes/opus-primus.pullquote.css', array(), opus_primus_theme_version(), 'screen' );
 
 	}
 

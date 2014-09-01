@@ -37,13 +37,19 @@
  * @date        February 21, 2013
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>` matching the THA formats
+ *
+ * @version     1.3
+ * Replace CONSTANT with OpusPrimusRouter method
  */
 
+/** Call global class variable for the router */
+global $opus_router;
+
 /** Sanity check - make sure the hooks file exists before adding the bridges */
-if ( file_exists( OPUS_STANZAS . 'tha/tha-theme-hooks.php' ) ) {
+if ( file_exists( $opus_router->path( 'stanzas' ) . 'tha/tha-theme-hooks.php' ) ) {
 
 	/** Grab the THA theme hooks file */
-	require_once( OPUS_STANZAS . 'tha/tha-theme-hooks.php' );
+	require_once( $opus_router->path( 'stanzas' ) . 'tha/tha-theme-hooks.php' );
 
 	/** @example add_action( 'opus_*', 'tha_*' ); */
 

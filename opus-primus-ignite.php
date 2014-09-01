@@ -47,48 +47,8 @@
  *
  * @version     1.3
  * @date        September 1, 2014
- * Added sanity checks to ensure constants are not already defined
- * Added `OPUS_LIB` constant for use with bundled libraries
+ * Removed constant definitions that were replaced by the OpusPrimusRouter class
  */
-
-/**
- * Set CONSTANTS with Sanity Checks
- * Although there really should not be any significant cases where the following
- * constants would be defined elsewhere, there does exist the possibility a
- * Child-Theme may want to provide a definition using a different path.
- */
-if ( ! defined( 'OPUS_LIB' ) ) {
-	define( 'OPUS_LIB', get_template_directory_uri() . '/lib/' );
-}
-/** End if - not defined */
-if ( ! defined( 'OPUS_INC' ) ) {
-	define( 'OPUS_INC', get_template_directory() . '/includes/' );
-}
-/** End if - not defined */
-if ( ! defined( 'OPUS_JS' ) ) {
-	define( 'OPUS_JS', get_template_directory_uri() . '/js/' );
-}
-/** End if - not defined */
-if ( ! defined( 'OPUS_CSS' ) ) {
-	define( 'OPUS_CSS', get_template_directory_uri() . '/css/' );
-}
-/** End if - not defined */
-if ( ! defined( 'OPUS_IMAGES' ) ) {
-	define( 'OPUS_IMAGES', get_template_directory_uri() . '/images/' );
-}
-/** End if - not defined */
-if ( ! defined( 'OPUS_STANZAS' ) ) {
-	define( 'OPUS_STANZAS', get_template_directory() . '/stanzas/' );
-}
-/** End if - not defined */
-if ( ! defined( 'OPUS_STANZAS_URI' ) ) {
-	define( 'OPUS_STANZAS_URI', get_template_directory_uri() . '/stanzas/' );
-}
-/** End if - not defined */
-if ( ! defined( 'OPUS_COMPAT' ) ) {
-	define( 'OPUS_COMPAT', get_template_directory_uri() . '/compatibility/' );
-}
-/** End if - not defined */
 
 /** Set Customization path and URL CONSTANTS with Sanity Checks */
 if ( ! defined( 'OPUS_CUSTOM_PATH' ) ) {
@@ -100,40 +60,38 @@ if ( ! defined( 'OPUS_CUSTOM_URL' ) ) {
 }
 /** End if - not defined */
 
-/** For Testing Purposes */
-if ( ! defined( 'OPUS_WIP' ) ) {
-	define( 'OPUS_WIP', get_template_directory() . '/works-in-progress/' );
-}
-/** End if - not defined */
-/** End: CONSTANTS ---------------------------------------------------------- */
+/** Get the router class so we can build the paths */
+require_once( get_template_directory() . '/includes/' . 'class.OpusPrimusRouter.php' );
+/** Call the global class variable for the router */
+global $opus_router;
 
+/** Add Global Defaults */
+require_once( $opus_router->path( 'includes' ) . 'opus-primus-defaults.php' );
 
 /** Add Widgets */
-require_once( OPUS_INC . 'widgets.php' );
+require_once( $opus_router->path( 'includes' ) . 'widgets.php' );
 
 /** Load the classes - in order of appearance/dependency */
-/** Add Global Defaults */
-require_once( OPUS_INC . 'opus-primus-defaults.php' );
 /** Add Navigation */
-require_once( OPUS_INC . 'class.OpusPrimusNavigation.php' );
+require_once( $opus_router->path( 'includes' ) . 'class.OpusPrimusNavigation.php' );
 /** Add Structures */
-require_once( OPUS_INC . 'class.OpusPrimusStructures.php' );
+require_once( $opus_router->path( 'includes' ) . 'class.OpusPrimusStructures.php' );
 /** Add Headers */
-require_once( OPUS_INC . 'class.OpusPrimusHeaders.php' );
+require_once( $opus_router->path( 'includes' ) . 'class.OpusPrimusHeaders.php' );
 /** Add Posts */
-require_once( OPUS_INC . 'class.OpusPrimusPosts.php' );
+require_once( $opus_router->path( 'includes' ) . 'class.OpusPrimusPosts.php' );
 /** Add Comments Hooks */
-require_once( OPUS_INC . 'class.OpusPrimusComments.php' );
+require_once( $opus_router->path( 'includes' ) . 'class.OpusPrimusComments.php' );
 /** Add Images */
-require_once( OPUS_INC . 'class.OpusPrimusImages.php' );
+require_once( $opus_router->path( 'includes' ) . 'class.OpusPrimusImages.php' );
 /** Add Gallery */
-require_once( OPUS_INC . 'class.OpusPrimusGallery.php' );
+require_once( $opus_router->path( 'includes' ) . 'class.OpusPrimusGallery.php' );
 /** Add Authors */
-require_once( OPUS_INC . 'class.OpusPrimusAuthors.php' );
+require_once( $opus_router->path( 'includes' ) . 'class.OpusPrimusAuthors.php' );
 /** Add Archives */
-require_once( OPUS_INC . 'class.OpusPrimusArchives.php' );
+require_once( $opus_router->path( 'includes' ) . 'class.OpusPrimusArchives.php' );
 /** Add Breadcrumbs */
-require_once( OPUS_INC . 'class.OpusPrimusBreadcrumbs.php' );
+require_once( $opus_router->path( 'includes' ) . 'class.OpusPrimusBreadcrumbs.php' );
 
 /** Add Stanzas */
-require_once( OPUS_STANZAS . 'stanzas.php' );
+require_once( $opus_router->path( 'stanzas' ) . 'stanzas.php' );

@@ -79,8 +79,8 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 	 * @package            OpusPrimus
 	 * @since              0.1
 	 *
-	 * @uses    (CONSTANT) OPUS_CSS
-	 * @uses    (CONSTANT) OPUS_JS
+	 * @uses               OpusPrimusRouter::path
+	 * @uses               OpusPrimusRouter::path_uri
 	 * @uses               opus_primus_theme_version
 	 * @uses               get_header_image
 	 * @uses               is_readable
@@ -115,18 +115,22 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 	 *
 	 * @version            1.3
 	 * @since              August 24, 2014
+	 * Replace CONSTANTS with OpusPrimusRouter methods
 	 * Enqueue JavaScripts and CSS for SlickNav JavaScript plugin integration to handle mobile menus
 	 */
 	function opus_primus_enqueue_scripts() {
+		/** Call class globals as needed */
+		global $opus_router;
+
 		/** Enqueue Theme Scripts */
 		/** Enqueue Opus Primus JavaScripts which will enqueue jQuery as a dependency */
-		wp_enqueue_script( 'opus-primus', OPUS_JS . 'opus-primus.js', array( 'jquery' ), opus_primus_theme_version(), true );
+		wp_enqueue_script( 'opus-primus', $opus_router->path_uri( 'js' ) . 'opus-primus.js', array( 'jquery' ), opus_primus_theme_version(), true );
 		/** Enqueue Opus Primus Full Size Video which will enqueue jQuery as a dependency */
-		wp_enqueue_script( 'opus-primus-full-size-video', OPUS_JS . 'opus-primus-full-size-video.js', array( 'jquery' ), opus_primus_theme_version(), true );
+		wp_enqueue_script( 'opus-primus-full-size-video', $opus_router->path_uri( 'js' ) . 'opus-primus-full-size-video.js', array( 'jquery' ), opus_primus_theme_version(), true );
 		/** Enqueue Opus Primus Comment Tabs which will enqueue jQuery, jQuery UI Core, jQuery UI Widget, and jQuery UI Tabs as dependencies */
 		if ( is_single() ) {
 			wp_enqueue_script(
-				'opus-primus-comment-tabs', OPUS_JS . 'opus-primus-comment-tabs.js', array(
+				'opus-primus-comment-tabs', $opus_router->path_uri( 'js' ) . 'opus-primus-comment-tabs.js', array(
 					'jquery',
 					'jquery-ui-core',
 					'jquery-ui-widget',
@@ -137,17 +141,17 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 		/** End if - is single */
 		/** Enqueue Opus Primus Header Image Position (if there is a header image) which will enqueue jQuery as a dependency */
 		if ( get_header_image() ) {
-			wp_enqueue_script( 'opus-primus-header-image-position', OPUS_JS . 'opus-primus-header-image-position.js', array( 'jquery' ), opus_primus_theme_version(), true );
+			wp_enqueue_script( 'opus-primus-header-image-position', $opus_router->path_uri( 'js' ) . 'opus-primus-header-image-position.js', array( 'jquery' ), opus_primus_theme_version(), true );
 		}
 		/** End if - get header image */
 
 		/** Enqueue Theme Stylesheets */
 		/** Theme Layouts */
-		wp_enqueue_style( 'Opus-Primus-Layout', OPUS_CSS . 'opus-primus-layout.css', array(), opus_primus_theme_version(), 'screen' );
+		wp_enqueue_style( 'Opus-Primus-Layout', $opus_router->path_uri( 'css' ) . 'opus-primus-layout.css', array(), opus_primus_theme_version(), 'screen' );
 		/** Main Theme Elements with dashicons dependency */
-		wp_enqueue_style( 'Opus-Primus', OPUS_CSS . 'opus-primus.css', array( 'dashicons' ), opus_primus_theme_version(), 'screen' );
+		wp_enqueue_style( 'Opus-Primus', $opus_router->path_uri( 'css' ) . 'opus-primus.css', array( 'dashicons' ), opus_primus_theme_version(), 'screen' );
 		/** Media Queries and Responsive Elements */
-		wp_enqueue_style( 'Opus-Primus-Media-Queries', OPUS_CSS . 'opus-primus-media-queries.css', array(), opus_primus_theme_version(), 'screen' );
+		wp_enqueue_style( 'Opus-Primus-Media-Queries', $opus_router->path_uri( 'css' ) . 'opus-primus-media-queries.css', array(), opus_primus_theme_version(), 'screen' );
 
 		/**
 		 * Enqueue custom stylesheet after other stylesheets in an update safe
@@ -167,18 +171,18 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 		/** Mobile Menu via SlickNav JavaScript plugin integration */
 		/** @todo - Should is_mobile be checked? */
 		/** Enqueue the SlickNav styles */
-		wp_enqueue_style( 'SlickNav-CSS-main', OPUS_LIB . 'SlickNav/slicknav.css', array(), '1.0.1', 'screen' );
+		wp_enqueue_style( 'SlickNav-CSS-main', $opus_router->path_uri( 'lib' ) . 'SlickNav/slicknav.css', array(), '1.0.1', 'screen' );
 		/** Enqueue the SlickNav JavaScript with jQuery dependency */
-		wp_enqueue_script( 'SlickNav-JS-main', OPUS_LIB . 'SlickNav/jquery.slicknav.min.js', array( 'jquery' ), '1.0.1', true );
+		wp_enqueue_script( 'SlickNav-JS-main', $opus_router->path_uri( 'lib' ) . 'SlickNav/jquery.slicknav.min.js', array( 'jquery' ), '1.0.1', true );
 		/** Enqueue SlickNav initialization script with jQuery and SlickNav dependencies */
 		wp_enqueue_script(
-			'SlickNav-init', OPUS_LIB . 'opus-primus-slicknav-init.js', array(
+			'SlickNav-init', $opus_router->path_uri( 'lib' ) . 'opus-primus-slicknav-init.js', array(
 				'jquery',
 				'SlickNav-JS-main'
 			), opus_primus_theme_version(), true
 		);
 		/** Enqueue SlickNav mobile layout only styles with SlickNav dependency */
-		wp_enqueue_style( 'SlickNav-layout', OPUS_LIB . 'opus-primus-slicknav.css', array( 'SlickNav-CSS-main' ), opus_primus_theme_version(), 'screen' );
+		wp_enqueue_style( 'SlickNav-layout', $opus_router->path_uri( 'lib' ) . 'opus-primus-slicknav.css', array( 'SlickNav-CSS-main' ), opus_primus_theme_version(), 'screen' );
 
 	}
 	/** End function - opus primus enqueue scripts */
@@ -331,15 +335,22 @@ function opus_primus_return_blank() {
  * @subpackage         Compatibility
  * @since              1.2.3
  *
- * @uses    (CONSTANT) OPUS_COMPAT
+ * @uses               OpusPrimusRouter::path_uri
  * @uses               is_plugin_active
+ * @uses               opus_primus_theme_version
  * @uses               wp_enqueue_style
- * @uses               wp_get_theme
+ *
+ * @version            1.3
+ * @date               September 1, 2014
+ * Replaced CONSTANT with OpusPrimusRouter method
  */
 function opus_primus_compatibility() {
 
 	/** Call the wp-admin plugin code */
 	require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
+
+	/** Call OpusPrimusRouter global class variable */
+	global $opus_router;
 
 	/**
 	 * Soliloquy - slider plugin
@@ -347,7 +358,7 @@ function opus_primus_compatibility() {
 	 */
 	if ( is_plugin_active( 'soliloquy/soliloquy.php' ) ) {
 		/** Enqueue Soliloquy Styles */
-		wp_enqueue_style( 'Opus-Primus-Soliloquy', OPUS_COMPAT . 'opus-primus-soliloquy.css', array(), opus_primus_theme_version(), 'screen' );
+		wp_enqueue_style( 'Opus-Primus-Soliloquy', $opus_router->path_uri( 'compatibility' ) . 'opus-primus-soliloquy.css', array(), opus_primus_theme_version(), 'screen' );
 	}
 	/** End if - soliloquy plugin is active */
 
