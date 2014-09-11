@@ -93,6 +93,7 @@ class OpusPrimusPullQuotes {
 	 * @version     1.3
 	 * @date        September 1, 2014
 	 * Replace CONSTANTS with OpusPrimusRouter method
+	 * Added appropriate suffixes to script and style handles to ensure uniqueness
 	 */
 	function scripts_and_styles() {
 		/** Call OpusPrimusRouter class global */
@@ -100,11 +101,11 @@ class OpusPrimusPullQuotes {
 
 		/** Enqueue Scripts */
 		/** Enqueue Opus Primus PullQuotes JavaScripts which will enqueue jQuery as a dependency */
-		wp_enqueue_script( 'opus-primus-pullquote', $opus_router->path_uri( 'stanzas' ) . 'pullquotes/opus-primus.pullquote.js', array( 'jquery' ), opus_primus_theme_version(), true );
+		wp_enqueue_script( 'opus-primus-pullquote-js', $opus_router->path_uri( 'stanzas' ) . 'pullquotes/opus-primus.pullquote.js', array( 'jquery' ), opus_primus_theme_version(), true );
 
 		/** Enqueue Styles */
 		/** Enqueue PullQuotes Stanza Stylesheets */
-		wp_enqueue_style( 'Opus-Primus-PullQuote', $opus_router->path_uri( 'stanzas' ) . 'pullquotes/opus-primus.pullquote.css', array(), opus_primus_theme_version(), 'screen' );
+		wp_enqueue_style( 'Opus-Primus-PullQuote-CSS', $opus_router->path_uri( 'stanzas' ) . 'pullquotes/opus-primus.pullquote.css', array(), opus_primus_theme_version(), 'screen' );
 
 	}
 
