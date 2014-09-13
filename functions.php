@@ -343,6 +343,7 @@ function opus_primus_return_blank() {
  * @version            1.3
  * @date               September 1, 2014
  * Replaced CONSTANT with OpusPrimusRouter method
+ * Added Contact Form 7 compatibility
  */
 function opus_primus_compatibility() {
 
@@ -361,6 +362,16 @@ function opus_primus_compatibility() {
 		wp_enqueue_style( 'Opus-Primus-Soliloquy', $opus_router->path_uri( 'compatibility' ) . 'opus-primus-soliloquy.css', array(), opus_primus_theme_version(), 'screen' );
 	}
 	/** End if - soliloquy plugin is active */
+
+	/**
+	 * Contact Form 7 - forms plugin
+	 * @link    http://wordpress.org/plugins/contact-form-7/
+	 */
+	if ( is_plugin_active( 'contact-form-7/wp-contact-form-7.php' ) ) {
+		/** Enqueue Soliloquy Styles */
+		wp_enqueue_style( 'Opus-Primus-Contact-Form-7', $opus_router->path_uri( 'compatibility' ) . 'opus-primus-contact-form-7.css', array(), opus_primus_theme_version(), 'screen' );
+	}
+	/** End if - contact form 7 plugin is active */
 
 }
 

@@ -26,6 +26,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Integrated "SlickNav" (Created by Josh Cope - @computerwolf) for mobile menu support
 
 = Miscellaneous
+* Added Contact Form 7 compatibility
 * Removed `works-in-progress` folder from theme
 * Updated `readme.txt` to note the use and license of SlickNav by Josh Cope
 
