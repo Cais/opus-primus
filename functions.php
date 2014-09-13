@@ -125,8 +125,19 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 		/** Enqueue Theme Scripts */
 		/** Enqueue Opus Primus JavaScripts which will enqueue jQuery as a dependency */
 		wp_enqueue_script( 'opus-primus', $opus_router->path_uri( 'js' ) . 'opus-primus.js', array( 'jquery' ), opus_primus_theme_version(), true );
+
 		/** Enqueue Opus Primus Full Size Video which will enqueue jQuery as a dependency */
 		wp_enqueue_script( 'opus-primus-full-size-video', $opus_router->path_uri( 'js' ) . 'opus-primus-full-size-video.js', array( 'jquery' ), opus_primus_theme_version(), true );
+
+		/** Enqueue FitVids - improves responsiveness of videos */
+		wp_enqueue_script( 'FitVids', $opus_router->path_uri( 'lib' ) . 'FitVids/jquery.fitvids.js', array( 'jquery' ), '1.1', true );
+		wp_enqueue_script(
+			'opus-primus-fitvids-init', $opus_router->path_uri( 'lib' ) . 'opus-primus-fitvids-init.js', array(
+				'jquery',
+				'FitVids'
+			), opus_primus_theme_version(), true
+		);
+
 		/** Enqueue Opus Primus Comment Tabs which will enqueue jQuery, jQuery UI Core, jQuery UI Widget, and jQuery UI Tabs as dependencies */
 		if ( is_single() ) {
 			wp_enqueue_script(
@@ -139,6 +150,7 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 			);
 		}
 		/** End if - is single */
+
 		/** Enqueue Opus Primus Header Image Position (if there is a header image) which will enqueue jQuery as a dependency */
 		if ( get_header_image() ) {
 			wp_enqueue_script( 'opus-primus-header-image-position', $opus_router->path_uri( 'js' ) . 'opus-primus-header-image-position.js', array( 'jquery' ), opus_primus_theme_version(), true );
@@ -148,8 +160,10 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 		/** Enqueue Theme Stylesheets */
 		/** Theme Layouts */
 		wp_enqueue_style( 'Opus-Primus-Layout', $opus_router->path_uri( 'css' ) . 'opus-primus-layout.css', array(), opus_primus_theme_version(), 'screen' );
+
 		/** Main Theme Elements with dashicons dependency */
 		wp_enqueue_style( 'Opus-Primus', $opus_router->path_uri( 'css' ) . 'opus-primus.css', array( 'dashicons' ), opus_primus_theme_version(), 'screen' );
+
 		/** Media Queries and Responsive Elements */
 		wp_enqueue_style( 'Opus-Primus-Media-Queries', $opus_router->path_uri( 'css' ) . 'opus-primus-media-queries.css', array(), opus_primus_theme_version(), 'screen' );
 
@@ -169,7 +183,6 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 		/** End if - is readable */
 
 		/** Mobile Menu via SlickNav JavaScript plugin integration */
-		/** @todo - Should is_mobile be checked? */
 		/** Enqueue the SlickNav styles */
 		wp_enqueue_style( 'SlickNav-CSS-main', $opus_router->path_uri( 'lib' ) . 'SlickNav/slicknav.css', array(), '1.0.1', 'screen' );
 		/** Enqueue the SlickNav JavaScript with jQuery dependency */
@@ -341,7 +354,7 @@ function opus_primus_return_blank() {
  * @uses               wp_enqueue_style
  *
  * @version            1.3
- * @date               September 1, 2014
+ * @date               September 13, 2014
  * Replaced CONSTANT with OpusPrimusRouter method
  * Added Contact Form 7 compatibility
  */

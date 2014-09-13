@@ -68,6 +68,11 @@ Opus Primus uses an adaptation of the plugin which is under a MIT License
 The details of the license can be found under ../js/SlickNav/MIT-LICENSE.txt
 Only the relevant files have been included, a complete download can be found at https://github.com/ComputerWolf/SlickNav
 
+* FitVids - built by Chris Coyier and Paravel - Version 1.1
+Copyright 2013, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
+Released under the WTFPL license - http://sam.zoy.org/wtfpl/
+Only the plugin file has been included, the complete project can be found at https://github.com/davatron5000/FitVids.js
+
 This above may not be construed as overriding any item with a previously written
 and applied license, stated or not, which will take precedence over anything
 written here.

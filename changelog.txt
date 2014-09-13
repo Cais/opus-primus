@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised September 1, 2014
+Last revised September 13, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.3 ==
@@ -24,6 +24,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = JavaScript =
 * Integrated "SlickNav" (Created by Josh Cope - @computerwolf) for mobile menu support
+* Integrated "FitVids" built by Chris Coyier (http://chriscoyier.net/) and Paravel (http://paravelinc.com/)
 
 = Miscellaneous
 * Added Contact Form 7 compatibility
