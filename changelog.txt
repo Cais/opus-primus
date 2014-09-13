@@ -30,6 +30,9 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added Contact Form 7 compatibility
 * Removed `works-in-progress` folder from theme
 * Updated `readme.txt` to note the use and license of SlickNav by Josh Cope
+* Updated `readme.txt` to note the use and license of FitVids by Chris Coyier and Paravel
+* Updated `style.css` description to emphasize the addition of the SlickNav and FitVids libraries
+* Updated `screenshot.png` to better reflect latest release
 
 /** ------------------------------------------------------------------------- */
 == Version 1.2.5 ==
