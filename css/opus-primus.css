@@ -77,6 +77,7 @@
  * @date	August 16, 2014
  * Added new typography styles for better reading
  * Added styles for the "BNS Login" plugin
+ * Hide "Search" button for search form
  * Updated galleries styles to use HTML5 markup
  */
 
@@ -1147,6 +1148,10 @@ body.page div.page a.featured-thumbnail img {
 /** End: Page Elements ------------------------------------------------------ */
 
 /** === Search === ---------------------------------------------------------- */
+input.search-submit {
+	display: none;
+}
+
 form.searchform,
 form#searchform {
 	margin: 0;
