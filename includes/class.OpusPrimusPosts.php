@@ -807,21 +807,21 @@ class OpusPrimusPosts {
 	 * Post Title
 	 * Outputs the post title
 	 *
-	 * @package OpusPrimus
-	 * @since   0.1
+	 * @package    OpusPrimus
+	 * @since      0.1
 	 *
 	 * @param   string $before
 	 * @param   string $after
 	 * @param   bool   $echo
 	 *
-	 * @uses    __
-	 * @uses    do_action
-	 * @uses    the_permalink
-	 * @uses    the_title
-	 * @uses    the_title_attribute
+	 * @uses       __
+	 * @uses       do_action
+	 * @uses       the_permalink
+	 * @uses       the_title
+	 * @uses       the_title_attribute
 	 *
-	 * @version	1.3
-	 * @date	August 14, 2014
+	 * @version    1.3
+	 * @date       August 14, 2014
 	 * Added `post-title-link` wrapper class to better manage output
 	 */
 	function post_title( $before = '', $after = '', $echo = true ) {
