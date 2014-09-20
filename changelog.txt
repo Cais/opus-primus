@@ -23,6 +23,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Removed duplicate definitions from media queries stylesheet
 * Updated `editor-style.css` to match new typography of theme
 * Updated galleries styles to use HTML5 markup
+* Updated font-size of excerpt more link symbol to 35px from 200%
 
 = JavaScript =
 * Integrated "SlickNav" (Created by Josh Cope - @computerwolf) for mobile menu support

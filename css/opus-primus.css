@@ -79,6 +79,7 @@
  * Added styles for the "BNS Login" plugin
  * Hide "Search" button for search form
  * Updated galleries styles to use HTML5 markup
+ * Updated font-size of excerpt more link symbol to 35px from 200%
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -1097,7 +1098,7 @@ div.post-content {
 
 /** Read More Link ---------------------------------------------------------- */
 a.excerpt-more-link:hover {
-	font-size: 200%;
+	font-size: 35px;
 	font-weight: bold;
 	vertical-align: bottom;
 	text-decoration: none;
