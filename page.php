@@ -47,8 +47,6 @@
 /** Create class objects */
 $opus_structures = new OpusPrimusStructures();
 $opus_posts      = new OpusPrimusPosts();
-$opus_images     = new OpusPrimusImages();
-$opus_authors    = new OpusPrimusAuthors();
 
 get_header( 'page' );
 
@@ -83,6 +81,9 @@ do_action( 'opus_content_before' ); ?>
 					<div <?php post_class(); ?>>
 
 						<?php
+						/** Create OpusPrimusImages class object */
+						$opus_images = new OpusPrimusImages();
+
 						$opus_posts->post_title();
 						$opus_images->featured_thumbnail( $size = 'full', $class = 'aligncenter' );
 						$opus_posts->post_content();
@@ -104,6 +105,8 @@ do_action( 'opus_content_before' ); ?>
 						}
 						/** End if - show page byline */
 
+						/** Create OpusPrimusAuthors class object */
+						$opus_authors = new OpusPrimusAuthors();
 						$opus_authors->post_author(
 							array(
 								'display_mod_author'   => OPUS_DISPLAY_MOD_AUTHOR,

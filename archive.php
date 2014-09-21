@@ -48,6 +48,7 @@
 
 /** Create OpusPrimusStructures class object */
 $opus_structures = new OpusPrimusStructures();
+
 get_header( 'archive' );
 
 /** Add empty hook before content */

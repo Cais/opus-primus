@@ -46,7 +46,6 @@ $opus_posts      = new OpusPrimusPosts();
 $opus_comments   = new OpusPrimusComments();
 $opus_gallery    = new OpusPrimusGallery();
 $opus_navigation = new OpusPrimusNavigation();
-$opus_authors    = new OpusPrimusAuthors();
 
 /** Display the post */
 ?>
@@ -80,6 +79,8 @@ $opus_authors    = new OpusPrimusAuthors();
 		$opus_posts->meta_tags( $anchor );
 		$opus_posts->post_coda();
 		if ( is_single() ) {
+			/** Create OpusPrimusAuthors class object */
+			$opus_authors = new OpusPrimusAuthors();
 			$opus_authors->post_author(
 				array(
 					'display_mod_author'   => OPUS_DISPLAY_MOD_AUTHOR,

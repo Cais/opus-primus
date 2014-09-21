@@ -51,7 +51,6 @@ $opus_posts      = new OpusPrimusPosts();
 $opus_comments   = new OpusPrimusComments();
 $opus_navigation = new OpusPrimusNavigation();
 $opus_images     = new OpusPrimusImages();
-$opus_authors    = new OpusPrimusAuthors();
 
 /** Display the post */
 ?>
@@ -70,6 +69,8 @@ $opus_authors    = new OpusPrimusAuthors();
 		$opus_posts->post_coda();
 
 		if ( is_single() ) {
+			/** Create OpusPrimusAuthors class object */
+			$opus_authors = new OpusPrimusAuthors();
 			/**
 			 * @internal using $opus_authors->post_author( $args ) works but is
 			 * not as easily read and used as an example when modifying the code

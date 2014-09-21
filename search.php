@@ -37,9 +37,8 @@
  * `opus_<section>_<placement>`
  */
 
-/** Create class objects */
+/** Create OpusPrimusStructures class object */
 $opus_structures = new OpusPrimusStructures();
-$opus_posts      = new OpusPrimusPosts();
 
 get_header( 'search' );
 
@@ -91,6 +90,9 @@ do_action( 'opus_content_before' ); ?>
 						<div <?php post_class(); ?>>
 
 							<?php
+							/** Create OpusPrimusPosts class object */
+							$opus_posts = new OpusPrimusPosts();
+
 							$opus_posts->post_byline( array( 'display_mod_author' => true ) );
 							$opus_posts->post_title();
 							$opus_posts->post_excerpt(); ?>

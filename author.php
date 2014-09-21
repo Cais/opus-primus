@@ -36,9 +36,8 @@
  * `opus_<section>_<placement>`
  */
 
-/** Create class objects */
+/** Create OpusPrimusStructures class object */
 $opus_structures = new OpusPrimusStructures();
-$opus_authors    = new OpusPrimusAuthors();
 
 /** @var $current_author - current author data an as object */
 $current_author = ( get_query_var( 'author_name ' ) ) ? get_user_by( 'id', get_query_var( 'author_name' ) ) : get_userdata( get_query_var( 'author' ) );
@@ -66,7 +65,10 @@ do_action( 'opus_content_before' ); ?>
 
 			<!-- The Author Details block - inserted above the content -->
 			<div class="opus-author-header">
-				<?php $opus_authors->author_details( $current_author_id, true, true, true ); ?>
+				<?php
+				/** Create OpusPrimusAuthors class object */
+				$opus_authors = new OpusPrimusAuthors();
+				$opus_authors->author_details( $current_author_id, true, true, true ); ?>
 			</div>
 			<!-- opus-author-header -->
 

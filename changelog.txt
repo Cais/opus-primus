@@ -12,6 +12,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added `OpusPrimusRouter` class to replace path and URL CONSTANTS
 * Added appropriate suffixes to script and style handles to ensure uniqueness in OpusPrimusPullQuotes
 * Added Child-Theme "slug" for easier customizations
+* Better code organization to only load classes when needed
 * Changed post breadcrumb link to the WordPress shortlink
 * Create `/lib/` folder to store bundled libraries and ancillary files
 * Enqueue JavaScripts and CSS for SlickNav JavaScript plugin integration to handle mobile menus
