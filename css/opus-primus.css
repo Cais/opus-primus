@@ -79,6 +79,7 @@
  * Added styles for the "BNS Login" plugin
  * Added `clear: both` to `footer`
  * Hide "Search" button for search form
+ * Removed unused `div#top-navigation-menu` definition
  * Updated galleries styles to use HTML5 markup
  * Updated font-size of excerpt more link symbol to 35px from 200%
  */
@@ -757,13 +758,6 @@ nav > ul.nav-menu > li.page_item > a,
 }
 
 /* === MENU === */
-div#top-navigation-menu {
-	clear: both;
-	left: 10px;
-	position: relative;
-	width: 970px;
-}
-
 .page ul.nav-menu {
 	padding-left: 0;
 }

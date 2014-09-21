@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised September 13, 2014
+Last revised September 21, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.3 ==
@@ -23,6 +23,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Hide the post/page breadcrumbs in mobile displays
 * Hide "Search" button for search form
 * Removed duplicate definitions from media queries stylesheet
+* Removed unused `div#top-navigation-menu` definition
 * Updated `editor-style.css` to match new typography of theme
 * Updated galleries styles to use HTML5 markup
 * Updated font-size of excerpt more link symbol to 35px from 200%
