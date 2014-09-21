@@ -823,7 +823,6 @@ ul.nav-menu li.hover,
 ul.nav-menu li:hover {
 	cursor: default;
 	position: relative;
-	/* z-index: 4; */
 	z-index: 1;
 }
 
@@ -834,7 +833,6 @@ ul.nav-menu ul {
 	top: 100%;
 	visibility: hidden;
 	width: auto;
-	/* z-index: 3; */
 	z-index: 1;
 }
 
