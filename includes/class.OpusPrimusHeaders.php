@@ -60,9 +60,7 @@ class OpusPrimusHeader {
 		</h1><!-- #site-title -->
 
 	<?php
-	}
-
-	/** End function - site title */
+	} /** End function - site title */
 
 
 	/**
@@ -85,9 +83,7 @@ class OpusPrimusHeader {
 		/** Add empty hook after site title */
 		do_action( 'opus_site_title_after' );
 
-	}
-
-	/** End function - site title block */
+	} /** End function - site title block */
 
 
 	/**
@@ -107,9 +103,7 @@ class OpusPrimusHeader {
 		</h2><!-- #site-description -->
 
 	<?php
-	}
-
-	/** End function - site description */
+	} /** End function - site description */
 
 
 	/**
@@ -133,9 +127,7 @@ class OpusPrimusHeader {
 		/** Add empty hook after site description */
 		do_action( 'opus_site_description_after' );
 
-	}
-
-	/** End function - site description block */
+	} /** End function - site description block */
 
 
 	/**
@@ -153,9 +145,7 @@ class OpusPrimusHeader {
 		$header_image = '<img class="opus-custom-header" src="' . get_header_image() . '" alt="" />';
 
 		return $header_image;
-	}
-
-	/** End function - custom header image */
+	} /** End function - custom header image */
 
 
 	/**
@@ -173,9 +163,7 @@ class OpusPrimusHeader {
 			echo $this->custom_header_image();
 		}
 		/** End if - get header image */
-	}
-
-	/** End function - show custom header image */
+	} /** End function - show custom header image */
 
 
 	/**
@@ -201,6 +189,4 @@ class OpusPrimusHeader {
 	/** End function - show custom header image block */
 
 
-}
-
-/** End class - OpusPrimusHeader */
+} /** End class - OpusPrimusHeader */

@@ -476,6 +476,4 @@ class OpusPrimusNavigation {
 	}
 	/** End function - secondary menu */
 
-}
-
-/** End Opus Primus Navigation class */
+} /** End Opus Primus Navigation class */

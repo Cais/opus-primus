@@ -76,7 +76,7 @@ class OpusPrimusPosts {
 	 * @since            1.0.5
 	 *
 	 * @uses             OpusPrimusPosts::anchor_title_text
-	 * @uses    (GLOBAL) $post
+	 * @uses             (GLOBAL) $post
 	 * @uses             apply_filters
 	 * @uses             get_permalink
 	 *
@@ -381,8 +381,8 @@ class OpusPrimusPosts {
 	 *
 	 * @param   string $tempus - date|time ( default = date )
 	 *
-	 * @uses    (GLOBAL) $opus_author_id
-	 * @uses    (GLOBAL) $post ( ID, post_date, post_modified )
+	 * @uses             (GLOBAL) $opus_author_id
+	 * @uses             (GLOBAL) $post ( ID, post_date, post_modified )
 	 * @uses             __
 	 * @uses             apply_filters
 	 * @uses             do_action
@@ -993,10 +993,10 @@ class OpusPrimusPosts {
 
 		if ( is_sticky() ) {
 			$output = '<a class="button" href="' . get_permalink() . '" title="' . sprintf( __( 'Go to %1$s post', 'opus-primus' ), strtolower( $sticky_text ) ) . '">'
-					  . '<span class="sticky-flag-text">'
-					  . $sticky_text
-					  . '</span>'
-					  . '</a>';
+			          . '<span class="sticky-flag-text">'
+			          . $sticky_text
+			          . '</span>'
+			          . '</a>';
 		} else {
 			$output = '';
 		}
@@ -1050,6 +1050,4 @@ class OpusPrimusPosts {
 	/** End function - uncategorized */
 
 
-}
-
-/** End Opus Primus Posts class */
+} /** End Opus Primus Posts class */

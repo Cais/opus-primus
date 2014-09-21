@@ -5,10 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/404.php" afterPath="$PROJECT_DIR$/404.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archive.php" afterPath="$PROJECT_DIR$/archive.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/author.php" afterPath="$PROJECT_DIR$/author.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusArchives.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusArchives.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusBreadcrumbs.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusBreadcrumbs.php" />
@@ -19,43 +15,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stanzas/pullquotes/class.OpusPrimusPullQuotes.php" afterPath="$PROJECT_DIR$/stanzas/pullquotes/class.OpusPrimusPullQuotes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusRouter.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusRouter.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php" afterPath="$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comments.php" afterPath="$PROJECT_DIR$/comments.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image.php" afterPath="$PROJECT_DIR$/image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stanzas/new-custom-stanza/new-custom-stanza.php" afterPath="$PROJECT_DIR$/stanzas/new-custom-stanza/new-custom-stanza.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive-aside.php" afterPath="$PROJECT_DIR$/opus-primus-archive-aside.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive-audio.php" afterPath="$PROJECT_DIR$/opus-primus-archive-audio.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive-chat.php" afterPath="$PROJECT_DIR$/opus-primus-archive-chat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive-gallery.php" afterPath="$PROJECT_DIR$/opus-primus-archive-gallery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive-image.php" afterPath="$PROJECT_DIR$/opus-primus-archive-image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive-link.php" afterPath="$PROJECT_DIR$/opus-primus-archive-link.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive-quote.php" afterPath="$PROJECT_DIR$/opus-primus-archive-quote.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive-status.php" afterPath="$PROJECT_DIR$/opus-primus-archive-status.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive-video.php" afterPath="$PROJECT_DIR$/opus-primus-archive-video.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive.php" afterPath="$PROJECT_DIR$/opus-primus-archive.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-aside.php" afterPath="$PROJECT_DIR$/opus-primus-aside.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-audio.php" afterPath="$PROJECT_DIR$/opus-primus-audio.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-chat.php" afterPath="$PROJECT_DIR$/opus-primus-chat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-footer.php" afterPath="$PROJECT_DIR$/opus-primus-footer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-gallery.php" afterPath="$PROJECT_DIR$/opus-primus-gallery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-header.php" afterPath="$PROJECT_DIR$/opus-primus-header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-ignite.php" afterPath="$PROJECT_DIR$/opus-primus-ignite.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-image.php" afterPath="$PROJECT_DIR$/opus-primus-image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-link.php" afterPath="$PROJECT_DIR$/opus-primus-link.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-quote.php" afterPath="$PROJECT_DIR$/opus-primus-quote.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-status.php" afterPath="$PROJECT_DIR$/opus-primus-status.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-video.php" afterPath="$PROJECT_DIR$/opus-primus-video.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus.php" afterPath="$PROJECT_DIR$/opus-primus.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page.php" afterPath="$PROJECT_DIR$/page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search.php" afterPath="$PROJECT_DIR$/search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/single.php" afterPath="$PROJECT_DIR$/single.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stanzas/stanzas.php" afterPath="$PROJECT_DIR$/stanzas/stanzas.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stanzas/tha/tha-support.php" afterPath="$PROJECT_DIR$/stanzas/tha/tha-support.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="opus-primus.iws" />
@@ -121,22 +83,10 @@
         <option value="$PROJECT_DIR$/opus-primus-ignite.php" />
         <option value="$PROJECT_DIR$/stanzas/stanzas.php" />
         <option value="$PROJECT_DIR$/stanzas/new-custom-stanza/new-custom-stanza.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" />
         <option value="$PROJECT_DIR$/stanzas/tha/tha-support.php" />
         <option value="$PROJECT_DIR$/stanzas/pullquotes/class.OpusPrimusPullQuotes.php" />
         <option value="$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php" />
         <option value="$PROJECT_DIR$/opus-primus-header.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusArchives.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusBreadcrumbs.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusDefaults.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusHeaders.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusRouter.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
         <option value="$PROJECT_DIR$/opus-primus.php" />
         <option value="$PROJECT_DIR$/404.php" />
         <option value="$PROJECT_DIR$/archive.php" />
@@ -160,7 +110,6 @@
         <option value="$PROJECT_DIR$/opus-primus-audio.php" />
         <option value="$PROJECT_DIR$/opus-primus-chat.php" />
         <option value="$PROJECT_DIR$/opus-primus-footer.php" />
-        <option value="$PROJECT_DIR$/opus-primus-gallery.php" />
         <option value="$PROJECT_DIR$/opus-primus-image.php" />
         <option value="$PROJECT_DIR$/opus-primus-link.php" />
         <option value="$PROJECT_DIR$/opus-primus-quote.php" />
@@ -169,6 +118,19 @@
         <option value="$PROJECT_DIR$/page.php" />
         <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/single.php" />
+        <option value="$PROJECT_DIR$/opus-primus-gallery.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusArchives.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusBreadcrumbs.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusDefaults.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusHeaders.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusRouter.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
       </list>
     </option>
   </component>
@@ -234,6 +196,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -3495,7 +3475,13 @@
       <option name="project" value="LOCAL" />
       <updated>1411335302441</updated>
     </task>
-    <option name="localTasksCounter" value="526" />
+    <task id="LOCAL-00526" summary="* Replaced the majority of `require_once` calls with `locate_template` calls&#10;* Replaced `global` variable calls with `new` class instances">
+      <created>1411340623672</created>
+      <option name="number" value="00526" />
+      <option name="project" value="LOCAL" />
+      <updated>1411340623673</updated>
+    </task>
+    <option name="localTasksCounter" value="527" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -3602,7 +3588,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="- Add new typography styles for better reading" />
     <MESSAGE value="* Updated `editor-style.css` to match new typography of theme" />
     <MESSAGE value="- adjust post codas" />
     <MESSAGE value="* Added WordPress HTML5 markup support" />
@@ -3627,7 +3612,8 @@
     <MESSAGE value="- updated OpusPrimusRouter class to check for child theme and use its folders as defined" />
     <MESSAGE value="- REVERT: updated OpusPrimusRouter class to check for child theme and use its folders as defined" />
     <MESSAGE value="- documentation updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="- documentation updates" />
+    <MESSAGE value="* Replaced the majority of `require_once` calls with `locate_template` calls&#10;* Replaced `global` variable calls with `new` class instances" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Replaced the majority of `require_once` calls with `locate_template` calls&#10;* Replaced `global` variable calls with `new` class instances" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -3639,120 +3625,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8652695" vertical-offset="6097" max-vertical-offset="6765">
-          <caret line="445" column="39" selection-start-line="445" selection-start-column="39" selection-end-line="445" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusComments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2429906" vertical-offset="11238" max-vertical-offset="11880">
-          <caret line="696" column="65" selection-start-line="696" selection-start-column="65" selection-end-line="696" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusDefaults.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1676646" vertical-offset="0" max-vertical-offset="900">
-          <caret line="109" column="4" selection-start-line="109" selection-start-column="4" selection-end-line="109" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusGallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3551402" vertical-offset="0" max-vertical-offset="7425">
-          <caret line="58" column="26" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusHeaders.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14670658" vertical-offset="2497" max-vertical-offset="3165">
-          <caret line="173" column="9" selection-start-line="173" selection-start-column="9" selection-end-line="173" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusImages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.184132" vertical-offset="16117" max-vertical-offset="16785">
-          <caret line="42" column="17" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.0" vertical-offset="6648" max-vertical-offset="7290">
-          <caret line="272" column="25" selection-start-line="272" selection-start-column="25" selection-end-line="272" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPosts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.751497" vertical-offset="0" max-vertical-offset="15900">
-          <caret line="78" column="23" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusRouter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13473053" vertical-offset="0" max-vertical-offset="1365">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="18.188623" vertical-offset="0" max-vertical-offset="14070">
-          <caret line="810" column="54" selection-start-line="810" selection-start-column="54" selection-end-line="810" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/opus-primus-defaults.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6287425" vertical-offset="0" max-vertical-offset="668">
-          <caret line="59" column="44" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/widgets.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35928145" vertical-offset="1440" max-vertical-offset="2730">
-          <caret line="112" column="160" selection-start-line="112" selection-start-column="158" selection-end-line="112" selection-end-column="160" />
-          <folding>
-            <element signature="e#6#1135#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/404.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02245509" vertical-offset="0" max-vertical-offset="1710">
-          <caret line="38" column="3" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/archive.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="692">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/author.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17964073" vertical-offset="0" max-vertical-offset="1170">
@@ -3931,14 +3803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opus-primus-gallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17964073" vertical-offset="0" max-vertical-offset="930">
-          <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/opus-primus-header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.1452096" vertical-offset="0" max-vertical-offset="870">
@@ -4039,6 +3903,126 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08982036" vertical-offset="0" max-vertical-offset="668">
           <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opus-primus-gallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17964073" vertical-offset="0" max-vertical-offset="930">
+          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusArchives.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.9296408" vertical-offset="1957" max-vertical-offset="2625">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8652695" vertical-offset="6067" max-vertical-offset="6735">
+          <caret line="443" column="2" selection-start-line="443" selection-start-column="2" selection-end-line="443" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusBreadcrumbs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="9.004491" vertical-offset="0" max-vertical-offset="6105">
+          <caret line="401" column="2" selection-start-line="401" selection-start-column="2" selection-end-line="401" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusComments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.598803" vertical-offset="11182" max-vertical-offset="11850">
+          <caret line="318" column="21" selection-start-line="318" selection-start-column="21" selection-end-line="318" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusDefaults.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7979042" vertical-offset="217" max-vertical-offset="885">
+          <caret line="107" column="4" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusGallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="7.8592815" vertical-offset="0" max-vertical-offset="7425">
+          <caret line="350" column="6" selection-start-line="350" selection-start-column="6" selection-end-line="350" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusHeaders.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.2215567" vertical-offset="0" max-vertical-offset="2955">
+          <caret line="188" column="4" selection-start-line="188" selection-start-column="4" selection-end-line="188" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusImages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.9416168" vertical-offset="202" max-vertical-offset="16485">
+          <caret line="189" column="6" selection-start-line="189" selection-start-column="6" selection-end-line="189" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="10.733533" vertical-offset="0" max-vertical-offset="7260">
+          <caret line="478" column="2" selection-start-line="478" selection-start-column="2" selection-end-line="478" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusPosts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.8083832" vertical-offset="14572" max-vertical-offset="15870">
+          <caret line="1052" column="2" selection-start-line="1052" selection-start-column="2" selection-end-line="1052" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusRouter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.8862275" vertical-offset="0" max-vertical-offset="1350">
+          <caret line="84" column="2" selection-start-line="84" selection-start-column="2" selection-end-line="84" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusStructures.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30389223" vertical-offset="12997" max-vertical-offset="13665">
+          <caret line="880" column="38" selection-start-line="880" selection-start-column="38" selection-end-line="880" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/opus-primus-defaults.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="692">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/widgets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2265">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

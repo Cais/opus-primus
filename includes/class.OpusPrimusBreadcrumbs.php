@@ -399,6 +399,4 @@ class OpusPrimusBreadcrumbs {
 	/** End function - show the trail */
 
 
-}
-
-/** End class - opus primus breadcrumbs */
+} /** End class - opus primus breadcrumbs */

@@ -325,9 +325,9 @@ class OpusPrimusComments {
 
 		$fields = array(
 			'author' => '<li class="comment-form-author">' . '<label for="author">' . __( 'Name', 'opus-primus' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-			            '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></li>',
+			            '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . ' " size="30" ' . $aria_req . ' /></li>',
 			'email'  => '<li class="comment-form-email"><label for="email">' . __( 'Email', 'opus-primus' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-			            '<input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></li>',
+			            '<input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . ' " size="30" ' . $aria_req . ' /></li>',
 			'url'    => '<li class="comment-form-url"><label for="url">' . __( 'Website', 'opus-primus' ) . '</label>' .
 			            '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></li>',
 		);
@@ -782,6 +782,4 @@ class OpusPrimusComments {
 	/** End function - show all comments count */
 
 
-}
-
-/** End class - Opus Primus Comments */
+} /** End class - Opus Primus Comments */

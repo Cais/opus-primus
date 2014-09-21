@@ -141,8 +141,8 @@ class OpusPrimusImages {
 									'echo'   => '0'
 								)
 							) . '">'
-							 . $archive_image
-							 . '</a></span>';
+						     . $archive_image
+						     . '</a></span>';
 						/**
 						 * @todo Review the following for use?
 						 * if ( empty( $attachments ) ) {
@@ -187,8 +187,7 @@ class OpusPrimusImages {
 		</table><!-- End table -->
 
 	<?php
-	}
-	/** End function - archive image details */
+	} /** End function - archive image details */
 
 
 	/**
@@ -313,8 +312,7 @@ class OpusPrimusImages {
 		/** Add empty hook after exif box */
 		do_action( 'opus_exif_box_after' );
 
-	}
-	/** End function - exif box */
+	} /** End function - exif box */
 
 
 	/**
@@ -418,8 +416,7 @@ class OpusPrimusImages {
 		/** Add empty hook after exif table */
 		do_action( 'opus_exif_table_after' );
 
-	}
-	/** End function - exif table */
+	} /** End function - exif table */
 
 
 	/**
@@ -459,8 +456,7 @@ class OpusPrimusImages {
 
 		return apply_filters( 'opus_exif_aperture', $aperture );
 
-	}
-	/** End function - exif aperture */
+	} /** End function - exif aperture */
 
 
 	/**
@@ -500,8 +496,7 @@ class OpusPrimusImages {
 
 		return apply_filters( 'opus_exif_camera', $camera );
 
-	}
-	/** End function - exif camera */
+	} /** End function - exif camera */
 
 
 	/**
@@ -541,8 +536,7 @@ class OpusPrimusImages {
 
 		return apply_filters( 'opus_exif_caption', $exif_caption );
 
-	}
-	/** End function - exif caption */
+	} /** End function - exif caption */
 
 
 	/**
@@ -591,8 +585,7 @@ class OpusPrimusImages {
 
 		return apply_filters( 'opus_exif_copyright', $copyright );
 
-	}
-	/** End function - exif copyright */
+	} /** End function - exif copyright */
 
 
 	/**
@@ -622,8 +615,7 @@ class OpusPrimusImages {
 		}
 		/** End if - isset */
 
-	}
-	/** End function  - exif data */
+	} /** End function  - exif data */
 
 
 	/**
@@ -635,7 +627,7 @@ class OpusPrimusImages {
 	 * @since            0.1
 	 *
 	 * @uses             OpusPrimusImages::exif_data
-	 * @uses    (GLOBAL) $post
+	 * @uses             (GLOBAL) $post
 	 * @uses             apply_filters
 	 * @uses             do_action
 	 * @uses             wp_get_attachment_url
@@ -672,8 +664,7 @@ class OpusPrimusImages {
 
 		return apply_filters( 'opus_exif_dimensions', $dimensions );
 
-	}
-	/** End function - exif dimensions */
+	} /** End function - exif dimensions */
 
 
 	/**
@@ -715,8 +706,7 @@ class OpusPrimusImages {
 
 		return apply_filters( 'opus_exif_focal_length', $focal_length );
 
-	}
-	/** End function - exif focal length */
+	} /** End function - exif focal length */
 
 
 	/**
@@ -756,8 +746,7 @@ class OpusPrimusImages {
 
 		return apply_filters( 'opus_exif_iso_speed', $iso_speed );
 
-	}
-	/** End function - exif iso speed */
+	} /** End function - exif iso speed */
 
 
 	/**
@@ -807,8 +796,7 @@ class OpusPrimusImages {
 
 		return apply_filters( 'opus_exif_shutter', $shutter );
 
-	}
-	/** End function - exif shutter */
+	} /** End function - exif shutter */
 
 
 	/**
@@ -857,8 +845,7 @@ class OpusPrimusImages {
 
 		return apply_filters( 'opus_exif_timestamp', $timestamp );
 
-	}
-	/** End function - exif timestamp */
+	} /** End function - exif timestamp */
 
 
 	/**
@@ -898,8 +885,7 @@ class OpusPrimusImages {
 
 		return apply_filters( 'opus_exif_title', $exif_title );
 
-	}
-	/** End function - exif title */
+	} /** End function - exif title */
 
 
 	/**
@@ -951,8 +937,7 @@ class OpusPrimusImages {
 		}
 		/** End if - has post thumbnail and not is single */
 
-	}
-	/** End function - featured thumbnail */
+	} /** End function - featured thumbnail */
 
 
 	/**
@@ -991,8 +976,7 @@ class OpusPrimusImages {
 		}
 		/** End if - echo is true */
 
-	}
-	/** End function - show featured thumbnail */
+	} /** End function - show featured thumbnail */
 
 
 	/**
@@ -1004,7 +988,7 @@ class OpusPrimusImages {
 	 *
 	 * @internal         Inspired by http://css-tricks.com/snippets/wordpress/get-the-first-image-from-a-post/
 	 *
-	 * @uses    (GLOBAL) $post
+	 * @uses             (GLOBAL) $post
 	 *
 	 * @version          1.2.2
 	 * @date             September 12, 2013
@@ -1033,8 +1017,7 @@ class OpusPrimusImages {
 
 		return null;
 
-	}
-	/** End function - first linked image */
+	} /** End function - first linked image */
 
 
 	/**
@@ -1090,8 +1073,7 @@ class OpusPrimusImages {
 		/** Add empty hook after the image title */
 		do_action( 'opus_image_title_after' );
 
-	}
-	/** End function - image title */
+	} /** End function - image title */
 
 
 	/**
@@ -1109,6 +1091,4 @@ class OpusPrimusImages {
 	/** End function - show first linked image */
 
 
-}
-
-/** End class - Opus Primus Images */
+} /** End class - Opus Primus Images */

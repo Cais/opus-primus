@@ -105,7 +105,6 @@ if ( ! class_exists( 'OpusPrimusDefaults' ) ) {
 		}
 
 	}
-
 	/** End Opus Primus Defaults class */
 
 }

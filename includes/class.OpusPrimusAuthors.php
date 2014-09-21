@@ -441,6 +441,4 @@ class OpusPrimusAuthors {
 	/** End function - post author */
 
 
-}
-
-/** End of Class Opus Primus Authors */
+} /** End of Class Opus Primus Authors */

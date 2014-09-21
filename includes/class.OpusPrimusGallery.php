@@ -56,7 +56,7 @@ class OpusPrimusGallery {
 	 * @param   string $size - thumbnail|medium|large|full (default WordPress image sizes)
 	 *
 	 * @uses                OpusPrimusGallery::get_gallery_attr_featured_ids
-	 * @uses       (GLOBAL) $opus_thumb_id
+	 * @uses                (GLOBAL) $opus_thumb_id
 	 * @uses                __
 	 * @uses                do_action
 	 * @uses                get_children
@@ -139,8 +139,8 @@ class OpusPrimusGallery {
 									'echo'   => '0'
 								)
 							) . '">'
-							 . wp_get_attachment_image( $opus_thumb_id, $size )
-							 . '</a></p>';
+						     . wp_get_attachment_image( $opus_thumb_id, $size )
+						     . '</a></p>';
 					} else {
 						echo wp_get_attachment_image( $opus_thumb_id, $size );
 					}
@@ -157,8 +157,8 @@ class OpusPrimusGallery {
 										'echo'   => '0'
 									)
 								) . '">'
-								 . wp_get_attachment_image( $opus_thumb_id, $size )
-								 . '</a></p>';
+							     . wp_get_attachment_image( $opus_thumb_id, $size )
+							     . '</a></p>';
 						} else {
 							echo wp_get_attachment_image( $opus_thumb_id, $size );
 						}
@@ -335,8 +335,8 @@ class OpusPrimusGallery {
 	 * @package            OpusPrimus
 	 * @since              0.1
 	 *
-	 * @uses    (CONSTANT) OPUS_NUMBER_OF_SECONDARY_IMAGES
-	 * @uses    (GLOBAL)   $opus_thumb_id
+	 * @uses               (CONSTANT) OPUS_NUMBER_OF_SECONDARY_IMAGES
+	 * @uses               (GLOBAL)   $opus_thumb_id
 	 * @uses               WP_Query
 	 * @uses               apply_filters
 	 * @uses               do_action
@@ -346,6 +346,8 @@ class OpusPrimusGallery {
 	 * @uses               the_title_attribute
 	 * @uses               wp_get_attachment_image
 	 * @uses               wp_parse_args
+	 *
+	 * @param array|string $secondary_images_args
 	 *
 	 * @version            1.2.2
 	 * @date               September 3, 2013
@@ -485,6 +487,4 @@ class OpusPrimusGallery {
 	/** End function - secondary images */
 
 
-}
-
-/** End Opus Primus Gallery class */
+} /** End Opus Primus Gallery class */

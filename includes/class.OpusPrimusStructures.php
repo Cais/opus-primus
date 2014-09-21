@@ -61,9 +61,7 @@ class OpusPrimusStructures {
 		/** Add Support Comment to footer area */
 		add_action( 'wp_footer', array( $this, 'support_comment' ) );
 
-	}
-
-	/** End function - construct */
+	} /** End function - construct */
 
 
 	/** ---- Action and Filter Methods ---- */
@@ -127,9 +125,7 @@ class OpusPrimusStructures {
 
 		return apply_filters( 'opus_browser_title', $opus_title_text );
 
-	}
-
-	/** End function - browser title */
+	} /** End function - browser title */
 
 
 	/**
@@ -234,9 +230,7 @@ class OpusPrimusStructures {
 
 		return apply_filters( 'opus_body_classes', $classes );
 
-	}
-
-	/** End function - body classes */
+	} /** End function - body classes */
 
 
 	/**
@@ -250,9 +244,7 @@ class OpusPrimusStructures {
 	 */
 	function show_bust_image() {
 		echo $this->bust_image();
-	}
-
-	/** End function - show bust image */
+	} /** End function - show bust image */
 
 
 	/**
@@ -273,9 +265,7 @@ class OpusPrimusStructures {
 
 		echo $comment;
 
-	}
-
-	/** End function - support comment */
+	} /** End function - support comment */
 
 
 	/** ---- Additional Methods ---- */
@@ -302,9 +292,8 @@ class OpusPrimusStructures {
 		$bust_image_location = $opus_router->path_uri( 'images' ) . 'broken_beethoven.png';
 
 		return '<img src="' . $bust_image_location . '" />';
-	}
 
-	/** End function - bust image */
+	} /** End function - bust image */
 
 
 	/**
@@ -418,9 +407,7 @@ class OpusPrimusStructures {
 
 		return apply_filters( 'opus_copyright', $output );
 
-	}
-
-	/** End function - copyright */
+	} /** End function - copyright */
 
 
 	/**
@@ -478,9 +465,7 @@ class OpusPrimusStructures {
 
 		return apply_filters( 'opus_credits', $credits );
 
-	}
-
-	/** End function - credits */
+	} /** End function - credits */
 
 
 	/**
@@ -529,9 +514,7 @@ class OpusPrimusStructures {
 
 		return $layout;
 
-	}
-
-	/** End function - layout close */
+	} /** End function - layout close */
 
 
 	/**
@@ -584,9 +567,7 @@ class OpusPrimusStructures {
 
 		return $layout;
 
-	}
-
-	/** End function - layout open */
+	} /** End function - layout open */
 
 
 	/**
@@ -673,9 +654,7 @@ class OpusPrimusStructures {
 		/** Add empty hook after no posts results from the_loop query */
 		do_action( 'opus_search_results_after' );
 
-	}
-
-	/** End function - no search results */
+	} /** End function - no search results */
 
 
 	/**
@@ -763,9 +742,7 @@ class OpusPrimusStructures {
 		$opus_navigation->pagination_wrapped();
 		/** the_Loop ends */
 
-	}
-
-	/** End function - the loop */
+	} /** End function - the loop */
 
 
 	/**
@@ -812,9 +789,7 @@ class OpusPrimusStructures {
 		$opus_navigation->pagination_wrapped();
 		/** the_Loop ends */
 
-	}
-
-	/** End function - the loop archives */
+	} /** End function - the loop archives */
 
 
 	/**
@@ -855,9 +830,7 @@ class OpusPrimusStructures {
 		/** Add empty action after the_Loop */
 		do_action( 'opus_the_loop_after' );
 
-	}
-
-	/** End function - the loop wrapped */
+	} /** End function - the loop wrapped */
 
 
 	/**
@@ -905,7 +878,7 @@ class OpusPrimusStructures {
 
 }
 
-/** End Opus Primus Structures class */
+/** End class - opus primus structures */
 
 /** ------------------------------------------------------------------------- */
 /** Testing ... testing ... testing ... */

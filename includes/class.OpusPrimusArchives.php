@@ -167,6 +167,4 @@ class OpusPrimusArchives {
 	/** End function categories archive */
 
 
-}
-
-/** End Class Opus Primus Archives */
+} /** End Class Opus Primus Archives */

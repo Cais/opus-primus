@@ -61,7 +61,7 @@ class OpusPrimusRouter {
 	 */
 	function path( $string ) {
 		return get_template_directory() . '/' . $string . '/';
-	}
+	} /** End function - path */
 
 	/**
 	 * Path
@@ -80,7 +80,6 @@ class OpusPrimusRouter {
 	function path_uri( $string ) {
 		return get_template_directory_uri() . '/' . $string . '/';
 	}
+	/** End function - path uri */
 
-}
-
-/** End class - Opus Primus Router */
+} /** End class - Opus Primus Router */
