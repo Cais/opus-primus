@@ -82,8 +82,8 @@ class OpusPrimusStructures {
 	 * @param       string $old_title - default title text
 	 * @param       string $sep       - separator character
 	 *
-	 * @uses    (GLOBAL) $page
-	 * @uses    (GLOBAL) $paged
+	 * @uses             (GLOBAL) $page
+	 * @uses             (GLOBAL) $paged
 	 * @uses             apply_filters
 	 * @uses             get_bloginfo - name, description
 	 * @uses             is_home
@@ -143,12 +143,17 @@ class OpusPrimusStructures {
 	 *
 	 * @uses             apply_filters
 	 * @uses             is_active_sidebar
+	 * @uses             is_child_theme
 	 *
 	 * @return  string - specific class based on active columns
 	 *
 	 * @version          1.2
 	 * @date             April 9, 2013
 	 * Added sanity conditional check to eliminate potential duplicate classes
+	 *
+	 * @version          1.3
+	 * @date             September 20, 2014
+	 * Added Child-Theme "slug" for easier customizations
 	 */
 	function body_classes( $classes ) {
 		/** Theme Layout */
@@ -160,13 +165,13 @@ class OpusPrimusStructures {
 
 		/** Test if the first-sidebar or second-sidebar is active by testing their component widget areas for a two column layout */
 		if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
-			 && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
-					&& ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) )
+		     && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
+		            && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) )
 		) {
 			$classes[] = 'two-column';
 		} elseif ( ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) )
-				   && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
-						  && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) )
+		           && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
+		                  && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) )
 		) {
 			$classes[] = 'two-column';
 		}
@@ -218,6 +223,12 @@ class OpusPrimusStructures {
 		}
 
 		/** End if - not class exists */
+
+		/** Add Child-Theme "slug" for easier customizations */
+		if ( is_child_theme() ) {
+			$classes[] = sanitize_html_class( get_option( 'stylesheet' ) );
+		}
+		/** End if - is child theme */
 
 		/** Return the classes for use with the `body_class` filter */
 
@@ -497,13 +508,13 @@ class OpusPrimusStructures {
 
 		/** Test if the first-sidebar or second-sidebar is active by testing their component widget areas for a two column layout */
 		if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
-			 && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
-					&& ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) )
+		     && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
+		            && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) )
 		) {
 			$layout = '</div><!-- .column-mask .right-sidebar --></div><!--.column-left -->';
 		} elseif ( ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) )
-				   && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
-						  && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) )
+		           && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
+		                  && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) )
 		) {
 			$layout = '</div><!-- .column-mask .right-sidebar --></div><!--.column-left -->';
 		}
@@ -552,13 +563,13 @@ class OpusPrimusStructures {
 
 		/** Test if the first-sidebar or second-sidebar is active by testing their component widget areas for a two column layout */
 		if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
-			 && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
-					&& ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) )
+		     && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
+		            && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) )
 		) {
 			$layout = '<div class="column-mask right-sidebar"><div class="column-left">';
 		} elseif ( ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) )
-				   && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
-						  && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) )
+		           && ! ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
+		                  && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) )
 		) {
 			$layout = '<div class="column-mask right-sidebar"><div class="column-left">';
 		}
@@ -635,24 +646,24 @@ class OpusPrimusStructures {
 
 		/** Display a list of categories to choose from */
 		$opus_archives->categories_archive(
-					  array(
-						  'orderby'      => 'count',
-						  'order'        => 'desc',
-						  'show_count'   => 1,
-						  'hierarchical' => 0,
-						  'title_li'     => sprintf( '<span class="title">%1$s</span>', apply_filters( 'opus_category_archives_title', __( 'Top 10 Categories by Post Count:', 'opus-primus' ) ) ),
-						  'number'       => 10,
-					  )
+			array(
+				'orderby'      => 'count',
+				'order'        => 'desc',
+				'show_count'   => 1,
+				'hierarchical' => 0,
+				'title_li'     => sprintf( '<span class="title">%1$s</span>', apply_filters( 'opus_category_archives_title', __( 'Top 10 Categories by Post Count:', 'opus-primus' ) ) ),
+				'number'       => 10,
+			)
 		);
 
 		/** Display a list of tags to choose from */
 		$opus_archives->archive_cloud(
-					  array(
-						  'taxonomy' => 'post_tag',
-						  'orderby'  => 'count',
-						  'order'    => 'DESC',
-						  'number'   => 10,
-					  )
+			array(
+				'taxonomy' => 'post_tag',
+				'orderby'  => 'count',
+				'order'    => 'DESC',
+				'number'   => 10,
+			)
 		);
 
 		/** Display a list of pages to choose from */
