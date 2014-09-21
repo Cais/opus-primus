@@ -80,6 +80,7 @@
  * Added `clear: both` to `footer`
  * Hide "Search" button for search form
  * Removed unused `div#top-navigation-menu` definition
+ * Removed unused `nav div.nav ul li` definition
  * Updated galleries styles to use HTML5 markup
  * Updated font-size of excerpt more link symbol to 35px from 200%
  */
@@ -745,12 +746,6 @@ ul.sidebar {
 /** End: Clearance ---------------------------------------------------------- */
 
 /** === Menu Related Elements === */
-nav div.nav ul li {
-	float: left;
-	list-style-type: none;
-	padding: 10px;
-}
-
 /** Center only the top level menu items */
 nav > ul.nav-menu > li.page_item > a,
 .nav-menu > li.menu-item > a {

@@ -24,6 +24,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Hide "Search" button for search form
 * Removed duplicate definitions from media queries stylesheet
 * Removed unused `div#top-navigation-menu` definition
+* Removed unused `nav div.nav ul li` definition
 * Updated `editor-style.css` to match new typography of theme
 * Updated galleries styles to use HTML5 markup
 * Updated font-size of excerpt more link symbol to 35px from 200%
