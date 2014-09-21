@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusRouter.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusRouter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/opus-primus.css" afterPath="$PROJECT_DIR$/css/opus-primus.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="opus-primus.iws" />
@@ -45,18 +44,8 @@
       <file leaf-file-name="class.OpusPrimusRouter.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusRouter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.505988" vertical-offset="757" max-vertical-offset="1770">
-              <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="opus-primus.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="31095">
-              <caret line="82" column="48" selection-start-line="82" selection-start-column="48" selection-end-line="82" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.7080838" vertical-offset="592" max-vertical-offset="1320">
+              <caret line="71" column="21" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -3466,7 +3455,13 @@
       <option name="project" value="LOCAL" />
       <updated>1411318500940</updated>
     </task>
-    <option name="localTasksCounter" value="523" />
+    <task id="LOCAL-00523" summary="- updated OpusPrimusRouter class to check for child theme and use its folders as defined">
+      <created>1411324301214</created>
+      <option name="number" value="00523" />
+      <option name="project" value="LOCAL" />
+      <updated>1411324301214</updated>
+    </task>
+    <option name="localTasksCounter" value="524" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -3573,7 +3568,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="- fix typo" />
     <MESSAGE value="* Added `post-title-link` wrapper class to better manage Post Title output" />
     <MESSAGE value="* Add new typography styles for better reading" />
     <MESSAGE value="- Add new typography styles for better reading" />
@@ -3598,7 +3592,8 @@
     <MESSAGE value="* Added Child-Theme &quot;slug&quot; for easier customizations" />
     <MESSAGE value="* Removed unused `div#top-navigation-menu` definition" />
     <MESSAGE value="* Removed unused `nav div.nav ul li` definition" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Removed unused `nav div.nav ul li` definition" />
+    <MESSAGE value="- updated OpusPrimusRouter class to check for child theme and use its folders as defined" />
+    <option name="LAST_COMMIT_MESSAGE" value="- updated OpusPrimusRouter class to check for child theme and use its folders as defined" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -3950,7 +3945,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="31125">
+        <state vertical-scroll-proportion="1.7774566" vertical-offset="0" max-vertical-offset="31095">
           <caret line="82" column="48" selection-start-line="82" selection-start-column="48" selection-end-line="82" selection-end-column="48" />
           <folding />
         </state>
@@ -3966,8 +3961,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusRouter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.505988" vertical-offset="757" max-vertical-offset="1770">
-          <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.7080838" vertical-offset="592" max-vertical-offset="1320">
+          <caret line="71" column="21" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
           <folding />
         </state>
       </provider>

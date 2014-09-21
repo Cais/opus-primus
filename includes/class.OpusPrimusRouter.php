@@ -51,27 +51,12 @@ class OpusPrimusRouter {
 	 * @package    OpusPrimus
 	 * @since      1.3
 	 *
-	 * @uses       get_stylesheet_directory
-	 * @uses       get_template_directory
-	 * @uses       is_child_theme
-	 *
 	 * @param $string
 	 *
 	 * @return string
 	 */
 	function path( $string ) {
-
-		/** Sanity check - parent or child theme? */
-		if ( is_child_theme() ) {
-			$path = get_stylesheet_directory();
-		} else {
-			$path = get_template_directory();
-		}
-
-		/** End if - is child theme */
-
-		return $path . '/' . $string . '/';
-
+		return get_template_directory() . '/' . $string . '/';
 	}
 
 	/**
@@ -82,27 +67,12 @@ class OpusPrimusRouter {
 	 * @package    OpusPrimus
 	 * @since      1.3
 	 *
-	 * @uses       get_stylesheet_directory_uri
-	 * @uses       get_template_directory_uri
-	 * @uses       is_child_theme
-	 *
 	 * @param $string
 	 *
 	 * @return string
 	 */
 	function path_uri( $string ) {
-
-		/** Sanity check - parent or child theme? */
-		if ( is_child_theme() ) {
-			$path = get_stylesheet_directory_uri();
-		} else {
-			$path = get_template_directory_uri();
-		}
-
-		/** End if - is child theme */
-
-		return $path . '/' . $string . '/';
-
+		return get_template_directory_uri() . '/' . $string . '/';
 	}
 
 }
