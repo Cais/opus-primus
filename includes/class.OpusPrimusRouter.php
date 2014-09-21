@@ -31,6 +31,8 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @todo        - Review for uses with Child-Themes
  */
 class OpusPrimusRouter {
 
@@ -51,6 +53,8 @@ class OpusPrimusRouter {
 	 * @package    OpusPrimus
 	 * @since      1.3
 	 *
+	 * @uses       get_template_directory
+	 *
 	 * @param $string
 	 *
 	 * @return string
@@ -66,6 +70,8 @@ class OpusPrimusRouter {
 	 *
 	 * @package    OpusPrimus
 	 * @since      1.3
+	 *
+	 * @uses       get_template_directory_uri
 	 *
 	 * @param $string
 	 *
