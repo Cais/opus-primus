@@ -170,7 +170,3 @@ class OpusPrimusArchives {
 }
 
 /** End Class Opus Primus Archives */
-
-
-/** @var $opus_archives - new instance of class */
-$opus_archives = new OpusPrimusArchives();

@@ -58,7 +58,9 @@
  * @date           ...
  */
 
-global $opus_structures;
+/** Create OpusPrimusStructures class object */
+$opus_structures = new OpusPrimusStructures();
+
 get_header();
 
 /** Add empty hook before content */

@@ -488,6 +488,3 @@ class OpusPrimusGallery {
 }
 
 /** End Opus Primus Gallery class */
-
-/** @var $opus_gallery - new instance of class */
-$opus_gallery = new OpusPrimusGallery();

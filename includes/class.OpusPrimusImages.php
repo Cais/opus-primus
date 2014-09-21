@@ -1112,6 +1112,3 @@ class OpusPrimusImages {
 }
 
 /** End class - Opus Primus Images */
-
-/** @var $opus_images - new instance of class */
-$opus_images = new OpusPrimusImages();

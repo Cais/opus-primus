@@ -38,7 +38,14 @@
  * `opus_<section>_<placement>`
  */
 
-global $post, $opus_navigation, $opus_structures, $opus_posts, $opus_images;
+global $post;
+
+/** Create class objects */
+$opus_navigation = new OpusPrimusNavigation();
+$opus_structures = new OpusPrimusStructures();
+$opus_posts      = new OpusPrimusPosts();
+$opus_images     = new OpusPrimusImages();
+
 get_header( 'image' );
 
 /** Add empty hook before content */
@@ -85,10 +92,10 @@ do_action( 'opus_content_before' ); ?>
 						);
 
 						$opus_posts->post_byline(
-								   array(
-									   'display_mod_author' => true,
-									   'anchor'             => __( 'Displayed', 'opus-primus' )
-								   )
+							array(
+								'display_mod_author' => true,
+								'anchor'             => __( 'Displayed', 'opus-primus' )
+							)
 						);
 
 						/** Provide navigation between images */

@@ -84,6 +84,3 @@ class OpusPrimusRouter {
 }
 
 /** End class - Opus Primus Router */
-
-/** @var object $opus_router - instantiate the class */
-$opus_router = new OpusPrimusRouter();

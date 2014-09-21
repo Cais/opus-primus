@@ -44,19 +44,20 @@
  * @version     1.3
  * @date        September 1, 2014
  * Replaced CONSTANTS with OpusPrimusRouter method
+ * Replaced `required_once` with `locate_template`
  */
 
 /** Call OpusPrimusRouter global class */
-global $opus_router;
+$opus_router = new OpusPrimusRouter();
 
 /** Add Pull Quotes */
-require_once( $opus_router->path( 'stanzas' ) . 'pullquotes/class.OpusPrimusPullQuotes.php' );
+locate_template( 'stanzas/pullquotes/class.OpusPrimusPullQuotes.php', true, true );
 
 /** Add TagLines */
-require_once( $opus_router->path( 'stanzas' ) . 'taglines/class.OpusPrimusTagLines.php' );
+locate_template( 'stanzas/taglines/class.OpusPrimusTagLines.php', true, true );
 
 /** Add Theme Hook Alliance Support */
-require_once( $opus_router->path( 'stanzas' ) . 'tha/tha-support.php' );
+locate_template( 'stanzas/tha/tha-support.php', true, true );
 
 
 /** === New Custom Stanzas === ---------------------------------------------- */

@@ -38,8 +38,11 @@
  * Added `show_featured_thumbnail` method (set to false)
  */
 
-/** Get the class variables */
-global $opus_posts, $opus_comments, $opus_images, $opus_navigation; ?>
+/** Create class objects */
+$opus_posts      = new OpusPrimusPosts();
+$opus_comments   = new OpusPrimusComments();
+$opus_images     = new OpusPrimusImages();
+$opus_navigation = new OpusPrimusNavigation(); ?>
 
 <div <?php post_class(); ?>>
 
@@ -47,11 +50,11 @@ global $opus_posts, $opus_comments, $opus_images, $opus_navigation; ?>
 	/** @var $anchor - set value for use in post_byline and meta_tags */
 	$anchor = __( 'Said', 'opus-primus' );
 	$opus_posts->post_byline(
-			   array(
-				   'tempus'      => 'time',
-				   'anchor'      => $anchor,
-				   'sticky_flag' => __( 'Exclaimed', 'opus-primus' )
-			   )
+		array(
+			'tempus'      => 'time',
+			'anchor'      => $anchor,
+			'sticky_flag' => __( 'Exclaimed', 'opus-primus' )
+		)
 	);
 	$opus_posts->post_title();
 	$opus_comments->comments_link();

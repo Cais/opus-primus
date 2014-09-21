@@ -15,6 +15,8 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Changed post breadcrumb link to the WordPress shortlink
 * Create `/lib/` folder to store bundled libraries and ancillary files
 * Enqueue JavaScripts and CSS for SlickNav JavaScript plugin integration to handle mobile menus
+* Replaced the majority of `require_once` calls with `locate_template` calls
+* Replaced `global` variable calls with `new` class instances
 
 = CSS =
 * Added new typography styles for better reading

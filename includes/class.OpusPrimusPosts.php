@@ -1053,7 +1053,3 @@ class OpusPrimusPosts {
 }
 
 /** End Opus Primus Posts class */
-
-
-/** @var $opus_posts - new instance of class */
-$opus_posts = new OpusPrimusPosts();

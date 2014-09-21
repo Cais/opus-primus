@@ -48,7 +48,8 @@
  * needed if we do not have comments.
  */
 
-global $opus_comments; ?>
+/** Create OpusPrimusComments class object */
+$opus_comments = new OpusPrimusComments(); ?>
 
 <!-- Show the comments -->
 <!-- Inspired by http://digwp.com/2010/02/separate-comments-pingbacks-trackbacks/ -->

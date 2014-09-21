@@ -43,8 +43,12 @@
  * Use `show_featured_thumbnail` method
  */
 
-/** Get the class variables */
-global $opus_structures, $opus_posts, $opus_comments, $opus_images, $opus_navigation; ?>
+/** Create class objects */
+$opus_structures = new OpusPrimusStructures();
+$opus_posts      = new OpusPrimusPosts();
+$opus_comments   = new OpusPrimusComments();
+$opus_images     = new OpusPrimusImages();
+$opus_navigation = new OpusPrimusNavigation(); ?>
 
 <div <?php post_class(); ?>>
 

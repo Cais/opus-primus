@@ -38,8 +38,11 @@
  * Added `show_featured_thumbnail` method (set to false)
  */
 
-/** Get the class variables */
-global $opus_posts, $opus_comments, $opus_images, $opus_navigation; ?>
+/** Create class objects */
+$opus_posts      = new OpusPrimusPosts();
+$opus_comments   = new OpusPrimusComments();
+$opus_images     = new OpusPrimusImages();
+$opus_navigation = new OpusPrimusNavigation(); ?>
 
 <div <?php post_class(); ?>>
 

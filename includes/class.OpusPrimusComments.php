@@ -266,7 +266,7 @@ class OpusPrimusComments {
 	 * @package          OpusPrimus
 	 * @since            0.1
 	 *
-	 * @uses    (GLOBAL) $comment
+	 * @uses             (GLOBAL) $comment
 	 * @uses             user_can
 	 *
 	 * @param   array $classes
@@ -325,11 +325,11 @@ class OpusPrimusComments {
 
 		$fields = array(
 			'author' => '<li class="comment-form-author">' . '<label for="author">' . __( 'Name', 'opus-primus' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-						'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></li>',
+			            '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></li>',
 			'email'  => '<li class="comment-form-email"><label for="email">' . __( 'Email', 'opus-primus' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-						'<input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></li>',
+			            '<input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></li>',
 			'url'    => '<li class="comment-form-url"><label for="url">' . __( 'Website', 'opus-primus' ) . '</label>' .
-						'<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></li>',
+			            '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></li>',
 		);
 
 		return $fields;
@@ -617,7 +617,7 @@ class OpusPrimusComments {
 				<!-- comments-list -->
 				<?php
 				if ( get_option( 'comments_per_page' ) < count( $comments_only ) ) {
-					global $opus_navigation;
+					$opus_navigation = new OpusPrimusNavigation();
 					$opus_navigation->comments_navigation();
 				} /** End if - comments count */
 				?>
@@ -656,7 +656,7 @@ class OpusPrimusComments {
 				<!-- pingbacks-list -->
 				<?php
 				if ( get_option( 'comments_per_page' ) < count( $pingbacks_only ) ) {
-					global $opus_navigation;
+					$opus_navigation = new OpusPrimusNavigation();
 					$opus_navigation->comments_navigation();
 				} /** End if - comments count */
 				?>
@@ -694,7 +694,7 @@ class OpusPrimusComments {
 				<!-- trackbacks-list -->
 				<?php
 				if ( get_option( 'comments_per_page' ) < count( $trackbacks_only ) ) {
-					global $opus_navigation;
+					$opus_navigation = new OpusPrimusNavigation();
 					$opus_navigation->comments_navigation();
 				} /** End if - comments count */
 				?>
@@ -785,6 +785,3 @@ class OpusPrimusComments {
 }
 
 /** End class - Opus Primus Comments */
-
-/** @var $opus_comments - new instance of class */
-$opus_comments = new OpusPrimusComments();

@@ -132,7 +132,7 @@ class OpusPrimusAuthors {
 	 *
 	 * @param   $author_id
 	 *
-	 * @uses    (GLOBAL) $paged
+	 * @uses             (GLOBAL) $paged
 	 * @uses             apply_filters
 	 * @uses             get_the_author_meta
 	 * @uses             home_url
@@ -163,8 +163,8 @@ class OpusPrimusAuthors {
 
 			/** @var $user_desc - manipulated string */
 			$user_desc = substr( $user_desc, 0, intval( $characters ) )
-						 . apply_filters( 'opus_author_description_excerpt_extender', '&hellip;' )
-						 . apply_filters(
+			             . apply_filters( 'opus_author_description_excerpt_extender', '&hellip;' )
+			             . apply_filters(
 					'opus_author_description_excerpt_link',
 					sprintf(
 						'<span class="opus-author-about">%1$s</span>',
@@ -354,8 +354,8 @@ class OpusPrimusAuthors {
 	 * @internal          @param show_mod_email
 	 * @internal          @param show_mod_desc
 	 *
-	 * @uses     (GLOBAL) $opus_author_id - from OpusPrimusPosts::post_byline
-	 * @uses     (GLOBAL) $post
+	 * @uses              (GLOBAL) $opus_author_id - from OpusPrimusPosts::post_byline
+	 * @uses              (GLOBAL) $post
 	 * @uses              OpusPrimusAuthors::author_details
 	 * @uses              OpusPrimusAuthors::author_coda
 	 * @uses              apply_filters
@@ -444,6 +444,3 @@ class OpusPrimusAuthors {
 }
 
 /** End of Class Opus Primus Authors */
-
-/** @var $opus_authors - new instance of class */
-$opus_authors = new OpusPrimusAuthors();

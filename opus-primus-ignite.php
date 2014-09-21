@@ -48,6 +48,7 @@
  * @version     1.3
  * @date        September 1, 2014
  * Removed constant definitions that were replaced by the OpusPrimusRouter class
+ * Replaced `required_once` with `locate_template`
  */
 
 /** Set Customization path and URL CONSTANTS with Sanity Checks */
@@ -61,37 +62,35 @@ if ( ! defined( 'OPUS_CUSTOM_URL' ) ) {
 /** End if - not defined */
 
 /** Get the router class so we can build the paths */
-require_once( get_template_directory() . '/includes/' . 'class.OpusPrimusRouter.php' );
-/** Call the global class variable for the router */
-global $opus_router;
+locate_template( 'includes/class.OpusPrimusRouter.php', true, true );
 
 /** Add Global Defaults */
-require_once( $opus_router->path( 'includes' ) . 'opus-primus-defaults.php' );
+locate_template( 'includes/opus-primus-defaults.php', true, true );
 
 /** Add Widgets */
-require_once( $opus_router->path( 'includes' ) . 'widgets.php' );
+locate_template( 'includes/widgets.php', true, true );
 
 /** Load the classes - in order of appearance/dependency */
 /** Add Navigation */
-require_once( $opus_router->path( 'includes' ) . 'class.OpusPrimusNavigation.php' );
+locate_template( 'includes/class.OpusPrimusNavigation.php', true, true );
 /** Add Structures */
-require_once( $opus_router->path( 'includes' ) . 'class.OpusPrimusStructures.php' );
+locate_template( 'includes/class.OpusPrimusStructures.php', true, true );
 /** Add Headers */
-require_once( $opus_router->path( 'includes' ) . 'class.OpusPrimusHeaders.php' );
+locate_template( 'includes/class.OpusPrimusHeaders.php', true, true );
 /** Add Posts */
-require_once( $opus_router->path( 'includes' ) . 'class.OpusPrimusPosts.php' );
+locate_template( 'includes/class.OpusPrimusPosts.php', true, true );
 /** Add Comments Hooks */
-require_once( $opus_router->path( 'includes' ) . 'class.OpusPrimusComments.php' );
+locate_template( 'includes/class.OpusPrimusComments.php', true, true );
 /** Add Images */
-require_once( $opus_router->path( 'includes' ) . 'class.OpusPrimusImages.php' );
+locate_template( 'includes/class.OpusPrimusImages.php', true, true );
 /** Add Gallery */
-require_once( $opus_router->path( 'includes' ) . 'class.OpusPrimusGallery.php' );
+locate_template( 'includes/class.OpusPrimusGallery.php', true, true );
 /** Add Authors */
-require_once( $opus_router->path( 'includes' ) . 'class.OpusPrimusAuthors.php' );
+locate_template( 'includes/class.OpusPrimusAuthors.php', true, true );
 /** Add Archives */
-require_once( $opus_router->path( 'includes' ) . 'class.OpusPrimusArchives.php' );
+locate_template( 'includes/class.OpusPrimusArchives.php', true, true );
 /** Add Breadcrumbs */
-require_once( $opus_router->path( 'includes' ) . 'class.OpusPrimusBreadcrumbs.php' );
+locate_template( 'includes/class.OpusPrimusBreadcrumbs.php', true, true );
 
 /** Add Stanzas */
-require_once( $opus_router->path( 'stanzas' ) . 'stanzas.php' );
+locate_template( 'stanzas/stanzas.php', true, true );

@@ -44,8 +44,12 @@
  * Refactored all defaults using true/false to use filtered define statements
  */
 
-/** Call the class variables */
-global $opus_structures, $opus_posts, $opus_defaults, $opus_images, $opus_authors;
+/** Create class objects */
+$opus_structures = new OpusPrimusStructures();
+$opus_posts      = new OpusPrimusPosts();
+$opus_images     = new OpusPrimusImages();
+$opus_authors    = new OpusPrimusAuthors();
+
 get_header( 'page' );
 
 /** Add empty hook before content */
@@ -86,27 +90,27 @@ do_action( 'opus_content_before' ); ?>
 						/** Show page byline details */
 						if ( OPUS_DISPLAY_PAGE_BYLINE ) {
 							$opus_posts->post_byline(
-									   array(
-										   'display_mod_author' => OPUS_DISPLAY_MOD_AUTHOR
-									   )
+								array(
+									'display_mod_author' => OPUS_DISPLAY_MOD_AUTHOR
+								)
 							);
 						} else {
 							$opus_posts->post_byline(
-									   array(
-										   'display_mod_author' => OPUS_DISPLAY_MOD_AUTHOR,
-										   'echo'               => false
-									   )
+								array(
+									'display_mod_author' => OPUS_DISPLAY_MOD_AUTHOR,
+									'echo'               => false
+								)
 							);
 						}
 						/** End if - show page byline */
 
 						$opus_authors->post_author(
-									 array(
-										 'display_mod_author'   => OPUS_DISPLAY_MOD_AUTHOR,
-										 'display_author_url'   => OPUS_DISPLAY_AUTHOR_URL,
-										 'display_author_email' => OPUS_DISPLAY_AUTHOR_EMAIL,
-										 'display_author_desc'  => OPUS_DISPLAY_AUTHOR_DESCRIPTION,
-									 )
+							array(
+								'display_mod_author'   => OPUS_DISPLAY_MOD_AUTHOR,
+								'display_author_url'   => OPUS_DISPLAY_AUTHOR_URL,
+								'display_author_email' => OPUS_DISPLAY_AUTHOR_EMAIL,
+								'display_author_desc'  => OPUS_DISPLAY_AUTHOR_DESCRIPTION,
+							)
 						); ?>
 
 					</div><!-- post classes -->

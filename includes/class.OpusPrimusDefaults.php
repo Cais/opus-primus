@@ -108,8 +108,5 @@ if ( ! class_exists( 'OpusPrimusDefaults' ) ) {
 
 	/** End Opus Primus Defaults class */
 
-	/** @var $opus_defaults - new instance of class */
-	$opus_defaults = new OpusPrimusDefaults();
-
 }
 /** End if - class exists */

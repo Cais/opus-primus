@@ -47,8 +47,8 @@
  * Refactored the site title and description to use Header class methods
  */
 
-/** Call global class variables */
-global $opus_headers; ?>
+/** Create OpusPrimusHeader class object */
+$opus_headers = new OpusPrimusHeader(); ?>
 
 	<header>
 
@@ -80,7 +80,8 @@ global $opus_headers; ?>
 		do_action( 'opus_nav_before' ); ?>
 
 		<nav>
-			<?php global $opus_navigation;
+			<?php
+			$opus_navigation = new OpusPrimusNavigation();
 			$opus_navigation->primary_menu(); ?>
 		</nav>
 		<!-- End navigation section -->
@@ -93,5 +94,6 @@ global $opus_headers; ?>
 
 	</header><!-- End header section -->
 
-<?php global $opus_breadcrumbs;
+<?php
+$opus_breadcrumbs = new OpusPrimusBreadcrumbs();
 $opus_breadcrumbs->show_the_trail();

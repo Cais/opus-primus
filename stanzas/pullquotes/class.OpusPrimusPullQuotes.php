@@ -97,7 +97,7 @@ class OpusPrimusPullQuotes {
 	 */
 	function scripts_and_styles() {
 		/** Call OpusPrimusRouter class global */
-		global $opus_router;
+		$opus_router = new OpusPrimusRouter();
 
 		/** Enqueue Scripts */
 		/** Enqueue Opus Primus PullQuotes JavaScripts which will enqueue jQuery as a dependency */

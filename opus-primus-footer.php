@@ -33,9 +33,8 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-/** Call the necessary globals for the template */
-global $opus_structures;
-?>
+/** Create OpusPrimusStructures class object */
+$opus_structures = new OpusPrimusStructures(); ?>
 
 <footer>
 

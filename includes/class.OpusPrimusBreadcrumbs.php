@@ -402,7 +402,3 @@ class OpusPrimusBreadcrumbs {
 }
 
 /** End class - opus primus breadcrumbs */
-
-
-/** @var $opus_breadcrumbs - new instance of class */
-$opus_breadcrumbs = new OpusPrimusBreadcrumbs();

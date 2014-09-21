@@ -36,8 +36,11 @@
  * Refactored all defaults using true/false to use filtered define statements
  */
 
-/** Get the classes variables */
-global $opus_posts, $opus_comments, $opus_navigation, $opus_authors;
+/** Create class objects */
+$opus_posts      = new OpusPrimusPosts();
+$opus_comments   = new OpusPrimusComments();
+$opus_navigation = new OpusPrimusNavigation();
+$opus_authors    = new OpusPrimusAuthors();
 
 /** Display the post */
 ?>
@@ -47,11 +50,11 @@ global $opus_posts, $opus_comments, $opus_navigation, $opus_authors;
 		/** @var $anchor - set value for use in post_byline and meta_tags */
 		$anchor = __( 'Displayed', 'opus-primus' );
 		$opus_posts->post_byline(
-				   array(
-					   'display_mod_author' => OPUS_DISPLAY_MOD_AUTHOR,
-					   'anchor'             => $anchor,
-					   'sticky_flag'        => __( 'Framed', 'opus-primus' )
-				   )
+			array(
+				'display_mod_author' => OPUS_DISPLAY_MOD_AUTHOR,
+				'anchor'             => $anchor,
+				'sticky_flag'        => __( 'Framed', 'opus-primus' )
+			)
 		);
 		$opus_posts->post_title();
 		$opus_comments->comments_link();
@@ -61,12 +64,12 @@ global $opus_posts, $opus_comments, $opus_navigation, $opus_authors;
 		$opus_posts->post_coda();
 		if ( is_single() ) {
 			$opus_authors->post_author(
-						 array(
-							 'display_mod_author'   => OPUS_DISPLAY_MOD_AUTHOR,
-							 'display_author_url'   => OPUS_DISPLAY_AUTHOR_URL,
-							 'display_author_email' => OPUS_DISPLAY_AUTHOR_EMAIL,
-							 'display_author_desc'  => OPUS_DISPLAY_AUTHOR_DESCRIPTION,
-						 )
+				array(
+					'display_mod_author'   => OPUS_DISPLAY_MOD_AUTHOR,
+					'display_author_url'   => OPUS_DISPLAY_AUTHOR_URL,
+					'display_author_email' => OPUS_DISPLAY_AUTHOR_EMAIL,
+					'display_author_desc'  => OPUS_DISPLAY_AUTHOR_DESCRIPTION,
+				)
 			);
 		} /** End if - is single */
 		?>

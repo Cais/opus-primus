@@ -38,7 +38,9 @@
  * Change classes from using underscores to using hyphens
  */
 
-global $opus_archives, $opus_structures;
+$opus_archives   = new OpusPrimusArchives();
+$opus_structures = new OpusPrimusStructures();
+
 get_header( '404' );
 
 /** Add empty hook before content */
@@ -95,14 +97,14 @@ do_action( 'opus_content_before' ); ?>
 
 			/** Display a list of categories to choose from */
 			$opus_archives->categories_archive(
-						  array(
-							  'orderby'      => 'count',
-							  'order'        => 'desc',
-							  'show_count'   => 1,
-							  'hierarchical' => 0,
-							  'title_li'     => '<span class="title">' . apply_filters( 'opus_404_top_10_title', __( 'Top 10 Categories by Post Count:', 'opus-primus' ) ) . '</span>',
-							  'number'       => 10,
-						  )
+				array(
+					'orderby'      => 'count',
+					'order'        => 'desc',
+					'show_count'   => 1,
+					'hierarchical' => 0,
+					'title_li'     => '<span class="title">' . apply_filters( 'opus_404_top_10_title', __( 'Top 10 Categories by Post Count:', 'opus-primus' ) ) . '</span>',
+					'number'       => 10,
+				)
 			);
 
 			printf(
@@ -112,12 +114,12 @@ do_action( 'opus_content_before' ); ?>
 
 			/** Display a list of tags to choose from */
 			$opus_archives->archive_cloud(
-						  array(
-							  'taxonomy' => 'post_tag',
-							  'orderby'  => 'count',
-							  'order'    => 'DESC',
-							  'number'   => 10,
-						  )
+				array(
+					'taxonomy' => 'post_tag',
+					'orderby'  => 'count',
+					'order'    => 'DESC',
+					'number'   => 10,
+				)
 			); ?>
 
 		</div>

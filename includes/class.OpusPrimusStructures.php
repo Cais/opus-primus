@@ -296,8 +296,8 @@ class OpusPrimusStructures {
 	 * Replace CONSTANT with OpusPrimusRouter method
 	 */
 	function bust_image() {
-		/** Call global class variable for the router */
-		global $opus_router;
+		/** Create OpusPrimusRouter class object */
+		$opus_router = new OpusPrimusRouter();
 
 		$bust_image_location = $opus_router->path_uri( 'images' ) . 'broken_beethoven.png';
 
@@ -642,7 +642,8 @@ class OpusPrimusStructures {
 		);
 
 		/** Get the class variables */
-		global $opus_archives, $opus_navigation;
+		$opus_archives   = new OpusPrimusArchives();
+		$opus_navigation = new OpusPrimusNavigation();
 
 		/** Display a list of categories to choose from */
 		$opus_archives->categories_archive(
@@ -729,8 +730,8 @@ class OpusPrimusStructures {
 	 * Added post to post navigation in single view
 	 */
 	function the_loop() {
-		/** Get the navigation global class */
-		global $opus_navigation;
+		/** Create OpusPrimusNavigation class object */
+		$opus_navigation = new OpusPrimusNavigation();
 
 		/** the_Loop begins */
 		if ( have_posts() ) {
@@ -807,7 +808,7 @@ class OpusPrimusStructures {
 		}
 		/** End if - have posts */
 
-		global $opus_navigation;
+		$opus_navigation = new OpusPrimusNavigation();
 		$opus_navigation->pagination_wrapped();
 		/** the_Loop ends */
 
@@ -905,10 +906,6 @@ class OpusPrimusStructures {
 }
 
 /** End Opus Primus Structures class */
-
-/** @var $opus_structures - new instance of class */
-$opus_structures = new OpusPrimusStructures();
-
 
 /** ------------------------------------------------------------------------- */
 /** Testing ... testing ... testing ... */

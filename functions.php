@@ -43,10 +43,14 @@
  * @version     1.2.5
  * @date        June 2, 2014
  * Added `opus-primus-ignite.php` for theme initialization requirements
+ *
+ * @version 1.3
+ * @date    September 21, 2014
+ * Replaced `require_once` with `locate_template`
  */
 
 /** Fire up the theme with its classes, widgets, and defaults */
-require_once( get_template_directory() . '/opus-primus-ignite.php' );
+locate_template( 'opus-primus-ignite.php', true, true );
 
 /**
  * Opus Primus Theme Version
@@ -56,7 +60,7 @@ require_once( get_template_directory() . '/opus-primus-ignite.php' );
  * @package             Opus_Primus
  * @since               1.2.4
  *
- * @uses       (GLOBAL) $wp_version
+ * @uses                (GLOBAL) $wp_version
  * @uses                apply_filters
  * @uses                wp_get_theme
  *
@@ -119,8 +123,8 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 	 * Enqueue JavaScripts and CSS for SlickNav JavaScript plugin integration to handle mobile menus
 	 */
 	function opus_primus_enqueue_scripts() {
-		/** Call class globals as needed */
-		global $opus_router;
+		/** Create OpusPrimusRouter class object */
+		$opus_router = new OpusPrimusRouter();
 
 		/** Enqueue Theme Scripts */
 		/** Enqueue Opus Primus JavaScripts which will enqueue jQuery as a dependency */
@@ -214,7 +218,7 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 	 * @package          OpusPrimus
 	 * @since            0.1
 	 *
-	 * @uses    (GLOBAL) $content_width
+	 * @uses             (GLOBAL) $content_width
 	 * @uses             add_editor_style
 	 * @uses             add_theme_support: automatic-feed-links
 	 * @uses             add_theme_support: custom-background
@@ -363,8 +367,8 @@ function opus_primus_compatibility() {
 	/** Call the wp-admin plugin code */
 	require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
 
-	/** Call OpusPrimusRouter global class variable */
-	global $opus_router;
+	/** Create OpusPrimusRouter class object */
+	$opus_router = new OpusPrimusRouter();
 
 	/**
 	 * Soliloquy - slider plugin

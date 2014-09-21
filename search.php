@@ -37,7 +37,10 @@
  * `opus_<section>_<placement>`
  */
 
-global $opus_navigation, $opus_structures, $opus_posts;
+/** Create class objects */
+$opus_structures = new OpusPrimusStructures();
+$opus_posts      = new OpusPrimusPosts();
+
 get_header( 'search' );
 
 /** Add empty hook before content */
@@ -108,7 +111,11 @@ do_action( 'opus_content_before' ); ?>
 				$opus_structures->no_search_results();
 			}
 			/** End if - have posts */
+
+			/** Create OpusPrimusNavigation class object */
+			$opus_navigation = new OpusPrimusNavigation();
 			$opus_navigation->posts_link();
+
 			/** the_Loop - Ends */
 
 			/** Add after loop sidebar */

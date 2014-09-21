@@ -36,9 +36,11 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-/** Get the class variables */
-
-global $opus_posts, $opus_comments, $opus_navigation, $opus_gallery; ?>
+/** Create class objects */
+$opus_posts      = new OpusPrimusPosts();
+$opus_comments   = new OpusPrimusComments();
+$opus_navigation = new OpusPrimusNavigation();
+$opus_gallery    = new OpusPrimusGallery(); ?>
 
 <div <?php post_class(); ?>>
 
@@ -46,11 +48,11 @@ global $opus_posts, $opus_comments, $opus_navigation, $opus_gallery; ?>
 	/** @var $anchor - set value for use in post_byline and meta_tags */
 	$anchor = __( 'Displayed', 'opus-primus' );
 	$opus_posts->post_byline(
-			   array(
-				   'tempus'      => 'time',
-				   'anchor'      => $anchor,
-				   'sticky_flag' => __( 'Exhibited', 'opus-primus' )
-			   )
+		array(
+			'tempus'      => 'time',
+			'anchor'      => $anchor,
+			'sticky_flag' => __( 'Exhibited', 'opus-primus' )
+		)
 	);
 	$opus_posts->post_title();
 	$opus_comments->comments_link();

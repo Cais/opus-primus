@@ -107,8 +107,8 @@ class OpusPrimusTagLines {
 	 * Replace CONSTANTS with OpusPrimusRouter method
 	 */
 	function scripts_and_styles() {
-		/** Call OpusPrimusRouter class global */
-		global $opus_router;
+		/** Create OpusPrimusRouter class object */
+		$opus_router = new OpusPrimusRouter();
 
 		/** Enqueue Styles */
 		/** Enqueue Taglines Stanza Stylesheets */
@@ -124,7 +124,7 @@ class OpusPrimusTagLines {
 	 * @since             0.1
 	 *
 	 * @uses              OpusPrimusTagLines::tagline_callback
-	 * @uses     (GLOBAL) $post - post_type
+	 * @uses              (GLOBAL) $post - post_type
 	 * @uses              add_meta_box
 	 *
 	 * @internal          used with action hook add_meta_boxes
@@ -169,7 +169,7 @@ class OpusPrimusTagLines {
 	 *
 	 * @param   $post_id
 	 *
-	 * @uses    (CONSTANT) DOING_AUTOSAVE
+	 * @uses               (CONSTANT) DOING_AUTOSAVE
 	 * @uses               check_admin_referrer
 	 * @uses               current_user_can
 	 * @uses               update_post_meta
@@ -212,7 +212,7 @@ class OpusPrimusTagLines {
 	 * @package          OpusPrimus
 	 * @since            0.1
 	 *
-	 * @uses    (GLOBAL) $post - ID, post_type
+	 * @uses             (GLOBAL) $post - ID, post_type
 	 * @uses             apply_filters
 	 * @uses             get_post_meta
 	 *

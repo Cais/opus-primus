@@ -260,7 +260,7 @@ class OpusPrimusNavigation {
 	 *
 	 * @internal         Output is wrapped in `ul.page-numbers`
 	 *
-	 * @uses    (global) $wp_query
+	 * @uses             (global) $wp_query
 	 * @uses             get_option
 	 * @uses             get_pagenum_link
 	 * @uses             get_query_var
@@ -479,6 +479,3 @@ class OpusPrimusNavigation {
 }
 
 /** End Opus Primus Navigation class */
-
-/** @var $opus_navigation - new instance of class */
-$opus_navigation = new OpusPrimusNavigation();
