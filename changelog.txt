@@ -18,6 +18,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = CSS =
 * Added new typography styles for better reading
 * Added styles for the "BNS Login" plugin
+* Added `clear: both` to `footer`
 * Hide the post/page breadcrumbs in mobile displays
 * Hide "Search" button for search form
 * Removed duplicate definitions from media queries stylesheet
