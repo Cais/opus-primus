@@ -385,8 +385,15 @@ class OpusPrimusBreadcrumbs {
 	 * @version     1.2.2
 	 * @date        October 26, 2013
 	 * Added conditional test rather than print both breadcrumbs (one empty)
+	 *
+	 * @version 1.3
+	 * @date    September 23, 2014
+	 * Added empty hooks before and after showing the breadcrumbs
 	 */
 	function show_the_trail() {
+
+		/** Add empty hook before showing the breadcrumbs */
+		do_action('opus_show_the_trail_before');
 
 		if ( is_page() ) {
 			echo $this->the_trail();
@@ -394,6 +401,9 @@ class OpusPrimusBreadcrumbs {
 			echo $this->post_breadcrumbs();
 		}
 		/** End if - is page */
+
+		/** Add empty hook after showing the breadcrumbs */
+		do_action('opus_show_the_trail_after');
 
 	}
 	/** End function - show the trail */

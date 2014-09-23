@@ -4,22 +4,10 @@
     <bookmark url="file://$PROJECT_DIR$/css/opus-primus.css" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="* Better code organization to only load classes when needed">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archive.php" afterPath="$PROJECT_DIR$/archive.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/author.php" afterPath="$PROJECT_DIR$/author.php" />
+    <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-aside.php" afterPath="$PROJECT_DIR$/opus-primus-aside.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-audio.php" afterPath="$PROJECT_DIR$/opus-primus-audio.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-chat.php" afterPath="$PROJECT_DIR$/opus-primus-chat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-gallery.php" afterPath="$PROJECT_DIR$/opus-primus-gallery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-image.php" afterPath="$PROJECT_DIR$/opus-primus-image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-link.php" afterPath="$PROJECT_DIR$/opus-primus-link.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-quote.php" afterPath="$PROJECT_DIR$/opus-primus-quote.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-status.php" afterPath="$PROJECT_DIR$/opus-primus-status.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-video.php" afterPath="$PROJECT_DIR$/opus-primus-video.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus.php" afterPath="$PROJECT_DIR$/opus-primus.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page.php" afterPath="$PROJECT_DIR$/page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search.php" afterPath="$PROJECT_DIR$/search.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusBreadcrumbs.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusBreadcrumbs.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documentation/hooks-actions.txt" afterPath="$PROJECT_DIR$/documentation/hooks-actions.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="opus-primus.iws" />
@@ -48,8 +36,38 @@
       <file leaf-file-name="changelog.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/changelog.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3034682" vertical-offset="0" max-vertical-offset="5970">
-              <caret line="14" column="59" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.58357346" vertical-offset="285" max-vertical-offset="6000">
+              <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="opus-primus-header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/opus-primus-header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="8.333333" vertical-offset="200" max-vertical-offset="870">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class.OpusPrimusBreadcrumbs.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusBreadcrumbs.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.916666" vertical-offset="5420" max-vertical-offset="6255">
+              <caret line="390" column="65" selection-start-line="390" selection-start-column="65" selection-end-line="390" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hooks-actions.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/documentation/hooks-actions.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1920">
+              <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -82,7 +100,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/opus-primus-ignite.php" />
         <option value="$PROJECT_DIR$/stanzas/stanzas.php" />
         <option value="$PROJECT_DIR$/stanzas/new-custom-stanza/new-custom-stanza.php" />
         <option value="$PROJECT_DIR$/stanzas/tha/tha-support.php" />
@@ -108,7 +125,6 @@
         <option value="$PROJECT_DIR$/single.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusArchives.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusBreadcrumbs.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusDefaults.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" />
@@ -132,6 +148,8 @@
         <option value="$PROJECT_DIR$/opus-primus-video.php" />
         <option value="$PROJECT_DIR$/page.php" />
         <option value="$PROJECT_DIR$/search.php" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusBreadcrumbs.php" />
+        <option value="$PROJECT_DIR$/documentation/hooks-actions.txt" />
         <option value="$PROJECT_DIR$/changelog.txt" />
       </list>
     </option>
@@ -198,6 +216,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="documentation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -284,15 +338,15 @@
       <JdkChoice value="FROM_MODULE" />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="59791a67-7e89-437b-b6d2-d013c0025a62" server_name="EAC">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-env-vars>false</pass-parent-env-vars>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="59791a67-7e89-437b-b6d2-d013c0025a62" server_name="EAC">
       <method />
     </configuration>
     <list size="0" />
@@ -3471,7 +3525,13 @@
       <option name="project" value="LOCAL" />
       <updated>1411341624258</updated>
     </task>
-    <option name="localTasksCounter" value="528" />
+    <task id="LOCAL-00528" summary="* Better code organization to only load classes when needed">
+      <created>1411342761044</created>
+      <option name="number" value="00528" />
+      <option name="project" value="LOCAL" />
+      <updated>1411342761044</updated>
+    </task>
+    <option name="localTasksCounter" value="529" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -3512,30 +3572,30 @@
     <frame x="0" y="22" width="1440" height="812" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3033241" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32122904" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29639888" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30416667" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32681563" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263889" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2811159" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2846924" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30416667" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32681563" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30416667" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29639888" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263889" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31337047" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -3550,17 +3610,17 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32664436" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32664436" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32681563" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286908" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24947146" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -3578,7 +3638,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="- adjust post codas" />
     <MESSAGE value="* Added WordPress HTML5 markup support" />
     <MESSAGE value="* Added WordPress HTML5 markup support for search form, comment form, comment list, and caption" />
     <MESSAGE value="* Updated galleries styles to use HTML5 markup" />
@@ -3603,7 +3662,8 @@
     <MESSAGE value="- documentation updates" />
     <MESSAGE value="* Replaced the majority of `require_once` calls with `locate_template` calls&#10;* Replaced `global` variable calls with `new` class instances" />
     <MESSAGE value="- white space clean-up" />
-    <option name="LAST_COMMIT_MESSAGE" value="- white space clean-up" />
+    <MESSAGE value="* Better code organization to only load classes when needed" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Better code organization to only load classes when needed" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -3615,27 +3675,10 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/opus-primus-ignite.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.14520958" vertical-offset="847" max-vertical-offset="1515">
-          <caret line="50" column="50" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sidebar-footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08982036" vertical-offset="0" max-vertical-offset="1350">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sidebar-header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11227545" vertical-offset="0" max-vertical-offset="1365">
           <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3643,7 +3686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.9296408" vertical-offset="1957" max-vertical-offset="2625">
           <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3655,19 +3697,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusBreadcrumbs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="9.004491" vertical-offset="0" max-vertical-offset="6105">
-          <caret line="401" column="2" selection-start-line="401" selection-start-column="2" selection-end-line="401" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusComments.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.598803" vertical-offset="11182" max-vertical-offset="11850">
           <caret line="318" column="21" selection-start-line="318" selection-start-column="21" selection-end-line="318" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3675,7 +3708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7979042" vertical-offset="217" max-vertical-offset="885">
           <caret line="107" column="4" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3683,7 +3715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="7.8592815" vertical-offset="0" max-vertical-offset="7425">
           <caret line="350" column="6" selection-start-line="350" selection-start-column="6" selection-end-line="350" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3699,7 +3730,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="3.9416168" vertical-offset="202" max-vertical-offset="16485">
           <caret line="189" column="6" selection-start-line="189" selection-start-column="6" selection-end-line="189" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3707,7 +3737,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="10.733533" vertical-offset="0" max-vertical-offset="7260">
           <caret line="478" column="2" selection-start-line="478" selection-start-column="2" selection-end-line="478" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3723,7 +3752,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.8862275" vertical-offset="0" max-vertical-offset="1350">
           <caret line="84" column="2" selection-start-line="84" selection-start-column="2" selection-end-line="84" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3731,7 +3759,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30389223" vertical-offset="12997" max-vertical-offset="13665">
           <caret line="880" column="38" selection-start-line="880" selection-start-column="38" selection-end-line="880" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3747,7 +3774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2265">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3755,7 +3781,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08982036" vertical-offset="0" max-vertical-offset="1710">
           <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3763,7 +3788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08982036" vertical-offset="0" max-vertical-offset="675">
           <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3771,7 +3795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.05538922" vertical-offset="532" max-vertical-offset="1200">
           <caret line="68" column="60" selection-start-line="68" selection-start-column="60" selection-end-line="68" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3779,7 +3802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="692">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3795,7 +3817,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.17515" vertical-offset="4627" max-vertical-offset="5295">
           <caret line="126" column="16" selection-start-line="126" selection-start-column="16" selection-end-line="126" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3803,7 +3824,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3811,7 +3831,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2020958" vertical-offset="0" max-vertical-offset="1950">
           <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3827,7 +3846,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17964073" vertical-offset="0" max-vertical-offset="668">
           <caret line="50" column="49" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3835,7 +3853,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="692">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3843,7 +3860,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="692">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3851,7 +3867,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="692">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3859,7 +3874,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="692">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3875,7 +3889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="692">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3891,7 +3904,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="692">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3899,7 +3911,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="692">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3915,7 +3926,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15718563" vertical-offset="0" max-vertical-offset="825">
           <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3923,7 +3933,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7185629" vertical-offset="0" max-vertical-offset="795">
           <caret line="71" column="52" selection-start-line="71" selection-start-column="52" selection-end-line="71" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3939,7 +3948,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37125748" vertical-offset="232" max-vertical-offset="945">
           <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3947,7 +3955,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13473053" vertical-offset="0" max-vertical-offset="765">
           <caret line="41" column="46" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3955,7 +3962,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15718563" vertical-offset="0" max-vertical-offset="795">
           <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3963,7 +3969,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15718563" vertical-offset="0" max-vertical-offset="795">
           <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3971,7 +3976,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15718563" vertical-offset="0" max-vertical-offset="795">
           <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3979,7 +3983,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.25" vertical-offset="75" max-vertical-offset="795">
           <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3987,7 +3990,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08982036" vertical-offset="0" max-vertical-offset="1815">
           <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3995,7 +3997,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08982036" vertical-offset="0" max-vertical-offset="1770">
           <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4003,7 +4004,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.04491018" vertical-offset="0" max-vertical-offset="668">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4011,14 +4011,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.3023952" vertical-offset="697" max-vertical-offset="1815">
           <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opus-primus-header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="8.333333" vertical-offset="200" max-vertical-offset="870">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusBreadcrumbs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.916666" vertical-offset="5420" max-vertical-offset="6255">
+          <caret line="390" column="65" selection-start-line="390" selection-start-column="65" selection-end-line="390" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/documentation/hooks-actions.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1920">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/changelog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3034682" vertical-offset="0" max-vertical-offset="5970">
-          <caret line="14" column="59" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
+        <state vertical-scroll-proportion="0.58357346" vertical-offset="285" max-vertical-offset="6000">
+          <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
           <folding />
         </state>
       </provider>

@@ -1,5 +1,5 @@
 Hooks – Actions
-Currently available: 113
+Currently available: 115
 
 There are many action hooks available for use with Opus Primus.
 The naming convention follows this general guideline: opus-< code block >-< location, if relevant >
@@ -100,6 +100,8 @@ The following is an alphabetical listing (with the exception of the location bei
     opus_secondary_images_after
     opus_secondary_menu_before
     opus_secondary_menu_after
+    opus_show_the_trail_before
+    opus_show_the_trail_after
     opus_sidebar_footer_before
     opus_sidebar_footer_after
     opus_sidebar_header_before

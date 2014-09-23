@@ -12,6 +12,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added `OpusPrimusRouter` class to replace path and URL CONSTANTS
 * Added appropriate suffixes to script and style handles to ensure uniqueness in OpusPrimusPullQuotes
 * Added Child-Theme "slug" for easier customizations
+* Added empty hooks before and after showing the breadcrumbs
 * Better code organization to only load classes when needed
 * Changed post breadcrumb link to the WordPress shortlink
 * Create `/lib/` folder to store bundled libraries and ancillary files
@@ -43,6 +44,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Updated `readme.txt` to note the use and license of FitVids by Chris Coyier and Paravel
 * Updated `style.css` description to emphasize the addition of the SlickNav and FitVids libraries
 * Updated `screenshot.png` to better reflect latest release
+* Updated `hooks-actions.txt` with new additions
 
 /** ------------------------------------------------------------------------- */
 == Version 1.2.5 ==
