@@ -36,8 +36,8 @@
 	display: none;
 }
 
-/** Check for generic mobile device width of 40em ... add more as needed? */
-@media screen and (max-width: 40em) {
+/** Check for generic mobile device width of 50em / 800px ... add more as needed? */
+@media screen and (max-width: 50em) {
 
 	/** Hide those things that should not appear in mobile displays */
 	div#breadcrumbs,
