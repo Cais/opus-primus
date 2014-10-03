@@ -19,6 +19,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Enqueue JavaScripts and CSS for SlickNav JavaScript plugin integration to handle mobile menus
 * Replaced the majority of `require_once` calls with `locate_template` calls
 * Replaced `global` variable calls with `new` class instances
+* Update to use `preg_match_all` in OpusPrimusGallery featured and secondary id methods
 
 = CSS =
 * Added new typography styles for better reading

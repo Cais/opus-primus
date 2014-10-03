@@ -204,6 +204,10 @@ class OpusPrimusGallery {
 	 * @version 1.2.2
 	 * @date    September 3, 2013
 	 * Add sanity check to make sure match variable is actually set
+	 *
+	 * @version 1.3
+	 * @date    October 3, 2014
+	 * Update to use `preg_match_all`
 	 */
 	function get_gallery_attr_featured_ids() {
 
@@ -211,13 +215,13 @@ class OpusPrimusGallery {
 		$pattern = get_shortcode_regex();
 
 		/** Find any shortcode being used in post */
-		preg_match( "/$pattern/s", get_the_content(), $match );
+		preg_match_all( "/" . $pattern . "/s", get_the_content(), $matches );
 
 		/** Find the gallery shortcode usages after a sanity check */
-		if ( isset( $match[2] ) && ( 'gallery' == $match[2] ) ) {
+		if ( isset( $matches[2] ) && ( 'gallery' == $matches[2] ) ) {
 
 			/** @var $attrs - holds the gallery shortcode parameters used */
-			$attrs = shortcode_parse_atts( $match[3] );
+			$attrs = shortcode_parse_atts( $matches[3] );
 
 			/** @var $images - array of image ids used */
 			$images = isset( $attrs['ids'] ) ? explode( ',', $attrs['ids'] ) : false;
@@ -240,9 +244,7 @@ class OpusPrimusGallery {
 
 		return null;
 
-	}
-
-	/** End function - get gallery attr featured ids */
+	} /** End function - get gallery attr featured ids */
 
 
 	/**
@@ -264,6 +266,10 @@ class OpusPrimusGallery {
 	 * @version 1.2.2
 	 * @date    September 3, 2013
 	 * Add sanity check to make sure match variable is actually set
+	 *
+	 * @version 1.3
+	 * @date    October 3, 2014
+	 * Update to use `preg_match_all`
 	 */
 	function get_gallery_attr_secondary_ids() {
 
@@ -271,13 +277,13 @@ class OpusPrimusGallery {
 		$pattern = get_shortcode_regex();
 
 		/** Find any shortcode being used in post */
-		preg_match( "/$pattern/s", get_the_content(), $match );
+		preg_match_all( "/" . $pattern . "/s", get_the_content(), $matches );
 
 		/** Find the gallery shortcode usages after a sanity check */
-		if ( isset( $match[2] ) && ( 'gallery' == $match[2] ) ) {
+		if ( isset( $matches[2] ) && ( 'gallery' == $matches[2] ) ) {
 
 			/** @var $attrs - holds the gallery shortcode parameters used */
-			$attrs = shortcode_parse_atts( $match[3] );
+			$attrs = shortcode_parse_atts( $matches[3] );
 
 			/** @var $images - array of image ids used */
 			$images = isset( $attrs['ids'] ) ? explode( ',', $attrs['ids'] ) : false;
@@ -322,9 +328,7 @@ class OpusPrimusGallery {
 
 		return null;
 
-	}
-
-	/** End function - get gallery attr secondary ids */
+	} /** End function - get gallery attr secondary ids */
 
 
 	/**
