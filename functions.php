@@ -44,8 +44,8 @@
  * @date        June 2, 2014
  * Added `opus-primus-ignite.php` for theme initialization requirements
  *
- * @version 1.3
- * @date    September 21, 2014
+ * @version     1.3
+ * @date        September 21, 2014
  * Replaced `require_once` with `locate_template`
  */
 
@@ -354,13 +354,15 @@ function opus_primus_return_blank() {
  *
  * @uses               OpusPrimusRouter::path_uri
  * @uses               is_plugin_active
+ * @uses               locate_template
  * @uses               opus_primus_theme_version
  * @uses               wp_enqueue_style
  *
  * @version            1.3
- * @date               September 13, 2014
+ * @date               October 5, 2014
  * Replaced CONSTANT with OpusPrimusRouter method
  * Added Contact Form 7 compatibility
+ * Added BNS Login compatibility
  */
 function opus_primus_compatibility() {
 
@@ -389,6 +391,14 @@ function opus_primus_compatibility() {
 		wp_enqueue_style( 'Opus-Primus-Contact-Form-7', $opus_router->path_uri( 'compatibility' ) . 'opus-primus-contact-form-7.css', array(), opus_primus_theme_version(), 'screen' );
 	}
 	/** End if - contact form 7 plugin is active */
+
+	/**
+	 * BNS Login - login plugin
+	 * @link    http://wordpress.org/plugins/bns-login/
+	 */
+	if ( is_plugin_active( 'bns-login/bns-login.php' ) ) {
+		locate_template( 'compatibility/bns-login.php', true, true );
+	}
 
 }
 
