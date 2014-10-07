@@ -78,6 +78,7 @@
  * Added new typography styles for better reading
  * Added styles for the "BNS Login" plugin
  * Added `clear: both` to `footer`
+ * Change default `ul` list-style property to `none inside`
  * Hide "Search" button for search form
  * Removed unused `div#top-navigation-menu` definition
  * Removed unused `nav div.nav ul li` definition
@@ -587,7 +588,7 @@ ol ul {
 }
 
 ul {
-	list-style: disc inside;
+	list-style: none inside;
 }
 
 ol {
