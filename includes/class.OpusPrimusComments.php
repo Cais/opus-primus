@@ -54,59 +54,45 @@ class OpusPrimusComments {
 	 *
 	 * @uses       add_action
 	 * @uses       add_filter
-	 *
 	 */
 	function __construct() {
-		/** Add comment actions */
+		/** Add comment actions - enqueue threaded comments */
 		add_action(
 			'comment_form_before', array(
 				$this,
 				'enqueue_comment_reply'
-			)
-		);
-		add_action(
-			'comment_form_before', array(
-				$this,
-				'before_comment_form'
-			)
-		);
-		add_action(
-			'comment_form_comments_closed', array(
-				$this,
-				'comments_form_closed'
-			)
-		);
+			) );
+
+		// add_action( 'comment_form_before', array( $this, 'before_comment_form' ) );
+		// add_action( 'comment_form_comments_closed', array( $this, 'comments_form_closed' ) );
 
 		/** Add comment actions - wrap comment fields in unordered list */
 		add_action(
 			'comment_form_before_fields', array(
 				$this,
 				'comment_fields_wrapper_start'
-			)
-		);
+			) );
 		add_action(
 			'comment_form_after_fields', array(
 				$this,
 				'comment_fields_wrapper_end'
-			)
-		);
+			) );
 
 		/** Add comment filters - NB: Order of these filters is important! */
 		add_filter( 'comment_class', array( $this, 'comment_author_class' ) );
+
 		add_filter(
 			'comment_form_defaults', array(
 				$this,
 				'change_comment_form_required_field_glyph'
-			)
-		);
+			) );
 
 		/** Add comment filters - change fields to list items from paragraphs */
 		add_filter(
 			'comment_form_default_fields', array(
 				$this,
 				'comment_fields_as_list_items'
-			)
-		);
+			) );
 
 	}
 	/** End function - construct */

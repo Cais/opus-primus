@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised October 7, 2014
+Last revised October 9, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.3 ==
@@ -13,6 +13,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added appropriate suffixes to script and style handles to ensure uniqueness in OpusPrimusPullQuotes
 * Added Child-Theme "slug" for easier customizations
 * Added empty hooks before and after showing the breadcrumbs
+* Added OpusPrimusComments class methods to `functions.php` to work-around duplicate output issue
 * Better code organization to only load classes when needed
 * Changed post breadcrumb link to the WordPress shortlink
 * Create `/lib/` folder to store bundled libraries and ancillary files
