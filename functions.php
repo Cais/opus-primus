@@ -357,13 +357,15 @@ function opus_primus_return_blank() {
  * @uses               is_plugin_active
  * @uses               locate_template
  * @uses               opus_primus_theme_version
+ * @uses               wp_enqueue_script
  * @uses               wp_enqueue_style
  *
  * @version            1.3
- * @date               October 5, 2014
+ * @date               October 13, 2014
  * Replaced CONSTANT with OpusPrimusRouter method
  * Added Contact Form 7 compatibility
  * Added BNS Login compatibility
+ * Added Gravity Forms compatibility (not implemented, yet)
  */
 function opus_primus_compatibility() {
 
@@ -399,6 +401,14 @@ function opus_primus_compatibility() {
 	 */
 	if ( is_plugin_active( 'bns-login/bns-login.php' ) ) {
 		locate_template( 'compatibility/bns-login.php', true, true );
+	}
+
+	/**
+	 * Gravity Forms - forms plugin
+	 * @link    http://gravityforms.com/
+	 */
+	if ( is_plugin_active( 'gravityforms/gravityforms.php' ) ) {
+		wp_enqueue_script( 'opus-primus-gravityforms', $opus_router->path_uri( 'compatibility' ) . 'opus-primus-gravityforms.js', array( 'jquery' ), opus_primus_theme_version(), true );
 	}
 
 }

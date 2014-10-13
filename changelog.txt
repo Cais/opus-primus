@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised October 9, 2014
+Last revised October 13, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.3 ==
@@ -44,6 +44,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = Miscellaneous
 * Added Contact Form 7 compatibility
 * Added BNS Login compatibility to use `dashicons` display
+* Added Gravity Forms compatibility (not implemented, yet)
 * Removed `works-in-progress` folder from theme
 * Updated `readme.txt` to note the use and license of SlickNav by Josh Cope
 * Updated `readme.txt` to note the use and license of FitVids by Chris Coyier and Paravel
