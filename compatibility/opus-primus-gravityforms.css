@@ -1,13 +1,12 @@
 /**
- * Opus Primus Gravity Forms Compatibility Scripts
- * Contains mostly one-line jQuery calls within one main script
+ * Gravity Forms Stylesheet for Opus Primus
  *
- * @package    OpusPrimus
- * @subpackage    Compatibility
- * @since    1.3
+ * @package     OpusPrimus
+ * @subpackage  Compatibility
+ * @since       1.3
  *
- * @author    Opus Primus <in.opus.primus@gmail.com>
- * @copyright    Copyright (c) 2014, Opus Primus
+ * @author      Opus Primus <in.opus.primus@gmail.com>
+ * @copyright   Copyright (c) 2014, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -32,7 +31,12 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-jQuery( document ).ready( function ( $ ) {
-	/** Note: $() will work as an alias for jQuery() inside of this function */
+/** Hide bottom of reCaptcha form */
+#recaptcha_table > tbody > tr:nth-child(7) {
+	display: none;
+}
 
-} );
+/** Better position the reCaptcha input area */
+#recaptcha_table > tbody > tr:nth-child(4) > td.recaptcha_r4_c1 > div {
+	bottom: 7px;
+}

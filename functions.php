@@ -408,7 +408,7 @@ function opus_primus_compatibility() {
 	 * @link    http://gravityforms.com/
 	 */
 	if ( is_plugin_active( 'gravityforms/gravityforms.php' ) ) {
-		wp_enqueue_script( 'opus-primus-gravityforms', $opus_router->path_uri( 'compatibility' ) . 'opus-primus-gravityforms.js', array( 'jquery' ), opus_primus_theme_version(), true );
+		wp_enqueue_style( 'Opus-Primus-GravityForms', $opus_router->path_uri( 'compatibility' ) . 'opus-primus-gravityforms.css', array(), opus_primus_theme_version(), 'screen' );
 	}
 
 }
