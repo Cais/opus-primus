@@ -1026,6 +1026,8 @@ class OpusPrimusPosts {
 	 * @uses     is_page
 	 *
 	 * @return bool
+	 *
+	 * @todo Review "PHP Notice:  Undefined offset: 0 in /home/frumph/public_html/dev/wp-content/themes/opus-primus/includes/class.OpusPrimusPosts.php on line 1038"
 	 */
 	function uncategorized() {
 		/** @var $post_categories - holds all of the post category objects */
