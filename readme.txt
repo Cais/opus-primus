@@ -1,5 +1,5 @@
 === Opus Primus readme.txt ===
-* Last revised August 24, 2014
+* Last revised November 9, 2014
 
 == Contents ==
 * Copyright
@@ -69,7 +69,7 @@ The details of the license can be found under ../js/SlickNav/MIT-LICENSE.txt
 Only the relevant files have been included, a complete download can be found at https://github.com/ComputerWolf/SlickNav
 
 * FitVids - built by Chris Coyier and Paravel - Version 1.1
-Copyright 2013, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
+Copyright (c) 2013, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
 Released under the WTFPL license - http://sam.zoy.org/wtfpl/
 Only the plugin file has been included, the complete project can be found at https://github.com/davatron5000/FitVids.js
 
@@ -80,6 +80,13 @@ written here.
 == Screenshots ==
 
 == Basic FAQ ==
+Q: I just updated to version 1.3, what could be causing these child-theme errors?
+With version 1.3 of Opus Primus the calls to the classes were changed from using
+`require_once` to `locate_template`. This then followed files being updated from
+calling the class global variable to creating a "new" class instance as needed.
+This is expected to provide better child-theme compatibility going forward and
+only be a one-time correction for existing child-themes.
+
 Q: What are Stanzas?
 Stanzas are meant to add additional functionality specifically to Opus Primus by
 either using specific Opus Primus assets, such as a particular font face; or, by
@@ -93,7 +100,7 @@ the index view or in archives.
 
 Q: How do the breadcrumb trails work?
 There are two different breadcrumb trails used in Opus Primus. One type is used
-on posts and shows the page hierarchy from the highest level to the lowest. The
+on pages and shows the page hierarchy from the highest level to the lowest. The
 second trail is used on single views of posts and shows the first category and
 Post-Format of the post, both linked to their respective archive.
 
@@ -124,11 +131,6 @@ Q: How do I modify an existing function from one of the classes?
 Most WordPress functions included with the theme will have their own filter,
 otherwise it would be recommended to extend the class and overload the theme
 function you are trying to modify.
-
-Q: Are Child-Themes supported and can they have their own LESS stylesheet?
-Simply put, yes. Opus Primus supports WordPress Child-Themes like any other well
-made theme. A very simple Child-Theme template is available upon request if you
-need help getting started. Please email in.opus.primus@gmail.com for more info.
 
 Q: How does Opus Primus automatically handle multiple column layouts?
 Through some CSS trickery and code logic Opus Primus will display by default
