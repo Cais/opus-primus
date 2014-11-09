@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised October 13, 2014
+Last revised November 9, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.3 ==
@@ -27,6 +27,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added styles for the "BNS Login" plugin
 * Added `clear: both` to `footer`
 * Added `width: auto;` for `th` and `td` elements
+* Added `#header-widgets` to the "Clearance" section of `opus-primus.css`
 * Change default `ul` list-style property to `none inside`
 * Hide the post/page breadcrumbs in mobile displays
 * Hide "Search" button for search form
