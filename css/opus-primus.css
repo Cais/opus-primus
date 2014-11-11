@@ -1137,6 +1137,10 @@ a.excerpt-more-link:hover {
 	border-bottom: 1px solid #d3d3d3;
 }
 
+.attachment .post-coda {
+	margin-top: 16px;
+}
+
 /** Meta-Tags --------------------------------------------------------------- */
 .meta-tags {
 	border-top: 1px solid #d3d3d3;
@@ -1582,6 +1586,10 @@ p + div.wp-caption {
 
 img {
 	height: auto;
+}
+
+.attachment img {
+	width: 98%;
 }
 
 img.wp-smiley {
