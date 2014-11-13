@@ -503,3 +503,37 @@ function opus_primus_comments_form_closed() {
 /** End function - comments form closed */
 
 add_action( 'comment_form_comments_closed', 'opus_primus_comments_form_closed' );
+
+
+/**
+ * Support Comment
+ * Writes an HTML comment with the theme version meant to be used as a
+ * reference for support and assistance.
+ *
+ * @package OpusPrimus
+ * @since   0.1
+ *
+ * @uses    is_child_theme
+ * @uses    wp_get_theme
+ *
+ * @version 1.3
+ * @date    November 13, 2014
+ * Added checks for Child-Theme and relevant references
+ * Moved method from OpusPrimusStructures as it was causing another "Double Stuff" issue
+ */
+function opus_primus_support_comment() {
+
+	$comment = "\n";
+	$comment .= '<!-- The following comment is meant to serve as a reference only -->' . "\n";
+	if (is_child_theme()) {
+		$comment .= '<!-- Opus Primus version ' . wp_get_theme()->parent()->get( 'Version' ) . ' | ';
+		$comment .= 'Child-Theme: ' . wp_get_theme() . ' version ' . wp_get_theme()->get( 'Version' ) . ' -->' . "\n";
+	} else {
+		$comment .= '<!-- ' . wp_get_theme() . ' version ' . wp_get_theme()->get( 'Version' ) . ' -->' . "\n";
+	}
+
+	echo $comment;
+
+} /** End function - support comment */
+
+add_action( 'wp_footer', 'opus_primus_support_comment' );

@@ -49,6 +49,10 @@ class OpusPrimusStructures {
 	 *
 	 * @uses       add_action
 	 * @uses       add_filter
+	 *
+	 * @version    1.3
+	 * @date       November 13, 2014
+	 * Moved `support_comment` method to `functions.php` to eliminate duplicate output, commented out action hook
 	 */
 	function __construct() {
 		/** Restructure the browser title */
@@ -58,8 +62,9 @@ class OpusPrimusStructures {
 
 		/** Hooks into the 404 page image placeholder action hook */
 		add_action( 'opus_404_image', array( $this, 'show_bust_image' ) );
+
 		/** Add Support Comment to footer area */
-		add_action( 'wp_footer', array( $this, 'support_comment' ) );
+		/** add_action( 'wp_footer', array( $this, 'support_comment' ) ); */
 
 	} /** End function - construct */
 
@@ -256,12 +261,21 @@ class OpusPrimusStructures {
 	 * @since   0.1
 	 *
 	 * @uses    wp_get_theme
+	 *
+	 * @version 1.3
+	 * @date    November 13, 2014
+	 * Moved `support_comment` method to `functions.php` to eliminate duplicate output
 	 */
 	function support_comment() {
 
 		$comment = "\n";
 		$comment .= '<!-- The following comment is meant to serve as a reference only -->' . "\n";
-		$comment .= '<!-- Opus Primus version ' . wp_get_theme()->get( 'Version' ) . ' -->' . "\n";
+		if ( is_child_theme() ) {
+			$comment .= '<!-- Opus Primus version ' . wp_get_theme()->parent()->get( 'Version' ) . ' | ';
+			$comment .= 'Child-Theme: ' . wp_get_theme() . ' version ' . wp_get_theme()->get( 'Version' ) . ' -->' . "\n";
+		} else {
+			$comment .= '<!-- ' . wp_get_theme() . ' version ' . wp_get_theme()->get( 'Version' ) . ' -->' . "\n";
+		}
 
 		echo $comment;
 
