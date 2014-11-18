@@ -31,7 +31,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added `width: auto;` for `th` and `td` elements
 * Added `#header-widgets` to the "Clearance" section of `opus-primus.css`
 * Added minor `attachment` related styles
-* Added search form margin property
+* Added better search form aesthetics in the sidebar
 * Change default `ul` list-style property to `none inside`
 * Hide the post/page breadcrumbs in mobile displays
 * Hide "Search" button for search form

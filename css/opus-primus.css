@@ -80,7 +80,7 @@
  * Added `clear: both` to `footer`
  * Added `width: auto;` for `th` and `td` elements
  * Added `#header-widgets` to the "Clearance" section
- * Added search form margin property
+ * Added better search form aesthetics in the sidebar
  * Change default `ul` list-style property to `none inside`
  * Hide "Search" button for search form
  * Removed unused `div#top-navigation-menu` definition
@@ -1465,7 +1465,9 @@ li.widget_rss ul li cite:before {
 }
 
 /** Search */
-.widget form.search-form {
+.widget form.search-form,
+.widget form.search-form label,
+.widget form.search-form input.search-field {
 	margin: 0;
 }
 
