@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised November 10, 2014
+Last revised November 18, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.3 ==

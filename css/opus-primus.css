@@ -74,12 +74,13 @@
  * Minor adjustments to `img` tag related items
  *
  * @version	1.3
- * @date	November 9, 2014
+ * @date	November 18, 2014
  * Added new typography styles for better reading
  * Added styles for the "BNS Login" plugin
  * Added `clear: both` to `footer`
  * Added `width: auto;` for `th` and `td` elements
  * Added `#header-widgets` to the "Clearance" section
+ * Added search form margin property
  * Change default `ul` list-style property to `none inside`
  * Hide "Search" button for search form
  * Removed unused `div#top-navigation-menu` definition
@@ -119,6 +120,11 @@
  *
  * === Sidebars ===
  * === Default Widgets ===
+ * Calendar
+ * RSS
+ * Search
+ * Tag Cloud
+ * Text Widgets
  *
  * === 404 Layout ===
  *
