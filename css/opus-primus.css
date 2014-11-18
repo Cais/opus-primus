@@ -1458,6 +1458,16 @@ li.widget_rss ul li cite:before {
 	content: '~ ';
 }
 
+/** Search */
+.widget form.search-form {
+	margin: 0;
+}
+
+/** Tag Cloud */
+li.widget_tag_cloud {
+	margin: 0 3px;
+}
+
 /** Text Widgets */
 li.widget_text {
 	margin: 0 3px;
@@ -1471,11 +1481,6 @@ li.widget_text div.textwidget div.wp-caption {
 li.widget_text div.textwidget div.wp-caption a img {
 	height: auto;
 	width: 98%;
-}
-
-/** Tag Cloud */
-li.widget_tag_cloud {
-	margin: 0 3px;
 }
 
 /** End: Default Widgets ---------------------------------------------------- */
