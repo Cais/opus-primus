@@ -10,7 +10,6 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added WordPress HTML5 markup support for search form, comment form, comment list, and caption
 * Added sanity checks to ensure constants are not already defined
 * Added `OpusPrimusRouter` class to replace path and URL CONSTANTS
-* Added appropriate suffixes to script and style handles to ensure uniqueness in OpusPrimusPullQuotes
 * Added Child-Theme "slug" for easier customizations
 * Added empty hooks before and after showing the breadcrumbs
 * Added OpusPrimusComments class methods to `functions.php` to work-around duplicate output issue
@@ -19,6 +18,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Changed post breadcrumb link to the WordPress shortlink
 * Create `/lib/` folder to store bundled libraries and ancillary files
 * Enqueue JavaScripts and CSS for SlickNav JavaScript plugin integration to handle mobile menus
+* Extracted the Opus Primus PullQuotes Stanza
 * Moved `support_comment` method to `functions.php` to eliminate duplicate output
 * Replaced the majority of `require_once` calls with `locate_template` calls
 * Replaced `global` variable calls with `new` class instances

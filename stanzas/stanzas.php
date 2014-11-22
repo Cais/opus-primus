@@ -42,16 +42,14 @@
  * Added mechanism to find and include new custom stanzas
  *
  * @version     1.3
- * @date        September 1, 2014
+ * @date        November 22, 2014
+ * Extracted the Opus Primus PullQuotes Stanza
  * Replaced CONSTANTS with OpusPrimusRouter method
  * Replaced `required_once` with `locate_template`
  */
 
 /** Call OpusPrimusRouter global class */
 $opus_router = new OpusPrimusRouter();
-
-/** Add Pull Quotes */
-locate_template( 'stanzas/pullquotes/class.OpusPrimusPullQuotes.php', true, true );
 
 /** Add TagLines */
 locate_template( 'stanzas/taglines/class.OpusPrimusTagLines.php', true, true );
