@@ -4,7 +4,7 @@
  * A WordPress Framework Theme.
  *
  * @package        OpusPrimus
- * @version        1.2.5
+ * @version        1.3
  *
  * @internal       RECOMMENDED HTML5 compatible browser for <!DOCTYPE html>
  * @internal       RECOMMENDED CSS3
@@ -55,7 +55,7 @@
  * @date           July 2014
  *
  * @version        1.3
- * @date           ...
+ * @date           November 2014
  */
 
 /** Create OpusPrimusStructures class object */

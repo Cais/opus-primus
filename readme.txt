@@ -1,5 +1,5 @@
 === Opus Primus readme.txt ===
-* Last revised November 9, 2014
+* Last revised November 22, 2014
 
 == Contents ==
 * Copyright
@@ -111,13 +111,6 @@ There are three menu locations defined in Opus Primus.
 defined for uses as the case may be, for example, page templates or Child-Themes
 * The Search Results Menu, located at the bottom of the content area when there
 are no search results returned, especially in the case of a "404" error be sent.
-
-Q: Why are there blank areas in my menu?
-Although not always the case, it has been shown that if you have a page without
-a title and you are using a menu created by the default settings (read: not a
-custom menu) you may experience a "blank" area in your menu (usually at the
-beginning). This has been noted on the WordPress core trac ticket "Empty Page
-Title Not Handled in Menu System" https://core.trac.wordpress.org/ticket/23254
 
 Q: Is Opus Primus designed to be responsive to multiple screen sizes?
 In a word, no. Although the theme does include some minimal CSS specifically

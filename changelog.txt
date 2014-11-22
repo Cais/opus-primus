@@ -1,9 +1,9 @@
 === Opus Primus changelog.txt ===
-Last revised November 18, 2014
+Last revised November 22, 2014
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 == Version 1.3 ==
-* Released ...
+* Released November 2014
 
 = Code =
 * Added `post-title-link` wrapper class to better manage Post Title output
@@ -54,6 +54,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Removed `works-in-progress` folder from theme
 * Updated `readme.txt` to note the use and license of SlickNav by Josh Cope
 * Updated `readme.txt` to note the use and license of FitVids by Chris Coyier and Paravel
+* Updated `readme.txt` to remove FAQ item related to blank menu items; resolved in WordPress core trac ticket #23254
 * Updated `style.css` description to emphasize the addition of the SlickNav and FitVids libraries
 * Updated `screenshot.png` to better reflect latest release
 * Updated `hooks-actions.txt` with new additions
