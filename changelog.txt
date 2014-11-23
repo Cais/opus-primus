@@ -18,7 +18,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Changed post breadcrumb link to the WordPress shortlink
 * Create `/lib/` folder to store bundled libraries and ancillary files
 * Enqueue JavaScripts and CSS for SlickNav JavaScript plugin integration to handle mobile menus
-* Extracted the Opus Primus PullQuotes Stanza
+* Extracted the Opus Primus PullQuotes Stanza (see https://github.com/Cais/opus-primus-pullquotes)
 * Moved `support_comment` method to `functions.php` to eliminate duplicate output
 * Replaced the majority of `require_once` calls with `locate_template` calls
 * Replaced `global` variable calls with `new` class instances
