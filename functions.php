@@ -7,7 +7,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2014, Opus Primus
+ * @copyright   Copyright (c) 2012-2015, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -138,20 +138,20 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 		wp_enqueue_script( 'FitVids', $opus_router->path_uri( 'lib' ) . 'FitVids/jquery.fitvids.js', array( 'jquery' ), '1.1', true );
 		wp_enqueue_script(
 			'opus-primus-fitvids-init', $opus_router->path_uri( 'lib' ) . 'opus-primus-fitvids-init.js', array(
-				'jquery',
-				'FitVids'
-			), opus_primus_theme_version(), true
+			'jquery',
+			'FitVids'
+		), opus_primus_theme_version(), true
 		);
 
 		/** Enqueue Opus Primus Comment Tabs which will enqueue jQuery, jQuery UI Core, jQuery UI Widget, and jQuery UI Tabs as dependencies */
 		if ( is_single() ) {
 			wp_enqueue_script(
 				'opus-primus-comment-tabs', $opus_router->path_uri( 'js' ) . 'opus-primus-comment-tabs.js', array(
-					'jquery',
-					'jquery-ui-core',
-					'jquery-ui-widget',
-					'jquery-ui-tabs'
-				), opus_primus_theme_version(), true
+				'jquery',
+				'jquery-ui-core',
+				'jquery-ui-widget',
+				'jquery-ui-tabs'
+			), opus_primus_theme_version(), true
 			);
 		}
 		/** End if - is single */
@@ -195,9 +195,9 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 		/** Enqueue SlickNav initialization script with jQuery and SlickNav dependencies */
 		wp_enqueue_script(
 			'SlickNav-init', $opus_router->path_uri( 'lib' ) . 'opus-primus-slicknav-init.js', array(
-				'jquery',
-				'SlickNav-JS-main'
-			), opus_primus_theme_version(), true
+			'jquery',
+			'SlickNav-JS-main'
+		), opus_primus_theme_version(), true
 		);
 		/** Enqueue SlickNav mobile layout only styles with SlickNav dependency */
 		wp_enqueue_style( 'SlickNav-layout', $opus_router->path_uri( 'lib' ) . 'opus-primus-slicknav.css', array( 'SlickNav-CSS-main' ), opus_primus_theme_version(), 'screen' );
@@ -344,6 +344,9 @@ add_action( 'after_setup_theme', 'opus_primus_theme_setup' );
 function opus_primus_return_blank() {
 	return ' ';
 }
+
+/** End function - return blank */
+
 
 /**
  * Compatibility
@@ -501,7 +504,6 @@ function opus_primus_comments_form_closed() {
 }
 
 /** End function - comments form closed */
-
 add_action( 'comment_form_comments_closed', 'opus_primus_comments_form_closed' );
 
 
@@ -525,7 +527,7 @@ function opus_primus_support_comment() {
 
 	$comment = "\n";
 	$comment .= '<!-- The following comment is meant to serve as a reference only -->' . "\n";
-	if (is_child_theme()) {
+	if ( is_child_theme() ) {
 		$comment .= '<!-- Opus Primus version ' . wp_get_theme()->parent()->get( 'Version' ) . ' | ';
 		$comment .= 'Child-Theme: ' . wp_get_theme() . ' version ' . wp_get_theme()->get( 'Version' ) . ' -->' . "\n";
 	} else {
@@ -534,6 +536,7 @@ function opus_primus_support_comment() {
 
 	echo $comment;
 
-} /** End function - support comment */
+}
 
+/** End function - support comment */
 add_action( 'wp_footer', 'opus_primus_support_comment' );

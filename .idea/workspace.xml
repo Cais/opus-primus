@@ -34,8 +34,8 @@
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.86706054" vertical-offset="6748" max-vertical-offset="7425">
-              <caret line="538" column="57" selection-start-line="538" selection-start-column="57" selection-end-line="538" selection-end-column="57" />
+            <state vertical-scroll-proportion="-0.9335303" vertical-offset="767" max-vertical-offset="8205">
+              <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -337,12 +337,6 @@
       <option name="number" value="Default" />
       <updated>1395521979616</updated>
     </task>
-    <task id="LOCAL-00502" summary="* Updated `editor-style.css` to match new typography of theme">
-      <created>1408227694535</created>
-      <option name="number" value="00502" />
-      <option name="project" value="LOCAL" />
-      <updated>1408227694535</updated>
-    </task>
     <task id="LOCAL-00503" summary="- adjust post codas">
       <created>1408586086967</created>
       <option name="number" value="00503" />
@@ -631,7 +625,13 @@
       <option name="project" value="LOCAL" />
       <updated>1421620311503</updated>
     </task>
-    <option name="localTasksCounter" value="551" />
+    <task id="LOCAL-00551" summary="- clean out test code">
+      <created>1421620438868</created>
+      <option name="number" value="00551" />
+      <option name="project" value="LOCAL" />
+      <updated>1421620438868</updated>
+    </task>
+    <option name="localTasksCounter" value="552" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -738,7 +738,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* Replaced the majority of `require_once` calls with `locate_template` calls&#10;* Replaced `global` variable calls with `new` class instances" />
     <MESSAGE value="- white space clean-up" />
     <MESSAGE value="* Better code organization to only load classes when needed" />
     <MESSAGE value="* Added empty hooks before and after showing the breadcrumbs" />
@@ -763,7 +762,8 @@
     <MESSAGE value="* Extracted the Opus Primus PullQuotes Stanza" />
     <MESSAGE value="- added link to Opus Primus PullQuotes GitHub repository" />
     <MESSAGE value="- update copyright years to include 2015" />
-    <option name="LAST_COMMIT_MESSAGE" value="- update copyright years to include 2015" />
+    <MESSAGE value="- clean out test code" />
+    <option name="LAST_COMMIT_MESSAGE" value="- clean out test code" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="WordPressConfiguration" enabled="true">
@@ -1190,8 +1190,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86706054" vertical-offset="6748" max-vertical-offset="7425">
-          <caret line="538" column="57" selection-start-line="538" selection-start-column="57" selection-end-line="538" selection-end-column="57" />
+        <state vertical-scroll-proportion="-0.9335303" vertical-offset="767" max-vertical-offset="8205">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
           <folding />
         </state>
       </provider>
