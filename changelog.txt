@@ -6,7 +6,11 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Released ...
 
 = Code =
+* Added `get_the_posts_pagination` for navigation between pages of posts
+
 = CSS =
+* Added `=== Screen Reader Text ===` section
+
 = Miscellaneous =
 
 /** ------------------------------------------------------------------------- */

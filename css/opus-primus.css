@@ -88,6 +88,10 @@
  * Updated galleries styles to use HTML5 markup
  * Updated font-size of excerpt more link symbol to 35px from 200%
  * Updated "Table of Contents"
+ *
+ * @version	1.3.1
+ * @date	January 18, 2015
+ * Added `=== Screen Reader Text ===` section
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -146,6 +150,8 @@
  * === Post-Format: Chat ===
  *
  * === Footer ===
+ *
+ * === Screen Reader Text ===
  *
  * === Miscellaneous ===
  * === Style.LESS Compiled to CSS ===
@@ -2030,6 +2036,18 @@ h6#site-generator {
 }
 
 /** End: Footer ------------------------------------------------------------- */
+
+/** === Screen Reader Text === ---------------------------------------------- */
+.screen-reader-text {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+/** End: Screen Reader Text ------------------------------------------------- */
 
 /** === Miscellaneous === --------------------------------------------------- */
 .question-mark {

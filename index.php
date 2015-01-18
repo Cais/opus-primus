@@ -4,11 +4,12 @@
  * A WordPress Framework Theme.
  *
  * @package        OpusPrimus
- * @version        1.3
+ * @version        1.3.1
+ * @date           January 2015
  *
  * @internal       RECOMMENDED HTML5 compatible browser for <!DOCTYPE html>
  * @internal       RECOMMENDED CSS3
- * @internal       REQUIRED    WordPress 3.8 for `dashicons` dependency of `Opus-Primus` stylesheet
+ * @internal       REQUIRED    WordPress 4.1 for use of `get_the_posts_pagination`
  *
  * @author         Opus Primus <in.opus.primus@gmail.com>
  * @copyright      Copyright (c) 2012-2015, Opus Primus
@@ -34,28 +35,6 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
- *
- * @version        1.2
- * @date           August 2013
- *
- * @version        1.2.1
- * @date           August 4, 2013
- * Removed `translation-ready` tag
- *
- * @version        1.2.2
- * @date           October 2013
- *
- * @version        1.2.3
- * @date           February 2014
- *
- * @version        1.2.4
- * @date           May 2014
- *
- * @version        1.2.5
- * @date           July 2014
- *
- * @version        1.3
- * @date           November 2014
  */
 
 /** Create OpusPrimusStructures class object */

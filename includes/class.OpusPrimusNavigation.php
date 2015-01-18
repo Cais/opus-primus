@@ -251,26 +251,31 @@ class OpusPrimusNavigation {
 	 * Pagination
 	 * Creates a pagination structure to navigate between site pages.
 	 *
-	 * @package          Opus_Primus
-	 * @sub-package      Navigation
-	 * @since            1.2.5
+	 * @package     Opus_Primus
+	 * @sub-package Navigation
+	 * @since       1.2.5
 	 *
-	 * @internal         Inspired by the Remi Corson post
-	 * @link             http://www.remicorson.com/create-a-custom-wordpress-pagination-in-less-than-10-lines-of-code/
+	 * @internal    Inspired by the Remi Corson post
+	 * @link        http://www.remicorson.com/create-a-custom-wordpress-pagination-in-less-than-10-lines-of-code/
 	 *
-	 * @internal         Output is wrapped in `ul.page-numbers`
+	 * @internal    Output is wrapped in `ul.page-numbers`
 	 *
-	 * @uses             (global) $wp_query
-	 * @uses             get_option
-	 * @uses             get_pagenum_link
-	 * @uses             get_query_var
+	 * @uses        (GLOBAL) $wp_query
+	 * @uses        get_option
+	 * @uses        get_pagenum_link
+	 * @uses        get_query_var
+	 * @uses        get_the_posts_pagination
 	 *
 	 * @return mixed|void
+	 *
+	 * @version     1.3.1
+	 * @date        January 18, 2015
+	 * Changed to use `get_the_posts_pagination`
 	 */
 	function pagination() {
 
 		/** @var string $pagination - initialize results variable */
-		$pagination = '';
+		// $pagination = '';
 
 		/** get the current query object */
 		global $wp_query;
@@ -296,7 +301,7 @@ class OpusPrimusNavigation {
 			/** End if - using Permalinks other than "Default" */
 
 			/** @var string $pagination - results variable */
-			$pagination = paginate_links(
+			$pagination = get_the_posts_pagination(
 				array(
 					'base'     => get_pagenum_link( 1 ) . '%_%',
 					'format'   => $format,
