@@ -537,8 +537,3 @@ function opus_primus_support_comment() {
 } /** End function - support comment */
 
 add_action( 'wp_footer', 'opus_primus_support_comment' );
-
-function new_tool_tip_name() {
-return "'tool_tip2'";
-}
-add_filter('bns_helpers_tool_tip_shortcode_handle','new_tool_tip_name');
