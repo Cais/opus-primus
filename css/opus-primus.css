@@ -5,7 +5,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2014, Opus Primus
+ * @copyright   Copyright (c) 2012-2015, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -2079,6 +2079,11 @@ blockquote.aside.nota-bene {
 .bns-login {
 	font-size: 16px;
 	line-height: 30px;
+}
+
+/** BNS Support */
+h6.bns-support-credits {
+	line-height: 15px;
 }
 
 /** End: BNS Plugin Integrations -------------------------------------------- */

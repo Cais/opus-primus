@@ -8,7 +8,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2014, Opus Primus
+ * @copyright   Copyright (c) 2012-2015, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -641,6 +641,7 @@ class OpusPrimusStructures {
 		$opus_navigation = new OpusPrimusNavigation();
 
 		/** Display a list of categories to choose from */
+		/** @noinspection PhpInternalEntityUsedInspection */
 		$opus_archives->categories_archive(
 			array(
 				'orderby'      => 'count',
@@ -653,6 +654,7 @@ class OpusPrimusStructures {
 		);
 
 		/** Display a list of tags to choose from */
+		/** @noinspection PhpInternalEntityUsedInspection */
 		$opus_archives->archive_cloud(
 			array(
 				'taxonomy' => 'post_tag',

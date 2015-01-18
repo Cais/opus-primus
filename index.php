@@ -11,7 +11,7 @@
  * @internal       REQUIRED    WordPress 3.8 for `dashicons` dependency of `Opus-Primus` stylesheet
  *
  * @author         Opus Primus <in.opus.primus@gmail.com>
- * @copyright      Copyright (c) 2012-2014, Opus Primus
+ * @copyright      Copyright (c) 2012-2015, Opus Primus
  *
  * This file is part of Opus Primus.
  *

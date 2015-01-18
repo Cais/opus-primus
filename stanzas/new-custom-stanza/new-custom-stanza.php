@@ -8,7 +8,7 @@
  * @since       1.2
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2013-2014, Opus Primus
+ * @copyright   Copyright (c) 2013-2015, Opus Primus
  *
  * This file is part of Opus Primus New Custom Stanza, a part of Opus Primus.
  *

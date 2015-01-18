@@ -176,3 +176,4 @@ See `changelog.txt` in theme root folder
 * https://themes.trac.wordpress.org/ticket/16874 - Version 1.2.3 - February 2014
 * https://themes.trac.wordpress.org/ticket/18889 - Version 1.2.4 - May 2014
 * https://themes.trac.wordpress.org/ticket/19955 - Version 1.2.5 - July 2014
+* https://themes.trac.wordpress.org/ticket/21772 - Version 1.3 - November 2014

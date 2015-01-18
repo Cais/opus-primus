@@ -2,11 +2,11 @@
 Theme Name: Opus Primus
 Theme URI: http://opusprimus.com/
 Description: A WordPress Framework Theme ... the first work. It works first. Designed and developed to be extensible and easily modified, based in the principles of decisions not options. Opus Primus supports all of the current Post-Formats as well as auto-magically converting between one, two, and three column layouts. Enjoy the mobile friendly menu integration of SlickNav and improved responsive video performance with FitVids. You have access to custom backgrounds as well as a flexible custom header, too. Feel free to visit the <a href="http://opusprimus.com" target="_blank" rel="nofollow">Opus Primus</a> website for more details and information about the theme and how it is built. You will also find tutorials on how to modify and work with Opus Primus Child-Themes.
-Version: 1.3
+Version: 1.3.1
 Author: Edward Caissie
 Author URI: http://edwardcaissie.com/
 WordPress Required Version: 3.8
-WordPress Tested Version: 4.0
+WordPress Tested Version: 4.1
 Tags: black, white, gray, light, one-column, two-columns, three-columns, right-sidebar, responsive-layout, fluid-layout, custom-background, custom-header, custom-menu, featured-images, flexible-header, post-formats, sticky-post, threaded-comments
 Text Domain: opusprimus
 License: GNU General Public License v2
@@ -20,7 +20,7 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2014, Opus Primus
+ * @copyright   Copyright (c) 2012-2015, Opus Primus
  *
  * This file is part of Opus Primus.
  *

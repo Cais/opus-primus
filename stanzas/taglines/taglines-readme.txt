@@ -7,7 +7,7 @@
 * Notes
 
 == Copyright ==
-Copyright (c) 2012-2013, Opus Primus
+Copyright (c) 2012-2015, Opus Primus
 
 This file is part of the Opus Primus Taglines Stanza, a part of Opus Primus.
 
