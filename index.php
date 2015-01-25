@@ -1,15 +1,12 @@
 <?php
 /**
  * Opus Primus
+ *
  * A WordPress Framework Theme.
  *
  * @package        OpusPrimus
  * @version        1.3.1
  * @date           January 2015
- *
- * @internal       RECOMMENDED HTML5 compatible browser for <!DOCTYPE html>
- * @internal       RECOMMENDED CSS3
- * @internal       REQUIRED    WordPress 4.1 for use of `get_the_posts_pagination`
  *
  * @author         Opus Primus <in.opus.primus@gmail.com>
  * @copyright      Copyright (c) 2012-2015, Opus Primus

@@ -2,6 +2,7 @@
 
 /**
  * Opus Primus Archives
+ *
  * Site archives for categories, tags, pages, etc.
  *
  * @package     OpusPrimus
@@ -39,27 +40,27 @@
  * `opus_<section>_<placement>`
  */
 class OpusPrimusArchives {
-	/** Construct */
+	/**
+	 * Construct
+	 */
 	function __construct() {
 	}
 
 
 	/**
 	 * Opus Primus Archive Cloud
+	 *
 	 * Displays a cloud of links to the "post tag" and "category" taxonomies by
 	 * default; standard `wp_tag_cloud` parameters can be passed to change the
 	 * output.
 	 *
 	 * @link     http://codex.wordpress.org/Function_Reference/wp_tag_cloud
 	 * @example  archive_cloud( array( 'taxonomy' => 'post_tag', 'number' => 10 ) );
-	 * @Internal The above example shows only the top 10 post tags.
 	 *
 	 * @package  OpusPrimus
 	 * @since    0.1
 	 *
 	 * @param   string $cloud_args
-	 *
-	 * @internal defaults = show post tags and categories, formatted as a list, in a random order
 	 *
 	 * @uses     do_action
 	 * @uses     wp_parse_args
@@ -127,12 +128,12 @@ class OpusPrimusArchives {
 
 	/**
 	 * Opus Primus Category Archive
+	 *
 	 * Displays all of the categories with links to their respective category
 	 * archive page using `wp_list_categories` and all of its parameters.
 	 *
 	 * @link     http://codex.wordpress.org/Function_Reference/wp_list_categories
 	 * @example  categories_archive( array( 'number' => 12 ) );
-	 * @internal The above example will use the default parameters but limit the output to 12 items
 	 *
 	 * @package  OpusPrimus
 	 * @since    0.1

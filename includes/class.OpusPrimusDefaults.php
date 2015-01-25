@@ -1,6 +1,7 @@
 <?php
 /**
  * Opus Primus Defaults
+ *
  * Set global defaults for boolean options used in theme
  *
  * @package        OpusPrimus
@@ -8,6 +9,9 @@
  *
  * @author         Opus Primus <in.opus.primus@gmail.com>
  * @copyright      Copyright (c) 2013-2015, Opus Primus
+ *
+ * @deprecated     1.2.5
+ * @date           July 20, 2014
  *
  * This file is part of Opus Primus.
  *
@@ -52,10 +56,6 @@
  * @date           July 20, 2014
  * Refactored all defaults to use filtered define statements
  * Deprecated class ... see /includes/opus-primus-defaults.php
- *
- * @deprecated     1.2.5
- * @date           July 20, 2014
- * @internal       File retained for reference ... removal from theme pending
  */
 
 if ( ! class_exists( 'OpusPrimusDefaults' ) ) {

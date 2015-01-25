@@ -1,6 +1,7 @@
 <?php
 /**
  * Search Template
+ *
  * Displays for search results
  *
  * @package     OpusPrimus

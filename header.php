@@ -1,6 +1,7 @@
 <?php
 /**
  * Header Template
+ *
  * Default document header including primary navigation.
  *
  * @package     OpusPrimus

@@ -2,6 +2,7 @@
 
 /**
  * Opus Primus Navigation
+ *
  * Controls for the navigation between multi-page posts, site pages, and menu
  * navigation structures.
  *
@@ -44,12 +45,15 @@
  * Added new method `pagination` for moving between pages of posts
  */
 class OpusPrimusNavigation {
-	/** Construct */
+	/**
+	 * Construct
+	 */
 	function __construct() {
 	}
 
 	/**
 	 * Comments Navigation
+	 *
 	 * Displays a link between pages of comments
 	 *
 	 * @package OpusPrimus
@@ -77,6 +81,7 @@ class OpusPrimusNavigation {
 
 	/**
 	 * List Pages
+	 *
 	 * Callback function for the wp_nav_menu call; accepts wp_nav_menu arguments
 	 * passed through the callback function.
 	 *
@@ -105,6 +110,7 @@ class OpusPrimusNavigation {
 
 	/**
 	 * Image Link Navigation
+	 *
 	 * Method to move between images when shown via the `image.php` template
 	 *
 	 * @package    OpusPrimus
@@ -141,14 +147,13 @@ class OpusPrimusNavigation {
 
 	/**
 	 * Multiple Pages Link
+	 *
 	 * Outputs the navigation structure to move between multiple pages from the
 	 * same post. All parameters used by `wp_link_pages` can be passed through
 	 * the function.
 	 *
 	 * @link       http://codex.wordpress.org/Function_Reference/wp_link_pages
 	 * @example    multiple_pages_link( array( 'before' => '<p class="navigation link-pages cf">', 'after' => '</p>' ) );
-	 * @internal   The above example will output the `wp_link_pages` output in a
-	 * wrapper consisting of a `p` tag with `classes`
 	 *
 	 * @package    OpusPrimus
 	 * @since      0.1
@@ -186,6 +191,7 @@ class OpusPrimusNavigation {
 
 	/**
 	 * Post Link
+	 *
 	 * Outputs the navigation structure to move between posts
 	 *
 	 * @package OpusPrimus
@@ -216,6 +222,7 @@ class OpusPrimusNavigation {
 
 	/**
 	 * Posts Link
+	 *
 	 * Outputs the navigation structure to move between archive pages
 	 *
 	 * @package    OpusPrimus
@@ -249,16 +256,12 @@ class OpusPrimusNavigation {
 
 	/**
 	 * Pagination
+	 *
 	 * Creates a pagination structure to navigate between site pages.
 	 *
 	 * @package     Opus_Primus
 	 * @sub-package Navigation
 	 * @since       1.2.5
-	 *
-	 * @internal    Inspired by the Remi Corson post
-	 * @link        http://www.remicorson.com/create-a-custom-wordpress-pagination-in-less-than-10-lines-of-code/
-	 *
-	 * @internal    Output is wrapped in `ul.page-numbers`
 	 *
 	 * @uses        (GLOBAL) $wp_query
 	 * @uses        get_option
@@ -323,6 +326,7 @@ class OpusPrimusNavigation {
 
 	/**
 	 * Pagination Wrapped
+	 *
 	 * Wraps the pagination method in action hooks
 	 *
 	 * @package        Opus_Primus
@@ -347,6 +351,7 @@ class OpusPrimusNavigation {
 
 	/**
 	 * Primary Menu
+	 *
 	 * Primary navigation menu
 	 *
 	 * @package OpusPrimus
@@ -380,6 +385,7 @@ class OpusPrimusNavigation {
 
 	/**
 	 * Search Menu
+	 *
 	 * Search results navigation menu
 	 *
 	 * @package OpusPrimus
@@ -417,6 +423,7 @@ class OpusPrimusNavigation {
 
 	/**
 	 * Search Page Menu
+	 *
 	 * Callback function for the menu
 	 *
 	 * @package OpusPrimus
@@ -447,6 +454,7 @@ class OpusPrimusNavigation {
 
 	/**
 	 * Secondary Menu
+	 *
 	 * Secondary navigation menu pre-configured and available for use in
 	 * Child-Themes or as part of other customizations and/or modifications.
 	 *
@@ -454,8 +462,6 @@ class OpusPrimusNavigation {
 	 * @since    0.1
 	 *
 	 * @param   string|array $secondary_menu_args
-	 *
-	 * @internal Not used with the Parent-Theme by default
 	 *
 	 * @uses     do_action
 	 * @uses     wp_nav_menu

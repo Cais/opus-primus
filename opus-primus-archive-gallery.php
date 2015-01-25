@@ -1,6 +1,7 @@
 <?php
 /**
  * Gallery Archive Loop
+ *
  * This loop shows the gallery post-format archives loop template.
  * The default is to show the featured image in a small size and the post
  * excerpt.

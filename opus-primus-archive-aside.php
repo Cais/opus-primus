@@ -1,6 +1,7 @@
 <?php
 /**
  * Post-Format: Aside Archive Loop
+ *
  * This shows post-format: aside archive loop.
  *
  * @package     OpusPrimus
@@ -50,11 +51,11 @@ $opus_navigation = new OpusPrimusNavigation(); ?>
 	/** @var $anchor - set value for use in post_byline and meta_tags */
 	$anchor = __( 'Said', 'opus-primus' );
 	$opus_posts->post_byline(
-			   array(
-				   'tempus'      => 'time',
-				   'anchor'      => $anchor,
-				   'sticky_flag' => __( 'Noteworthy', 'opus-primus' )
-			   )
+		array(
+			'tempus'      => 'time',
+			'anchor'      => $anchor,
+			'sticky_flag' => __( 'Noteworthy', 'opus-primus' )
+		)
 	);
 	$opus_posts->post_title();
 	$opus_comments->comments_link();

@@ -2,6 +2,7 @@
 
 /**
  * Opus Primus Images
+ *
  * Image related functionality
  *
  * @package     OpusPrimus
@@ -53,6 +54,7 @@ class OpusPrimusImages {
 
 	/**
 	 * Opus Primus Archive Image Details
+	 *
 	 * Outputs details of the attached image, if they exist
 	 *
 	 * @package OpusPrimus
@@ -192,6 +194,7 @@ class OpusPrimusImages {
 
 	/**
 	 * Opus Primus Display EXIF Box
+	 *
 	 * Outputs the EXIF data using a box-model (read: div container)
 	 *
 	 * @package  OpusPrimus
@@ -317,6 +320,7 @@ class OpusPrimusImages {
 
 	/**
 	 * Opus Primus Display EXIF Table
+	 *
 	 * Outputs the EXIF data using a table-model
 	 *
 	 * @package  OpusPrimus
@@ -335,8 +339,6 @@ class OpusPrimusImages {
 	 * @uses     __
 	 * @uses     apply_filters
 	 * @uses     do_action
-	 *
-	 * @internal see display_exif_box for box-model output
 	 *
 	 * @version  1.2
 	 * @date     April 12, 2013
@@ -421,6 +423,7 @@ class OpusPrimusImages {
 
 	/**
 	 * Opus Primus EXIF Aperture
+	 *
 	 * Outputs the aperture details from the EXIF data
 	 *
 	 * @package OpuysPrimus
@@ -461,6 +464,7 @@ class OpusPrimusImages {
 
 	/**
 	 * Opus Primus EXIF Camera
+	 *
 	 * Outputs camera details from EXIF data
 	 *
 	 * @package OpusPrimus
@@ -501,6 +505,7 @@ class OpusPrimusImages {
 
 	/**
 	 * Opus Primus EXIF Caption
+	 *
 	 * Outputs the image caption from the EXIF data
 	 *
 	 * @package OpusPrimus
@@ -541,6 +546,7 @@ class OpusPrimusImages {
 
 	/**
 	 * Opus Primus EXIF Copyright
+	 *
 	 * Outputs a string containing the author and copyright text
 	 *
 	 * @package OpusPrimus
@@ -590,6 +596,7 @@ class OpusPrimusImages {
 
 	/**
 	 * Opus Primus EXIF Data
+	 *
 	 * Returns an object containing the EXIF data found in an image if it exists
 	 * otherwise it returns null.
 	 *
@@ -620,6 +627,7 @@ class OpusPrimusImages {
 
 	/**
 	 * Opus Primus EXIF Dimensions
+	 *
 	 * Outputs the original/full width and height of the image being displayed
 	 * with a link to the image itself.
 	 *
@@ -669,6 +677,7 @@ class OpusPrimusImages {
 
 	/**
 	 * Opus Primus EXIF Focal Length
+	 *
 	 * Outputs the focal length from the EXIF data
 	 *
 	 * @package  OpusPrimus
@@ -677,8 +686,6 @@ class OpusPrimusImages {
 	 * @uses     OpusPrimusImages::exif_data
 	 * @uses     apply_filters
 	 * @uses     do_action
-	 *
-	 * @internal mm = UI for millimeters; no need to translate
 	 *
 	 * @return  string
 	 *
@@ -711,6 +718,7 @@ class OpusPrimusImages {
 
 	/**
 	 * Opus Primus EXIF ISO Speed
+	 *
 	 * Outputs the ISO speed from the EXIF data
 	 *
 	 * @package OpusPrimus
@@ -751,6 +759,7 @@ class OpusPrimusImages {
 
 	/**
 	 * Opus Primus EXIF Shutter Speed
+	 *
 	 * Outputs the Shutter speed from the EXIF data
 	 *
 	 * @package OpusPrimus
@@ -801,6 +810,7 @@ class OpusPrimusImages {
 
 	/**
 	 * Opus Primus EXIF Timestamp
+	 *
 	 * Outputs the timestamp including date and time as found in the image meta
 	 * data formatted per Settings > General as found in the Administration
 	 * panels (aka Dashboard)
@@ -850,6 +860,7 @@ class OpusPrimusImages {
 
 	/**
 	 * Opus Primus EXIF Title
+	 *
 	 * Outputs the image title from the EXIF data
 	 *
 	 * @package OpusPrimus
@@ -890,6 +901,7 @@ class OpusPrimusImages {
 
 	/**
 	 * Opus Primus Featured Thumbnail
+	 *
 	 * Adds the featured image / post thumbnail to the post if not in the single
 	 * view
 	 *
@@ -942,16 +954,13 @@ class OpusPrimusImages {
 
 	/**
 	 * Show Featured Thumbnail
+	 *
 	 * Used to display the featured thumbnail image in templates
 	 *
 	 * @package     Opus_Primus
 	 * @since       1.2.4
 	 *
 	 * @param    bool $echo
-	 *
-	 * @internal    One can just as easily not use this method in the template
-	 * instead of setting the parameter to "false" but this parameter allows for
-	 * better future proofing and possible expansion
 	 *
 	 * @uses        OpusPrimusImages::featured_thumbnail
 	 * @uses        is_archive
@@ -981,20 +990,19 @@ class OpusPrimusImages {
 
 	/**
 	 * First Linked Image
+	 *
 	 * Finds the first image in the post and returns it
 	 *
-	 * @package          OpusPrimus
-	 * @since            0.1
+	 * @package OpusPrimus
+	 * @since   0.1
 	 *
-	 * @internal         Inspired by http://css-tricks.com/snippets/wordpress/get-the-first-image-from-a-post/
+	 * @uses    (GLOBAL) $post
 	 *
-	 * @uses             (GLOBAL) $post
-	 *
-	 * @version          1.2.2
-	 * @date             September 12, 2013
+	 * @version 1.2.2
+	 * @date    September 12, 2013
 	 * Fixed undefined offset when there is no image found in post
 	 *
-	 * @todo             Return the same image "size" used in the "attachment" as found in the Post-Format: Image archive (1.2)
+	 * @todo    Return the same image "size" used in the "attachment" as found in the Post-Format: Image archive (1.2)
 	 */
 	function first_linked_image() {
 
@@ -1022,6 +1030,7 @@ class OpusPrimusImages {
 
 	/**
 	 * Opus Primus Image Title
+	 *
 	 * Used in the image Attachment template file to output the image title as
 	 * noted in the media library
 	 *
@@ -1078,6 +1087,7 @@ class OpusPrimusImages {
 
 	/**
 	 * Show First Linked Image
+	 *
 	 * Displays the output returned by `first_linked_image`
 	 *
 	 * @package OpusPrimus

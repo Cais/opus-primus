@@ -1,6 +1,7 @@
 <?php
 /**
  * Post-Format: Quote Archive Loop
+ *
  * This loop shows the post-format: quote archive template.
  *
  * @package     OpusPrimus

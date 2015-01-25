@@ -1,6 +1,7 @@
 <?php
 /**
  * Opus Primus Post-Format: Image Template
+ *
  * Displays the post-format: image loop
  *
  * @package     OpusPrimus

@@ -1,6 +1,7 @@
 <?php
 /**
  * Widgets
+ *
  * Definitions for all of the widget areas used in the theme
  *
  * @package     OpusPrimus
@@ -46,10 +47,6 @@
  *
  * @uses     __
  * @uses     register_sidebar
- *
- * @internal Widget areas appear in the same order they are defined in the
- * WordPress Appearance > Widgets Administration Panel
- * @internal Relies on the default widget structure
  *
  * @example  'name' => sprintf( __('Sidebar %d'), $i ),
  * @example  'id' => "sidebar-$i",

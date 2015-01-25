@@ -1,6 +1,7 @@
 <?php
 /**
  * Opus Primus Post-Format: Chat loop template
+ *
  * Displays the post-format: chat loop content
  *
  * @package     OpusPrimus
@@ -30,10 +31,6 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
- *
- * @version     1.2
- * @date        April 20, 2013
- * Adjusted conditional displaying the `featured_image`
  *
  * @version     1.2.4
  * @date        May 11, 2014

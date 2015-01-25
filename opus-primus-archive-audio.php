@@ -1,6 +1,7 @@
 <?php
 /**
  * Audio Archive Loop
+ *
  * This loop shows the Post-Format: Audio archive.
  *
  * @package     OpusPrimus

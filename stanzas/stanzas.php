@@ -1,6 +1,7 @@
 <?php
 /**
  * Stanzas
+ *
  * Includes all of the current stanzas aka extensions
  *
  * @package     OpusPrimus

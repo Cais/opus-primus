@@ -1,6 +1,7 @@
 <?php
 /**
  * Sidebar Header Template
+ *
  * Located between the site description and the site top menu
  *
  * @package     OpusPrimus

@@ -1,6 +1,7 @@
 <?php
 /**
  * Footer Template
+ *
  * Default document footer.
  *
  * @package     OpusPrimus

@@ -2,6 +2,7 @@
 
 /**
  * Opus Primus Gallery
+ *
  * Gallery and other related image functionality
  *
  * @package     OpusPrimus
@@ -40,42 +41,45 @@
  */
 class OpusPrimusGallery {
 
-	/** Construct */
+	/**
+	 * Construct
+	 */
 	function __construct() {
 	}
 
 
 	/**
 	 * Opus Primus Featured Image
+	 *
 	 * If a featured image is assigned then return it's ID; wrap it in anchor
 	 * tags if not in the single view, otherwise just output the picture itself
 	 *
-	 * @package             OpusPrimus
-	 * @since               0.1
+	 * @package OpusPrimus
+	 * @since   0.1
 	 *
 	 * @param   string $size - thumbnail|medium|large|full (default WordPress image sizes)
 	 *
-	 * @uses                OpusPrimusGallery::get_gallery_attr_featured_ids
-	 * @uses                (GLOBAL) $opus_thumb_id
-	 * @uses                __
-	 * @uses                do_action
-	 * @uses                get_children
-	 * @uses                get_permalink
-	 * @uses                get_post_thumbnail_id
-	 * @uses                get_the_ID
-	 * @uses                has_post_thumbnail
-	 * @uses                is_single
-	 * @uses                the_post_thumbnail
-	 * @uses                the_title_attribute
-	 * @uses                wp_get_attachment_image
+	 * @uses    OpusPrimusGallery::get_gallery_attr_featured_ids
+	 * @uses    (GLOBAL) $opus_thumb_id
+	 * @uses    __
+	 * @uses    do_action
+	 * @uses    get_children
+	 * @uses    get_permalink
+	 * @uses    get_post_thumbnail_id
+	 * @uses    get_the_ID
+	 * @uses    has_post_thumbnail
+	 * @uses    is_single
+	 * @uses    the_post_thumbnail
+	 * @uses    the_title_attribute
+	 * @uses    wp_get_attachment_image
 	 *
 	 * @return  int|string - featured image ID
 	 *
-	 * @version             1.2.3
-	 * @date                February 2, 2014
+	 * @version 1.2.3
+	 * @date    February 2, 2014
 	 * Moved `featured_image` wrapper into method
 	 *
-	 * @todo                Review hooks and when they they should be usable.
+	 * @todo    Review hooks and when they they should be usable.
 	 */
 	function featured_image( $size = 'large' ) {
 		global $opus_thumb_id;
@@ -188,6 +192,7 @@ class OpusPrimusGallery {
 
 	/**
 	 * Get Gallery Shortcode Attribute Featured ids
+	 *
 	 * Using the shortcode regex find the attributes for the gallery shortcode
 	 * and identify the values used in the ids parameter. If the ids parameter
 	 * is used then store the values in an array ... and carry on ...
@@ -249,6 +254,7 @@ class OpusPrimusGallery {
 
 	/**
 	 * Get Gallery Shortcode Attribute Secondary ids
+	 *
 	 * Using the shortcode regex find the attributes for the gallery shortcode
 	 * and identify the values used in the ids parameter. If the ids parameter
 	 * is used then store the values in an array ... and carry on ...
@@ -333,37 +339,38 @@ class OpusPrimusGallery {
 
 	/**
 	 * Opus Primus Secondary Images
+	 *
 	 * Displays additional images from the gallery while excluding the image
 	 * with ID = $opus_thumb_id
 	 *
-	 * @package            OpusPrimus
-	 * @since              0.1
+	 * @package OpusPrimus
+	 * @since   0.1
 	 *
-	 * @uses               (CONSTANT) OPUS_NUMBER_OF_SECONDARY_IMAGES
-	 * @uses               (GLOBAL)   $opus_thumb_id
-	 * @uses               WP_Query
-	 * @uses               apply_filters
-	 * @uses               do_action
-	 * @uses               get_permalink
-	 * @uses               get_the_ID
-	 * @uses               is_single
-	 * @uses               the_title_attribute
-	 * @uses               wp_get_attachment_image
-	 * @uses               wp_parse_args
+	 * @uses    (CONSTANT) OPUS_NUMBER_OF_SECONDARY_IMAGES
+	 * @uses    (GLOBAL) $opus_thumb_id
+	 * @uses    WP_Query
+	 * @uses    apply_filters
+	 * @uses    do_action
+	 * @uses    get_permalink
+	 * @uses    get_the_ID
+	 * @uses    is_single
+	 * @uses    the_title_attribute
+	 * @uses    wp_get_attachment_image
+	 * @uses    wp_parse_args
 	 *
-	 * @param array|string $secondary_images_args
+	 * @param   array|string $secondary_images_args
 	 *
-	 * @version            1.2.2
-	 * @date               September 3, 2013
+	 * @version 1.2.2
+	 * @date    September 3, 2013
 	 * Fixed issue with Gallery Post-Format being used when the `gallery`
 	 * shortcode is not used.
 	 *
-	 * @version            1.2.3
-	 * @date               February 2, 2014
+	 * @version 1.2.3
+	 * @date    February 2, 2014
 	 * Moved `secondary_images` wrapper into method
 	 *
-	 * @version            1.2.5
-	 * @date               July 20, 2014
+	 * @version 1.2.5
+	 * @date    July 20, 2014
 	 * Changed call to `$opus_defaults->number_of_secondary_images` to use `OPUS_NUMBER_OF_SECONDARY_IMAGES` constant
 	 */
 	function secondary_images( $secondary_images_args = '' ) {

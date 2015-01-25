@@ -1,6 +1,7 @@
 <?php
 /**
  * Status Archive Loop
+ *
  * This loop shows the Post-Format: Status archive.
  *
  * @package     OpusPrimus

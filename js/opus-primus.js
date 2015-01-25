@@ -2,11 +2,11 @@
  * Opus Primus General jQuery Scripts
  * Contains mostly one-line jQuery calls within one main script
  *
- * @package		OpusPrimus
- * @since		0.1
+ * @package        OpusPrimus
+ * @since        0.1
  *
- * @author		Opus Primus <in.opus.primus@gmail.com>
- * @copyright	Copyright (c) 2012-2015, Opus Primus
+ * @author        Opus Primus <in.opus.primus@gmail.com>
+ * @copyright    Copyright (c) 2012-2015, Opus Primus
  *
  * This file is part of Opus Primus.
  *

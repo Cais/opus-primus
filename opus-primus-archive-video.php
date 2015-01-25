@@ -1,6 +1,7 @@
 <?php
 /**
  * Video Archive Loop
+ *
  * This loop shows the Post-Format: Video archive.
  *
  * @package     OpusPrimus

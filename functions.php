@@ -1,6 +1,7 @@
 <?php
 /**
  * Functions
+ *
  * Where the magic happens ...
  *
  * @package     OpusPrimus
@@ -30,15 +31,6 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
- *
- * @version     1.2
- * @date        July 19, 2013
- * Removed 'style.less' related function and action calls
- * Merge `opus-primus-ignite.php` into `functions.php`
- *
- * @version     1.2.4
- * @date        April 7, 2014
- * Added `opus_primus_theme_version` function
  *
  * @version     1.2.5
  * @date        June 2, 2014
@@ -79,6 +71,7 @@ function opus_primus_theme_version() {
 if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 	/**
 	 * Opus Primus Enqueue Scripts
+	 *
 	 * Use to enqueue the theme javascript and custom stylesheet, if it exists
 	 *
 	 * @package            OpusPrimus
@@ -93,24 +86,6 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 	 * @uses               wp_enqueue_script
 	 * @uses               wp_enqueue_style
 	 * @uses               wp_get_theme->get
-	 *
-	 * @internal           jQuery is enqueued as a dependency
-	 *
-	 * @version            1.1
-	 * @date               March 18, 2013
-	 * Enqueue jQuery UI Tabs script for Comments
-	 *
-	 * @version            1.2
-	 * @date               July 19, 2013
-	 * Added `is_single` conditional test before enqueue of Comment Tabs script
-	 *
-	 * @version            1.2.3
-	 * @date               February 19, 2014
-	 * Added `dashicons` dependency to main `Opus-Primus` stylesheet
-	 *
-	 * @version            1.2.4
-	 * @date               April 7, 2014
-	 * Replaced `wp_get_theme()->get( 'Version' )` version call with `opus_primus_theme_version` call as a more unique and informative value
 	 *
 	 * @version            1.2.5
 	 * @date               June 15, 2014
@@ -213,6 +188,7 @@ add_action( 'wp_enqueue_scripts', 'opus_primus_enqueue_scripts' );
 if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 	/**
 	 * Opus Primus Theme Setup
+	 *
 	 * Add theme support for: post-thumbnails, automatic feed links, TinyMCE
 	 * editor style, custom background, post formats
 	 *
@@ -350,6 +326,7 @@ function opus_primus_return_blank() {
 
 /**
  * Compatibility
+ *
  * Main compatibility conditionals
  *
  * @package            Opus_Primus
@@ -422,6 +399,7 @@ add_action( 'wp_enqueue_scripts', 'opus_primus_compatibility' );
 
 /**
  * Before Comment Form
+ *
  * Text to be shown before form
  *
  * @package  OpusPrimus
@@ -475,6 +453,7 @@ add_action( 'comment_form_before', 'opus_primus_before_comment_form' );
 
 /**
  * Comments Form Closed
+ *
  * Test to be displayed if comments are closed
  *
  * @package  OpusPrimus
@@ -509,6 +488,7 @@ add_action( 'comment_form_comments_closed', 'opus_primus_comments_form_closed' )
 
 /**
  * Support Comment
+ *
  * Writes an HTML comment with the theme version meant to be used as a
  * reference for support and assistance.
  *

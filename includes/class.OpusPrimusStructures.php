@@ -2,6 +2,7 @@
 
 /**
  * Opus Primus Post Structures
+ *
  * Controls for the organization and layout of the site and its content.
  *
  * @package     OpusPrimus
@@ -74,6 +75,7 @@ class OpusPrimusStructures {
 
 	/**
 	 * Browser Title
+	 *
 	 * Utilizes the `wp_title` filter to add text to the default output
 	 *
 	 * @package          OpusPrimus
@@ -135,6 +137,7 @@ class OpusPrimusStructures {
 
 	/**
 	 * Body Classes
+	 *
 	 * A collection of classes added to the HTML body tag for various purposes
 	 *
 	 * @package          OpusPrimus
@@ -240,6 +243,7 @@ class OpusPrimusStructures {
 
 	/**
 	 * Show Bust Image
+	 *
 	 * Writes the bust image url to the screen
 	 *
 	 * @package OpusPrimus
@@ -254,6 +258,7 @@ class OpusPrimusStructures {
 
 	/**
 	 * Support Comment
+	 *
 	 * Writes an HTML comment with the theme version meant to be used as a
 	 * reference for support and assistance.
 	 *
@@ -287,6 +292,7 @@ class OpusPrimusStructures {
 
 	/**
 	 * Bust Image
+	 *
 	 * Returns the url for the image used on the 404 page
 	 *
 	 * @package    OpusPrimus
@@ -312,6 +318,7 @@ class OpusPrimusStructures {
 
 	/**
 	 * Copyright
+	 *
 	 * Returns copyright year(s) as defined by the dates found in published
 	 * posts. Recognized the site (via its title) as the copyright holder and
 	 * notes the terms of the copyright. By default the author of the page or
@@ -320,10 +327,6 @@ class OpusPrimusStructures {
 	 *
 	 * @package     OpusPrimus
 	 * @since       0.1
-	 *
-	 * @internal    $output can be filtered via the `opus_copyright` hook
-	 * @internal    $transient_refresh is set to one month (2592000s = 30 days)
-	 * for $first_post as a default since it will rarely, if ever, change
 	 *
 	 * @uses        __
 	 * @uses        apply_filters
@@ -426,6 +429,7 @@ class OpusPrimusStructures {
 
 	/**
 	 * Credits
+	 *
 	 * Displays the current theme name and its parent if one exists. Provides
 	 * links to the Parent-Theme (Opus Primus), to the Child-Theme (if it
 	 * exists) and to WordPress.org.
@@ -484,14 +488,13 @@ class OpusPrimusStructures {
 
 	/**
 	 * Layout - Close
+	 *
 	 * Closes appropriate CSS containers depending on the layout structure.
 	 *
 	 * @package              OpusPrimus
 	 * @since                0.1
 	 *
 	 * @uses                 is_active_sidebar
-	 *
-	 * @internal             works in conjunction with layout_open
 	 *
 	 * @return      string
 	 */
@@ -533,14 +536,13 @@ class OpusPrimusStructures {
 
 	/**
 	 * Layout - Open
+	 *
 	 * Adds appropriate CSS containers depending on the layout structure.
 	 *
 	 * @package  OpusPrimus
 	 * @since    0.1
 	 *
 	 * @uses     is_active_sidebar
-	 *
-	 * @internal works in conjunction with layout_close
 	 *
 	 * @return  string
 	 *
@@ -586,6 +588,7 @@ class OpusPrimusStructures {
 
 	/**
 	 * No Search Results
+	 *
 	 * Outputs message if no posts are found by 'the_Loop' query
 	 *
 	 * @package OpusPrimus
@@ -675,6 +678,7 @@ class OpusPrimusStructures {
 
 	/**
 	 * Replace Spaces
+	 *
 	 * Takes a string and replaces the spaces with a single hyphen by default
 	 *
 	 * @package       OpusPrimus
@@ -763,6 +767,7 @@ class OpusPrimusStructures {
 
 	/**
 	 * the_Loop Archives
+	 *
 	 * The most basic structure for the posts loop
 	 *
 	 * @package    OpusPrimus
@@ -810,6 +815,7 @@ class OpusPrimusStructures {
 
 	/**
 	 * the_Loop Wrapped
+	 *
 	 * Wraps the_Loop, its wrapping action hooks, and class into a tidy method
 	 *
 	 * @package OpusPrimus
@@ -851,6 +857,7 @@ class OpusPrimusStructures {
 
 	/**
 	 * the_Loop Archives Wrapped
+	 *
 	 * Wraps the_Loop (archives), its wrapping action hooks, and class into a
 	 * tidy method
 	 *

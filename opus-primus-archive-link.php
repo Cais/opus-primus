@@ -1,6 +1,7 @@
 <?php
 /**
  * Link Archive Loop
+ *
  * This loop shows the Post-Format: Link archive.
  *
  * @package     OpusPrimus

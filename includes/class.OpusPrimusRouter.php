@@ -2,6 +2,7 @@
 
 /**
  * Opus Primus Router
+ *
  * Defines the theme path structures
  *
  * @package     OpusPrimus
@@ -32,7 +33,7 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @todo        - Review for uses with Child-Themes
+ * @todo        Review for uses with Child-Themes
  */
 class OpusPrimusRouter {
 
@@ -47,6 +48,7 @@ class OpusPrimusRouter {
 
 	/**
 	 * Path
+	 *
 	 * Retrieves the absolute path to the directory of the current theme
 	 * appended with the folder and trailing slash
 	 *
@@ -65,6 +67,7 @@ class OpusPrimusRouter {
 
 	/**
 	 * Path
+	 *
 	 * Retrieve template directory URI for the current theme appended with the
 	 * folder and trailing slash
 	 *

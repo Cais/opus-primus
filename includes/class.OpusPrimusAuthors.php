@@ -2,6 +2,7 @@
 
 /**
  * Opus Primus Authors
+ *
  * Controls for the organization and layout of the author sections of the site.
  *
  * @package     OpusPrimus
@@ -43,13 +44,16 @@
  * Added `get_author_description` method
  */
 class OpusPrimusAuthors {
-	/** Constructor */
+	/**
+	 * Constructor
+	 */
 	function __construct() {
 	}
 
 
 	/**
 	 * Author Classes
+	 *
 	 * Additional author classes related to the use and their capabilities
 	 *
 	 * @package    OpusPrimus
@@ -96,6 +100,7 @@ class OpusPrimusAuthors {
 
 	/**
 	 * Author Coda
+	 *
 	 * Adds text art after the author details to signify the end of the output
 	 * block
 	 *
@@ -121,22 +126,23 @@ class OpusPrimusAuthors {
 
 	/**
 	 * Get Author Description
+	 *
 	 * Returns the author description from the user profile. This will also
 	 * shorten the User Description  / Biography if the length is greater
 	 * than 140 characters and it is not being shown on an author page. The
 	 * description will also be shortened on author archive pages after the
 	 * first page.
 	 *
-	 * @package          OpusPrimus
-	 * @since            1.2
+	 * @package OpusPrimus
+	 * @since   1.2
 	 *
 	 * @param   $author_id
 	 *
-	 * @uses             (GLOBAL) $paged
-	 * @uses             apply_filters
-	 * @uses             get_the_author_meta
-	 * @uses             home_url
-	 * @uses             is_author
+	 * @uses    (GLOBAL) $paged
+	 * @uses    apply_filters
+	 * @uses    get_the_author_meta
+	 * @uses    home_url
+	 * @uses    is_author
 	 *
 	 * @return  string
 	 */
@@ -193,6 +199,7 @@ class OpusPrimusAuthors {
 
 	/**
 	 * Author Details
+	 *
 	 * Takes the passed author ID parameter and creates / collects various
 	 * details to be used when outputting author information, by default,
 	 * at the end of the post or page single view.
@@ -341,29 +348,25 @@ class OpusPrimusAuthors {
 
 	/**
 	 * Post Author
+	 *
 	 * Outputs the author details: web address, email, and biography from the
 	 * user profile information - not designed for use in the post meta section.
 	 *
-	 * @package           OpusPrimus
-	 * @since             0.1
+	 * @package OpusPrimus
+	 * @since   0.1
 	 *
 	 * @param   $post_author_args
 	 *
-	 * @internal          @param display_mod_author
-	 * @internal          @param show_mod_url
-	 * @internal          @param show_mod_email
-	 * @internal          @param show_mod_desc
-	 *
-	 * @uses              (GLOBAL) $opus_author_id - from OpusPrimusPosts::post_byline
-	 * @uses              (GLOBAL) $post
-	 * @uses              OpusPrimusAuthors::author_details
-	 * @uses              OpusPrimusAuthors::author_coda
-	 * @uses              apply_filters
-	 * @uses              do_action
-	 * @uses              get_post_meta
-	 * @uses              get_the_date
-	 * @uses              get_the_modified_date
-	 * @uses              wp_parse_args
+	 * @uses    (GLOBAL) $opus_author_id - from OpusPrimusPosts::post_byline
+	 * @uses    (GLOBAL) $post
+	 * @uses    OpusPrimusAuthors::author_details
+	 * @uses    OpusPrimusAuthors::author_coda
+	 * @uses    apply_filters
+	 * @uses    do_action
+	 * @uses    get_post_meta
+	 * @uses    get_the_date
+	 * @uses    get_the_modified_date
+	 * @uses    wp_parse_args
 	 */
 	function post_author( $post_author_args ) {
 		/** Defaults */

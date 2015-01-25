@@ -1,6 +1,7 @@
 <?php
 /**
  * Opus Primus default loop template
+ *
  * Displays the default loop content
  *
  * @package     OpusPrimus

@@ -1,6 +1,7 @@
 <?php
 /**
  * Footer Template
+ *
  * A generic footer template to show when no other more specific post format
  * footer template is available.
  *

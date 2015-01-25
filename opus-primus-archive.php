@@ -1,6 +1,7 @@
 <?php
 /**
  * Standard Archive Loop
+ *
  * This loop shows the standard posts, or any other archive without a specific
  * loop template. The default is to show the post archive.
  *

@@ -1,6 +1,7 @@
 <?php
 /**
  * Opus Primus Post-Format: Gallery Template
+ *
  * Displays the post-format: gallery loop
  *
  * @package     OpusPrimus

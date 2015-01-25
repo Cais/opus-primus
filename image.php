@@ -1,6 +1,7 @@
 <?php
 /**
  * Image Template
+ *
  * Displays as the attachment template when an image is attached to the post
  * or gallery.
  *

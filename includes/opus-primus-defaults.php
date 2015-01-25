@@ -1,6 +1,7 @@
 <?php
 /**
  * Opus Primus Defaults
+ *
  * Set global defaults for options used in theme
  *
  * @package        OpusPrimus

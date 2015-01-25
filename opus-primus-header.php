@@ -1,6 +1,7 @@
 <?php
 /**
  * Header Template
+ *
  * A generic header template to show when no other more specific post-format
  * header template is available.
  *
@@ -31,11 +32,6 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
- *
- * @version     1.0.1
- * @date        February 21, 2013
- * Modified action hooks to more semantic naming convention:
- * `opus_<section>_<placement>`
  *
  * @version     1.0.4
  * @date        March 1, 2013

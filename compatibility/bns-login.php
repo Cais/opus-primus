@@ -1,6 +1,7 @@
 <?php
 /**
  * BNS Login Compatibility
+ *
  * Where more of the magic happens ...
  *
  * @package     OpusPrimus

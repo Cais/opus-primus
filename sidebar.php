@@ -30,13 +30,6 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @package     Opus_Primus
- * @since       0.1
- *
- * @uses        do_action
- * @uses        dynamic_sidebar
- * @uses        is_active_sidebar
- *
  * @version     1.0.1
  * @date        February 21, 2013
  * Modified action hooks to more semantic naming convention:

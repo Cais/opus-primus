@@ -1,6 +1,7 @@
 <?php
 /**
  * Opus Primus Ignite
+ *
  * Initialization file for the theme: defined CONSTANTS; and, included classes.
  *
  * @package     OpusPrimus
@@ -30,14 +31,6 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
- *
- * @version     1.1
- * @date        March 9, 2013
- * Added call to 'Header' class
- *
- * @version     1.2
- * @date        July 19, 2013
- * Merged into `functions.php` retained for reference purposes only
  *
  * @version     1.2.5
  * @date        July 14, 2014

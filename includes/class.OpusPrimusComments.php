@@ -2,6 +2,7 @@
 
 /**
  * Opus Primus Comments
+ *
  * Comments related functions
  *
  * @package     OpusPrimus
@@ -59,9 +60,9 @@ class OpusPrimusComments {
 		/** Add comment actions - enqueue threaded comments */
 		add_action(
 			'comment_form_before', array(
-				$this,
-				'enqueue_comment_reply'
-			) );
+			$this,
+			'enqueue_comment_reply'
+		) );
 
 		// add_action( 'comment_form_before', array( $this, 'before_comment_form' ) );
 		// add_action( 'comment_form_comments_closed', array( $this, 'comments_form_closed' ) );
@@ -69,30 +70,30 @@ class OpusPrimusComments {
 		/** Add comment actions - wrap comment fields in unordered list */
 		add_action(
 			'comment_form_before_fields', array(
-				$this,
-				'comment_fields_wrapper_start'
-			) );
+			$this,
+			'comment_fields_wrapper_start'
+		) );
 		add_action(
 			'comment_form_after_fields', array(
-				$this,
-				'comment_fields_wrapper_end'
-			) );
+			$this,
+			'comment_fields_wrapper_end'
+		) );
 
 		/** Add comment filters - NB: Order of these filters is important! */
 		add_filter( 'comment_class', array( $this, 'comment_author_class' ) );
 
 		add_filter(
 			'comment_form_defaults', array(
-				$this,
-				'change_comment_form_required_field_glyph'
-			) );
+			$this,
+			'change_comment_form_required_field_glyph'
+		) );
 
 		/** Add comment filters - change fields to list items from paragraphs */
 		add_filter(
 			'comment_form_default_fields', array(
-				$this,
-				'comment_fields_as_list_items'
-			) );
+			$this,
+			'comment_fields_as_list_items'
+		) );
 
 	}
 	/** End function - construct */
@@ -103,6 +104,7 @@ class OpusPrimusComments {
 
 	/**
 	 * Enqueue Comment Reply
+	 *
 	 * If the page being viewed is a single post/page; and, comments are open;
 	 * and, threaded comments are turned on then enqueue the built-in
 	 * comment-reply script.
@@ -127,6 +129,7 @@ class OpusPrimusComments {
 
 	/**
 	 * Before Comment Form
+	 *
 	 * Text to be shown before form
 	 *
 	 * @package  OpusPrimus
@@ -136,9 +139,6 @@ class OpusPrimusComments {
 	 * @uses     apply_filters
 	 * @uses     have_comments
 	 * @uses     post_password_required
-	 *
-	 * @internal used with comment_form_before hook
-	 * @internal NB: hook is only accessible if comments are open
 	 *
 	 * @version  1.0.1
 	 * @date     February 19, 2013
@@ -173,6 +173,7 @@ class OpusPrimusComments {
 
 	/**
 	 * Comment Form Required Field Glyph
+	 *
 	 * Returns a filtered glyph used with Comment Form Required Fields
 	 *
 	 * @package OpusPrimus
@@ -193,13 +194,14 @@ class OpusPrimusComments {
 
 	/**
 	 * Change Comment Form Required Field Glyph
+	 *
 	 * Changes the default asterisk (*) to a filtered function
 	 *
 	 * @package  OpusPrimus
 	 * @since    1.2
 	 *
-	 * @internal Props to Sergey Biryukov via the WordPress core trac for the
-	 * base code used in this method
+	 * Props to Sergey Biryukov via the WordPress core trac for the base code
+	 * used in this method
 	 * @link     https://core.trac.wordpress.org/ticket/23870
 	 *
 	 * @uses     OpusPrimusComments::comment_form_required_field_glyph
@@ -220,6 +222,7 @@ class OpusPrimusComments {
 
 	/**
 	 * Comments Form Closed
+	 *
 	 * Test to be displayed if comments are closed
 	 *
 	 * @package  OpusPrimus
@@ -228,8 +231,6 @@ class OpusPrimusComments {
 	 * @uses     __
 	 * @uses     apply_filters
 	 * @uses     is_page
-	 *
-	 * @internal used with comment_form_comments_closed hook
 	 */
 	function comments_form_closed() {
 		if ( ! is_page() ) {
@@ -247,6 +248,7 @@ class OpusPrimusComments {
 
 	/**
 	 * Comment Author Class
+	 *
 	 * Add additional classes to the comment based on the author
 	 *
 	 * @package          OpusPrimus
@@ -326,6 +328,7 @@ class OpusPrimusComments {
 
 	/**
 	 * Comment Fields Wrapper Start
+	 *
 	 * Echoes an opening `ul` tag
 	 *
 	 * @package  OpusPrimus
@@ -341,6 +344,7 @@ class OpusPrimusComments {
 
 	/**
 	 * Comment Fields Wrapper End
+	 *
 	 * Echoes a closing `ul` tag
 	 *
 	 * @package  OpusPrimus
@@ -359,25 +363,26 @@ class OpusPrimusComments {
 
 	/**
 	 * Comments Link
+	 *
 	 * Displays amount of approved comments the post or page has
 	 *
-	 * @package    OpusPrimus
-	 * @since      0.1
+	 * @package OpusPrimus
+	 * @since   0.1
 	 *
-	 * @uses       __
-	 * @uses       comments_open
-	 * @uses       comments_popup_link
-	 * @uses       do_action
-	 * uses     get_comments_number
-	 * @uses       is_page
-	 * @uses       post_password_required
+	 * @uses    __
+	 * @uses    comments_open
+	 * @uses    comments_popup_link
+	 * @uses    do_action
+	 * @uses    get_comments_number
+	 * @uses    is_page
+	 * @uses    post_password_required
 	 *
-	 * @version    1.2
-	 * @date       July 21, 2013
+	 * @version 1.2
+	 * @date    July 21, 2013
 	 * Display comment count in meta details if comments exist and comments are closed
 	 *
-	 * @version    1.2.4
-	 * @date       May 10, 2014
+	 * @version 1.2.4
+	 * @date    May 10, 2014
 	 * Added sanity check to only display comments_link when not in single view or in an archive view
 	 */
 	function comments_link() {
@@ -437,6 +442,7 @@ class OpusPrimusComments {
 
 	/**
 	 * Wrapped Comments Template
+	 *
 	 * Wraps the comments_template call in action hooks
 	 *
 	 * @package OpusPrimus
@@ -460,6 +466,7 @@ class OpusPrimusComments {
 
 	/**
 	 * Comments Only Tab
+	 *
 	 * Displays number of comments for the type:comment tab
 	 *
 	 * @package OpusPrimus
@@ -500,6 +507,7 @@ class OpusPrimusComments {
 
 	/**
 	 * Pingbacks Only Tab
+	 *
 	 * Displays number of comments for the type:pingback tab
 	 *
 	 * @package OpusPrimus
@@ -540,6 +548,7 @@ class OpusPrimusComments {
 
 	/**
 	 * Trackbacks Only Tab
+	 *
 	 * Displays number of comments for the type:trackback tab
 	 *
 	 * @package OpusPrimus
@@ -580,6 +589,7 @@ class OpusPrimusComments {
 
 	/**
 	 * Comments Only Panel
+	 *
 	 * Displays only those comments of type: comment
 	 *
 	 * @package OpusPrimus
@@ -619,6 +629,7 @@ class OpusPrimusComments {
 
 	/**
 	 * Pingbacks Only Panel
+	 *
 	 * Displays only those comments of type: pingback
 	 *
 	 * @package OpusPrimus
@@ -657,6 +668,7 @@ class OpusPrimusComments {
 
 	/**
 	 * Trackbacks Only Panel
+	 *
 	 * Displays only those comments of type: trackback
 	 *
 	 * @package OpusPrimus
@@ -696,6 +708,7 @@ class OpusPrimusComments {
 
 	/**
 	 * All Comments Count
+	 *
 	 * Calculates total comments by adding the totals of each of the comment
 	 * types: comment, pingback, and trackback
 	 *
@@ -733,6 +746,7 @@ class OpusPrimusComments {
 
 	/**
 	 * Show All Comments Count
+	 *
 	 * Displays the `all_comments_count` value
 	 *
 	 * @package OpusPrimus

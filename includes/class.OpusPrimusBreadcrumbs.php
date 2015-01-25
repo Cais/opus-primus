@@ -2,6 +2,7 @@
 
 /**
  * Opus Primus Breadcrumbs
+ *
  * Creates and display a breadcrumb trail for pages
  *
  * @package     OpusPrimus
@@ -100,6 +101,7 @@ class OpusPrimusBreadcrumbs {
 
 	/**
 	 * Post Breadcrumb
+	 *
 	 * Create a breadcrumb trail showing the first category and Post Format of
 	 * the post where the category and Post Format link to their respective
 	 * archive.
@@ -189,6 +191,7 @@ class OpusPrimusBreadcrumbs {
 
 	/**
 	 * Post Format Name
+	 *
 	 * Display the Post Format name as part of the post trail
 	 *
 	 * @package OpusPrimus
@@ -229,6 +232,7 @@ class OpusPrimusBreadcrumbs {
 
 	/**
 	 * Breadcrumb Categories
+	 *
 	 * Adds the post categories to the post trail
 	 *
 	 * @package OpusPrimus
@@ -272,6 +276,7 @@ class OpusPrimusBreadcrumbs {
 
 	/**
 	 * The Trail
+	 *
 	 * Create the trail of breadcrumbs
 	 *
 	 * @package     OpusPrimus
@@ -328,6 +333,7 @@ class OpusPrimusBreadcrumbs {
 
 	/**
 	 * Breadcrumb Post Title
+	 *
 	 * Manages the creation of a post title reference for the breadcrumb by
 	 * either using the existing title or by creating a post title using its ID
 	 *
@@ -373,6 +379,7 @@ class OpusPrimusBreadcrumbs {
 
 	/**
 	 * Show The Trail
+	 *
 	 * Shows the trail of breadcrumbs
 	 *
 	 * @package     OpusPrimus
@@ -386,14 +393,14 @@ class OpusPrimusBreadcrumbs {
 	 * @date        October 26, 2013
 	 * Added conditional test rather than print both breadcrumbs (one empty)
 	 *
-	 * @version 1.3
-	 * @date    September 23, 2014
+	 * @version     1.3
+	 * @date        September 23, 2014
 	 * Added empty hooks before and after showing the breadcrumbs
 	 */
 	function show_the_trail() {
 
 		/** Add empty hook before showing the breadcrumbs */
-		do_action('opus_show_the_trail_before');
+		do_action( 'opus_show_the_trail_before' );
 
 		if ( is_page() ) {
 			echo $this->the_trail();
@@ -403,7 +410,7 @@ class OpusPrimusBreadcrumbs {
 		/** End if - is page */
 
 		/** Add empty hook after showing the breadcrumbs */
-		do_action('opus_show_the_trail_after');
+		do_action( 'opus_show_the_trail_after' );
 
 	}
 	/** End function - show the trail */

@@ -73,9 +73,9 @@ class OpusPrimusTagLines {
 		/** Set Opus Primus Tagline stanza off by default */
 		add_filter(
 			'default_hidden_meta_boxes', array(
-				$this,
-				'default_screen_option'
-			), 10, 2
+			$this,
+			'default_screen_option'
+		), 10, 2
 		);
 
 	} /** End function - construct */

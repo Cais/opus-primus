@@ -2,6 +2,7 @@
 
 /**
  * Opus Primus Posts
+ *
  * Controls for the organization and layout of the post and its content.
  *
  * @package        OpusPrimus
@@ -108,6 +109,7 @@ class OpusPrimusPosts {
 
 	/**
 	 * Post Classes
+	 *
 	 * A collection of classes added to the post_class for various purposes
 	 *
 	 * @package    OpusPrimus
@@ -230,6 +232,7 @@ class OpusPrimusPosts {
 
 	/**
 	 * Author Posts Link
+	 *
 	 * Displays URL to author archive
 	 *
 	 * @package OpusPrimus
@@ -255,6 +258,7 @@ class OpusPrimusPosts {
 
 	/**
 	 * Anchor Title Text
+	 *
 	 * Returns the post title text to be used as the anchor title if it exists
 	 *
 	 * @package     OpusPrimus
@@ -280,13 +284,12 @@ class OpusPrimusPosts {
 
 	/**
 	 * Meta Tags
+	 *
 	 * Prints HTML with meta information for the current post (category, tags
 	 * and permalink) - inspired by TwentyTen
 	 *
 	 * @package  OpusPrimus
 	 * @since    0.1
-	 *
-	 * @internal REQUIRES use within the_Loop
 	 *
 	 * @param   string $anchor ( default = Posted ) - passed from the loops
 	 *
@@ -348,6 +351,7 @@ class OpusPrimusPosts {
 
 	/**
 	 * Modified Author Posts Link
+	 *
 	 * Creates link to the modified author's post archive
 	 *
 	 * @package OpusPrimus
@@ -373,34 +377,35 @@ class OpusPrimusPosts {
 
 	/**
 	 * Modified Post
+	 *
 	 * If the post time and the last modified time are different display
 	 * modified date and time and the modifying author
 	 *
-	 * @package          OpusPrimus
-	 * @since            0.1
+	 * @package OpusPrimus
+	 * @since   0.1
 	 *
 	 * @param   string $tempus - date|time ( default = date )
 	 *
-	 * @uses             (GLOBAL) $opus_author_id
-	 * @uses             (GLOBAL) $post ( ID, post_date, post_modified )
-	 * @uses             __
-	 * @uses             apply_filters
-	 * @uses             do_action
-	 * @uses             get_avatar
-	 * @uses             get_post_meta
-	 * @uses             get_the_date
-	 * @uses             get_the_modified_date
-	 * @uses             get_the_modified_time
-	 * @uses             get_the_time
-	 * @uses             get_userdata
-	 * @uses             home_url
+	 * @uses    (GLOBAL) $opus_author_id
+	 * @uses    (GLOBAL) $post ( ID, post_date, post_modified )
+	 * @uses    __
+	 * @uses    apply_filters
+	 * @uses    do_action
+	 * @uses    get_avatar
+	 * @uses    get_post_meta
+	 * @uses    get_the_date
+	 * @uses    get_the_modified_date
+	 * @uses    get_the_modified_time
+	 * @uses    get_the_time
+	 * @uses    get_userdata
+	 * @uses    home_url
 	 *
-	 * @version          1.0.1
-	 * @date             February 22, 2013
+	 * @version 1.0.1
+	 * @date    February 22, 2013
 	 * Wrapped 'opus_modified_post_after' in conditional making it consistent with 'opus_modified_post_before'
 	 *
-	 * @version          1.2.4
-	 * @date             April 3, 2014
+	 * @version 1.2.4
+	 * @date    April 3, 2014
 	 * Corrected modified date/time output to account for scheduled posts being modified earlier than they are posted
 	 */
 	function modified_post( $tempus = 'date' ) {
@@ -490,6 +495,7 @@ class OpusPrimusPosts {
 
 	/**
 	 * No Title Link
+	 *
 	 * This returns a URL to the post using the anchor text 'Posted' in the meta
 	 * details with the post excerpt as the URL title; or, returns the word
 	 * 'Posted' if the post title exists
@@ -521,6 +527,7 @@ class OpusPrimusPosts {
 
 	/**
 	 * Post Byline
+	 *
 	 * Outputs post meta details consisting of a configurable anchor for post
 	 * link anchor text, the date and time posted, and the post author. The post
 	 * author is also linked to the author's archive page.
@@ -530,17 +537,7 @@ class OpusPrimusPosts {
 	 *
 	 * @param   array|string $byline_args - function controls
 	 *
-	 * @internal    @param string $anchor ( default = Posted )
-	 * @internal    @param string $display_mod_author ( default = false )
-	 * @internal    @param string $sticky_flag ( default = '' )
-	 * @internal    @param string $tempus ( default = date ) - date|time
-	 *
 	 * @example     post_byline( array( 'anchor' => 'Written', 'tempus' => 'time' ) )
-	 * @internal    This example will use the word "Written" as the anchor text
-	 * if there is no title for the post; using 'time' will show the modified
-	 * post author if there is any difference in time while using the default
-	 * 'date' will only show if there is a difference of more than one (1) day.
-	 * Also note, 'display_mod_author' is not needed if 'tempus' is set to 'time'.
 	 *
 	 * @uses        OpusPrimusPosts::author_posts_link
 	 * @uses        OpusPrimusPosts::modified_post
@@ -562,8 +559,7 @@ class OpusPrimusPosts {
 	 * @version     1.2
 	 * @date        July 11, 2013
 	 * Added individual filters for anchor, date, time, and author elements
-	 * Added `echo` parameter to display the post coda instead of the byline
-	 * meta details
+	 * Added `echo` parameter to display the post coda instead of the byline meta details
 	 * Changed `opus_post_byline_details` filter to `opus_post_byline_phrase`
 	 */
 	function post_byline( $byline_args = '' ) {
@@ -656,6 +652,7 @@ class OpusPrimusPosts {
 
 	/**
 	 * Post Coda
+	 *
 	 * Adds text art after post content to signify the end of the post
 	 *
 	 * @package OpusPrimus
@@ -693,13 +690,11 @@ class OpusPrimusPosts {
 
 	/**
 	 * Post Content
+	 *
 	 * Outputs `the_content` and allows for the_content parameters to be used
 	 *
 	 * @link     http://codex.wordpress.org/Function_Reference/the_content
 	 * @example  post_content( __( 'Read more of ... ', 'opus-primus' ) . the_title( '', '', false ) )
-	 * @internal The above example, when the <!--more--> tag is used, will
-	 * provide a link to the single view of the post with the anchor text of:
-	 * "Read more of ... <the-post-title>"
 	 *
 	 * @package  OpusPrimus
 	 * @since    0.1
@@ -741,6 +736,7 @@ class OpusPrimusPosts {
 
 	/**
 	 * Post Excerpt
+	 *
 	 * Outputs `the_excerpt`
 	 *
 	 * @package OpusPrimus
@@ -766,6 +762,7 @@ class OpusPrimusPosts {
 
 	/**
 	 * Post Format Flag
+	 *
 	 * Returns a string with the post-format type; optionally can not display a
 	 * flag for the standard post-format (default).
 	 *
@@ -805,6 +802,7 @@ class OpusPrimusPosts {
 
 	/**
 	 * Post Title
+	 *
 	 * Outputs the post title
 	 *
 	 * @package    OpusPrimus
@@ -860,6 +858,7 @@ class OpusPrimusPosts {
 
 	/**
 	 * Show Status Update
+	 *
 	 * Used to display the status update outside of the post Meta Tags
 	 *
 	 * @package OpusPrimus
@@ -883,6 +882,7 @@ class OpusPrimusPosts {
 
 	/**
 	 * Status Update
+	 *
 	 * Displays the human time difference based on how long ago the post was
 	 * updated
 	 *
@@ -960,6 +960,7 @@ class OpusPrimusPosts {
 
 	/**
 	 * Sticky Flag
+	 *
 	 * Returns a text string as a button that links to the post, used with the
 	 * "sticky" post functionality of WordPress
 	 *
@@ -1010,6 +1011,7 @@ class OpusPrimusPosts {
 
 	/**
 	 * Uncategorized
+	 *
 	 * Returns true if there is only one category assigned to the post and it is
 	 * the WordPress default "Uncategorized". Renaming the default category will
 	 * avoid this function being used.
@@ -1017,17 +1019,12 @@ class OpusPrimusPosts {
 	 * @package  OpusPrimus
 	 * @since    0.1
 	 *
-	 * @internal Must be called inside the_Loop
-	 * @internal This works because the default category is ID 1 and the default
-	 * objects returned are in ID order.
-	 * @internal used for conditional test in meta_tags method
-	 *
 	 * @uses     get_the_category
 	 * @uses     is_page
 	 *
 	 * @return bool
 	 *
-	 * @todo Review "PHP Notice:  Undefined offset: 0 in /home/frumph/public_html/dev/wp-content/themes/opus-primus/includes/class.OpusPrimusPosts.php on line 1038"
+	 * @todo     Review "PHP Notice:  Undefined offset: 0 in /home/frumph/public_html/dev/wp-content/themes/opus-primus/includes/class.OpusPrimusPosts.php on line 1038"
 	 */
 	function uncategorized() {
 		/** @var $post_categories - holds all of the post category objects */

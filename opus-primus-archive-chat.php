@@ -1,6 +1,7 @@
 <?php
 /**
  * Chat Archive Loop
+ *
  * This loop shows the Post-Format: Chat archive.
  *
  * @package     OpusPrimus

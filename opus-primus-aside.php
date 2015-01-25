@@ -1,6 +1,7 @@
 <?php
 /**
  * Opus Primus Post-Format: Aside loop template
+ *
  * Displays the post-format: aside loop content
  *
  * @package     OpusPrimus

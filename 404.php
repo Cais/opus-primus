@@ -1,6 +1,7 @@
 <?php
 /**
  * 404 Template
+ *
  * Displays when a 404 error is produced, such as when a page does not exist.
  *
  * @package     OpusPrimus

@@ -2,6 +2,7 @@
 
 /**
  * Opus Primus Headers
+ *
  * Functionality specifically found in the header area / templates
  *
  * @package     OpusPrimus
@@ -40,6 +41,7 @@ class OpusPrimusHeader {
 
 	/**
 	 * Site Title
+	 *
 	 * Generates the site title output
 	 *
 	 * @package OpusPrimus
@@ -65,6 +67,7 @@ class OpusPrimusHeader {
 
 	/**
 	 * Site Title Block
+	 *
 	 * Wraps the site title in action hooks
 	 *
 	 * @package OpusPrimus
@@ -88,6 +91,7 @@ class OpusPrimusHeader {
 
 	/**
 	 * Site Description
+	 *
 	 * Displays site description
 	 *
 	 * @package OpusPrimus
@@ -108,6 +112,7 @@ class OpusPrimusHeader {
 
 	/**
 	 * Site Description Block
+	 *
 	 * Displays site description wrapped in action hooks
 	 *
 	 * @package OpusPrimus
@@ -132,6 +137,7 @@ class OpusPrimusHeader {
 
 	/**
 	 * Custom Header Image
+	 *
 	 * Returns the string to display the custom header image.
 	 *
 	 * @package OpusPrimus
@@ -150,6 +156,7 @@ class OpusPrimusHeader {
 
 	/**
 	 * Show Custom Header Image
+	 *
 	 * Writes to the screen the URL return by custom_header_image
 	 *
 	 * @package OpusPrimus
@@ -168,6 +175,7 @@ class OpusPrimusHeader {
 
 	/**
 	 * Show Custom Header Image Block
+	 *
 	 * Outputs the Custom Header image wrapped in action hooks
 	 *
 	 * @package OpusPrimus

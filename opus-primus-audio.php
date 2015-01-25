@@ -1,6 +1,7 @@
 <?php
 /**
  * Opus Primus Post-Format: Audio loop template
+ *
  * Displays the post-format: audio loop content
  *
  * @package     OpusPrimus

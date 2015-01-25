@@ -1,6 +1,7 @@
 <?php
 /**
  * Archive Template
+ *
  * A generic template to show when no other more specific archive template is
  * available to use. See the link below.
  *
