@@ -1077,7 +1077,7 @@ class OpusPrimusPosts {
 		/** @var array $cat_args - contains current list categories arguments */
 		$cat_args = array_merge( $cat_args, array( 'exclude' => apply_filters( 'opus_category_widget_exclude_list', '', 11 ) ) );
 
-		/** Send back the merged array excluding "Uncategorized" categories */
+		/** Send back the merged array excluding specific category or categories */
 
 		return $cat_args;
 
