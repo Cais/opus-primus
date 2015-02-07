@@ -7,6 +7,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Code =
 * Added `get_the_posts_pagination` for navigation between pages of posts
+* Added `hide_category_widget_list_items` method and related hook
 
 = CSS =
 * Added `=== Screen Reader Text ===` section
@@ -14,6 +15,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Miscellaneous =
 * Inline documentation clean-up and re-organization
+* Updated `hooks-filters.txt` file
 
 /** ------------------------------------------------------------------------- */
 == Version 1.3 ==

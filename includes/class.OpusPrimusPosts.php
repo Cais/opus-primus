@@ -33,20 +33,13 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version        1.0.1
- * @date           February 21, 2013
- * Re-order methods: action and filter calls by request order, then alphabetical
- * Modified action hooks to more semantic naming convention:
- * `opus_<section>_<placement>`
- *
- * @version        1.1
- * @date           March 7, 2013
- * Added `excerpt_more_link` and attached to `excerpt_more` filter
- * Added `anchor_title_text` for use with `excerpt_more_link` and permalinks in the post meta details
- *
  * @version        1.2.3
  * @date           January 12, 2014
  * Provide unique class for post coda if the post has a post format
+ *
+ * @version        1.3.1
+ * @date           February 7, 2015
+ * Added `hide_category_widget_list_items` method and related hook
  */
 class OpusPrimusPosts {
 	/**
@@ -56,6 +49,10 @@ class OpusPrimusPosts {
 	 * @since   0.1
 	 *
 	 * @uses    add_filter
+	 *
+	 * @version 1.3.1
+	 * @date    February 7, 2015
+	 * Added `hide_category_widget_list_items` method and related hook
 	 */
 	function __construct() {
 		/** Add excerpt more link */
@@ -63,6 +60,13 @@ class OpusPrimusPosts {
 
 		/** Add classes to post tag */
 		add_filter( 'post_class', array( $this, 'post_classes' ) );
+
+		/** Add hide category widget list items */
+		add_filter( 'widget_categories_args', array(
+			$this,
+			'hide_category_widget_list_items'
+		) );
+
 	} /** End function - construct */
 
 
@@ -1047,6 +1051,38 @@ class OpusPrimusPosts {
 
 	}
 	/** End function - uncategorized */
+
+	/**
+	 * Hide Category Widget List Items
+	 *
+	 * Takes the current `wp_list_categories` arguments and adds (overwrites?)
+	 * the exclude parameter value(s) stopping the filtered list of excluded
+	 * categories from being displayed. This requires the the filter hook
+	 * `opus_primus_category_widget_exclude_list` be used to hide the specific
+	 * categories by their ID.
+	 *
+	 * @package Opus_Primus
+	 * @since   1.3.1
+	 *
+	 * @uses    apply_filters
+	 *
+	 * @param   $cat_args
+	 *
+	 * @example add_filter( 'opus_category_widget_exclude_list', function() { return 1; } );
+	 *
+	 * @return  array
+	 */
+	function hide_category_widget_list_items( $cat_args ) {
+
+		/** @var array $cat_args - contains current list categories arguments */
+		$cat_args = array_merge( $cat_args, array( 'exclude' => apply_filters( 'opus_category_widget_exclude_list', '', 11 ) ) );
+
+		/** Send back the merged array excluding "Uncategorized" categories */
+
+		return $cat_args;
+
+	}
+	/** End function - hide category widget list items */
 
 
 } /** End Opus Primus Posts class */
