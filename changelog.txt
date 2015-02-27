@@ -12,7 +12,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = CSS =
 * Added `=== Screen Reader Text ===` section
 * Incorporated WordPress recommended styles for `.screen-reader-text` class
-* Added `h5.comment-link` definition to provide a better aesthetic location
+* Added `h5.comments-link` definition to provide a better aesthetic location
 
 = Miscellaneous =
 * Inline documentation clean-up and re-organization
