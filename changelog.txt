@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised January 26, 2015
+Last revised February 26, 2015
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Version 1.3.1 =
@@ -12,6 +12,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = CSS =
 * Added `=== Screen Reader Text ===` section
 * Incorporated WordPress recommended styles for `.screen-reader-text` class
+* Added `h5.comment-link` definition to provide a better aesthetic location
 
 = Miscellaneous =
 * Inline documentation clean-up and re-organization

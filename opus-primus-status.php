@@ -1,7 +1,7 @@
 <?php
 /**
  * Opus Primus Post-Format: Status Template
- * 
+ *
  * Displays the post-format: status loop
  *
  * @package     OpusPrimus
