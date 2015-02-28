@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised February 26, 2015
+Last revised Rare Disease Day, 2015
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Version 1.3.1 =
@@ -8,6 +8,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = Code =
 * Added `get_the_posts_pagination` for navigation between pages of posts
 * Added `hide_category_widget_list_items` method and related hook
+* Change method to return the Featured Thumbnail versus outputting it
 
 = CSS =
 * Added `=== Screen Reader Text ===` section

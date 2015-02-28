@@ -902,52 +902,63 @@ class OpusPrimusImages {
 	/**
 	 * Opus Primus Featured Thumbnail
 	 *
-	 * Adds the featured image / post thumbnail to the post if not in the single
-	 * view
+	 * Returns the Featured Image with default size set to thumbnail and aligned
+	 * to the left
 	 *
-	 * @package    OpusPrimus
-	 * @since      0.1
+	 * @package OpusPrimus
+	 * @since   0.1
 	 *
 	 * @param   $size  - default: thumbnail (uses WordPress sizes)
 	 * @param   $class - default: alignleft (can be any CSS class)
 	 *
-	 * @uses       get_post_thumbnail_id
-	 * @uses       has_post_thumbnail
-	 * @uses       is_archive
-	 * @uses       is_single
-	 * @uses       the_post_thumbnail
-	 * @uses       the_title_attribute
-	 * @uses       wp_get_attachment_image_src
+	 * @uses    get_post_thumbnail_id
+	 * @uses    get_the_ID
+	 * @uses    has_post_thumbnail
+	 * @uses    is_archive
+	 * @uses    is_single
+	 * @uses    the_post_thumbnail
+	 * @uses    the_title_attribute
+	 * @uses    wp_get_attachment_image_src
 	 *
-	 * @version    1.2
-	 * @date       April 18, 2013
-	 * Changed `the_post_thumbnail` to use parameters which are set in the call
-	 * to this method
-	 * Remove `is_single` conditional in conjunction with displaying full image
-	 * on single view of standard format posts
+	 * @return  string - Featured Thumbnail image and URL
 	 *
-	 * @version    1.2.3
-	 * @date       December 30, 2013
+	 * @version 1.2
+	 * @date    April 18, 2013
+	 * Changed `the_post_thumbnail` to use parameters which are set in the call to this method
+	 * Remove `is_single` conditional in conjunction with displaying full image on single view of standard format posts
+	 *
+	 * @version 1.2.3
+	 * @date    December 30, 2013
 	 * Removed Featured Image thumbnail from index view
 	 * Added Featured Image Thumbnail to archive views
 	 *
-	 * @version    1.2.4
-	 * @date       May 10, 2014
+	 * @version 1.2.4
+	 * @date    May 10, 2014
 	 * Bring the Featured Image Thumbnail back into the index view ... can you say "waffle"?
+	 *
+	 * @version 1.3.1
+	 * @date    Rare Disease Day 2014
+	 * Change method to return the Featured Thumbnail versus outputting it
 	 */
 	function featured_thumbnail( $size = 'thumbnail', $class = 'alignleft' ) {
+
+		$output = null;
+
 		if ( has_post_thumbnail() ) {
 
 			$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
 
-			echo '<a class="featured-thumbnail" href="' . $large_image_url[0] . '" title="' . the_title_attribute( 'echo=0' ) . '" >';
+			$output = '<a class="featured-thumbnail" href="' . $large_image_url[0] . '" title="' . the_title_attribute( 'echo=0' ) . '" >';
 
-			the_post_thumbnail( $size, array( 'class' => $class ) );
+			$output .= get_the_post_thumbnail( get_the_ID(), $size, array( 'class' => $class ) );
 
-			echo '</a>';
+			$output .= '</a>';
 
 		}
+
 		/** End if - has post thumbnail and not is single */
+
+		return $output;
 
 	} /** End function - featured thumbnail */
 
@@ -965,6 +976,10 @@ class OpusPrimusImages {
 	 * @uses        OpusPrimusImages::featured_thumbnail
 	 * @uses        is_archive
 	 * @uses        is_single
+	 *
+	 * @version     1.3.1
+	 * @date        Rare Disease Day 2015
+	 * Method now also writes to the screen
 	 */
 	function show_featured_thumbnail( $echo = true ) {
 
@@ -972,13 +987,21 @@ class OpusPrimusImages {
 
 			/** Sanity check - are we in the right view to show the image? */
 			if ( ! is_single() && is_archive() ) {
-				$this->featured_thumbnail( $size = 'thumbnail', $class = 'alignright' );
+
+				echo $this->featured_thumbnail( $size = 'thumbnail', $class = 'alignright' );
+
 			} else {
+
 				if ( ! is_single() ) {
-					$this->featured_thumbnail();
+
+					echo $this->featured_thumbnail();
+
 				} else {
-					$this->featured_thumbnail( $size = 'full', $class = 'aligncenter' );
+
+					echo $this->featured_thumbnail( $size = 'full', $class = 'aligncenter' );
+
 				}
+
 			}
 			/** End if - not is single and is archive */
 
