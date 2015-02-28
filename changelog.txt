@@ -10,6 +10,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added `hide_category_widget_list_items` method and related hook
 * Added some escaping sanitization and linked Featured Image to post via the post ID
 * Change method to return the Featured Thumbnail versus outputting it
+* Extracted code from `featured_thumbnail` method to create `featured_thumbnail_single_view` method
 
 = CSS =
 * Added `=== Screen Reader Text ===` section
@@ -17,6 +18,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added `h5.comments-link` definition to provide a better aesthetic location
 
 = Miscellaneous =
+* Begin removal of extraneous end of structure comments ...
 * Inline documentation clean-up and re-organization
 * Updated `hooks-filters.txt` file
 

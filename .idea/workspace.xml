@@ -4,7 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/css/opus-primus.css" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
+    <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="* Begin removal of extraneous end of structure comments ...">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -35,8 +35,8 @@
       <file leaf-file-name="changelog.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/changelog.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21306819" vertical-offset="0" max-vertical-offset="6480">
-              <caret line="10" column="84" selection-start-line="10" selection-start-column="84" selection-end-line="10" selection-end-column="84" />
+            <state vertical-scroll-proportion="0.2556818" vertical-offset="0" max-vertical-offset="6510">
+              <caret line="12" column="99" selection-start-line="12" selection-start-column="99" selection-end-line="12" selection-end-column="99" />
               <folding />
             </state>
           </provider>
@@ -45,8 +45,18 @@
       <file leaf-file-name="class.OpusPrimusImages.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusImages.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.7916665" vertical-offset="13943" max-vertical-offset="16995">
-              <caret line="942" column="69" selection-start-line="942" selection-start-column="69" selection-end-line="942" selection-end-column="69" />
+            <state vertical-scroll-proportion="-13.333333" vertical-offset="13990" max-vertical-offset="16950">
+              <caret line="954" column="71" selection-start-line="954" selection-start-column="71" selection-end-line="954" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="image.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../wp-admin/includes/image.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="24.958334" vertical-offset="4304" max-vertical-offset="9075">
+              <caret line="252" column="9" selection-start-line="252" selection-start-column="9" selection-end-line="252" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -267,6 +277,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BNS-Projects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BNS-Projects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -374,12 +416,6 @@
       <created>1335650237355</created>
       <option name="number" value="Default" />
       <updated>1395521979616</updated>
-    </task>
-    <task id="LOCAL-00512" summary="* Added appropriate suffixes to script and style handles to ensure uniqueness in OpusPrimusPullQuotes">
-      <created>1410451627578</created>
-      <option name="number" value="00512" />
-      <option name="project" value="LOCAL" />
-      <updated>1410451627578</updated>
     </task>
     <task id="LOCAL-00513" summary="* Added Contact Form 7 compatibility">
       <created>1410638431984</created>
@@ -669,7 +705,13 @@
       <option name="project" value="LOCAL" />
       <updated>1425160768426</updated>
     </task>
-    <option name="localTasksCounter" value="561" />
+    <task id="LOCAL-00561" summary="* Added some escaping sanitization and linked Featured Image to post via the post ID">
+      <created>1425161358658</created>
+      <option name="number" value="00561" />
+      <option name="project" value="LOCAL" />
+      <updated>1425161358658</updated>
+    </task>
+    <option name="localTasksCounter" value="562" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -776,7 +818,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* Added Gravity Forms compatibility (not implemented, yet)" />
     <MESSAGE value="* Added Gravity Forms compatibility (for reCaptcha form)" />
     <MESSAGE value="* Added `#header-widgets` to the &quot;Clearance&quot; section of `opus-primus.css`" />
     <MESSAGE value="- `readme.txt` updates" />
@@ -801,7 +842,8 @@
     <MESSAGE value="* Added `h5.comment-link` definition to provide a better aesthetic location" />
     <MESSAGE value="- prepared as 1.3.1-alpha (internal only)" />
     <MESSAGE value="* Change method to return the Featured Thumbnail versus outputting it" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Change method to return the Featured Thumbnail versus outputting it" />
+    <MESSAGE value="* Added some escaping sanitization and linked Featured Image to post via the post ID" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Added some escaping sanitization and linked Featured Image to post via the post ID" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="WordPressConfiguration" enabled="true">
@@ -818,13 +860,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/widgets.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8718704" vertical-offset="2006" max-vertical-offset="2685">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stanzas/stanzas.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.634757" vertical-offset="476" max-vertical-offset="1155">
@@ -1166,18 +1201,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../../wp-admin/includes/image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="24.958334" vertical-offset="4304" max-vertical-offset="9075">
+          <caret line="252" column="9" selection-start-line="252" selection-start-column="9" selection-end-line="252" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusImages.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.7916665" vertical-offset="13943" max-vertical-offset="16995">
-          <caret line="942" column="69" selection-start-line="942" selection-start-column="69" selection-end-line="942" selection-end-column="69" />
+        <state vertical-scroll-proportion="-13.333333" vertical-offset="13990" max-vertical-offset="16950">
+          <caret line="954" column="71" selection-start-line="954" selection-start-column="71" selection-end-line="954" selection-end-column="71" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/changelog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21306819" vertical-offset="0" max-vertical-offset="6480">
-          <caret line="10" column="84" selection-start-line="10" selection-start-column="84" selection-end-line="10" selection-end-column="84" />
+        <state vertical-scroll-proportion="0.2556818" vertical-offset="0" max-vertical-offset="6510">
+          <caret line="12" column="99" selection-start-line="12" selection-start-column="99" selection-end-line="12" selection-end-column="99" />
           <folding />
         </state>
       </provider>
