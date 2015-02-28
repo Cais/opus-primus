@@ -911,6 +911,8 @@ class OpusPrimusImages {
 	 * @param   $size  - default: thumbnail (uses WordPress sizes)
 	 * @param   $class - default: alignleft (can be any CSS class)
 	 *
+	 * @uses    esc_attr
+	 * @uses    esc_url
 	 * @uses    get_post_thumbnail_id
 	 * @uses    get_the_ID
 	 * @uses    has_post_thumbnail
@@ -938,6 +940,7 @@ class OpusPrimusImages {
 	 *
 	 * @version 1.3.1
 	 * @date    Rare Disease Day 2014
+	 * Added some escaping sanitization and linked to post via its ID
 	 * Change method to return the Featured Thumbnail versus outputting it
 	 */
 	function featured_thumbnail( $size = 'thumbnail', $class = 'alignleft' ) {
@@ -946,9 +949,7 @@ class OpusPrimusImages {
 
 		if ( has_post_thumbnail() ) {
 
-			$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
-
-			$output = '<a class="featured-thumbnail" href="' . $large_image_url[0] . '" title="' . the_title_attribute( 'echo=0' ) . '" >';
+			$output = '<a class="featured-thumbnail" href="' . esc_url( home_url( '/?p=' . get_the_ID() ) ) . '" title="' . esc_attr( the_title_attribute( 'echo=0' ) ) . '" >';
 
 			$output .= get_the_post_thumbnail( get_the_ID(), $size, array( 'class' => $class ) );
 

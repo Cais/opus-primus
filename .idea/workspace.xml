@@ -4,7 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/css/opus-primus.css" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="* Change method to return the Featured Thumbnail versus outputting it">
+    <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -35,8 +35,8 @@
       <file leaf-file-name="changelog.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/changelog.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.02124646" vertical-offset="0" max-vertical-offset="6465">
-              <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.21306819" vertical-offset="0" max-vertical-offset="6480">
+              <caret line="10" column="84" selection-start-line="10" selection-start-column="84" selection-end-line="10" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -45,8 +45,8 @@
       <file leaf-file-name="class.OpusPrimusImages.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusImages.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.041667" vertical-offset="13883" max-vertical-offset="16980">
-              <caret line="940" column="74" selection-start-line="940" selection-start-column="74" selection-end-line="940" selection-end-column="74" />
+            <state vertical-scroll-proportion="-7.7916665" vertical-offset="13943" max-vertical-offset="16995">
+              <caret line="942" column="69" selection-start-line="942" selection-start-column="69" selection-end-line="942" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -375,12 +375,6 @@
       <option name="number" value="Default" />
       <updated>1395521979616</updated>
     </task>
-    <task id="LOCAL-00511" summary="Tagged: 1.3-alpha-20140901">
-      <created>1409606949850</created>
-      <option name="number" value="00511" />
-      <option name="project" value="LOCAL" />
-      <updated>1409606949850</updated>
-    </task>
     <task id="LOCAL-00512" summary="* Added appropriate suffixes to script and style handles to ensure uniqueness in OpusPrimusPullQuotes">
       <created>1410451627578</created>
       <option name="number" value="00512" />
@@ -669,7 +663,13 @@
       <option name="project" value="LOCAL" />
       <updated>1425004886393</updated>
     </task>
-    <option name="localTasksCounter" value="560" />
+    <task id="LOCAL-00560" summary="* Change method to return the Featured Thumbnail versus outputting it">
+      <created>1425160768426</created>
+      <option name="number" value="00560" />
+      <option name="project" value="LOCAL" />
+      <updated>1425160768426</updated>
+    </task>
+    <option name="localTasksCounter" value="561" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -776,7 +776,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* Added `width: auto;` for `th` and `td` elements" />
     <MESSAGE value="* Added Gravity Forms compatibility (not implemented, yet)" />
     <MESSAGE value="* Added Gravity Forms compatibility (for reCaptcha form)" />
     <MESSAGE value="* Added `#header-widgets` to the &quot;Clearance&quot; section of `opus-primus.css`" />
@@ -801,7 +800,8 @@
     <MESSAGE value="- documentation correction" />
     <MESSAGE value="* Added `h5.comment-link` definition to provide a better aesthetic location" />
     <MESSAGE value="- prepared as 1.3.1-alpha (internal only)" />
-    <option name="LAST_COMMIT_MESSAGE" value="- prepared as 1.3.1-alpha (internal only)" />
+    <MESSAGE value="* Change method to return the Featured Thumbnail versus outputting it" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Change method to return the Featured Thumbnail versus outputting it" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="WordPressConfiguration" enabled="true">
@@ -1168,16 +1168,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusImages.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.041667" vertical-offset="13883" max-vertical-offset="16980">
-          <caret line="940" column="74" selection-start-line="940" selection-start-column="74" selection-end-line="940" selection-end-column="74" />
+        <state vertical-scroll-proportion="-7.7916665" vertical-offset="13943" max-vertical-offset="16995">
+          <caret line="942" column="69" selection-start-line="942" selection-start-column="69" selection-end-line="942" selection-end-column="69" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/changelog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02124646" vertical-offset="0" max-vertical-offset="6465">
-          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.21306819" vertical-offset="0" max-vertical-offset="6480">
+          <caret line="10" column="84" selection-start-line="10" selection-start-column="84" selection-end-line="10" selection-end-column="84" />
           <folding />
         </state>
       </provider>

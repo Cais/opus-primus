@@ -8,6 +8,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = Code =
 * Added `get_the_posts_pagination` for navigation between pages of posts
 * Added `hide_category_widget_list_items` method and related hook
+* Added some escaping sanitization and linked Featured Image to post via the post ID
 * Change method to return the Featured Thumbnail versus outputting it
 
 = CSS =
