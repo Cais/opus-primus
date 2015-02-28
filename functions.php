@@ -65,8 +65,6 @@ function opus_primus_theme_version() {
 
 }
 
-/** End function - theme version */
-
 
 if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 	/**
@@ -129,13 +127,11 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 			), opus_primus_theme_version(), true
 			);
 		}
-		/** End if - is single */
 
 		/** Enqueue Opus Primus Header Image Position (if there is a header image) which will enqueue jQuery as a dependency */
 		if ( get_header_image() ) {
 			wp_enqueue_script( 'opus-primus-header-image-position', $opus_router->path_uri( 'js' ) . 'opus-primus-header-image-position.js', array( 'jquery' ), opus_primus_theme_version(), true );
 		}
-		/** End if - get header image */
 
 		/** Enqueue Theme Stylesheets */
 		/** Theme Layouts */
@@ -154,13 +150,11 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 		if ( is_readable( OPUS_CUSTOM_PATH . 'opus-primus-custom-style.css' ) ) {
 			wp_enqueue_style( 'Opus-Primus-Custom-Style', OPUS_CUSTOM_URL . 'opus-primus-custom-style.css', array(), opus_primus_theme_version(), 'screen' );
 		}
-		/** End if - is readable */
 
 		/** Enqueue custom JavaScript in an update safe location */
 		if ( is_readable( OPUS_CUSTOM_PATH . 'opus-primus-custom-script.js' ) ) {
 			wp_enqueue_script( 'opus-primus-custom-script', OPUS_CUSTOM_URL . 'opus-primus-custom-script.js', array( 'jquery' ), opus_primus_theme_version(), true );
 		}
-		/** End if - is readable */
 
 		/** Mobile Menu via SlickNav JavaScript plugin integration */
 		/** Enqueue the SlickNav styles */
@@ -178,10 +172,8 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 		wp_enqueue_style( 'SlickNav-layout', $opus_router->path_uri( 'lib' ) . 'opus-primus-slicknav.css', array( 'SlickNav-CSS-main' ), opus_primus_theme_version(), 'screen' );
 
 	}
-	/** End function - opus primus enqueue scripts */
 
 }
-/** End if - function exists - opus primus enqueue scripts */
 add_action( 'wp_enqueue_scripts', 'opus_primus_enqueue_scripts' );
 
 
@@ -298,20 +290,16 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 		if ( is_readable( $locale_file ) ) {
 			require_once( $locale_file );
 		}
-		/** End if - is readable */
 
 		/** Set content width to 1000 - see Full Size Video script */
 		global $content_width;
 		if ( ! isset( $content_width ) ) {
 			$content_width = 1000;
 		}
-		/** End if - not isset - content width */
 
 	}
-	/** End function - opus primus theme setup */
 
 }
-/** End if - function exists - opus primus theme setup */
 add_action( 'after_setup_theme', 'opus_primus_theme_setup' );
 
 
@@ -320,8 +308,6 @@ add_action( 'after_setup_theme', 'opus_primus_theme_setup' );
 function opus_primus_return_blank() {
 	return ' ';
 }
-
-/** End function - return blank */
 
 
 /**
@@ -363,7 +349,6 @@ function opus_primus_compatibility() {
 		/** Enqueue Soliloquy Styles */
 		wp_enqueue_style( 'Opus-Primus-Soliloquy', $opus_router->path_uri( 'compatibility' ) . 'opus-primus-soliloquy.css', array(), opus_primus_theme_version(), 'screen' );
 	}
-	/** End if - soliloquy plugin is active */
 
 	/**
 	 * Contact Form 7 - forms plugin
@@ -373,7 +358,6 @@ function opus_primus_compatibility() {
 		/** Enqueue Soliloquy Styles */
 		wp_enqueue_style( 'Opus-Primus-Contact-Form-7', $opus_router->path_uri( 'compatibility' ) . 'opus-primus-contact-form-7.css', array(), opus_primus_theme_version(), 'screen' );
 	}
-	/** End if - contact form 7 plugin is active */
 
 	/**
 	 * BNS Login - login plugin
@@ -392,8 +376,6 @@ function opus_primus_compatibility() {
 	}
 
 }
-
-/** End function - opus primus compatibility */
 add_action( 'wp_enqueue_scripts', 'opus_primus_compatibility' );
 
 
@@ -433,7 +415,6 @@ function opus_primus_before_comment_form() {
 
 		return;
 	}
-	/** End if - post password required */
 
 	/** If comments are open, but there are no comments. */
 	if ( ! have_comments() ) {
@@ -443,11 +424,8 @@ function opus_primus_before_comment_form() {
 			'</span>'
 		);
 	}
-	/** End if - not have comments */
 
 }
-
-/** End function - before comment form */
 add_action( 'comment_form_before', 'opus_primus_before_comment_form' );
 
 
@@ -478,11 +456,8 @@ function opus_primus_comments_form_closed() {
 			'</span>'
 		);
 	}
-	/** End if - not is page */
 
 }
-
-/** End function - comments form closed */
 add_action( 'comment_form_comments_closed', 'opus_primus_comments_form_closed' );
 
 

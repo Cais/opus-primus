@@ -43,8 +43,8 @@
  * @date        April 9, 2013
  * Removed global `$opus_image_meta`; replaced with call to `exif_data` method
  *
- * @version 1.3.1
- * @date    Rare Disease Day 2015
+ * @version     1.3.1
+ * @date        Rare Disease Day 2015
  * Removed extraneous end of structure comments
  *
  * @todo        Review adding `opus_*_after` hooks; may also require `show_*` functions (1.2)
@@ -1100,23 +1100,31 @@ class OpusPrimusImages {
 	 * @since   1.3.1
 	 *
 	 * @uses    OpusPrimusImages::featured_thumbnail
-	 * @uses    wp_get_attachment_metadata
 	 * @uses    get_post_thumbnail_id
+	 * @uses    is_bool
+	 * @uses    wp_get_attachment_metadata
+	 *
+	 * @param bool $use_portrait
 	 *
 	 * @return string
 	 */
-	function featured_thumbnail_single_view() {
+	function featured_thumbnail_single_view( $use_portrait = true ) {
 
 		$featured_image_metadata = wp_get_attachment_metadata( get_post_thumbnail_id() );
 
-		if ( $featured_image_metadata['height'] > $featured_image_metadata['width'] ) {
+		/** @var bool $use_portrait - use hook as toggle to display featured image with portrait consideration */
+		$use_portrait = apply_filters( 'opus_featured_thumbnail_single_view_portrait', $use_portrait );
 
+		/** Quick sanity check to ensure that a boolean value is used */
+		if ( ! is_bool( $use_portrait ) ) {
+			/** @var bool $use_portrait - set to true (default) */
+			$use_portrait = true;
+		}
+
+		if ( $use_portrait && ( $featured_image_metadata['height'] > $featured_image_metadata['width'] ) ) {
 			return $this->featured_thumbnail( $size = 'full', $class = 'alignleft' );
-
 		} else {
-
 			return $this->featured_thumbnail( $size = 'full', $class = 'aligncenter' );
-
 		}
 
 	}
