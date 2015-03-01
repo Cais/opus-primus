@@ -40,6 +40,10 @@
  * @version     1.0.5
  * @date        March 3, 2013
  * Removed `media="all"` as not required
+ *
+ * @version     1.3.2
+ * @date        March 1, 2015
+ * Add support for the `<title />` tag via `add_theme_support` function
  */
 ?>
 
@@ -52,7 +56,12 @@
 		<?php do_action( 'opus_head_top' ); ?>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title><?php wp_title( '|', true, 'right' ); ?></title>
+
+		<?php /** Check for WordPress 4.1 compatibility */
+		if ( ! function_exists( '_wp_render_title_tag' ) ) { ?>
+			<title><?php wp_title( '|', true, 'right' ); ?></title>
+		<?php } ?>
+
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -64,7 +73,6 @@
 <body <?php body_class(); ?>>
 
 <?php
-/** Add empty hook at top of body */
 do_action( 'opus_body_top' ); ?>
 
 	<div id="opus-primus"><!-- Unique theme identifier -->

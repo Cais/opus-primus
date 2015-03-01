@@ -195,6 +195,7 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 	 * @uses             add_theme_support: html5 (search form, comment form, comment list, caption, gallery)
 	 * @uses             add_theme_support: post-formats
 	 * @uses             add_theme_support: post-thumbnails
+	 * @uses             add_theme_support: title-tag
 	 * @uses             load_theme_textdomain
 	 * @uses             get_locale
 	 * @uses             get_template_directory
@@ -209,6 +210,10 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 	 * @version          1.3
 	 * @date             August 22, 2014
 	 * Added WordPress HTML5 markup support
+	 *
+	 * @version          1.3.2
+	 * @date             March 1, 2015
+	 * Add support for the `<title />` tag via `add_theme_support` function
 	 */
 	function opus_primus_theme_setup() {
 		/** This theme uses post thumbnails */
@@ -216,6 +221,9 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 
 		/** Add default posts and comments RSS feed links to head */
 		add_theme_support( 'automatic-feed-links' );
+
+		/** Add support for the `<title />` tag */
+		add_theme_support( 'title-tag' );
 
 		/** Add theme support for editor-style */
 		add_editor_style();
@@ -376,6 +384,7 @@ function opus_primus_compatibility() {
 	}
 
 }
+
 add_action( 'wp_enqueue_scripts', 'opus_primus_compatibility' );
 
 
@@ -426,6 +435,7 @@ function opus_primus_before_comment_form() {
 	}
 
 }
+
 add_action( 'comment_form_before', 'opus_primus_before_comment_form' );
 
 
@@ -458,6 +468,7 @@ function opus_primus_comments_form_closed() {
 	}
 
 }
+
 add_action( 'comment_form_comments_closed', 'opus_primus_comments_form_closed' );
 
 
