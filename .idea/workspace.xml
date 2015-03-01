@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -32,21 +31,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="changelog.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="changelog.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/changelog.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2549575" vertical-offset="0" max-vertical-offset="6540">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6540">
               <caret line="12" column="96" selection-start-line="12" selection-start-column="96" selection-end-line="12" selection-end-column="96" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="class.OpusPrimusImages.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="class.OpusPrimusImages.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusImages.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.958333" vertical-offset="11770" max-vertical-offset="17175">
-              <caret line="807" column="55" selection-start-line="807" selection-start-column="55" selection-end-line="807" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.5367647" vertical-offset="11800" max-vertical-offset="17130">
+              <caret line="811" column="41" selection-start-line="811" selection-start-column="41" selection-end-line="811" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -128,8 +127,8 @@
         <option value="$PROJECT_DIR$/documentation/hooks-filters.txt" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
         <option value="$PROJECT_DIR$/changelog.txt" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
       </list>
     </option>
   </component>
@@ -374,12 +373,6 @@
       <created>1335650237355</created>
       <option name="number" value="Default" />
       <updated>1395521979616</updated>
-    </task>
-    <task id="LOCAL-00516" summary="* Hide &quot;Search&quot; button for search form">
-      <created>1410655887066</created>
-      <option name="number" value="00516" />
-      <option name="project" value="LOCAL" />
-      <updated>1410655887066</updated>
     </task>
     <task id="LOCAL-00517" summary="* Changed post breadcrumb link to the WordPress shortlink">
       <created>1411183946798</created>
@@ -669,7 +662,13 @@
       <option name="project" value="LOCAL" />
       <updated>1425174021504</updated>
     </task>
-    <option name="localTasksCounter" value="565" />
+    <task id="LOCAL-00565" summary="* Changed from using `get_the_time` to `date_i18n` for `OpusPrimusImages::exif_timestamp` method">
+      <created>1425237194896</created>
+      <option name="number" value="00565" />
+      <option name="project" value="LOCAL" />
+      <updated>1425237194897</updated>
+    </task>
+    <option name="localTasksCounter" value="566" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -710,6 +709,7 @@
     <frame x="0" y="23" width="1440" height="824" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263889" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32122904" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -729,7 +729,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28746593" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263889" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -776,7 +775,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="- tagged 1.3-beta1" />
     <MESSAGE value="* Added minor `attachment` related styles" />
     <MESSAGE value="* Added checks for Child-Theme and relevant references to `opus_primus_support_comment`&#10;* Moved `support_comment` method to `functions.php` to eliminate duplicate output" />
     <MESSAGE value="* Added search form margin property" />
@@ -801,7 +799,8 @@
     <MESSAGE value="* Begin removal of extraneous end of structure comments ...&#10;* Extracted code from `featured_thumbnail` method to create `featured_thumbnail_single_view` method" />
     <MESSAGE value="* Added `opus_featured_thumbnail_single_view_portrait` filter hook and updated `hooks-filters.txt`" />
     <MESSAGE value="- re-organized methods to read in a better flow" />
-    <option name="LAST_COMMIT_MESSAGE" value="- re-organized methods to read in a better flow" />
+    <MESSAGE value="* Changed from using `get_the_time` to `date_i18n` for `OpusPrimusImages::exif_timestamp` method" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Changed from using `get_the_time` to `date_i18n` for `OpusPrimusImages::exif_timestamp` method" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="WordPressConfiguration" enabled="true">
@@ -1183,18 +1182,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusImages.php">
+    <entry file="file://$PROJECT_DIR$/changelog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.958333" vertical-offset="11770" max-vertical-offset="17175">
-          <caret line="807" column="55" selection-start-line="807" selection-start-column="55" selection-end-line="807" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6540">
+          <caret line="12" column="96" selection-start-line="12" selection-start-column="96" selection-end-line="12" selection-end-column="96" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/changelog.txt">
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusImages.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2549575" vertical-offset="0" max-vertical-offset="6540">
-          <caret line="12" column="96" selection-start-line="12" selection-start-column="96" selection-end-line="12" selection-end-column="96" />
+        <state vertical-scroll-proportion="0.5367647" vertical-offset="11800" max-vertical-offset="17130">
+          <caret line="811" column="41" selection-start-line="811" selection-start-column="41" selection-end-line="811" selection-end-column="41" />
           <folding />
         </state>
       </provider>

@@ -811,9 +811,6 @@ class OpusPrimusImages {
 		/** @var $image_data - image meta data */
 		$image_data = $this->exif_data();
 
-		$timestamp = $image_data['image_meta']['created_timestamp'];
-		var_dump($timestamp);
-
 		/** Add empty hook before EXIF timestamp */
 		do_action( 'opus_exif_timestamp_before' );
 
