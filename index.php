@@ -6,7 +6,7 @@
  *
  * @package        OpusPrimus
  * @version        1.3.1
- * @date           January 2015
+ * @date           Rare Disease Day (February 28) 2015
  *
  * @author         Opus Primus <in.opus.primus@gmail.com>
  * @copyright      Copyright (c) 2012-2015, Opus Primus
