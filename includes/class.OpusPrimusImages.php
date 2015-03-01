@@ -936,6 +936,43 @@ class OpusPrimusImages {
 
 
 	/**
+	 * Featured Thumbnail Single View
+	 *
+	 * @package OpusPrimus
+	 * @since   1.3.1
+	 *
+	 * @uses    OpusPrimusImages::featured_thumbnail
+	 * @uses    get_post_thumbnail_id
+	 * @uses    is_bool
+	 * @uses    wp_get_attachment_metadata
+	 *
+	 * @param bool $use_portrait
+	 *
+	 * @return string
+	 */
+	function featured_thumbnail_single_view( $use_portrait = true ) {
+
+		$featured_image_metadata = wp_get_attachment_metadata( get_post_thumbnail_id() );
+
+		/** @var bool $use_portrait - use hook as toggle to display featured image with portrait consideration */
+		$use_portrait = apply_filters( 'opus_featured_thumbnail_single_view_portrait', $use_portrait );
+
+		/** Quick sanity check to ensure that a boolean value is used */
+		if ( ! is_bool( $use_portrait ) ) {
+			/** @var bool $use_portrait - set to true (default) */
+			$use_portrait = true;
+		}
+
+		if ( $use_portrait && ( $featured_image_metadata['height'] > $featured_image_metadata['width'] ) ) {
+			return $this->featured_thumbnail( $size = 'full', $class = 'alignleft' );
+		} else {
+			return $this->featured_thumbnail( $size = 'full', $class = 'aligncenter' );
+		}
+
+	}
+
+
+	/**
 	 * Show Featured Thumbnail
 	 *
 	 * Used to display the featured thumbnail image in templates
@@ -1090,43 +1127,6 @@ class OpusPrimusImages {
 	 */
 	function show_first_linked_image() {
 		echo $this->first_linked_image();
-	}
-
-
-	/**
-	 * Featured Thumbnail Single View
-	 *
-	 * @package OpusPrimus
-	 * @since   1.3.1
-	 *
-	 * @uses    OpusPrimusImages::featured_thumbnail
-	 * @uses    get_post_thumbnail_id
-	 * @uses    is_bool
-	 * @uses    wp_get_attachment_metadata
-	 *
-	 * @param bool $use_portrait
-	 *
-	 * @return string
-	 */
-	function featured_thumbnail_single_view( $use_portrait = true ) {
-
-		$featured_image_metadata = wp_get_attachment_metadata( get_post_thumbnail_id() );
-
-		/** @var bool $use_portrait - use hook as toggle to display featured image with portrait consideration */
-		$use_portrait = apply_filters( 'opus_featured_thumbnail_single_view_portrait', $use_portrait );
-
-		/** Quick sanity check to ensure that a boolean value is used */
-		if ( ! is_bool( $use_portrait ) ) {
-			/** @var bool $use_portrait - set to true (default) */
-			$use_portrait = true;
-		}
-
-		if ( $use_portrait && ( $featured_image_metadata['height'] > $featured_image_metadata['width'] ) ) {
-			return $this->featured_thumbnail( $size = 'full', $class = 'alignleft' );
-		} else {
-			return $this->featured_thumbnail( $size = 'full', $class = 'aligncenter' );
-		}
-
 	}
 
 

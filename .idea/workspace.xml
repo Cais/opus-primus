@@ -4,11 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/css/opus-primus.css" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="* Added `opus_featured_thumbnail_single_view_portrait` filter hook and updated `hooks-filters.txt`">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
+    <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documentation/hooks-filters.txt" afterPath="$PROJECT_DIR$/documentation/hooks-filters.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="opus-primus.iws" />
@@ -44,34 +41,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="class.OpusPrimusImages.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="class.OpusPrimusImages.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusImages.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.583334" vertical-offset="16315" max-vertical-offset="17070">
-              <caret line="1119" column="63" selection-start-line="1119" selection-start-column="63" selection-end-line="1119" selection-end-column="63" />
+            <state vertical-scroll-proportion="2.125" vertical-offset="13855" max-vertical-offset="17070">
+              <caret line="1020" column="0" selection-start-line="1020" selection-start-column="0" selection-end-line="1020" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hooks-filters.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/documentation/hooks-filters.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="556" max-vertical-offset="1770">
-              <caret line="65" column="52" selection-start-line="65" selection-start-column="52" selection-end-line="65" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/functions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8235292" vertical-offset="3975" max-vertical-offset="7530">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding>
-                <element signature="e#6#1421#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -151,9 +126,9 @@
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/css/opus-primus.css" />
         <option value="$PROJECT_DIR$/documentation/hooks-filters.txt" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/changelog.txt" />
+        <option value="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
       </list>
     </option>
   </component>
@@ -424,12 +399,6 @@
       <created>1335650237355</created>
       <option name="number" value="Default" />
       <updated>1395521979616</updated>
-    </task>
-    <task id="LOCAL-00514" summary="* Integrated &quot;FitVids&quot; built by Chris Coyier (http://chriscoyier.net/) and Paravel (http://paravelinc.com/)">
-      <created>1410645617940</created>
-      <option name="number" value="00514" />
-      <option name="project" value="LOCAL" />
-      <updated>1410645617940</updated>
     </task>
     <task id="LOCAL-00515" summary="* Updated `screenshot.png` to better reflect latest release">
       <created>1410648597906</created>
@@ -719,7 +688,13 @@
       <option name="project" value="LOCAL" />
       <updated>1425164013385</updated>
     </task>
-    <option name="localTasksCounter" value="563" />
+    <task id="LOCAL-00563" summary="* Added `opus_featured_thumbnail_single_view_portrait` filter hook and updated `hooks-filters.txt`">
+      <created>1425166084479</created>
+      <option name="number" value="00563" />
+      <option name="project" value="LOCAL" />
+      <updated>1425166084479</updated>
+    </task>
+    <option name="localTasksCounter" value="564" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -826,7 +801,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* Added `#header-widgets` to the &quot;Clearance&quot; section of `opus-primus.css`" />
     <MESSAGE value="- `readme.txt` updates" />
     <MESSAGE value="- tagged 1.3-beta1" />
     <MESSAGE value="* Added minor `attachment` related styles" />
@@ -851,7 +825,8 @@
     <MESSAGE value="* Change method to return the Featured Thumbnail versus outputting it" />
     <MESSAGE value="* Added some escaping sanitization and linked Featured Image to post via the post ID" />
     <MESSAGE value="* Begin removal of extraneous end of structure comments ...&#10;* Extracted code from `featured_thumbnail` method to create `featured_thumbnail_single_view` method" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Begin removal of extraneous end of structure comments ...&#10;* Extracted code from `featured_thumbnail` method to create `featured_thumbnail_single_view` method" />
+    <MESSAGE value="* Added `opus_featured_thumbnail_single_view_portrait` filter hook and updated `hooks-filters.txt`" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Added `opus_featured_thumbnail_single_view_portrait` filter hook and updated `hooks-filters.txt`" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="WordPressConfiguration" enabled="true">
@@ -1204,26 +1179,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusImages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.583334" vertical-offset="16315" max-vertical-offset="17070">
-          <caret line="1119" column="63" selection-start-line="1119" selection-start-column="63" selection-end-line="1119" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/documentation/hooks-filters.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="556" max-vertical-offset="1770">
           <caret line="65" column="52" selection-start-line="65" selection-start-column="52" selection-end-line="65" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changelog.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6525">
-          <caret line="20" column="98" selection-start-line="20" selection-start-column="98" selection-end-line="20" selection-end-column="98" />
           <folding />
         </state>
       </provider>
@@ -1235,6 +1194,22 @@
           <folding>
             <element signature="e#6#1421#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changelog.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6525">
+          <caret line="20" column="98" selection-start-line="20" selection-start-column="98" selection-end-line="20" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusImages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.125" vertical-offset="13855" max-vertical-offset="17070">
+          <caret line="1020" column="0" selection-start-line="1020" selection-start-column="0" selection-end-line="1020" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
