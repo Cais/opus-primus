@@ -793,19 +793,26 @@ class OpusPrimusImages {
 	 * @uses    OpusPrimusImages::exif_data
 	 * @uses    __
 	 * @uses    apply_filters
+	 * @uses    date_i18n
 	 * @uses    do_action
 	 * @uses    get_option
-	 * @uses    get_the_time
 	 *
 	 * @return  string
 	 *
 	 * @version 1.2
 	 * @date    April 9, 2013
 	 * Removed global `$opus_image_meta`; call `exif_data` method instead
+	 *
+	 * @version 1.3.1
+	 * @date    March 1, 2015
+	 * Changed from using `get_the_time` to `date_i18n`
 	 */
 	function exif_timestamp() {
 		/** @var $image_data - image meta data */
 		$image_data = $this->exif_data();
+
+		$timestamp = $image_data['image_meta']['created_timestamp'];
+		var_dump($timestamp);
 
 		/** Add empty hook before EXIF timestamp */
 		do_action( 'opus_exif_timestamp_before' );
@@ -818,8 +825,8 @@ class OpusPrimusImages {
 
 			$timestamp .= sprintf(
 				__( '%1$s @ %2$s', 'opus-primus' ),
-				get_the_time( get_option( 'date_format' ), $image_data['image_meta']['created_timestamp'] ),
-				get_the_time( get_option( 'time_format' ), $image_data['image_meta']['created_timestamp'] )
+				date_i18n( get_option( 'date_format' ), $image_data['image_meta']['created_timestamp'] ),
+				date_i18n( get_option( 'time_format' ), $image_data['image_meta']['created_timestamp'] )
 			);
 
 		}
