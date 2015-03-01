@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised Rare Disease Day, 2015
+Last revised March 1, 2015
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Version 1.3.1 =
@@ -12,11 +12,13 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Changed method to return the Featured Thumbnail versus outputting it
 * Changed from using `get_the_time` to `date_i18n` for `OpusPrimusImages::exif_timestamp` method
 * Extracted code from `featured_thumbnail` method to create `featured_thumbnail_single_view` method
+* Improved look of navigation links in `OpusPrimusNavigation::multiple_pages_link` method
 
 = CSS =
 * Added `=== Screen Reader Text ===` section
-* Incorporated WordPress recommended styles for `.screen-reader-text` class
 * Added `h5.comments-link` definition to provide a better aesthetic location
+* Added styling to navigation for moving within a single post's pages
+* Incorporated WordPress recommended styles for `.screen-reader-text` class
 
 = Miscellaneous =
 * Added `opus_featured_thumbnail_single_view_portrait` filter hook and updated `hooks-filters.txt`
