@@ -1,5 +1,5 @@
 === Opus Primus readme.txt ===
-* Last revised November 22, 2014
+* Last revised March 3, 2015
 
 == Contents ==
 * Copyright
@@ -11,7 +11,7 @@
 * Review Tickets
 
 == Copyright ==
-Copyright (c) 2012-2014, Opus Primus
+Copyright (c) 2012-2015, Opus Primus
 
 This file is part of Opus Primus.
 
