@@ -953,6 +953,10 @@ class OpusPrimusImages {
 	 * @param bool $use_portrait
 	 *
 	 * @return string
+	 *
+	 * @version 1.3.3
+	 * @date    March 3, 2015
+	 * Added sanity checks to ensure there is actually an image in use.
 	 */
 	function featured_thumbnail_single_view( $use_portrait = true ) {
 
@@ -967,10 +971,14 @@ class OpusPrimusImages {
 			$use_portrait = true;
 		}
 
-		if ( $use_portrait && ( $featured_image_metadata['height'] > $featured_image_metadata['width'] ) ) {
-			return $this->featured_thumbnail( $size = 'full', $class = 'alignleft' );
+		if ( isset( $featured_image_metadata['height'] ) && isset( $featured_image_metadata['width'] ) ) {
+			if ( $use_portrait && ( $featured_image_metadata['height'] > $featured_image_metadata['width'] ) ) {
+				return $this->featured_thumbnail( $size = 'full', $class = 'alignleft' );
+			} else {
+				return $this->featured_thumbnail( $size = 'full', $class = 'aligncenter' );
+			}
 		} else {
-			return $this->featured_thumbnail( $size = 'full', $class = 'aligncenter' );
+			return null;
 		}
 
 	}
