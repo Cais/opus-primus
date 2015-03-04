@@ -50,14 +50,14 @@ locate_template( 'opus-primus-ignite.php', true, true );
  * Returns a filtered version of the theme version number to be used with
  * JavaScript and Style Sheet enqueue statements.
  *
- * @package             Opus_Primus
- * @since               1.2.4
+ * @package Opus_Primus
+ * @since   1.2.4
  *
- * @uses                (GLOBAL) $wp_version
- * @uses                apply_filters
- * @uses                wp_get_theme
+ * @uses    (GLOBAL) $wp_version
+ * @uses    apply_filters
+ * @uses    wp_get_theme
  *
- * @return string
+ * @return  string
  */
 function opus_primus_theme_version() {
 
@@ -109,23 +109,19 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 
 		/** Enqueue FitVids - improves responsiveness of videos */
 		wp_enqueue_script( 'FitVids', $opus_router->path_uri( 'lib' ) . 'FitVids/jquery.fitvids.js', array( 'jquery' ), '1.1', true );
-		wp_enqueue_script(
-			'opus-primus-fitvids-init', $opus_router->path_uri( 'lib' ) . 'opus-primus-fitvids-init.js', array(
+		wp_enqueue_script( 'opus-primus-fitvids-init', $opus_router->path_uri( 'lib' ) . 'opus-primus-fitvids-init.js', array(
 			'jquery',
 			'FitVids'
-		), opus_primus_theme_version(), true
-		);
+		), opus_primus_theme_version(), true );
 
 		/** Enqueue Opus Primus Comment Tabs which will enqueue jQuery, jQuery UI Core, jQuery UI Widget, and jQuery UI Tabs as dependencies */
 		if ( is_single() ) {
-			wp_enqueue_script(
-				'opus-primus-comment-tabs', $opus_router->path_uri( 'js' ) . 'opus-primus-comment-tabs.js', array(
+			wp_enqueue_script( 'opus-primus-comment-tabs', $opus_router->path_uri( 'js' ) . 'opus-primus-comment-tabs.js', array(
 				'jquery',
 				'jquery-ui-core',
 				'jquery-ui-widget',
 				'jquery-ui-tabs'
-			), opus_primus_theme_version(), true
-			);
+			), opus_primus_theme_version(), true );
 		}
 
 		/** Enqueue Opus Primus Header Image Position (if there is a header image) which will enqueue jQuery as a dependency */
@@ -162,12 +158,10 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 		/** Enqueue the SlickNav JavaScript with jQuery dependency */
 		wp_enqueue_script( 'SlickNav-JS-main', $opus_router->path_uri( 'lib' ) . 'SlickNav/jquery.slicknav.min.js', array( 'jquery' ), '1.0.1', true );
 		/** Enqueue SlickNav initialization script with jQuery and SlickNav dependencies */
-		wp_enqueue_script(
-			'SlickNav-init', $opus_router->path_uri( 'lib' ) . 'opus-primus-slicknav-init.js', array(
+		wp_enqueue_script( 'SlickNav-init', $opus_router->path_uri( 'lib' ) . 'opus-primus-slicknav-init.js', array(
 			'jquery',
 			'SlickNav-JS-main'
-		), opus_primus_theme_version(), true
-		);
+		), opus_primus_theme_version(), true );
 		/** Enqueue SlickNav mobile layout only styles with SlickNav dependency */
 		wp_enqueue_style( 'SlickNav-layout', $opus_router->path_uri( 'lib' ) . 'opus-primus-slicknav.css', array( 'SlickNav-CSS-main' ), opus_primus_theme_version(), 'screen' );
 
