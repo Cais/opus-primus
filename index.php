@@ -5,8 +5,8 @@
  * A WordPress Framework Theme.
  *
  * @package     OpusPrimus
- * @version     1.3.3
- * @date        March 3, 2015
+ * @version     1.3.4
+ * @date        March 11, 2015
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
  * @copyright   Copyright (c) 2012-2015, Opus Primus
