@@ -1,7 +1,19 @@
 === Opus Primus changelog.txt ===
-Last revised March 11, 2015
+Last revised March 15, 2015
 Please note, the Opus Primus copyright can be found at the end of this file.
 
+= Version 1.4 =
+* Released ...
+
+= Code =
+* Added `widgets` to the HTML5 theme supported items
+
+= CSS =
+* Adjusted CSS to not reference `li` elements in default widget styles
+
+= Miscellaneous =
+
+/** ------------------------------------------------------------------------- */
 = Version 1.3.4 =
 * Released March 2015
 

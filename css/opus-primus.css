@@ -50,6 +50,10 @@
  * Added `=== Screen Reader Text ===` section
  * Added `h5.comments-link` definition to provide a better aesthetic location
  * Added styling to navigation for moving within a single post's pages
+ *
+ * @version	1.3.4
+ * @date	March 15, 2015
+ * Adjusted CSS to not reference `li` elements in default widget styles
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -1435,11 +1439,11 @@ table#wp-calendar tfoot tr td#next {
 }
 
 /** RSS */
-li.widget_rss ul li cite {
+.widget_rss ul li cite {
 	font-style: italic;
 }
 
-li.widget_rss ul li cite:before {
+.widget_rss ul li cite:before {
 	content: '~ ';
 }
 
@@ -1451,21 +1455,21 @@ li.widget_rss ul li cite:before {
 }
 
 /** Tag Cloud */
-li.widget_tag_cloud {
+.widget_tag_cloud {
 	margin: 0 3px;
 }
 
 /** Text Widgets */
-li.widget_text {
+.widget_text {
 	margin: 0 3px;
 	overflow: hidden;
 }
 
-li.widget_text div.textwidget div.wp-caption {
+.widget_text div.textwidget div.wp-caption {
 	margin: 0;
 }
 
-li.widget_text div.textwidget div.wp-caption a img {
+.widget_text div.textwidget div.wp-caption a img {
 	height: auto;
 	width: 98%;
 }

@@ -178,36 +178,35 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 	 * Add theme support for: post-thumbnails, automatic feed links, TinyMCE
 	 * editor style, custom background, post formats
 	 *
-	 * @package          OpusPrimus
-	 * @since            0.1
+	 * @package OpusPrimus
+	 * @since   0.1
 	 *
-	 * @uses             (GLOBAL) $content_width
-	 * @uses             add_editor_style
-	 * @uses             add_theme_support: automatic-feed-links
-	 * @uses             add_theme_support: custom-background
-	 * @uses             add_theme_support: custom-header
-	 * @uses             add_theme_support: html5 (search form, comment form, comment list, caption, gallery)
-	 * @uses             add_theme_support: post-formats
-	 * @uses             add_theme_support: post-thumbnails
-	 * @uses             add_theme_support: title-tag
-	 * @uses             load_theme_textdomain
-	 * @uses             get_locale
-	 * @uses             get_template_directory
-	 * @uses             get_template_directory_uri
-	 * @uses             register_nav_menus
+	 * @uses    (GLOBAL) $content_width
+	 * @uses    add_editor_style
+	 * @uses    add_theme_support: automatic-feed-links
+	 * @uses    add_theme_support: custom-background
+	 * @uses    add_theme_support: custom-header
+	 * @uses    add_theme_support: html5 (search form, comment form, comment list, caption, gallery, widgets)
+	 * @uses    add_theme_support: post-formats
+	 * @uses    add_theme_support: post-thumbnails
+	 * @uses    add_theme_support: title-tag
+	 * @uses    load_theme_textdomain
+	 * @uses    get_locale
+	 * @uses    get_template_directory
+	 * @uses    get_template_directory_uri
+	 * @uses    register_nav_menus
 	 *
-	 * @version          1.2.5
-	 * @date             July 20, 2014
-	 * Added global $content_width
-	 * Moved $content_width definition into theme setup function
-	 *
-	 * @version          1.3
-	 * @date             August 22, 2014
+	 * @version 1.3
+	 * @date    August 22, 2014
 	 * Added WordPress HTML5 markup support
 	 *
-	 * @version          1.3.2
-	 * @date             March 1, 2015
+	 * @version 1.3.2
+	 * @date    March 1, 2015
 	 * Add support for the `<title />` tag via `add_theme_support` function
+	 *
+	 * @version 1.4
+	 * @date    March 15, 2015
+	 * Added `widgets` to the HTML5 theme supported items
 	 */
 	function opus_primus_theme_setup() {
 		/** This theme uses post thumbnails */
@@ -269,7 +268,8 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 			'comment-form',
 			'comment-list',
 			'caption',
-			'gallery'
+			'gallery',
+			'widgets'
 		);
 		add_theme_support( 'html5', $html_items );
 
