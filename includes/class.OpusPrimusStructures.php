@@ -56,8 +56,10 @@ class OpusPrimusStructures {
 	 * Moved `support_comment` method to `functions.php` to eliminate duplicate output, commented out action hook
 	 */
 	function __construct() {
+
 		/** Restructure the browser title */
 		add_filter( 'wp_title', array( $this, 'browser_title' ), 10, 3 );
+
 		/** Add classes to the body tag */
 		add_filter( 'body_class', array( $this, 'body_classes' ) );
 
@@ -78,27 +80,27 @@ class OpusPrimusStructures {
 	 *
 	 * Utilizes the `wp_title` filter to add text to the default output
 	 *
-	 * @package          OpusPrimus
-	 * @since            0.1
+	 * @package     OpusPrimus
+	 * @since       0.1
 	 *
-	 * @internal         Originally author by Edward Caissie
-	 * @link             https://gist.github.com/1410493
+	 * @internal    Originally author by Edward Caissie
+	 * @link        https://gist.github.com/1410493
 	 *
-	 * @param       string $old_title - default title text
-	 * @param       string $sep       - separator character
+	 * @param   string $old_title - default title text
+	 * @param   string $sep       - separator character
 	 *
-	 * @uses             (GLOBAL) $page
-	 * @uses             (GLOBAL) $paged
-	 * @uses             apply_filters
-	 * @uses             get_bloginfo - name, description
-	 * @uses             is_home
-	 * @uses             is_feed
-	 * @uses             is_front_page
+	 * @uses        (GLOBAL) $page
+	 * @uses        (GLOBAL) $paged
+	 * @uses        apply_filters
+	 * @uses        get_bloginfo - name, description
+	 * @uses        is_home
+	 * @uses        is_feed
+	 * @uses        is_front_page
 	 *
-	 * @return      string - original title|new title
+	 * @return  string - original title|new title
 	 *
-	 * @version          1.2.3
-	 * @date             November 26, 2013
+	 * @version     1.2.3
+	 * @date        November 26, 2013
 	 * Removed $sep_location parameter as it was not used
 	 */
 	function browser_title( $old_title, $sep ) {
@@ -109,7 +111,6 @@ class OpusPrimusStructures {
 		if ( is_feed() ) {
 			return $old_title;
 		}
-		/** End if - is feed */
 
 		/** Set initial title text */
 		$opus_title_text = $old_title . get_bloginfo( 'name' );
@@ -121,18 +122,15 @@ class OpusPrimusStructures {
 		if ( $site_tagline && ( is_home() || is_front_page() ) ) {
 			$opus_title_text .= "$sep$site_tagline";
 		}
-		/** End if - site tagline */
 
 		/** Add a page number if necessary */
 		if ( $paged >= 2 || $page >= 2 ) {
 			$opus_title_text .= $sep . sprintf( __( 'Page %s', 'opus-primus' ), max( $paged, $page ) );
 		}
 
-		/** End if - paged */
-
 		return apply_filters( 'opus_browser_title', $opus_title_text );
 
-	} /** End function - browser title */
+	}
 
 
 	/**
@@ -140,23 +138,23 @@ class OpusPrimusStructures {
 	 *
 	 * A collection of classes added to the HTML body tag for various purposes
 	 *
-	 * @package          OpusPrimus
-	 * @since            0.1
+	 * @package OpusPrimus
+	 * @since   0.1
 	 *
-	 * @param   $classes - existing body classes
+	 * @param   array $classes - existing body classes
 	 *
-	 * @uses             apply_filters
-	 * @uses             is_active_sidebar
-	 * @uses             is_child_theme
+	 * @uses    apply_filters
+	 * @uses    is_active_sidebar
+	 * @uses    is_child_theme
 	 *
 	 * @return  string - specific class based on active columns
 	 *
-	 * @version          1.2
-	 * @date             April 9, 2013
+	 * @version 1.2
+	 * @date    April 9, 2013
 	 * Added sanity conditional check to eliminate potential duplicate classes
 	 *
-	 * @version          1.3
-	 * @date             September 20, 2014
+	 * @version 1.3
+	 * @date    September 20, 2014
 	 * Added Child-Theme "slug" for easier customizations
 	 */
 	function body_classes( $classes ) {
@@ -165,7 +163,6 @@ class OpusPrimusStructures {
 		if ( ! ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) || is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
 			$classes[] = 'one-column';
 		}
-		/** End if - not is active sidebar */
 
 		/** Test if the first-sidebar or second-sidebar is active by testing their component widget areas for a two column layout */
 		if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
@@ -179,13 +176,11 @@ class OpusPrimusStructures {
 		) {
 			$classes[] = 'two-column';
 		}
-		/** End if - is active sidebar */
 
 		/** Test if at least one widget area in each sidebar area is active for a three-column layout */
 		if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) ) && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
 			$classes[] = 'three-column';
 		}
-		/** End if - is active sidebar */
 
 		/**
 		 * Sanity check to reduce duplicate body classes - use BNS Body Classes
@@ -193,6 +188,7 @@ class OpusPrimusStructures {
 		 * plugin.
 		 */
 		if ( ! class_exists( 'BNS_Body_Classes' ) ) {
+
 			/** Current Date Classes */
 			/** Year */
 			$current_year = date( 'Y' );
@@ -201,7 +197,6 @@ class OpusPrimusStructures {
 			if ( '1' == $leap_year ) {
 				$classes[] = 'leap-year';
 			}
-			/** End if - leap year */
 
 			/** Month */
 			$current_month_numeric = date( 'm' );
@@ -224,21 +219,19 @@ class OpusPrimusStructures {
 			$classes[]       = 'hour-' . $current_24_hour;
 			$current_12_hour = date( 'ha' );
 			$classes[]       = 'hour-' . $current_12_hour;
-		}
 
-		/** End if - not class exists */
+		}
 
 		/** Add Child-Theme "slug" for easier customizations */
 		if ( is_child_theme() ) {
 			$classes[] = sanitize_html_class( get_option( 'stylesheet' ) );
 		}
-		/** End if - is child theme */
 
 		/** Return the classes for use with the `body_class` filter */
 
 		return apply_filters( 'opus_body_classes', $classes );
 
-	} /** End function - body classes */
+	}
 
 
 	/**
@@ -253,7 +246,7 @@ class OpusPrimusStructures {
 	 */
 	function show_bust_image() {
 		echo $this->bust_image();
-	} /** End function - show bust image */
+	}
 
 
 	/**
@@ -284,7 +277,7 @@ class OpusPrimusStructures {
 
 		echo $comment;
 
-	} /** End function - support comment */
+	}
 
 
 	/** ---- Additional Methods ---- */
@@ -313,7 +306,7 @@ class OpusPrimusStructures {
 
 		return '<img src="' . $bust_image_location . '" />';
 
-	} /** End function - bust image */
+	}
 
 
 	/**
@@ -358,7 +351,6 @@ class OpusPrimusStructures {
 		if ( false == $show ) {
 			return null;
 		}
-		/** End if - show */
 
 		/** @var $output - initialize output variable to empty */
 		$output = '';
@@ -383,7 +375,6 @@ class OpusPrimusStructures {
 		if ( $first_post_year == '' ) {
 			$first_post_year = date( 'Y' );
 		}
-		/** End if - first post year */
 
 		/**
 		 * If this is a single view then the copyright year should start at its
@@ -393,7 +384,6 @@ class OpusPrimusStructures {
 			global $post;
 			$first_post_year = substr( $post->post_date, 0, 4 );
 		}
-		/** End if - single view display */
 
 		/** Add to output string */
 		if ( $first_post_year == date( 'Y' ) ) {
@@ -402,7 +392,6 @@ class OpusPrimusStructures {
 		} else {
 			$output .= sprintf( __( 'Copyright &copy; %1$s-%2$s', 'opus-primus' ), $first_post_year, date( 'Y' ) );
 		}
-		/** End if - first post year */
 
 		/**
 		 * Append content owner.
@@ -410,21 +399,24 @@ class OpusPrimusStructures {
 		 * single and page views.
 		 */
 		if ( ( is_single() || is_page() ) && $by_author ) {
+
 			global $post;
 			$author     = get_the_author_meta( 'display_name', $post->post_author );
 			$author_url = get_the_author_meta( 'user_url', $post->post_author );
 			$output .= ' <a href="' . $author_url . '" title="' . esc_attr( sprintf( __( 'To the web site of %1$s', 'opus-primus' ), $author ) ) . '" rel="author">' . $author . '</a>';
+
 		} else {
+
 			$output .= ' <a href="' . home_url( '/' ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" rel="home">' . get_bloginfo( 'name', 'display' ) . '</a>';
+
 		}
-		/** End if - is single */
 
 		/** Append usage terms */
 		$output .= ' ' . __( 'All Rights Reserved.', 'opus-primus' );
 
 		return apply_filters( 'opus_copyright', $output );
 
-	} /** End function - copyright */
+	}
 
 
 	/**
@@ -451,10 +443,10 @@ class OpusPrimusStructures {
 	 * @return  mixed|void - theme credits with links|filtered credits
 	 */
 	function credits( $show = true ) {
+
 		if ( false == $show ) {
 			return null;
 		}
-		/** End if - show */
 
 		/** @var $active_theme_data - save the theme date for later use */
 		$active_theme_data = wp_get_theme();
@@ -479,11 +471,9 @@ class OpusPrimusStructures {
 			);
 		}
 
-		/** End if - is child theme */
-
 		return apply_filters( 'opus_credits', $credits );
 
-	} /** End function - credits */
+	}
 
 
 	/**
@@ -499,6 +489,7 @@ class OpusPrimusStructures {
 	 * @return      string
 	 */
 	function layout_close() {
+
 		/** @var $layout - initialize variable as empty */
 		$layout = '';
 
@@ -506,7 +497,6 @@ class OpusPrimusStructures {
 		if ( ! ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) || is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
 			$layout = '</div><!-- .column-mask .full-page -->';
 		}
-		/** End if - not is active sidebar */
 
 		/** Test if the first-sidebar or second-sidebar is active by testing their component widget areas for a two column layout */
 		if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
@@ -520,18 +510,15 @@ class OpusPrimusStructures {
 		) {
 			$layout = '</div><!-- .column-mask .right-sidebar --></div><!--.column-left -->';
 		}
-		/** End if - is active sidebar */
 
 		/** Test if at least one widget area in each sidebar area is active for a three-column layout */
 		if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) ) && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
 			$layout = '</div><!-- .column-mask .blog-style --></div><!-- .column-middle --></div><!-- .column-left -->';
 		}
 
-		/** End if - is active sidebar */
-
 		return $layout;
 
-	} /** End function - layout close */
+	}
 
 
 	/**
@@ -551,6 +538,7 @@ class OpusPrimusStructures {
 	 * Remove $content_width set values - see 'functions.php' for $content_width
 	 */
 	function layout_open() {
+
 		/** @var $layout - initialize variable as empty */
 		$layout = '';
 
@@ -558,7 +546,6 @@ class OpusPrimusStructures {
 		if ( ! ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) || is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
 			$layout = '<div class="column-mask full-page">';
 		}
-		/** End if - not is active sidebar */
 
 		/** Test if the first-sidebar or second-sidebar is active by testing their component widget areas for a two column layout */
 		if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) )
@@ -572,18 +559,15 @@ class OpusPrimusStructures {
 		) {
 			$layout = '<div class="column-mask right-sidebar"><div class="column-left">';
 		}
-		/** End if - is active sidebar */
 
 		/** Test if at least one widget area in each sidebar area is active for a three-column layout */
 		if ( ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) ) && ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
 			$layout = '<div class="column-mask blog-style"><div class="column-middle"><div class="column-left">';
 		}
 
-		/** End if - is active sidebar */
-
 		return $layout;
 
-	} /** End function - layout open */
+	}
 
 
 	/**
@@ -605,6 +589,7 @@ class OpusPrimusStructures {
 	 * @uses    get_search_query
 	 */
 	function no_search_results() {
+
 		/** Add empty hook before no posts results from the_loop query */
 		do_action( 'opus_search_results_before' );
 
@@ -673,7 +658,7 @@ class OpusPrimusStructures {
 		/** Add empty hook after no posts results from the_loop query */
 		do_action( 'opus_search_results_after' );
 
-	} /** End function - no search results */
+	}
 
 
 	/**
@@ -694,6 +679,7 @@ class OpusPrimusStructures {
 	 * Replaced all instances with `sanitize_html_class`
 	 */
 	function replace_spaces( $text, $replacement = '-' ) {
+
 		/** @var $new_text - initial text set to lower case */
 		$new_text = esc_attr( strtolower( $text ) );
 		/** replace whitespace with a single space */
@@ -705,7 +691,7 @@ class OpusPrimusStructures {
 
 		return $new_text;
 
-	} /** End function - replace spaces */
+	}
 
 
 	/**
@@ -729,12 +715,14 @@ class OpusPrimusStructures {
 	 * Added post to post navigation in single view
 	 */
 	function the_loop() {
-		/** Create OpusPrimusNavigation class object */
+
 		$opus_navigation = new OpusPrimusNavigation();
 
 		/** the_Loop begins */
 		if ( have_posts() ) {
+
 			while ( have_posts() ) {
+
 				the_post();
 
 				/** Add empty hook before get_template_part */
@@ -749,20 +737,20 @@ class OpusPrimusStructures {
 				if ( is_single() ) {
 					$opus_navigation->post_link();
 				}
-				/** End if - is single */
 
 			}
-			/** End while - have posts */
+
 		} else {
+
 			$this->no_search_results();
+
 		}
-		/** End if - have posts */
 
 		/** Display links to previous and next pages */
 		$opus_navigation->pagination_wrapped();
 		/** the_Loop ends */
 
-	} /** End function - the loop */
+	}
 
 
 	/**
@@ -786,9 +774,12 @@ class OpusPrimusStructures {
 	 * Changed navigation method from `posts_link` to `pagination_wrapped`
 	 */
 	function the_loop_archives() {
+
 		/** the_Loop begins */
 		if ( have_posts() ) {
+
 			while ( have_posts() ) {
+
 				the_post();
 
 				/** Add empty hook before get_template_part */
@@ -800,11 +791,12 @@ class OpusPrimusStructures {
 				do_action( 'opus_get_template_part_after' );
 
 			}
-			/** End while - have posts */
+
 		} else {
+
 			$this->no_search_results();
+
 		}
-		/** End if - have posts */
 
 		$opus_navigation = new OpusPrimusNavigation();
 		$opus_navigation->pagination_wrapped();
@@ -852,7 +844,7 @@ class OpusPrimusStructures {
 		/** Add empty action after the_Loop */
 		do_action( 'opus_the_loop_after' );
 
-	} /** End function - the loop wrapped */
+	}
 
 
 	/**
@@ -870,6 +862,7 @@ class OpusPrimusStructures {
 	 * @uses    is_active_sidebar
 	 */
 	function the_loop_archives_wrapped() {
+
 		/** Add empty action before the_Loop */
 		do_action( 'opus_the_loop_before' ); ?>
 
@@ -896,12 +889,9 @@ class OpusPrimusStructures {
 		do_action( 'opus_the_loop_after' );
 
 	}
-	/** End function - the loop archives wrapped */
 
 
 }
-
-/** End class - opus primus structures */
 
 /** ------------------------------------------------------------------------- */
 /** Testing ... testing ... testing ... */
