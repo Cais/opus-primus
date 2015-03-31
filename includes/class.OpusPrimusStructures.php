@@ -280,9 +280,6 @@ class OpusPrimusStructures {
 	}
 
 
-	/** ---- Additional Methods ---- */
-
-
 	/**
 	 * Bust Image
 	 *
