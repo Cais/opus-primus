@@ -11,6 +11,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Change `OpusPrimusComments` to a singleton style class
 * Ensure `$pagination` has been initialized in `OpusPrimusNavigation::pagination` method
 * Moved the `support_comment` method back into the `OpusPrimusStructures` class
+* Moved the `before_comment_form` and `comments_form_closed` methods back into the `OpusPrimusComments` class
 * Removed `$screen` parameter as not necessary in Taglines Stanza
 
 = CSS =

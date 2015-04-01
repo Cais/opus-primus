@@ -49,6 +49,7 @@
  * @version     1.4
  * @date        March 31, 2015
  * Change `OpusPrimusComments` to a singleton style class
+ * Returned `before_comment_form` and `comments_form_closed` methods
  */
 class OpusPrimusComments {
 
@@ -92,8 +93,8 @@ class OpusPrimusComments {
 			'enqueue_comment_reply'
 		) );
 
-		// add_action( 'comment_form_before', array( $this, 'before_comment_form' ) );
-		// add_action( 'comment_form_comments_closed', array( $this, 'comments_form_closed' ) );
+		add_action( 'comment_form_before', array( $this, 'before_comment_form' ) );
+		add_action( 'comment_form_comments_closed', array( $this, 'comments_form_closed' ) );
 
 		/** Add comment actions - wrap comment fields in unordered list */
 		add_action(
