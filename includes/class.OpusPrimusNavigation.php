@@ -280,8 +280,14 @@ class OpusPrimusNavigation {
 	 * @version     1.3.1
 	 * @date        January 18, 2015
 	 * Changed to use `get_the_posts_pagination`
+	 *
+	 * @version 1.4
+	 * @date    March 31, 2015
+	 * Ensure `$pagination` has been initialized
 	 */
 	function pagination() {
+
+		$pagination = null;
 
 		/** get the current query object */
 		global $wp_query;
