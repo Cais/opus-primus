@@ -71,12 +71,7 @@ class OpusPrimusTagLines {
 		add_action( 'opus_post_title_after', array( $this, 'tagline_output' ) );
 
 		/** Set Opus Primus Tagline stanza off by default */
-		add_filter(
-			'default_hidden_meta_boxes', array(
-			$this,
-			'default_screen_option'
-		), 10, 2
-		);
+		add_filter( 'default_hidden_meta_boxes', array( $this, 'default_screen_option' ) );
 
 	} /** End function - construct */
 
@@ -269,11 +264,14 @@ class OpusPrimusTagLines {
 	 * @since         1.2.5
 	 *
 	 * @param $hidden
-	 * @param $screen
 	 *
 	 * @return array
+	 *
+	 * @version 1.4
+	 * @date    March 31, 2015
+	 * Removed `$screen` parameter as not necessary
 	 */
-	function default_screen_option( $hidden, $screen ) {
+	function default_screen_option( $hidden ) {
 
 		/** Add `opus_tagline` to default hidden screen options array */
 		$hidden[] = 'opus_tagline';

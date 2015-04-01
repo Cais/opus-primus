@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised March 22, 2015
+Last revised March 31, 2015
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Version 1.4 =
@@ -10,6 +10,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Change `OpusPrimusStructures` to a singleton style class
 * Change `OpusPrimusComments` to a singleton style class
 * Moved the `support_comment` method back into the `OpusPrimusStructures` class
+* Removed `$screen` parameter as not necessary in Taglines Stanza
 
 = CSS =
 * Adjusted CSS to not reference `li` elements in default widget styles
