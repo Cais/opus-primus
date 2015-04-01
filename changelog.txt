@@ -7,6 +7,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Code =
 * Added `widgets` to the HTML5 theme supported items
+* Change `OpusPrimusStructures` to a singleton style class
 
 = CSS =
 * Adjusted CSS to not reference `li` elements in default widget styles

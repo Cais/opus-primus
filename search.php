@@ -39,7 +39,7 @@
  */
 
 /** Create OpusPrimusStructures class object */
-$opus_structures = new OpusPrimusStructures();
+$opus_structures = OpusPrimusStructures::create_instance();
 
 get_header( 'search' );
 

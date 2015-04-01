@@ -37,7 +37,7 @@
  */
 
 /** Create OpusPrimusStructures class object */
-$opus_structures = new OpusPrimusStructures();
+$opus_structures = OpusPrimusStructures::create_instance();
 
 /** @var $current_author - current author data an as object */
 $current_author = ( get_query_var( 'author_name ' ) ) ? get_user_by( 'id', get_query_var( 'author_name' ) ) : get_userdata( get_query_var( 'author' ) );

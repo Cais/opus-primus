@@ -43,7 +43,7 @@ global $post;
 
 /** Create class objects */
 $opus_navigation = new OpusPrimusNavigation();
-$opus_structures = new OpusPrimusStructures();
+$opus_structures = OpusPrimusStructures::create_instance();
 $opus_posts      = new OpusPrimusPosts();
 $opus_images     = new OpusPrimusImages();
 

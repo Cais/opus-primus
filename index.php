@@ -5,8 +5,8 @@
  * A WordPress Framework Theme.
  *
  * @package     OpusPrimus
- * @version     1.3.4
- * @date        March 11, 2015
+ * @version     1.4
+ * @date        March 31, 2015
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
  * @copyright   Copyright (c) 2012-2015, Opus Primus
@@ -34,7 +34,7 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-$opus_structures = new OpusPrimusStructures();
+$opus_structures = OpusPrimusStructures::create_instance();
 
 get_header();
 

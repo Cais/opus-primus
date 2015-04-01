@@ -42,6 +42,30 @@
  * Added more tests
  */
 class OpusPrimusStructures {
+
+	private static $instance = null;
+
+	/**
+	 * Create Instance
+	 *
+	 * Creates a single instance of the class
+	 *
+	 * @since 1.4
+	 * @date    March 31, 2015
+	 *
+	 * @return null|OpusPrimusStructures
+	 */
+	public static function create_instance() {
+
+		if ( is_null( self::$instance ) ) {
+			self::$instance = new self();
+		}
+
+		return self::$instance;
+
+	}
+
+
 	/**
 	 * Construct
 	 *
@@ -67,12 +91,9 @@ class OpusPrimusStructures {
 		add_action( 'opus_404_image', array( $this, 'show_bust_image' ) );
 
 		/** Add Support Comment to footer area */
-		/** add_action( 'wp_footer', array( $this, 'support_comment' ) ); */
+		add_action( 'wp_footer', array( $this, 'support_comment' ) );
 
-	} /** End function - construct */
-
-
-	/** ---- Action and Filter Methods ---- */
+	}
 
 
 	/**

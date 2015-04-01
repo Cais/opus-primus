@@ -499,4 +499,4 @@ function opus_primus_support_comment() {
 }
 
 /** End function - support comment */
-add_action( 'wp_footer', 'opus_primus_support_comment' );
+// add_action( 'wp_footer', 'opus_primus_support_comment' );
