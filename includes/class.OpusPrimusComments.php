@@ -45,8 +45,36 @@
  * @date        March 31, 2013
  * Added filtered `comment_form_required_field_glyph` method for comment fields
  * Change comment fields into an unordered list
+ *
+ * @version     1.4
+ * @date        March 31, 2015
+ * Change `OpusPrimusComments` to a singleton style class
  */
 class OpusPrimusComments {
+
+	private static $instance = null;
+
+	/**
+	 * Create Instance
+	 *
+	 * Creates a single instance of the class
+	 *
+	 * @since   1.4
+	 * @date    March 31, 2015
+	 *
+	 * @return null|OpusPrimusComments
+	 */
+	public static function create_instance() {
+
+		if ( is_null( self::$instance ) ) {
+			self::$instance = new self();
+		}
+
+		return self::$instance;
+
+	}
+
+
 	/**
 	 * Constructor
 	 *

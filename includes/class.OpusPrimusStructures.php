@@ -33,13 +33,13 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version     1.2
- * @date        April 9, 2013
- * Added new test function `opus_number`
- *
  * @version     1.2.3
  * @date        February 2, 2014
  * Added more tests
+ *
+ * @version     1.4
+ * @date        March 31, 2015
+ * Change `OpusPrimusStructures` to a singleton style class
  */
 class OpusPrimusStructures {
 
@@ -50,7 +50,7 @@ class OpusPrimusStructures {
 	 *
 	 * Creates a single instance of the class
 	 *
-	 * @since 1.4
+	 * @since   1.4
 	 * @date    March 31, 2015
 	 *
 	 * @return null|OpusPrimusStructures
@@ -256,21 +256,6 @@ class OpusPrimusStructures {
 
 
 	/**
-	 * Show Bust Image
-	 *
-	 * Writes the bust image url to the screen
-	 *
-	 * @package OpusPrimus
-	 * @since   0.1
-	 *
-	 * @uses    OpusPrimusStructures::bust_image
-	 */
-	function show_bust_image() {
-		echo $this->bust_image();
-	}
-
-
-	/**
 	 * Support Comment
 	 *
 	 * Writes an HTML comment with the theme version meant to be used as a
@@ -324,6 +309,21 @@ class OpusPrimusStructures {
 
 		return '<img src="' . $bust_image_location . '" />';
 
+	}
+
+
+	/**
+	 * Show Bust Image
+	 *
+	 * Writes the bust image url to the screen
+	 *
+	 * @package OpusPrimus
+	 * @since   0.1
+	 *
+	 * @uses    OpusPrimusStructures::bust_image
+	 */
+	function show_bust_image() {
+		echo $this->bust_image();
 	}
 
 

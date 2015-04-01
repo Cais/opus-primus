@@ -49,7 +49,7 @@
  */
 
 /** Create OpusPrimusComments class object */
-$opus_comments = new OpusPrimusComments(); ?>
+$opus_comments = OpusPrimusComments::create_instance(); ?>
 
 <!-- Show the comments -->
 <!-- Inspired by http://digwp.com/2010/02/separate-comments-pingbacks-trackbacks/ -->
