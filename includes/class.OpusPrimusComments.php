@@ -93,8 +93,14 @@ class OpusPrimusComments {
 			'enqueue_comment_reply'
 		) );
 
-		add_action( 'comment_form_before', array( $this, 'before_comment_form' ) );
-		add_action( 'comment_form_comments_closed', array( $this, 'comments_form_closed' ) );
+		add_action( 'comment_form_before', array(
+			$this,
+			'before_comment_form'
+		) );
+		add_action( 'comment_form_comments_closed', array(
+			$this,
+			'comments_form_closed'
+		) );
 
 		/** Add comment actions - wrap comment fields in unordered list */
 		add_action(
@@ -125,10 +131,6 @@ class OpusPrimusComments {
 		) );
 
 	}
-	/** End function - construct */
-
-
-	/** ---- Action and Filter Methods ---- */
 
 
 	/**
@@ -147,13 +149,12 @@ class OpusPrimusComments {
 	 * @uses    wp_enqueue_script
 	 */
 	function enqueue_comment_reply() {
+
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
-		/** End if - is singular */
 
 	}
-	/** End function - enqueue comment reply */
 
 
 	/**
@@ -184,7 +185,6 @@ class OpusPrimusComments {
 
 			return;
 		}
-		/** End if - post password required */
 
 		/** If comments are open, but there are no comments. */
 		if ( ! have_comments() ) {
@@ -194,10 +194,8 @@ class OpusPrimusComments {
 				'</span>'
 			);
 		}
-		/** End if - not have comments */
 
 	}
-	/** End function - before comment form */
 
 
 	/**
@@ -214,11 +212,12 @@ class OpusPrimusComments {
 	 * @return  mixed|void - default glyph - asterisk (*)
 	 */
 	function comment_form_required_field_glyph() {
+
 		$glyph = apply_filters( 'opus_comment_form_required_field_glyph', __( '*', 'opus-primus' ) );
 
 		return $glyph;
+
 	}
-	/** End function - required fields glyph */
 
 
 	/**
@@ -240,13 +239,14 @@ class OpusPrimusComments {
 	 * @return  mixed
 	 */
 	function change_comment_form_required_field_glyph( $defaults ) {
+
 		$defaults['fields']['author']     = str_replace( '*', $this->comment_form_required_field_glyph(), $defaults['fields']['author'] );
 		$defaults['fields']['email']      = str_replace( '*', $this->comment_form_required_field_glyph(), $defaults['fields']['email'] );
 		$defaults['comment_notes_before'] = str_replace( '*', $this->comment_form_required_field_glyph(), $defaults['comment_notes_before'] );
 
 		return $defaults;
+
 	}
-	/** End function - change required fields glyph */
 
 
 	/**
@@ -262,17 +262,18 @@ class OpusPrimusComments {
 	 * @uses     is_page
 	 */
 	function comments_form_closed() {
+
 		if ( ! is_page() ) {
+
 			printf(
 				'<span class="comments-closed-message">' .
 				apply_filters( 'opus_comments_form_closed', __( 'New comments are not being accepted at this time, please feel free to contact the post author directly.', 'opus-primus' ) ) .
 				'</span>'
 			);
+
 		}
-		/** End if - not is page */
 
 	}
-	/** End function - comments form closed */
 
 
 	/**
@@ -291,7 +292,9 @@ class OpusPrimusComments {
 	 * @return  array $classes - original array plus additional role and user-id
 	 */
 	function comment_author_class( $classes ) {
+
 		global $comment;
+
 		/** Add classes based on user role */
 		if ( user_can( $comment->user_id, 'administrator' ) ) {
 			$classes[] = 'administrator';
@@ -304,7 +307,6 @@ class OpusPrimusComments {
 		} else {
 			$classes[] = 'guest';
 		}
-		/** End if - user can */
 
 		/** Add user ID based classes */
 		if ( $comment->user_id == 1 ) {
@@ -314,13 +316,12 @@ class OpusPrimusComments {
 			/** All other users - NB: user-id-0 -> non-registered user */
 			$userid = "user-id-" . ( $comment->user_id );
 		}
-		/** End if - user id */
+
 		$classes[] = $userid;
 
 		return $classes;
 
 	}
-	/** End function - comment author class */
 
 
 	/**
@@ -336,6 +337,7 @@ class OpusPrimusComments {
 	 * @return  array
 	 */
 	function comment_fields_as_list_items() {
+
 		$commenter = wp_get_current_commenter();
 		$req       = get_option( 'require_name_email' );
 		$aria_req  = ( $req ? " aria-required='true'" : '' );
@@ -352,7 +354,6 @@ class OpusPrimusComments {
 		return $fields;
 
 	}
-	/** End function - comment fields as list items */
 
 
 	/**
@@ -368,7 +369,6 @@ class OpusPrimusComments {
 	function comment_fields_wrapper_start() {
 		echo '<ul id="comment-fields-listed-wrapper">';
 	}
-	/** End function - comment fields wrapper start */
 
 
 	/**
@@ -384,10 +384,6 @@ class OpusPrimusComments {
 	function comment_fields_wrapper_end() {
 		echo '</ul><!-- #comment-fields-listed-wrapper -->';
 	}
-	/** End function - comment fields wrapper end */
-
-
-	/** ---- Additional Methods ---- */
 
 
 	/**
@@ -425,7 +421,9 @@ class OpusPrimusComments {
 			echo '<h5 class="comments-link">';
 
 			if ( ! post_password_required() && comments_open() ) {
+
 				if ( is_page() ) {
+
 					comments_popup_link(
 						__( 'There are no comments for this page.', 'opus-primus' ),
 						__( 'There is 1 comment.', 'opus-primus' ),
@@ -433,7 +431,9 @@ class OpusPrimusComments {
 						'comments-link',
 						''
 					);
+
 				} else {
+
 					comments_popup_link(
 						__( 'There are no comments for this post.', 'opus-primus' ),
 						__( 'There is 1 comment.', 'opus-primus' ),
@@ -441,12 +441,13 @@ class OpusPrimusComments {
 						'comments-link',
 						__( 'Comments are closed.', 'opus-primus' )
 					);
+
 				}
-				/** End if - is page */
+
 			}
-			/** End if - not password required; comments open */
 
 			if ( ! post_password_required() && ! comments_open() && ( get_comments_number() > 0 ) ) {
+
 				comments_popup_link(
 					__( 'There are no comments for this post and comments are closed.', 'opus-primus' ),
 					__( 'There is 1 comment and comments are closed.', 'opus-primus' ),
@@ -454,8 +455,8 @@ class OpusPrimusComments {
 					'comments-link',
 					__( 'There are no comments and comments are closed.', 'opus-primus' )
 				);
+
 			}
-			/** End if - not password required; comments closed; comments exist */
 
 			echo '</h5><!-- .comments-link -->';
 
@@ -463,10 +464,8 @@ class OpusPrimusComments {
 			do_action( 'opus_comments_link_after' );
 
 		}
-		/** End if - is not single */
 
 	}
-	/** End function - comments link */
 
 
 	/**
@@ -481,6 +480,7 @@ class OpusPrimusComments {
 	 * @uses    comments_template
 	 */
 	function wrapped_comments_template() {
+
 		/** Add empty hook before comments */
 		do_action( 'opus_comments_before' );
 
@@ -490,7 +490,6 @@ class OpusPrimusComments {
 		do_action( 'opus_comments_after' );
 
 	}
-	/** End function - wrapped comments template */
 
 
 	/**
@@ -506,10 +505,12 @@ class OpusPrimusComments {
 	 * @uses    _n
 	 */
 	function comments_only_tab() {
+
 		global $wp_query;
+
 		$comments_only = $wp_query->comments_by_type['comment'];
-		if ( ! empty( $comments_only ) ) {
-			?>
+
+		if ( ! empty( $comments_only ) ) { ?>
 
 			<li id="comments-only-tab">
 				<a href="#comments-only">
@@ -527,11 +528,9 @@ class OpusPrimusComments {
 				</a>
 			</li><!-- #comments-only-tab -->
 
-		<?php
-		}
-		/** End if - comments by type - comment */
+		<?php }
+
 	}
-	/** End function - comments only tab */
 
 
 	/**
@@ -547,10 +546,12 @@ class OpusPrimusComments {
 	 * @uses    _n
 	 */
 	function pingbacks_only_tab() {
+
 		global $wp_query;
+
 		$pingbacks_only = $wp_query->comments_by_type['pingback'];
-		if ( ! empty( $pingbacks_only ) ) {
-			?>
+
+		if ( ! empty( $pingbacks_only ) ) { ?>
 
 			<li id="pingbacks-only-tab">
 				<a href="#pingbacks-only">
@@ -568,11 +569,9 @@ class OpusPrimusComments {
 				</a>
 			</li><!-- #pingbacks-only-tab -->
 
-		<?php
-		}
-		/** End if - pingbacks only */
+		<?php }
+
 	}
-	/** End function - pingbacks only tab */
 
 
 	/**
@@ -588,10 +587,12 @@ class OpusPrimusComments {
 	 * @uses    _n
 	 */
 	function trackbacks_only_tab() {
+
 		global $wp_query;
+
 		$trackbacks_only = $wp_query->comments_by_type['trackback'];
-		if ( ! empty( $trackbacks_only ) ) {
-			?>
+
+		if ( ! empty( $trackbacks_only ) ) { ?>
 
 			<li id="trackbacks-only-tab">
 				<a href="#trackbacks-only">
@@ -609,11 +610,9 @@ class OpusPrimusComments {
 				</a>
 			</li><!-- #trackbacks-only-tab -->
 
-		<?php
-		}
-		/** End if - trackbacks only */
+		<?php }
+
 	}
-	/** End function - trackbacks only tab */
 
 
 	/**
@@ -630,10 +629,12 @@ class OpusPrimusComments {
 	 * @uses    wp_list_comments
 	 */
 	function comments_only_panel() {
+
 		global $wp_query;
+
 		$comments_only = $wp_query->comments_by_type['comment'];
-		if ( ! empty( $comments_only ) ) {
-			?>
+
+		if ( ! empty( $comments_only ) ) { ?>
 
 			<div id="comments-only">
 				<ul class="comments-list">
@@ -644,16 +645,12 @@ class OpusPrimusComments {
 				if ( get_option( 'comments_per_page' ) < count( $comments_only ) ) {
 					$opus_navigation = new OpusPrimusNavigation();
 					$opus_navigation->comments_navigation();
-				} /** End if - comments count */
-				?>
+				} ?>
 			</div><!-- #comments-only -->
 
-		<?php
-		}
-		/** End if - not empty - comments */
+		<?php }
 
 	}
-	/** End function - comments only panel */
 
 
 	/**
@@ -670,10 +667,12 @@ class OpusPrimusComments {
 	 * @uses    wp_list_comments
 	 */
 	function pingbacks_only_panel() {
+
 		global $wp_query;
+
 		$pingbacks_only = $wp_query->comments_by_type['pingback'];
-		if ( ! empty( $pingbacks_only ) ) {
-			?>
+
+		if ( ! empty( $pingbacks_only ) ) { ?>
 
 			<div id="pingbacks-only">
 				<ul class="pingbacks-list">
@@ -684,15 +683,12 @@ class OpusPrimusComments {
 				if ( get_option( 'comments_per_page' ) < count( $pingbacks_only ) ) {
 					$opus_navigation = new OpusPrimusNavigation();
 					$opus_navigation->comments_navigation();
-				} /** End if - comments count */
-				?>
+				} ?>
 			</div><!-- #pingbacks-only -->
 
-		<?php
-		}
-		/** End if - not empty - pingbacks */
+		<?php }
+
 	}
-	/** End function - pingbacks only panel */
 
 
 	/**
@@ -709,10 +705,12 @@ class OpusPrimusComments {
 	 * @uses    wp_list_comments
 	 */
 	function trackbacks_only_panel() {
+
 		global $wp_query;
+
 		$trackbacks_only = $wp_query->comments_by_type['trackback'];
-		if ( ! empty( $trackbacks_only ) ) {
-			?>
+
+		if ( ! empty( $trackbacks_only ) ) { ?>
 
 			<div id="trackbacks-only">
 				<ul class="trackbacks-list">
@@ -723,16 +721,12 @@ class OpusPrimusComments {
 				if ( get_option( 'comments_per_page' ) < count( $trackbacks_only ) ) {
 					$opus_navigation = new OpusPrimusNavigation();
 					$opus_navigation->comments_navigation();
-				} /** End if - comments count */
-				?>
+				} ?>
 			</div><!-- #trackbacks-only -->
 
-		<?php
-		}
-		/** End if - not empty - trackbacks */
+		<?php }
 
 	}
-	/** End function - trackbacks only panel */
 
 
 	/**
@@ -749,6 +743,7 @@ class OpusPrimusComments {
 	 * @return  string
 	 */
 	function all_comments_count() {
+
 		global $wp_query;
 
 		$comments_only   = intval( count( $wp_query->comments_by_type['comment'] ) );
@@ -770,7 +765,6 @@ class OpusPrimusComments {
 		return $all_comments;
 
 	}
-	/** End function - all comments count */
 
 
 	/**
@@ -787,6 +781,7 @@ class OpusPrimusComments {
 	 * @uses    do_action
 	 */
 	function show_all_comments_count() {
+
 		/** Add empty hook before all comments count */
 		do_action( 'opus_all_comments_count_before' );
 
@@ -799,7 +794,6 @@ class OpusPrimusComments {
 		} else {
 			$show_all_comments_count = __( 'No Responses', 'opus-primus' );
 		}
-		/** End if - total comments greater than zero */
 
 		/** Display the total comments message */
 		echo $show_all_comments_count;
@@ -808,7 +802,6 @@ class OpusPrimusComments {
 		do_action( 'opus_all_comments_count_after' );
 
 	}
-	/** End function - show all comments count */
 
 
-} /** End class - Opus Primus Comments */
+}

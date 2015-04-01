@@ -40,6 +40,10 @@
  * @date        October 9, 2014
  * Replaced `require_once` with `locate_template`
  * Added OpusPrimusComments class methods to work-around duplicate output issue
+ *
+ * @version     1.4
+ * @date        March 31, 2015
+ * Removed OpusPrimusComments class methods, duplicate output issue corrected
  */
 
 /** Fire up the theme with its classes, widgets, and defaults */
