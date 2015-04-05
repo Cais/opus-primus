@@ -77,7 +77,7 @@ do_action( 'opus_content_before' ); ?>
 
 						<?php
 						/** Create OpusPrimusImages class object */
-						$opus_images = new OpusPrimusImages();
+						$opus_images = OpusPrimusImages::create_instance();
 
 						$opus_posts->post_title();
 						$opus_images->featured_thumbnail( $size = 'full', $class = 'aligncenter' );

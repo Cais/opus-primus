@@ -33,23 +33,41 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version     1.0.1
- * @date        February 21, 2013
- * Re-order methods: action and filter calls by request order, then alphabetical
- * Modified action hooks to more semantic naming convention:
- * `opus_<section>_<placement>`
- *
- * @version     1.2
- * @date        April 9, 2013
- * Removed global `$opus_image_meta`; replaced with call to `exif_data` method
- *
  * @version     1.3.1
  * @date        Rare Disease Day 2015
  * Removed extraneous end of structure comments
  *
+ * @version     1.4
+ * @date        April 5, 2015
+ * Change `OpusPrimusArchives` to a singleton style class
+ *
  * @todo        Review adding `opus_*_after` hooks; may also require `show_*` functions (1.2)
  */
 class OpusPrimusImages {
+
+	private static $instance = null;
+
+	/**
+	 * Create Instance
+	 *
+	 * Creates a single instance of the class
+	 *
+	 * @package OpusPrimus
+	 * @since   1.4
+	 * @date    April 5, 2015
+	 *
+	 * @return null|OpusPrimusImages
+	 */
+	public static function create_instance() {
+
+		if ( is_null( self::$instance ) ) {
+			self::$instance = new self();
+		}
+
+		return self::$instance;
+
+	}
+
 
 	/** Construct */
 	function __construct() {
