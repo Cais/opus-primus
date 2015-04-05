@@ -101,7 +101,7 @@ do_action( 'opus_content_before' ); ?>
 						/** End if - show page byline */
 
 						/** Create OpusPrimusAuthors class object */
-						$opus_authors = new OpusPrimusAuthors();
+						$opus_authors = OpusPrimusAuthors::create_instance();
 						$opus_authors->post_author(
 							array(
 								'display_mod_author'   => OPUS_DISPLAY_MOD_AUTHOR,

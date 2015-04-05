@@ -67,7 +67,7 @@ do_action( 'opus_content_before' ); ?>
 			<div class="opus-author-header">
 				<?php
 				/** Create OpusPrimusAuthors class object */
-				$opus_authors = new OpusPrimusAuthors();
+				$opus_authors = OpusPrimusAuthors::create_instance();
 				$opus_authors->author_details( $current_author_id, true, true, true ); ?>
 			</div>
 			<!-- opus-author-header -->

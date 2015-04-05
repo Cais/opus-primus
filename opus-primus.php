@@ -71,7 +71,7 @@ $opus_images     = new OpusPrimusImages();
 
 		if ( is_single() ) {
 			/** Create OpusPrimusAuthors class object */
-			$opus_authors = new OpusPrimusAuthors();
+			$opus_authors = OpusPrimusAuthors::create_instance();
 			/**
 			 * @internal using $opus_authors->post_author( $args ) works but is
 			 * not as easily read and used as an example when modifying the code

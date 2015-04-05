@@ -81,7 +81,7 @@ $opus_navigation = new OpusPrimusNavigation();
 		$opus_posts->post_coda();
 		if ( is_single() ) {
 			/** Create OpusPrimusAuthors class object */
-			$opus_authors = new OpusPrimusAuthors();
+			$opus_authors = OpusPrimusAuthors::create_instance();
 			$opus_authors->post_author(
 				array(
 					'display_mod_author'   => OPUS_DISPLAY_MOD_AUTHOR,
