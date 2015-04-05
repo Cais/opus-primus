@@ -91,5 +91,5 @@ $opus_headers = new OpusPrimusHeader(); ?>
 	</header><!-- End header section -->
 
 <?php
-$opus_breadcrumbs = new OpusPrimusBreadcrumbs();
+$opus_breadcrumbs = OpusPrimusBreadcrumbs::create_instance();
 $opus_breadcrumbs->show_the_trail();

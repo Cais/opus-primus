@@ -40,7 +40,7 @@
  * `opus_<section>_<placement>`
  *
  * @version     1.4
- * @date        March 31, 2015
+ * @date        April 5, 2015
  * Change `OpusPrimusArchives` to a singleton style class
  */
 class OpusPrimusArchives {

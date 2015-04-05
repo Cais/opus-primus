@@ -32,9 +32,40 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version     1.4
+ * @date        April 5, 2015
+ * Change `OpusPrimusBreadcrumbs` to a singleton style class
  */
 class OpusPrimusBreadcrumbs {
 
+	private static $instance = null;
+
+	/**
+	 * Create Instance
+	 *
+	 * Creates a single instance of the class
+	 *
+	 * @package OpusPrimus
+	 * @since   1.4
+	 * @date    April 5, 2015
+	 *
+	 * @return null|OpusPrimusBreadcrumbs
+	 */
+	public static function create_instance() {
+
+		if ( is_null( self::$instance ) ) {
+			self::$instance = new self();
+		}
+
+		return self::$instance;
+
+	}
+
+
+	/**
+	 * Constuctor
+	 */
 	function __construct() {
 	}
 
@@ -54,8 +85,6 @@ class OpusPrimusBreadcrumbs {
 	 * @version     1.0.4
 	 * @date        March 1, 2013
 	 * Added 'Breadcrumbs' for pages completed
-	 *
-	 * @internal    Considered new feature for release at version 1.1.0
 	 */
 	function breadcrumbs() {
 
@@ -90,13 +119,9 @@ class OpusPrimusBreadcrumbs {
 
 		}
 
-		/** End if - is singular */
-
 		return null;
 
 	}
-
-	/** End function - breadcrumbs */
 
 
 	/**
@@ -166,7 +191,6 @@ class OpusPrimusBreadcrumbs {
 					apply_filters( 'opus_post_breadcrumbs_sticky_text', __( 'Sticky Post', 'opus-primus' ) )
 				);
 			}
-			/** Enf if - is sticky */
 
 			$post_title = $this->breadcrumb_post_title( $post, $post_ID );
 
@@ -180,13 +204,9 @@ class OpusPrimusBreadcrumbs {
 
 		}
 
-		/** End if - is singular */
-
 		return null;
 
 	}
-
-	/** End function - post_breadcrumbs */
 
 
 	/**
@@ -221,13 +241,9 @@ class OpusPrimusBreadcrumbs {
 			$post_trail .= '<li>' . $post_format_output . '</li>';
 		}
 
-		/** End if - standard is post format name */
-
 		return $post_trail;
 
 	}
-
-	/** End function - post format name */
 
 
 	/**
@@ -260,7 +276,6 @@ class OpusPrimusBreadcrumbs {
 			$post_trail .= '</li>';
 
 		}
-		/** End for - categories loop */
 
 		/** Close categories unordered list */
 		$post_trail .= '</ul></li>';
@@ -270,8 +285,6 @@ class OpusPrimusBreadcrumbs {
 		return $post_trail;
 
 	}
-
-	/** End function - breadcrumb categories */
 
 
 	/**
@@ -313,7 +326,6 @@ class OpusPrimusBreadcrumbs {
 				          . '</li>';
 
 			}
-			/** End foreach - steps */
 
 			$trail .= '</ul><!-- breadcrumb -->';
 			$trail .= '</div><!-- #breadcrumbs -->';
@@ -322,13 +334,9 @@ class OpusPrimusBreadcrumbs {
 
 		}
 
-		/** End if - no breadcrumbs */
-
 		return null;
 
 	}
-
-	/** End function - the trail */
 
 
 	/**
@@ -368,13 +376,9 @@ class OpusPrimusBreadcrumbs {
 
 		}
 
-		/** End if - post title longer than 50 characters */
-
 		return $post_title;
 
 	}
-
-	/** End function - breadcrumb post title */
 
 
 	/**
@@ -407,13 +411,11 @@ class OpusPrimusBreadcrumbs {
 		} else {
 			echo $this->post_breadcrumbs();
 		}
-		/** End if - is page */
 
 		/** Add empty hook after showing the breadcrumbs */
 		do_action( 'opus_show_the_trail_after' );
 
 	}
-	/** End function - show the trail */
 
 
-} /** End class - opus primus breadcrumbs */
+}
