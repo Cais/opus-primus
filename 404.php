@@ -39,7 +39,7 @@
  * Change classes from using underscores to using hyphens
  */
 
-$opus_archives   = new OpusPrimusArchives();
+$opus_archives   = OpusPrimusArchives::create_instance();
 $opus_structures = OpusPrimusStructures::create_instance();
 
 get_header( '404' );

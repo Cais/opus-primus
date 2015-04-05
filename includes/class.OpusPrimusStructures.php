@@ -50,6 +50,7 @@ class OpusPrimusStructures {
 	 *
 	 * Creates a single instance of the class
 	 *
+	 * @package OpusPrimus
 	 * @since   1.4
 	 * @date    March 31, 2015
 	 *
@@ -597,6 +598,7 @@ class OpusPrimusStructures {
 	 * @since   0.1
 	 *
 	 * @uses    OpusPrimusArchives::archive_cloud
+	 * @uses    OpusPrimusArchives::create_instance
 	 * @uses    OpusPrimusArchives::categories_archives
 	 * @uses    OpusPrimusNavigation::search_menu
 	 * @uses    __
@@ -643,7 +645,7 @@ class OpusPrimusStructures {
 		);
 
 		/** Get the class variables */
-		$opus_archives   = new OpusPrimusArchives();
+		$opus_archives   = OpusPrimusArchives::create_instance();
 		$opus_navigation = new OpusPrimusNavigation();
 
 		/** Display a list of categories to choose from */

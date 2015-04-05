@@ -38,10 +38,42 @@
  * Re-order methods: action and filter calls by request order, then alphabetical
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
+ *
+ * @version     1.4
+ * @date        March 31, 2015
+ * Change `OpusPrimusArchives` to a singleton style class
  */
 class OpusPrimusArchives {
+
+	private static $instance = null;
+
 	/**
-	 * Construct
+	 * Create Instance
+	 *
+	 * Creates a single instance of the class
+	 *
+	 * @package OpusPrimus
+	 * @since   1.4
+	 * @date    April 5, 2015
+	 *
+	 * @return null|OpusPrimusArchives
+	 */
+	public static function create_instance() {
+
+		if ( is_null( self::$instance ) ) {
+			self::$instance = new self();
+		}
+
+		return self::$instance;
+
+	}
+
+
+	/**
+	 * Constructor
+	 *
+	 * @package OpusPrimus
+	 * @since   0.1
 	 */
 	function __construct() {
 	}
@@ -67,6 +99,7 @@ class OpusPrimusArchives {
 	 * @uses     wp_tag_cloud
 	 */
 	function archive_cloud( $cloud_args = '' ) {
+
 		/** Add empty hook before archive cloud */
 		do_action( 'opus_archive_cloud_before' );
 
@@ -89,24 +122,20 @@ class OpusPrimusArchives {
 			$cloud_classes .= 'top-' . $cloud_args['number'];
 			$cloud_title = sprintf( __( 'The Top %1$s Tags Cloud:', 'opus-primus' ), $cloud_args['number'] );
 		}
-		/** End if - isset */
 
 		/** If a cloud class has been created then make sure to add a space before so it will be properly added to the class list */
 		if ( ! empty( $cloud_classes ) ) {
 			$cloud_classes = ' ' . $cloud_classes;
 		}
-		/** End if not empty */
 
 		/** Default title */
 		if ( empty( $cloud_title ) ) {
 			$cloud_title = __( 'The Cloud:', 'opus-primus' );
 		}
-		/** End if empty */
 
 		if ( isset( $cloud_args['format'] ) && ( 'flat' == $cloud_args['format'] ) ) {
 			$cloud_title .= '<br />';
 		}
-		/** End if isset */
 
 		/**
 		 * Output the cloud with a title wrapped in an element with dynamic
@@ -122,8 +151,6 @@ class OpusPrimusArchives {
 		do_action( 'opus_archive_cloud_after' );
 
 	}
-
-	/** End function archive cloud */
 
 
 	/**
@@ -145,6 +172,7 @@ class OpusPrimusArchives {
 	 * @uses     wp_parse_args
 	 */
 	function categories_archive( $category_args = '' ) {
+
 		/** Add empty hook before category archive */
 		do_action( 'opus_category_archive_before' );
 
@@ -165,7 +193,6 @@ class OpusPrimusArchives {
 		do_action( 'opus_category_archive_after' );
 
 	}
-	/** End function categories archive */
 
 
-} /** End Class Opus Primus Archives */
+}
