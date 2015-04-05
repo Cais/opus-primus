@@ -45,7 +45,7 @@
 /** Create class objects */
 $opus_posts      = new OpusPrimusPosts();
 $opus_comments   = OpusPrimusComments::create_instance();
-$opus_gallery    = new OpusPrimusGallery();
+$opus_gallery    = OpusPrimusGallery::create_instance();
 $opus_navigation = new OpusPrimusNavigation();
 
 /** Display the post */
@@ -67,7 +67,6 @@ $opus_navigation = new OpusPrimusNavigation();
 		if ( ! is_single() ) {
 			$opus_comments->comments_link();
 		}
-		/** End if - not is single */
 
 		/** Display Featured Image */
 		$opus_gallery->featured_image();
@@ -79,7 +78,9 @@ $opus_navigation = new OpusPrimusNavigation();
 		$opus_navigation->multiple_pages_link( array(), $preface = __( 'Pages:', 'opus-primus' ) );
 		$opus_posts->meta_tags( $anchor );
 		$opus_posts->post_coda();
+
 		if ( is_single() ) {
+
 			/** Create OpusPrimusAuthors class object */
 			$opus_authors = OpusPrimusAuthors::create_instance();
 			$opus_authors->post_author(
@@ -90,8 +91,8 @@ $opus_navigation = new OpusPrimusNavigation();
 					'display_author_desc'  => OPUS_DISPLAY_AUTHOR_DESCRIPTION,
 				)
 			);
-		} /** End if - is single */
-		?>
+
+		} ?>
 
 	</div><!-- post classes -->
 

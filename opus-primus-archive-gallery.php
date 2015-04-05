@@ -41,7 +41,7 @@
 $opus_posts      = new OpusPrimusPosts();
 $opus_comments   = OpusPrimusComments::create_instance();
 $opus_navigation = new OpusPrimusNavigation();
-$opus_gallery    = new OpusPrimusGallery(); ?>
+$opus_gallery    = OpusPrimusGallery::create_instance(); ?>
 
 <div <?php post_class(); ?>>
 

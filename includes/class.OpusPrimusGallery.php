@@ -38,11 +38,39 @@
  * Re-order methods: alphabetical
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
+ *
+ * @version     1.4
+ * @date        April 5, 2015
+ * Change `OpusPrimusGallery` to a singleton style class
  */
 class OpusPrimusGallery {
 
+	private static $instance = null;
+
 	/**
-	 * Construct
+	 * Create Instance
+	 *
+	 * Creates a single instance of the class
+	 *
+	 * @package OpusPrimus
+	 * @since   1.4
+	 * @date    April 5, 2015
+	 *
+	 * @return null|OpusPrimusGallery
+	 */
+	public static function create_instance() {
+
+		if ( is_null( self::$instance ) ) {
+			self::$instance = new self();
+		}
+
+		return self::$instance;
+
+	}
+
+
+	/**
+	 * Constructor
 	 */
 	function __construct() {
 	}
@@ -82,6 +110,7 @@ class OpusPrimusGallery {
 	 * @todo    Review hooks and when they they should be usable.
 	 */
 	function featured_image( $size = 'large' ) {
+
 		global $opus_thumb_id;
 
 		/** Show Featured Image when not in single view */
@@ -102,7 +131,9 @@ class OpusPrimusGallery {
 				/** use the thumbnail ("featured image") */
 				/** @var $opus_thumb_id int|string */
 				$opus_thumb_id = get_post_thumbnail_id();
+
 				if ( ! is_single() ) {
+
 					echo '<p class="featured-image has-post-thumbnail"><a href="' . get_permalink() . '" title="' . the_title_attribute(
 							array(
 								'before' => __( 'View', 'opus-primus' ) . ' ',
@@ -112,10 +143,12 @@ class OpusPrimusGallery {
 						) . '">';
 					the_post_thumbnail( $size );
 					echo '</a></p>';
+
 				} else {
+
 					the_post_thumbnail( $size );
+
 				}
-				/** End if - not is single */
 
 			} else {
 
@@ -135,7 +168,9 @@ class OpusPrimusGallery {
 				if ( empty( $attachments ) ) {
 
 					$opus_thumb_id = intval( $this->get_gallery_attr_featured_ids() );
+
 					if ( ! is_single() ) {
+
 						echo '<p class="featured-image no-attachments"><a href="' . get_permalink() . '" title="' . the_title_attribute(
 								array(
 									'before' => __( 'View', 'opus-primus' ) . ' ',
@@ -145,15 +180,19 @@ class OpusPrimusGallery {
 							) . '">'
 						     . wp_get_attachment_image( $opus_thumb_id, $size )
 						     . '</a></p>';
+
 					} else {
+
 						echo wp_get_attachment_image( $opus_thumb_id, $size );
+
 					}
-					/** End if - not is single */
 
 				} else {
 
 					foreach ( $attachments as $opus_thumb_id => $attachment ) {
+
 						if ( ! is_single() ) {
+
 							echo '<p class="featured-image no-post-thumbnail"><a href="' . get_permalink() . '" title="' . the_title_attribute(
 									array(
 										'before' => __( 'View', 'opus-primus' ) . ' ',
@@ -163,18 +202,18 @@ class OpusPrimusGallery {
 								) . '">'
 							     . wp_get_attachment_image( $opus_thumb_id, $size )
 							     . '</a></p>';
+
 						} else {
+
 							echo wp_get_attachment_image( $opus_thumb_id, $size );
+
 						}
-						/** End if - not is single */
+
 					}
-					/** End foreach - attachments */
 
 				}
-				/** End if - empty */
 
 			}
-			/** End if - has post thumbnail */
 
 			/** Add empty hook after featured image */
 			do_action( 'opus_featured_image_after' );
@@ -183,11 +222,8 @@ class OpusPrimusGallery {
 			echo '</div><!-- gallery-featured-image -->';
 
 		}
-		/** End if - not is single */
 
 	}
-
-	/** End function - featured image */
 
 
 	/**
@@ -239,17 +275,14 @@ class OpusPrimusGallery {
 			if ( $images ) {
 				return $images[0];
 			}
-			/** End if - images */
 
 		}
-
-		/** End if - gallery match */
 
 		/** Keeping the return Gods happy - won't likely ever get here. */
 
 		return null;
 
-	} /** End function - get gallery attr featured ids */
+	}
 
 
 	/**
@@ -310,9 +343,7 @@ class OpusPrimusGallery {
 					if ( intval( $image ) <> intval( $this->get_gallery_attr_featured_ids() ) ) {
 						$string .= intval( $image ) . ',';
 					}
-					/** End if - image vs featured */
 				}
-				/** End foreach - images */
 
 				/**
 				 * @var $string - cleaned version of string to be returned
@@ -324,17 +355,14 @@ class OpusPrimusGallery {
 				return $string;
 
 			}
-			/** End if - images */
 
 		}
-
-		/** End if - gallery match */
 
 		/** Keeping the return Gods happy - won't likely ever get here. */
 
 		return null;
 
-	} /** End function - get gallery attr secondary ids */
+	}
 
 
 	/**
@@ -374,6 +402,7 @@ class OpusPrimusGallery {
 	 * Changed call to `$opus_defaults->number_of_secondary_images` to use `OPUS_NUMBER_OF_SECONDARY_IMAGES` constant
 	 */
 	function secondary_images( $secondary_images_args = '' ) {
+
 		global $opus_thumb_id;
 
 		/** Set defaults */
@@ -411,6 +440,7 @@ class OpusPrimusGallery {
 
 			/** No images attached to post? Rerun query using actual "ids" values */
 			if ( 0 == $images->found_posts ) {
+
 				$images = new WP_Query( array(
 					'post__in'               => $this->get_gallery_attr_secondary_ids(),
 					'post_status'            => 'inherit',
@@ -422,14 +452,13 @@ class OpusPrimusGallery {
 					'post__not_in'           => array( $opus_thumb_id ),
 					'update_post_term_cache' => false,
 				) );
+
 			}
-			/** End if - no images */
 
 			/** Do not display default gallery if not in single view */
 			if ( ! is_single() ) {
 				add_filter( 'post_gallery', 'opus_primus_return_blank' );
 			}
-			/** End if - not is single */
 
 			/**
 			 * @var $size - standard WordPress image size; thumbnail in this case
@@ -449,7 +478,6 @@ class OpusPrimusGallery {
 				foreach ( $images->posts as $image ) {
 					echo '<a href="' . get_permalink( $image->ID ) . '">' . wp_get_attachment_image( $image->ID, $size ) . '</a>';
 				}
-				/** End foreach - images */
 
 				/**
 				 * Display a message indicating if more images are in the gallery
@@ -458,6 +486,7 @@ class OpusPrimusGallery {
 				 * single post.
 				 */
 				if ( ( $images->found_posts + 1 ) > ( $secondary_images_args['images'] + 1 ) ) {
+
 					printf(
 						'<p class="more-images">%1$s</p>',
 						apply_filters(
@@ -480,22 +509,20 @@ class OpusPrimusGallery {
 							)
 						)
 					);
+
 				}
-				/** End if - images found */
 
 				/** Close wrapping DIV element */
 				echo '</div><!-- gallery-secondary-images -->';
+
 			}
-			/** End if - not is single */
 
 			/** Add empty hook after secondary images */
 			do_action( 'opus_secondary_images_after' );
 
 		}
-		/** End if - gallery shortcode exists */
 
 	}
-	/** End function - secondary images */
 
 
-} /** End Opus Primus Gallery class */
+}
