@@ -32,9 +32,42 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ *
+ * @version     1.4
+ * @date        April 5, 2015
+ * Change `OpusPrimusHeader` to a singleton style class
+ * Renamed file to `class.OpusPrimusHeader.php` for consistency
  */
 class OpusPrimusHeader {
 
+	private static $instance = null;
+
+	/**
+	 * Create Instance
+	 *
+	 * Creates a single instance of the class
+	 *
+	 * @package OpusPrimus
+	 * @since   1.4
+	 * @date    April 5, 2015
+	 *
+	 * @return null|OpusPrimusHeader
+	 */
+	public static function create_instance() {
+
+		if ( is_null( self::$instance ) ) {
+			self::$instance = new self();
+		}
+
+		return self::$instance;
+
+	}
+
+
+	/**
+	 * Constructor
+	 */
 	function __construct() {
 	}
 
@@ -52,8 +85,7 @@ class OpusPrimusHeader {
 	 * @uses    get_bloginfo
 	 * @uses    home_url
 	 */
-	function site_title() {
-		?>
+	function site_title() { ?>
 
 		<h1 id="site-title">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
@@ -61,8 +93,7 @@ class OpusPrimusHeader {
 			</a>
 		</h1><!-- #site-title -->
 
-	<?php
-	} /** End function - site title */
+	<?php }
 
 
 	/**
@@ -77,6 +108,7 @@ class OpusPrimusHeader {
 	 * @uses    do_action
 	 */
 	function site_title_block() {
+
 		/** Add empty hook before site title */
 		do_action( 'opus_site_title_before' );
 
@@ -86,7 +118,7 @@ class OpusPrimusHeader {
 		/** Add empty hook after site title */
 		do_action( 'opus_site_title_after' );
 
-	} /** End function - site title block */
+	}
 
 
 	/**
@@ -99,15 +131,13 @@ class OpusPrimusHeader {
 	 *
 	 * @uses    bloginfo
 	 */
-	function site_description() {
-		?>
+	function site_description() { ?>
 
 		<h2 id="site-description">
 			<?php bloginfo( 'description' ); ?>
 		</h2><!-- #site-description -->
 
-	<?php
-	} /** End function - site description */
+	<?php }
 
 
 	/**
@@ -132,7 +162,7 @@ class OpusPrimusHeader {
 		/** Add empty hook after site description */
 		do_action( 'opus_site_description_after' );
 
-	} /** End function - site description block */
+	}
 
 
 	/**
@@ -148,10 +178,12 @@ class OpusPrimusHeader {
 	 * @return string
 	 */
 	function custom_header_image() {
+
 		$header_image = '<img class="opus-custom-header" src="' . get_header_image() . '" alt="" />';
 
 		return $header_image;
-	} /** End function - custom header image */
+
+	}
 
 
 	/**
@@ -166,11 +198,12 @@ class OpusPrimusHeader {
 	 * @uses    get_header_image
 	 */
 	function show_custom_header_image() {
+
 		if ( get_header_image() ) {
 			echo $this->custom_header_image();
 		}
-		/** End if - get header image */
-	} /** End function - show custom header image */
+
+	}
 
 
 	/**
@@ -185,6 +218,7 @@ class OpusPrimusHeader {
 	 * @uses    do_action
 	 */
 	function show_custom_header_image_block() {
+
 		/** Add empty hook before custom header image */
 		do_action( 'opus_custom_header_image_before' );
 
@@ -194,7 +228,6 @@ class OpusPrimusHeader {
 		do_action( 'opus_custom_header_image_after' );
 
 	}
-	/** End function - show custom header image block */
 
 
-} /** End class - OpusPrimusHeader */
+}

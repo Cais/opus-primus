@@ -48,11 +48,10 @@
 if ( ! defined( 'OPUS_CUSTOM_PATH' ) ) {
 	define( 'OPUS_CUSTOM_PATH', WP_CONTENT_DIR . '/opus-primus-customs/' );
 }
-/** End if - not defined */
+
 if ( ! defined( 'OPUS_CUSTOM_URL' ) ) {
 	define( 'OPUS_CUSTOM_URL', content_url( '/opus-primus-customs/' ) );
 }
-/** End if - not defined */
 
 /** Get the router class so we can build the paths */
 locate_template( 'includes/class.OpusPrimusRouter.php', true, true );
@@ -69,7 +68,7 @@ locate_template( 'includes/class.OpusPrimusNavigation.php', true, true );
 /** Add Structures */
 locate_template( 'includes/class.OpusPrimusStructures.php', true, true );
 /** Add Headers */
-locate_template( 'includes/class.OpusPrimusHeaders.php', true, true );
+locate_template( 'includes/class.OpusPrimusHeader.php', true, true );
 /** Add Posts */
 locate_template( 'includes/class.OpusPrimusPosts.php', true, true );
 /** Add Comments Hooks */
