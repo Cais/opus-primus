@@ -34,22 +34,46 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version     1.0.1
- * @date        February 21, 2013
- * Re-order methods: alphabetical
- * Modified action hooks to more semantic naming convention:
- * `opus_<section>_<placement>`
- *
  * @version     1.2.5
  * @date        June 15, 2014
  * Added new method `pagination` for moving between pages of posts
+ *
+ * @version     1.4
+ * @date        April 5, 2015
+ * Change `OpusPrimusNavigation` to a singleton style class
  */
 class OpusPrimusNavigation {
+
+	private static $instance = null;
+
 	/**
-	 * Construct
+	 * Create Instance
+	 *
+	 * Creates a single instance of the class
+	 *
+	 * @package OpusPrimus
+	 * @since   1.4
+	 * @date    April 6, 2015
+	 *
+	 * @return null|OpusPrimusNavigation
+	 */
+	public static function create_instance() {
+
+		if ( is_null( self::$instance ) ) {
+			self::$instance = new self();
+		}
+
+		return self::$instance;
+
+	}
+
+
+	/**
+	 * Constructor
 	 */
 	function __construct() {
 	}
+
 
 	/**
 	 * Comments Navigation

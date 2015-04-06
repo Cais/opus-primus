@@ -646,7 +646,7 @@ class OpusPrimusStructures {
 
 		/** Get the class variables */
 		$opus_archives   = OpusPrimusArchives::create_instance();
-		$opus_navigation = new OpusPrimusNavigation();
+		$opus_navigation = OpusPrimusNavigation::create_instance();
 
 		/** Display a list of categories to choose from */
 		/** @noinspection PhpInternalEntityUsedInspection */
@@ -736,7 +736,7 @@ class OpusPrimusStructures {
 	 */
 	function the_loop() {
 
-		$opus_navigation = new OpusPrimusNavigation();
+		$opus_navigation = OpusPrimusNavigation::create_instance();
 
 		/** the_Loop begins */
 		if ( have_posts() ) {
@@ -818,7 +818,7 @@ class OpusPrimusStructures {
 
 		}
 
-		$opus_navigation = new OpusPrimusNavigation();
+		$opus_navigation = OpusPrimusNavigation::create_instance();
 		$opus_navigation->pagination_wrapped();
 		/** the_Loop ends */
 

@@ -46,7 +46,7 @@
 $opus_posts      = new OpusPrimusPosts();
 $opus_comments   = OpusPrimusComments::create_instance();
 $opus_gallery    = OpusPrimusGallery::create_instance();
-$opus_navigation = new OpusPrimusNavigation();
+$opus_navigation = OpusPrimusNavigation::create_instance();
 
 /** Display the post */
 ?>

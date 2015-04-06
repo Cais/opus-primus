@@ -77,7 +77,7 @@ $opus_headers = OpusPrimusHeader::create_instance(); ?>
 
 		<nav>
 			<?php
-			$opus_navigation = new OpusPrimusNavigation();
+			$opus_navigation = OpusPrimusNavigation::create_instance();
 			$opus_navigation->primary_menu(); ?>
 		</nav>
 		<!-- End navigation section -->

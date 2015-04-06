@@ -643,7 +643,7 @@ class OpusPrimusComments {
 				<!-- comments-list -->
 				<?php
 				if ( get_option( 'comments_per_page' ) < count( $comments_only ) ) {
-					$opus_navigation = new OpusPrimusNavigation();
+					$opus_navigation = OpusPrimusNavigation::create_instance();
 					$opus_navigation->comments_navigation();
 				} ?>
 			</div><!-- #comments-only -->
@@ -681,7 +681,7 @@ class OpusPrimusComments {
 				<!-- pingbacks-list -->
 				<?php
 				if ( get_option( 'comments_per_page' ) < count( $pingbacks_only ) ) {
-					$opus_navigation = new OpusPrimusNavigation();
+					$opus_navigation = OpusPrimusNavigation::create_instance();
 					$opus_navigation->comments_navigation();
 				} ?>
 			</div><!-- #pingbacks-only -->
@@ -719,7 +719,7 @@ class OpusPrimusComments {
 				<!-- trackbacks-list -->
 				<?php
 				if ( get_option( 'comments_per_page' ) < count( $trackbacks_only ) ) {
-					$opus_navigation = new OpusPrimusNavigation();
+					$opus_navigation = OpusPrimusNavigation::create_instance();
 					$opus_navigation->comments_navigation();
 				} ?>
 			</div><!-- #trackbacks-only -->

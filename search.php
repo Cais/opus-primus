@@ -116,7 +116,7 @@ do_action( 'opus_content_before' ); ?>
 			/** End if - have posts */
 
 			/** Create OpusPrimusNavigation class object */
-			$opus_navigation = new OpusPrimusNavigation();
+			$opus_navigation = OpusPrimusNavigation::create_instance();
 			$opus_navigation->posts_link();
 
 			/** the_Loop - Ends */
