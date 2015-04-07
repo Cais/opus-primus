@@ -48,7 +48,7 @@
  */
 
 /** Create class variables */
-$opus_posts      = new OpusPrimusPosts();
+$opus_posts      = OpusPrimusPosts::create_instance();
 $opus_comments   = OpusPrimusComments::create_instance();
 $opus_navigation = OpusPrimusNavigation::create_instance();
 $opus_images     = OpusPrimusImages::create_instance();

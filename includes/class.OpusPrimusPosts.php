@@ -5,11 +5,11 @@
  *
  * Controls for the organization and layout of the post and its content.
  *
- * @package        OpusPrimus
- * @since          0.1
+ * @package     OpusPrimus
+ * @since       0.1
  *
- * @author         Opus Primus <in.opus.primus@gmail.com>
- * @copyright      Copyright (c) 2012-2015, Opus Primus
+ * @author      Opus Primus <in.opus.primus@gmail.com>
+ * @copyright   Copyright (c) 2012-2015, Opus Primus
  *
  * This file is part of Opus Primus.
  *
@@ -33,15 +33,40 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version        1.2.3
- * @date           January 12, 2014
- * Provide unique class for post coda if the post has a post format
- *
- * @version        1.3.1
- * @date           February 7, 2015
+ * @version     1.3.1
+ * @date        February 7, 2015
  * Added `hide_category_widget_list_items` method and related hook
+ *
+ * @version     1.4
+ * @date        April 6, 2015
+ * Change `OpusPrimusPosts` to a singleton style class
  */
 class OpusPrimusPosts {
+
+	private static $instance = null;
+
+	/**
+	 * Create Instance
+	 *
+	 * Creates a single instance of the class
+	 *
+	 * @package OpusPrimus
+	 * @since   1.4
+	 * @date    April 6, 2015
+	 *
+	 * @return null|OpusPrimusPosts
+	 */
+	public static function create_instance() {
+
+		if ( is_null( self::$instance ) ) {
+			self::$instance = new self();
+		}
+
+		return self::$instance;
+
+	}
+
+
 	/**
 	 * Constructor
 	 *
@@ -55,6 +80,7 @@ class OpusPrimusPosts {
 	 * Added `hide_category_widget_list_items` method and related hook
 	 */
 	function __construct() {
+
 		/** Add excerpt more link */
 		add_filter( 'excerpt_more', array( $this, 'excerpt_more_link' ) );
 
@@ -67,10 +93,7 @@ class OpusPrimusPosts {
 			'hide_category_widget_list_items'
 		) );
 
-	} /** End function - construct */
-
-
-	/** ---- Action and Filter Methods ---- */
+	}
 
 
 	/**
@@ -108,7 +131,7 @@ class OpusPrimusPosts {
 
 		return $link_url;
 
-	} /** End function - excerpt more link */
+	}
 
 
 	/**
@@ -144,7 +167,6 @@ class OpusPrimusPosts {
 		if ( '1' == $post_leap_year ) {
 			$classes[] = 'leap-year';
 		}
-		/** End if - leap year */
 
 		/** Month */
 		$post_month_numeric = get_the_date( 'm' );
@@ -176,16 +198,17 @@ class OpusPrimusPosts {
 
 		/** Modified Post Classes */
 		if ( get_the_date() <> get_the_modified_date() ) {
+
 			$classes[] = 'modified-post';
 
 			/** Year - Modified */
 			$post_year      = get_the_modified_date( 'Y' );
 			$classes[]      = 'modified-year-' . $post_year;
 			$post_leap_year = get_the_modified_date( 'L' );
+
 			if ( '1' == $post_leap_year ) {
 				$classes[] = 'modified-leap-year';
 			}
-			/** End if - leap year */
 
 			/** Month - Modified */
 			$post_month_numeric = get_the_modified_date( 'm' );
@@ -212,26 +235,24 @@ class OpusPrimusPosts {
 			global $post;
 			/** @var $last_user - establish the last user */
 			$last_user = '';
+
 			if ( $last_id = get_post_meta( $post->ID, '_edit_last', true ) ) {
 				$last_user = get_userdata( $last_id );
 			}
-			/** End if - last id */
 
 			/** @var $mod_author_id - ID of the last user */
 			$mod_author_id           = $last_user->ID;
 			$classes[]               = 'modified-author-' . $mod_author_id;
 			$mod_author_display_name = sanitize_html_class( $last_user->display_name, 'noah-body' );
 			$classes[]               = 'modified-author-' . $mod_author_display_name;
+
 		}
 
 		/** Return the classes for use with the `post_class` hook */
 
 		return $classes;
 
-	} /** End function - post classes */
-
-
-	/** ---- Additional Methods ---- */
+	}
 
 
 	/**
@@ -251,13 +272,15 @@ class OpusPrimusPosts {
 	 * @return  string - URL to author archive
 	 */
 	function author_posts_link() {
+
 		return sprintf(
 			'<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
 			get_author_posts_url( get_the_author_meta( 'ID' ) ),
 			esc_attr( sprintf( __( 'View all posts by %1$s', 'opus-primus' ), get_the_author() ) ),
 			get_the_author()
 		);
-	} /** End function - author posts link */
+
+	}
 
 
 	/**
@@ -283,7 +306,7 @@ class OpusPrimusPosts {
 
 		return empty( $link_title_text ) ? __( 'post', 'opus-primus' ) : $link_title_text;
 
-	} /** End function - anchor title text */
+	}
 
 
 	/**
@@ -315,6 +338,7 @@ class OpusPrimusPosts {
 	 * Changed `meta-byline` container from `p` to `div`
 	 */
 	function meta_tags( $anchor ) {
+
 		/** Add empty hook before meta tags */
 		do_action( 'opus_meta_tags_before' );
 
@@ -334,7 +358,6 @@ class OpusPrimusPosts {
 		} else {
 			$opus_posted_in = __( 'Use this <a href="%4$s" title="Permalink to %5$s" rel="bookmark">permalink</a> for a bookmark. %6$s', 'opus-primus' );
 		}
-		/** End if - tag list */
 
 		/** Prints the "opus_posted_in" string, replacing the placeholders */
 		printf(
@@ -350,7 +373,7 @@ class OpusPrimusPosts {
 		/** Add empty hook after meta tags */
 		do_action( 'opus_meta_tags_after' );
 
-	} /** End function - meta tags */
+	}
 
 
 	/**
@@ -370,13 +393,15 @@ class OpusPrimusPosts {
 	 * @return  string - URL to author archive
 	 */
 	function modified_author_posts_link( $last_user ) {
+
 		return sprintf(
 			'<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
 			home_url( '?author=' . $last_user->ID ),
 			esc_attr( sprintf( __( 'View all posts by %1$s', 'opus-primus' ), $last_user->display_name ) ),
 			$last_user->display_name
 		);
-	} /** End function - modified posts link */
+
+	}
 
 
 	/**
@@ -413,15 +438,16 @@ class OpusPrimusPosts {
 	 * Corrected modified date/time output to account for scheduled posts being modified earlier than they are posted
 	 */
 	function modified_post( $tempus = 'date' ) {
+
 		/** Grab the $post object and bring in the original post author ID */
 		global $post, $opus_author_id;
 
 		/** @var $last_user - establish the last user */
 		$last_user = '';
+
 		if ( $last_id = get_post_meta( $post->ID, '_edit_last', true ) ) {
 			$last_user = get_userdata( $last_id );
 		}
-		/** End if - last id */
 
 		/**
 		 * @var $line_height - set value for use with `get_avatar`
@@ -441,6 +467,7 @@ class OpusPrimusPosts {
 		 * not be noted ( per developer prerogative ).
 		 */
 		if ( ( ! empty( $last_user ) ) && ( $opus_author_id <> $last_id ) ) {
+
 			$mod_author_phrase .= apply_filters( 'opus_mod_different_author_phrase', __( 'Last modified by %1$s %2$s %3$s %4$s.', 'opus-primus' ) );
 			$mod_author_avatar = get_avatar( $last_user->user_email, $line_height );
 
@@ -451,16 +478,18 @@ class OpusPrimusPosts {
 			do_action( 'opus_modified_post_before' );
 
 		} else {
+
 			$mod_author_phrase .= apply_filters( 'opus_mod_same_author_phrase', __( 'and modified %3$s %4$s.', 'opus-primus' ) );
 			$mod_author_avatar = '';
+
 		}
-		/** End if - not empty last user */
 
 		/** Sanity check - post date is earlier than post modified date */
 		if ( $post->post_date < $post->post_modified ) {
 
 			/** Check if there is a time difference from the original post date */
 			if ( 'time' == $tempus ) {
+
 				if ( get_the_time() <> get_the_modified_time() ) {
 					printf(
 						'<span class="author-modified-time">' . $mod_author_phrase . '</span>',
@@ -470,8 +499,9 @@ class OpusPrimusPosts {
 						apply_filters( 'opus_post_byline_mod_time', sprintf( __( 'at %1$s', 'opus-primus' ), get_the_modified_time( get_option( 'time_format' ) ) ) )
 					);
 				}
-				/** End if - get the time */
+
 			} else {
+
 				if ( get_the_date() <> get_the_modified_date() ) {
 					printf(
 						'<span class="author-modified-date">' . $mod_author_phrase . '</span>',
@@ -481,20 +511,17 @@ class OpusPrimusPosts {
 						apply_filters( 'opus_post_byline_mod_time', sprintf( __( 'at %1$s', 'opus-primus' ), get_the_modified_time( get_option( 'time_format' ) ) ) )
 					);
 				}
-				/** End if - get the date */
+
 			}
-			/** End if - time */
 
 		}
-		/** End if - post date is earlier than post modified date */
 
 		/** Add empty hook after modified post author if one exists */
 		if ( ( ! empty( $last_user ) ) && ( $opus_author_id <> $last_id ) ) {
 			do_action( 'opus_modified_post_after' );
 		}
-		/** End if - not empty */
 
-	} /** End function - modified post */
+	}
 
 
 	/**
@@ -518,6 +545,7 @@ class OpusPrimusPosts {
 	 * @return      string - URL|text
 	 */
 	function no_title_link( $anchor ) {
+
 		/** Create URL or string text */
 		$opus_no_title = get_the_title();
 		empty( $opus_no_title )
@@ -526,7 +554,7 @@ class OpusPrimusPosts {
 
 		return apply_filters( 'opus_no_title_link', $opus_no_title );
 
-	} /** End function - no title link */
+	}
 
 
 	/**
@@ -567,6 +595,7 @@ class OpusPrimusPosts {
 	 * Changed `opus_post_byline_details` filter to `opus_post_byline_phrase`
 	 */
 	function post_byline( $byline_args = '' ) {
+
 		/** Set defaults */
 		$defaults    = array(
 			'anchor'             => __( 'Posted', 'opus-primus' ),
@@ -631,7 +660,6 @@ class OpusPrimusPosts {
 			if ( $byline_args['display_mod_author'] || ( 'time' == $byline_args['tempus'] ) ) {
 				$this->modified_post( $byline_args['tempus'] );
 			}
-			/** End if - byline args */
 
 			/** Add a sticky note flag to the byline */
 			echo $this->sticky_flag( $byline_args['sticky_flag'] );
@@ -646,12 +674,11 @@ class OpusPrimusPosts {
 			$this->post_coda();
 
 		}
-		/** End if - echo the by line */
 
 		/** Add empty hook after post by line */
 		do_action( 'opus_post_byline_after' );
 
-	} /** End function - post byline */
+	}
 
 
 	/**
@@ -668,6 +695,7 @@ class OpusPrimusPosts {
 	 * @uses    get_post_format
 	 */
 	function post_coda() {
+
 		/** Add empty hook before post coda */
 		do_action( 'opus_post_coda_before' );
 
@@ -679,7 +707,6 @@ class OpusPrimusPosts {
 		} else {
 			$post_coda_class = 'post-coda';
 		}
-		/** End if - has post format */
 
 		printf(
 			'<div class="' . $post_coda_class . '">%1$s</div>',
@@ -689,7 +716,7 @@ class OpusPrimusPosts {
 		/** Add empty hook after the post coda */
 		do_action( 'opus_post_coda_after' );
 
-	} /** End function - post coda */
+	}
 
 
 	/**
@@ -712,6 +739,7 @@ class OpusPrimusPosts {
 	 * @uses     the_title
 	 */
 	function post_content( $more_link_text = '', $stripteaser = '' ) {
+
 		/** Add empty hook before the content */
 		do_action( 'opus_the_content_before' );
 
@@ -719,13 +747,11 @@ class OpusPrimusPosts {
 		if ( empty( $more_link_text ) ) {
 			$more_link_text = __( 'Continue reading ... ', 'opus-primus' ) . the_title( '', '', false );
 		}
-		/** End if - empty - more link text */
 
 		/** Check if there the stripteaser parameter has been set */
 		if ( empty( $stripteaser ) ) {
 			$stripteaser = '';
 		}
-		/** End if - empty - stripteaser */
 
 		/** Wrap the post content in its own container */
 		echo '<div class="post-content">';
@@ -735,7 +761,7 @@ class OpusPrimusPosts {
 		/** Add empty hook after the content */
 		do_action( 'opus_the_content_after' );
 
-	} /** End function - post content */
+	}
 
 
 	/**
@@ -750,6 +776,7 @@ class OpusPrimusPosts {
 	 * @uses    the_excerpt
 	 */
 	function post_excerpt() {
+
 		/** Add empty hook before the excerpt */
 		do_action( 'opus_the_excerpt_before' );
 
@@ -761,7 +788,7 @@ class OpusPrimusPosts {
 		/** Add empty hook after the excerpt */
 		do_action( 'opus_the_excerpt_after' );
 
-	} /** End function - post excerpt */
+	}
 
 
 	/**
@@ -786,22 +813,23 @@ class OpusPrimusPosts {
 	 * Refactored `$output` to use `button` class versus the button element
 	 */
 	function post_format_flag() {
+
 		/** @var $flag_text - post-format */
 		$flag_text  = get_post_format_string( get_post_format() );
 		$title_text = $flag_text;
+
 		if ( 'Standard' == $flag_text ) {
 			return null;
 		} else {
 			$flag_text = '<span class="post-format-flag">' . $flag_text . '</span>';
 		}
-		/** End if - flag text */
 
 		/** @var $output - the post format type linked to its archive */
 		$output = '<a class="button" href="' . get_post_format_link( get_post_format() ) . '" title="' . sprintf( __( 'View the %1$s archive.', 'opus-primus' ), $title_text ) . '">' . $flag_text . '</a>';
 
 		return apply_filters( 'opus_post_format_flag', $output );
 
-	} /** End function - post format flag */
+	}
 
 
 	/**
@@ -827,6 +855,7 @@ class OpusPrimusPosts {
 	 * Added `post-title-link` wrapper class to better manage output
 	 */
 	function post_title( $before = '', $after = '', $echo = true ) {
+
 		/** Add empty hook before the post title */
 		do_action( 'opus_post_title_before' );
 
@@ -834,11 +863,10 @@ class OpusPrimusPosts {
 		if ( empty( $before ) ) {
 			$before = '<h2 class="post-title">';
 		}
-		/** End if - before */
+
 		if ( empty( $after ) ) {
 			$after = '</h2>';
 		}
-		/** End if - after */
 
 		/** Wrap the title in an anchor tag and provide a nice tool tip */
 		?>
@@ -857,7 +885,7 @@ class OpusPrimusPosts {
 		/** Add empty hook after the post title */
 		do_action( 'opus_post_title_after' );
 
-	} /** End function - post title */
+	}
 
 
 	/**
@@ -881,7 +909,7 @@ class OpusPrimusPosts {
 		/** Add empty hook after status update output */
 		do_action( 'opus_status_update_after' );
 
-	} /** End function - show status update */
+	}
 
 
 	/**
@@ -919,7 +947,6 @@ class OpusPrimusPosts {
 				apply_filters( 'opus_status_update_text', __( 'Updated again', 'opus-primus' ) )
 			);
 		}
-		/** End if - empty update text */
 
 		$output = '';
 
@@ -929,10 +956,10 @@ class OpusPrimusPosts {
 		if ( get_the_modified_time( 'U' ) != get_the_time( 'U' ) ) {
 			$time_diff = current_time( 'timestamp' ) - get_the_modified_time( 'U' );
 		}
-		/** End if - get the modified time */
 
 		/** Compare time difference between modification and actual post */
 		if ( ( $time_diff > $time_ago ) && ( $time_diff < 31449600 ) ) {
+
 			$output = sprintf(
 				'<span class="opus-status-update">%1$s</span>',
 				apply_filters(
@@ -944,22 +971,23 @@ class OpusPrimusPosts {
 					)
 				)
 			);
+
 		} elseif ( $time_diff >= 31449600 ) {
+
 			$output = sprintf(
 				'<span class="opus-status-update">%1$s</span>',
 				apply_filters( 'opus_status_update_over_year', $update_text . ' ' . __( 'over a year ago.', 'opus-primus' ) )
 			);
+
 		}
-		/** End if - time diff */
 
 		if ( 'status' == get_post_format() ) {
 			return $output;
 		} else {
 			return null;
 		}
-		/** End if - format is status */
 
-	} /** End function - status update */
+	}
 
 
 	/**
@@ -994,23 +1022,24 @@ class OpusPrimusPosts {
 			$sticky_text = __( 'Featured', 'opus-primus' );
 			$sticky_text = apply_filters( 'opus_default_sticky_flag', $sticky_text );
 		}
-		/** End if - sticky text */
 
 		if ( is_sticky() ) {
+
 			$output = '<a class="button" href="' . get_permalink() . '" title="' . sprintf( __( 'Go to %1$s post', 'opus-primus' ), strtolower( $sticky_text ) ) . '">'
 			          . '<span class="sticky-flag-text">'
 			          . $sticky_text
 			          . '</span>'
 			          . '</a>';
-		} else {
-			$output = '';
-		}
 
-		/** End if - is sticky */
+		} else {
+
+			$output = '';
+
+		}
 
 		return apply_filters( 'opus_sticky_flag', $output );
 
-	} /** End function - sticky flag */
+	}
 
 
 	/**
@@ -1031,6 +1060,7 @@ class OpusPrimusPosts {
 	 * @todo     Review "PHP Notice:  Undefined offset: 0 in /home/frumph/public_html/dev/wp-content/themes/opus-primus/includes/class.OpusPrimusPosts.php on line 1038"
 	 */
 	function uncategorized() {
+
 		/** @var $post_categories - holds all of the post category objects */
 		$post_categories = get_the_category();
 		/**
@@ -1042,15 +1072,12 @@ class OpusPrimusPosts {
 			if ( empty( $post_categories[1]->slug ) ) {
 				return true;
 			}
-			/** End if - empty */
 		}
-
-		/** End if - uncategorized */
 
 		return false;
 
 	}
-	/** End function - uncategorized */
+
 
 	/**
 	 * Hide Category Widget List Items
@@ -1082,7 +1109,6 @@ class OpusPrimusPosts {
 		return $cat_args;
 
 	}
-	/** End function - hide category widget list items */
 
 
-} /** End Opus Primus Posts class */
+}

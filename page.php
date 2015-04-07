@@ -41,7 +41,7 @@
 
 /** Create class objects */
 $opus_structures = OpusPrimusStructures::create_instance();
-$opus_posts      = new OpusPrimusPosts();
+$opus_posts      = OpusPrimusPosts::create_instance();
 
 get_header( 'page' );
 
