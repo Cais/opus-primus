@@ -50,7 +50,7 @@
  */
 
 /** Call OpusPrimusRouter global class */
-$opus_router = new OpusPrimusRouter();
+$opus_router = OpusPrimusRouter::create_instance();
 
 /** Add TagLines */
 locate_template( 'stanzas/taglines/class.OpusPrimusTagLines.php', true, true );

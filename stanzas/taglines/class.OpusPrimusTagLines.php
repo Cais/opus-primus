@@ -103,7 +103,7 @@ class OpusPrimusTagLines {
 	 */
 	function scripts_and_styles() {
 		/** Create OpusPrimusRouter class object */
-		$opus_router = new OpusPrimusRouter();
+		$opus_router = OpusPrimusRouter::create_instance();
 
 		/** Enqueue Styles */
 		/** Enqueue Taglines Stanza Stylesheets */

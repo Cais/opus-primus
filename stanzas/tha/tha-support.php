@@ -43,7 +43,7 @@
  */
 
 /** Call global class variable for the router */
-$opus_router = new OpusPrimusRouter();
+$opus_router = OpusPrimusRouter::create_instance();
 
 /** Sanity check - make sure the hooks file exists before adding the bridges */
 if ( file_exists( $opus_router->path( 'stanzas' ) . 'tha/tha-theme-hooks.php' ) ) {

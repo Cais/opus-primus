@@ -7,15 +7,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Code =
 * Added `widgets` to the HTML5 theme supported items
-* Change `OpusPrimusStructures` to a singleton style class
-* Change `OpusPrimusComments` to a singleton style class
-* Change `OpusPrimusArchives` to a singleton style class
-* Change `OpusPrimusAuthors` to a singleton style class
-* Change `OpusPrimusGallery` to a singleton style class
-* Change `OpusPrimusHeader` to a singleton style class
-* Change `OpusPrimusImages` to a singleton style class
-* Change `OpusPrimusNavigation` to a singleton style class
-* Change `OpusPrimusPosts` to a singleton style class
+* Change all classes to a singleton style
 * Ensure `$pagination` has been initialized in `OpusPrimusNavigation::pagination` method
 * Moved the `support_comment` method back into the `OpusPrimusStructures` class
 * Moved the `before_comment_form` and `comments_form_closed` methods back into the `OpusPrimusComments` class

@@ -33,9 +33,36 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
+ * @version     1.4
+ * @date        April 6, 2015
+ * Change `OpusPrimusRouter` to a singleton style class
+ *
  * @todo        Review for uses with Child-Themes
  */
 class OpusPrimusRouter {
+
+	private static $instance = null;
+
+	/**
+	 * Create Instance
+	 *
+	 * Creates a single instance of the class
+	 *
+	 * @package OpusPrimus
+	 * @since   1.4
+	 * @date    April 6, 2015
+	 *
+	 * @return null|OpusPrimusRouter
+	 */
+	public static function create_instance() {
+
+		if ( is_null( self::$instance ) ) {
+			self::$instance = new self();
+		}
+
+		return self::$instance;
+
+	}
 
 	/**
 	 * Constructor
@@ -44,7 +71,7 @@ class OpusPrimusRouter {
 	 * @since      1.3
 	 */
 	function __construct() {
-	} /** End function - construct */
+	}
 
 	/**
 	 * Path
@@ -63,7 +90,7 @@ class OpusPrimusRouter {
 	 */
 	function path( $string ) {
 		return get_template_directory() . '/' . $string . '/';
-	} /** End function - path */
+	}
 
 	/**
 	 * Path
@@ -83,6 +110,5 @@ class OpusPrimusRouter {
 	function path_uri( $string ) {
 		return get_template_directory_uri() . '/' . $string . '/';
 	}
-	/** End function - path uri */
 
-} /** End class - Opus Primus Router */
+}

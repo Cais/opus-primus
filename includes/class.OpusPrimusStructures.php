@@ -304,7 +304,7 @@ class OpusPrimusStructures {
 	 */
 	function bust_image() {
 		/** Create OpusPrimusRouter class object */
-		$opus_router = new OpusPrimusRouter();
+		$opus_router = OpusPrimusRouter::create_instance();
 
 		$bust_image_location = $opus_router->path_uri( 'images' ) . 'broken_beethoven.png';
 

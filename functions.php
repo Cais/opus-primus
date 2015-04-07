@@ -102,7 +102,7 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 	 */
 	function opus_primus_enqueue_scripts() {
 		/** Create OpusPrimusRouter class object */
-		$opus_router = new OpusPrimusRouter();
+		$opus_router = OpusPrimusRouter::create_instance();
 
 		/** Enqueue Theme Scripts */
 		/** Enqueue Opus Primus JavaScripts which will enqueue jQuery as a dependency */
@@ -345,7 +345,7 @@ function opus_primus_compatibility() {
 	require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
 
 	/** Create OpusPrimusRouter class object */
-	$opus_router = new OpusPrimusRouter();
+	$opus_router = OpusPrimusRouter::create_instance();
 
 	/**
 	 * Soliloquy - slider plugin
