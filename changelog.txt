@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised April 6, 2015
+Last revised April 11, 2015
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Version 1.4 =
@@ -7,6 +7,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Code =
 * Added `widgets` to the HTML5 theme supported items
+* Added `number_format_i18n` to better accommodate locale based values
 * Change all classes to a singleton style
 * Ensure `$pagination` has been initialized in `OpusPrimusNavigation::pagination` method
 * Moved the `support_comment` method back into the `OpusPrimusStructures` class

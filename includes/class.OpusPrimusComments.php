@@ -503,6 +503,11 @@ class OpusPrimusComments {
 	 * @uses    WP_Query::comments_by_type
 	 * @uses    __
 	 * @uses    _n
+	 * @uses    number_format_i18n
+	 *
+	 * @version 1.4
+	 * @date    April 11, 2015
+	 * Added `number_format_i18n` to better accommodate locale based values
 	 */
 	function comments_only_tab() {
 
@@ -522,7 +527,7 @@ class OpusPrimusComments {
 								__( '%1$s Comments', 'opus-primus' ),
 								count( $comments_only )
 							),
-							count( $comments_only )
+							number_format_i18n( count( $comments_only ) )
 						); ?>
 					</h3><!-- #comments -->
 				</a>
@@ -544,6 +549,11 @@ class OpusPrimusComments {
 	 * @uses    WP_Query::comments_by_type
 	 * @uses    __
 	 * @uses    _n
+	 * @uses    number_format_i18n
+	 *
+	 * @version 1.4
+	 * @date    April 11, 2015
+	 * Added `number_format_i18n` to better accommodate locale based values
 	 */
 	function pingbacks_only_tab() {
 
@@ -563,7 +573,7 @@ class OpusPrimusComments {
 								__( '%1$s Pingbacks', 'opus-primus' ),
 								count( $pingbacks_only )
 							),
-							count( $pingbacks_only )
+							number_format_i18n( count( $pingbacks_only ) )
 						); ?>
 					</h3><!-- #pingbacks -->
 				</a>
@@ -585,6 +595,11 @@ class OpusPrimusComments {
 	 * @uses    WP_Query::comments_by_type
 	 * @uses    __
 	 * @uses    _n
+	 * @uses    number_format_i18n
+	 *
+	 * @version 1.4
+	 * @date    April 11, 2015
+	 * Added `number_format_i18n` to better accommodate locale based values
 	 */
 	function trackbacks_only_tab() {
 
@@ -604,7 +619,7 @@ class OpusPrimusComments {
 								__( '%1$s Trackbacks', 'opus-primus' ),
 								count( $trackbacks_only )
 							),
-							count( $trackbacks_only )
+							number_format_i18n( count( $trackbacks_only ) )
 						); ?>
 					</h3><!-- #trackbacks -->
 				</a>
@@ -779,6 +794,11 @@ class OpusPrimusComments {
 	 * @USES    __
 	 * @uses    _n
 	 * @uses    do_action
+	 * @uses    number_format_i18n
+	 *
+	 * @version 1.4
+	 * @date    April 11, 2015
+	 * Added `number_format_i18n` to better accommodate locale based values
 	 */
 	function show_all_comments_count() {
 
@@ -790,7 +810,7 @@ class OpusPrimusComments {
 
 		/** Check if there are any comments */
 		if ( $total_comments > 0 ) {
-			$show_all_comments_count = sprintf( _n( __( '%s Response', 'opus-primus' ), __( '%s Responses', 'opus-primus' ), $total_comments ), $total_comments );
+			$show_all_comments_count = sprintf( _n( __( '%s Response', 'opus-primus' ), __( '%s Responses', 'opus-primus' ), $total_comments ), number_format_i18n( $total_comments ) );
 		} else {
 			$show_all_comments_count = __( 'No Responses', 'opus-primus' );
 		}

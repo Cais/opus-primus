@@ -382,24 +382,20 @@ class OpusPrimusGallery {
 	 * @uses    get_permalink
 	 * @uses    get_the_ID
 	 * @uses    is_single
+	 * @uses    number_format_i18n
 	 * @uses    the_title_attribute
 	 * @uses    wp_get_attachment_image
 	 * @uses    wp_parse_args
 	 *
 	 * @param   array|string $secondary_images_args
 	 *
-	 * @version 1.2.2
-	 * @date    September 3, 2013
-	 * Fixed issue with Gallery Post-Format being used when the `gallery`
-	 * shortcode is not used.
-	 *
-	 * @version 1.2.3
-	 * @date    February 2, 2014
-	 * Moved `secondary_images` wrapper into method
-	 *
 	 * @version 1.2.5
 	 * @date    July 20, 2014
 	 * Changed call to `$opus_defaults->number_of_secondary_images` to use `OPUS_NUMBER_OF_SECONDARY_IMAGES` constant
+	 *
+	 * @version 1.4
+	 * @date    April 11, 2015
+	 * Added `number_format_i18n` to better accommodate locale based values
 	 */
 	function secondary_images( $secondary_images_args = '' ) {
 
@@ -493,11 +489,11 @@ class OpusPrimusGallery {
 							'opus_more_images_text',
 							sprintf(
 								_n(
-									__( 'There is %2$sone more image%3$s in addition to these in the gallery.', 'opus-primus' ),
+									__( 'There is %2$s%1$s more image%3$s in addition to these in the gallery.', 'opus-primus' ),
 									__( 'There are %2$s%1$s more images%3$s in addition to these in the gallery.', 'opus-primus' ),
 									( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 )
 								),
-								( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 ),
+								number_format_i18n( ( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 ) ),
 								'<a href="' . get_permalink() . '" title="' . the_title_attribute(
 									array(
 										'before' => __( 'View', 'opus-primus' ) . ' ',
