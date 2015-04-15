@@ -37,6 +37,10 @@
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
  * Change classes from using underscores to using hyphens
+ *
+ * @version 1.4
+ * @date    April 15, 2015
+ * Minor correction to i18n string, null does not need to be translated
  */
 
 $opus_archives   = OpusPrimusArchives::create_instance();
@@ -84,7 +88,7 @@ do_action( 'opus_content_before' ); ?>
 			the_widget(
 				'WP_Widget_Recent_Posts',
 				$instance = array(
-					'title'     => __( '', 'opus-primus' ),
+					'title'     => '',
 					'number'    => '5',
 					'show_date' => true
 				)
