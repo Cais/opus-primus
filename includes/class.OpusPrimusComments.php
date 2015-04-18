@@ -398,21 +398,21 @@ class OpusPrimusComments {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @uses    __
-	 * @uses    comments_open
+	 * @uses    OpusPrimusComments::comments_closed_class
+	 * @uses    OpusPrimusComments::has_comments_class
 	 * @uses    comments_popup_link
 	 * @uses    do_action
-	 * @uses    get_comments_number
-	 * @uses    is_page
-	 * @uses    post_password_required
-	 *
-	 * @version 1.2
-	 * @date    July 21, 2013
-	 * Display comment count in meta details if comments exist and comments are closed
+	 * @uses    is_archive
+	 * @uses    is_single
 	 *
 	 * @version 1.2.4
 	 * @date    May 10, 2014
 	 * Added sanity check to only display comments_link when not in single view or in an archive view
+	 *
+	 * @version 1.4
+	 * @date    April 18, 2015
+	 * Refactored to use the WordPress core more effectively
+	 * Added two classes for use in rendering the text displayed ... or not
 	 */
 	function comments_link() {
 
@@ -422,51 +422,65 @@ class OpusPrimusComments {
 			/** Add empty hook before comments link */
 			do_action( 'opus_comments_link_before' );
 
-			echo '<h5 class="comments-link">';
 
-			if ( ! post_password_required() && comments_open() ) {
+			echo '<h5 class="comments-link ' . $this->comments_closed_class() . ' ' . $this->has_comments_class() . '">';
 
-				if ( is_page() ) {
-
-					comments_popup_link(
-						__( 'There are no comments for this page.', 'opus-primus' ),
-						__( 'There is 1 comment.', 'opus-primus' ),
-						__( 'There are % comments.', 'opus-primus' ),
-						'comments-link',
-						''
-					);
-
-				} else {
-
-					comments_popup_link(
-						__( 'There are no comments for this post.', 'opus-primus' ),
-						__( 'There is 1 comment.', 'opus-primus' ),
-						__( 'There are % comments.', 'opus-primus' ),
-						'comments-link',
-						__( 'Comments are closed.', 'opus-primus' )
-					);
-
-				}
-
-			}
-
-			if ( ! post_password_required() && ! comments_open() && ( get_comments_number() > 0 ) ) {
-
-				comments_popup_link(
-					__( 'There are no comments for this post and comments are closed.', 'opus-primus' ),
-					__( 'There is 1 comment and comments are closed.', 'opus-primus' ),
-					__( 'There are % comments and comments are closed.', 'opus-primus' ),
-					'comments-link',
-					__( 'There are no comments and comments are closed.', 'opus-primus' )
-				);
-
-			}
+			comments_popup_link();
 
 			echo '</h5><!-- .comments-link -->';
+
 
 			/** Add empty hook after comments link */
 			do_action( 'opus_comments_link_after' );
 
+		}
+
+	}
+
+
+	/**
+	 * Comments Closed Class
+	 *
+	 * Returns an appropriate string indicating if comments are open of closed
+	 * on the post or page in question
+	 *
+	 * @package OpusPrimus
+	 * @since   1.4
+	 *
+	 * @uses    comments_open
+	 *
+	 * @return string
+	 */
+	function comments_closed_class() {
+
+		if ( ! comments_open() ) {
+			return 'comments-closed';
+		} else {
+			return 'comments-open';
+		}
+
+	}
+
+
+	/**
+	 * Has Comments Class
+	 *
+	 * Returns an appropriate string indicating if comments exist for the post
+	 * or page in question
+	 *
+	 * @package OpusPrimus
+	 * @since   1.4
+	 *
+	 * @uses    get_comments_number
+	 *
+	 * @return string
+	 */
+	function has_comments_class() {
+
+		if ( 0 < get_comments_number() ) {
+			return 'has-comments';
+		} else {
+			return 'no-comments';
 		}
 
 	}

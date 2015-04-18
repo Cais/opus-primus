@@ -8,14 +8,17 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = Code =
 * Added `widgets` to the HTML5 theme supported items
 * Added `number_format_i18n` to better accommodate locale based values
+* Added two classes for use in rendering the comments link text displayed ... or not
 * Change all classes to a singleton style
 * Ensure `$pagination` has been initialized in `OpusPrimusNavigation::pagination` method
 * Moved the `support_comment` method back into the `OpusPrimusStructures` class
 * Moved the `before_comment_form` and `comments_form_closed` methods back into the `OpusPrimusComments` class
+* Refactored `OpusPrimusComments::comments_link` to use the WordPress core more effectively
 * Removed `$screen` parameter as not necessary in Taglines Stanza
 * Renamed file `class.OpusPrimusHeaders.php` to `class.OpusPrimusHeader.php` for consistency
 
 = CSS =
+* Added class definition to hide comment link text when comments are closed and there are no comments
 * Adjusted CSS to not reference `li` elements in default widget styles
 
 = Miscellaneous =
