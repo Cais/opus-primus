@@ -210,10 +210,14 @@ class OpusPrimusComments {
 	 * @uses    apply_filters
 	 *
 	 * @return  mixed|void - default glyph - asterisk (*)
+	 *
+	 * @version 1.4
+	 * @date    April 18, 2015
+	 * Symbolic characters do not need to be translated
 	 */
 	function comment_form_required_field_glyph() {
 
-		$glyph = apply_filters( 'opus_comment_form_required_field_glyph', __( '*', 'opus-primus' ) );
+		$glyph = apply_filters( 'opus_comment_form_required_field_glyph', '*' );
 
 		return $glyph;
 

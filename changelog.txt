@@ -1,5 +1,5 @@
 === Opus Primus changelog.txt ===
-Last revised April 15, 2015
+Last revised April 18, 2015
 Please note, the Opus Primus copyright can be found at the end of this file.
 
 = Version 1.4 =
@@ -19,9 +19,10 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Adjusted CSS to not reference `li` elements in default widget styles
 
 = Miscellaneous =
-* Added base `.po` file as well as English (Canadian) `.pomo` files
+* i18n: Added base `.po` file as well as English (Canadian) `.pomo` files
+* i18n: `null` does not need to be translated
+* i18n: Symbolic characters do not need to be translated
 * Continue removal of extraneous end of structure comments ...
-* Minor correction to i18n strings, null does not need to be translated
 
 /** ------------------------------------------------------------------------- */
 = Version 1.3.4 =
