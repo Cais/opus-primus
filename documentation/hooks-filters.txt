@@ -1,5 +1,5 @@
 Hooks – Filters
-Currently available: 88
+Currently available: 89
 
 There are many filter hooks available for use with Opus Primus.
 The naming convention follows this general guideline: opus-< relevant text description >
@@ -23,6 +23,7 @@ The filters are listed below by file, in order of appearance:
         opus_author_description_excerpt_length
         opus_author_description_excerpt_extender
         opus_author_description_excerpt_link
+        opus_authors_list
         opus_first_author_details_text
         opus_modified_author_by_text
     includes\class.OpusPrimusBreadcrumbs.php
@@ -109,5 +110,5 @@ The filters are listed below by file, in order of appearance:
         opus_tagline_output_’ . $post->ID
         opus_taglines_text_field_description
 
-Last revised Rare Disease Day, 2015
+Last revised April 24, 2015
 * currently unavailable

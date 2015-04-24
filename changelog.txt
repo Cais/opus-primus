@@ -9,6 +9,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added `widgets` to the HTML5 theme supported items
 * Added `number_format_i18n` to better accommodate locale based values
 * Added two classes for use in rendering the comments link text displayed ... or not
+* Added `Share the Author Wealth` method, not implemented as a display element, yet
 * Change all classes to a singleton style
 * Ensure `$pagination` has been initialized in `OpusPrimusNavigation::pagination` method
 * Moved the `support_comment` method back into the `OpusPrimusStructures` class
@@ -25,6 +26,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * i18n: Added base `.po` file as well as English (Canadian) `.pomo` files
 * i18n: `null` does not need to be translated
 * i18n: Symbolic characters do not need to be translated
+* Added `opus_authors_list` filter hook
 * Continue removal of extraneous end of structure comments ...
 
 /** ------------------------------------------------------------------------- */

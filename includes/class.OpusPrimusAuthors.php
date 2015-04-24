@@ -33,18 +33,13 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version     1.0.1
- * @date        February 21, 2013
- * Re-order methods: alphabetical
- * Modified action hooks to more semantic naming convention:
- * `opus_<section>_<placement>`
- *
  * @version     1.2
  * @date        April 17, 2013
  * Added `get_author_description` method
  *
  * @version     1.4
- * @date        April 5, 2015
+ * @date        April 24, 2015
+ * Added `Share the Author Wealth` method, not implemented as a display element
  * Change `OpusPrimusAuthors` to a singleton style class
  */
 class OpusPrimusAuthors {
@@ -375,6 +370,54 @@ class OpusPrimusAuthors {
 		do_action( 'opus_author_details_after' );
 
 		return;
+
+	}
+
+
+	/**
+	 * Share the Author Wealth
+	 *
+	 * Displays a list of all site authors with published posts
+	 *
+	 * @package     OpusPrimus
+	 * @since       1.4
+	 *
+	 * @internal    Not implemented as a display element, yet
+	 *
+	 * @uses        is_multi_author
+	 * @uses        wp_list_authors
+	 *
+	 * @param bool $echo
+	 *
+	 * @return null|string
+	 */
+	function share_the_author_wealth( $echo = true ) {
+
+		$author_args = array(
+			'optioncount'   => true,
+			'show_fullname' => true,
+			'echo'          => false,
+		);
+
+		if ( is_multi_author() ) {
+			$output = wp_list_authors( $author_args );
+		} else {
+			$output = null;
+		}
+
+		/** @var string $output - wrapped in ul element */
+		$output = '<ul class="authors-list">' . $output . '</ul><!-- authors-list -->';
+
+		/** @var string $output - last chance to change content with a hook */
+		$output = apply_filters( 'opus_authors_list', $output );
+
+		if ( true == $echo ) {
+			echo $output;
+		} else {
+			return $output;
+		}
+
+		return null;
 
 	}
 
