@@ -56,8 +56,9 @@
  * Adjusted CSS to not reference `li` elements in default widget styles
  *
  * @version	1.4
- * @date	April 18, 2015
+ * @date	May 7, 2015
  * Added class definition to hide comment link text when comments are closed and there are no comments
+ * Adjust breadcrumb font-size (reduced by 1px) to correct wrapping effect
  */
 
 /** Table of Contents ------------------------------------------------------- */
@@ -885,7 +886,7 @@ ul.nav-menu ul.sub-menu li, ul.nav-menu ul.children li, ul.nav-menu ul, ul.nav-m
 }
 
 ul.breadcrumb {
-	font-size: 15px;
+	font-size: 14px;
 	line-height: 29px;
 	list-style: none;
 	margin-bottom: 0;

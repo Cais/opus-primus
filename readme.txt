@@ -183,6 +183,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 = CSS =
 * Added class definition to hide comment link text when comments are closed and there are no comments
 * Adjusted CSS to not reference `li` elements in default widget styles
+* Adjust breadcrumb font-size (reduced by 1px) to correct wrapping effect
 
 = Miscellaneous =
 * i18n: Added base `.po` file as well as English (Canadian) `.pomo` files
