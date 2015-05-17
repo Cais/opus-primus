@@ -175,6 +175,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added context (`_x`) for complete byline phrase translation string
 * Change all classes to a singleton style
 * Ensure `$pagination` has been initialized in `OpusPrimusNavigation::pagination` method
+* Improved i18n implementation in search found results string
 * Moved the `support_comment` method back into the `OpusPrimusStructures` class
 * Moved the `before_comment_form` and `comments_form_closed` methods back into the `OpusPrimusComments` class
 * Refactored `OpusPrimusComments::comments_link` to use the WordPress core more effectively

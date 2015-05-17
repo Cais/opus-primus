@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Opus Primus\n"
-"POT-Creation-Date: 2015-04-15 11:24-0500\n"
-"PO-Revision-Date: 2015-04-15 11:25-0500\n"
+"POT-Creation-Date: 2015-05-17 12:49-0500\n"
+"PO-Revision-Date: 2015-05-17 12:49-0500\n"
 "Last-Translator: Edward Caissie <edward.caissie@gmail.com>\n"
 "Language-Team: Edward Caissie <edward.caissie@gmail.com>\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.5\n"
+"X-Generator: Poedit 1.7.6\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -19,28 +19,28 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: 404.php:67
+#: 404.php:71
 msgid "Something seems to have gone bust ..."
 msgstr ""
 
-#: 404.php:75
+#: 404.php:79
 msgid ""
 "This is the 404 error page; we seemed to have lost what you are looking for."
 msgstr ""
 
-#: 404.php:80
+#: 404.php:84
 msgid "Were you looking for a recent post?"
 msgstr ""
 
-#: 404.php:96
+#: 404.php:100
 msgid "Maybe you were looking for one these categories ..."
 msgstr ""
 
-#: 404.php:106 includes/class.OpusPrimusStructures.php:659
+#: 404.php:110 includes/class.OpusPrimusStructures.php:659
 msgid "Top 10 Categories by Post Count:"
 msgstr ""
 
-#: 404.php:113
+#: 404.php:117
 msgid "... or maybe you are interested in one of these tags?"
 msgstr ""
 
@@ -80,44 +80,44 @@ msgstr ""
 msgid "All Categories:"
 msgstr ""
 
-#: includes/class.OpusPrimusAuthors.php:212
+#: includes/class.OpusPrimusAuthors.php:207
 #, php-format
 msgid "View the full biography ... and all posts by %1$s"
 msgstr ""
 
-#: includes/class.OpusPrimusAuthors.php:283
+#: includes/class.OpusPrimusAuthors.php:278
 #: includes/class.OpusPrimusPosts.php:279
 #: includes/class.OpusPrimusPosts.php:400
 #, php-format
 msgid "View all posts by %1$s"
 msgstr ""
 
-#: includes/class.OpusPrimusAuthors.php:301
+#: includes/class.OpusPrimusAuthors.php:296
 #, php-format
 msgid "Visit the web site of %1$s or email %2$s."
 msgstr ""
 
-#: includes/class.OpusPrimusAuthors.php:317
+#: includes/class.OpusPrimusAuthors.php:312
 #, php-format
 msgid "Visit the web site of %1$s."
 msgstr ""
 
-#: includes/class.OpusPrimusAuthors.php:332
-#: includes/class.OpusPrimusAuthors.php:347
+#: includes/class.OpusPrimusAuthors.php:327
+#: includes/class.OpusPrimusAuthors.php:342
 #, php-format
 msgid "Email: %1$s."
 msgstr ""
 
-#: includes/class.OpusPrimusAuthors.php:361
+#: includes/class.OpusPrimusAuthors.php:356
 #, php-format
 msgid "Biography: %1$s"
 msgstr ""
 
-#: includes/class.OpusPrimusAuthors.php:433
+#: includes/class.OpusPrimusAuthors.php:476
 msgid "Author:"
 msgstr ""
 
-#: includes/class.OpusPrimusAuthors.php:463
+#: includes/class.OpusPrimusAuthors.php:506
 msgid "Modified by:"
 msgstr ""
 
@@ -131,7 +131,7 @@ msgid "Sticky Post"
 msgstr ""
 
 #: includes/class.OpusPrimusBreadcrumbs.php:235
-#: includes/class.OpusPrimusPosts.php:828
+#: includes/class.OpusPrimusPosts.php:833
 #, php-format
 msgid "View the %1$s archive."
 msgstr ""
@@ -154,109 +154,65 @@ msgstr ""
 msgid "Start a discussion ..."
 msgstr ""
 
-#: includes/class.OpusPrimusComments.php:216
-msgid "*"
-msgstr ""
-
-#: includes/class.OpusPrimusComments.php:270
+#: includes/class.OpusPrimusComments.php:274
 msgid ""
 "New comments are not being accepted at this time, please feel free to "
 "contact the post author directly."
 msgstr ""
 
-#: includes/class.OpusPrimusComments.php:346
+#: includes/class.OpusPrimusComments.php:350
 msgid "Name"
 msgstr ""
 
-#: includes/class.OpusPrimusComments.php:348
+#: includes/class.OpusPrimusComments.php:352
 msgid "Email"
 msgstr ""
 
-#: includes/class.OpusPrimusComments.php:350
+#: includes/class.OpusPrimusComments.php:354
 msgid "Website"
 msgstr ""
 
-#: includes/class.OpusPrimusComments.php:428
-msgid "There are no comments for this page."
-msgstr ""
-
-#: includes/class.OpusPrimusComments.php:429
-#: includes/class.OpusPrimusComments.php:439
-msgid "There is 1 comment."
-msgstr ""
-
-#: includes/class.OpusPrimusComments.php:430
-#: includes/class.OpusPrimusComments.php:440
-#, php-format
-msgid "There are % comments."
-msgstr ""
-
-#: includes/class.OpusPrimusComments.php:438
-msgid "There are no comments for this post."
-msgstr ""
-
-#: includes/class.OpusPrimusComments.php:442
-msgid "Comments are closed."
-msgstr ""
-
-#: includes/class.OpusPrimusComments.php:452
-msgid "There are no comments for this post and comments are closed."
-msgstr ""
-
-#: includes/class.OpusPrimusComments.php:453
-msgid "There is 1 comment and comments are closed."
-msgstr ""
-
-#: includes/class.OpusPrimusComments.php:454
-#, php-format
-msgid "There are % comments and comments are closed."
-msgstr ""
-
-#: includes/class.OpusPrimusComments.php:456
-msgid "There are no comments and comments are closed."
-msgstr ""
-
-#: includes/class.OpusPrimusComments.php:526
+#: includes/class.OpusPrimusComments.php:544
 #, php-format
 msgid "%1$s Comment"
 msgstr ""
 
-#: includes/class.OpusPrimusComments.php:527
+#: includes/class.OpusPrimusComments.php:545
 #, php-format
 msgid "%1$s Comments"
 msgstr ""
 
-#: includes/class.OpusPrimusComments.php:572
+#: includes/class.OpusPrimusComments.php:590
 #, php-format
 msgid "%1$s Pingback"
 msgstr ""
 
-#: includes/class.OpusPrimusComments.php:573
+#: includes/class.OpusPrimusComments.php:591
 #, php-format
 msgid "%1$s Pingbacks"
 msgstr ""
 
-#: includes/class.OpusPrimusComments.php:618
+#: includes/class.OpusPrimusComments.php:636
 #, php-format
 msgid "%1$s Trackback"
 msgstr ""
 
-#: includes/class.OpusPrimusComments.php:619
+#: includes/class.OpusPrimusComments.php:637
 #, php-format
 msgid "%1$s Trackbacks"
 msgstr ""
 
-#: includes/class.OpusPrimusComments.php:813
+#: includes/class.OpusPrimusComments.php:831
 #, php-format
 msgid "%s Response"
 msgstr ""
 
-#: includes/class.OpusPrimusComments.php:813
+#: includes/class.OpusPrimusComments.php:831
 #, php-format
 msgid "%s Responses"
 msgstr ""
 
-#: includes/class.OpusPrimusComments.php:815
+#: includes/class.OpusPrimusComments.php:833
 msgid "No Responses"
 msgstr ""
 
@@ -266,7 +222,7 @@ msgstr ""
 #: includes/class.OpusPrimusGallery.php:499
 #: includes/class.OpusPrimusImages.php:162
 #: includes/class.OpusPrimusImages.php:1129
-#: includes/class.OpusPrimusPosts.php:876
+#: includes/class.OpusPrimusPosts.php:881
 msgid "View"
 msgstr ""
 
@@ -276,7 +232,7 @@ msgstr ""
 #: includes/class.OpusPrimusGallery.php:500
 #: includes/class.OpusPrimusImages.php:163
 #: includes/class.OpusPrimusImages.php:1130
-#: includes/class.OpusPrimusPosts.php:877
+#: includes/class.OpusPrimusPosts.php:882
 msgid "only"
 msgstr ""
 
@@ -477,55 +433,56 @@ msgstr ""
 
 #: includes/class.OpusPrimusPosts.php:498
 #: includes/class.OpusPrimusPosts.php:510
-#: includes/class.OpusPrimusPosts.php:636
+#: includes/class.OpusPrimusPosts.php:641
 #, php-format
 msgid "on %1$s"
 msgstr ""
 
 #: includes/class.OpusPrimusPosts.php:499
 #: includes/class.OpusPrimusPosts.php:511
-#: includes/class.OpusPrimusPosts.php:643
+#: includes/class.OpusPrimusPosts.php:648
 #, php-format
 msgid "at %1$s"
 msgstr ""
 
-#: includes/class.OpusPrimusPosts.php:601 opus-primus-archive.php:58
+#: includes/class.OpusPrimusPosts.php:606 opus-primus-archive.php:58
 #: opus-primus.php:62
 msgid "Posted"
 msgstr ""
 
-#: includes/class.OpusPrimusPosts.php:619
+#: includes/class.OpusPrimusPosts.php:624
 #, php-format
+msgctxt "available if re-ordering phrase is necessary"
 msgid "%1$s %2$s %3$s %4$s"
 msgstr ""
 
-#: includes/class.OpusPrimusPosts.php:650
+#: includes/class.OpusPrimusPosts.php:655
 #, php-format
 msgid "by %1$s"
 msgstr ""
 
-#: includes/class.OpusPrimusPosts.php:748
+#: includes/class.OpusPrimusPosts.php:753
 msgid "Continue reading ... "
 msgstr ""
 
-#: includes/class.OpusPrimusPosts.php:947
+#: includes/class.OpusPrimusPosts.php:952
 msgid "Updated again"
 msgstr ""
 
-#: includes/class.OpusPrimusPosts.php:968
+#: includes/class.OpusPrimusPosts.php:973
 #, php-format
 msgid "%1$s %2$s ago."
 msgstr ""
 
-#: includes/class.OpusPrimusPosts.php:979
+#: includes/class.OpusPrimusPosts.php:984
 msgid "over a year ago."
 msgstr ""
 
-#: includes/class.OpusPrimusPosts.php:1022
+#: includes/class.OpusPrimusPosts.php:1027
 msgid "Featured"
 msgstr ""
 
-#: includes/class.OpusPrimusPosts.php:1028
+#: includes/class.OpusPrimusPosts.php:1033
 #, php-format
 msgid "Go to %1$s post"
 msgstr ""
@@ -801,12 +758,16 @@ msgstr ""
 msgid "Breaking News"
 msgstr ""
 
-#: search.php:74
-msgid "We found it!<br />It looks like you searched for ..."
+#: search.php:77
+msgid "We found it!"
 msgstr ""
 
-#: search.php:81
-msgid "<div class=\"opus-search-found-post-text\">Here are the results:</div>"
+#: search.php:79
+msgid "It looks like you searched for ..."
+msgstr ""
+
+#: search.php:92
+msgid "Here are the results:"
 msgstr ""
 
 #: stanzas/taglines/class.OpusPrimusTagLines.php:145

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Opus Primus\n"
-"POT-Creation-Date: 2015-05-17 12:38-0500\n"
-"PO-Revision-Date: 2015-05-17 12:38-0500\n"
+"POT-Creation-Date: 2015-05-17 12:49-0500\n"
+"PO-Revision-Date: 2015-05-17 12:49-0500\n"
 "Last-Translator: Edward Caissie <edward.caissie@gmail.com>\n"
 "Language-Team: Edward Caissie <edward.caissie@gmail.com>\n"
 "Language: en_CA\n"
@@ -803,13 +803,17 @@ msgstr "Proclamation"
 msgid "Breaking News"
 msgstr "Breaking News"
 
-#: search.php:74
-msgid "We found it!<br />It looks like you searched for ..."
-msgstr "We found it!<br />It looks like you searched for..."
+#: search.php:77
+msgid "We found it!"
+msgstr "We found it!"
 
-#: search.php:81
-msgid "<div class=\"opus-search-found-post-text\">Here are the results:</div>"
-msgstr "<div class=\"opus-search-found-post-text\">Here are the results:</div>"
+#: search.php:79
+msgid "It looks like you searched for ..."
+msgstr "It looks like you searched for..."
+
+#: search.php:92
+msgid "Here are the results:"
+msgstr "Here are the results:"
 
 #: stanzas/taglines/class.OpusPrimusTagLines.php:145
 #, php-format
@@ -820,6 +824,14 @@ msgstr "%1$s Tagline"
 #, php-format
 msgid "Add custom tagline to this %1$s: "
 msgstr "Add custom tagline to this %1$s:"
+
+#~ msgid ""
+#~ "<div class=\"opus-search-found-post-text\">Here are the results:</div>"
+#~ msgstr ""
+#~ "<div class=\"opus-search-found-post-text\">Here are the results:</div>"
+
+#~ msgid "We found it!<br />It looks like you searched for ..."
+#~ msgstr "We found it!<br />It looks like you searched for..."
 
 #~ msgid "%1$s %2$s %3$s %4$s"
 #~ msgstr "%1$s %2$s %3$s %4$s"

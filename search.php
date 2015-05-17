@@ -36,6 +36,10 @@
  * @date        February 21, 2013
  * Modified action hooks to more semantic naming convention:
  * `opus_<section>_<placement>`
+ *
+ * @version     1.4
+ * @date        May 17, 2015
+ * Improved i18n implementation in search found results string
  */
 
 /** Create OpusPrimusStructures class object */
@@ -68,25 +72,32 @@ do_action( 'opus_content_before' ); ?>
 
 			/** the_Loop - Starts */
 			if ( have_posts() ) {
+
+				/** @var string $opus_search_found_pre_text - create text string for output */
+				$opus_search_found_pre_text = __( 'We found it!', 'opus-primus' );
+				$opus_search_found_pre_text .= '<br />';
+				$opus_search_found_pre_text .= __( 'It looks like you searched for ...', 'opus-primus' );
+
 				printf(
 					sprintf(
 						'<h2 class="search-found-pre-text">%1$s <span class="search-query">%2$s</span></h2>',
-						apply_filters( 'opus_search_found_pre_text', __( 'We found it!<br />It looks like you searched for ...', 'opus-primus' ) ),
+						apply_filters( 'opus_search_found_pre_text', $opus_search_found_pre_text ),
 						get_search_query()
 					)
 				);
+
 				_e(
 					apply_filters(
 						'opus_search_found_post_text',
-						__( '<div class="opus-search-found-post-text">Here are the results:</div>', 'opus-primus' )
+						'<div class="opus-search-found-post-text">' . __( 'Here are the results:', 'opus-primus' ) . '</div>'
 					)
 				);
+
 				while ( have_posts() ) {
 
 					the_post();
 					/** Since we're in the_Loop we need to check the post type */
-					if ( 'page' == get_post_type() ) {
-						?>
+					if ( 'page' == get_post_type() ) { ?>
 
 						<div <?php post_class(); ?>>
 
@@ -100,20 +111,19 @@ do_action( 'opus_content_before' ); ?>
 
 						</div><!-- post classes -->
 
-					<?php
-					} else {
+					<?php } else {
 
 						get_template_part( 'opus-primus', get_post_format() );
 
 					}
-					/** End if - page is post type */
 
 				}
-				/** End while - have posts */
+
 			} else {
+
 				$opus_structures->no_search_results();
+
 			}
-			/** End if - have posts */
 
 			/** Create OpusPrimusNavigation class object */
 			$opus_navigation = OpusPrimusNavigation::create_instance();
