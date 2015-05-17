@@ -578,6 +578,7 @@ class OpusPrimusPosts {
 	 * @uses        OpusPrimusPosts::post_format_flag
 	 * @uses        OpusPrimusPosts::sticky_flag
 	 * @uses        __
+	 * @uses    _x
 	 * @uses        do_action
 	 * @uses        esc_attr
 	 * @uses        get_author_posts_url
@@ -593,6 +594,10 @@ class OpusPrimusPosts {
 	 * Added individual filters for anchor, date, time, and author elements
 	 * Added `echo` parameter to display the post coda instead of the byline meta details
 	 * Changed `opus_post_byline_details` filter to `opus_post_byline_phrase`
+	 *
+	 * @version 1.4
+	 * @date    May 17, 2015
+	 * Added context (`_x`) for complete byline phrase translation string
 	 */
 	function post_byline( $byline_args = '' ) {
 
@@ -616,7 +621,7 @@ class OpusPrimusPosts {
 		/** @var string $opus_post_byline - create byline phrase string */
 		$opus_post_byline = apply_filters(
 			'opus_post_byline_phrase',
-			__( '%1$s %2$s %3$s %4$s', 'opus-primus' )
+			_x( '%1$s %2$s %3$s %4$s', 'available if re-ordering phrase is necessary', 'opus-primus' )
 		);
 
 		if ( true == $byline_args['echo'] ) {

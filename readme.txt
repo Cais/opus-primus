@@ -172,6 +172,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Added `number_format_i18n` to better accommodate locale based values
 * Added two classes for use in rendering the comments link text displayed ... or not
 * Added `Share the Author Wealth` method, not implemented as a display element, yet
+* Added context (`_x`) for complete byline phrase translation string
 * Change all classes to a singleton style
 * Ensure `$pagination` has been initialized in `OpusPrimusNavigation::pagination` method
 * Moved the `support_comment` method back into the `OpusPrimusStructures` class
