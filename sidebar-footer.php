@@ -40,8 +40,7 @@
 do_action( 'opus_sidebar_footer_before' );
 
 /** Only resolve public facing space if there is an active footer widget area. */
-if ( is_active_sidebar( 'footer-middle' ) || is_active_sidebar( 'footer-left' ) || is_active_sidebar( 'footer-right' ) ) {
-	?>
+if ( is_active_sidebar( 'footer-middle' ) || is_active_sidebar( 'footer-left' ) || is_active_sidebar( 'footer-right' ) ) { ?>
 
 	<div id="footer-sidebar">
 		<div class="footer-widget-area three-columns-footer">
@@ -77,9 +76,7 @@ if ( is_active_sidebar( 'footer-middle' ) || is_active_sidebar( 'footer-left' ) 
 		<!-- .footer-widget-area.three-columns-footer -->
 	</div><!-- #footer-sidebar -->
 
-<?php
-}
-/** End if - is active sidebar */
+<?php }
 
 /** Add empty hook after Sidebar-Footer */
 do_action( 'opus_sidebar_footer_after' );

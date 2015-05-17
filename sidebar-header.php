@@ -42,8 +42,7 @@
 do_action( 'opus_sidebar_header_before' );
 
 /** Only resolve public facing space if there is an active header widget area. */
-if ( is_active_sidebar( 'header-middle' ) || is_active_sidebar( 'header-left' ) || is_active_sidebar( 'header-right' ) ) {
-	?>
+if ( is_active_sidebar( 'header-middle' ) || is_active_sidebar( 'header-left' ) || is_active_sidebar( 'header-right' ) ) { ?>
 
 	<div id="header-sidebar">
 		<div class="header-widget-area three-columns-header">
@@ -79,9 +78,7 @@ if ( is_active_sidebar( 'header-middle' ) || is_active_sidebar( 'header-left' ) 
 		<!-- .header-widget-area.three-columns-header -->
 	</div><!-- #header-sidebar -->
 
-<?php
-}
-/** End if - is active sidebar */
+<?php }
 
 /** Add empty hook after Sidebar-Header */
 do_action( 'opus_sidebar_header_after' );

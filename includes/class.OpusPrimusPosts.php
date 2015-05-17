@@ -936,8 +936,6 @@ class OpusPrimusPosts {
 	 * @uses     get_the_time
 	 * @uses     human_time_diff
 	 *
-	 * @internal Used with Post-Format: Status
-	 *
 	 * @return  null|string
 	 */
 	function status_update( $update_text = '', $time_ago = 604800 ) {

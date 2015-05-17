@@ -72,7 +72,6 @@ if ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' )
 	do_action( 'opus_first_sidebar_after' );
 
 }
-/** End if - active check in Sidebar Area One */
 
 /** Sanity check - do we have any active widgets in "Sidebar Area Two" */
 if ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) {
@@ -103,7 +102,6 @@ if ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' )
 	do_action( 'opus_second_sidebar_after' );
 
 }
-/** End if - active check in Sidebar Area Two */
 
 /** Add empty hook after sidebars */
 do_action( 'opus_sidebars_after' );

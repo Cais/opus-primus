@@ -70,7 +70,9 @@ do_action( 'opus_content_before' ); ?>
 
 			/** the_Loop - Starts */
 			if ( have_posts() ) {
+
 				while ( have_posts() ) {
+
 					the_post(); ?>
 
 					<div <?php post_class(); ?>>
@@ -98,7 +100,6 @@ do_action( 'opus_content_before' ); ?>
 								)
 							);
 						}
-						/** End if - show page byline */
 
 						/** Create OpusPrimusAuthors class object */
 						$opus_authors = OpusPrimusAuthors::create_instance();
@@ -113,13 +114,13 @@ do_action( 'opus_content_before' ); ?>
 
 					</div><!-- post classes -->
 
-				<?php
-				}
-				/** End while - have posts */
+				<?php }
+
 			} else {
+
 				$opus_structures->no_search_results();
+
 			}
-			/** End if - have posts */
 			/** the_Loop - Ends */
 
 			/** Add after loop sidebar */
