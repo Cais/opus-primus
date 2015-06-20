@@ -185,7 +185,7 @@ Last revised June 20, 2015
 * Adjust breadcrumb font-size (reduced by 1px) to correct wrapping effect
 
 = Miscellaneous =
-* i18n: Added base `.po` file as well as English (Canadian) `.pomo` files
+* i18n: Added base `opus-primus.pot` file as well as English (Canadian) files
 * i18n: `null` does not need to be translated
 * i18n: Symbolic characters do not need to be translated
 * Added `opus_authors_list` filter hook
