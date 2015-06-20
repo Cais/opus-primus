@@ -1,5 +1,4 @@
 === Opus Primus readme.txt ===
-* Last revised April 28, 2015
 
 == Contents ==
 * Copyright
@@ -160,12 +159,10 @@ be considered the most current at all times. The version of the guidelines
 included with the theme will simply be a copy of the noted page.
 
 == Changelog ==
-=== Opus Primus changelog.txt ===
-Last revised April 18, 2015
-Please note, the Opus Primus copyright can be found at the end of this file.
+Last revised June 20, 2015
 
 = Version 1.4 =
-* Released ...
+* Released June 2015
 
 = Code =
 * Added `widgets` to the HTML5 theme supported items

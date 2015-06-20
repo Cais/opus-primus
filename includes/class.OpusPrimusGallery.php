@@ -123,8 +123,8 @@ class OpusPrimusGallery {
 			do_action( 'opus_featured_image_before' );
 
 			/**
-			 * @var $size - standard WordPress image size; large as the intent is
-			 * to use as the featured image for gallery posts
+			 * @var $size - standard WordPress image size; large as the intent
+			 * is to use as the featured image for gallery posts
 			 */
 			if ( has_post_thumbnail() ) {
 
@@ -164,7 +164,10 @@ class OpusPrimusGallery {
 					)
 				);
 
-				/** If there are no attachments then use a random(?) image from the gallery */
+				/**
+				 * If there are no attachments then use a random(?) image from
+				 * the gallery
+				 */
 				if ( empty( $attachments ) ) {
 
 					$opus_thumb_id = intval( $this->get_gallery_attr_featured_ids() );
@@ -434,7 +437,9 @@ class OpusPrimusGallery {
 				'update_post_term_cache' => false,
 			) );
 
-			/** No images attached to post? Rerun query using actual "ids" values */
+			/**
+			 * No images attached to post? Rerun query using actual "ids" values
+			 */
 			if ( 0 == $images->found_posts ) {
 
 				$images = new WP_Query( array(
@@ -457,8 +462,9 @@ class OpusPrimusGallery {
 			}
 
 			/**
-			 * @var $size - standard WordPress image size; thumbnail in this case
-			 * as the intent is to use these images as additional from gallery
+			 * @var $size - standard WordPress image size; thumbnail in this
+			 * case as the intent is to use these images as additional from
+			 * gallery
 			 */
 			$size = 'thumbnail';
 
@@ -476,10 +482,10 @@ class OpusPrimusGallery {
 				}
 
 				/**
-				 * Display a message indicating if more images are in the gallery
-				 * than what are displayed in the post stream. If more images are
-				 * in the gallery the text showing how many more will link to the
-				 * single post.
+				 * Display a message indicating if more images are in the
+				 * gallery than what are displayed in the post stream. If more
+				 * images are in the gallery the text showing how many more will
+				 * link to the single post
 				 */
 				if ( ( $images->found_posts + 1 ) > ( $secondary_images_args['images'] + 1 ) ) {
 

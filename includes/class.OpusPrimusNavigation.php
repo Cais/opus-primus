@@ -305,8 +305,8 @@ class OpusPrimusNavigation {
 	 * @date        January 18, 2015
 	 * Changed to use `get_the_posts_pagination`
 	 *
-	 * @version 1.4
-	 * @date    March 31, 2015
+	 * @version     1.4
+	 * @date        March 31, 2015
 	 * Ensure `$pagination` has been initialized
 	 */
 	function pagination() {

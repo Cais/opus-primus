@@ -123,7 +123,10 @@ class OpusPrimusArchives {
 			$cloud_title = sprintf( __( 'The Top %1$s Tags Cloud:', 'opus-primus' ), $cloud_args['number'] );
 		}
 
-		/** If a cloud class has been created then make sure to add a space before so it will be properly added to the class list */
+		/**
+		 * If a cloud class has been created then make sure to add a space
+		 * before so it will be properly added to the class list
+		 */
 		if ( ! empty( $cloud_classes ) ) {
 			$cloud_classes = ' ' . $cloud_classes;
 		}
@@ -159,7 +162,7 @@ class OpusPrimusArchives {
 	 * Displays all of the categories with links to their respective category
 	 * archive page using `wp_list_categories` and all of its parameters.
 	 *
-	 * @link     http://codex.wordpress.org/Function_Reference/wp_list_categories
+	 * @link     https://codex.wordpress.org/Function_Reference/wp_list_categories
 	 * @example  categories_archive( array( 'number' => 12 ) );
 	 *
 	 * @package  OpusPrimus

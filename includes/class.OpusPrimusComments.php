@@ -416,7 +416,10 @@ class OpusPrimusComments {
 	 */
 	function comments_link() {
 
-		/** Only show the comments_link when not in single views or in archive views */
+		/**
+		 * Only show the comments_link when not in single views or in archive
+		 * views
+		 */
 		if ( ! is_single() || is_archive() ) {
 
 			/** Add empty hook before comments link */

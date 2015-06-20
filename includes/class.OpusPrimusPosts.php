@@ -491,6 +491,7 @@ class OpusPrimusPosts {
 			if ( 'time' == $tempus ) {
 
 				if ( get_the_time() <> get_the_modified_time() ) {
+
 					printf(
 						'<span class="author-modified-time">' . $mod_author_phrase . '</span>',
 						$mod_author_avatar,
@@ -498,11 +499,13 @@ class OpusPrimusPosts {
 						apply_filters( 'opus_post_byline_mod_date', sprintf( __( 'on %1$s', 'opus-primus' ), get_the_modified_date( get_option( 'date_format' ) ) ) ),
 						apply_filters( 'opus_post_byline_mod_time', sprintf( __( 'at %1$s', 'opus-primus' ), get_the_modified_time( get_option( 'time_format' ) ) ) )
 					);
+
 				}
 
 			} else {
 
 				if ( get_the_date() <> get_the_modified_date() ) {
+
 					printf(
 						'<span class="author-modified-date">' . $mod_author_phrase . '</span>',
 						$mod_author_avatar,
@@ -510,6 +513,7 @@ class OpusPrimusPosts {
 						apply_filters( 'opus_post_byline_mod_date', sprintf( __( 'on %1$s', 'opus-primus' ), get_the_modified_date( get_option( 'date_format' ) ) ) ),
 						apply_filters( 'opus_post_byline_mod_time', sprintf( __( 'at %1$s', 'opus-primus' ), get_the_modified_time( get_option( 'time_format' ) ) ) )
 					);
+
 				}
 
 			}
@@ -578,7 +582,7 @@ class OpusPrimusPosts {
 	 * @uses        OpusPrimusPosts::post_format_flag
 	 * @uses        OpusPrimusPosts::sticky_flag
 	 * @uses        __
-	 * @uses    _x
+	 * @uses        _x
 	 * @uses        do_action
 	 * @uses        esc_attr
 	 * @uses        get_author_posts_url
@@ -595,8 +599,8 @@ class OpusPrimusPosts {
 	 * Added `echo` parameter to display the post coda instead of the byline meta details
 	 * Changed `opus_post_byline_details` filter to `opus_post_byline_phrase`
 	 *
-	 * @version 1.4
-	 * @date    May 17, 2015
+	 * @version     1.4
+	 * @date        May 17, 2015
 	 * Added context (`_x`) for complete byline phrase translation string
 	 */
 	function post_byline( $byline_args = '' ) {
@@ -625,6 +629,7 @@ class OpusPrimusPosts {
 		);
 
 		if ( true == $byline_args['echo'] ) {
+
 			/** Output post byline */
 			echo '<div class="meta-byline">';
 
@@ -945,10 +950,12 @@ class OpusPrimusPosts {
 		 * and/or allow it to be filtered
 		 */
 		if ( empty( $update_text ) ) {
+
 			$update_text = sprintf(
 				'<span class="status-update-text">%1$s</span>',
 				apply_filters( 'opus_status_update_text', __( 'Updated again', 'opus-primus' ) )
 			);
+
 		}
 
 		$output = '';
@@ -1022,8 +1029,10 @@ class OpusPrimusPosts {
 	function sticky_flag( $sticky_text = '' ) {
 
 		if ( '' == $sticky_text ) {
+
 			$sticky_text = __( 'Featured', 'opus-primus' );
 			$sticky_text = apply_filters( 'opus_default_sticky_flag', $sticky_text );
+
 		}
 
 		if ( is_sticky() ) {
@@ -1059,8 +1068,6 @@ class OpusPrimusPosts {
 	 * @uses     is_page
 	 *
 	 * @return bool
-	 *
-	 * @todo     Review "PHP Notice:  Undefined offset: 0 in /home/frumph/public_html/dev/wp-content/themes/opus-primus/includes/class.OpusPrimusPosts.php on line 1038"
 	 */
 	function uncategorized() {
 
@@ -1072,9 +1079,11 @@ class OpusPrimusPosts {
 		 * return true ... else return false
 		 */
 		if ( ! is_page() && 'uncategorized' == $post_categories[0]->slug ) {
+
 			if ( empty( $post_categories[1]->slug ) ) {
 				return true;
 			}
+
 		}
 
 		return false;

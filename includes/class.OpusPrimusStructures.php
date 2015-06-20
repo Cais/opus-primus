@@ -126,6 +126,7 @@ class OpusPrimusStructures {
 	 * Removed $sep_location parameter as it was not used
 	 */
 	function browser_title( $old_title, $sep ) {
+
 		/** Call the page globals for setting page number */
 		global $page, $paged;
 
@@ -180,6 +181,7 @@ class OpusPrimusStructures {
 	 * Added Child-Theme "slug" for easier customizations
 	 */
 	function body_classes( $classes ) {
+
 		/** Theme Layout */
 		/** Test if all widget areas are inactive for one-column layout */
 		if ( ! ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' ) || is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' ) ) ) {
@@ -303,6 +305,7 @@ class OpusPrimusStructures {
 	 * Replace CONSTANT with OpusPrimusRouter method
 	 */
 	function bust_image() {
+
 		/** Create OpusPrimusRouter class object */
 		$opus_router = OpusPrimusRouter::create_instance();
 
@@ -471,6 +474,7 @@ class OpusPrimusStructures {
 		$active_theme_data = wp_get_theme();
 
 		if ( is_child_theme() ) {
+
 			$parent_theme_data = $active_theme_data->parent();
 			$credits           = sprintf(
 				'<div class="generator"><span class="credit-phrase">'
@@ -480,7 +484,9 @@ class OpusPrimusStructures {
 				'<span id="child-theme"><a href="' . esc_url( $active_theme_data->get( 'ThemeURI' ) ) . '" title="' . esc_attr( $active_theme_data->get( 'Description' ) ) . '">' . $active_theme_data->get( 'Name' ) . '</a></span>',
 				'<span id="wordpress-link"><a href="http://wordpress.org/" title="' . esc_attr__( 'Semantic Personal Publishing Platform', 'opus-primus' ) . '" rel="generator">WordPress</a></span>'
 			);
+
 		} else {
+
 			$credits = sprintf(
 				'<div class="generator"><span class="credit-phrase">'
 				. __( 'Played on %1$s; and, conducted by %2$s.', 'opus-primus' )
@@ -488,6 +494,7 @@ class OpusPrimusStructures {
 				'<span id="parent-theme"><a href="' . esc_url( $active_theme_data->get( 'ThemeURI' ) ) . '" title="' . esc_attr( $active_theme_data->get( 'Description' ) ) . '">' . $active_theme_data->get( 'Name' ) . '</a></span>',
 				'<span id="wordpress-link"><a href="http://wordpress.org/" title="' . esc_attr__( 'Semantic Personal Publishing Platform', 'opus-primus' ) . '" rel="generator">WordPress</a></span>'
 			);
+
 		}
 
 		return apply_filters( 'opus_credits', $credits );
@@ -822,7 +829,7 @@ class OpusPrimusStructures {
 		$opus_navigation->pagination_wrapped();
 		/** the_Loop ends */
 
-	} /** End function - the loop archives */
+	}
 
 
 	/**

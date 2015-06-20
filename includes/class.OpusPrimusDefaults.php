@@ -73,6 +73,7 @@ if ( ! class_exists( 'OpusPrimusDefaults' ) ) {
 	 * (programmatic not) in front of the instance of the method call.
 	 */
 	class OpusPrimusDefaults {
+
 		/** Constructor */
 		function __construct() {
 		}
@@ -91,7 +92,6 @@ if ( ! class_exists( 'OpusPrimusDefaults' ) ) {
 		}
 
 		function display_page_byline() {
-			/** return false; */
 			return true;
 		}
 
@@ -105,7 +105,5 @@ if ( ! class_exists( 'OpusPrimusDefaults' ) ) {
 		}
 
 	}
-	/** End Opus Primus Defaults class */
 
 }
-/** End if - class exists */

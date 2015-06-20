@@ -38,8 +38,8 @@
  * `opus_<section>_<placement>`
  * Change classes from using underscores to using hyphens
  *
- * @version 1.4
- * @date    April 15, 2015
+ * @version     1.4
+ * @date        April 15, 2015
  * Minor correction to i18n string, null does not need to be translated
  */
 
