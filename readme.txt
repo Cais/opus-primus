@@ -630,3 +630,4 @@ Last revised June 20, 2015
 * https://themes.trac.wordpress.org/ticket/21772 - Version 1.3 - November 2014
 * https://themes.trac.wordpress.org/ticket/23510 - Version 1.3.3 - March 2015
 * https://themes.trac.wordpress.org/ticket/23681 - Version 1.3.4 - March 2015
+* https://themes.trac.wordpress.org/ticket/25523 - Version 1.4 - June 2015
