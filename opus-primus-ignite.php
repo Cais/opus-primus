@@ -83,6 +83,3 @@ locate_template( 'includes/class.OpusPrimusAuthors.php', true, true );
 locate_template( 'includes/class.OpusPrimusArchives.php', true, true );
 /** Add Breadcrumbs */
 locate_template( 'includes/class.OpusPrimusBreadcrumbs.php', true, true );
-
-/** Add Stanzas */
-locate_template( 'stanzas/stanzas.php', true, true );
