@@ -79,17 +79,19 @@ written here.
 == Screenshots ==
 
 == Basic FAQ ==
+Q: Where did the Stanzas go?
+Although the Stanzas were meant as examples how to extend Opus Primus they were
+too close to "plugin territory" to remain as part of the theme proper.
+
+Pleas see the follow links for future references for the Stanzas:
+* "TagLines" Stanza: https://github.com/Cais/opus-primus-taglines-stanza
+
 Q: I just updated to version 1.3, what could be causing these child-theme errors?
 With version 1.3 of Opus Primus the calls to the classes were changed from using
 `require_once` to `locate_template`. This then followed files being updated from
 calling the class global variable to creating a "new" class instance as needed.
 This is expected to provide better child-theme compatibility going forward and
 only be a one-time correction for existing child-themes.
-
-Q: What are Stanzas?
-Stanzas are meant to add additional functionality specifically to Opus Primus by
-either using specific Opus Primus assets, such as a particular font face; or, by
-hooking into specific action and/or filter hooks only found in Opus Primus.
 
 Q: What is the difference between how the "Featured Image" is used on a post and
 how it is used on a page?
@@ -178,6 +180,8 @@ Last revised June 20, 2015
 * Refactored `OpusPrimusComments::comments_link` to use the WordPress core more effectively
 * Removed `$screen` parameter as not necessary in Taglines Stanza
 * Renamed file `class.OpusPrimusHeaders.php` to `class.OpusPrimusHeader.php` for consistency
+* Removed "TagLines" Stanza and made available as separate plugin - see https://github.com/Cais/opus-primus-taglines-stanza
+* Removed "THA" Stanza and made available as separate plugin - see https://github.com/Cais/opus-primus-tha-stanza
 
 = CSS =
 * Added class definition to hide comment link text when comments are closed and there are no comments

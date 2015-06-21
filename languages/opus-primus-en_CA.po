@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Opus Primus\n"
-"POT-Creation-Date: 2015-05-17 12:49-0500\n"
-"PO-Revision-Date: 2015-05-17 12:49-0500\n"
+"POT-Creation-Date: 2015-06-20 20:33-0500\n"
+"PO-Revision-Date: 2015-06-20 20:33-0500\n"
 "Last-Translator: Edward Caissie <edward.caissie@gmail.com>\n"
 "Language-Team: Edward Caissie <edward.caissie@gmail.com>\n"
 "Language: en_CA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.6\n"
+"X-Generator: Poedit 1.8.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -38,7 +38,7 @@ msgstr "Were you looking for a recent post?"
 msgid "Maybe you were looking for one these categories ..."
 msgstr "Maybe you were looking for one these categories..."
 
-#: 404.php:110 includes/class.OpusPrimusStructures.php:659
+#: 404.php:110 includes/class.OpusPrimusStructures.php:666
 msgid "Top 10 Categories by Post Count:"
 msgstr "Top 10 Categories by Post Count:"
 
@@ -64,8 +64,8 @@ msgid "You are viewing an image attached to %1$s"
 msgstr "You are viewing an image attached to %1$s"
 
 #: image.php:98 opus-primus-archive-gallery.php:50
-#: opus-primus-archive-image.php:50 opus-primus-gallery.php:57
-#: opus-primus-image.php:51
+#: opus-primus-archive-image.php:50 opus-primus-gallery.php:55
+#: opus-primus-image.php:49
 msgid "Displayed"
 msgstr "Displayed"
 
@@ -74,11 +74,11 @@ msgstr "Displayed"
 msgid "The Top %1$s Tags Cloud:"
 msgstr "The Top %1$s Tags Cloud:"
 
-#: includes/class.OpusPrimusArchives.php:133
+#: includes/class.OpusPrimusArchives.php:136
 msgid "The Cloud:"
 msgstr "The Cloud:"
 
-#: includes/class.OpusPrimusArchives.php:184
+#: includes/class.OpusPrimusArchives.php:187
 msgid "All Categories:"
 msgstr "All Categories:"
 
@@ -133,7 +133,7 @@ msgid "Sticky Post"
 msgstr "Sticky Post"
 
 #: includes/class.OpusPrimusBreadcrumbs.php:235
-#: includes/class.OpusPrimusPosts.php:833
+#: includes/class.OpusPrimusPosts.php:838
 #, php-format
 msgid "View the %1$s archive."
 msgstr "View the %1$s archive."
@@ -176,82 +176,82 @@ msgstr "Email"
 msgid "Website"
 msgstr "Website"
 
-#: includes/class.OpusPrimusComments.php:544
+#: includes/class.OpusPrimusComments.php:547
 #, php-format
 msgid "%1$s Comment"
 msgstr "%1$s Comment"
 
-#: includes/class.OpusPrimusComments.php:545
+#: includes/class.OpusPrimusComments.php:548
 #, php-format
 msgid "%1$s Comments"
 msgstr "%1$s Comments"
 
-#: includes/class.OpusPrimusComments.php:590
+#: includes/class.OpusPrimusComments.php:593
 #, php-format
 msgid "%1$s Pingback"
 msgstr "%1$s Pingback"
 
-#: includes/class.OpusPrimusComments.php:591
+#: includes/class.OpusPrimusComments.php:594
 #, php-format
 msgid "%1$s Pingbacks"
 msgstr "%1$s Pingbacks"
 
-#: includes/class.OpusPrimusComments.php:636
+#: includes/class.OpusPrimusComments.php:639
 #, php-format
 msgid "%1$s Trackback"
 msgstr "%1$s Trackback"
 
-#: includes/class.OpusPrimusComments.php:637
+#: includes/class.OpusPrimusComments.php:640
 #, php-format
 msgid "%1$s Trackbacks"
 msgstr "%1$s Trackbacks"
 
-#: includes/class.OpusPrimusComments.php:831
+#: includes/class.OpusPrimusComments.php:834
 #, php-format
 msgid "%s Response"
 msgstr "%s Response"
 
-#: includes/class.OpusPrimusComments.php:831
+#: includes/class.OpusPrimusComments.php:834
 #, php-format
 msgid "%s Responses"
 msgstr "%s Responses"
 
-#: includes/class.OpusPrimusComments.php:833
+#: includes/class.OpusPrimusComments.php:836
 msgid "No Responses"
 msgstr "No Responses"
 
 #: includes/class.OpusPrimusGallery.php:139
-#: includes/class.OpusPrimusGallery.php:176
-#: includes/class.OpusPrimusGallery.php:198
-#: includes/class.OpusPrimusGallery.php:499
+#: includes/class.OpusPrimusGallery.php:179
+#: includes/class.OpusPrimusGallery.php:201
+#: includes/class.OpusPrimusGallery.php:505
 #: includes/class.OpusPrimusImages.php:162
-#: includes/class.OpusPrimusImages.php:1129
-#: includes/class.OpusPrimusPosts.php:881
+#: includes/class.OpusPrimusImages.php:1140
+#: includes/class.OpusPrimusPosts.php:886
 msgid "View"
 msgstr "View"
 
 #: includes/class.OpusPrimusGallery.php:140
-#: includes/class.OpusPrimusGallery.php:177
-#: includes/class.OpusPrimusGallery.php:199
-#: includes/class.OpusPrimusGallery.php:500
+#: includes/class.OpusPrimusGallery.php:180
+#: includes/class.OpusPrimusGallery.php:202
+#: includes/class.OpusPrimusGallery.php:506
 #: includes/class.OpusPrimusImages.php:163
-#: includes/class.OpusPrimusImages.php:1130
-#: includes/class.OpusPrimusPosts.php:882
+#: includes/class.OpusPrimusImages.php:1141
+#: includes/class.OpusPrimusPosts.php:887
 msgid "only"
 msgstr "only"
 
-#: includes/class.OpusPrimusGallery.php:492
+#: includes/class.OpusPrimusGallery.php:498
 #, php-format
 msgid "There is %2$s%1$s more image%3$s in addition to these in the gallery."
 msgstr "There is %2$s%1$s more image%3$s in addition to these in the gallery."
 
-#: includes/class.OpusPrimusGallery.php:493
+#: includes/class.OpusPrimusGallery.php:499
 #, php-format
 msgid "There are %2$s%1$s more images%3$s in addition to these in the gallery."
 msgstr ""
 "There are %2$s%1$s more images%3$s in addition to these in the gallery."
 
-#: includes/class.OpusPrimusImages.php:120
+#: includes/class.OpusPrimusImages.php:119
 msgid ""
 "The Image archive looks much better if the image is set as an attachment of "
 "the post."
@@ -264,97 +264,97 @@ msgstr ""
 msgid "Image Title: %1$s"
 msgstr "Image Title: %1$s"
 
-#: includes/class.OpusPrimusImages.php:189
+#: includes/class.OpusPrimusImages.php:180
 #, php-format
 msgid "Image Caption: %1$s"
 msgstr "Image Caption: %1$s"
 
-#: includes/class.OpusPrimusImages.php:202
+#: includes/class.OpusPrimusImages.php:193
 #, php-format
 msgid "Image Description: %1$s"
 msgstr "Image Description: %1$s"
 
-#: includes/class.OpusPrimusImages.php:262
+#: includes/class.OpusPrimusImages.php:253
 msgid "Copyright:"
 msgstr "Copyright:"
 
-#: includes/class.OpusPrimusImages.php:269
+#: includes/class.OpusPrimusImages.php:260
 msgid "Uploaded:"
 msgstr "Uploaded:"
 
-#: includes/class.OpusPrimusImages.php:276
+#: includes/class.OpusPrimusImages.php:267
 msgid "Camera:"
 msgstr "Camera:"
 
-#: includes/class.OpusPrimusImages.php:283
+#: includes/class.OpusPrimusImages.php:274
 msgid "Shutter Speed:"
 msgstr "Shutter Speed:"
 
-#: includes/class.OpusPrimusImages.php:290
+#: includes/class.OpusPrimusImages.php:281
 msgid "Aperture:"
 msgstr "Aperture:"
 
-#: includes/class.OpusPrimusImages.php:297
+#: includes/class.OpusPrimusImages.php:288
 msgid "Caption:"
 msgstr "Caption:"
 
-#: includes/class.OpusPrimusImages.php:304
+#: includes/class.OpusPrimusImages.php:295
 msgid "Focal Length:"
 msgstr "Focal Length:"
 
-#: includes/class.OpusPrimusImages.php:311
+#: includes/class.OpusPrimusImages.php:302
 msgid "ISO Speed:"
 msgstr "ISO Speed:"
 
-#: includes/class.OpusPrimusImages.php:318
+#: includes/class.OpusPrimusImages.php:309
 msgid "Title:"
 msgstr "Title:"
 
-#: includes/class.OpusPrimusImages.php:374
+#: includes/class.OpusPrimusImages.php:366
 msgid "Image Details"
 msgstr "Image Details"
 
-#: includes/class.OpusPrimusImages.php:384
+#: includes/class.OpusPrimusImages.php:376
 msgid "Dimensions"
 msgstr "Dimensions"
 
-#: includes/class.OpusPrimusImages.php:387
+#: includes/class.OpusPrimusImages.php:379
 msgid "Copyright"
 msgstr "Copyright"
 
-#: includes/class.OpusPrimusImages.php:390
+#: includes/class.OpusPrimusImages.php:382
 msgid "Uploaded"
 msgstr "Uploaded"
 
-#: includes/class.OpusPrimusImages.php:393
+#: includes/class.OpusPrimusImages.php:385
 msgid "Camera"
 msgstr "Camera"
 
-#: includes/class.OpusPrimusImages.php:396
+#: includes/class.OpusPrimusImages.php:388
 msgid "Shutter Speed"
 msgstr "Shutter Speed"
 
-#: includes/class.OpusPrimusImages.php:399
+#: includes/class.OpusPrimusImages.php:391
 msgid "Aperture"
 msgstr "Aperture"
 
-#: includes/class.OpusPrimusImages.php:402
+#: includes/class.OpusPrimusImages.php:394
 msgid "Caption"
 msgstr "Caption"
 
-#: includes/class.OpusPrimusImages.php:405
+#: includes/class.OpusPrimusImages.php:397
 msgid "Focal Length"
 msgstr "Focal Length"
 
-#: includes/class.OpusPrimusImages.php:408
+#: includes/class.OpusPrimusImages.php:400
 msgid "ISO Speed"
 msgstr "ISO Speed"
 
-#: includes/class.OpusPrimusImages.php:411
+#: includes/class.OpusPrimusImages.php:403
 msgid "Title"
 msgstr "Title"
 
-#: includes/class.OpusPrimusImages.php:583
+#: includes/class.OpusPrimusImages.php:580
 #, php-format
 msgid "&copy; %1$s %2$s"
 msgstr "&copy; %1$s %2$s"
@@ -368,13 +368,13 @@ msgstr "%1$s (Size: %2$s by %3$s)"
 msgid "Original image"
 msgstr "Original image"
 
-#: includes/class.OpusPrimusImages.php:785
-#: includes/class.OpusPrimusImages.php:787
 #: includes/class.OpusPrimusImages.php:790
+#: includes/class.OpusPrimusImages.php:792
+#: includes/class.OpusPrimusImages.php:797
 msgid "sec"
 msgstr "sec"
 
-#: includes/class.OpusPrimusImages.php:842
+#: includes/class.OpusPrimusImages.php:852
 #, php-format
 msgid "%1$s @ %2$s"
 msgstr "%1$s @ %2$s"
@@ -446,111 +446,111 @@ msgstr "Last modified by %1$s %2$s %3$s %4$s."
 msgid "and modified %3$s %4$s."
 msgstr "and modified %3$s %4$s."
 
-#: includes/class.OpusPrimusPosts.php:498
-#: includes/class.OpusPrimusPosts.php:510
-#: includes/class.OpusPrimusPosts.php:641
+#: includes/class.OpusPrimusPosts.php:499
+#: includes/class.OpusPrimusPosts.php:513
+#: includes/class.OpusPrimusPosts.php:646
 #, php-format
 msgid "on %1$s"
 msgstr "on %1$s"
 
-#: includes/class.OpusPrimusPosts.php:499
-#: includes/class.OpusPrimusPosts.php:511
-#: includes/class.OpusPrimusPosts.php:648
+#: includes/class.OpusPrimusPosts.php:500
+#: includes/class.OpusPrimusPosts.php:514
+#: includes/class.OpusPrimusPosts.php:653
 #, php-format
 msgid "at %1$s"
 msgstr "at %1$s"
 
-#: includes/class.OpusPrimusPosts.php:606 opus-primus-archive.php:58
-#: opus-primus.php:62
+#: includes/class.OpusPrimusPosts.php:610 opus-primus-archive.php:58
+#: opus-primus.php:60
 msgid "Posted"
 msgstr "Posted"
 
-#: includes/class.OpusPrimusPosts.php:624
+#: includes/class.OpusPrimusPosts.php:628
 #, php-format
 msgctxt "available if re-ordering phrase is necessary"
 msgid "%1$s %2$s %3$s %4$s"
 msgstr "%1$s %2$s %3$s %4$s"
 
-#: includes/class.OpusPrimusPosts.php:655
+#: includes/class.OpusPrimusPosts.php:660
 #, php-format
 msgid "by %1$s"
 msgstr "by %1$s"
 
-#: includes/class.OpusPrimusPosts.php:753
+#: includes/class.OpusPrimusPosts.php:758
 msgid "Continue reading ... "
 msgstr "Continue reading..."
 
-#: includes/class.OpusPrimusPosts.php:952
+#: includes/class.OpusPrimusPosts.php:956
 msgid "Updated again"
 msgstr "Updated again"
 
-#: includes/class.OpusPrimusPosts.php:973
+#: includes/class.OpusPrimusPosts.php:978
 #, php-format
 msgid "%1$s %2$s ago."
 msgstr "%1$s %2$s ago."
 
-#: includes/class.OpusPrimusPosts.php:984
+#: includes/class.OpusPrimusPosts.php:989
 msgid "over a year ago."
 msgstr "over a year ago."
 
-#: includes/class.OpusPrimusPosts.php:1027
+#: includes/class.OpusPrimusPosts.php:1033
 msgid "Featured"
 msgstr "Featured"
 
-#: includes/class.OpusPrimusPosts.php:1033
+#: includes/class.OpusPrimusPosts.php:1040
 #, php-format
 msgid "Go to %1$s post"
 msgstr "Go to %1$s post"
 
-#: includes/class.OpusPrimusStructures.php:150
+#: includes/class.OpusPrimusStructures.php:151
 #, php-format
 msgid "Page %s"
 msgstr "Page %s"
 
-#: includes/class.OpusPrimusStructures.php:410
+#: includes/class.OpusPrimusStructures.php:413
 #, php-format
 msgid "Copyright &copy; %1$s"
 msgstr "Copyright &copy; %1$s"
 
-#: includes/class.OpusPrimusStructures.php:412
+#: includes/class.OpusPrimusStructures.php:415
 #, php-format
 msgid "Copyright &copy; %1$s-%2$s"
 msgstr "Copyright &copy; %1$s-%2$s"
 
-#: includes/class.OpusPrimusStructures.php:425
+#: includes/class.OpusPrimusStructures.php:428
 #, php-format
 msgid "To the web site of %1$s"
 msgstr "To the web site of %1$s"
 
-#: includes/class.OpusPrimusStructures.php:434
+#: includes/class.OpusPrimusStructures.php:437
 msgid "All Rights Reserved."
 msgstr "All Rights Reserved."
 
-#: includes/class.OpusPrimusStructures.php:477
+#: includes/class.OpusPrimusStructures.php:481
 #, php-format
 msgid "Played on %1$s; tuned to %2$s; and, conducted by %3$s."
 msgstr "Played on %1$s; tuned to %2$s; and, conducted by %3$s."
 
-#: includes/class.OpusPrimusStructures.php:481
-#: includes/class.OpusPrimusStructures.php:489
+#: includes/class.OpusPrimusStructures.php:485
+#: includes/class.OpusPrimusStructures.php:495
 msgid "Semantic Personal Publishing Platform"
 msgstr "Semantic Personal Publishing Platform"
 
-#: includes/class.OpusPrimusStructures.php:486
+#: includes/class.OpusPrimusStructures.php:492
 #, php-format
 msgid "Played on %1$s; and, conducted by %2$s."
 msgstr "Played on %1$s; and, conducted by %2$s."
 
-#: includes/class.OpusPrimusStructures.php:621
+#: includes/class.OpusPrimusStructures.php:628
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Search Results for: %s"
 
-#: includes/class.OpusPrimusStructures.php:634
+#: includes/class.OpusPrimusStructures.php:641
 msgid "No results were found, would you like to try another search ..."
 msgstr "No results were found, would you like to try another search..."
 
-#: includes/class.OpusPrimusStructures.php:643
+#: includes/class.OpusPrimusStructures.php:650
 msgid "... or try one of the links below."
 msgstr "... or try one of the links below."
 
@@ -711,7 +711,7 @@ msgid "This widget area appears in the footer on the right side of the theme."
 msgstr "This widget area appears in the footer on the right side of the theme."
 
 #: opus-primus-archive-aside.php:52 opus-primus-archive-chat.php:52
-#: opus-primus-aside.php:56 opus-primus-chat.php:56
+#: opus-primus-aside.php:54 opus-primus-chat.php:54
 msgid "Said"
 msgstr "Said"
 
@@ -724,22 +724,22 @@ msgstr "Noteworthy"
 #: opus-primus-archive-image.php:64 opus-primus-archive-link.php:65
 #: opus-primus-archive-quote.php:64 opus-primus-archive-status.php:64
 #: opus-primus-archive-video.php:65 opus-primus-archive.php:64
-#: opus-primus-aside.php:70 opus-primus-audio.php:68 opus-primus-chat.php:68
-#: opus-primus-gallery.php:78 opus-primus-image.php:62 opus-primus-link.php:68
-#: opus-primus-quote.php:68 opus-primus-status.php:68 opus-primus-video.php:68
-#: opus-primus.php:68
+#: opus-primus-aside.php:68 opus-primus-audio.php:66 opus-primus-chat.php:66
+#: opus-primus-gallery.php:76 opus-primus-image.php:60 opus-primus-link.php:66
+#: opus-primus-quote.php:66 opus-primus-status.php:66 opus-primus-video.php:66
+#: opus-primus.php:66
 msgid "Pages:"
 msgstr "Pages:"
 
-#: opus-primus-archive-audio.php:52 opus-primus-audio.php:56
+#: opus-primus-archive-audio.php:52 opus-primus-audio.php:54
 msgid "Played"
 msgstr "Played"
 
-#: opus-primus-archive-audio.php:57 opus-primus-audio.php:61
+#: opus-primus-archive-audio.php:57 opus-primus-audio.php:59
 msgid "Listen"
 msgstr "Listen"
 
-#: opus-primus-archive-chat.php:57 opus-primus-chat.php:61
+#: opus-primus-archive-chat.php:57 opus-primus-chat.php:59
 msgid "Exclaimed"
 msgstr "Exclaimed"
 
@@ -751,15 +751,15 @@ msgstr "Exhibited"
 msgid "Matted"
 msgstr "Matted"
 
-#: opus-primus-archive-link.php:52 opus-primus-link.php:56
+#: opus-primus-archive-link.php:52 opus-primus-link.php:54
 msgid "Linked"
 msgstr "Linked"
 
-#: opus-primus-archive-link.php:57 opus-primus-link.php:61
+#: opus-primus-archive-link.php:57 opus-primus-link.php:59
 msgid "Follow"
 msgstr "Follow"
 
-#: opus-primus-archive-quote.php:52 opus-primus-quote.php:56
+#: opus-primus-archive-quote.php:52 opus-primus-quote.php:54
 msgid "Recited"
 msgstr "Recited"
 
@@ -767,7 +767,7 @@ msgstr "Recited"
 msgid "Proclaimed"
 msgstr "Proclaimed"
 
-#: opus-primus-archive-status.php:52 opus-primus-status.php:56
+#: opus-primus-archive-status.php:52 opus-primus-status.php:54
 msgid "Updated"
 msgstr "Updated"
 
@@ -775,31 +775,31 @@ msgstr "Updated"
 msgid "Newsworthy"
 msgstr "Newsworthy"
 
-#: opus-primus-archive-video.php:52 opus-primus-video.php:56
+#: opus-primus-archive-video.php:52 opus-primus-video.php:54
 msgid "Added"
 msgstr "Added"
 
-#: opus-primus-archive-video.php:57 opus-primus-video.php:61
+#: opus-primus-archive-video.php:57 opus-primus-video.php:59
 msgid "Watch"
 msgstr "Watch"
 
-#: opus-primus-aside.php:61
+#: opus-primus-aside.php:59
 msgid "Important"
 msgstr "Important"
 
-#: opus-primus-gallery.php:62
+#: opus-primus-gallery.php:60
 msgid "Exhibition"
 msgstr "Exhibition"
 
-#: opus-primus-image.php:56
+#: opus-primus-image.php:54
 msgid "Framed"
 msgstr "Framed"
 
-#: opus-primus-quote.php:61
+#: opus-primus-quote.php:59
 msgid "Proclamation"
 msgstr "Proclamation"
 
-#: opus-primus-status.php:61
+#: opus-primus-status.php:59
 msgid "Breaking News"
 msgstr "Breaking News"
 
@@ -815,15 +815,11 @@ msgstr "It looks like you searched for..."
 msgid "Here are the results:"
 msgstr "Here are the results:"
 
-#: stanzas/taglines/class.OpusPrimusTagLines.php:145
-#, php-format
-msgid "%1$s Tagline"
-msgstr "%1$s Tagline"
+#~ msgid "%1$s Tagline"
+#~ msgstr "%1$s Tagline"
 
-#: stanzas/taglines/class.OpusPrimusTagLines.php:251
-#, php-format
-msgid "Add custom tagline to this %1$s: "
-msgstr "Add custom tagline to this %1$s:"
+#~ msgid "Add custom tagline to this %1$s: "
+#~ msgstr "Add custom tagline to this %1$s:"
 
 #~ msgid ""
 #~ "<div class=\"opus-search-found-post-text\">Here are the results:</div>"

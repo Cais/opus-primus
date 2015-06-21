@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Opus Primus\n"
-"POT-Creation-Date: 2015-06-20 13:59-0500\n"
-"PO-Revision-Date: 2015-06-20 13:59-0500\n"
+"POT-Creation-Date: 2015-06-20 20:34-0500\n"
+"PO-Revision-Date: 2015-06-20 20:34-0500\n"
 "Last-Translator: Edward Caissie <edward.caissie@gmail.com>\n"
 "Language-Team: Edward Caissie <edward.caissie@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -768,16 +768,6 @@ msgstr ""
 
 #: search.php:92
 msgid "Here are the results:"
-msgstr ""
-
-#: stanzas/taglines/class.OpusPrimusTagLines.php:148
-#, php-format
-msgid "%1$s Tagline"
-msgstr ""
-
-#: stanzas/taglines/class.OpusPrimusTagLines.php:254
-#, php-format
-msgid "Add custom tagline to this %1$s: "
 msgstr ""
 
 #. Theme Name of the plugin/theme
