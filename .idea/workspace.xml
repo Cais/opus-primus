@@ -5,6 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/stanzas/new-custom-stanza.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/stanzas/new-custom-stanza/class.OpusPrimusNewCustomStanza.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/stanzas/new-custom-stanza/new-custom-stanza.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/stanzas/stanzas.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/stanzas/taglines/class.OpusPrimusTagLines.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/stanzas/taglines/opus-primus.taglines.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/stanzas/taglines/taglines-readme.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/stanzas/tha/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/stanzas/tha/tha-example-index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/stanzas/tha/tha-readme.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/stanzas/tha/tha-support.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/stanzas/tha/tha-theme-hooks.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documentation/hooks-filters.txt" afterPath="$PROJECT_DIR$/documentation/hooks-filters.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -34,8 +47,8 @@
       <file leaf-file-name="readme.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/readme.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.1555557" vertical-offset="0" max-vertical-offset="9495">
-              <caret line="187" column="77" selection-start-line="187" selection-start-column="77" selection-end-line="187" selection-end-column="77" />
+            <state vertical-scroll-proportion="0.65645516" vertical-offset="2445" max-vertical-offset="9555">
+              <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -356,12 +369,6 @@
       <option name="number" value="Default" />
       <updated>1395521979616</updated>
     </task>
-    <task id="LOCAL-00561" summary="* Added some escaping sanitization and linked Featured Image to post via the post ID">
-      <created>1425161358658</created>
-      <option name="number" value="00561" />
-      <option name="project" value="LOCAL" />
-      <updated>1425161358658</updated>
-    </task>
     <task id="LOCAL-00562" summary="* Begin removal of extraneous end of structure comments ...&#10;* Extracted code from `featured_thumbnail` method to create `featured_thumbnail_single_view` method">
       <created>1425164013385</created>
       <option name="number" value="00562" />
@@ -650,7 +657,13 @@
       <option name="project" value="LOCAL" />
       <updated>1434823226748</updated>
     </task>
-    <option name="localTasksCounter" value="610" />
+    <task id="LOCAL-00610" summary="- minor `readme.txt` update">
+      <created>1434823554024</created>
+      <option name="number" value="00610" />
+      <option name="project" value="LOCAL" />
+      <updated>1434823554024</updated>
+    </task>
+    <option name="localTasksCounter" value="611" />
     <servers>
       <GitHub shared="false" url="github.com">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -689,8 +702,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="825" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29740793" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32122904" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -703,10 +717,9 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36409155" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36409155" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="683" y="423" width="128" height="37" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29795918" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -757,7 +770,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* Change `OpusPrimusComments` to a singleton style class&#10;- code reformatting" />
     <MESSAGE value="* Removed `$screen` parameter as not necessary in Taglines Stanza" />
     <MESSAGE value="* Ensure `$pagination` has been initialized in `OpusPrimusNavigation::pagination` method" />
     <MESSAGE value="* Moved the `before_comment_form` and `comments_form_closed` methods back into the `OpusPrimusComments` class" />
@@ -782,7 +794,8 @@
     <MESSAGE value="* Improved i18n implementation in search found results string&#10;- updated language files" />
     <MESSAGE value="- minor comment/inline documentation updates" />
     <MESSAGE value="- changed `opus-primus.po` extension to `.pot`" />
-    <option name="LAST_COMMIT_MESSAGE" value="- changed `opus-primus.po` extension to `.pot`" />
+    <MESSAGE value="- minor `readme.txt` update" />
+    <option name="LAST_COMMIT_MESSAGE" value="- minor `readme.txt` update" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="WordPressConfiguration" enabled="true">
@@ -799,27 +812,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../wp-includes/widgets.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="153.70833" vertical-offset="11714" max-vertical-offset="25710">
-          <caret line="547" column="21" selection-start-line="547" selection-start-column="21" selection-end-line="547" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../wp-includes/default-widgets.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-31.0" vertical-offset="20766" max-vertical-offset="22200">
-          <caret line="1439" column="12" selection-start-line="1439" selection-start-column="12" selection-end-line="1439" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changelog.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="7305">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/opus-primus.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.6973126" vertical-offset="493" max-vertical-offset="1200">
@@ -1082,7 +1074,7 @@
         <state vertical-scroll-proportion="-15.333333" vertical-offset="1027" max-vertical-offset="1710">
           <caret line="93" column="40" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
           <folding>
-            <element signature="e#6#1914#0#PHP" expanded="true" />
+            <element signature="e#6#1914#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1156,15 +1148,34 @@
         <state vertical-scroll-proportion="40.916668" vertical-offset="982" max-vertical-offset="2685">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#6#1138#0#PHP" expanded="true" />
+            <element signature="e#6#1138#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../plugins/opus-primus-tha-stanza/tha-example-index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1320">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../plugins/opus-primus-taglines-stanza/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.53333336" vertical-offset="360" max-vertical-offset="1050">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.1555557" vertical-offset="0" max-vertical-offset="9495">
-          <caret line="187" column="77" selection-start-line="187" selection-start-column="77" selection-end-line="187" selection-end-column="77" />
+        <state vertical-scroll-proportion="0.65645516" vertical-offset="2445" max-vertical-offset="9555">
+          <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
           <folding />
         </state>
       </provider>
