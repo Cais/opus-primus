@@ -8,7 +8,7 @@
  * @since       0.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2012-2015, Opus Primus
+ * @copyright   Copyright (c) 2012-2016, Opus Primus
  *
  * @link        http://codex.wordpress.org/Template_Hierarchy - URI reference
  *

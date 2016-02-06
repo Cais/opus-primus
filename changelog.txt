@@ -1,22 +1,27 @@
 === Opus Primus changelog.txt ===
-Last revised May 7, 2015
-Please note, the Opus Primus copyright can be found at the end of this file.
+Last revised February 6, 2016
+Future recent changelog entries will be found in the `readme.txt` file.
+This file will be used as an archive of all changelog entries.
 
 = Version 1.4 =
-* Released ...
+* Released June 2015
 
 = Code =
 * Added `widgets` to the HTML5 theme supported items
 * Added `number_format_i18n` to better accommodate locale based values
 * Added two classes for use in rendering the comments link text displayed ... or not
 * Added `Share the Author Wealth` method, not implemented as a display element, yet
+* Added context (`_x`) for complete byline phrase translation string
 * Change all classes to a singleton style
 * Ensure `$pagination` has been initialized in `OpusPrimusNavigation::pagination` method
+* Improved i18n implementation in search found results string
 * Moved the `support_comment` method back into the `OpusPrimusStructures` class
 * Moved the `before_comment_form` and `comments_form_closed` methods back into the `OpusPrimusComments` class
 * Refactored `OpusPrimusComments::comments_link` to use the WordPress core more effectively
 * Removed `$screen` parameter as not necessary in Taglines Stanza
 * Renamed file `class.OpusPrimusHeaders.php` to `class.OpusPrimusHeader.php` for consistency
+* Removed "TagLines" Stanza and made available as separate plugin - see https://github.com/Cais/opus-primus-taglines-stanza
+* Removed "THA" Stanza and made available as separate plugin - see https://github.com/Cais/opus-primus-tha-stanza
 
 = CSS =
 * Added class definition to hide comment link text when comments are closed and there are no comments
@@ -24,7 +29,7 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Adjust breadcrumb font-size (reduced by 1px) to correct wrapping effect
 
 = Miscellaneous =
-* i18n: Added base `.po` file as well as English (Canadian) `.pomo` files
+* i18n: Added base `opus-primus.pot` file as well as English (Canadian) files
 * i18n: `null` does not need to be translated
 * i18n: Symbolic characters do not need to be translated
 * Added `opus_authors_list` filter hook
@@ -448,16 +453,8 @@ Please note, the Opus Primus copyright can be found at the end of this file.
 * Initial release - February 2013
 
 /** ------------------------------------------------------------------------- */
-= Current Internet Browsers Reviewed =
-* Apple Safari
-* Firefox
-* Google Chrome
-* Internet Explorer
-* Opera
-
-/** ------------------------------------------------------------------------- */
 == Copyright ==
-Copyright (c) 2012-2015, Opus Primus
+Copyright (c) 2012-2016, Opus Primus
 
 This file is part of Opus Primus.
 

@@ -6,7 +6,7 @@
  * @since       1.1
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
- * @copyright   Copyright (c) 2013-2015, Opus Primus
+ * @copyright   Copyright (c) 2013-2016, Opus Primus
  *
  * This file is part of Opus Primus.
  *
