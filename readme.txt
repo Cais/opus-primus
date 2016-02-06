@@ -48,6 +48,9 @@ Recent changelog as of February 6, 2016
 * Minor code reformatting
 * Update SlickNav library to version 1.0.6
 
+= CSS =
+* Updated `normalize.css` to version 3.0.3
+
 = Miscellaneous =
 * Re-arranged changelog entries in `readme.txt` and `changelog.txt` files
 
