@@ -76,16 +76,17 @@
 do_action( 'opus_body_top' ); ?>
 
 	<div id="opus-primus"><!-- Unique theme identifier -->
-				<?php
-				/** Add empty hook before header */
-				do_action( 'opus_header_before' );
+<?php
+/** Add empty hook before header */
+do_action( 'opus_header_before' );
 
-				/** Call header template with reference to post format */
-				if ( is_singular() ) {
-					get_template_part( 'opus-primus-header', get_post_format() );
-				} else {
-					get_template_part( 'opus-primus-header' );
-				} /** End if - is singular */
+/** Call header template with reference to post format */
+if ( is_singular() ) {
+	get_template_part( 'opus-primus-header', get_post_format() );
+} else {
+	get_template_part( 'opus-primus-header' );
+}
+/** End if - is singular */
 
-				/** Add empty hook after header */
-				do_action( 'opus_header_after' );
+/** Add empty hook after header */
+do_action( 'opus_header_after' );

@@ -88,10 +88,12 @@ class OpusPrimusPosts {
 		add_filter( 'post_class', array( $this, 'post_classes' ) );
 
 		/** Add hide category widget list items */
-		add_filter( 'widget_categories_args', array(
+		add_filter(
+			'widget_categories_args', array(
 			$this,
 			'hide_category_widget_list_items'
-		) );
+		)
+		);
 
 	}
 
@@ -1038,10 +1040,10 @@ class OpusPrimusPosts {
 		if ( is_sticky() ) {
 
 			$output = '<a class="button" href="' . get_permalink() . '" title="' . sprintf( __( 'Go to %1$s post', 'opus-primus' ), strtolower( $sticky_text ) ) . '">'
-			          . '<span class="sticky-flag-text">'
-			          . $sticky_text
-			          . '</span>'
-			          . '</a>';
+				. '<span class="sticky-flag-text">'
+				. $sticky_text
+				. '</span>'
+				. '</a>';
 
 		} else {
 

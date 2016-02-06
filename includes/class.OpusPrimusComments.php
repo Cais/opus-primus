@@ -91,28 +91,35 @@ class OpusPrimusComments {
 			'comment_form_before', array(
 			$this,
 			'enqueue_comment_reply'
-		) );
+		)
+		);
 
-		add_action( 'comment_form_before', array(
+		add_action(
+			'comment_form_before', array(
 			$this,
 			'before_comment_form'
-		) );
-		add_action( 'comment_form_comments_closed', array(
+		)
+		);
+		add_action(
+			'comment_form_comments_closed', array(
 			$this,
 			'comments_form_closed'
-		) );
+		)
+		);
 
 		/** Add comment actions - wrap comment fields in unordered list */
 		add_action(
 			'comment_form_before_fields', array(
 			$this,
 			'comment_fields_wrapper_start'
-		) );
+		)
+		);
 		add_action(
 			'comment_form_after_fields', array(
 			$this,
 			'comment_fields_wrapper_end'
-		) );
+		)
+		);
 
 		/** Add comment filters - NB: Order of these filters is important! */
 		add_filter( 'comment_class', array( $this, 'comment_author_class' ) );
@@ -121,14 +128,16 @@ class OpusPrimusComments {
 			'comment_form_defaults', array(
 			$this,
 			'change_comment_form_required_field_glyph'
-		) );
+		)
+		);
 
 		/** Add comment filters - change fields to list items from paragraphs */
 		add_filter(
 			'comment_form_default_fields', array(
 			$this,
 			'comment_fields_as_list_items'
-		) );
+		)
+		);
 
 	}
 
@@ -348,11 +357,11 @@ class OpusPrimusComments {
 
 		$fields = array(
 			'author' => '<li class="comment-form-author">' . '<label for="author">' . __( 'Name', 'opus-primus' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-			            '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . ' " size="30" ' . $aria_req . ' /></li>',
+				'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . ' " size="30" ' . $aria_req . ' /></li>',
 			'email'  => '<li class="comment-form-email"><label for="email">' . __( 'Email', 'opus-primus' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-			            '<input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . ' " size="30" ' . $aria_req . ' /></li>',
+				'<input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . ' " size="30" ' . $aria_req . ' /></li>',
 			'url'    => '<li class="comment-form-url"><label for="url">' . __( 'Website', 'opus-primus' ) . '</label>' .
-			            '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></li>',
+				'<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></li>',
 		);
 
 		return $fields;

@@ -136,66 +136,66 @@ class OpusPrimusImages {
 
 			<thead>
 
-			<?php if ( ! empty( $archive_image_title ) ) { ?>
-				<tr>
-					<th>
-						<?php printf(
-							'<span class="archive-image-title">%1$s</span>',
-							apply_filters(
-								'opus_archive_image_title',
-								sprintf( __( 'Image Title: %1$s', 'opus-primus' ), $archive_image_title )
-							)
-						); ?>
-					</th>
-				</tr>
-			<?php } ?>
+				<?php if ( ! empty( $archive_image_title ) ) { ?>
+					<tr>
+						<th>
+							<?php printf(
+								'<span class="archive-image-title">%1$s</span>',
+								apply_filters(
+									'opus_archive_image_title',
+									sprintf( __( 'Image Title: %1$s', 'opus-primus' ), $archive_image_title )
+								)
+							); ?>
+						</th>
+					</tr>
+				<?php } ?>
 
 			</thead>
 
 			<tbody>
-			<tr>
-				<td class="archive-image">
-					<?php if ( ! is_single() ) {
+				<tr>
+					<td class="archive-image">
+						<?php if ( ! is_single() ) {
 
-						echo '<span class="archive-image"><a href="' . get_permalink() . '" title="' . the_title_attribute(
-								array(
-									'before' => __( 'View', 'opus-primus' ) . ' ',
-									'after'  => ' ' . __( 'only', 'opus-primus' ),
-									'echo'   => '0'
-								)
-							) . '">'
-						     . $archive_image
-						     . '</a></span>';
+							echo '<span class="archive-image"><a href="' . get_permalink() . '" title="' . the_title_attribute(
+									array(
+										'before' => __( 'View', 'opus-primus' ) . ' ',
+										'after'  => ' ' . __( 'only', 'opus-primus' ),
+										'echo'   => '0'
+									)
+								) . '">'
+								. $archive_image
+								. '</a></span>';
+
+						} ?>
+					</td>
+				</tr>
+				<tr>
+					<?php if ( ! empty( $archive_image_excerpt ) ) {
+
+						printf(
+							'<td class="archive-image-excerpt">%1$s</td>',
+							apply_filters(
+								'opus_archive_image_excerpt',
+								sprintf( __( 'Image Caption: %1$s', 'opus-primus' ), $archive_image_excerpt )
+							)
+						);
 
 					} ?>
-				</td>
-			</tr>
-			<tr>
-				<?php if ( ! empty( $archive_image_excerpt ) ) {
+				</tr>
+				<tr>
+					<?php if ( ! empty( $archive_image_content ) ) {
 
-					printf(
-						'<td class="archive-image-excerpt">%1$s</td>',
-						apply_filters(
-							'opus_archive_image_excerpt',
-							sprintf( __( 'Image Caption: %1$s', 'opus-primus' ), $archive_image_excerpt )
-						)
-					);
+						printf(
+							'<td class="archive-image-content">%1$s</td>',
+							apply_filters(
+								'opus_archive_image_content',
+								sprintf( __( 'Image Description: %1$s', 'opus-primus' ), $archive_image_content )
+							)
+						);
 
-				} ?>
-			</tr>
-			<tr>
-				<?php if ( ! empty( $archive_image_content ) ) {
-
-					printf(
-						'<td class="archive-image-content">%1$s</td>',
-						apply_filters(
-							'opus_archive_image_content',
-							sprintf( __( 'Image Description: %1$s', 'opus-primus' ), $archive_image_content )
-						)
-					);
-
-				} ?>
-			</tr>
+					} ?>
+				</tr>
 			</tbody>
 
 		</table>
@@ -359,50 +359,50 @@ class OpusPrimusImages {
 		<!-- Provide a CSS class for the exif output -->
 		<table class="display-exif-table">
 			<thead>
-			<tr>
-				<th>
-					<?php printf(
-						'<span class="display-exif-table-header-text">%1$s</span>',
-						apply_filters( 'opus_display_exif_table_header_text', __( 'Image Details', 'opus-primus' ) )
-					); ?>
-				</th>
-			</tr>
+				<tr>
+					<th>
+						<?php printf(
+							'<span class="display-exif-table-header-text">%1$s</span>',
+							apply_filters( 'opus_display_exif_table_header_text', __( 'Image Details', 'opus-primus' ) )
+						); ?>
+					</th>
+				</tr>
 			</thead>
 
 			<tbody>
-			<?php
-			/** If the exif value is set display it */
-			if ( $this->exif_dimensions() ) {
-				echo '<tr><td class="exif-dimensions">' . apply_filters( 'opus_exif_dimensions_label', __( 'Dimensions', 'opus-primus' ) ) . '</td><td>' . $this->exif_dimensions() . '</td></tr>';
-			}
-			if ( $this->exif_copyright() ) {
-				echo '<tr><td class="exif-copyright">' . apply_filters( 'opus_exif_copyright_label', __( 'Copyright', 'opus-primus' ) ) . '</td><td>' . $this->exif_copyright() . '</td></tr>';
-			}
-			if ( $this->exif_timestamp() ) {
-				echo '<tr><td class="exif-timestamp">' . apply_filters( 'opus_exif_timestamp_label', __( 'Uploaded', 'opus-primus' ) ) . '</td><td>' . $this->exif_timestamp() . '</td></tr>';
-			}
-			if ( $this->exif_camera() ) {
-				echo '<tr><td class="exif-camera">' . apply_filters( 'opus_exif_camera_label', __( 'Camera', 'opus-primus' ) ) . '</td><td>' . $this->exif_camera() . '</td></tr>';
-			}
-			if ( $this->exif_shutter() ) {
-				echo '<tr><td class="exif-shutter">' . apply_filters( 'opus_exif_shutter_label', __( 'Shutter Speed', 'opus-primus' ) ) . '</td><td>' . $this->exif_shutter() . '</td></tr>';
-			}
-			if ( $this->exif_aperture() ) {
-				echo '<tr><td class="exif-aperture">' . apply_filters( 'opus_exif_aperture_label', __( 'Aperture', 'opus-primus' ) ) . '</td><td>' . 'F' . $this->exif_aperture() . '</td></tr>';
-			}
-			if ( $this->exif_caption() ) {
-				echo '<tr><td class="exif-caption">' . apply_filters( 'opus_exif_caption_label', __( 'Caption', 'opus-primus' ) ) . '</td><td>' . $this->exif_caption() . '</td></tr>';
-			}
-			if ( $this->exif_focal_length() ) {
-				echo '<tr><td class="exif-focal-length">' . apply_filters( 'opus_exif_focal_length_label', __( 'Focal Length', 'opus-primus' ) ) . '</td><td>' . $this->exif_focal_length() . '</td></tr>';
-			}
-			if ( $this->exif_iso_speed() ) {
-				echo '<tr><td class="exif-iso-speed">' . apply_filters( 'opus_exif_iso_speed_label', __( 'ISO Speed', 'opus-primus' ) ) . '</td><td>' . $this->exif_iso_speed() . '</td></tr>';
-			}
-			if ( $this->exif_title() ) {
-				echo '<tr><td class="exif-title">' . apply_filters( 'opus_exif_title_label', __( 'Title', 'opus-primus' ) ) . '</td><td>' . $this->exif_title() . '</td></tr>';
-			}
-			?>
+				<?php
+				/** If the exif value is set display it */
+				if ( $this->exif_dimensions() ) {
+					echo '<tr><td class="exif-dimensions">' . apply_filters( 'opus_exif_dimensions_label', __( 'Dimensions', 'opus-primus' ) ) . '</td><td>' . $this->exif_dimensions() . '</td></tr>';
+				}
+				if ( $this->exif_copyright() ) {
+					echo '<tr><td class="exif-copyright">' . apply_filters( 'opus_exif_copyright_label', __( 'Copyright', 'opus-primus' ) ) . '</td><td>' . $this->exif_copyright() . '</td></tr>';
+				}
+				if ( $this->exif_timestamp() ) {
+					echo '<tr><td class="exif-timestamp">' . apply_filters( 'opus_exif_timestamp_label', __( 'Uploaded', 'opus-primus' ) ) . '</td><td>' . $this->exif_timestamp() . '</td></tr>';
+				}
+				if ( $this->exif_camera() ) {
+					echo '<tr><td class="exif-camera">' . apply_filters( 'opus_exif_camera_label', __( 'Camera', 'opus-primus' ) ) . '</td><td>' . $this->exif_camera() . '</td></tr>';
+				}
+				if ( $this->exif_shutter() ) {
+					echo '<tr><td class="exif-shutter">' . apply_filters( 'opus_exif_shutter_label', __( 'Shutter Speed', 'opus-primus' ) ) . '</td><td>' . $this->exif_shutter() . '</td></tr>';
+				}
+				if ( $this->exif_aperture() ) {
+					echo '<tr><td class="exif-aperture">' . apply_filters( 'opus_exif_aperture_label', __( 'Aperture', 'opus-primus' ) ) . '</td><td>' . 'F' . $this->exif_aperture() . '</td></tr>';
+				}
+				if ( $this->exif_caption() ) {
+					echo '<tr><td class="exif-caption">' . apply_filters( 'opus_exif_caption_label', __( 'Caption', 'opus-primus' ) ) . '</td><td>' . $this->exif_caption() . '</td></tr>';
+				}
+				if ( $this->exif_focal_length() ) {
+					echo '<tr><td class="exif-focal-length">' . apply_filters( 'opus_exif_focal_length_label', __( 'Focal Length', 'opus-primus' ) ) . '</td><td>' . $this->exif_focal_length() . '</td></tr>';
+				}
+				if ( $this->exif_iso_speed() ) {
+					echo '<tr><td class="exif-iso-speed">' . apply_filters( 'opus_exif_iso_speed_label', __( 'ISO Speed', 'opus-primus' ) ) . '</td><td>' . $this->exif_iso_speed() . '</td></tr>';
+				}
+				if ( $this->exif_title() ) {
+					echo '<tr><td class="exif-title">' . apply_filters( 'opus_exif_title_label', __( 'Title', 'opus-primus' ) ) . '</td><td>' . $this->exif_title() . '</td></tr>';
+				}
+				?>
 			</tbody>
 
 			<tfoot></tfoot>

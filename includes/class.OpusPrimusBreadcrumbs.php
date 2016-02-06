@@ -100,12 +100,12 @@ class OpusPrimusBreadcrumbs {
 			global $post;
 
 			/** Set initial array element as current post ID */
-			$breadcrumb[ $x ] = $post->ID;
+			$breadcrumb[$x] = $post->ID;
 
 			/** Walk back to the parent getting each post ID  */
-			while ( get_post( $breadcrumb[ $x ] )->post_parent !== 0 ) {
+			while ( get_post( $breadcrumb[$x] )->post_parent !== 0 ) {
 				/** @var $parent_post - current index parent post ID */
-				$parent_post = get_post( $breadcrumb[ $x ] )->post_parent;
+				$parent_post = get_post( $breadcrumb[$x] )->post_parent;
 				/** Add ID to breadcrumb array */
 				$breadcrumb[] = $parent_post;
 				/** Increment the index to check the next post */
@@ -175,8 +175,8 @@ class OpusPrimusBreadcrumbs {
 			$post_trail .= '<ul class="breadcrumb">';
 
 			$post_trail .= '<li class="post-breadcrumbs-home-text">'
-			               . '<a href="' . home_url( '/' ) . '">' . apply_filters( 'opus_post_breadcrumbs_home_text', __( 'Home', 'opus-primus' ) ) . '</a>'
-			               . '</li>';
+				. '<a href="' . home_url( '/' ) . '">' . apply_filters( 'opus_post_breadcrumbs_home_text', __( 'Home', 'opus-primus' ) ) . '</a>'
+				. '</li>';
 
 			/** @var $post_trail - add breadcrumb categories */
 			$post_trail = $this->breadcrumb_categories( $post_trail, $post_ID );
@@ -312,8 +312,8 @@ class OpusPrimusBreadcrumbs {
 			$trail .= '<ul class="breadcrumb">';
 
 			$trail .= '<li>'
-			          . '<a href="' . home_url( '/' ) . '">' . __( 'Home', 'opus-primus' ) . '</a>'
-			          . '</li>';
+				. '<a href="' . home_url( '/' ) . '">' . __( 'Home', 'opus-primus' ) . '</a>'
+				. '</li>';
 
 			foreach ( $this->breadcrumbs() as $steps ) {
 
@@ -322,8 +322,8 @@ class OpusPrimusBreadcrumbs {
 					: get_post( $steps )->post_title;
 
 				$trail .= '<li>'
-				          . '<a title="' . $post_title . '" href="' . home_url( '/?page_id=' ) . get_post( $steps )->ID . '">' . $post_title . '</a>'
-				          . '</li>';
+					. '<a title="' . $post_title . '" href="' . home_url( '/?page_id=' ) . get_post( $steps )->ID . '">' . $post_title . '</a>'
+					. '</li>';
 
 			}
 

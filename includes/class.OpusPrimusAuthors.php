@@ -194,8 +194,8 @@ class OpusPrimusAuthors {
 
 			/** @var $user_desc - manipulated string */
 			$user_desc = substr( $user_desc, 0, intval( $characters ) )
-			             . apply_filters( 'opus_author_description_excerpt_extender', '&hellip;' )
-			             . apply_filters(
+				. apply_filters( 'opus_author_description_excerpt_extender', '&hellip;' )
+				. apply_filters(
 					'opus_author_description_excerpt_link',
 					sprintf(
 						'<span class="opus-author-about">%1$s</span>',

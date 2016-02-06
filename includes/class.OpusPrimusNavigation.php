@@ -202,8 +202,8 @@ class OpusPrimusNavigation {
 
 		$defaults        = array(
 			'before'      => '<div class="navigation-pagination opus-link-pages">'
-			                 . '<span class="opus-link-pages-preface">' . $preface . '</span>'
-			                 . '<ul class="page-numbers">',
+				. '<span class="opus-link-pages-preface">' . $preface . '</span>'
+				. '<ul class="page-numbers">',
 			'after'       => '</ul></div>',
 			'link_before' => '<li>',
 			'link_after'  => '</li>'

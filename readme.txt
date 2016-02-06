@@ -45,6 +45,7 @@ Recent changelog as of February 6, 2016
 
 = Code =
 * Updated copyright year to 2016
+* Minor code reformatting
 
 = Miscellaneous =
 * Re-arranged changelog entries in `readme.txt` and `changelog.txt` files

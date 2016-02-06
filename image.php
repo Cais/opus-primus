@@ -126,7 +126,7 @@ do_action( 'opus_content_before' ); ?>
 
 					</div><!-- post classes -->
 
-				<?php
+					<?php
 				}
 				/** End while - have posts */
 			} else {

@@ -181,8 +181,8 @@ class OpusPrimusGallery {
 									'echo'   => '0'
 								)
 							) . '">'
-						     . wp_get_attachment_image( $opus_thumb_id, $size )
-						     . '</a></p>';
+							. wp_get_attachment_image( $opus_thumb_id, $size )
+							. '</a></p>';
 
 					} else {
 
@@ -203,8 +203,8 @@ class OpusPrimusGallery {
 										'echo'   => '0'
 									)
 								) . '">'
-							     . wp_get_attachment_image( $opus_thumb_id, $size )
-							     . '</a></p>';
+								. wp_get_attachment_image( $opus_thumb_id, $size )
+								. '</a></p>';
 
 						} else {
 
@@ -425,25 +425,9 @@ class OpusPrimusGallery {
 			do_action( 'opus_secondary_images_before' );
 
 			/** @var $images - object to hold images attached to post */
-			$images = new WP_Query( array(
-				'post_parent'            => get_the_ID(),
-				'post_status'            => 'inherit',
-				'post_type'              => 'attachment',
-				'post_mime_type'         => 'image',
-				'order'                  => $secondary_images_args['order'],
-				'orderby'                => $secondary_images_args['orderby'],
-				'posts_per_page'         => $secondary_images_args['images'],
-				'post__not_in'           => array( $opus_thumb_id ),
-				'update_post_term_cache' => false,
-			) );
-
-			/**
-			 * No images attached to post? Rerun query using actual "ids" values
-			 */
-			if ( 0 == $images->found_posts ) {
-
-				$images = new WP_Query( array(
-					'post__in'               => $this->get_gallery_attr_secondary_ids(),
+			$images = new WP_Query(
+				array(
+					'post_parent'            => get_the_ID(),
 					'post_status'            => 'inherit',
 					'post_type'              => 'attachment',
 					'post_mime_type'         => 'image',
@@ -452,7 +436,27 @@ class OpusPrimusGallery {
 					'posts_per_page'         => $secondary_images_args['images'],
 					'post__not_in'           => array( $opus_thumb_id ),
 					'update_post_term_cache' => false,
-				) );
+				)
+			);
+
+			/**
+			 * No images attached to post? Rerun query using actual "ids" values
+			 */
+			if ( 0 == $images->found_posts ) {
+
+				$images = new WP_Query(
+					array(
+						'post__in'               => $this->get_gallery_attr_secondary_ids(),
+						'post_status'            => 'inherit',
+						'post_type'              => 'attachment',
+						'post_mime_type'         => 'image',
+						'order'                  => $secondary_images_args['order'],
+						'orderby'                => $secondary_images_args['orderby'],
+						'posts_per_page'         => $secondary_images_args['images'],
+						'post__not_in'           => array( $opus_thumb_id ),
+						'update_post_term_cache' => false,
+					)
+				);
 
 			}
 

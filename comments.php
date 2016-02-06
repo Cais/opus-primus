@@ -78,7 +78,7 @@ $opus_comments = OpusPrimusComments::create_instance(); ?>
 
 		</div><!-- #comment-tabs -->
 
-	<?php
+		<?php
 	}
 	/** End if - have comments */
 
