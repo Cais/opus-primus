@@ -46,6 +46,7 @@ Recent changelog as of February 6, 2016
 = Code =
 * Updated copyright year to 2016
 * Minor code reformatting
+* Update SlickNav library to version 1.0.6
 
 = Miscellaneous =
 * Re-arranged changelog entries in `readme.txt` and `changelog.txt` files

@@ -4,47 +4,19 @@
     <bookmark url="file://$PROJECT_DIR$/css/opus-primus.css" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="* Minor code reformatting">
+    <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/SlickNav/slicknav.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/404.php" afterPath="$PROJECT_DIR$/404.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/author.php" afterPath="$PROJECT_DIR$/author.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comments.php" afterPath="$PROJECT_DIR$/comments.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image.php" afterPath="$PROJECT_DIR$/image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusArchives.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusArchives.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusAuthors.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusBreadcrumbs.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusBreadcrumbs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusComments.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusDefaults.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusDefaults.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusGallery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusHeader.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusHeader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusImages.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusRouter.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusRouter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" afterPath="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/opus-primus-defaults.php" afterPath="$PROJECT_DIR$/includes/opus-primus-defaults.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/opus-primus-comment-tabs.js" afterPath="$PROJECT_DIR$/js/opus-primus-comment-tabs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/opus-primus-full-size-video.js" afterPath="$PROJECT_DIR$/js/opus-primus-full-size-video.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/opus-primus-header-image-position.js" afterPath="$PROJECT_DIR$/js/opus-primus-header-image-position.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/opus-primus.js" afterPath="$PROJECT_DIR$/js/opus-primus.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/FitVids/jquery.fitvids.js" afterPath="$PROJECT_DIR$/lib/FitVids/jquery.fitvids.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/SlickNav/MIT-LICENSE.txt" afterPath="$PROJECT_DIR$/lib/SlickNav/MIT-LICENSE.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/SlickNav/README.md" afterPath="$PROJECT_DIR$/lib/SlickNav/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/SlickNav/jquery.slicknav.js" afterPath="$PROJECT_DIR$/lib/SlickNav/jquery.slicknav.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/SlickNav/jquery.slicknav.min.js" afterPath="$PROJECT_DIR$/lib/SlickNav/jquery.slicknav.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/SlickNav/slicknav.css" afterPath="$PROJECT_DIR$/lib/SlickNav/slicknav.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/opus-primus-fitvids-init.js" afterPath="$PROJECT_DIR$/lib/opus-primus-fitvids-init.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/opus-primus-slicknav-init.js" afterPath="$PROJECT_DIR$/lib/opus-primus-slicknav-init.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive-aside.php" afterPath="$PROJECT_DIR$/opus-primus-archive-aside.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive-chat.php" afterPath="$PROJECT_DIR$/opus-primus-archive-chat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive-link.php" afterPath="$PROJECT_DIR$/opus-primus-archive-link.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive-quote.php" afterPath="$PROJECT_DIR$/opus-primus-archive-quote.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive-status.php" afterPath="$PROJECT_DIR$/opus-primus-archive-status.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive-video.php" afterPath="$PROJECT_DIR$/opus-primus-archive-video.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-ignite.php" afterPath="$PROJECT_DIR$/opus-primus-ignite.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-video.php" afterPath="$PROJECT_DIR$/opus-primus-video.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page.php" afterPath="$PROJECT_DIR$/page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/opus-primus-slicknav.css" afterPath="$PROJECT_DIR$/lib/opus-primus-slicknav.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search.php" afterPath="$PROJECT_DIR$/search.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,21 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/readme.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="class.OpusPrimusNavigation.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3497758">
-              <caret line="161" column="33" selection-start-line="161" selection-start-column="33" selection-end-line="161" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.42313117">
+              <caret line="48" column="42" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -113,10 +75,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusRouter.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusStructures.php" />
-        <option value="$PROJECT_DIR$/includes/opus-primus-defaults.php" />
         <option value="$PROJECT_DIR$/includes/widgets.php" />
         <option value="$PROJECT_DIR$/js/opus-primus.js" />
         <option value="$PROJECT_DIR$/js/opus-primus-comment-tabs.js" />
@@ -128,7 +86,6 @@
         <option value="$PROJECT_DIR$/comments.php" />
         <option value="$PROJECT_DIR$/editor-style.css" />
         <option value="$PROJECT_DIR$/footer.php" />
-        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/image.php" />
         <option value="$PROJECT_DIR$/index.php" />
@@ -163,7 +120,12 @@
         <option value="$PROJECT_DIR$/single.php" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/changelog.txt" />
+        <option value="$PROJECT_DIR$/lib/opus-primus-fitvids-init.js" />
+        <option value="$PROJECT_DIR$/lib/SlickNav/README.md" />
         <option value="$PROJECT_DIR$/readme.txt" />
+        <option value="$PROJECT_DIR$/lib/opus-primus-slicknav-init.js" />
+        <option value="$PROJECT_DIR$/lib/opus-primus-slicknav.css" />
+        <option value="$PROJECT_DIR$/functions.php" />
       </list>
     </option>
   </component>
@@ -283,6 +245,62 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BNS-Projects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BNS-Projects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SlickNav" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -321,19 +339,19 @@
     <property name="LayoutCode.rearrangeEntriesXHTML" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus" />
-      <recent name="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\headers" />
-      <recent name="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\includes" />
-      <recent name="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\fonts" />
-      <recent name="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\js" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/lib/SlickNav" />
       <recent name="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\stanzas\taglines" />
       <recent name="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus" />
+      <recent name="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\headers" />
+      <recent name="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\includes" />
+      <recent name="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\fonts" />
+      <recent name="C:\wamp\www\Opus-Primus\wp-content\themes\opus-primus\js" />
     </key>
   </component>
   <component name="RunManager">
@@ -396,12 +414,6 @@
       <created>1335650237355</created>
       <option name="number" value="Default" />
       <updated>1395521979616</updated>
-    </task>
-    <task id="LOCAL-00565" summary="* Changed from using `get_the_time` to `date_i18n` for `OpusPrimusImages::exif_timestamp` method">
-      <created>1425237194896</created>
-      <option name="number" value="00565" />
-      <option name="project" value="LOCAL" />
-      <updated>1425237194897</updated>
     </task>
     <task id="LOCAL-00566" summary="- remove testing code">
       <created>1425237254019</created>
@@ -691,7 +703,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454786101266</updated>
     </task>
-    <option name="localTasksCounter" value="614" />
+    <task id="LOCAL-00614" summary="* Minor code reformatting">
+      <created>1454786321945</created>
+      <option name="number" value="00614" />
+      <option name="project" value="LOCAL" />
+      <updated>1454786321945</updated>
+    </task>
+    <option name="localTasksCounter" value="615" />
     <servers>
       <GitHub shared="false" url="http://github.com">
         <option name="assignedIssuesOnly" value="false" />
@@ -738,7 +756,7 @@
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29971388" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32729805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32428765" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32428765" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30416667" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28337875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -840,54 +858,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/opus-primus-defaults.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25">
-          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/widgets.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.216885">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/opus-primus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/opus-primus-comment-tabs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/opus-primus-full-size-video.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/opus-primus-header-image-position.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.033755273">
-          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/archive.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.875">
@@ -913,14 +883,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.25">
           <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
@@ -1224,14 +1186,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../wp-includes/media.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3497758">
@@ -1254,8 +1208,81 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.OpusPrimusNavigation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3497758">
-          <caret line="161" column="33" selection-start-line="161" selection-start-column="33" selection-end-line="161" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.1620438">
+          <caret line="158" column="0" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/FitVids/jquery.fitvids.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/opus-primus-fitvids-init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="41" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/SlickNav/jquery.slicknav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1448848174000" expanded="true" signature="0:5" placeholder="/*...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/SlickNav/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11029412">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5">
+          <caret line="95" column="6" selection-start-line="95" selection-start-column="6" selection-end-line="95" selection-end-column="6" />
+          <folding>
+            <element signature="e#6#1553#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/opus-primus-slicknav.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/opus-primus-slicknav-init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42313117">
+          <caret line="48" column="42" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
           <folding />
         </state>
       </provider>

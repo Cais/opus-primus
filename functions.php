@@ -89,16 +89,14 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 	 * @uses               wp_enqueue_style
 	 * @uses               wp_get_theme->get
 	 *
-	 * @version            1.2.5
-	 * @date               June 15, 2014
-	 * Enqueue custom stylesheet in an update safe location `/wp-content/opus-primus-customs/`
-	 * Enqueue custom JavaScript in an update safe location `/wp-content/opus-primus-customs/`
-	 * Remove conditional customization enqueue using internal theme folder as not working (or update safe)
-	 *
 	 * @version            1.3
-	 * @since              August 24, 2014
+	 * @date               August 24, 2014
 	 * Replace CONSTANTS with OpusPrimusRouter methods
 	 * Enqueue JavaScripts and CSS for SlickNav JavaScript plugin integration to handle mobile menus
+	 *
+	 * @vesion             1.4.1
+	 * @date               February 6, 2016
+	 * Updated SlickNav implementation to version 1.0.6
 	 */
 	function opus_primus_enqueue_scripts() {
 		/** Create OpusPrimusRouter class object */
@@ -162,9 +160,9 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 
 		/** Mobile Menu via SlickNav JavaScript plugin integration */
 		/** Enqueue the SlickNav styles */
-		wp_enqueue_style( 'SlickNav-CSS-main', $opus_router->path_uri( 'lib' ) . 'SlickNav/slicknav.css', array(), '1.0.1', 'screen' );
+		wp_enqueue_style( 'SlickNav-CSS-main', $opus_router->path_uri( 'lib' ) . 'SlickNav/slicknav.min.css', array(), '1.0.6', 'screen' );
 		/** Enqueue the SlickNav JavaScript with jQuery dependency */
-		wp_enqueue_script( 'SlickNav-JS-main', $opus_router->path_uri( 'lib' ) . 'SlickNav/jquery.slicknav.min.js', array( 'jquery' ), '1.0.1', true );
+		wp_enqueue_script( 'SlickNav-JS-main', $opus_router->path_uri( 'lib' ) . 'SlickNav/jquery.slicknav.min.js', array( 'jquery' ), '1.0.6', true );
 		/** Enqueue SlickNav initialization script with jQuery and SlickNav dependencies */
 		wp_enqueue_script(
 			'SlickNav-init', $opus_router->path_uri( 'lib' ) . 'opus-primus-slicknav-init.js', array(
