@@ -32,18 +32,13 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version     1.0.1
- * @date        February 21, 2013
- * Modified action hooks to more semantic naming convention:
- * `opus_<section>_<placement>`
- *
- * @version     1.0.5
- * @date        March 3, 2013
- * Removed `media="all"` as not required
- *
  * @version     1.3.2
  * @date        March 1, 2015
  * Add support for the `<title />` tag via `add_theme_support` function
+ *
+ * @version     1.4.1
+ * @date        February 6, 2016
+ * Removed WordPress 4.1 compatibility check for `<title />` usage
  */
 ?>
 
@@ -56,12 +51,6 @@
 		<?php do_action( 'opus_head_top' ); ?>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<?php /** Check for WordPress 4.1 compatibility */
-		if ( ! function_exists( '_wp_render_title_tag' ) ) { ?>
-			<title><?php wp_title( '|', true, 'right' ); ?></title>
-		<?php } ?>
-
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />

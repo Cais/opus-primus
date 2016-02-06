@@ -47,6 +47,7 @@ Recent changelog as of February 6, 2016
 * Updated copyright year to 2016
 * Minor code reformatting
 * Update SlickNav library to version 1.0.6
+* Removed WordPress 4.1 compatibility check for `<title />` usage
 
 = CSS =
 * Updated `normalize.css` to version 3.0.3
