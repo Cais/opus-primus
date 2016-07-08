@@ -40,8 +40,15 @@ change or modification to the actual file.
 
 == Changelog ==
 Recent changelog as of February 6, 2016
-= Version 1.4.1 =
+= Version 1.4.2 =
 * Released ...
+
+= CSS =
+* Changed input text field height to `auto`
+
+/** ------------------------------------------------------------------------- */
+= Version 1.4.1 =
+* Released February 2016
 
 = Code =
 * Updated copyright year to 2016
@@ -333,3 +340,4 @@ included with the theme will simply be a copy of the noted page.
 * https://themes.trac.wordpress.org/ticket/23510 - Version 1.3.3 - March 2015
 * https://themes.trac.wordpress.org/ticket/23681 - Version 1.3.4 - March 2015
 * https://themes.trac.wordpress.org/ticket/25523 - Version 1.4 - June 2015
+* https://themes.trac.wordpress.org/ticket/30366 - Version 1.4.1 - February 2016
