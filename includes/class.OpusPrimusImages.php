@@ -164,8 +164,8 @@ class OpusPrimusImages {
 										'echo'   => '0'
 									)
 								) . '">'
-								. $archive_image
-								. '</a></span>';
+							     . $archive_image
+							     . '</a></span>';
 
 						} ?>
 					</td>
@@ -350,6 +350,10 @@ class OpusPrimusImages {
 	 * @version  1.2.2
 	 * @date     September 12, 2013
 	 * Corrected i18n code for EXIF data
+	 *
+	 * @version  1.4.2
+	 * @date     2016-07-12
+	 * Changed aperture from `F` to `f /`
 	 */
 	function display_exif_table() {
 
@@ -388,7 +392,7 @@ class OpusPrimusImages {
 					echo '<tr><td class="exif-shutter">' . apply_filters( 'opus_exif_shutter_label', __( 'Shutter Speed', 'opus-primus' ) ) . '</td><td>' . $this->exif_shutter() . '</td></tr>';
 				}
 				if ( $this->exif_aperture() ) {
-					echo '<tr><td class="exif-aperture">' . apply_filters( 'opus_exif_aperture_label', __( 'Aperture', 'opus-primus' ) ) . '</td><td>' . 'F' . $this->exif_aperture() . '</td></tr>';
+					echo '<tr><td class="exif-aperture">' . apply_filters( 'opus_exif_aperture_label', __( 'Aperture', 'opus-primus' ) ) . '</td><td>' . 'f / ' . $this->exif_aperture() . '</td></tr>';
 				}
 				if ( $this->exif_caption() ) {
 					echo '<tr><td class="exif-caption">' . apply_filters( 'opus_exif_caption_label', __( 'Caption', 'opus-primus' ) ) . '</td><td>' . $this->exif_caption() . '</td></tr>';

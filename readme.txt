@@ -43,6 +43,9 @@ Recent changelog as of February 6, 2016
 = Version 1.4.2 =
 * Released ...
 
+= Code =
+* Changed aperture from `F` to `f /`
+
 = CSS =
 * Changed input text field height to `auto`
 
