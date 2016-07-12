@@ -76,26 +76,26 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 	 *
 	 * Use to enqueue the theme javascript and custom stylesheet, if it exists
 	 *
-	 * @package            OpusPrimus
-	 * @since              0.1
+	 * @package OpusPrimus
+	 * @since   0.1
 	 *
-	 * @uses               OpusPrimusRouter::path
-	 * @uses               OpusPrimusRouter::path_uri
-	 * @uses               opus_primus_theme_version
-	 * @uses               get_header_image
-	 * @uses               is_readable
-	 * @uses               is_single
-	 * @uses               wp_enqueue_script
-	 * @uses               wp_enqueue_style
-	 * @uses               wp_get_theme->get
+	 * @uses    OpusPrimusRouter::path
+	 * @uses    OpusPrimusRouter::path_uri
+	 * @uses    opus_primus_theme_version
+	 * @uses    get_header_image
+	 * @uses    is_readable
+	 * @uses    is_single
+	 * @uses    wp_enqueue_script
+	 * @uses    wp_enqueue_style
+	 * @uses    wp_get_theme->get
 	 *
-	 * @version            1.3
-	 * @date               August 24, 2014
+	 * @version 1.3
+	 * @date    August 24, 2014
 	 * Replace CONSTANTS with OpusPrimusRouter methods
 	 * Enqueue JavaScripts and CSS for SlickNav JavaScript plugin integration to handle mobile menus
 	 *
-	 * @vesion             1.4.1
-	 * @date               February 6, 2016
+	 * @version 1.4.1
+	 * @date    February 6, 2016
 	 * Updated SlickNav implementation to version 1.0.6
 	 */
 	function opus_primus_enqueue_scripts() {
@@ -298,6 +298,7 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 		$locale      = get_locale();
 		$locale_file = get_template_directory_uri() . "/languages/$locale.php";
 		if ( is_readable( $locale_file ) ) {
+			/** @noinspection PhpIncludeInspection */
 			require_once( $locale_file );
 		}
 
@@ -346,6 +347,7 @@ function opus_primus_return_blank() {
 function opus_primus_compatibility() {
 
 	/** Call the wp-admin plugin code */
+	/** @noinspection PhpIncludeInspection */
 	require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
 
 	/** Create OpusPrimusRouter class object */

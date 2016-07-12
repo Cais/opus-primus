@@ -4,14 +4,18 @@
       <w>alignleft</w>
       <w>alignright</w>
       <w>antispambot</w>
+      <w>basepath</w>
       <w>biryukov</w>
       <w>bloginfo</w>
       <w>cais</w>
       <w>caissie</w>
+      <w>chainability</w>
       <w>changelog</w>
       <w>clearfix</w>
+      <w>clickable</w>
       <w>commentlist</w>
       <w>compat</w>
+      <w>computerwolf</w>
       <w>contactmethods</w>
       <w>corson</w>
       <w>coyier</w>
@@ -20,40 +24,68 @@
       <w>davatron</w>
       <w>daverupert</w>
       <w>doublepage</w>
+      <w>fexternal</w>
       <w>fieger</w>
+      <w>fieldsets</w>
       <w>firefox</w>
+      <w>fitvid</w>
       <w>fitvids</w>
+      <w>fitvidsignore</w>
+      <w>fluidvids</w>
+      <w>fullname</w>
       <w>gform</w>
       <w>gmpg</w>
       <w>gravatar</w>
       <w>gravityforms</w>
+      <w>haspopup</w>
       <w>iframe</w>
       <w>jetpack</w>
+      <w>keydown</w>
+      <w>kickstarter</w>
+      <w>koblentz</w>
       <w>mailto</w>
+      <w>menuitem</w>
+      <w>menutxt</w>
+      <w>modernizr</w>
+      <w>ngettext</w>
+      <w>nocookie</w>
+      <w>noninfringement</w>
+      <w>noop</w>
+      <w>nplurals</w>
+      <w>optioncount</w>
       <w>opusprimus</w>
       <w>pagenum</w>
+      <w>paravel</w>
       <w>permalinks</w>
       <w>pingback</w>
+      <w>poedit</w>
       <w>primus</w>
       <w>pullquote</w>
       <w>recaptcha</w>
       <w>remi</w>
       <w>screenshots</w>
+      <w>scrollbar</w>
+      <w>searchfield</w>
       <w>sergey</w>
       <w>singlecomments</w>
       <w>slicknav</w>
       <w>sprintf</w>
+      <w>tabindex</w>
       <w>tagline</w>
       <w>textwidget</w>
+      <w>thierry</w>
       <w>trac</w>
+      <w>txtnode</w>
       <w>userdata</w>
       <w>userid</w>
       <w>videopress</w>
       <w>vids</w>
+      <w>vimeo</w>
       <w>wikipedia</w>
       <w>wpcf</w>
       <w>wpstats</w>
       <w>wtfpl</w>
+      <w>zepto</w>
     </words>
   </dictionary>
 </component>

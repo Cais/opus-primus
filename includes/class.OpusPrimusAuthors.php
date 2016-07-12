@@ -382,8 +382,6 @@ class OpusPrimusAuthors {
 	 * @package     OpusPrimus
 	 * @since       1.4
 	 *
-	 * @internal    Not implemented as a display element, yet
-	 *
 	 * @uses        is_multi_author
 	 * @uses        wp_list_authors
 	 *
