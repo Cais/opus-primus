@@ -303,7 +303,7 @@ class OpusPrimusGallery {
 	 * @uses    get_the_content
 	 * @uses    shortcode_parse_atts
 	 *
-	 * @return  null|int - array index value
+	 * @return  array
 	 *
 	 * @version 1.2.2
 	 * @date    September 3, 2013
