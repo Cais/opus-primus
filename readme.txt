@@ -39,15 +39,20 @@ are amended with subsequent years based on theme publication regardless of any
 change or modification to the actual file.
 
 == Changelog ==
-Recent changelog as of February 6, 2016
-= Version 1.4.2 =
+Recent changelog as of July 2016
+= Version 1.5 =
 * Released ...
 
 = Code =
 * Changed aperture from `F` to `f /`
+* Miscellaneous "escaping" improvements
+* Miscellaneous incline comments/documentation updates
 
 = CSS =
 * Changed input text field height to `auto`
+
+= Miscellaneous =
+* Implement more strict adherence to WordPress Coding Standards
 
 /** ------------------------------------------------------------------------- */
 = Version 1.4.1 =
