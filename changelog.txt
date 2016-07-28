@@ -15,7 +15,7 @@ This file will be used as an archive of all changelog entries.
 * Change all classes to a singleton style
 * Ensure `$pagination` has been initialized in `OpusPrimusNavigation::pagination` method
 * Improved i18n implementation in search found results string
-* Moved the `support_comment` method back into the `OpusPrimusStructures` class
+* Moved the `support_comment` method back into the `Opus_Primus_Structures` class
 * Moved the `before_comment_form` and `comments_form_closed` methods back into the `OpusPrimusComments` class
 * Refactored `OpusPrimusComments::comments_link` to use the WordPress core more effectively
 * Removed `$screen` parameter as not necessary in Taglines Stanza
@@ -151,9 +151,9 @@ This file will be used as an archive of all changelog entries.
 * Added `opus-primus-ignite.php` to reduce clutter in `functions.php`
 * Added `opus_image_link_navigation_output` filter hook to provide access to navigation output
 * Added `opus_tagline` to default hidden screen options array
-* Adjusted the `OpusPrimusStructures::the_loop` and `OpusPrimusStructures::the_loop_archives` to use the `pagination_wrapped` method
+* Adjusted the `Opus_Primus_Structures::the_loop` and `Opus_Primus_Structures::the_loop_archives` to use the `pagination_wrapped` method
 * Changed navigation method from `posts_link` to `pagination`
-* Changed single view first year of copyright to published year of post/page in `OpusPrimusStructures::copyright` method
+* Changed single view first year of copyright to published year of post/page in `Opus_Primus_Structures::copyright` method
 * Deprecated `OpusPrimusDefaults` class (file may be removed in a future release)
 * Enqueue custom stylesheet in an update safe location `/wp-content/opus-primus-customs/`
 * Enqueue custom JavaScript in an update safe location `/wp-content/opus-primus-customs/`
@@ -162,7 +162,7 @@ This file will be used as an archive of all changelog entries.
 * Remove conditional customization enqueue using internal theme folder
 * Renamed `opus-ignite.php` to `opus-primus-ignite.php` and moved to theme root
 * Renamed `OpusPrimusNavigation::image_nav` to `OpusPrimusNavigation::image_link_navigation`
-* Replaced `OpusPrimusStructures::replace_spaces` with `sanitize_html_class`
+* Replaced `Opus_Primus_Structures::replace_spaces` with `sanitize_html_class`
 * Set Customization path and URL CONSTANTS
 
 = CSS =
@@ -194,7 +194,7 @@ This file will be used as an archive of all changelog entries.
 * Refactored conditional comments and featured thumbnail checks into the `comments_link` and `show_featured_thumbnail` methods
 * Removed `extract` function, escaped attributes, and refactored conditional checks in PullQuotes Stanza
 * Use `opus_primus_theme_version` in place of `wp_get_theme` calls
-* Use transients to improve performance impact of the `OpusPrimusStructures::copyright` method
+* Use transients to improve performance impact of the `Opus_Primus_Structures::copyright` method
 
 = CSS =
 * Added Format-Aside Dashicons to Post-Format: Aside posts

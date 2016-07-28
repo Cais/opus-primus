@@ -1,6 +1,6 @@
 <?php
 /**
- * Opus Primus Post Structures
+ * Opus Primus Structures
  *
  * Controls for the organization and layout of the site and its content.
  *
@@ -34,23 +34,19 @@
  */
 
 /**
- * Class OpusPrimusStructures
+ * Class Opus_Primus_Structures
  *
  * Creates the basic structures used by the Opus Primus WordPress theme
  *
- * @version     1.2.3
- * @date        February 2, 2014
- * Added more tests
- *
  * @version     1.4
  * @date        March 31, 2015
- * Change `OpusPrimusStructures` to a singleton style class
+ * Change `Opus_Primus_Structures` to a singleton style class
  *
  * @version     1.5
  * @date        2016-07-28
  * Miscellaneous inline comments/documentation updates
  */
-class OpusPrimusStructures {
+class Opus_Primus_Structures {
 
 	/**
 	 * Set the instance to null initially
@@ -68,7 +64,7 @@ class OpusPrimusStructures {
 	 * @since   1.4
 	 * @date    March 31, 2015
 	 *
-	 * @return null|OpusPrimusStructures
+	 * @return null|Opus_Primus_Structures
 	 */
 	public static function create_instance() {
 
@@ -87,8 +83,8 @@ class OpusPrimusStructures {
 	 * @package    OpusPrimus
 	 * @since      0.1
 	 *
-	 * @uses       add_action
-	 * @uses       add_filter
+	 * @see        add_action
+	 * @see        add_filter
 	 *
 	 * @version    1.3
 	 * @date       November 13, 2014
@@ -125,13 +121,13 @@ class OpusPrimusStructures {
 	 * @param   string $old_title - default title text.
 	 * @param   string $sep       - separator character.
 	 *
-	 * @uses        (GLOBAL) $page
-	 * @uses        (GLOBAL) $paged
-	 * @uses        apply_filters
-	 * @uses        get_bloginfo - name, description
-	 * @uses        is_home
-	 * @uses        is_feed
-	 * @uses        is_front_page
+	 * @see         (GLOBAL) $page
+	 * @see         (GLOBAL) $paged
+	 * @see         apply_filters
+	 * @see         get_bloginfo - name, description
+	 * @see         is_home
+	 * @see         is_feed
+	 * @see         is_front_page
 	 *
 	 * @return  string - original title|new title
 	 *
@@ -180,9 +176,9 @@ class OpusPrimusStructures {
 	 *
 	 * @param   array $classes - existing body classes.
 	 *
-	 * @uses    apply_filters
-	 * @uses    is_active_sidebar
-	 * @uses    is_child_theme
+	 * @see     apply_filters
+	 * @see     is_active_sidebar
+	 * @see     is_child_theme
 	 *
 	 * @return  string - specific class based on active columns
 	 *
@@ -281,7 +277,7 @@ class OpusPrimusStructures {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @uses    wp_get_theme
+	 * @see     wp_get_theme
 	 *
 	 * @version 1.3
 	 * @date    November 13, 2014
@@ -315,7 +311,7 @@ class OpusPrimusStructures {
 	 * @package    OpusPrimus
 	 * @since      0.1
 	 *
-	 * @uses       OpusPrimusRouter::path_uri
+	 * @see        OpusPrimusRouter::path_uri
 	 *
 	 * @return string - URL of image
 	 *
@@ -342,7 +338,7 @@ class OpusPrimusStructures {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @uses    OpusPrimusStructures::bust_image
+	 * @see     OpusPrimusStructures::bust_image
 	 *
 	 * @version 1.4.2
 	 * @date    2016-07-28
@@ -365,15 +361,15 @@ class OpusPrimusStructures {
 	 * @package     OpusPrimus
 	 * @since       0.1
 	 *
-	 * @uses        __
-	 * @uses        apply_filters
-	 * @uses        esc_attr
-	 * @uses        get_bloginfo
-	 * @uses        get_posts
-	 * @uses        get_transient
-	 * @uses        home_url
-	 * @uses        post_date_gmt
-	 * @uses        set_transient
+	 * @see         __
+	 * @see         apply_filters
+	 * @see         esc_attr
+	 * @see         get_bloginfo
+	 * @see         get_posts
+	 * @see         get_transient
+	 * @see         home_url
+	 * @see         post_date_gmt
+	 * @see         set_transient
 	 *
 	 * @param   bool $show              controls the display of the copyright details.
 	 * @param   bool $by_author         controls the author component of the copyright.
@@ -475,18 +471,18 @@ class OpusPrimusStructures {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @uses    __
-	 * @uses    apply_filters
-	 * @uses    esc_attr__
-	 * @uses    esc_attr
-	 * @uses    esc_url
-	 * @uses    is_child_theme
-	 * @uses    parent
-	 * @uses    wp_get_theme
+	 * @see     __
+	 * @see     apply_filters
+	 * @see     esc_attr__
+	 * @see     esc_attr
+	 * @see     esc_url
+	 * @see     is_child_theme
+	 * @see     parent
+	 * @see     wp_get_theme
 	 *
-	 * @param   bool $show - true|false - default show credits|return null.
+	 * @param   bool $show true|false default show credits|return null.
 	 *
-	 * @return  mixed|void - theme credits with links|filtered credits
+	 * @return  mixed|void theme credits with links|filtered credits
 	 */
 	function credits( $show = true ) {
 
@@ -531,12 +527,12 @@ class OpusPrimusStructures {
 	 *
 	 * Closes appropriate CSS containers depending on the layout structure.
 	 *
-	 * @package              OpusPrimus
-	 * @since                0.1
+	 * @package OpusPrimus
+	 * @since   0.1
 	 *
-	 * @uses                 is_active_sidebar
+	 * @see     is_active_sidebar
 	 *
-	 * @return      string
+	 * @return  string
 	 */
 	function layout_close() {
 
@@ -579,7 +575,7 @@ class OpusPrimusStructures {
 	 * @package  OpusPrimus
 	 * @since    0.1
 	 *
-	 * @uses     is_active_sidebar
+	 * @see      is_active_sidebar
 	 *
 	 * @return  string
 	 *
@@ -628,16 +624,16 @@ class OpusPrimusStructures {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @uses    OpusPrimusArchives::archive_cloud
-	 * @uses    OpusPrimusArchives::create_instance
-	 * @uses    OpusPrimusArchives::categories_archives
-	 * @uses    OpusPrimusNavigation::search_menu
-	 * @uses    __
-	 * @uses    apply_filters
-	 * @uses    do_action
-	 * @uses    esc_html
-	 * @uses    get_search_form
-	 * @uses    get_search_query
+	 * @see     OpusPrimusArchives::archive_cloud
+	 * @see     OpusPrimusArchives::create_instance
+	 * @see     OpusPrimusArchives::categories_archives
+	 * @see     OpusPrimusNavigation::search_menu
+	 * @see     __
+	 * @see     apply_filters
+	 * @see     do_action
+	 * @see     esc_html
+	 * @see     get_search_form
+	 * @see     get_search_query
 	 */
 	function no_search_results() {
 
@@ -729,9 +725,10 @@ class OpusPrimusStructures {
 	 *
 	 * @return  string - class
 	 *
-	 * @deprecated    1.2.5
-	 * @date          July 24, 2014
-	 * Replaced all instances with `sanitize_html_class`
+	 * @since         1.2.5
+	 * @date          2014-07-24
+	 * @deprecated    0.1 use sanitize_html_class
+	 * @see           sanitize_html_class
 	 */
 	function replace_spaces( $text, $replacement = '-' ) {
 
@@ -756,14 +753,14 @@ class OpusPrimusStructures {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @uses    OpusPrimusStructures::no_search_results
-	 * @uses    OpusPrimusNavigation::post_link
-	 * @uses    OpusPrimusNavigation::pagination_wrapped
-	 * @uses    do_action
-	 * @uses    get_template_part
-	 * @uses    get_post_format
-	 * @uses    have_posts
-	 * @uses    the_post
+	 * @see     OpusPrimusStructures::no_search_results
+	 * @see     OpusPrimusNavigation::post_link
+	 * @see     OpusPrimusNavigation::pagination_wrapped
+	 * @see     do_action
+	 * @see     get_template_part
+	 * @see     get_post_format
+	 * @see     have_posts
+	 * @see     the_post
 	 *
 	 * @version 1.2
 	 * @date    July 20, 2013
@@ -810,13 +807,13 @@ class OpusPrimusStructures {
 	 * @package    OpusPrimus
 	 * @since      0.1
 	 *
-	 * @uses       OpusPrimusNavigation::pagination_wrapped
-	 * @uses       OpusPrimusStructures::no_search_results
-	 * @uses       do_action
-	 * @uses       get_template_part
-	 * @uses       get_post_format
-	 * @uses       have_posts
-	 * @uses       the_post
+	 * @see        OpusPrimusNavigation::pagination_wrapped
+	 * @see        OpusPrimusStructures::no_search_results
+	 * @see        do_action
+	 * @see        get_template_part
+	 * @see        get_post_format
+	 * @see        have_posts
+	 * @see        the_post
 	 *
 	 * @version    1.2.5
 	 * @date       June 22, 2014
@@ -857,10 +854,10 @@ class OpusPrimusStructures {
 	 * @package OpusPrimus
 	 * @since   1.0.1
 	 *
-	 * @uses    OpusPrimusStructures::the_loop
-	 * @uses    do_action
-	 * @uses    dynamic_sidebar
-	 * @uses    is_active_sidebar
+	 * @see     OpusPrimusStructures::the_loop
+	 * @see     do_action
+	 * @see     dynamic_sidebar
+	 * @see     is_active_sidebar
 	 */
 	function the_loop_wrapped() {
 		/** Add empty action before the_Loop */
@@ -900,10 +897,10 @@ class OpusPrimusStructures {
 	 * @package OpusPrimus
 	 * @since   1.0.1
 	 *
-	 * @uses    OpusPrimusStructures::the_loop_archives
-	 * @uses    do_action
-	 * @uses    dynamic_sidebar
-	 * @uses    is_active_sidebar
+	 * @see     OpusPrimusStructures::the_loop_archives
+	 * @see     do_action
+	 * @see     dynamic_sidebar
+	 * @see     is_active_sidebar
 	 */
 	function the_loop_archives_wrapped() {
 

@@ -89,7 +89,7 @@ The filters are listed below by file, in order of appearance:
         opus_status_update_over_year
         opus_default_sticky_flag
         opus_sticky_flag
-    includes\class.OpusPrimusStructures.php
+    includes\class.Opus_Primus_Structures.php
         opus_browser_title
         opus_body_classes
         opus_copyright

@@ -37,8 +37,8 @@
  * `opus_<section>_<placement>`
  */
 
-/** Create OpusPrimusStructures class object */
-$opus_structures = OpusPrimusStructures::create_instance();
+/** Create Opus_Primus_Structures class object */
+$opus_structures = Opus_Primus_Structures::create_instance();
 
 get_header( get_post_format() );
 

@@ -5,8 +5,8 @@
  * A WordPress Framework Theme.
  *
  * @package     OpusPrimus
- * @version     1.4
- * @date        March 31, 2015
+ * @version     1.5
+ * @date        2016-07-28
  *
  * @author      Opus Primus <in.opus.primus@gmail.com>
  * @copyright   Copyright (c) 2012-2016, Opus Primus
@@ -34,7 +34,7 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-$opus_structures = OpusPrimusStructures::create_instance();
+$opus_structures = Opus_Primus_Structures::create_instance();
 
 get_header();
 
@@ -46,7 +46,7 @@ do_action( 'opus_content_before' ); ?>
 		do_action( 'opus_content_top' );
 
 		/** Open the necessary layout CSS classes */
-		echo $opus_structures->layout_open();
+		echo esc_html( $opus_structures->layout_open() );
 
 		/** The complete loop section */
 		$opus_structures->the_loop_wrapped();
@@ -54,7 +54,7 @@ do_action( 'opus_content_before' ); ?>
 		get_sidebar();
 
 		/** Close the classes written by the layout_open method */
-		echo $opus_structures->layout_close();
+		echo esc_html( $opus_structures->layout_close() );
 
 		do_action( 'opus_content_bottom' ); ?>
 

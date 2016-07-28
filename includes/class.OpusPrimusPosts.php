@@ -157,7 +157,7 @@ class OpusPrimusPosts {
 	 *
 	 * @version    1.2.5
 	 * @date       July 24, 2014
-	 * Replaced `OpusPrimusStructures::replace_spaces` with `sanitize_html_class`
+	 * Replaced `Opus_Primus_Structures::replace_spaces` with `sanitize_html_class`
 	 */
 	function post_classes( $classes ) {
 

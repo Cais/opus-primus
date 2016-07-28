@@ -45,6 +45,7 @@ Recent changelog as of July 2016
 
 = Code =
 * Changed aperture from `F` to `f /`
+* Changed @uses to @see for function/class/method inline documentation
 * Miscellaneous "escaping" improvements
 * Miscellaneous incline comments/documentation updates
 
@@ -52,7 +53,8 @@ Recent changelog as of July 2016
 * Changed input text field height to `auto`
 
 = Miscellaneous =
-* Implement more strict adherence to WordPress Coding Standards
+* Implement more strict adherence to WordPress Coding Standards (WPCS)
+* File names refactored to better meet WPCS
 
 /** ------------------------------------------------------------------------- */
 = Version 1.4.1 =
@@ -83,7 +85,7 @@ Recent changelog as of July 2016
 * Change all classes to a singleton style
 * Ensure `$pagination` has been initialized in `OpusPrimusNavigation::pagination` method
 * Improved i18n implementation in search found results string
-* Moved the `support_comment` method back into the `OpusPrimusStructures` class
+* Moved the `support_comment` method back into the `Opus_Primus_Structures` class
 * Moved the `before_comment_form` and `comments_form_closed` methods back into the `OpusPrimusComments` class
 * Refactored `OpusPrimusComments::comments_link` to use the WordPress core more effectively
 * Removed `$screen` parameter as not necessary in Taglines Stanza

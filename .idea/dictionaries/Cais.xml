@@ -3,6 +3,7 @@
     <words>
       <w>alignleft</w>
       <w>alignright</w>
+      <w>andrijana</w>
       <w>antispambot</w>
       <w>basepath</w>
       <w>biryukov</w>
@@ -34,6 +35,7 @@
       <w>fluidvids</w>
       <w>fullname</w>
       <w>gform</w>
+      <w>gitter</w>
       <w>gmpg</w>
       <w>gravatar</w>
       <w>gravityforms</w>
@@ -43,11 +45,14 @@
       <w>keydown</w>
       <w>kickstarter</w>
       <w>koblentz</w>
+      <w>lahaut</w>
+      <w>laquo</w>
       <w>mailto</w>
       <w>menuitem</w>
       <w>menutxt</w>
       <w>modernizr</w>
       <w>ngettext</w>
+      <w>nikolic</w>
       <w>nocookie</w>
       <w>noninfringement</w>
       <w>noop</w>
@@ -61,16 +66,22 @@
       <w>poedit</w>
       <w>primus</w>
       <w>pullquote</w>
+      <w>rahib</w>
+      <w>raquo</w>
       <w>recaptcha</w>
       <w>remi</w>
+      <w>samy</w>
       <w>screenshots</w>
       <w>scrollbar</w>
       <w>searchfield</w>
+      <w>serbo</w>
       <w>sergey</w>
       <w>singlecomments</w>
       <w>slicknav</w>
       <w>sprintf</w>
+      <w>subcolumn</w>
       <w>tabindex</w>
+      <w>tagcloud</w>
       <w>tagline</w>
       <w>textwidget</w>
       <w>thierry</w>
@@ -81,8 +92,10 @@
       <w>videopress</w>
       <w>vids</w>
       <w>vimeo</w>
+      <w>webhostinggeeks</w>
       <w>wikipedia</w>
       <w>wpcf</w>
+      <w>wpcs</w>
       <w>wpstats</w>
       <w>wtfpl</w>
       <w>zepto</w>
