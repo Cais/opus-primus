@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Opus Primus Router
  *
@@ -32,6 +31,12 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+/**
+ * Class Opus Primus Router
+ *
+ * Used for path and routing structures.
  *
  * @version     1.4
  * @date        April 6, 2015
@@ -41,6 +46,11 @@
  */
 class OpusPrimusRouter {
 
+	/**
+	 * Set the instance to null initially
+	 *
+	 * @var $instance null
+	 */
 	private static $instance = null;
 
 	/**
@@ -84,7 +94,7 @@ class OpusPrimusRouter {
 	 *
 	 * @uses       get_template_directory
 	 *
-	 * @param $string
+	 * @param string $string current theme slug.
 	 *
 	 * @return string
 	 */
@@ -103,12 +113,11 @@ class OpusPrimusRouter {
 	 *
 	 * @uses       get_template_directory_uri
 	 *
-	 * @param $string
+	 * @param string $string current theme slug.
 	 *
 	 * @return string
 	 */
 	function path_uri( $string ) {
 		return get_template_directory_uri() . '/' . $string . '/';
 	}
-
 }

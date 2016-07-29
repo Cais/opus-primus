@@ -54,7 +54,7 @@ if ( ! defined( 'OPUS_CUSTOM_URL' ) ) {
 }
 
 /** Get the router class so we can build the paths */
-locate_template( 'includes/class.OpusPrimusRouter.php', true, true );
+locate_template( 'includes/class-opus-primus-router.php', true, true );
 
 /** Add Global Defaults */
 locate_template( 'includes/opus-primus-defaults.php', true, true );
