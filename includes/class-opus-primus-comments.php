@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Opus Primus Comments
  *
@@ -32,6 +31,13 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+/**
+ *  Class Opus Primus Comments
+ *
+ * For the construction and management of comments in the Opus Primus WordPress
+ * theme
  *
  * @version     1.1.1
  * @date        March 22, 2013
@@ -53,6 +59,11 @@
  */
 class OpusPrimusComments {
 
+	/**
+	 * Set the instance to null initially
+	 *
+	 * @var $instance null
+	 */
 	private static $instance = null;
 
 	/**
@@ -82,43 +93,43 @@ class OpusPrimusComments {
 	 * @package    OpusPrimus
 	 * @since      0.1
 	 *
-	 * @uses       add_action
-	 * @uses       add_filter
+	 * @see        add_action
+	 * @see        add_filter
 	 */
 	function __construct() {
 		/** Add comment actions - enqueue threaded comments */
 		add_action(
 			'comment_form_before', array(
-			$this,
-			'enqueue_comment_reply'
-		)
+				$this,
+				'enqueue_comment_reply',
+			)
 		);
 
 		add_action(
 			'comment_form_before', array(
-			$this,
-			'before_comment_form'
-		)
+				$this,
+				'before_comment_form',
+			)
 		);
 		add_action(
 			'comment_form_comments_closed', array(
-			$this,
-			'comments_form_closed'
-		)
+				$this,
+				'comments_form_closed',
+			)
 		);
 
 		/** Add comment actions - wrap comment fields in unordered list */
 		add_action(
 			'comment_form_before_fields', array(
-			$this,
-			'comment_fields_wrapper_start'
-		)
+				$this,
+				'comment_fields_wrapper_start',
+			)
 		);
 		add_action(
 			'comment_form_after_fields', array(
-			$this,
-			'comment_fields_wrapper_end'
-		)
+				$this,
+				'comment_fields_wrapper_end',
+			)
 		);
 
 		/** Add comment filters - NB: Order of these filters is important! */
@@ -126,17 +137,17 @@ class OpusPrimusComments {
 
 		add_filter(
 			'comment_form_defaults', array(
-			$this,
-			'change_comment_form_required_field_glyph'
-		)
+				$this,
+				'change_comment_form_required_field_glyph',
+			)
 		);
 
 		/** Add comment filters - change fields to list items from paragraphs */
 		add_filter(
 			'comment_form_default_fields', array(
-			$this,
-			'comment_fields_as_list_items'
-		)
+				$this,
+				'comment_fields_as_list_items',
+			)
 		);
 
 	}
@@ -152,10 +163,10 @@ class OpusPrimusComments {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @uses    is_singular
-	 * @uses    comments_open
-	 * @uses    get_option
-	 * @uses    wp_enqueue_script
+	 * @see     is_singular
+	 * @see     comments_open
+	 * @see     get_option
+	 * @see     wp_enqueue_script
 	 */
 	function enqueue_comment_reply() {
 
@@ -174,10 +185,11 @@ class OpusPrimusComments {
 	 * @package  OpusPrimus
 	 * @since    0.1
 	 *
-	 * @uses     __
-	 * @uses     apply_filters
-	 * @uses     have_comments
-	 * @uses     post_password_required
+	 * @see      __
+	 * @see      apply_filters
+	 * @see      esc_html
+	 * @see      have_comments
+	 * @see      post_password_required
 	 *
 	 * @version  1.0.1
 	 * @date     February 19, 2013
@@ -188,7 +200,7 @@ class OpusPrimusComments {
 		if ( post_password_required() ) {
 			printf(
 				'<span class="comments-password-message">' .
-				apply_filters( 'opus_comments_password_required', __( 'This post is password protected. Enter the password to view comments.', 'opus-primus' ) ) .
+				esc_html( apply_filters( 'opus_comments_password_required', __( 'This post is password protected. Enter the password to view comments.', 'opus-primus' ) ) ) .
 				'</span>'
 			);
 
@@ -199,7 +211,7 @@ class OpusPrimusComments {
 		if ( ! have_comments() ) {
 			printf(
 				'<span class="no-comments-message">' .
-				apply_filters( 'opus_no_comments_message', __( 'Start a discussion ...', 'opus-primus' ) ) .
+				esc_html( apply_filters( 'opus_no_comments_message', __( 'Start a discussion ...', 'opus-primus' ) ) ) .
 				'</span>'
 			);
 		}
@@ -215,8 +227,8 @@ class OpusPrimusComments {
 	 * @package OpusPrimus
 	 * @since   1.2
 	 *
-	 * @uses    __
-	 * @uses    apply_filters
+	 * @see     __
+	 * @see     apply_filters
 	 *
 	 * @return  mixed|void - default glyph - asterisk (*)
 	 *
@@ -245,9 +257,9 @@ class OpusPrimusComments {
 	 * used in this method
 	 * @link     https://core.trac.wordpress.org/ticket/23870
 	 *
-	 * @uses     OpusPrimusComments::comment_form_required_field_glyph
+	 * @see      OpusPrimusComments::comment_form_required_field_glyph
 	 *
-	 * @param   $defaults
+	 * @param   object $defaults passed from the comments form.
 	 *
 	 * @return  mixed
 	 */
@@ -270,9 +282,9 @@ class OpusPrimusComments {
 	 * @package  OpusPrimus
 	 * @since    0.1
 	 *
-	 * @uses     __
-	 * @uses     apply_filters
-	 * @uses     is_page
+	 * @see      __
+	 * @see      apply_filters
+	 * @see      is_page
 	 */
 	function comments_form_closed() {
 
@@ -280,7 +292,7 @@ class OpusPrimusComments {
 
 			printf(
 				'<span class="comments-closed-message">' .
-				apply_filters( 'opus_comments_form_closed', __( 'New comments are not being accepted at this time, please feel free to contact the post author directly.', 'opus-primus' ) ) .
+				esc_html( apply_filters( 'opus_comments_form_closed', __( 'New comments are not being accepted at this time, please feel free to contact the post author directly.', 'opus-primus' ) ) ) .
 				'</span>'
 			);
 
@@ -294,13 +306,13 @@ class OpusPrimusComments {
 	 *
 	 * Add additional classes to the comment based on the author
 	 *
-	 * @package          OpusPrimus
-	 * @since            0.1
+	 * @package OpusPrimus
+	 * @since   0.1
 	 *
-	 * @uses             (GLOBAL) $comment
-	 * @uses             user_can
+	 * @see     (GLOBAL) $comment
+	 * @see     user_can
 	 *
-	 * @param   array $classes
+	 * @param   array $classes array of classes used for user identification.
 	 *
 	 * @return  array $classes - original array plus additional role and user-id
 	 */
@@ -322,12 +334,12 @@ class OpusPrimusComments {
 		}
 
 		/** Add user ID based classes */
-		if ( $comment->user_id == 1 ) {
+		if ( 1 === $comment->user_id ) {
 			/** Administrator 'Prime' => first registered user ID */
-			$userid = "administrator-prime user-id-1";
+			$userid = 'administrator-prime user-id-1';
 		} else {
 			/** All other users - NB: user-id-0 -> non-registered user */
-			$userid = "user-id-" . ( $comment->user_id );
+			$userid = 'user-id-' . ( $comment->user_id );
 		}
 
 		$classes[] = $userid;
@@ -343,9 +355,9 @@ class OpusPrimusComments {
 	 * @package OpusPrimus
 	 * @since   1.2
 	 *
-	 * @uses    esc_attr
-	 * @uses    get_option
-	 * @uses    wp_get_current_commenter
+	 * @see     esc_attr
+	 * @see     get_option
+	 * @see     wp_get_current_commenter
 	 *
 	 * @return  array
 	 */
@@ -356,12 +368,9 @@ class OpusPrimusComments {
 		$aria_req  = ( $req ? " aria-required='true'" : '' );
 
 		$fields = array(
-			'author' => '<li class="comment-form-author">' . '<label for="author">' . __( 'Name', 'opus-primus' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-				'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . ' " size="30" ' . $aria_req . ' /></li>',
-			'email'  => '<li class="comment-form-email"><label for="email">' . __( 'Email', 'opus-primus' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-				'<input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . ' " size="30" ' . $aria_req . ' /></li>',
-			'url'    => '<li class="comment-form-url"><label for="url">' . __( 'Website', 'opus-primus' ) . '</label>' .
-				'<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></li>',
+			'author' => '<li class="comment-form-author"><label for="author">' . __( 'Name', 'opus-primus' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label><input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . ' " size="30" ' . $aria_req . ' /></li>',
+			'email'  => '<li class="comment-form-email"><label for="email">' . __( 'Email', 'opus-primus' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label><input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . ' " size="30" ' . $aria_req . ' /></li>',
+			'url'    => '<li class="comment-form-url"><label for="url">' . __( 'Website', 'opus-primus' ) . '</label><input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></li>',
 		);
 
 		return $fields;
@@ -407,12 +416,12 @@ class OpusPrimusComments {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @uses    OpusPrimusComments::comments_closed_class
-	 * @uses    OpusPrimusComments::has_comments_class
-	 * @uses    comments_popup_link
-	 * @uses    do_action
-	 * @uses    is_archive
-	 * @uses    is_single
+	 * @see     OpusPrimusComments::comments_closed_class
+	 * @see     OpusPrimusComments::has_comments_class
+	 * @see     comments_popup_link
+	 * @see     do_action
+	 * @see     is_archive
+	 * @see     is_single
 	 *
 	 * @version 1.2.4
 	 * @date    May 10, 2014
@@ -434,13 +443,11 @@ class OpusPrimusComments {
 			/** Add empty hook before comments link */
 			do_action( 'opus_comments_link_before' );
 
-
-			echo '<h5 class="comments-link ' . $this->comments_closed_class() . ' ' . $this->has_comments_class() . '">';
+			echo esc_html( '<h5 class="comments-link ' . $this->comments_closed_class() . ' ' . $this->has_comments_class() . '">' );
 
 			comments_popup_link();
 
 			echo '</h5><!-- .comments-link -->';
-
 
 			/** Add empty hook after comments link */
 			do_action( 'opus_comments_link_after' );
@@ -459,7 +466,7 @@ class OpusPrimusComments {
 	 * @package OpusPrimus
 	 * @since   1.4
 	 *
-	 * @uses    comments_open
+	 * @see     comments_open
 	 *
 	 * @return string
 	 */
@@ -483,7 +490,7 @@ class OpusPrimusComments {
 	 * @package OpusPrimus
 	 * @since   1.4
 	 *
-	 * @uses    get_comments_number
+	 * @see     get_comments_number
 	 *
 	 * @return string
 	 */
@@ -506,8 +513,8 @@ class OpusPrimusComments {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @uses    do_action
-	 * @uses    comments_template
+	 * @see     do_action
+	 * @see     comments_template
 	 */
 	function wrapped_comments_template() {
 
@@ -530,10 +537,11 @@ class OpusPrimusComments {
 	 * @package OpusPrimus
 	 * @since   1.1.1
 	 *
-	 * @uses    WP_Query::comments_by_type
-	 * @uses    __
-	 * @uses    _n
-	 * @uses    number_format_i18n
+	 * @see     WP_Query::comments_by_type
+	 * @see     __
+	 * @see     _n
+	 * @see     esc_html
+	 * @see     number_format_i18n
 	 *
 	 * @version 1.4
 	 * @date    April 11, 2015
@@ -552,12 +560,8 @@ class OpusPrimusComments {
 					<h3 id="comments">
 						<?php
 						printf(
-							_n(
-								__( '%1$s Comment', 'opus-primus' ),
-								__( '%1$s Comments', 'opus-primus' ),
-								count( $comments_only )
-							),
-							number_format_i18n( count( $comments_only ) )
+							esc_html( _n( __( '%1$s Comment', 'opus-primus' ), __( '%1$s Comments', 'opus-primus' ), count( $comments_only ) ) ),
+							esc_html( number_format_i18n( count( $comments_only ) ) )
 						); ?>
 					</h3><!-- #comments -->
 				</a>
@@ -576,10 +580,11 @@ class OpusPrimusComments {
 	 * @package OpusPrimus
 	 * @since   1.1.1
 	 *
-	 * @uses    WP_Query::comments_by_type
-	 * @uses    __
-	 * @uses    _n
-	 * @uses    number_format_i18n
+	 * @see     WP_Query::comments_by_type
+	 * @see     __
+	 * @see     _n
+	 * @see     esc_html
+	 * @see     number_format_i18n
 	 *
 	 * @version 1.4
 	 * @date    April 11, 2015
@@ -598,12 +603,8 @@ class OpusPrimusComments {
 					<h3 id="pingbacks">
 						<?php
 						printf(
-							_n(
-								__( '%1$s Pingback', 'opus-primus' ),
-								__( '%1$s Pingbacks', 'opus-primus' ),
-								count( $pingbacks_only )
-							),
-							number_format_i18n( count( $pingbacks_only ) )
+							esc_html( _n( __( '%1$s Pingback', 'opus-primus' ), __( '%1$s Pingbacks', 'opus-primus' ), count( $pingbacks_only ) ) ),
+							esc_html( number_format_i18n( count( $pingbacks_only ) ) )
 						); ?>
 					</h3><!-- #pingbacks -->
 				</a>
@@ -622,10 +623,11 @@ class OpusPrimusComments {
 	 * @package OpusPrimus
 	 * @since   1.1.1
 	 *
-	 * @uses    WP_Query::comments_by_type
-	 * @uses    __
-	 * @uses    _n
-	 * @uses    number_format_i18n
+	 * @see     WP_Query::comments_by_type
+	 * @see     __
+	 * @see     _n
+	 * @see     esc_html
+	 * @see     number_format_i18n
 	 *
 	 * @version 1.4
 	 * @date    April 11, 2015
@@ -644,12 +646,8 @@ class OpusPrimusComments {
 					<h3 id="trackbacks">
 						<?php
 						printf(
-							_n(
-								__( '%1$s Trackback', 'opus-primus' ),
-								__( '%1$s Trackbacks', 'opus-primus' ),
-								count( $trackbacks_only )
-							),
-							number_format_i18n( count( $trackbacks_only ) )
+							esc_html( _n( __( '%1$s Trackback', 'opus-primus' ), __( '%1$s Trackbacks', 'opus-primus' ), count( $trackbacks_only ) ) ),
+							esc_html( number_format_i18n( count( $trackbacks_only ) ) )
 						); ?>
 					</h3><!-- #trackbacks -->
 				</a>
@@ -668,10 +666,10 @@ class OpusPrimusComments {
 	 * @package OpusPrimus
 	 * @since   1.1.1
 	 *
-	 * @uses    OpusPrimusNavigation::comments_navigation
-	 * @uses    WP_Query::comments_by_type
-	 * @uses    get_option
-	 * @uses    wp_list_comments
+	 * @see     OpusPrimusNavigation::comments_navigation
+	 * @see     WP_Query::comments_by_type
+	 * @see     get_option
+	 * @see     wp_list_comments
 	 */
 	function comments_only_panel() {
 
@@ -706,10 +704,10 @@ class OpusPrimusComments {
 	 * @package OpusPrimus
 	 * @since   1.1.1
 	 *
-	 * @uses    OpusPrimusNavigation::comments_navigation
-	 * @uses    WP_Query::comments_by_type
-	 * @uses    get_option
-	 * @uses    wp_list_comments
+	 * @see     OpusPrimusNavigation::comments_navigation
+	 * @see     WP_Query::comments_by_type
+	 * @see     get_option
+	 * @see     wp_list_comments
 	 */
 	function pingbacks_only_panel() {
 
@@ -744,10 +742,10 @@ class OpusPrimusComments {
 	 * @package OpusPrimus
 	 * @since   1.1.1
 	 *
-	 * @uses    OpusPrimusNavigation::comments_navigation
-	 * @uses    WP_Query::comments_by_type
-	 * @uses    get_option
-	 * @uses    wp_list_comments
+	 * @see     OpusPrimusNavigation::comments_navigation
+	 * @see     WP_Query::comments_by_type
+	 * @see     get_option
+	 * @see     wp_list_comments
 	 */
 	function trackbacks_only_panel() {
 
@@ -783,7 +781,7 @@ class OpusPrimusComments {
 	 * @package OpusPrimus
 	 * @since   1.1.1
 	 *
-	 * @uses    WP_Query::comments_by_type
+	 * @see     WP_Query::comments_by_type
 	 *
 	 * @return  string
 	 */
@@ -795,7 +793,7 @@ class OpusPrimusComments {
 		$pingbacks_only  = intval( count( $wp_query->comments_by_type['pingback'] ) );
 		$trackbacks_only = intval( count( $wp_query->comments_by_type['trackback'] ) );
 
-		/** @var $all_comments - initialize comments counter */
+		/** Initialize comments counter */
 		$all_comments = 0;
 		/**
 		 * To remove a comment type count simply comment out or remove the
@@ -820,11 +818,12 @@ class OpusPrimusComments {
 	 * @package OpusPrimus
 	 * @since   1.1.1
 	 *
-	 * @uses    OpusPrimusComments::all_comments_count
-	 * @USES    __
-	 * @uses    _n
-	 * @uses    do_action
-	 * @uses    number_format_i18n
+	 * @see     OpusPrimusComments::all_comments_count
+	 * @see     __
+	 * @see     _n
+	 * @see     do_action
+	 * @see esc_html
+	 * @see     number_format_i18n
 	 *
 	 * @version 1.4
 	 * @date    April 11, 2015
@@ -846,12 +845,10 @@ class OpusPrimusComments {
 		}
 
 		/** Display the total comments message */
-		echo $show_all_comments_count;
+		echo esc_html( $show_all_comments_count );
 
 		/** Add empty hook after all comments count */
 		do_action( 'opus_all_comments_count_after' );
 
 	}
-
-
 }
