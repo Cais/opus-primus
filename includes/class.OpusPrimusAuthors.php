@@ -431,7 +431,7 @@ class OpusPrimusAuthors {
 	 *
 	 * @param   $post_author_args
 	 *
-	 * @uses    (GLOBAL) $opus_author_id - from OpusPrimusPosts::post_byline
+	 * @uses    (GLOBAL) $opus_author_id - from Opus_Primus_Posts::post_byline
 	 * @uses    (GLOBAL) $post
 	 * @uses    OpusPrimusAuthors::author_details
 	 * @uses    OpusPrimusAuthors::author_coda

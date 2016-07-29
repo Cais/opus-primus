@@ -68,7 +68,7 @@ The filters are listed below by file, in order of appearance:
 	includes\class.Opus_Primus_Navigation.php
 		opus_image_link_navigation_output
 		opus_navigation_pagination
-    includes\class.OpusPrimusPosts.php
+    includes\class.Opus_Primus_Posts.php
         opus_category_widget_exclude_list
         opus_excerpt_more_link
         opus_mod_different_author_phrase

@@ -70,7 +70,7 @@ locate_template( 'includes/class-opus-primus-structures.php', true, true );
 /** Add Headers */
 locate_template( 'includes/class-opus-primus-header.php', true, true );
 /** Add Posts */
-locate_template( 'includes/class.OpusPrimusPosts.php', true, true );
+locate_template( 'includes/class-opus-primus-posts.php', true, true );
 /** Add Comments Hooks */
 locate_template( 'includes/class.OpusPrimusComments.php', true, true );
 /** Add Images */

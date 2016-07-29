@@ -102,8 +102,8 @@ do_action( 'opus_content_before' ); ?>
 						<div <?php post_class(); ?>>
 
 							<?php
-							/** Create OpusPrimusPosts class object */
-							$opus_posts = OpusPrimusPosts::create_instance();
+							/** Create Opus_Primus_Posts class object */
+							$opus_posts = Opus_Primus_Posts::create_instance();
 
 							$opus_posts->post_byline( array( 'display_mod_author' => true ) );
 							$opus_posts->post_title();

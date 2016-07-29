@@ -188,7 +188,7 @@ This file will be used as an archive of all changelog entries.
 * Added `opus_primus_theme_version()` call as an accessible text string
 * Added new default `number_of_secondary_images` method under Gallery parameters
 * Bring the Featured Image Thumbnail back into the index view ... can you say "waffle"?
-* Change `$output = null` to `$output = ''` in `OpusPrimusPosts::sticky_flag` method
+* Change `$output = null` to `$output = ''` in `Opus_Primus_Posts::sticky_flag` method
 * Corrected typo in `'opus_links_pages_after'` hook
 * Corrected modified date/time output to account for scheduled posts being modified earlier than they are posted
 * Refactored conditional comments and featured thumbnail checks into the `comments_link` and `show_featured_thumbnail` methods
@@ -221,7 +221,7 @@ This file will be used as an archive of all changelog entries.
 * Moved `secondary_images` wrapper into OpusPrimusGallery::secondary_images method
 * Moved the ellipsis out of the read more link
 * Refactored `$output` to use `button` class versus the button element in meta byline flags
-* Removed unused parameter `$more` from `OpusPrimusPosts::excerpt_more_link` method
+* Removed unused parameter `$more` from `Opus_Primus_Posts::excerpt_more_link` method
 * Removed `$sep_location` parameter as it was not used in `browser_title` method
 * Removed Featured Image thumbnail from index view
 * Renamed `OpusPrimusDefaults` methods from `show_*` to `display_*`
