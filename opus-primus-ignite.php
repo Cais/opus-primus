@@ -68,7 +68,7 @@ locate_template( 'includes/class-opus-primus-navigation.php', true, true );
 /** Add Structures */
 locate_template( 'includes/class-opus-primus-structures.php', true, true );
 /** Add Headers */
-locate_template( 'includes/class.OpusPrimusHeader.php', true, true );
+locate_template( 'includes/class-opus-primus-header.php', true, true );
 /** Add Posts */
 locate_template( 'includes/class.OpusPrimusPosts.php', true, true );
 /** Add Comments Hooks */

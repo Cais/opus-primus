@@ -632,6 +632,7 @@ class Opus_Primus_Structures {
 	 * @see     apply_filters
 	 * @see     do_action
 	 * @see     esc_html
+	 * @see     esc_html__
 	 * @see     get_search_form
 	 * @see     get_search_query
 	 */

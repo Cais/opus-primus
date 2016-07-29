@@ -93,9 +93,9 @@ class Opus_Primus_Navigation {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @uses    do_action
-	 * @uses    next_comments_link
-	 * @uses    previous_comments_link
+	 * @see     do_action
+	 * @see     next_comments_link
+	 * @see     previous_comments_link
 	 */
 	function comments_navigation() {
 
@@ -125,8 +125,8 @@ class Opus_Primus_Navigation {
 	 *
 	 * @param   string|array $page_menu_args passed arguments for the method.
 	 *
-	 * @uses    wp_list_pages
-	 * @uses    wp_parse_args
+	 * @see     wp_list_pages
+	 * @see     wp_parse_args
 	 */
 	function list_pages( $page_menu_args ) {
 
@@ -152,11 +152,11 @@ class Opus_Primus_Navigation {
 	 * @package    OpusPrimus
 	 * @since      0.1
 	 *
-	 * @uses       __
-	 * @uses       apply_filters
-	 * @uses       do_action
-	 * @uses       next_image_link
-	 * @uses       previous_image_link
+	 * @see        __
+	 * @see        apply_filters
+	 * @see        do_action
+	 * @see        next_image_link
+	 * @see        previous_image_link
 	 *
 	 * @version    1.2.5
 	 * @date       July 24, 2014
@@ -196,9 +196,9 @@ class Opus_Primus_Navigation {
 	 * @param   string|array $link_pages_args arguments passed to method.
 	 * @param   string       $preface         - leading word or phrase before display of post page index - MUST set $link_pages_args for this to display.
 	 *
-	 * @uses       do_action
-	 * @uses       wp_link_pages
-	 * @uses       wp_parse_args
+	 * @see        do_action
+	 * @see        wp_link_pages
+	 * @see        wp_parse_args
 	 *
 	 * @version    1.2.4
 	 * @date       February 23, 2014
@@ -237,9 +237,9 @@ class Opus_Primus_Navigation {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @uses    do_action
-	 * @uses    next_posts_link
-	 * @uses    previous_posts_link
+	 * @see     do_action
+	 * @see     next_posts_link
+	 * @see     previous_posts_link
 	 */
 	function post_link() {
 
@@ -267,9 +267,9 @@ class Opus_Primus_Navigation {
 	 * @package    OpusPrimus
 	 * @since      0.1
 	 *
-	 * @uses       do_action
-	 * @uses       next_posts_link
-	 * @uses       previous_posts_link
+	 * @see        do_action
+	 * @see        next_posts_link
+	 * @see        previous_posts_link
 	 *
 	 * @version    1.2.5
 	 * @date       June 22, 2014
@@ -301,11 +301,11 @@ class Opus_Primus_Navigation {
 	 * @sub-package Navigation
 	 * @since       1.2.5
 	 *
-	 * @uses        (GLOBAL) $wp_query
-	 * @uses        get_option
-	 * @uses        get_pagenum_link
-	 * @uses        get_query_var
-	 * @uses        get_the_posts_pagination
+	 * @see         (GLOBAL) $wp_query
+	 * @see         get_option
+	 * @see         get_pagenum_link
+	 * @see         get_query_var
+	 * @see         get_the_posts_pagination
 	 *
 	 * @return mixed|void
 	 *
@@ -372,8 +372,8 @@ class Opus_Primus_Navigation {
 	 * @sub-package    Navigation
 	 * @since          1.2.5
 	 *
-	 * @uses           OpusPrimusNavigation::pagination
-	 * @uses           do_action
+	 * @see            OpusPrimusNavigation::pagination
+	 * @see            do_action
 	 */
 	function pagination_wrapped() {
 
@@ -396,9 +396,9 @@ class Opus_Primus_Navigation {
 	 *
 	 * @param   string|array $primary_menu_args arguments passed to method.
 	 *
-	 * @uses    do_action
-	 * @uses    wp_nav_menu
-	 * @uses    wp_parse_args
+	 * @see     do_action
+	 * @see     wp_nav_menu
+	 * @see     wp_parse_args
 	 */
 	function primary_menu( $primary_menu_args = '' ) {
 
@@ -429,10 +429,10 @@ class Opus_Primus_Navigation {
 	 *
 	 * @param   string|array $search_menu_args arguments passed to method.
 	 *
-	 * @uses    do_action
-	 * @uses    search_page_menu
-	 * @uses    wp_nav_menu
-	 * @uses    wp_parse_args
+	 * @see     do_action
+	 * @see     search_page_menu
+	 * @see     wp_nav_menu
+	 * @see     wp_parse_args
 	 */
 	function search_menu( $search_menu_args = '' ) {
 
@@ -468,8 +468,8 @@ class Opus_Primus_Navigation {
 	 *
 	 * @param   string|array $list_args arguments passed to method.
 	 *
-	 * @uses    wp_page_menu
-	 * @uses    wp_parse_args
+	 * @see     wp_page_menu
+	 * @see     wp_parse_args
 	 */
 	function search_page_menu( $list_args = '' ) {
 
@@ -500,9 +500,9 @@ class Opus_Primus_Navigation {
 	 *
 	 * @param   string|array $secondary_menu_args arguments passed to method.
 	 *
-	 * @uses     do_action
-	 * @uses     wp_nav_menu
-	 * @uses     wp_parse_args
+	 * @see      do_action
+	 * @see      wp_nav_menu
+	 * @see      wp_parse_args
 	 */
 	function secondary_menu( $secondary_menu_args = '' ) {
 

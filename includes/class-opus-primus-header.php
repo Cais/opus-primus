@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Opus Primus Headers
  *
@@ -32,15 +31,26 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+/**
+ * Class Opus Primus Header
  *
+ * Handles header related items for the Opus Primus WordPress theme
  *
  * @version     1.4
  * @date        April 5, 2015
+ *
  * Change `OpusPrimusHeader` to a singleton style class
- * Renamed file to `class.OpusPrimusHeader.php` for consistency
+ * Renamed file to `class-opus-primus-header.php` for consistency
  */
 class OpusPrimusHeader {
 
+	/**
+	 * Set the instance to null initially
+	 *
+	 * @var $instance null
+	 */
 	private static $instance = null;
 
 	/**
@@ -80,12 +90,13 @@ class OpusPrimusHeader {
 	 * @package OpusPrimus
 	 * @since   1.1
 	 *
-	 * @uses    esc_attr
-	 * @uses    esc_url
-	 * @uses    get_bloginfo
-	 * @uses    home_url
+	 * @see     esc_attr
+	 * @see     esc_url
+	 * @see     get_bloginfo
+	 * @see     home_url
 	 */
-	function site_title() { ?>
+	function site_title() {
+		?>
 
 		<h1 id="site-title">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
@@ -104,8 +115,8 @@ class OpusPrimusHeader {
 	 * @package OpusPrimus
 	 * @since   1.1
 	 *
-	 * @uses    OpusPrimusHeader::site_title
-	 * @uses    do_action
+	 * @see     OpusPrimusHeader::site_title
+	 * @see     do_action
 	 */
 	function site_title_block() {
 
@@ -129,9 +140,10 @@ class OpusPrimusHeader {
 	 * @package OpusPrimus
 	 * @since   1.1
 	 *
-	 * @uses    bloginfo
+	 * @see     bloginfo
 	 */
-	function site_description() { ?>
+	function site_description() {
+		?>
 
 		<h2 id="site-description">
 			<?php bloginfo( 'description' ); ?>
@@ -148,8 +160,8 @@ class OpusPrimusHeader {
 	 * @package OpusPrimus
 	 * @since   1.1
 	 *
-	 * @uses    OpusPrimusHeader::site_description
-	 * @uses    do_action
+	 * @see     OpusPrimusHeader::site_description
+	 * @see     do_action
 	 */
 	function site_description_block() {
 
@@ -173,7 +185,7 @@ class OpusPrimusHeader {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @uses    get_header_image
+	 * @see     get_header_image
 	 *
 	 * @return string
 	 */
@@ -194,13 +206,14 @@ class OpusPrimusHeader {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @uses    OpusPrimusHeaders::custom_header_image
-	 * @uses    get_header_image
+	 * @see     OpusPrimusHeaders::custom_header_image
+	 * @see     esc_html
+	 * @see     get_header_image
 	 */
 	function show_custom_header_image() {
 
 		if ( get_header_image() ) {
-			echo $this->custom_header_image();
+			echo esc_html( $this->custom_header_image() );
 		}
 
 	}
@@ -214,8 +227,8 @@ class OpusPrimusHeader {
 	 * @package OpusPrimus
 	 * @since   1.1
 	 *
-	 * @uses    OpusPrimusStructures::show_custom_header_image
-	 * @uses    do_action
+	 * @see     OpusPrimusStructures::show_custom_header_image
+	 * @see     do_action
 	 */
 	function show_custom_header_image_block() {
 
@@ -228,6 +241,4 @@ class OpusPrimusHeader {
 		do_action( 'opus_custom_header_image_after' );
 
 	}
-
-
 }
