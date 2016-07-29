@@ -65,7 +65,7 @@ The filters are listed below by file, in order of appearance:
         opus_exif_timestamp
         opus_exif_title
         opus_featured_thumbnail_single_view_portrait
-	includes\class.OpusPrimusNavigation.php
+	includes\class.Opus_Primus_Navigation.php
 		opus_image_link_navigation_output
 		opus_navigation_pagination
     includes\class.OpusPrimusPosts.php

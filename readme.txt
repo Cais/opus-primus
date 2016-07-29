@@ -83,7 +83,7 @@ Recent changelog as of July 2016
 * Added `Share the Author Wealth` method, not implemented as a display element, yet
 * Added context (`_x`) for complete byline phrase translation string
 * Change all classes to a singleton style
-* Ensure `$pagination` has been initialized in `OpusPrimusNavigation::pagination` method
+* Ensure `$pagination` has been initialized in `Opus_Primus_Navigation::pagination` method
 * Improved i18n implementation in search found results string
 * Moved the `support_comment` method back into the `Opus_Primus_Structures` class
 * Moved the `before_comment_form` and `comments_form_closed` methods back into the `OpusPrimusComments` class
@@ -136,7 +136,7 @@ Recent changelog as of July 2016
 * Changed method to return the Featured Thumbnail versus outputting it
 * Changed from using `get_the_time` to `date_i18n` for `OpusPrimusImages::exif_timestamp` method
 * Extracted code from `featured_thumbnail` method to create `featured_thumbnail_single_view` method
-* Improved look of navigation links in `OpusPrimusNavigation::multiple_pages_link` method
+* Improved look of navigation links in `Opus_Primus_Navigation::multiple_pages_link` method
 
 = CSS =
 * Added `=== Screen Reader Text ===` section

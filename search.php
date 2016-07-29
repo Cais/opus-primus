@@ -125,8 +125,8 @@ do_action( 'opus_content_before' ); ?>
 
 			}
 
-			/** Create OpusPrimusNavigation class object */
-			$opus_navigation = OpusPrimusNavigation::create_instance();
+			/** Create Opus_Primus_Navigation class object */
+			$opus_navigation = Opus_Primus_Navigation::create_instance();
 			$opus_navigation->posts_link();
 
 			/** the_Loop - Ends */

@@ -679,7 +679,7 @@ class Opus_Primus_Structures {
 
 		/** Get the class variables */
 		$opus_archives   = OpusPrimusArchives::create_instance();
-		$opus_navigation = OpusPrimusNavigation::create_instance();
+		$opus_navigation = Opus_Primus_Navigation::create_instance();
 
 		/** Display a list of categories to choose from */
 		$opus_archives->categories_archive(
@@ -768,7 +768,7 @@ class Opus_Primus_Structures {
 	 */
 	function the_loop() {
 
-		$opus_navigation = OpusPrimusNavigation::create_instance();
+		$opus_navigation = Opus_Primus_Navigation::create_instance();
 
 		/** This is where the_Loop begins */
 		if ( have_posts() ) {
@@ -839,7 +839,7 @@ class Opus_Primus_Structures {
 			$this->no_search_results();
 		}
 
-		$opus_navigation = OpusPrimusNavigation::create_instance();
+		$opus_navigation = Opus_Primus_Navigation::create_instance();
 		$opus_navigation->pagination_wrapped();
 		/** This is where the_Loop ends */
 

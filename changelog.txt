@@ -13,7 +13,7 @@ This file will be used as an archive of all changelog entries.
 * Added `Share the Author Wealth` method, not implemented as a display element, yet
 * Added context (`_x`) for complete byline phrase translation string
 * Change all classes to a singleton style
-* Ensure `$pagination` has been initialized in `OpusPrimusNavigation::pagination` method
+* Ensure `$pagination` has been initialized in `Opus_Primus_Navigation::pagination` method
 * Improved i18n implementation in search found results string
 * Moved the `support_comment` method back into the `Opus_Primus_Structures` class
 * Moved the `before_comment_form` and `comments_form_closed` methods back into the `OpusPrimusComments` class
@@ -66,7 +66,7 @@ This file will be used as an archive of all changelog entries.
 * Changed method to return the Featured Thumbnail versus outputting it
 * Changed from using `get_the_time` to `date_i18n` for `OpusPrimusImages::exif_timestamp` method
 * Extracted code from `featured_thumbnail` method to create `featured_thumbnail_single_view` method
-* Improved look of navigation links in `OpusPrimusNavigation::multiple_pages_link` method
+* Improved look of navigation links in `Opus_Primus_Navigation::multiple_pages_link` method
 
 = CSS =
 * Added `=== Screen Reader Text ===` section
@@ -143,8 +143,8 @@ This file will be used as an archive of all changelog entries.
 * Released July 2014
 
 = Code =
-* Added new method `OpusPrimusNavigation::pagination` for moving between pages of posts
-* Added new method `OpusPrimusNavigation::pagination_wrapped` to provide actions hooks before and after the `pagination` method
+* Added new method `Opus_Primus_Navigation::pagination` for moving between pages of posts
+* Added new method `Opus_Primus_Navigation::pagination_wrapped` to provide actions hooks before and after the `pagination` method
 * Added `antispambot` email protection to author biography email addresses
 * Added sanity checks to ensure widgets are active before rendering sidebars
 * Added `opus_primus_defaults.php` to replace `$opus_defaults` class
@@ -161,7 +161,7 @@ This file will be used as an archive of all changelog entries.
 * Refactored `OpusPrimusTaglines::tagline_create_boxes` to clarify the parameter usage
 * Remove conditional customization enqueue using internal theme folder
 * Renamed `opus-ignite.php` to `opus-primus-ignite.php` and moved to theme root
-* Renamed `OpusPrimusNavigation::image_nav` to `OpusPrimusNavigation::image_link_navigation`
+* Renamed `Opus_Primus_Navigation::image_nav` to `Opus_Primus_Navigation::image_link_navigation`
 * Replaced `Opus_Primus_Structures::replace_spaces` with `sanitize_html_class`
 * Set Customization path and URL CONSTANTS
 

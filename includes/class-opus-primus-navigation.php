@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Opus Primus Navigation
  *
@@ -33,6 +32,12 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+/**
+ * Class Opus Primus Navigation
+ *
+ * Provides most of the navigation methods for the Opus Primus theme
  *
  * @version     1.2.5
  * @date        June 15, 2014
@@ -40,10 +45,15 @@
  *
  * @version     1.4
  * @date        April 5, 2015
- * Change `OpusPrimusNavigation` to a singleton style class
+ * Change `Opus_Primus_Navigation` to a singleton style class
  */
-class OpusPrimusNavigation {
+class Opus_Primus_Navigation {
 
+	/**
+	 * Set the instance to null initially
+	 *
+	 * @var $instance null
+	 */
 	private static $instance = null;
 
 	/**
@@ -55,7 +65,7 @@ class OpusPrimusNavigation {
 	 * @since   1.4
 	 * @date    April 6, 2015
 	 *
-	 * @return null|OpusPrimusNavigation
+	 * @return null|Opus_Primus_Navigation
 	 */
 	public static function create_instance() {
 
@@ -113,7 +123,7 @@ class OpusPrimusNavigation {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @param   string|array $page_menu_args
+	 * @param   string|array $page_menu_args passed arguments for the method.
 	 *
 	 * @uses    wp_list_pages
 	 * @uses    wp_parse_args
@@ -150,7 +160,7 @@ class OpusPrimusNavigation {
 	 *
 	 * @version    1.2.5
 	 * @date       July 24, 2014
-	 * Renamed `OpusPrimusNavigation::image_nav` to `OpusPrimusNavigation::image_link_navigation`
+	 * Renamed `Opus_Primus_Navigation::image_nav` to `Opus_Primus_Navigation::image_link_navigation`
 	 * Added `opus_image_link_navigation_output` filter hook to provide access to navigation output
 	 */
 	function image_link_navigation() {
@@ -158,12 +168,12 @@ class OpusPrimusNavigation {
 		do_action( 'opus_image_link_navigation_before' );
 
 		/** Add navigation links between pictures in the gallery */
-		$output = '<div class="opus-image-link-navigation cf">';
-		$output .= previous_image_link( false, '<span class="left">' . __( 'Previous Photo', 'opus-primus' ) . '</span>' );
-		$output .= next_image_link( false, '<span class="right">' . __( 'Next Photo', 'opus-primus' ) . '</span>' );
-		$output .= '</div><!-- .opus-image-link-navigation -->';
+		$output = '<div class="opus-image-link-navigation cf">'
+		          . previous_image_link( false, '<span class="left">' . __( 'Previous Photo', 'opus-primus' ) . '</span>' )
+		          . next_image_link( false, '<span class="right">' . __( 'Next Photo', 'opus-primus' ) . '</span>' )
+		          . '</div><!-- .opus-image-link-navigation -->';
 
-		echo apply_filters( 'opus_image_link_navigation_output', $output );
+		echo esc_html( apply_filters( 'opus_image_link_navigation_output', $output ) );
 
 		do_action( 'opus_image_link_navigation_after' );
 
@@ -183,8 +193,8 @@ class OpusPrimusNavigation {
 	 * @package    OpusPrimus
 	 * @since      0.1
 	 *
-	 * @param   string|array $link_pages_args
-	 * @param   string       $preface - leading word or phrase before display of post page index - MUST set $link_pages_args for this to display.
+	 * @param   string|array $link_pages_args arguments passed to method.
+	 * @param   string       $preface         - leading word or phrase before display of post page index - MUST set $link_pages_args for this to display.
 	 *
 	 * @uses       do_action
 	 * @uses       wp_link_pages
@@ -201,12 +211,10 @@ class OpusPrimusNavigation {
 	function multiple_pages_link( $link_pages_args = '', $preface = '' ) {
 
 		$defaults        = array(
-			'before'      => '<div class="navigation-pagination opus-link-pages">'
-				. '<span class="opus-link-pages-preface">' . $preface . '</span>'
-				. '<ul class="page-numbers">',
+			'before'      => '<div class="navigation-pagination opus-link-pages"><span class="opus-link-pages-preface">' . $preface . '</span><ul class="page-numbers">',
 			'after'       => '</ul></div>',
 			'link_before' => '<li>',
-			'link_after'  => '</li>'
+			'link_after'  => '</li>',
 		);
 		$link_pages_args = wp_parse_args( (array) $defaults, $link_pages_args );
 
@@ -313,10 +321,10 @@ class OpusPrimusNavigation {
 
 		$pagination = null;
 
-		/** get the current query object */
+		/** Get the current query object */
 		global $wp_query;
 
-		/** @var int $total - get the total number of pages */
+		/** Get the total number of pages */
 		$total = $wp_query->max_num_pages;
 
 		/** Sanity check: is there more than one page? */
@@ -334,7 +342,7 @@ class OpusPrimusNavigation {
 				$format = '?paged=%#%';
 			}
 
-			/** @var string $pagination - results variable */
+			/** Results variable */
 			$pagination = get_the_posts_pagination(
 				array(
 					'base'     => get_pagenum_link( 1 ) . '%_%',
@@ -342,7 +350,7 @@ class OpusPrimusNavigation {
 					'current'  => $current_page,
 					'total'    => $total,
 					'mid_size' => 1,
-					'type'     => 'list'
+					'type'     => 'list',
 				)
 			);
 
@@ -371,7 +379,7 @@ class OpusPrimusNavigation {
 
 		do_action( 'opus_navigation_pagination_before' );
 
-		echo $this->pagination();
+		echo esc_html( $this->pagination() );
 
 		do_action( 'opus_navigation_pagination_after' );
 
@@ -386,7 +394,7 @@ class OpusPrimusNavigation {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @param   string|array $primary_menu_args
+	 * @param   string|array $primary_menu_args arguments passed to method.
 	 *
 	 * @uses    do_action
 	 * @uses    wp_nav_menu
@@ -419,7 +427,7 @@ class OpusPrimusNavigation {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @param   string|array $search_menu_args
+	 * @param   string|array $search_menu_args arguments passed to method.
 	 *
 	 * @uses    do_action
 	 * @uses    search_page_menu
@@ -439,7 +447,7 @@ class OpusPrimusNavigation {
 		);
 		$search_menu_args = wp_parse_args( (array) $defaults, $search_menu_args );
 
-		printf( '<ul class="featured search pages"><li><span class="title">%1$s</span>', __( 'Featured Pages:', 'opus-primus' ) );
+		echo esc_html( sprintf( '<ul class="featured search pages"><li><span class="title">%1$s</span>', __( 'Featured Pages:', 'opus-primus' ) ) );
 
 		wp_nav_menu( $search_menu_args );
 
@@ -458,7 +466,7 @@ class OpusPrimusNavigation {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @param   string|array $list_args
+	 * @param   string|array $list_args arguments passed to method.
 	 *
 	 * @uses    wp_page_menu
 	 * @uses    wp_parse_args
@@ -490,7 +498,7 @@ class OpusPrimusNavigation {
 	 * @package  OpusPrimus
 	 * @since    0.1
 	 *
-	 * @param   string|array $secondary_menu_args
+	 * @param   string|array $secondary_menu_args arguments passed to method.
 	 *
 	 * @uses     do_action
 	 * @uses     wp_nav_menu
@@ -511,8 +519,5 @@ class OpusPrimusNavigation {
 		wp_nav_menu( $secondary_menu_args );
 
 		do_action( 'opus_secondary_menu_after' );
-
 	}
-
-
 }

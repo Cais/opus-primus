@@ -64,9 +64,9 @@ locate_template( 'includes/widgets.php', true, true );
 
 /** Load the classes - in order of appearance/dependency */
 /** Add Navigation */
-locate_template( 'includes/class.OpusPrimusNavigation.php', true, true );
+locate_template( 'includes/class-opus-primus-navigation.php', true, true );
 /** Add Structures */
-locate_template( 'includes/class.opus-primus-structures.php', true, true );
+locate_template( 'includes/class-opus-primus-structures.php', true, true );
 /** Add Headers */
 locate_template( 'includes/class.OpusPrimusHeader.php', true, true );
 /** Add Posts */
