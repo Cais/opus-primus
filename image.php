@@ -45,7 +45,7 @@ global $post;
 $opus_navigation = Opus_Primus_Navigation::create_instance();
 $opus_structures = Opus_Primus_Structures::create_instance();
 $opus_posts      = Opus_Primus_Posts::create_instance();
-$opus_images     = OpusPrimusImages::create_instance();
+$opus_images     = Opus_Primus_Images::create_instance();
 
 get_header( 'image' );
 

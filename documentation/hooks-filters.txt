@@ -38,7 +38,7 @@ The filters are listed below by file, in order of appearance:
         opus_comments_form_closed
     includes\class.OpusPrimusGallery.php
         opus_more_images_text
-    includes\class.OpusPrimusImages.php
+    includes\class.Opus_Primus_Images.php
         opus_archive_image_title
         opus_linked_image_message*
         opus_archive_image_excerpt

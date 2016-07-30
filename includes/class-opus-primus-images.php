@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Opus Primus Images
  *
@@ -32,6 +31,12 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+/**
+ * Class Opus Primus Images
+ *
+ * Hanndles the image elements of the Opus Primus WordPress theme
  *
  * @version     1.3.1
  * @date        Rare Disease Day 2015
@@ -41,8 +46,13 @@
  * @date        April 5, 2015
  * Change `OpusPrimusArchives` to a singleton style class
  */
-class OpusPrimusImages {
+class Opus_Primus_Images {
 
+	/**
+	 * Set the instance to null initially
+	 *
+	 * @var $instance null
+	 */
 	private static $instance = null;
 
 	/**
@@ -54,7 +64,7 @@ class OpusPrimusImages {
 	 * @since   1.4
 	 * @date    April 5, 2015
 	 *
-	 * @return null|OpusPrimusImages
+	 * @return null|Opus_Primus_Images
 	 */
 	public static function create_instance() {
 
@@ -80,17 +90,18 @@ class OpusPrimusImages {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @param   string $size - standard WordPress post_thumbnail sizes / or custom defined sizes can be used
+	 * @param   string $size standard WordPress post_thumbnail sizes / or custom defined sizes can be used.
 	 *
-	 * @uses    OpusPrimusImages::first_linked_image
-	 * @uses    __
-	 * @uses    apply_filters
-	 * @uses    get_children
-	 * @uses    get_permalink
-	 * @uses    get_the_ID
-	 * @uses    is_single
-	 * @uses    the_title_attribute
-	 * @uses    wp_get_attachment_image
+	 * @see     OpusPrimusImages::first_linked_image
+	 * @see     __
+	 * @see     apply_filters
+	 * @see esc_html
+	 * @see     get_children
+	 * @see     get_permalink
+	 * @see     get_the_ID
+	 * @see     is_single
+	 * @see     the_title_attribute
+	 * @see     wp_get_attachment_image
 	 *
 	 * @todo    Address $archive_image message(s) once `first_linked_image` is sorted out (1.2)
 	 * @todo    Address CSS aesthetics on images not attached ... or find a way to display the post excerpt details (much better choice!) (1.2)
@@ -111,7 +122,7 @@ class OpusPrimusImages {
 				'post_mime_type' => 'image',
 				'order'          => 'ASC',
 				'orderby'        => 'menu_order ID',
-				'numberposts'    => 1
+				'numberposts'    => 1,
 			)
 		);
 
@@ -141,10 +152,7 @@ class OpusPrimusImages {
 						<th>
 							<?php printf(
 								'<span class="archive-image-title">%1$s</span>',
-								apply_filters(
-									'opus_archive_image_title',
-									sprintf( __( 'Image Title: %1$s', 'opus-primus' ), $archive_image_title )
-								)
+								esc_html( apply_filters( 'opus_archive_image_title', sprintf( __( 'Image Title: %1$s', 'opus-primus' ), $archive_image_title ) ) )
 							); ?>
 						</th>
 					</tr>
@@ -157,44 +165,32 @@ class OpusPrimusImages {
 					<td class="archive-image">
 						<?php if ( ! is_single() ) {
 
-							echo '<span class="archive-image"><a href="' . get_permalink() . '" title="' . the_title_attribute(
-									array(
-										'before' => __( 'View', 'opus-primus' ) . ' ',
-										'after'  => ' ' . __( 'only', 'opus-primus' ),
-										'echo'   => '0'
-									)
-								) . '">'
-							     . $archive_image
-							     . '</a></span>';
-
-						} ?>
+							echo esc_html( '<span class="archive-image"><a href="' . get_permalink() . '" title="'
+							               . the_title_attribute( array(
+												'before' => __( 'View', 'opus-primus' ) . ' ',
+												'after'  => ' ' . __( 'only', 'opus-primus' ),
+												'echo'   => '0',
+												)
+							               )
+							               . '">' . $archive_image . '</a></span>'
+							);}
+						?>
 					</td>
 				</tr>
 				<tr>
 					<?php if ( ! empty( $archive_image_excerpt ) ) {
-
 						printf(
 							'<td class="archive-image-excerpt">%1$s</td>',
-							apply_filters(
-								'opus_archive_image_excerpt',
-								sprintf( __( 'Image Caption: %1$s', 'opus-primus' ), $archive_image_excerpt )
-							)
-						);
-
-					} ?>
+							esc_html( apply_filters( 'opus_archive_image_excerpt', sprintf( __( 'Image Caption: %1$s', 'opus-primus' ), $archive_image_excerpt ) ) )
+						); } ?>
 				</tr>
 				<tr>
 					<?php if ( ! empty( $archive_image_content ) ) {
 
 						printf(
 							'<td class="archive-image-content">%1$s</td>',
-							apply_filters(
-								'opus_archive_image_content',
-								sprintf( __( 'Image Description: %1$s', 'opus-primus' ), $archive_image_content )
-							)
-						);
-
-					} ?>
+							esc_html( apply_filters( 'opus_archive_image_content', sprintf( __( 'Image Description: %1$s', 'opus-primus' ), $archive_image_content ) ) )
+						); } ?>
 				</tr>
 			</tbody>
 
@@ -211,19 +207,20 @@ class OpusPrimusImages {
 	 * @package  OpusPrimus
 	 * @since    0.1
 	 *
-	 * @uses     OpusPrimusImages::exif_aperture
-	 * @uses     OpusPrimusImages::exif_camera
-	 * @uses     OpusPrimusImages::exif_caption
-	 * @uses     OpusPrimusImages::exif_copyright
-	 * @uses     OpusPrimusImages::exif_dimensions
-	 * @uses     OpusPrimusImages::exif_focal_length
-	 * @uses     OpusPrimusImages::exif_iso_speed
-	 * @uses     OpusPrimusImages::exif_shutter
-	 * @uses     OpusPrimusImages::exif_timestamp
-	 * @uses     OpusPrimusImages::exif_title
-	 * @uses     __
-	 * @uses     apply_filters
-	 * @uses     do_action
+	 * @see      OpusPrimusImages::exif_aperture
+	 * @see      OpusPrimusImages::exif_camera
+	 * @see      OpusPrimusImages::exif_caption
+	 * @see      OpusPrimusImages::exif_copyright
+	 * @see      OpusPrimusImages::exif_dimensions
+	 * @see      OpusPrimusImages::exif_focal_length
+	 * @see      OpusPrimusImages::exif_iso_speed
+	 * @see      OpusPrimusImages::exif_shutter
+	 * @see      OpusPrimusImages::exif_timestamp
+	 * @see      OpusPrimusImages::exif_title
+	 * @see      __
+	 * @see      apply_filters
+	 * @see      do_action
+	 * @see esc_html
 	 *
 	 * @internal see display_exif_table for tabular output
 	 *
@@ -245,70 +242,34 @@ class OpusPrimusImages {
 
 		/** If the exif value is set display it */
 		if ( $this->exif_dimensions() ) {
-			printf( '<p class="exif-dimensions">%1$s</p>', $this->exif_dimensions() );
+			echo esc_html( sprintf( '<p class="exif-dimensions">%1$s</p>', $this->exif_dimensions() ) );
 		}
 		if ( $this->exif_copyright() ) {
-			printf(
-				'<p class="exif-copyright">%1$s %2$s</p>',
-				apply_filters( 'opus_exif_copyright_label', __( 'Copyright:', 'opus-primus' ) ),
-				$this->exif_copyright()
-			);
+			echo esc_html( sprintf( '<p class="exif-copyright">%1$s %2$s</p>', apply_filters( 'opus_exif_copyright_label', __( 'Copyright:', 'opus-primus' ) ), $this->exif_copyright() ) );
 		}
 		if ( $this->exif_timestamp() ) {
-			printf(
-				'<p class="exif-timestamp">%1$s %2$s</p>',
-				apply_filters( 'opus_exif_timestamp_label', __( 'Uploaded:', 'opus-primus' ) ),
-				$this->exif_timestamp()
-			);
+			echo esc_html( sprintf( '<p class="exif-timestamp">%1$s %2$s</p>', apply_filters( 'opus_exif_timestamp_label', __( 'Uploaded:', 'opus-primus' ) ), $this->exif_timestamp() ) );
 		}
 		if ( $this->exif_camera() ) {
-			printf(
-				'<p class="exif-camera">%1$s %2$s</p>',
-				apply_filters( 'opus_exif_camera_label', __( 'Camera:', 'opus-primus' ) ),
-				$this->exif_camera()
-			);
+			echo esc_html( sprintf( '<p class="exif-camera">%1$s %2$s</p>', apply_filters( 'opus_exif_camera_label', __( 'Camera:', 'opus-primus' ) ), $this->exif_camera() ) );
 		}
 		if ( $this->exif_shutter() ) {
-			printf(
-				'<p class="exif-shutter">%1$s %2$s</p>',
-				apply_filters( 'opus_exif_shutter_label', __( 'Shutter Speed:', 'opus-primus' ) ),
-				$this->exif_shutter()
-			);
+			echo esc_html( sprintf( '<p class="exif-shutter">%1$s %2$s</p>', apply_filters( 'opus_exif_shutter_label', __( 'Shutter Speed:', 'opus-primus' ) ), $this->exif_shutter() ) );
 		}
 		if ( $this->exif_aperture() ) {
-			printf(
-				'<p class="exif-aperture">%1$s F%2$s</p>',
-				apply_filters( 'opus_exif_aperture_label', __( 'Aperture:', 'opus-primus' ) ),
-				$this->exif_aperture()
-			);
+			echo esc_html( sprintf( '<p class="exif-aperture">%1$s F%2$s</p>', apply_filters( 'opus_exif_aperture_label', __( 'Aperture:', 'opus-primus' ) ), $this->exif_aperture() ) );
 		}
 		if ( $this->exif_caption() ) {
-			printf(
-				'<p class="exif-caption">%1$s %2$s</p>',
-				apply_filters( 'opus_exif_caption_label', __( 'Caption:', 'opus-primus' ) ),
-				$this->exif_caption()
-			);
+			echo esc_html( sprintf( '<p class="exif-caption">%1$s %2$s</p>', apply_filters( 'opus_exif_caption_label', __( 'Caption:', 'opus-primus' ) ), $this->exif_caption() ) );
 		}
 		if ( $this->exif_focal_length() ) {
-			printf(
-				'<p class="exif-focal-length">%1$s %2$s</p>',
-				apply_filters( 'opus_exif_focal_length_label', __( 'Focal Length:', 'opus-primus' ) ),
-				$this->exif_focal_length()
-			);
+			echo esc_html( sprintf( '<p class="exif-focal-length">%1$s %2$s</p>', apply_filters( 'opus_exif_focal_length_label', __( 'Focal Length:', 'opus-primus' ) ), $this->exif_focal_length() ) );
 		}
 		if ( $this->exif_iso_speed() ) {
-			printf(
-				'<p class="exif-iso-speed">%1$s %2$s</p>',
-				apply_filters( 'opus_exif_iso_speed_label', __( 'ISO Speed:', 'opus-primus' ) ),
-				$this->exif_iso_speed()
-			);
+			echo esc_html( sprintf( '<p class="exif-iso-speed">%1$s %2$s</p>', apply_filters( 'opus_exif_iso_speed_label', __( 'ISO Speed:', 'opus-primus' ) ), $this->exif_iso_speed() ) );
 		}
 		if ( $this->exif_title() ) {
-			printf(
-				'<p class="exif-title">%1$s %2$s</p>',
-				apply_filters( 'opus_exif_title_label', __( 'Title:', 'opus-primus' ) ),
-				$this->exif_title()
-			);
+			echo esc_html( sprintf( '<p class="exif-title">%1$s %2$s</p>', apply_filters( 'opus_exif_title_label', __( 'Title:', 'opus-primus' ) ), $this->exif_title() ) );
 		}
 
 		/** Close display exif box wrapper */
@@ -328,19 +289,19 @@ class OpusPrimusImages {
 	 * @package  OpusPrimus
 	 * @since    0.1
 	 *
-	 * @uses     OpusPrimusImages::exif_aperture
-	 * @uses     OpusPrimusImages::exif_camera
-	 * @uses     OpusPrimusImages::exif_caption
-	 * @uses     OpusPrimusImages::exif_copyright
-	 * @uses     OpusPrimusImages::exif_dimensions
-	 * @uses     OpusPrimusImages::exif_focal_length
-	 * @uses     OpusPrimusImages::exif_iso_speed
-	 * @uses     OpusPrimusImages::exif_shutter
-	 * @uses     OpusPrimusImages::exif_timestamp
-	 * @uses     OpusPrimusImages::exif_title
-	 * @uses     __
-	 * @uses     apply_filters
-	 * @uses     do_action
+	 * @see      OpusPrimusImages::exif_aperture
+	 * @see      OpusPrimusImages::exif_camera
+	 * @see      OpusPrimusImages::exif_caption
+	 * @see      OpusPrimusImages::exif_copyright
+	 * @see      OpusPrimusImages::exif_dimensions
+	 * @see      OpusPrimusImages::exif_focal_length
+	 * @see      OpusPrimusImages::exif_iso_speed
+	 * @see      OpusPrimusImages::exif_shutter
+	 * @see      OpusPrimusImages::exif_timestamp
+	 * @see      OpusPrimusImages::exif_title
+	 * @see      __
+	 * @see      apply_filters
+	 * @see      do_action
 	 *
 	 * @version  1.2
 	 * @date     April 12, 2013
@@ -365,10 +326,10 @@ class OpusPrimusImages {
 			<thead>
 				<tr>
 					<th>
-						<?php printf(
+						<?php echo esc_html( sprintf(
 							'<span class="display-exif-table-header-text">%1$s</span>',
 							apply_filters( 'opus_display_exif_table_header_text', __( 'Image Details', 'opus-primus' ) )
-						); ?>
+						) ); ?>
 					</th>
 				</tr>
 			</thead>
@@ -377,34 +338,34 @@ class OpusPrimusImages {
 				<?php
 				/** If the exif value is set display it */
 				if ( $this->exif_dimensions() ) {
-					echo '<tr><td class="exif-dimensions">' . apply_filters( 'opus_exif_dimensions_label', __( 'Dimensions', 'opus-primus' ) ) . '</td><td>' . $this->exif_dimensions() . '</td></tr>';
+					echo esc_html( '<tr><td class="exif-dimensions">' . apply_filters( 'opus_exif_dimensions_label', __( 'Dimensions', 'opus-primus' ) ) . '</td><td>' . $this->exif_dimensions() . '</td></tr>' );
 				}
 				if ( $this->exif_copyright() ) {
-					echo '<tr><td class="exif-copyright">' . apply_filters( 'opus_exif_copyright_label', __( 'Copyright', 'opus-primus' ) ) . '</td><td>' . $this->exif_copyright() . '</td></tr>';
+					echo esc_html( '<tr><td class="exif-copyright">' . apply_filters( 'opus_exif_copyright_label', __( 'Copyright', 'opus-primus' ) ) . '</td><td>' . $this->exif_copyright() . '</td></tr>' );
 				}
 				if ( $this->exif_timestamp() ) {
-					echo '<tr><td class="exif-timestamp">' . apply_filters( 'opus_exif_timestamp_label', __( 'Uploaded', 'opus-primus' ) ) . '</td><td>' . $this->exif_timestamp() . '</td></tr>';
+					echo esc_html( '<tr><td class="exif-timestamp">' . apply_filters( 'opus_exif_timestamp_label', __( 'Uploaded', 'opus-primus' ) ) . '</td><td>' . $this->exif_timestamp() . '</td></tr>' );
 				}
 				if ( $this->exif_camera() ) {
-					echo '<tr><td class="exif-camera">' . apply_filters( 'opus_exif_camera_label', __( 'Camera', 'opus-primus' ) ) . '</td><td>' . $this->exif_camera() . '</td></tr>';
+					echo esc_html( '<tr><td class="exif-camera">' . apply_filters( 'opus_exif_camera_label', __( 'Camera', 'opus-primus' ) ) . '</td><td>' . $this->exif_camera() . '</td></tr>' );
 				}
 				if ( $this->exif_shutter() ) {
-					echo '<tr><td class="exif-shutter">' . apply_filters( 'opus_exif_shutter_label', __( 'Shutter Speed', 'opus-primus' ) ) . '</td><td>' . $this->exif_shutter() . '</td></tr>';
+					echo esc_html( '<tr><td class="exif-shutter">' . apply_filters( 'opus_exif_shutter_label', __( 'Shutter Speed', 'opus-primus' ) ) . '</td><td>' . $this->exif_shutter() . '</td></tr>' );
 				}
 				if ( $this->exif_aperture() ) {
-					echo '<tr><td class="exif-aperture">' . apply_filters( 'opus_exif_aperture_label', __( 'Aperture', 'opus-primus' ) ) . '</td><td>' . 'f / ' . $this->exif_aperture() . '</td></tr>';
+					echo esc_html( '<tr><td class="exif-aperture">' . apply_filters( 'opus_exif_aperture_label', __( 'Aperture', 'opus-primus' ) ) . '</td><td>f / ' . $this->exif_aperture() . '</td></tr>' );
 				}
 				if ( $this->exif_caption() ) {
-					echo '<tr><td class="exif-caption">' . apply_filters( 'opus_exif_caption_label', __( 'Caption', 'opus-primus' ) ) . '</td><td>' . $this->exif_caption() . '</td></tr>';
+					echo esc_html( '<tr><td class="exif-caption">' . apply_filters( 'opus_exif_caption_label', __( 'Caption', 'opus-primus' ) ) . '</td><td>' . $this->exif_caption() . '</td></tr>' );
 				}
 				if ( $this->exif_focal_length() ) {
-					echo '<tr><td class="exif-focal-length">' . apply_filters( 'opus_exif_focal_length_label', __( 'Focal Length', 'opus-primus' ) ) . '</td><td>' . $this->exif_focal_length() . '</td></tr>';
+					echo esc_html( '<tr><td class="exif-focal-length">' . apply_filters( 'opus_exif_focal_length_label', __( 'Focal Length', 'opus-primus' ) ) . '</td><td>' . $this->exif_focal_length() . '</td></tr>' );
 				}
 				if ( $this->exif_iso_speed() ) {
-					echo '<tr><td class="exif-iso-speed">' . apply_filters( 'opus_exif_iso_speed_label', __( 'ISO Speed', 'opus-primus' ) ) . '</td><td>' . $this->exif_iso_speed() . '</td></tr>';
+					echo esc_html( '<tr><td class="exif-iso-speed">' . apply_filters( 'opus_exif_iso_speed_label', __( 'ISO Speed', 'opus-primus' ) ) . '</td><td>' . $this->exif_iso_speed() . '</td></tr>' );
 				}
 				if ( $this->exif_title() ) {
-					echo '<tr><td class="exif-title">' . apply_filters( 'opus_exif_title_label', __( 'Title', 'opus-primus' ) ) . '</td><td>' . $this->exif_title() . '</td></tr>';
+					echo esc_html( '<tr><td class="exif-title">' . apply_filters( 'opus_exif_title_label', __( 'Title', 'opus-primus' ) ) . '</td><td>' . $this->exif_title() . '</td></tr>' );
 				}
 				?>
 			</tbody>
@@ -428,9 +389,9 @@ class OpusPrimusImages {
 	 * @package OpuysPrimus
 	 * @since   0.1
 	 *
-	 * @uses    OpusPrimusImages::exif_data
-	 * @uses    apply_filters
-	 * @uses    do_action
+	 * @see     OpusPrimusImages::exif_data
+	 * @see     apply_filters
+	 * @see     do_action
 	 *
 	 * @return  string
 	 *
@@ -440,13 +401,13 @@ class OpusPrimusImages {
 	 */
 	function exif_aperture() {
 
-		/** @var $image_data - image meta data */
+		/** Image meta data */
 		$image_data = $this->exif_data();
 
 		/** Add empty hook before EXIF aperture */
 		do_action( 'opus_exif_aperture_before' );
 
-		/** @var $aperture - initialize aperture string */
+		/** Initialize aperture string */
 		$aperture = '';
 
 		/** Aperture Setting */
@@ -469,9 +430,9 @@ class OpusPrimusImages {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @uses    OpusPrimusImages::exif_data
-	 * @uses    apply_filters
-	 * @uses    do_action
+	 * @see     OpusPrimusImages::exif_data
+	 * @see     apply_filters
+	 * @see     do_action
 	 *
 	 * @return  string
 	 *
@@ -481,13 +442,13 @@ class OpusPrimusImages {
 	 */
 	function exif_camera() {
 
-		/** @var $image_data - image meta data */
+		/** Image meta data */
 		$image_data = $this->exif_data();
 
 		/** Add empty hook before EXIF camera */
 		do_action( 'opus_exif_camera_before' );
 
-		/** @var $camera - initialize camera string */
+		/** Initialize camera string */
 		$camera = '';
 
 		/** Camera details */
@@ -510,9 +471,9 @@ class OpusPrimusImages {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @uses    OpusPrimusImages::exif_data
-	 * @uses    apply_filters
-	 * @uses    do_action
+	 * @see     OpusPrimusImages::exif_data
+	 * @see     apply_filters
+	 * @see     do_action
 	 *
 	 * @return  string
 	 *
@@ -522,13 +483,13 @@ class OpusPrimusImages {
 	 */
 	function exif_caption() {
 
-		/** @var $image_data - image meta data */
+		/** Image meta data */
 		$image_data = $this->exif_data();
 
 		/** Add empty hook before EXIF caption */
 		do_action( 'opus_exif_caption_before' );
 
-		/** @var $exif_caption - initialize EXIF caption string */
+		/** Initialize EXIF caption string */
 		$exif_caption = '';
 
 		/** Image caption from EXIF details */
@@ -551,10 +512,10 @@ class OpusPrimusImages {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @uses    OpusPrimusImages::exif_data
-	 * @uses    apply_filters
-	 * @uses    do_action
-	 * @uses    get_the_time
+	 * @see     OpusPrimusImages::exif_data
+	 * @see     apply_filters
+	 * @see     do_action
+	 * @see     get_the_time
 	 *
 	 * @return  string
 	 *
@@ -564,13 +525,13 @@ class OpusPrimusImages {
 	 */
 	function exif_copyright() {
 
-		/** @var $image_data - image meta data */
+		/** Image meta data */
 		$image_data = $this->exif_data();
 
 		/** Add empty hook before EXIF copyright */
 		do_action( 'opus_exif_copyright_before' );
 
-		/** @var $copyright - initialize the copyright string */
+		/** Initialize the copyright string */
 		$copyright = '';
 
 		/** Author Credit with Copyright details */
@@ -600,7 +561,7 @@ class OpusPrimusImages {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @uses    wp_get_attachment_metadata
+	 * @see     wp_get_attachment_metadata
 	 *
 	 * @return  object|null
 	 *
@@ -610,7 +571,7 @@ class OpusPrimusImages {
 	 */
 	function exif_data() {
 
-		/** @var $opus_image_meta - EXIF information from image */
+		/** EXIF information from image */
 		$opus_image_meta = wp_get_attachment_metadata();
 
 		if ( isset( $opus_image_meta ) ) {
@@ -631,11 +592,11 @@ class OpusPrimusImages {
 	 * @package          OpusPrimus
 	 * @since            0.1
 	 *
-	 * @uses             OpusPrimusImages::exif_data
-	 * @uses             (GLOBAL) $post
-	 * @uses             apply_filters
-	 * @uses             do_action
-	 * @uses             wp_get_attachment_url
+	 * @see              OpusPrimusImages::exif_data
+	 * @see              (GLOBAL) $post
+	 * @see              apply_filters
+	 * @see              do_action
+	 * @see              wp_get_attachment_url
 	 *
 	 * @return  string
 	 *
@@ -645,7 +606,7 @@ class OpusPrimusImages {
 	 */
 	function exif_dimensions() {
 
-		/** @var $image_data - image meta data */
+		/** Image meta data */
 		$image_data = $this->exif_data();
 
 		/** Add empty hook before EXIF dimension */
@@ -681,9 +642,9 @@ class OpusPrimusImages {
 	 * @package  OpusPrimus
 	 * @since    0.1
 	 *
-	 * @uses     OpusPrimusImages::exif_data
-	 * @uses     apply_filters
-	 * @uses     do_action
+	 * @see      OpusPrimusImages::exif_data
+	 * @see      apply_filters
+	 * @see      do_action
 	 *
 	 * @return  string
 	 *
@@ -693,13 +654,13 @@ class OpusPrimusImages {
 	 */
 	function exif_focal_length() {
 
-		/** @var $image_data - image meta data */
+		/** Image meta data */
 		$image_data = $this->exif_data();
 
 		/** Add empty hook before EXIF focal length */
 		do_action( 'opus_exif_focal_length_before' );
 
-		/** @var $focal_length - initialize focal length string */
+		/** Initialize focal length string */
 		$focal_length = '';
 
 		/** Output Focal Length */
@@ -722,9 +683,9 @@ class OpusPrimusImages {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @uses    OpusPrimusImages::exif_data
-	 * @uses    apply_filters
-	 * @uses    do_action
+	 * @see     OpusPrimusImages::exif_data
+	 * @see     apply_filters
+	 * @see     do_action
 	 *
 	 * @return  string
 	 *
@@ -734,13 +695,13 @@ class OpusPrimusImages {
 	 */
 	function exif_iso_speed() {
 
-		/** @var $image_data - image meta data */
+		/** Image meta data */
 		$image_data = $this->exif_data();
 
 		/** Add empty hook before EXIF ISO speed */
 		do_action( 'opus_exif_iso_speed_before' );
 
-		/** @var $iso_speed - initialize ISO Speed string */
+		/** Initialize ISO Speed string */
 		$iso_speed = '';
 
 		/** Output ISO Speed */
@@ -763,10 +724,10 @@ class OpusPrimusImages {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @uses    OpusPrimusImages::exif_data
-	 * @uses    apply_filters
-	 * @uses    do_action
-	 * @uses    number_format
+	 * @see     OpusPrimusImages::exif_data
+	 * @see     apply_filters
+	 * @see     do_action
+	 * @see     number_format
 	 *
 	 * @version 1.2
 	 * @date    April 9, 2013
@@ -774,13 +735,13 @@ class OpusPrimusImages {
 	 */
 	function exif_shutter() {
 
-		/** @var $image_data - image meta data */
+		/** Image meta data */
 		$image_data = $this->exif_data();
 
 		/** Add empty hook before EXIF shutter */
 		do_action( 'opus_exif_shutter_before' );
 
-		/** @var $shutter - initialize shutter string */
+		/** Initialize shutter string */
 		$shutter = '';
 
 		/** Shutter speed */
@@ -789,19 +750,17 @@ class OpusPrimusImages {
 			/** Shutter Speed Handler - "sec" is used as the short-form for time measured in seconds */
 			if ( ( 1 / $image_data['image_meta']['shutter_speed'] ) > 1 ) {
 
-				$shutter .= "1/";
-				if ( number_format( ( 1 / $image_data['image_meta']['shutter_speed'] ), 1 ) == number_format( ( 1 / $image_data['image_meta']['shutter_speed'] ), 0 ) ) {
+				$shutter .= '1/';
+				if ( number_format( ( 1 / $image_data['image_meta']['shutter_speed'] ), 1 ) === number_format( ( 1 / $image_data['image_meta']['shutter_speed'] ), 0 ) ) {
 					$shutter .= number_format( ( 1 / $image_data['image_meta']['shutter_speed'] ), 0, '.', '' ) . ' ' . __( 'sec', 'opus-primus' );
 				} else {
 					$shutter .= number_format( ( 1 / $image_data['image_meta']['shutter_speed'] ), 1, '.', '' ) . ' ' . __( 'sec', 'opus-primus' );
 				}
-
 			} else {
 
 				$shutter .= $image_data['image_meta']['shutter_speed'] . ' ' . __( 'sec', 'opus-primus' );
 
 			}
-
 		}
 
 		/** Return Shutter string */
@@ -821,12 +780,12 @@ class OpusPrimusImages {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @uses    OpusPrimusImages::exif_data
-	 * @uses    __
-	 * @uses    apply_filters
-	 * @uses    date_i18n
-	 * @uses    do_action
-	 * @uses    get_option
+	 * @see     OpusPrimusImages::exif_data
+	 * @see     __
+	 * @see     apply_filters
+	 * @see     date_i18n
+	 * @see     do_action
+	 * @see     get_option
 	 *
 	 * @return  string
 	 *
@@ -840,13 +799,13 @@ class OpusPrimusImages {
 	 */
 	function exif_timestamp() {
 
-		/** @var $image_data - image meta data */
+		/** Image meta data */
 		$image_data = $this->exif_data();
 
 		/** Add empty hook before EXIF timestamp */
 		do_action( 'opus_exif_timestamp_before' );
 
-		/** @var $timestamp - initialize the timestamp string */
+		/** Initialize the timestamp string */
 		$timestamp = '';
 
 		/** Creation timestamp in end-user settings format */
@@ -875,9 +834,9 @@ class OpusPrimusImages {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @uses    OpusPrimusImages::exif_data
-	 * @uses    apply_filters
-	 * @uses    do_action
+	 * @see     OpusPrimusImages::exif_data
+	 * @see     apply_filters
+	 * @see     do_action
 	 *
 	 * @return  string
 	 *
@@ -887,13 +846,13 @@ class OpusPrimusImages {
 	 */
 	function exif_title() {
 
-		/** @var $image_data - image meta data */
+		/** Image meta data */
 		$image_data = $this->exif_data();
 
 		/** Add empty hook before EXIF Title */
 		do_action( 'opus_exif_title_before' );
 
-		/** @var $exif_title - initialize EXIF Title string */
+		/** Initialize EXIF Title string */
 		$exif_title = '';
 
 		/** Title from EXIF details */
@@ -917,19 +876,19 @@ class OpusPrimusImages {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @param   $size  - default: thumbnail (uses WordPress sizes)
-	 * @param   $class - default: alignleft (can be any CSS class)
+	 * @param   string $size  default = thumbnail (uses WordPress sizes).
+	 * @param   string $class default = alignleft (can be any CSS class).
 	 *
-	 * @uses    esc_attr
-	 * @uses    esc_url
-	 * @uses    get_post_thumbnail_id
-	 * @uses    get_the_ID
-	 * @uses    has_post_thumbnail
-	 * @uses    is_archive
-	 * @uses    is_single
-	 * @uses    the_post_thumbnail
-	 * @uses    the_title_attribute
-	 * @uses    wp_get_attachment_image_src
+	 * @see     esc_attr
+	 * @see     esc_url
+	 * @see     get_post_thumbnail_id
+	 * @see     get_the_ID
+	 * @see     has_post_thumbnail
+	 * @see     is_archive
+	 * @see     is_single
+	 * @see     the_post_thumbnail
+	 * @see     the_title_attribute
+	 * @see     wp_get_attachment_image_src
 	 *
 	 * @return  string - Featured Thumbnail image and URL
 	 *
@@ -975,12 +934,12 @@ class OpusPrimusImages {
 	 * @package OpusPrimus
 	 * @since   1.3.1
 	 *
-	 * @uses    OpusPrimusImages::featured_thumbnail
-	 * @uses    get_post_thumbnail_id
-	 * @uses    is_bool
-	 * @uses    wp_get_attachment_metadata
+	 * @see     OpusPrimusImages::featured_thumbnail
+	 * @see     get_post_thumbnail_id
+	 * @see     is_bool
+	 * @see     wp_get_attachment_metadata
 	 *
-	 * @param bool $use_portrait
+	 * @param bool $use_portrait default = true.
 	 *
 	 * @return string
 	 *
@@ -992,13 +951,13 @@ class OpusPrimusImages {
 
 		$featured_image_metadata = wp_get_attachment_metadata( get_post_thumbnail_id() );
 
-		/** @var bool $use_portrait - use hook as toggle to display featured image with portrait consideration */
+		/** Use hook as toggle to display featured image with portrait consideration */
 		$use_portrait = apply_filters( 'opus_featured_thumbnail_single_view_portrait', $use_portrait );
 
 		/** Quick sanity check to ensure that a boolean value is used */
 		if ( ! is_bool( $use_portrait ) ) {
 
-			/** @var bool $use_portrait - set to true (default) */
+			/** Set to true (default) */
 			$use_portrait = true;
 
 		}
@@ -1010,7 +969,6 @@ class OpusPrimusImages {
 			} else {
 				return $this->featured_thumbnail( $size = 'full', $class = 'aligncenter' );
 			}
-
 		} else {
 
 			return null;
@@ -1028,12 +986,12 @@ class OpusPrimusImages {
 	 * @package Opus_Primus
 	 * @since   1.2.4
 	 *
-	 * @param   bool $echo
+	 * @param   bool $echo default = true, displays featured image thumbnail.
 	 *
-	 * @uses    OpusPrimusImages::featured_thumbnail
-	 * @uses    OpusPrimusImages::featured_thumbnail_single_view
-	 * @uses    is_archive
-	 * @uses    is_single
+	 * @see     OpusPrimusImages::featured_thumbnail
+	 * @see     OpusPrimusImages::featured_thumbnail_single_view
+	 * @see     is_archive
+	 * @see     is_single
 	 *
 	 * @version 1.3.1
 	 * @date    Rare Disease Day 2015
@@ -1047,18 +1005,16 @@ class OpusPrimusImages {
 			/** Sanity check - are we in the right view to show the image? */
 			if ( ! is_single() && is_archive() ) {
 
-				echo $this->featured_thumbnail( $size = 'thumbnail', $class = 'alignright' );
+				echo esc_html( $this->featured_thumbnail( $size = 'thumbnail', $class = 'alignright' ) );
 
 			} else {
 
 				if ( ! is_single() ) {
-					echo $this->featured_thumbnail();
+					echo esc_html( $this->featured_thumbnail() );
 				} else {
-					echo $this->featured_thumbnail_single_view();
+					echo esc_html( $this->featured_thumbnail_single_view() );
 				}
-
 			}
-
 		}
 
 	}
@@ -1072,7 +1028,7 @@ class OpusPrimusImages {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @uses    (GLOBAL) $post
+	 * @see     (GLOBAL) $post
 	 *
 	 * @version 1.2.2
 	 * @date    September 12, 2013
@@ -1086,12 +1042,12 @@ class OpusPrimusImages {
 		preg_match_all( '/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches );
 
 		/** Make sure there was an image found before using it for the URL  */
-		if ( ! $matches[0] == array() ) {
+		if ( array() !== $matches[0] ) {
 			$image_url = $matches[1][0];
 		}
 
 		/** Make sure the image URL is set before returning the image itself */
-		if ( isset ( $image_url ) ) {
+		if ( isset( $image_url ) ) {
 			return '<img class="linked-image" src="' . $image_url . '" alt="" />';
 		}
 
@@ -1111,16 +1067,16 @@ class OpusPrimusImages {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @param   string $before
-	 * @param   string $after
-	 * @param   bool   $echo
+	 * @param   string $before text before title, default is none.
+	 * @param   string $after text after title, default is none.
+	 * @param   bool   $echo deafult = true, display image title text.
 	 *
-	 * @uses    __
-	 * @uses    do_action
-	 * @uses    is_attachment
-	 * @uses    the_permalink
-	 * @uses    the_title
-	 * @uses    the_title_attribute
+	 * @see     __
+	 * @see     do_action
+	 * @see     is_attachment
+	 * @see     the_permalink
+	 * @see     the_title
+	 * @see     the_title_attribute
 	 */
 	function image_title( $before = '', $after = '', $echo = true ) {
 
@@ -1142,13 +1098,14 @@ class OpusPrimusImages {
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(
 				array(
 					'before' => __( 'View', 'opus-primus' ) . ' ',
-					'after'  => ' ' . __( 'only', 'opus-primus' )
+					'after'  => ' ' . __( 'only', 'opus-primus' ),
 				)
 			); ?>">
 				<?php the_title( $before, $after, $echo ); ?>
 			</a>
 
-		<?php } else {
+		<?php
+		} else {
 
 			the_title( $before, $after, $echo );
 
@@ -1168,11 +1125,10 @@ class OpusPrimusImages {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @uses    OpusPrimusImages::first_linked_image
+	 * @see     OpusPrimusImages::first_linked_image
 	 */
 	function show_first_linked_image() {
-		echo $this->first_linked_image();
+
+		echo esc_html( $this->first_linked_image() );
 	}
-
-
 }

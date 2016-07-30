@@ -134,7 +134,7 @@ Recent changelog as of July 2016
 * Added `hide_category_widget_list_items` method and related hook
 * Added some escaping sanitization and linked Featured Image to post via the post ID
 * Changed method to return the Featured Thumbnail versus outputting it
-* Changed from using `get_the_time` to `date_i18n` for `OpusPrimusImages::exif_timestamp` method
+* Changed from using `get_the_time` to `date_i18n` for `Opus_Primus_Images::exif_timestamp` method
 * Extracted code from `featured_thumbnail` method to create `featured_thumbnail_single_view` method
 * Improved look of navigation links in `Opus_Primus_Navigation::multiple_pages_link` method
 
