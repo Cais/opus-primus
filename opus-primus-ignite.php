@@ -76,7 +76,7 @@ locate_template( 'includes/class-opus-primus-comments.php', true, true );
 /** Add Images */
 locate_template( 'includes/class-opus-primus-images.php', true, true );
 /** Add Gallery */
-locate_template( 'includes/class.OpusPrimusGallery.php', true, true );
+locate_template( 'includes/class-opus-primus-gallery.php', true, true );
 /** Add Authors */
 locate_template( 'includes/class.OpusPrimusAuthors.php', true, true );
 /** Add Archives */
