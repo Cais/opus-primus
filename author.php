@@ -39,9 +39,9 @@
 /** Create Opus_Primus_Structures class object */
 $opus_structures = Opus_Primus_Structures::create_instance();
 
-/** @var $current_author - current author data an as object */
+/** Current author data an as object */
 $current_author = ( get_query_var( 'author_name ' ) ) ? get_user_by( 'id', get_query_var( 'author_name' ) ) : get_userdata( get_query_var( 'author' ) );
-/** @var $current_author_id - the author ID */
+/** The author ID */
 $current_author_id = $current_author->ID;
 
 get_header( 'author' );
@@ -56,7 +56,7 @@ do_action( 'opus_content_before' ); ?>
 		do_action( 'opus_content_top' );
 
 		/** Open the necessary layout CSS classes */
-		echo $opus_structures->layout_open();
+		echo esc_html( $opus_structures->layout_open() );
 
 		/** Add empty action before the_Loop */
 		do_action( 'opus_the_loop_before' ); ?>
@@ -79,7 +79,7 @@ do_action( 'opus_content_before' ); ?>
 				dynamic_sidebar( 'before-loop' );
 			}
 
-			/** the_Loop structure in its most basic form */
+			/** The the_Loop structure in its most basic form */
 			$opus_structures->the_loop();
 
 			/** Add after loop sidebar */
@@ -97,7 +97,7 @@ do_action( 'opus_content_before' ); ?>
 		get_sidebar( 'author' );
 
 		/** Close the classes written by the layout_open call */
-		echo $opus_structures->layout_close();
+		echo esc_html( $opus_structures->layout_close() );
 
 		/** Add empty hook at the bottom of the content */
 		do_action( 'opus_content_bottom' ); ?>

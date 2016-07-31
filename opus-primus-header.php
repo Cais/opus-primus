@@ -44,7 +44,7 @@
  */
 
 /** Create OpusPrimusHeader class object */
-$opus_headers = OpusPrimusHeader::create_instance(); ?>
+$opus_headers = Opus_Primus_Header::create_instance(); ?>
 
 	<header>
 

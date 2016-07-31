@@ -136,6 +136,9 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 		}
 
 		/** Enqueue Theme Stylesheets */
+		/** Main Theme Style */
+		wp_enqueue_style( 'Opus_Primus-Main-Style', get_bloginfo( 'stylesheet_url' ) );
+
 		/** Theme Layouts */
 		wp_enqueue_style( 'Opus-Primus-Layout', $opus_router->path_uri( 'css' ) . 'opus-primus-layout.css', array(), opus_primus_theme_version(), 'screen' );
 

@@ -80,6 +80,6 @@ locate_template( 'includes/class-opus-primus-gallery.php', true, true );
 /** Add Authors */
 locate_template( 'includes/class-opus-primus-authors.php', true, true );
 /** Add Archives */
-locate_template( 'includes/class.-opus-primus-archives.php', true, true );
+locate_template( 'includes/class-opus-primus-archives.php', true, true );
 /** Add Breadcrumbs */
 locate_template( 'includes/class-opus-primus-breadcrumbs.php', true, true );
