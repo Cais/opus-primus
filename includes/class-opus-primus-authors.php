@@ -152,7 +152,7 @@ class Opus_Primus_Authors {
 
 		/** Create the text art */
 		$author_coda = '|=|=|=|=|';
-		echo sprintf( '<div class="author-coda">%1$s</div>', apply_filters( 'opus_author_coda', $author_coda ) );
+		echo sprintf( '<div class="author-coda">%1$s</div>', esc_html( apply_filters( 'opus_author_coda', $author_coda ) ) );
 
 		/** Add empty hook after the post coda */
 		do_action( 'opus_author_coda_after' );
@@ -249,9 +249,13 @@ class Opus_Primus_Authors {
 	 * @see        Opus_Primus_Authors::author_classes
 	 * @see        Opus_Primus_Authors::get_author_description
 	 * @see        antispambot
+	 * @see        esc_attr
+	 * @see        esc_html
+	 * @see        esc_url
 	 * @see        get_avatar
 	 * @see        get_the_author_meta
 	 * @see        home_url
+	 * @see        sanitize_email
 	 * @see        user_can
 	 *
 	 * @version    1.1
@@ -286,9 +290,9 @@ class Opus_Primus_Authors {
 					'<span class="opus-author-about">%1$s</span>',
 					sprintf(
 						'<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
-						home_url( '/?author=' . $author_id ),
+						esc_url( home_url( '/?author=' . $author_id ) ),
 						esc_attr( sprintf( __( 'View all posts by %1$s', 'opus-primus' ), $author_display_name ) ),
-						$author_display_name
+						esc_html( $author_display_name )
 					)
 				); ?>
 			</h2><!-- opus-author-details-header -->
@@ -304,10 +308,10 @@ class Opus_Primus_Authors {
 
 					<li class="opus-author-contact">
 						<?php
-						echo sprintf(
-							'<span class="opus-author-contact-text">' . __( 'Visit the web site of %1$s or email %2$s.', 'opus-primus' ) . '</span>',
-							'<a class="opus-author-url" href="' . $author_url . '">' . $author_display_name . '</a>',
-							'<a class="opus-author-email" href="mailto:' . $author_email . '">' . $author_display_name . '</a>'
+						printf(
+							'<span class="opus-author-contact-text">' . esc_html__( 'Visit the web site of %1$s or email %2$s.', 'opus-primus' ) . '</span>',
+							'<a class="opus-author-url" href="' . esc_url( $author_url ) . '">' . esc_html( $author_display_name ) . '</a>',
+							'<a class="opus-author-email" href="mailto:' . esc_attr( sanitize_email( $author_email ) ) . '">' . esc_html( $author_display_name ) . '</a>'
 						); ?>
 					</li><!-- opus-author-contact -->
 
@@ -320,9 +324,9 @@ class Opus_Primus_Authors {
 
 					<li class="opus-author-contact">
 						<?php
-						echo sprintf(
-							'<span class="opus-author-contact-text">' . __( 'Visit the web site of %1$s.', 'opus-primus' ) . '</span>',
-							'<a class="opus-author-url" href="' . $author_url . '">' . $author_display_name . '</a>'
+						printf(
+							'<span class="opus-author-contact-text">' . esc_html( __( 'Visit the web site of %1$s.', 'opus-primus' ) ) . '</span>',
+							'<a class="opus-author-url" href="' . esc_url( $author_url ) . '">' . esc_html( $author_display_name ) . '</a>'
 						); ?>
 					</li><!-- opus-author-contact -->
 
@@ -335,9 +339,9 @@ class Opus_Primus_Authors {
 
 					<li class="opus-author-contact">
 						<?php
-						echo sprintf(
-							'<span class="opus-author-contact-text">' . __( 'Email: %1$s.', 'opus-primus' ) . '</span>',
-							'<a class="opus-author-email" href="mailto:' . $author_email . '">' . $author_display_name . '</a>'
+						printf(
+							'<span class="opus-author-contact-text">' . esc_html__( 'Email: %1$s.', 'opus-primus' ) . '</span>',
+							'<a class="opus-author-email" href="mailto:' . esc_attr( sanitize_email( $author_email ) ) . '">' . esc_html( $author_display_name ) . '</a>'
 						); ?>
 					</li><!-- opus-author-contact -->
 
@@ -350,9 +354,9 @@ class Opus_Primus_Authors {
 
 					<li class="opus-author-contact">
 						<?php
-						echo sprintf(
-							'<span class="opus-author-contact-text">' . __( 'Email: %1$s.', 'opus-primus' ) . '</span>',
-							'<a class="opus-author-email" href="mailto:' . $author_email . '">' . $author_display_name . '</a>'
+						printf(
+							'<span class="opus-author-contact-text">' . esc_html__( 'Email: %1$s.', 'opus-primus' ) . '</span>',
+							'<a class="opus-author-email" href="mailto:' . esc_url( $author_email ) . '">' . esc_html( $author_display_name ) . '</a>'
 						); ?>
 					</li><!-- opus-author-contact -->
 
@@ -365,9 +369,9 @@ class Opus_Primus_Authors {
 
 					<li class="opus-author-biography">
 						<?php
-						echo sprintf(
-							'<span class="opus-author-biography-text">' . __( 'Biography: %1$s', 'opus-primus' ) . '</span>',
-							$author_desc
+						printf(
+							'<span class="opus-author-biography-text">' . esc_html__( 'Biography: %1$s', 'opus-primus' ) . '</span>',
+							esc_html( $author_desc )
 						); ?>
 					</li><!-- opus-author-biography -->
 
@@ -395,6 +399,7 @@ class Opus_Primus_Authors {
 	 * @package     OpusPrimus
 	 * @since       1.4
 	 *
+	 * @see         esc_html
 	 * @see         is_multi_author
 	 * @see         wp_list_authors
 	 *
@@ -423,7 +428,7 @@ class Opus_Primus_Authors {
 		$output = apply_filters( 'opus_authors_list', $output );
 
 		if ( true === $echo ) {
-			echo $output;
+			echo esc_html( $output );
 		} else {
 			return $output;
 		}
@@ -482,10 +487,10 @@ class Opus_Primus_Authors {
 		echo '<div class="first-author-details">';
 		echo sprintf(
 			'<div class="first-author-details-text">%1$s</div><!-- .first-author-details-text -->',
-			apply_filters(
+			esc_html( apply_filters(
 				'opus_first_author_by_text',
 				__( 'Author:', 'opus-primus' )
-			)
+			) )
 		);
 		$this->author_details( $opus_author_id, $post_author_args['display_author_url'], $post_author_args['display_author_email'], $post_author_args['display_author_desc'] );
 		echo '</div><!-- .first-author-details -->';
@@ -512,10 +517,10 @@ class Opus_Primus_Authors {
 			echo '<div class="modified-author-details">';
 			echo sprintf(
 				'<div class="modified-author-details-text">%1$s</div><!-- modified-author-details-text -->',
-				apply_filters(
+				esc_html( apply_filters(
 					'opus_modified_author_by_text',
 					__( 'Modified by:', 'opus-primus' )
-				)
+				) )
 			);
 			$this->author_details( $last_id, $post_author_args['display_author_url'], $post_author_args['display_author_email'], $post_author_args['display_author_desc'] );
 			echo '</div><!-- .modified-author-details -->';
