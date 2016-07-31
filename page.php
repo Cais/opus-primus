@@ -68,7 +68,7 @@ do_action( 'opus_content_before' ); ?>
 				dynamic_sidebar( 'before-loop' );
 			}
 
-			/** the_Loop - Starts */
+			/** Starts the_Loop */
 			if ( have_posts() ) {
 
 				while ( have_posts() ) {
@@ -88,15 +88,13 @@ do_action( 'opus_content_before' ); ?>
 						/** Show page byline details */
 						if ( OPUS_DISPLAY_PAGE_BYLINE ) {
 							$opus_posts->post_byline(
-								array(
-									'display_mod_author' => OPUS_DISPLAY_MOD_AUTHOR
-								)
+								array( 'display_mod_author' => OPUS_DISPLAY_MOD_AUTHOR )
 							);
 						} else {
 							$opus_posts->post_byline(
 								array(
 									'display_mod_author' => OPUS_DISPLAY_MOD_AUTHOR,
-									'echo'               => false
+									'echo'               => false,
 								)
 							);
 						}
@@ -115,13 +113,12 @@ do_action( 'opus_content_before' ); ?>
 					</div><!-- post classes -->
 
 				<?php }
-
 			} else {
 
 				$opus_structures->no_search_results();
 
 			}
-			/** the_Loop - Ends */
+			/** Ends the_Loop */
 
 			/** Add after loop sidebar */
 			if ( is_active_sidebar( 'after-loop' ) ) {

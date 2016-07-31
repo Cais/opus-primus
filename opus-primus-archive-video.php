@@ -48,13 +48,13 @@ $opus_images     = Opus_Primus_Images::create_instance(); ?>
 <div <?php post_class(); ?>>
 
 	<?php
-	/** @var $anchor - set value for use in post_byline and meta_tags */
+	/** Set value for use in post_byline and meta_tags */
 	$anchor = __( 'Added', 'opus-primus' );
 	$opus_posts->post_byline(
 		array(
 			'tempus'      => 'time',
 			'anchor'      => $anchor,
-			'sticky_flag' => __( 'Watch', 'opus-primus' )
+			'sticky_flag' => __( 'Watch', 'opus-primus' ),
 		)
 	);
 	$opus_posts->post_title();

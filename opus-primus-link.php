@@ -50,13 +50,13 @@ $opus_navigation = Opus_Primus_Navigation::create_instance(); ?>
 	<div <?php post_class(); ?>>
 
 		<?php
-		/** @var $anchor - set value for use in post_byline and meta_tags */
+		/** Set value for use in post_byline and meta_tags */
 		$anchor = __( 'Linked', 'opus-primus' );
 		$opus_posts->post_byline(
 			array(
 				'display_mod_author' => OPUS_DISPLAY_MOD_AUTHOR,
 				'anchor'             => $anchor,
-				'sticky_flag'        => __( 'Follow', 'opus-primus' )
+				'sticky_flag'        => __( 'Follow', 'opus-primus' ),
 			)
 		);
 		$opus_posts->post_title();
