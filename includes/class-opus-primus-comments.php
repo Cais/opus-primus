@@ -443,7 +443,7 @@ class Opus_Primus_Comments {
 			/** Add empty hook before comments link */
 			do_action( 'opus_comments_link_before' );
 
-			echo '<h5 class="comments-link ' . $this->comments_closed_class() . ' ' . $this->has_comments_class() . '">';
+			echo '<h5 class="comments-link ' . sanitize_html_class( $this->comments_closed_class() ) . ' ' . sanitize_html_class( $this->has_comments_class() ) . '">';
 
 			comments_popup_link();
 
@@ -822,7 +822,7 @@ class Opus_Primus_Comments {
 	 * @see     __
 	 * @see     _n
 	 * @see     do_action
-	 * @see esc_html
+	 * @see     esc_html
 	 * @see     number_format_i18n
 	 *
 	 * @version 1.4
