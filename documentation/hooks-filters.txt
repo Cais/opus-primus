@@ -18,7 +18,7 @@ The filters are listed below by file, in order of appearance:
     search.php
         opus_search_found_pre_text
         opus_search_found_post_text
-    includes\class.OpusPrimusAuthors.php
+    includes\class.Opus_Primus_Authors.php
         opus_author_coda
         opus_author_description_excerpt_length
         opus_author_description_excerpt_extender

@@ -381,7 +381,7 @@ This file will be used as an archive of all changelog entries.
 * Refactored `opus-primus-header` to reflect class/method changes of Structures and Header
 
 = CSS =
-* Added classes to `h2`, `ul`, and `li` elements in `OpusPrimusAuthors::author_details`
+* Added classes to `h2`, `ul`, and `li` elements in `Opus_Primus_Authors::author_details`
 * Add minor comments styles
 * Centered content of Post Format: Video posts.
 

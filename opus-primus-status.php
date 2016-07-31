@@ -69,8 +69,8 @@ $opus_navigation = Opus_Primus_Navigation::create_instance(); ?>
 
 		if ( is_single() ) {
 
-			/** Create OpusPrimusAuthors class object */
-			$opus_authors = OpusPrimusAuthors::create_instance();
+			/** Create Opus_Primus_Authors class object */
+			$opus_authors = Opus_Primus_Authors::create_instance();
 			$opus_authors->post_author(
 				array(
 					'display_mod_author'   => OPUS_DISPLAY_MOD_AUTHOR,

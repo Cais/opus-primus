@@ -69,8 +69,8 @@ $opus_images     = Opus_Primus_Images::create_instance(); ?>
 
 		if ( is_single() ) {
 
-			/** Create OpusPrimusAuthors class object */
-			$opus_authors = OpusPrimusAuthors::create_instance();
+			/** Create Opus_Primus_Authors class object */
+			$opus_authors = Opus_Primus_Authors::create_instance();
 			/**
 			 * Using $opus_authors->post_author( $args ) works but is not as
 			 * easily read and used as an example when modifying the code

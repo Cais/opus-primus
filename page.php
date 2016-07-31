@@ -101,8 +101,8 @@ do_action( 'opus_content_before' ); ?>
 							);
 						}
 
-						/** Create OpusPrimusAuthors class object */
-						$opus_authors = OpusPrimusAuthors::create_instance();
+						/** Create Opus_Primus_Authors class object */
+						$opus_authors = Opus_Primus_Authors::create_instance();
 						$opus_authors->post_author(
 							array(
 								'display_mod_author'   => OPUS_DISPLAY_MOD_AUTHOR,
