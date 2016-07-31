@@ -377,13 +377,13 @@ class Opus_Primus_Posts {
 
 		/** Prints the "opus_posted_in" string, replacing the placeholders */
 		printf(
-			'<div class="meta-tags">' . esc_html( $opus_posted_in ) . '</div><!-- .meta-tags -->',
-			esc_url( $this->no_title_link( $anchor ) ),
-			esc_html( get_the_category_list( ', ' ) ),
-			esc_html( $opus_tag_list ),
+			'<div class="meta-tags">' . $opus_posted_in . '</div><!-- .meta-tags -->',
+			$this->no_title_link( $anchor ),
+			get_the_category_list( ', ' ),
+			$opus_tag_list,
 			esc_url( get_permalink() ),
 			esc_attr( $this->anchor_title_text() ),
-			esc_html( $this->status_update() )
+			$this->status_update()
 		);
 
 		/** Add empty hook after meta tags */

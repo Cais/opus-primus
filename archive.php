@@ -62,7 +62,7 @@ do_action( 'opus_content_before' ); ?>
 		do_action( 'opus_content_top' );
 
 		/** Open the necessary layout CSS classes */
-		echo esc_html( $opus_structures->layout_open() );
+		echo $opus_structures->layout_open();
 
 		/** The complete archives loop section */
 		$opus_structures->the_loop_archives_wrapped();
@@ -71,7 +71,7 @@ do_action( 'opus_content_before' ); ?>
 		get_sidebar( 'archive' );
 
 		/** Close the classes written by the layout_open call */
-		echo esc_html( $opus_structures->layout_close() );
+		echo $opus_structures->layout_close();
 
 		/** Add empty hook at the bottom of the content */
 		do_action( 'opus_content_bottom' ); ?>

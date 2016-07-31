@@ -58,7 +58,7 @@ do_action( 'opus_content_before' ); ?>
 		do_action( 'opus_content_top' );
 
 		/** Open the necessary layout CSS classes */
-		echo esc_html( $opus_structures->layout_open() );
+		echo $opus_structures->layout_open();
 
 		/** Add empty action before the_Loop */
 		do_action( 'opus_the_loop_before' ); ?>
@@ -137,7 +137,7 @@ do_action( 'opus_content_before' ); ?>
 		get_sidebar( '404' );
 
 		/** Close the classes written by the layout_open call */
-		echo esc_html( $opus_structures->layout_close() );
+		echo $opus_structures->layout_close();
 
 		/** Add empty hook at the bottom of the content */
 		do_action( 'opus_content_bottom' ); ?>
