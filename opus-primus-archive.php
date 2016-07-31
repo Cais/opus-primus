@@ -54,7 +54,7 @@ $opus_navigation = Opus_Primus_Navigation::create_instance(); ?>
 <div <?php post_class(); ?>>
 
 	<?php
-	/** @var $anchor - set value for use in meta_tags (post_byline default) */
+	/** Set value for use in meta_tags (post_byline default) */
 	$anchor = __( 'Posted', 'opus-primus' );
 	$opus_posts->post_byline( array( 'tempus' => 'time' ) );
 	$opus_posts->post_title();
