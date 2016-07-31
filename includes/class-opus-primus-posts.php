@@ -383,7 +383,7 @@ class Opus_Primus_Posts {
 			$opus_tag_list,
 			esc_url( get_permalink() ),
 			esc_attr( $this->anchor_title_text() ),
-			$this->status_update()
+			esc_html( $this->status_update() )
 		);
 
 		/** Add empty hook after meta tags */
@@ -912,7 +912,7 @@ class Opus_Primus_Posts {
 		/** Add empty hook before status update output */
 		do_action( 'opus_status_update_before' );
 
-		echo $this->status_update();
+		echo esc_html( $this->status_update() );
 
 		/** Add empty hook after status update output */
 		do_action( 'opus_status_update_after' );
