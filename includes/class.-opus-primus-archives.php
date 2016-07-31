@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Opus Primus Archives
  *
@@ -32,6 +31,12 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+/**
+ * Class Opus Primus Archives
+ *
+ * Handles the archive templates for the Opus Primus WordPress theme
  *
  * @version     1.0.1
  * @date        February 21, 2013
@@ -45,6 +50,11 @@
  */
 class OpusPrimusArchives {
 
+	/**
+	 * Set the instance to null initially
+	 *
+	 * @var $instance null
+	 */
 	private static $instance = null;
 
 	/**
@@ -92,18 +102,20 @@ class OpusPrimusArchives {
 	 * @package  OpusPrimus
 	 * @since    0.1
 	 *
-	 * @param   string $cloud_args
+	 * @param   string $cloud_args default = none, passed the arguments to be used with tag clouds.
 	 *
-	 * @uses     do_action
-	 * @uses     wp_parse_args
-	 * @uses     wp_tag_cloud
+	 * @see      do_action
+	 * @see      esc_html
+	 * @see      sanitize_title
+	 * @see      wp_parse_args
+	 * @see      wp_tag_cloud
 	 */
 	function archive_cloud( $cloud_args = '' ) {
 
 		/** Add empty hook before archive cloud */
 		do_action( 'opus_archive_cloud_before' );
 
-		/** @var $defaults - initial values to be used as parameters */
+		/** Initial values to be used as parameters */
 		$defaults   = array(
 			'taxonomy' => array(
 				'post_tag',
@@ -114,11 +126,11 @@ class OpusPrimusArchives {
 		);
 		$cloud_args = wp_parse_args( (array) $cloud_args, $defaults );
 
-		/** @var $cloud_classes - initialize variable to empty in case no conditions are met */
+		/** Initialize variable to empty in case no conditions are met */
 		$cloud_classes = '';
 
 		/** Top 'number' of displayed tags set */
-		if ( isset( $cloud_args['number'] ) && ( 'DESC' == $cloud_args['order'] ) ) {
+		if ( isset( $cloud_args['number'] ) && ( 'DESC' === $cloud_args['order'] ) ) {
 			$cloud_classes .= 'top-' . $cloud_args['number'];
 			$cloud_title = sprintf( __( 'The Top %1$s Tags Cloud:', 'opus-primus' ), $cloud_args['number'] );
 		}
@@ -136,7 +148,7 @@ class OpusPrimusArchives {
 			$cloud_title = __( 'The Cloud:', 'opus-primus' );
 		}
 
-		if ( isset( $cloud_args['format'] ) && ( 'flat' == $cloud_args['format'] ) ) {
+		if ( isset( $cloud_args['format'] ) && ( 'flat' === $cloud_args['format'] ) ) {
 			$cloud_title .= '<br />';
 		}
 
@@ -144,8 +156,8 @@ class OpusPrimusArchives {
 		 * Output the cloud with a title wrapped in an element with dynamic
 		 * classes.
 		 */
-		printf( '<ul class="archive cloud list cf%1$s">', $cloud_classes );
-		echo '<li><span class="title">' . $cloud_title . '</span>';
+		echo sprintf( '<ul class="archive cloud list cf %1$s">', sanitize_html_class( $cloud_classes ) );
+		echo esc_html( '<li><span class="title">' . sanitize_title( $cloud_title ) . '</span>' );
 		wp_tag_cloud( $cloud_args );
 		echo '</li>';
 		echo '</ul><!-- .archive.cloud.list -->';
@@ -168,18 +180,18 @@ class OpusPrimusArchives {
 	 * @package  OpusPrimus
 	 * @since    0.1
 	 *
-	 * @param   array|string $category_args
+	 * @param   array|string $category_args default = none, provides arguments for displaying categories.
 	 *
-	 * @uses     do_action
-	 * @uses     wp_list_categories
-	 * @uses     wp_parse_args
+	 * @see      do_action
+	 * @see      wp_list_categories
+	 * @see      wp_parse_args
 	 */
 	function categories_archive( $category_args = '' ) {
 
 		/** Add empty hook before category archive */
 		do_action( 'opus_category_archive_before' );
 
-		/** @var $defaults - set the default parameters */
+		/** Set the default parameters */
 		$defaults      = array(
 			'orderby'      => 'name',
 			'order'        => 'ASC',
@@ -196,6 +208,4 @@ class OpusPrimusArchives {
 		do_action( 'opus_category_archive_after' );
 
 	}
-
-
 }

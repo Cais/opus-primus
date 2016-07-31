@@ -5,13 +5,10 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="* Removed `OpusPrimusDefaults` class">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusBreadcrumbs.php" afterPath="$PROJECT_DIR$/includes/class-opus-primus-breadcrumbs.php" />
+    <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/includes/class.OpusPrimusArchives.php" afterPath="$PROJECT_DIR$/includes/class.-opus-primus-archives.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documentation/hooks-filters.txt" afterPath="$PROJECT_DIR$/documentation/hooks-filters.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-header.php" afterPath="$PROJECT_DIR$/opus-primus-header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-ignite.php" afterPath="$PROJECT_DIR$/opus-primus-ignite.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,13 +29,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="opus-primus-ignite.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/opus-primus-ignite.php">
+      <file leaf-file-name="class.-opus-primus-archives.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/class.-opus-primus-archives.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="80" column="41" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
+            <state relative-caret-position="1605">
+              <caret line="107" column="23" selection-start-line="107" selection-start-column="23" selection-end-line="107" selection-end-column="23" />
               <folding>
-                <element signature="e#6#1606#0#PHP" expanded="true" />
+                <element signature="e#6#1141#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,7 +80,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/opus-primus-header.php" />
         <option value="$PROJECT_DIR$/opus-primus-image.php" />
         <option value="$PROJECT_DIR$/opus-primus-link.php" />
         <option value="$PROJECT_DIR$/opus-primus-quote.php" />
@@ -134,6 +130,7 @@
         <option value="$PROJECT_DIR$/includes/opus-primus-defaults.php" />
         <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-breadcrumbs.php" />
+        <option value="$PROJECT_DIR$/includes/class.-opus-primus-archives.php" />
       </list>
     </option>
   </component>
@@ -465,14 +462,7 @@
       <workItem from="1469381259756" duration="549000" />
       <workItem from="1469382127773" duration="1248000" />
       <workItem from="1469715596877" duration="8915000" />
-      <workItem from="1469818089423" duration="14859000" />
-    </task>
-    <task id="LOCAL-00584" summary="* Removed `$screen` parameter as not necessary in Taglines Stanza">
-      <created>1427849971470</created>
-      <option name="number" value="00584" />
-      <option name="presentableId" value="LOCAL-00584" />
-      <option name="project" value="LOCAL" />
-      <updated>1427849971470</updated>
+      <workItem from="1469818089423" duration="15475000" />
     </task>
     <task id="LOCAL-00585" summary="* Ensure `$pagination` has been initialized in `OpusPrimusNavigation::pagination` method">
       <created>1427850161702</created>
@@ -810,7 +800,14 @@
       <option name="project" value="LOCAL" />
       <updated>1469989389897</updated>
     </task>
-    <option name="localTasksCounter" value="633" />
+    <task id="LOCAL-00633" summary="- begin better adherence to the WordPress Coding Standards">
+      <created>1469989748179</created>
+      <option name="number" value="00633" />
+      <option name="presentableId" value="LOCAL-00633" />
+      <option name="project" value="LOCAL" />
+      <updated>1469989748179</updated>
+    </task>
+    <option name="localTasksCounter" value="634" />
     <servers>
       <GitHub shared="false" url="http://github.com">
         <option name="assignedIssuesOnly" value="false" />
@@ -831,7 +828,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39596000" />
+    <option name="totallyTimeSpent" value="40212000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -921,7 +918,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="* Added `number_format_i18n` to better accommodate locale based values" />
     <MESSAGE value="* Added base `.po` file as well as English (Canadian) `.pomo` files&#10;* Minor correction to i18n strings, null does not need to be translated" />
     <MESSAGE value="- i18n modifications" />
     <MESSAGE value="* Refactored `OpusPrimusComments::comments_link` to use the WordPress core more effectively&#10;* Added two classes for use in rendering the comments link text displayed ... or not&#10;* Added class definition to hide comment link text when comments are closed and there are no comments" />
@@ -946,7 +942,8 @@
     <MESSAGE value="Begin implementating more strict adherence to WordPress Coding Standards" />
     <MESSAGE value="- begin implementating more strict adherence to WordPress Coding Standards" />
     <MESSAGE value="* Removed `OpusPrimusDefaults` class" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Removed `OpusPrimusDefaults` class" />
+    <MESSAGE value="- begin better adherence to the WordPress Coding Standards" />
+    <option name="LAST_COMMIT_MESSAGE" value="- begin better adherence to the WordPress Coding Standards" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="WordPressConfiguration" enabled="true">
@@ -963,13 +960,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/opus-primus-footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/compatibility/bns-login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1219,18 +1209,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../wp-includes/formatting.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4945">
-          <caret line="3906" column="9" selection-start-line="3906" selection-start-column="9" selection-end-line="3906" selection-end-column="9" />
-          <folding>
-            <marker date="1469112665000" expanded="true" signature="115934:115963" ph="..." />
-            <marker date="1469112665000" expanded="true" signature="187368:187397" ph="..." />
-            <marker date="1469112665000" expanded="true" signature="187955:187984" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../wp-includes/author-template.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -1342,16 +1320,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class-opus-primus-structures.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="55" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#1165#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/class-opus-primus-breadcrumbs.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1367,7 +1335,39 @@
         <state relative-caret-position="517">
           <caret line="80" column="41" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
           <folding>
-            <element signature="e#6#1606#0#PHP" expanded="true" />
+            <element signature="e#6#1606#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class-opus-primus-structures.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="55" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#1165#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../wp-includes/formatting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="1897" column="9" selection-start-line="1897" selection-start-column="9" selection-end-line="1897" selection-end-column="9" />
+          <folding>
+            <marker date="1469112665000" expanded="true" signature="115934:115963" ph="..." />
+            <marker date="1469112665000" expanded="true" signature="187368:187397" ph="..." />
+            <marker date="1469112665000" expanded="true" signature="187955:187984" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.-opus-primus-archives.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1605">
+          <caret line="107" column="23" selection-start-line="107" selection-start-column="23" selection-end-line="107" selection-end-column="23" />
+          <folding>
+            <element signature="e#6#1141#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
