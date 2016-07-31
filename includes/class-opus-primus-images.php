@@ -36,7 +36,7 @@
 /**
  * Class Opus Primus Images
  *
- * Hanndles the image elements of the Opus Primus WordPress theme
+ * Handles the image elements of the Opus Primus WordPress theme
  *
  * @version     1.3.1
  * @date        Rare Disease Day 2015
@@ -1065,7 +1065,7 @@ class Opus_Primus_Images {
 	 *
 	 * @param   string $before text before title, default is none.
 	 * @param   string $after  text after title, default is none.
-	 * @param   bool   $echo   deafult = true, display image title text.
+	 * @param   bool   $echo   default = true, display image title text.
 	 *
 	 * @see     __
 	 * @see     do_action

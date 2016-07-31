@@ -142,13 +142,13 @@ class Opus_Primus_Gallery {
 
 				if ( ! is_single() ) {
 
-					echo esc_html( '<p class="featured-image has-post-thumbnail"><a href="' . get_permalink() . '" title="' . the_title_attribute(
-							array(
-								'before' => __( 'View', 'opus-primus' ) . ' ',
-								'after'  => ' ' . __( 'only', 'opus-primus' ),
-								'echo'   => '0',
-							)
-						) . '">' );
+					echo '<p class="featured-image has-post-thumbnail"><a href="'
+					     . esc_url( get_permalink() ) . '" title="' . esc_attr( the_title_attribute( array(
+					        	'before' => __( 'View', 'opus-primus' ) . ' ',
+						        'after'  => ' ' . __( 'only', 'opus-primus' ),
+					            'echo'   => '0',
+							 )
+						 ) ) . '">';
 					the_post_thumbnail( $size );
 					echo '</a></p>';
 
@@ -181,18 +181,12 @@ class Opus_Primus_Gallery {
 
 					if ( ! is_single() ) {
 
-						echo esc_html( '<p class="featured-image no-attachments"><a href="'
-						               . get_permalink()
-						               . '" title="' . the_title_attribute( array(
-									'before' => __( 'View', 'opus-primus' ) . ' ',
-									'after'  => ' ' . __( 'only', 'opus-primus' ),
-									'echo'   => '0',
+						echo '<p class="featured-image no-attachments"><a href="' . esc_url( get_permalink() ) . '" title="' . esc_attr( the_title_attribute( array(
+								'before' => __( 'View', 'opus-primus' ) . ' ',
+								'after'  => ' ' . __( 'only', 'opus-primus' ),
+								'echo'   => '0',
 								)
-						               )
-						               . '">'
-						               . wp_get_attachment_image( $opus_thumb_id, $size )
-						               . '</a></p>'
-						);
+						) ) . '">' . wp_get_attachment_image( $opus_thumb_id, $size ) . '</a></p>';
 
 					} else {
 
@@ -205,18 +199,12 @@ class Opus_Primus_Gallery {
 
 						if ( ! is_single() ) {
 
-							echo esc_html( '<p class="featured-image no-post-thumbnail"><a href="'
-							               . get_permalink()
-							               . '" title="' . the_title_attribute( array(
+							echo '<p class="featured-image no-post-thumbnail"><a href="' . esc_url( get_permalink() ) . '" title="' . esc_attr( the_title_attribute( array(
 										'before' => __( 'View', 'opus-primus' ) . ' ',
 										'after'  => ' ' . __( 'only', 'opus-primus' ),
 										'echo'   => '0',
-									)
-							               )
-							               . '">'
-							               . wp_get_attachment_image( $opus_thumb_id, $size )
-							               . '</a></p>'
-							);
+										)
+							) ) . '">' . wp_get_attachment_image( $opus_thumb_id, $size ) . '</a></p>';
 
 						} else {
 
