@@ -157,7 +157,7 @@ class Opus_Primus_Archives {
 		 * classes.
 		 */
 		echo sprintf( '<ul class="archive cloud list cf %1$s">', sanitize_html_class( $cloud_classes ) );
-		echo '<li><span class="title">' . sanitize_title( $cloud_title ) . '</span>';
+		echo '<li><span class="title">' . esc_html( $cloud_title ) . '</span>';
 		wp_tag_cloud( $cloud_args );
 		echo '</li>';
 		echo '</ul><!-- .archive.cloud.list -->';
