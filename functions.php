@@ -39,11 +39,11 @@
  * @version     1.3
  * @date        October 9, 2014
  * Replaced `require_once` with `locate_template`
- * Added OpusPrimusComments class methods to work-around duplicate output issue
+ * Added Opus_Primus_Comments class methods to work-around duplicate output issue
  *
  * @version     1.4
  * @date        March 31, 2015
- * Removed OpusPrimusComments class methods, duplicate output issue corrected
+ * Removed Opus_Primus_Comments class methods, duplicate output issue corrected
  */
 
 /** Fire up the theme with its classes, widgets, and defaults */
@@ -91,7 +91,7 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 	 *
 	 * @version 1.3
 	 * @date    August 24, 2014
-	 * Replace CONSTANTS with OpusPrimusRouter methods
+	 * Replace CONSTANTS with Opus_Primus_Router methods
 	 * Enqueue JavaScripts and CSS for SlickNav JavaScript plugin integration to handle mobile menus
 	 *
 	 * @version 1.4.1
@@ -99,8 +99,8 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 	 * Updated SlickNav implementation to version 1.0.6
 	 */
 	function opus_primus_enqueue_scripts() {
-		/** Create OpusPrimusRouter class object */
-		$opus_router = OpusPrimusRouter::create_instance();
+		/** Create Opus_Primus_Router class object */
+		$opus_router = Opus_Primus_Router::create_instance();
 
 		/** Enqueue Theme Scripts */
 		/** Enqueue Opus Primus JavaScripts which will enqueue jQuery as a dependency */
@@ -339,7 +339,7 @@ function opus_primus_return_blank() {
  *
  * @version            1.3
  * @date               October 13, 2014
- * Replaced CONSTANT with OpusPrimusRouter method
+ * Replaced CONSTANT with Opus_Primus_Router method
  * Added Contact Form 7 compatibility
  * Added BNS Login compatibility
  * Added Gravity Forms compatibility (not implemented, yet)
@@ -350,8 +350,8 @@ function opus_primus_compatibility() {
 	/** @noinspection PhpIncludeInspection */
 	require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
 
-	/** Create OpusPrimusRouter class object */
-	$opus_router = OpusPrimusRouter::create_instance();
+	/** Create Opus_Primus_Router class object */
+	$opus_router = Opus_Primus_Router::create_instance();
 
 	/**
 	 * Soliloquy - slider plugin

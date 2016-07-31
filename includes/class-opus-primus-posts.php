@@ -115,7 +115,7 @@ class Opus_Primus_Posts {
 	 * @class            Posts
 	 * @since            1.0.5
 	 *
-	 * @see              OpusPrimusPosts::anchor_title_text
+	 * @see              Opus_Primus_Posts::anchor_title_text
 	 * @see              (GLOBAL) $post
 	 * @see              apply_filters
 	 * @see              get_permalink
@@ -333,9 +333,9 @@ class Opus_Primus_Posts {
 	 *
 	 * @param   string $anchor ( default = Posted ) passed from the loops.
 	 *
-	 * @see      OpusPrimusPosts::anchor_title_text
-	 * @see      OpusPrimusPosts::no_title_link
-	 * @see      OpusPrimusPosts::status_update
+	 * @see      Opus_Primus_Posts::anchor_title_text
+	 * @see      Opus_Primus_Posts::no_title_link
+	 * @see      Opus_Primus_Posts::status_update
 	 * @see      __
 	 * @see      do_action
 	 * @see      esc_attr
@@ -591,12 +591,12 @@ class Opus_Primus_Posts {
 	 *
 	 * @example     post_byline( array( 'anchor' => 'Written', 'tempus' => 'time' ) )
 	 *
-	 * @see         OpusPrimusPosts::author_posts_link
-	 * @see         OpusPrimusPosts::modified_post
-	 * @see         OpusPrimusPosts::no_title_link
-	 * @see         OpusPrimusPosts::post_coda
-	 * @see         OpusPrimusPosts::post_format_flag
-	 * @see         OpusPrimusPosts::sticky_flag
+	 * @see         Opus_Primus_Posts::author_posts_link
+	 * @see         Opus_Primus_Posts::modified_post
+	 * @see         Opus_Primus_Posts::no_title_link
+	 * @see         Opus_Primus_Posts::post_coda
+	 * @see         Opus_Primus_Posts::post_format_flag
+	 * @see         Opus_Primus_Posts::sticky_flag
 	 * @see         __
 	 * @see         _x
 	 * @see         do_action
@@ -697,6 +697,7 @@ class Opus_Primus_Posts {
 	 *
 	 * @see     apply_filters
 	 * @see     do_action
+	 * @see     esc_html
 	 * @see     has_post_format
 	 * @see     get_post_format
 	 */
@@ -737,7 +738,7 @@ class Opus_Primus_Posts {
 	 * @since    0.1
 	 *
 	 * @param   string $more_link_text default link text to be used.
-	 * @param   string $stripteaser default teaser text to be used.
+	 * @param   string $stripteaser    default teaser text to be used.
 	 *
 	 * @see      __
 	 * @see      do_action
@@ -847,8 +848,8 @@ class Opus_Primus_Posts {
 	 * @since      0.1
 	 *
 	 * @param   string $before text to appear before title.
-	 * @param   string $after text to appear after title.
-	 * @param   bool   $echo control display of title.
+	 * @param   string $after  text to appear after title.
+	 * @param   bool   $echo   control display of title.
 	 *
 	 * @see        __
 	 * @see        do_action
@@ -902,7 +903,8 @@ class Opus_Primus_Posts {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @see     OpusPrimusPosts::status_update
+	 * @see     Opus_Primus_Posts::status_update
+	 * @see     esc_html
 	 * @see     do_action
 	 */
 	function show_status_update() {
@@ -928,7 +930,7 @@ class Opus_Primus_Posts {
 	 * @since    0.1
 	 *
 	 * @param   string $update_text default text to be used.
-	 * @param   int    $time_ago measured in seconds, default equals one week.
+	 * @param   int    $time_ago    measured in seconds, default equals one week.
 	 *
 	 * @see      __
 	 * @see      apply_filters

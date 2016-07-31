@@ -40,11 +40,11 @@
  *
  * @version     1.4
  * @date        April 6, 2015
- * Change `OpusPrimusRouter` to a singleton style class
+ * Change `Opus_Primus_Router` to a singleton style class
  *
  * @todo        Review for uses with Child-Themes
  */
-class OpusPrimusRouter {
+class Opus_Primus_Router {
 
 	/**
 	 * Set the instance to null initially
@@ -62,7 +62,7 @@ class OpusPrimusRouter {
 	 * @since   1.4
 	 * @date    April 6, 2015
 	 *
-	 * @return null|OpusPrimusRouter
+	 * @return null|Opus_Primus_Router
 	 */
 	public static function create_instance() {
 

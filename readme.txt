@@ -86,8 +86,8 @@ Recent changelog as of July 2016
 * Ensure `$pagination` has been initialized in `Opus_Primus_Navigation::pagination` method
 * Improved i18n implementation in search found results string
 * Moved the `support_comment` method back into the `Opus_Primus_Structures` class
-* Moved the `before_comment_form` and `comments_form_closed` methods back into the `OpusPrimusComments` class
-* Refactored `OpusPrimusComments::comments_link` to use the WordPress core more effectively
+* Moved the `before_comment_form` and `comments_form_closed` methods back into the `Opus_Primus_Comments` class
+* Refactored `Opus_Primus_Comments::comments_link` to use the WordPress core more effectively
 * Removed `$screen` parameter as not necessary in Taglines Stanza
 * Renamed file `class.OpusPrimusHeaders.php` to `class.OpusPrimusHeader.php` for consistency
 * Removed "TagLines" Stanza and made available as separate plugin - see https://github.com/Cais/opus-primus-taglines-stanza
@@ -158,10 +158,10 @@ Recent changelog as of July 2016
 * Added `post-title-link` wrapper class to better manage Post Title output
 * Added WordPress HTML5 markup support for search form, comment form, comment list, and caption
 * Added sanity checks to ensure constants are not already defined
-* Added `OpusPrimusRouter` class to replace path and URL CONSTANTS
+* Added `Opus_Primus_Router` class to replace path and URL CONSTANTS
 * Added Child-Theme "slug" for easier customizations
 * Added empty hooks before and after showing the breadcrumbs
-* Added OpusPrimusComments class methods to `functions.php` to work-around duplicate output issue
+* Added Opus_Primus_Comments class methods to `functions.php` to work-around duplicate output issue
 * Added checks for Child-Theme and relevant references to `opus_primus_support_comment`
 * Better code organization to only load classes when needed
 * Changed post breadcrumb link to the WordPress shortlink
@@ -171,7 +171,7 @@ Recent changelog as of July 2016
 * Moved `support_comment` method to `functions.php` to eliminate duplicate output
 * Replaced the majority of `require_once` calls with `locate_template` calls
 * Replaced `global` variable calls with `new` class instances
-* Update to use `preg_match_all` in OpusPrimusGallery featured and secondary id methods
+* Update to use `preg_match_all` in Opus_Primus_Gallery featured and secondary id methods
 
 = CSS =
 * Added new typography styles for better reading

@@ -44,7 +44,7 @@
  *
  * @version     1.4
  * @date        April 5, 2015
- * Change `OpusPrimusArchives` to a singleton style class
+ * Change `Opus_Primus_Archives` to a singleton style class
  */
 class Opus_Primus_Images {
 
@@ -92,7 +92,7 @@ class Opus_Primus_Images {
 	 *
 	 * @param   string $size standard WordPress post_thumbnail sizes / or custom defined sizes can be used.
 	 *
-	 * @see     OpusPrimusImages::first_linked_image
+	 * @see     Opus_Primus_Images::first_linked_image
 	 * @see     __
 	 * @see     apply_filters
 	 * @see esc_html
@@ -207,16 +207,16 @@ class Opus_Primus_Images {
 	 * @package  OpusPrimus
 	 * @since    0.1
 	 *
-	 * @see      OpusPrimusImages::exif_aperture
-	 * @see      OpusPrimusImages::exif_camera
-	 * @see      OpusPrimusImages::exif_caption
-	 * @see      OpusPrimusImages::exif_copyright
-	 * @see      OpusPrimusImages::exif_dimensions
-	 * @see      OpusPrimusImages::exif_focal_length
-	 * @see      OpusPrimusImages::exif_iso_speed
-	 * @see      OpusPrimusImages::exif_shutter
-	 * @see      OpusPrimusImages::exif_timestamp
-	 * @see      OpusPrimusImages::exif_title
+	 * @see      Opus_Primus_Images::exif_aperture
+	 * @see      Opus_Primus_Images::exif_camera
+	 * @see      Opus_Primus_Images::exif_caption
+	 * @see      Opus_Primus_Images::exif_copyright
+	 * @see      Opus_Primus_Images::exif_dimensions
+	 * @see      Opus_Primus_Images::exif_focal_length
+	 * @see      Opus_Primus_Images::exif_iso_speed
+	 * @see      Opus_Primus_Images::exif_shutter
+	 * @see      Opus_Primus_Images::exif_timestamp
+	 * @see      Opus_Primus_Images::exif_title
 	 * @see      __
 	 * @see      apply_filters
 	 * @see      do_action
@@ -289,16 +289,16 @@ class Opus_Primus_Images {
 	 * @package  OpusPrimus
 	 * @since    0.1
 	 *
-	 * @see      OpusPrimusImages::exif_aperture
-	 * @see      OpusPrimusImages::exif_camera
-	 * @see      OpusPrimusImages::exif_caption
-	 * @see      OpusPrimusImages::exif_copyright
-	 * @see      OpusPrimusImages::exif_dimensions
-	 * @see      OpusPrimusImages::exif_focal_length
-	 * @see      OpusPrimusImages::exif_iso_speed
-	 * @see      OpusPrimusImages::exif_shutter
-	 * @see      OpusPrimusImages::exif_timestamp
-	 * @see      OpusPrimusImages::exif_title
+	 * @see      Opus_Primus_Images::exif_aperture
+	 * @see      Opus_Primus_Images::exif_camera
+	 * @see      Opus_Primus_Images::exif_caption
+	 * @see      Opus_Primus_Images::exif_copyright
+	 * @see      Opus_Primus_Images::exif_dimensions
+	 * @see      Opus_Primus_Images::exif_focal_length
+	 * @see      Opus_Primus_Images::exif_iso_speed
+	 * @see      Opus_Primus_Images::exif_shutter
+	 * @see      Opus_Primus_Images::exif_timestamp
+	 * @see      Opus_Primus_Images::exif_title
 	 * @see      __
 	 * @see      apply_filters
 	 * @see      do_action
@@ -389,7 +389,7 @@ class Opus_Primus_Images {
 	 * @package OpuysPrimus
 	 * @since   0.1
 	 *
-	 * @see     OpusPrimusImages::exif_data
+	 * @see     Opus_Primus_Images::exif_data
 	 * @see     apply_filters
 	 * @see     do_action
 	 *
@@ -430,7 +430,7 @@ class Opus_Primus_Images {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @see     OpusPrimusImages::exif_data
+	 * @see     Opus_Primus_Images::exif_data
 	 * @see     apply_filters
 	 * @see     do_action
 	 *
@@ -471,7 +471,7 @@ class Opus_Primus_Images {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @see     OpusPrimusImages::exif_data
+	 * @see     Opus_Primus_Images::exif_data
 	 * @see     apply_filters
 	 * @see     do_action
 	 *
@@ -512,7 +512,7 @@ class Opus_Primus_Images {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @see     OpusPrimusImages::exif_data
+	 * @see     Opus_Primus_Images::exif_data
 	 * @see     apply_filters
 	 * @see     do_action
 	 * @see     get_the_time
@@ -592,7 +592,7 @@ class Opus_Primus_Images {
 	 * @package          OpusPrimus
 	 * @since            0.1
 	 *
-	 * @see              OpusPrimusImages::exif_data
+	 * @see              Opus_Primus_Images::exif_data
 	 * @see              (GLOBAL) $post
 	 * @see              apply_filters
 	 * @see              do_action
@@ -642,7 +642,7 @@ class Opus_Primus_Images {
 	 * @package  OpusPrimus
 	 * @since    0.1
 	 *
-	 * @see      OpusPrimusImages::exif_data
+	 * @see      Opus_Primus_Images::exif_data
 	 * @see      apply_filters
 	 * @see      do_action
 	 *
@@ -683,7 +683,7 @@ class Opus_Primus_Images {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @see     OpusPrimusImages::exif_data
+	 * @see     Opus_Primus_Images::exif_data
 	 * @see     apply_filters
 	 * @see     do_action
 	 *
@@ -724,7 +724,7 @@ class Opus_Primus_Images {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @see     OpusPrimusImages::exif_data
+	 * @see     Opus_Primus_Images::exif_data
 	 * @see     apply_filters
 	 * @see     do_action
 	 * @see     number_format
@@ -780,7 +780,7 @@ class Opus_Primus_Images {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @see     OpusPrimusImages::exif_data
+	 * @see     Opus_Primus_Images::exif_data
 	 * @see     __
 	 * @see     apply_filters
 	 * @see     date_i18n
@@ -834,7 +834,7 @@ class Opus_Primus_Images {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @see     OpusPrimusImages::exif_data
+	 * @see     Opus_Primus_Images::exif_data
 	 * @see     apply_filters
 	 * @see     do_action
 	 *
@@ -934,7 +934,7 @@ class Opus_Primus_Images {
 	 * @package OpusPrimus
 	 * @since   1.3.1
 	 *
-	 * @see     OpusPrimusImages::featured_thumbnail
+	 * @see     Opus_Primus_Images::featured_thumbnail
 	 * @see     get_post_thumbnail_id
 	 * @see     is_bool
 	 * @see     wp_get_attachment_metadata
@@ -988,8 +988,8 @@ class Opus_Primus_Images {
 	 *
 	 * @param   bool $echo default = true, displays featured image thumbnail.
 	 *
-	 * @see     OpusPrimusImages::featured_thumbnail
-	 * @see     OpusPrimusImages::featured_thumbnail_single_view
+	 * @see     Opus_Primus_Images::featured_thumbnail
+	 * @see     Opus_Primus_Images::featured_thumbnail_single_view
 	 * @see     is_archive
 	 * @see     is_single
 	 *
@@ -1125,7 +1125,7 @@ class Opus_Primus_Images {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @see     OpusPrimusImages::first_linked_image
+	 * @see     Opus_Primus_Images::first_linked_image
 	 */
 	function show_first_linked_image() {
 

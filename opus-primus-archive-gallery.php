@@ -39,9 +39,9 @@
 
 /** Create class objects */
 $opus_posts      = Opus_Primus_Posts::create_instance();
-$opus_comments   = OpusPrimusComments::create_instance();
+$opus_comments   = Opus_Primus_Comments::create_instance();
 $opus_navigation = Opus_Primus_Navigation::create_instance();
-$opus_gallery    = OpusPrimusGallery::create_instance(); ?>
+$opus_gallery    = Opus_Primus_Gallery::create_instance(); ?>
 
 <div <?php post_class(); ?>>
 

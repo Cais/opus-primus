@@ -40,7 +40,7 @@
  *
  * @version     1.3
  * @date        September 1, 2014
- * Removed constant definitions that were replaced by the OpusPrimusRouter class
+ * Removed constant definitions that were replaced by the Opus_Primus_Router class
  * Replaced `required_once` with `locate_template`
  */
 

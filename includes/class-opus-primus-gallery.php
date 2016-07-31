@@ -46,9 +46,9 @@
  *
  * @version     1.4
  * @date        April 5, 2015
- * Change `OpusPrimusGallery` to a singleton style class
+ * Change `Opus_Primus_Gallery` to a singleton style class
  */
-class OpusPrimusGallery {
+class Opus_Primus_Gallery {
 
 	/**
 	 * Set the instance to null initially
@@ -66,7 +66,7 @@ class OpusPrimusGallery {
 	 * @since   1.4
 	 * @date    April 5, 2015
 	 *
-	 * @return null|OpusPrimusGallery
+	 * @return null|Opus_Primus_Gallery
 	 */
 	public static function create_instance() {
 
@@ -97,20 +97,20 @@ class OpusPrimusGallery {
 	 *
 	 * @param   string $size thumbnail|medium|large|full (default WordPress image sizes).
 	 *
-	 * @see    OpusPrimusGallery::get_gallery_attr_featured_ids
-	 * @see    (GLOBAL) $opus_thumb_id
-	 * @see    __
-	 * @see    do_action
-	 * @see esc_html
-	 * @see    get_children
-	 * @see    get_permalink
-	 * @see    get_post_thumbnail_id
-	 * @see    get_the_ID
-	 * @see    has_post_thumbnail
-	 * @see    is_single
-	 * @see    the_post_thumbnail
-	 * @see    the_title_attribute
-	 * @see    wp_get_attachment_image
+	 * @see     Opus_Primus_Gallery::get_gallery_attr_featured_ids
+	 * @see     (GLOBAL) $opus_thumb_id
+	 * @see     __
+	 * @see     do_action
+	 * @see     esc_html
+	 * @see     get_children
+	 * @see     get_permalink
+	 * @see     get_post_thumbnail_id
+	 * @see     get_the_ID
+	 * @see     has_post_thumbnail
+	 * @see     is_single
+	 * @see     the_post_thumbnail
+	 * @see     the_title_attribute
+	 * @see     wp_get_attachment_image
 	 *
 	 * @version 1.2.3
 	 * @date    February 2, 2014
@@ -143,12 +143,12 @@ class OpusPrimusGallery {
 				if ( ! is_single() ) {
 
 					echo esc_html( '<p class="featured-image has-post-thumbnail"><a href="' . get_permalink() . '" title="' . the_title_attribute(
-						array(
+							array(
 								'before' => __( 'View', 'opus-primus' ) . ' ',
 								'after'  => ' ' . __( 'only', 'opus-primus' ),
 								'echo'   => '0',
 							)
-					) . '">' );
+						) . '">' );
 					the_post_thumbnail( $size );
 					echo '</a></p>';
 
@@ -184,14 +184,14 @@ class OpusPrimusGallery {
 						echo esc_html( '<p class="featured-image no-attachments"><a href="'
 						               . get_permalink()
 						               . '" title="' . the_title_attribute( array(
-						                	'before' => __( 'View', 'opus-primus' ) . ' ',
-							                'after'  => ' ' . __( 'only', 'opus-primus' ),
-							                'echo'   => '0',
-											)
-							           )
-									   . '">'
-									   . wp_get_attachment_image( $opus_thumb_id, $size )
-									   . '</a></p>'
+									'before' => __( 'View', 'opus-primus' ) . ' ',
+									'after'  => ' ' . __( 'only', 'opus-primus' ),
+									'echo'   => '0',
+								)
+						               )
+						               . '">'
+						               . wp_get_attachment_image( $opus_thumb_id, $size )
+						               . '</a></p>'
 						);
 
 					} else {
@@ -208,11 +208,11 @@ class OpusPrimusGallery {
 							echo esc_html( '<p class="featured-image no-post-thumbnail"><a href="'
 							               . get_permalink()
 							               . '" title="' . the_title_attribute( array(
-							               	    'before' => __( 'View', 'opus-primus' ) . ' ',
-							                    'after'  => ' ' . __( 'only', 'opus-primus' ),
-							                    'echo'   => '0',
-										        )
-										   )
+										'before' => __( 'View', 'opus-primus' ) . ' ',
+										'after'  => ' ' . __( 'only', 'opus-primus' ),
+										'echo'   => '0',
+									)
+							               )
 							               . '">'
 							               . wp_get_attachment_image( $opus_thumb_id, $size )
 							               . '</a></p>'
@@ -248,9 +248,9 @@ class OpusPrimusGallery {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @see    get_shortcode_regex
-	 * @see    get_the_content
-	 * @see    shortcode_parse_atts
+	 * @see     get_shortcode_regex
+	 * @see     get_the_content
+	 * @see     shortcode_parse_atts
 	 *
 	 * @return  null|int - array index value
 	 *
@@ -306,10 +306,10 @@ class OpusPrimusGallery {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @see    OpusPrimusGallery::get_gallery_attr_featured_ids
-	 * @see    get_shortcode_regex
-	 * @see    get_the_content
-	 * @see    shortcode_parse_atts
+	 * @see     Opus_Primus_Gallery::get_gallery_attr_featured_ids
+	 * @see     get_shortcode_regex
+	 * @see     get_the_content
+	 * @see     shortcode_parse_atts
 	 *
 	 * @return  array
 	 *
@@ -383,18 +383,18 @@ class OpusPrimusGallery {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @see    (CONSTANT) OPUS_NUMBER_OF_SECONDARY_IMAGES
-	 * @see    (GLOBAL) $opus_thumb_id
-	 * @see    WP_Query
-	 * @see    apply_filters
-	 * @see    do_action
-	 * @see    get_permalink
-	 * @see    get_the_ID
-	 * @see    is_single
-	 * @see    number_format_i18n
-	 * @see    the_title_attribute
-	 * @see    wp_get_attachment_image
-	 * @see    wp_parse_args
+	 * @see     (CONSTANT) OPUS_NUMBER_OF_SECONDARY_IMAGES
+	 * @see     (GLOBAL) $opus_thumb_id
+	 * @see     WP_Query
+	 * @see     apply_filters
+	 * @see     do_action
+	 * @see     get_permalink
+	 * @see     get_the_ID
+	 * @see     is_single
+	 * @see     number_format_i18n
+	 * @see     the_title_attribute
+	 * @see     wp_get_attachment_image
+	 * @see     wp_parse_args
 	 *
 	 * @param   array|string $secondary_images_args arguments used to display images.
 	 *

@@ -31,12 +31,12 @@ The filters are listed below by file, in order of appearance:
         opus_post_breadcrumbs_sticky_text
         opus_post_breadcrumbs_maximum_post_title_length
         opus_post_breadcrumbs_shortened_title_suffix
-    includes\class.OpusPrimusComments.php
+    includes\class.Opus_Primus_Comments.php
         opus_comments_password_required
         opus_no_comments_message
         opus_comment_form_required_field_glyph
         opus_comments_form_closed
-    includes\class.OpusPrimusGallery.php
+    includes\class.Opus_Primus_Gallery.php
         opus_more_images_text
     includes\class.Opus_Primus_Images.php
         opus_archive_image_title

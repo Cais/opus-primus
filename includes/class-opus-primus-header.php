@@ -44,7 +44,7 @@
  * Change `OpusPrimusHeader` to a singleton style class
  * Renamed file to `class-opus-primus-header.php` for consistency
  */
-class OpusPrimusHeader {
+class Opus_Primus_Header {
 
 	/**
 	 * Set the instance to null initially
@@ -62,7 +62,7 @@ class OpusPrimusHeader {
 	 * @since   1.4
 	 * @date    April 5, 2015
 	 *
-	 * @return null|OpusPrimusHeader
+	 * @return null|Opus_Primus_Header
 	 */
 	public static function create_instance() {
 
@@ -115,7 +115,7 @@ class OpusPrimusHeader {
 	 * @package OpusPrimus
 	 * @since   1.1
 	 *
-	 * @see     OpusPrimusHeader::site_title
+	 * @see     Opus_Primus_Header::site_title
 	 * @see     do_action
 	 */
 	function site_title_block() {
@@ -160,7 +160,7 @@ class OpusPrimusHeader {
 	 * @package OpusPrimus
 	 * @since   1.1
 	 *
-	 * @see     OpusPrimusHeader::site_description
+	 * @see     Opus_Primus_Header::site_description
 	 * @see     do_action
 	 */
 	function site_description_block() {
@@ -206,7 +206,7 @@ class OpusPrimusHeader {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @see     OpusPrimusHeaders::custom_header_image
+	 * @see     Opus_Primus_Headers::custom_header_image
 	 * @see     esc_html
 	 * @see     get_header_image
 	 */
@@ -227,7 +227,7 @@ class OpusPrimusHeader {
 	 * @package OpusPrimus
 	 * @since   1.1
 	 *
-	 * @see     OpusPrimusStructures::show_custom_header_image
+	 * @see     Opus_Primus_Header::show_custom_header_image
 	 * @see     do_action
 	 */
 	function show_custom_header_image_block() {

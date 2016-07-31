@@ -49,7 +49,7 @@
 
 /** Create class variables */
 $opus_posts      = Opus_Primus_Posts::create_instance();
-$opus_comments   = OpusPrimusComments::create_instance();
+$opus_comments   = Opus_Primus_Comments::create_instance();
 $opus_navigation = Opus_Primus_Navigation::create_instance();
 $opus_images     = Opus_Primus_Images::create_instance(); ?>
 

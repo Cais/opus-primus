@@ -34,8 +34,8 @@
  *
  * @version     1.2.3
  * @date        February 2, 2014
- * Moved `featured_image` wrapper into OpusPrimusGallery::featured_image method
- * Moved `secondary_images` wrapper into OpusPrimusGallery::secondary_images method
+ * Moved `featured_image` wrapper into Opus_Primus_Gallery::featured_image method
+ * Moved `secondary_images` wrapper into Opus_Primus_Gallery::secondary_images method
  *
  * @version     1.2.5
  * @date        July 20, 2014
@@ -44,8 +44,8 @@
 
 /** Create class objects */
 $opus_posts      = Opus_Primus_Posts::create_instance();
-$opus_comments   = OpusPrimusComments::create_instance();
-$opus_gallery    = OpusPrimusGallery::create_instance();
+$opus_comments   = Opus_Primus_Comments::create_instance();
+$opus_gallery    = Opus_Primus_Gallery::create_instance();
 $opus_navigation = Opus_Primus_Navigation::create_instance(); ?>
 
 	<div <?php post_class(); ?>>

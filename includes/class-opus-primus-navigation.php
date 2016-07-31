@@ -155,6 +155,7 @@ class Opus_Primus_Navigation {
 	 * @see        __
 	 * @see        apply_filters
 	 * @see        do_action
+	 * @see        esc_html
 	 * @see        next_image_link
 	 * @see        previous_image_link
 	 *
@@ -372,8 +373,9 @@ class Opus_Primus_Navigation {
 	 * @sub-package    Navigation
 	 * @since          1.2.5
 	 *
-	 * @see            OpusPrimusNavigation::pagination
+	 * @see            Opus_Primus_Navigation::pagination
 	 * @see            do_action
+	 * @see            esc_html
 	 */
 	function pagination_wrapped() {
 
@@ -430,6 +432,7 @@ class Opus_Primus_Navigation {
 	 * @param   string|array $search_menu_args arguments passed to method.
 	 *
 	 * @see     do_action
+	 * @see     esc_html
 	 * @see     search_page_menu
 	 * @see     wp_nav_menu
 	 * @see     wp_parse_args

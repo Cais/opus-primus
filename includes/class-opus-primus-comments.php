@@ -54,10 +54,10 @@
  *
  * @version     1.4
  * @date        March 31, 2015
- * Change `OpusPrimusComments` to a singleton style class
+ * Change `Opus_Primus_Comments` to a singleton style class
  * Returned `before_comment_form` and `comments_form_closed` methods
  */
-class OpusPrimusComments {
+class Opus_Primus_Comments {
 
 	/**
 	 * Set the instance to null initially
@@ -74,7 +74,7 @@ class OpusPrimusComments {
 	 * @since   1.4
 	 * @date    March 31, 2015
 	 *
-	 * @return null|OpusPrimusComments
+	 * @return null|Opus_Primus_Comments
 	 */
 	public static function create_instance() {
 
@@ -257,7 +257,7 @@ class OpusPrimusComments {
 	 * used in this method
 	 * @link     https://core.trac.wordpress.org/ticket/23870
 	 *
-	 * @see      OpusPrimusComments::comment_form_required_field_glyph
+	 * @see      Opus_Primus_Comments::comment_form_required_field_glyph
 	 *
 	 * @param   object $defaults passed from the comments form.
 	 *
@@ -416,8 +416,8 @@ class OpusPrimusComments {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @see     OpusPrimusComments::comments_closed_class
-	 * @see     OpusPrimusComments::has_comments_class
+	 * @see     Opus_Primus_Comments::comments_closed_class
+	 * @see     Opus_Primus_Comments::has_comments_class
 	 * @see     comments_popup_link
 	 * @see     do_action
 	 * @see     is_archive
@@ -666,7 +666,7 @@ class OpusPrimusComments {
 	 * @package OpusPrimus
 	 * @since   1.1.1
 	 *
-	 * @see     OpusPrimusNavigation::comments_navigation
+	 * @see     Opus_Primus_Navigation::comments_navigation
 	 * @see     WP_Query::comments_by_type
 	 * @see     get_option
 	 * @see     wp_list_comments
@@ -704,7 +704,7 @@ class OpusPrimusComments {
 	 * @package OpusPrimus
 	 * @since   1.1.1
 	 *
-	 * @see     OpusPrimusNavigation::comments_navigation
+	 * @see     Opus_Primus_Navigation::comments_navigation
 	 * @see     WP_Query::comments_by_type
 	 * @see     get_option
 	 * @see     wp_list_comments
@@ -742,7 +742,7 @@ class OpusPrimusComments {
 	 * @package OpusPrimus
 	 * @since   1.1.1
 	 *
-	 * @see     OpusPrimusNavigation::comments_navigation
+	 * @see     Opus_Primus_Navigation::comments_navigation
 	 * @see     WP_Query::comments_by_type
 	 * @see     get_option
 	 * @see     wp_list_comments
@@ -818,7 +818,7 @@ class OpusPrimusComments {
 	 * @package OpusPrimus
 	 * @since   1.1.1
 	 *
-	 * @see     OpusPrimusComments::all_comments_count
+	 * @see     Opus_Primus_Comments::all_comments_count
 	 * @see     __
 	 * @see     _n
 	 * @see     do_action

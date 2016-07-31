@@ -316,12 +316,12 @@ class Opus_Primus_Structures {
 	 * @return string - URL of image
 	 *
 	 * @version    1.3
-	 * Replace CONSTANT with OpusPrimusRouter method
+	 * Replace CONSTANT with Opus_Primus_Router method
 	 */
 	function bust_image() {
 
-		/** Create OpusPrimusRouter class object */
-		$opus_router = OpusPrimusRouter::create_instance();
+		/** Create Opus_Primus_Router class object */
+		$opus_router = Opus_Primus_Router::create_instance();
 
 		$bust_image_location = $opus_router->path_uri( 'images' ) . 'broken_beethoven.png';
 
@@ -338,7 +338,7 @@ class Opus_Primus_Structures {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @see     OpusPrimusStructures::bust_image
+	 * @see     Opus_Primus_Structures::bust_image
 	 *
 	 * @version 1.4.2
 	 * @date    2016-07-28
@@ -361,6 +361,10 @@ class Opus_Primus_Structures {
 	 * @package     OpusPrimus
 	 * @since       0.1
 	 *
+	 * @param   bool $show              controls the display of the copyright details.
+	 * @param   bool $by_author         controls the author component of the copyright.
+	 * @param   int  $transient_refresh length of time in seconds before refresh.
+	 *
 	 * @see         __
 	 * @see         apply_filters
 	 * @see         esc_attr
@@ -370,10 +374,6 @@ class Opus_Primus_Structures {
 	 * @see         home_url
 	 * @see         post_date_gmt
 	 * @see         set_transient
-	 *
-	 * @param   bool $show              controls the display of the copyright details.
-	 * @param   bool $by_author         controls the author component of the copyright.
-	 * @param   int  $transient_refresh length of time in seconds before refresh.
 	 *
 	 * @return  mixed|null|void
 	 *
@@ -471,6 +471,8 @@ class Opus_Primus_Structures {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
+	 * @param   bool $show true|false default show credits|return null.
+	 *
 	 * @see     __
 	 * @see     apply_filters
 	 * @see     esc_attr__
@@ -479,8 +481,6 @@ class Opus_Primus_Structures {
 	 * @see     is_child_theme
 	 * @see     parent
 	 * @see     wp_get_theme
-	 *
-	 * @param   bool $show true|false default show credits|return null.
 	 *
 	 * @return  mixed|void theme credits with links|filtered credits
 	 */
@@ -624,10 +624,10 @@ class Opus_Primus_Structures {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @see     OpusPrimusArchives::archive_cloud
-	 * @see     OpusPrimusArchives::create_instance
-	 * @see     OpusPrimusArchives::categories_archives
-	 * @see     OpusPrimusNavigation::search_menu
+	 * @see     Opus_Primus_Archives::archive_cloud
+	 * @see     Opus_Primus_Archives::create_instance
+	 * @see     Opus_Primus_Archives::categories_archives
+	 * @see     Opus_Primus_Navigation::search_menu
 	 * @see     __
 	 * @see     apply_filters
 	 * @see     do_action
@@ -754,9 +754,9 @@ class Opus_Primus_Structures {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @see     OpusPrimusStructures::no_search_results
-	 * @see     OpusPrimusNavigation::post_link
-	 * @see     OpusPrimusNavigation::pagination_wrapped
+	 * @see     Opus_Primus_Structures::no_search_results
+	 * @see     Opus_Primus_Navigation::post_link
+	 * @see     Opus_Primus_Navigation::pagination_wrapped
 	 * @see     do_action
 	 * @see     get_template_part
 	 * @see     get_post_format
@@ -808,8 +808,8 @@ class Opus_Primus_Structures {
 	 * @package    OpusPrimus
 	 * @since      0.1
 	 *
-	 * @see        OpusPrimusNavigation::pagination_wrapped
-	 * @see        OpusPrimusStructures::no_search_results
+	 * @see        Opus_Primus_Navigation::pagination_wrapped
+	 * @see        Opus_Primus_Structures::no_search_results
 	 * @see        do_action
 	 * @see        get_template_part
 	 * @see        get_post_format
@@ -855,7 +855,7 @@ class Opus_Primus_Structures {
 	 * @package OpusPrimus
 	 * @since   1.0.1
 	 *
-	 * @see     OpusPrimusStructures::the_loop
+	 * @see     Opus_Primus_Structures::the_loop
 	 * @see     do_action
 	 * @see     dynamic_sidebar
 	 * @see     is_active_sidebar
@@ -898,7 +898,7 @@ class Opus_Primus_Structures {
 	 * @package OpusPrimus
 	 * @since   1.0.1
 	 *
-	 * @see     OpusPrimusStructures::the_loop_archives
+	 * @see     Opus_Primus_Structures::the_loop_archives
 	 * @see     do_action
 	 * @see     dynamic_sidebar
 	 * @see     is_active_sidebar
