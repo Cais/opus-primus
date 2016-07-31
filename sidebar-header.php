@@ -50,21 +50,24 @@ if ( is_active_sidebar( 'header-middle' ) || is_active_sidebar( 'header-left' ) 
 				<div class="column-left">
 
 					<ul id="header-sidebar-two">
-						<?php if ( is_active_sidebar( 'header-middle' ) ) {
+						<?php
+						if ( is_active_sidebar( 'header-middle' ) ) {
 							dynamic_sidebar( 'header-middle' );
 						} ?>
 					</ul>
 					<!-- #header-sidebar-two -->
 
 					<ul id="header-sidebar-one">
-						<?php if ( is_active_sidebar( 'header-left' ) ) {
+						<?php
+						if ( is_active_sidebar( 'header-left' ) ) {
 							dynamic_sidebar( 'header-left' );
 						} ?>
 					</ul>
 					<!-- #header-sidebar-one -->
 
 					<ul id="header-sidebar-three">
-						<?php if ( is_active_sidebar( 'header-right' ) ) {
+						<?php
+						if ( is_active_sidebar( 'header-right' ) ) {
 							dynamic_sidebar( 'header-right' );
 						} ?>
 					</ul>

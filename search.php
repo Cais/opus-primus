@@ -70,10 +70,10 @@ do_action( 'opus_content_before' ); ?>
 				dynamic_sidebar( 'before-loop' );
 			}
 
-			/** the_Loop - Starts */
+			/** Starts the_Loop */
 			if ( have_posts() ) {
 
-				/** @var string $opus_search_found_pre_text - create text string for output */
+				/** Create text string for output */
 				$opus_search_found_pre_text = __( 'We found it!', 'opus-primus' );
 				$opus_search_found_pre_text .= '<br />';
 				$opus_search_found_pre_text .= __( 'It looks like you searched for ...', 'opus-primus' );
@@ -81,12 +81,12 @@ do_action( 'opus_content_before' ); ?>
 				printf(
 					sprintf(
 						'<h2 class="search-found-pre-text">%1$s <span class="search-query">%2$s</span></h2>',
-						apply_filters( 'opus_search_found_pre_text', $opus_search_found_pre_text ),
+						esc_html( apply_filters( 'opus_search_found_pre_text', $opus_search_found_pre_text ) ),
 						get_search_query()
 					)
 				);
 
-				_e(
+				esc_html_e(
 					apply_filters(
 						'opus_search_found_post_text',
 						'<div class="opus-search-found-post-text">' . __( 'Here are the results:', 'opus-primus' ) . '</div>'
@@ -97,7 +97,8 @@ do_action( 'opus_content_before' ); ?>
 
 					the_post();
 					/** Since we're in the_Loop we need to check the post type */
-					if ( 'page' == get_post_type() ) { ?>
+					if ( 'page' === get_post_type() ) {
+						?>
 
 						<div <?php post_class(); ?>>
 
@@ -109,16 +110,10 @@ do_action( 'opus_content_before' ); ?>
 							$opus_posts->post_title();
 							$opus_posts->post_excerpt(); ?>
 
-						</div><!-- post classes -->
+						</div><!-- post classes --> <?php } else {
 
-					<?php } else {
-
-						get_template_part( 'opus-primus', get_post_format() );
-
-					}
-
+						get_template_part( 'opus-primus', get_post_format() );}
 				}
-
 			} else {
 
 				$opus_structures->no_search_results();
@@ -129,7 +124,7 @@ do_action( 'opus_content_before' ); ?>
 			$opus_navigation = Opus_Primus_Navigation::create_instance();
 			$opus_navigation->posts_link();
 
-			/** the_Loop - Ends */
+			/** Ends the_Loop */
 
 			/** Add after loop sidebar */
 			if ( is_active_sidebar( 'after-loop' ) ) {

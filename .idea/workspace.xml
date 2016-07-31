@@ -7,25 +7,10 @@
   <component name="ChangeListManager">
     <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive-audio.php" afterPath="$PROJECT_DIR$/opus-primus-archive-audio.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive-chat.php" afterPath="$PROJECT_DIR$/opus-primus-archive-chat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive-gallery.php" afterPath="$PROJECT_DIR$/opus-primus-archive-gallery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive-image.php" afterPath="$PROJECT_DIR$/opus-primus-archive-image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive-link.php" afterPath="$PROJECT_DIR$/opus-primus-archive-link.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive-quote.php" afterPath="$PROJECT_DIR$/opus-primus-archive-quote.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive-status.php" afterPath="$PROJECT_DIR$/opus-primus-archive-status.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive-video.php" afterPath="$PROJECT_DIR$/opus-primus-archive-video.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-aside.php" afterPath="$PROJECT_DIR$/opus-primus-aside.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-audio.php" afterPath="$PROJECT_DIR$/opus-primus-audio.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-chat.php" afterPath="$PROJECT_DIR$/opus-primus-chat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-footer.php" afterPath="$PROJECT_DIR$/opus-primus-footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-gallery.php" afterPath="$PROJECT_DIR$/opus-primus-gallery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-image.php" afterPath="$PROJECT_DIR$/opus-primus-image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-link.php" afterPath="$PROJECT_DIR$/opus-primus-link.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-quote.php" afterPath="$PROJECT_DIR$/opus-primus-quote.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-status.php" afterPath="$PROJECT_DIR$/opus-primus-status.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-video.php" afterPath="$PROJECT_DIR$/opus-primus-video.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page.php" afterPath="$PROJECT_DIR$/page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search.php" afterPath="$PROJECT_DIR$/search.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sidebar-footer.php" afterPath="$PROJECT_DIR$/sidebar-footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sidebar-header.php" afterPath="$PROJECT_DIR$/sidebar-header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sidebar.php" afterPath="$PROJECT_DIR$/sidebar.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,108 +30,7 @@
     <favorites_list name="opus-primus" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="opus-primus-ignite.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/opus-primus-ignite.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="70" column="38" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="opus-primus-image.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/opus-primus-image.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="607">
-              <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="opus-primus-link.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/opus-primus-link.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="607">
-              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="opus-primus-quote.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/opus-primus-quote.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="607">
-              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="opus-primus-status.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/opus-primus-status.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="607">
-              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="opus-primus-video.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/opus-primus-video.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="607">
-              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/page.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="607">
-              <caret line="152" column="0" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="opus-primus-footer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/opus-primus-footer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="opus-primus-gallery.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/opus-primus-gallery.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="607">
-              <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="opus-primus-header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/opus-primus-header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
-              <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -173,10 +57,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusHeader.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusPosts.php" />
-        <option value="$PROJECT_DIR$/includes/class.OpusPrimusRouter.php" />
-        <option value="$PROJECT_DIR$/includes/class-opus-primus-gallery.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-header.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-navigation.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-router.php" />
@@ -224,6 +104,10 @@
         <option value="$PROJECT_DIR$/opus-primus-status.php" />
         <option value="$PROJECT_DIR$/opus-primus-video.php" />
         <option value="$PROJECT_DIR$/page.php" />
+        <option value="$PROJECT_DIR$/search.php" />
+        <option value="$PROJECT_DIR$/sidebar.php" />
+        <option value="$PROJECT_DIR$/sidebar-footer.php" />
+        <option value="$PROJECT_DIR$/sidebar-header.php" />
       </list>
     </option>
   </component>
@@ -564,14 +448,7 @@
       <workItem from="1469381259756" duration="549000" />
       <workItem from="1469382127773" duration="1248000" />
       <workItem from="1469715596877" duration="8915000" />
-      <workItem from="1469818089423" duration="22204000" />
-    </task>
-    <task id="LOCAL-00597" summary="- bump to version 1.4-alpha">
-      <created>1428425815789</created>
-      <option name="number" value="00597" />
-      <option name="presentableId" value="LOCAL-00597" />
-      <option name="project" value="LOCAL" />
-      <updated>1428425815789</updated>
+      <workItem from="1469818089423" duration="22640000" />
     </task>
     <task id="LOCAL-00598" summary="* Added `number_format_i18n` to better accommodate locale based values">
       <created>1428759811663</created>
@@ -909,7 +786,14 @@
       <option name="project" value="LOCAL" />
       <updated>1469996853606</updated>
     </task>
-    <option name="localTasksCounter" value="646" />
+    <task id="LOCAL-00646" summary="- begin better adherence to the WordPress Coding Standards">
+      <created>1469997190411</created>
+      <option name="number" value="00646" />
+      <option name="presentableId" value="LOCAL-00646" />
+      <option name="project" value="LOCAL" />
+      <updated>1469997190411</updated>
+    </task>
+    <option name="localTasksCounter" value="647" />
     <servers>
       <GitHub shared="false" url="http://github.com">
         <option name="assignedIssuesOnly" value="false" />
@@ -930,7 +814,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46941000" />
+    <option name="totallyTimeSpent" value="47377000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -954,10 +838,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="826" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3962804" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3962804" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32729805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3038147" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32833788" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1062,54 +946,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/compatibility/bns-login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/opus-primus-layout.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/opus-primus-media-queries.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/opus-primus.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="169" column="25" selection-start-line="169" selection-start-column="25" selection-end-line="169" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/opus-primus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/opus-primus-comment-tabs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/opus-primus-full-size-video.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -1474,6 +1310,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="607">
           <caret line="152" column="0" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="83" column="110" selection-start-line="83" selection-start-column="110" selection-end-line="83" selection-end-column="110" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidebar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidebar-footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidebar-header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="607">
+          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/single.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
