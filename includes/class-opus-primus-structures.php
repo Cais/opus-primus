@@ -298,7 +298,7 @@ class Opus_Primus_Structures {
 			$comment .= '<!-- ' . wp_get_theme() . ' version ' . wp_get_theme()->get( 'Version' ) . ' -->' . "\n";
 		}
 
-		echo esc_html( $comment );
+		echo $comment;
 
 	}
 
