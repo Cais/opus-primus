@@ -653,9 +653,9 @@ class Opus_Primus_Posts {
 			/** Post By-Line filtered components */
 			printf(
 				$opus_post_byline,
-				apply_filters( 'opus_post_byline_anchor', $this->no_title_link( $byline_args['anchor'] ) ),
-				apply_filters( 'opus_post_byline_date', sprintf( __( 'on %1$s', 'opus-primus' ), get_the_date( get_option( 'date_format' ) ) ) ),
-				apply_filters( 'opus_post_byline_time', sprintf( __( 'at %1$s', 'opus-primus' ), get_the_time( get_option( 'time_format' ) ) ) ),
+				esc_html( apply_filters( 'opus_post_byline_anchor', $this->no_title_link( $byline_args['anchor'] ) ) ),
+				esc_html( apply_filters( 'opus_post_byline_date', sprintf( __( 'on %1$s', 'opus-primus' ), get_the_date( get_option( 'date_format' ) ) ) ) ),
+				esc_html( apply_filters( 'opus_post_byline_time', sprintf( __( 'at %1$s', 'opus-primus' ), get_the_time( get_option( 'time_format' ) ) ) ) ),
 				apply_filters( 'opus_post_byline_author', sprintf( __( 'by %1$s', 'opus-primus' ), $this->author_posts_link() ) )
 			);
 
@@ -716,8 +716,8 @@ class Opus_Primus_Posts {
 		}
 
 		printf(
-			'<div class="' . $post_coda_class . '">%1$s</div>',
-			apply_filters( 'opus_post_coda', $post_coda )
+			'<div class="' . sanitize_html_class( $post_coda_class ) . '">%1$s</div>',
+			sanitize_html_class( apply_filters( 'opus_post_coda', $post_coda ) )
 		);
 
 		/** Add empty hook after the post coda */
