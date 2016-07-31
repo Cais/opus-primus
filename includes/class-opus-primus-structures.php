@@ -384,6 +384,10 @@ class Opus_Primus_Structures {
 	 * @version     1.2.5
 	 * @date        June 15, 2014
 	 * Use single view published date for first year of copyright
+	 *
+	 * @version     1.5
+	 * @date        2016-07-31
+	 * Changed `get_posts` call to `new WP_Query`
 	 */
 	function copyright( $show = true, $by_author = true, $transient_refresh = 2592000 ) {
 
@@ -399,7 +403,7 @@ class Opus_Primus_Structures {
 		if ( ! get_transient( 'opus_primus_copyright_first_post' ) ) {
 
 			/** Retrieve all published posts in ascending order */
-			$all_posts = get_posts( 'post_status=publish&order=ASC' );
+			$all_posts = new WP_Query( 'post_status=publish&order=ASC' );
 
 			/** Get the first post */
 			$first_post = $all_posts[0];

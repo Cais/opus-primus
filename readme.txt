@@ -46,6 +46,7 @@ Recent changelog as of July 2016
 = Code =
 * Changed aperture from `F` to `f /`
 * Changed @uses to @see for function/class/method inline documentation
+* Changed `get_posts` call to `new WP_Query` in `Opus_Primus_Structures::copyright`
 * Removed `OpusPrimusDefaults` class/file deprecated in 1.2.5
 * Removed call to `load_text_domain`; forces theme to use WordPress 4.6 or greater for translations
 * Miscellaneous "escaping" improvements
