@@ -82,4 +82,4 @@ locate_template( 'includes/class-opus-primus-authors.php', true, true );
 /** Add Archives */
 locate_template( 'includes/class.OpusPrimusArchives.php', true, true );
 /** Add Breadcrumbs */
-locate_template( 'includes/class.OpusPrimusBreadcrumbs.php', true, true );
+locate_template( 'includes/class-opus-primus-breadcrumbs.php', true, true );

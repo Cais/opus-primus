@@ -26,7 +26,7 @@ The filters are listed below by file, in order of appearance:
         opus_authors_list
         opus_first_author_details_text
         opus_modified_author_by_text
-    includes\class.OpusPrimusBreadcrumbs.php
+    includes\class.Opus_Primus_Breadcrumbs.php
         opus_post_breadcrumbs_home_text
         opus_post_breadcrumbs_sticky_text
         opus_post_breadcrumbs_maximum_post_title_length

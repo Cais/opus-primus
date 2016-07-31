@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Opus Primus Breadcrumbs
  *
@@ -32,13 +31,25 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+/**
+ * Class Opus Primus Breadcrumbs
+ *
+ * Creates and maintains the breadcrumbs navigation methods for the Opus Primus
+ * WordPress theme
  *
  * @version     1.4
  * @date        April 5, 2015
- * Change `OpusPrimusBreadcrumbs` to a singleton style class
+ * Change `Opus_Primus_Breadcrumbs` to a singleton style class
  */
-class OpusPrimusBreadcrumbs {
+class Opus_Primus_Breadcrumbs {
 
+	/**
+	 * Set the instance to null initially
+	 *
+	 * @var $instance null
+	 */
 	private static $instance = null;
 
 	/**
@@ -50,7 +61,7 @@ class OpusPrimusBreadcrumbs {
 	 * @since   1.4
 	 * @date    April 5, 2015
 	 *
-	 * @return null|OpusPrimusBreadcrumbs
+	 * @return null|Opus_Primus_Breadcrumbs
 	 */
 	public static function create_instance() {
 
@@ -100,12 +111,12 @@ class OpusPrimusBreadcrumbs {
 			global $post;
 
 			/** Set initial array element as current post ID */
-			$breadcrumb[$x] = $post->ID;
+			$breadcrumb[ $x ] = $post->ID;
 
 			/** Walk back to the parent getting each post ID  */
-			while ( get_post( $breadcrumb[$x] )->post_parent !== 0 ) {
+			while ( get_post( $breadcrumb[ $x ] )->post_parent !== 0 ) {
 				/** @var $parent_post - current index parent post ID */
-				$parent_post = get_post( $breadcrumb[$x] )->post_parent;
+				$parent_post = get_post( $breadcrumb[ $x ] )->post_parent;
 				/** Add ID to breadcrumb array */
 				$breadcrumb[] = $parent_post;
 				/** Increment the index to check the next post */
@@ -134,9 +145,9 @@ class OpusPrimusBreadcrumbs {
 	 * @package OpusPrimus
 	 * @since   1.1
 	 *
-	 * @uses    OpusPrimusBreadcrumbs::breadcrumb_categories
-	 * @uses    OPusPrimusBreadcrumbs::breadcrumb_post_title
-	 * @uses    OpusPrimusBreadcrumbs::post_format_name
+	 * @uses    Opus_Primus_Breadcrumbs::breadcrumb_categories
+	 * @uses    Opus_Primus_Breadcrumbs::breadcrumb_post_title
+	 * @uses    Opus_Primus_Breadcrumbs::post_format_name
 	 * @uses    apply_filters
 	 * @uses    home_url
 	 * @uses    is_single
@@ -175,8 +186,8 @@ class OpusPrimusBreadcrumbs {
 			$post_trail .= '<ul class="breadcrumb">';
 
 			$post_trail .= '<li class="post-breadcrumbs-home-text">'
-				. '<a href="' . home_url( '/' ) . '">' . apply_filters( 'opus_post_breadcrumbs_home_text', __( 'Home', 'opus-primus' ) ) . '</a>'
-				. '</li>';
+			               . '<a href="' . home_url( '/' ) . '">' . apply_filters( 'opus_post_breadcrumbs_home_text', __( 'Home', 'opus-primus' ) ) . '</a>'
+			               . '</li>';
 
 			/** @var $post_trail - add breadcrumb categories */
 			$post_trail = $this->breadcrumb_categories( $post_trail, $post_ID );
@@ -296,7 +307,7 @@ class OpusPrimusBreadcrumbs {
 	 * @subpackage  Breadcrumbs
 	 * @since       1.0.4
 	 *
-	 * @uses        OpusPrimusBreadcrumbs::breadcrumbs
+	 * @uses        Opus_Primus_Breadcrumbs::breadcrumbs
 	 * @uses        get_post
 	 * @uses        home_url
 	 */
@@ -312,8 +323,8 @@ class OpusPrimusBreadcrumbs {
 			$trail .= '<ul class="breadcrumb">';
 
 			$trail .= '<li>'
-				. '<a href="' . home_url( '/' ) . '">' . __( 'Home', 'opus-primus' ) . '</a>'
-				. '</li>';
+			          . '<a href="' . home_url( '/' ) . '">' . __( 'Home', 'opus-primus' ) . '</a>'
+			          . '</li>';
 
 			foreach ( $this->breadcrumbs() as $steps ) {
 
@@ -322,8 +333,8 @@ class OpusPrimusBreadcrumbs {
 					: get_post( $steps )->post_title;
 
 				$trail .= '<li>'
-					. '<a title="' . $post_title . '" href="' . home_url( '/?page_id=' ) . get_post( $steps )->ID . '">' . $post_title . '</a>'
-					. '</li>';
+				          . '<a title="' . $post_title . '" href="' . home_url( '/?page_id=' ) . get_post( $steps )->ID . '">' . $post_title . '</a>'
+				          . '</li>';
 
 			}
 
@@ -390,8 +401,8 @@ class OpusPrimusBreadcrumbs {
 	 * @subpackage  Breadcrumbs
 	 * @since       1.0.4
 	 *
-	 * @uses        OpusPrimusBreadcrumbs::the_trail
-	 * @uses        OpusPrimusBreadcrumbs::post_breadcrumbs
+	 * @uses        Opus_Primus_Breadcrumbs::the_trail
+	 * @uses        Opus_Primus_Breadcrumbs::post_breadcrumbs
 	 *
 	 * @version     1.2.2
 	 * @date        October 26, 2013

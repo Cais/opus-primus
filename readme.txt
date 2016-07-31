@@ -46,6 +46,7 @@ Recent changelog as of July 2016
 = Code =
 * Changed aperture from `F` to `f /`
 * Changed @uses to @see for function/class/method inline documentation
+* Removed `OpusPrimusDefaults` class/file deprecated in 1.2.5
 * Miscellaneous "escaping" improvements
 * Miscellaneous incline comments/documentation updates
 
