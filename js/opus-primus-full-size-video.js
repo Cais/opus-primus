@@ -36,7 +36,7 @@
  * Limit width to a maximum of 1000px
  */
 
-jQuery(document).ready(function ($) {
+jQuery().ready(function ($) {
 	/** Note: $() will work as an alias for jQuery() inside of this function */
 
 	var video_selector = $('.format-video embed, .format-video iframe');
