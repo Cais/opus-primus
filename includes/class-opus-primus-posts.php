@@ -377,13 +377,13 @@ class Opus_Primus_Posts {
 
 		/** Prints the "opus_posted_in" string, replacing the placeholders */
 		printf(
-			'<div class="meta-tags">' . esc_html( $opus_posted_in ) . '</div><!-- .meta-tags -->',
-			esc_html( $this->no_title_link( $anchor ) ),
-			esc_html( get_the_category_list( ', ' ) ),
-			esc_html( $opus_tag_list ),
-			esc_url( get_permalink() ),
-			esc_attr( $this->anchor_title_text() ),
-			esc_html( $this->status_update() )
+			'<div class="meta-tags">' . $opus_posted_in . '</div><!-- .meta-tags -->',
+			$this->no_title_link( $anchor ),
+			get_the_category_list( ', ' ),
+			$opus_tag_list,
+			get_permalink(),
+			$this->anchor_title_text(),
+			$this->status_update()
 		);
 
 		/** Add empty hook after meta tags */
@@ -413,7 +413,7 @@ class Opus_Primus_Posts {
 		return sprintf(
 			'<span class="author-url"><a class="archive-url" href="%1$s" title="%2$s">%3$s</a></span>',
 			home_url( '?author=' . $last_user->ID ),
-			esc_attr( sprintf( __( 'View all posts by %1$s', 'opus-primus' ), $last_user->display_name ) ),
+			sprintf( __( 'View all posts by %1$s', 'opus-primus' ), $last_user->display_name ),
 			$last_user->display_name
 		);
 
@@ -512,11 +512,11 @@ class Opus_Primus_Posts {
 				if ( get_the_time() !== get_the_modified_time() ) {
 
 					printf(
-						'<span class="author-modified-time">' . esc_html( $mod_author_phrase ) . '</span>',
-						esc_html( $mod_author_avatar ),
-						esc_html( apply_filters( 'opus_post_byline_mod_author', $this->modified_author_posts_link( $last_user ) ) ),
-						esc_html( apply_filters( 'opus_post_byline_mod_date', sprintf( __( 'on %1$s', 'opus-primus' ), get_the_modified_date( get_option( 'date_format' ) ) ) ) ),
-						esc_html( apply_filters( 'opus_post_byline_mod_time', sprintf( __( 'at %1$s', 'opus-primus' ), get_the_modified_time( get_option( 'time_format' ) ) ) ) )
+						'<span class="author-modified-time">' . $mod_author_phrase . '</span>',
+						$mod_author_avatar,
+						apply_filters( 'opus_post_byline_mod_author', $this->modified_author_posts_link( $last_user ) ),
+						apply_filters( 'opus_post_byline_mod_date', sprintf( __( 'on %1$s', 'opus-primus' ), get_the_modified_date( get_option( 'date_format' ) ) ) ),
+						apply_filters( 'opus_post_byline_mod_time', sprintf( __( 'at %1$s', 'opus-primus' ), get_the_modified_time( get_option( 'time_format' ) ) ) )
 					);
 
 				}
@@ -525,11 +525,11 @@ class Opus_Primus_Posts {
 				if ( get_the_date() !== get_the_modified_date() ) {
 
 					printf(
-						'<span class="author-modified-date">' . esc_html( $mod_author_phrase ) . '</span>',
-						esc_html( $mod_author_avatar ),
-						esc_html( apply_filters( 'opus_post_byline_mod_author', $this->modified_author_posts_link( $last_user ) ) ),
-						esc_html( apply_filters( 'opus_post_byline_mod_date', sprintf( __( 'on %1$s', 'opus-primus' ), get_the_modified_date( get_option( 'date_format' ) ) ) ) ),
-						esc_html( apply_filters( 'opus_post_byline_mod_time', sprintf( __( 'at %1$s', 'opus-primus' ), get_the_modified_time( get_option( 'time_format' ) ) ) ) )
+						'<span class="author-modified-date">' . $mod_author_phrase . '</span>',
+						$mod_author_avatar,
+						apply_filters( 'opus_post_byline_mod_author', $this->modified_author_posts_link( $last_user ) ),
+						apply_filters( 'opus_post_byline_mod_date', sprintf( __( 'on %1$s', 'opus-primus' ), get_the_modified_date( get_option( 'date_format' ) ) ) ),
+						apply_filters( 'opus_post_byline_mod_time', sprintf( __( 'at %1$s', 'opus-primus' ), get_the_modified_time( get_option( 'time_format' ) ) ) )
 					);
 
 				}
@@ -652,11 +652,11 @@ class Opus_Primus_Posts {
 
 			/** Post By-Line filtered components */
 			printf(
-				esc_html( $opus_post_byline ),
-				esc_html( apply_filters( 'opus_post_byline_anchor', $this->no_title_link( $byline_args['anchor'] ) ) ),
-				esc_html( apply_filters( 'opus_post_byline_date', sprintf( __( 'on %1$s', 'opus-primus' ), get_the_date( get_option( 'date_format' ) ) ) ) ),
-				esc_html( apply_filters( 'opus_post_byline_time', sprintf( __( 'at %1$s', 'opus-primus' ), get_the_time( get_option( 'time_format' ) ) ) ) ),
-				esc_html( apply_filters( 'opus_post_byline_author', sprintf( __( 'by %1$s', 'opus-primus' ), $this->author_posts_link() ) ) )
+				$opus_post_byline,
+				apply_filters( 'opus_post_byline_anchor', $this->no_title_link( $byline_args['anchor'] ) ),
+				apply_filters( 'opus_post_byline_date', sprintf( __( 'on %1$s', 'opus-primus' ), get_the_date( get_option( 'date_format' ) ) ) ),
+				apply_filters( 'opus_post_byline_time', sprintf( __( 'at %1$s', 'opus-primus' ), get_the_time( get_option( 'time_format' ) ) ) ),
+				apply_filters( 'opus_post_byline_author', sprintf( __( 'by %1$s', 'opus-primus' ), $this->author_posts_link() ) )
 			);
 
 			/**
@@ -668,9 +668,9 @@ class Opus_Primus_Posts {
 			}
 
 			/** Add a sticky note flag to the byline */
-			echo esc_html( $this->sticky_flag( $byline_args['sticky_flag'] ) );
+			echo $this->sticky_flag( $byline_args['sticky_flag'] );
 			/** Add a post-format flag to the byline */
-			echo esc_html( $this->post_format_flag() );
+			echo $this->post_format_flag();
 
 			/** Close CSS wrapper for the post byline */
 			echo '</div><!-- .meta-byline -->';
@@ -716,8 +716,8 @@ class Opus_Primus_Posts {
 		}
 
 		printf(
-			'<div class="' . esc_html( $post_coda_class ) . '">%1$s</div>',
-			esc_html( apply_filters( 'opus_post_coda', $post_coda ) )
+			'<div class="' . $post_coda_class . '">%1$s</div>',
+			apply_filters( 'opus_post_coda', $post_coda )
 		);
 
 		/** Add empty hook after the post coda */
@@ -912,7 +912,7 @@ class Opus_Primus_Posts {
 		/** Add empty hook before status update output */
 		do_action( 'opus_status_update_before' );
 
-		echo esc_html( $this->status_update() );
+		echo $this->status_update();
 
 		/** Add empty hook after status update output */
 		do_action( 'opus_status_update_after' );

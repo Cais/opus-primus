@@ -7,9 +7,8 @@
   <component name="ChangeListManager">
     <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus-archive.php" afterPath="$PROJECT_DIR$/opus-primus-archive.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opus-primus.php" afterPath="$PROJECT_DIR$/opus-primus.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-opus-primus-comments.php" afterPath="$PROJECT_DIR$/includes/class-opus-primus-comments.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-opus-primus-posts.php" afterPath="$PROJECT_DIR$/includes/class-opus-primus-posts.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +29,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
@@ -38,6 +37,26 @@
               <folding>
                 <element signature="e#6#1140#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class-opus-primus-posts.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/class-opus-primus-posts.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="14887">
+              <caret line="1100" column="6" selection-start-line="1100" selection-start-column="6" selection-end-line="1100" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class-opus-primus-comments.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/class-opus-primus-comments.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1913">
+              <caret line="445" column="120" selection-start-line="445" selection-start-column="120" selection-end-line="445" selection-end-column="120" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -94,12 +113,10 @@
         <option value="$PROJECT_DIR$/includes/class.OpusPrimusRouter.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-authors.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-structures.php" />
-        <option value="$PROJECT_DIR$/includes/class-opus-primus-comments.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-gallery.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-header.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-images.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-navigation.php" />
-        <option value="$PROJECT_DIR$/includes/class-opus-primus-posts.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-router.php" />
         <option value="$PROJECT_DIR$/includes/opus-primus-defaults.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-breadcrumbs.php" />
@@ -120,6 +137,8 @@
         <option value="$PROJECT_DIR$/opus-primus.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/opus-primus-archive.php" />
+        <option value="$PROJECT_DIR$/includes/class-opus-primus-posts.php" />
+        <option value="$PROJECT_DIR$/includes/class-opus-primus-comments.php" />
       </list>
     </option>
   </component>
@@ -460,14 +479,7 @@
       <workItem from="1469381259756" duration="549000" />
       <workItem from="1469382127773" duration="1248000" />
       <workItem from="1469715596877" duration="8915000" />
-      <workItem from="1469818089423" duration="19341000" />
-    </task>
-    <task id="LOCAL-00589" summary="* Change `OpusPrimusAuthors` to a singleton style class">
-      <created>1428262263649</created>
-      <option name="number" value="00589" />
-      <option name="presentableId" value="LOCAL-00589" />
-      <option name="project" value="LOCAL" />
-      <updated>1428262263649</updated>
+      <workItem from="1469818089423" duration="20099000" />
     </task>
     <task id="LOCAL-00590" summary="* Change `OpusPrimusBreadcrumbs` to a singleton style class">
       <created>1428262631153</created>
@@ -805,7 +817,14 @@
       <option name="project" value="LOCAL" />
       <updated>1469993547387</updated>
     </task>
-    <option name="localTasksCounter" value="638" />
+    <task id="LOCAL-00638" summary="- begin better adherence to the WordPress Coding Standards">
+      <created>1469994318227</created>
+      <option name="number" value="00638" />
+      <option name="presentableId" value="LOCAL-00638" />
+      <option name="project" value="LOCAL" />
+      <updated>1469994318227</updated>
+    </task>
+    <option name="localTasksCounter" value="639" />
     <servers>
       <GitHub shared="false" url="http://github.com">
         <option name="assignedIssuesOnly" value="false" />
@@ -826,7 +845,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44078000" />
+    <option name="totallyTimeSpent" value="44836000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1051,14 +1070,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class-opus-primus-comments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11820">
-          <caret line="820" column="28" selection-start-line="820" selection-start-column="28" selection-end-line="820" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/class-opus-primus-gallery.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7590">
@@ -1081,14 +1092,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1860">
           <caret line="157" column="27" selection-start-line="157" selection-start-column="27" selection-end-line="157" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class-opus-primus-posts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10005">
-          <caret line="699" column="24" selection-start-line="699" selection-start-column="24" selection-end-line="699" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -1372,7 +1375,7 @@
         <state relative-caret-position="592">
           <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding>
-            <element signature="e#6#1535#0#PHP" expanded="true" />
+            <element signature="e#6#1535#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1392,6 +1395,22 @@
           <folding>
             <element signature="e#6#1140#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class-opus-primus-posts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14887">
+          <caret line="1100" column="6" selection-start-line="1100" selection-start-column="6" selection-end-line="1100" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class-opus-primus-comments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1913">
+          <caret line="445" column="120" selection-start-line="445" selection-start-column="120" selection-end-line="445" selection-end-column="120" />
+          <folding />
         </state>
       </provider>
     </entry>
