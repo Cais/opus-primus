@@ -6,12 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/languages/opus-primus-en_CA.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/languages/opus-primus-en_CA.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/languages/opus-primus.pot" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-opus-primus-gallery.php" afterPath="$PROJECT_DIR$/includes/class-opus-primus-gallery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-opus-primus-images.php" afterPath="$PROJECT_DIR$/includes/class-opus-primus-images.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-opus-primus-posts.php" afterPath="$PROJECT_DIR$/includes/class-opus-primus-posts.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +27,18 @@
     <favorites_list name="opus-primus" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="class-opus-primus-posts.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/class-opus-primus-posts.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="386" column="10" selection-start-line="386" selection-start-column="10" selection-end-line="386" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -78,9 +85,7 @@
         <option value="$PROJECT_DIR$/opus-primus.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/opus-primus-archive.php" />
-        <option value="$PROJECT_DIR$/includes/class-opus-primus-posts.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-comments.php" />
-        <option value="$PROJECT_DIR$/includes/class-opus-primus-authors.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-structures.php" />
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/image.php" />
@@ -109,6 +114,8 @@
         <option value="$PROJECT_DIR$/sidebar-header.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-images.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-gallery.php" />
+        <option value="$PROJECT_DIR$/includes/class-opus-primus-authors.php" />
+        <option value="$PROJECT_DIR$/includes/class-opus-primus-posts.php" />
       </list>
     </option>
   </component>
@@ -254,32 +261,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BNS-Projects" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -449,21 +430,7 @@
       <workItem from="1469381259756" duration="549000" />
       <workItem from="1469382127773" duration="1248000" />
       <workItem from="1469715596877" duration="8915000" />
-      <workItem from="1469818089423" duration="23530000" />
-    </task>
-    <task id="LOCAL-00599" summary="* Added base `.po` file as well as English (Canadian) `.pomo` files&#10;* Minor correction to i18n strings, null does not need to be translated">
-      <created>1429111826972</created>
-      <option name="number" value="00599" />
-      <option name="presentableId" value="LOCAL-00599" />
-      <option name="project" value="LOCAL" />
-      <updated>1429111826972</updated>
-    </task>
-    <task id="LOCAL-00600" summary="- i18n modifications">
-      <created>1429380648875</created>
-      <option name="number" value="00600" />
-      <option name="presentableId" value="LOCAL-00600" />
-      <option name="project" value="LOCAL" />
-      <updated>1429380648876</updated>
+      <workItem from="1469818089423" duration="24631000" />
     </task>
     <task id="LOCAL-00601" summary="* Refactored `OpusPrimusComments::comments_link` to use the WordPress core more effectively&#10;* Added two classes for use in rendering the comments link text displayed ... or not&#10;* Added class definition to hide comment link text when comments are closed and there are no comments">
       <created>1429382840372</created>
@@ -794,7 +761,21 @@
       <option name="project" value="LOCAL" />
       <updated>1469997627654</updated>
     </task>
-    <option name="localTasksCounter" value="648" />
+    <task id="LOCAL-00648" summary="- begin better adherence to the WordPress Coding Standards">
+      <created>1469998520840</created>
+      <option name="number" value="00648" />
+      <option name="presentableId" value="LOCAL-00648" />
+      <option name="project" value="LOCAL" />
+      <updated>1469998520841</updated>
+    </task>
+    <task id="LOCAL-00649" summary="- begin better adherence to the WordPress Coding Standards">
+      <created>1469999269899</created>
+      <option name="number" value="00649" />
+      <option name="presentableId" value="LOCAL-00649" />
+      <option name="project" value="LOCAL" />
+      <updated>1469999269899</updated>
+    </task>
+    <option name="localTasksCounter" value="650" />
     <servers>
       <GitHub shared="false" url="http://github.com">
         <option name="assignedIssuesOnly" value="false" />
@@ -815,7 +796,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48267000" />
+    <option name="totallyTimeSpent" value="49368000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -839,13 +820,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="826" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3962804" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32729805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3038147" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection Results" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32833788" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32833788" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28065395" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32681563" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1043,22 +1024,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11985">
           <caret line="831" column="40" selection-start-line="831" selection-start-column="40" selection-end-line="831" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class-opus-primus-posts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14887">
-          <caret line="1100" column="6" selection-start-line="1100" selection-start-column="6" selection-end-line="1100" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class-opus-primus-authors.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1695">
-          <caret line="145" column="20" selection-start-line="145" selection-start-column="20" selection-end-line="145" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1359,6 +1324,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4329">
           <caret line="214" column="17" selection-start-line="214" selection-start-column="17" selection-end-line="214" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class-opus-primus-authors.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="522" column="19" selection-start-line="522" selection-start-column="19" selection-end-line="522" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class-opus-primus-posts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="386" column="10" selection-start-line="386" selection-start-column="10" selection-end-line="386" selection-end-column="10" />
           <folding />
         </state>
       </provider>
