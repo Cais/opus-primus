@@ -7,7 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-opus-primus-archives.php" afterPath="$PROJECT_DIR$/includes/class-opus-primus-archives.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-opus-primus-gallery.php" afterPath="$PROJECT_DIR$/includes/class-opus-primus-gallery.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,14 +28,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="class-opus-primus-archives.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="class-opus-primus-archives.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/class-opus-primus-archives.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="920">
+            <state relative-caret-position="952">
               <caret line="159" column="51" selection-start-line="159" selection-start-column="51" selection-end-line="159" selection-end-column="51" />
               <folding>
                 <element signature="e#6#1141#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class-opus-primus-gallery.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/class-opus-primus-gallery.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6217">
+              <caret line="508" column="21" selection-start-line="508" selection-start-column="21" selection-end-line="508" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -120,7 +130,6 @@
         <option value="$PROJECT_DIR$/sidebar-footer.php" />
         <option value="$PROJECT_DIR$/sidebar-header.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-images.php" />
-        <option value="$PROJECT_DIR$/includes/class-opus-primus-gallery.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-authors.php" />
         <option value="$PROJECT_DIR$/archive.php" />
         <option value="$PROJECT_DIR$/author.php" />
@@ -128,6 +137,7 @@
         <option value="$PROJECT_DIR$/includes/class-opus-primus-navigation.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-posts.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-archives.php" />
+        <option value="$PROJECT_DIR$/includes/class-opus-primus-gallery.php" />
       </list>
     </option>
   </component>
@@ -217,20 +227,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="BNS-Projects" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opus-primus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BNS-Projects" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-includes" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -457,14 +453,7 @@
       <workItem from="1469382127773" duration="1248000" />
       <workItem from="1469715596877" duration="8915000" />
       <workItem from="1469818089423" duration="27210000" />
-      <workItem from="1470002221341" duration="322000" />
-    </task>
-    <task id="LOCAL-00606" summary="* Improved i18n implementation in search found results string&#10;- updated language files">
-      <created>1431881426192</created>
-      <option name="number" value="00606" />
-      <option name="presentableId" value="LOCAL-00606" />
-      <option name="project" value="LOCAL" />
-      <updated>1431881426192</updated>
+      <workItem from="1470002221341" duration="1467000" />
     </task>
     <task id="LOCAL-00607" summary="- minor comment/inline documentation updates">
       <created>1431882339089</created>
@@ -802,7 +791,14 @@
       <option name="project" value="LOCAL" />
       <updated>1470002193488</updated>
     </task>
-    <option name="localTasksCounter" value="655" />
+    <task id="LOCAL-00655" summary="- begin better adherence to the WordPress Coding Standards">
+      <created>1470002586018</created>
+      <option name="number" value="00655" />
+      <option name="presentableId" value="LOCAL-00655" />
+      <option name="project" value="LOCAL" />
+      <updated>1470002586018</updated>
+    </task>
+    <option name="localTasksCounter" value="656" />
     <servers>
       <GitHub shared="false" url="http://github.com">
         <option name="assignedIssuesOnly" value="false" />
@@ -823,7 +819,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52269000" />
+    <option name="totallyTimeSpent" value="53414000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1294,14 +1290,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class-opus-primus-gallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1590">
-          <caret line="214" column="17" selection-start-line="214" selection-start-column="17" selection-end-line="214" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/archive.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -1367,11 +1355,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class-opus-primus-archives.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="920">
+        <state relative-caret-position="952">
           <caret line="159" column="51" selection-start-line="159" selection-start-column="51" selection-end-line="159" selection-end-column="51" />
           <folding>
             <element signature="e#6#1141#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class-opus-primus-gallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6217">
+          <caret line="508" column="21" selection-start-line="508" selection-start-column="21" selection-end-line="508" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>

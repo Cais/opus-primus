@@ -475,7 +475,7 @@ class Opus_Primus_Gallery {
 				 * Cycle through images and display them linked to their permalink
 				 */
 				foreach ( $images->posts as $image ) {
-					echo esc_html( '<a href="' . get_permalink( $image->ID ) . '">' . wp_get_attachment_image( $image->ID, $size ) . '</a>' );
+					echo '<a href="' . esc_url( get_permalink( $image->ID ) ) . '">' . wp_get_attachment_image( $image->ID, $size ) . '</a>';
 				}
 
 				/**
@@ -486,26 +486,24 @@ class Opus_Primus_Gallery {
 				 */
 				if ( ( $images->found_posts + 1 ) > ( $secondary_images_args['images'] + 1 ) ) {
 
-					echo esc_html(
-						sprintf( '<p class="more-images">%1$s</p>',
-							apply_filters(
-								'opus_more_images_text',
-								sprintf(
-									_n(
-										__( 'There is %2$s%1$s more image%3$s in addition to these in the gallery.', 'opus-primus' ),
-										__( 'There are %2$s%1$s more images%3$s in addition to these in the gallery.', 'opus-primus' ),
-										( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 )
-									),
-									number_format_i18n( ( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 ) ),
-									'<a href="' . get_permalink() . '" title="' . the_title_attribute(
-										array(
-											'before' => __( 'View', 'opus-primus' ) . ' ',
-											'after'  => ' ' . __( 'only', 'opus-primus' ),
-											'echo'   => '0',
-										)
-									) . '">',
-									'</a>'
-								)
+					printf( '<p class="more-images">%1$s</p>',
+						apply_filters(
+							'opus_more_images_text',
+							sprintf(
+								_n(
+									__( 'There is %2$s%1$s more image%3$s in addition to these in the gallery.', 'opus-primus' ),
+									__( 'There are %2$s%1$s more images%3$s in addition to these in the gallery.', 'opus-primus' ),
+									( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 )
+								),
+								number_format_i18n( ( $images->found_posts + 1 ) - ( $secondary_images_args['images'] + 1 ) ),
+								'<a href="' . esc_url( get_permalink() ) . '" title="' . esc_attr( the_title_attribute(
+									array(
+										'before' => __( 'View', 'opus-primus' ) . ' ',
+										'after'  => ' ' . __( 'only', 'opus-primus' ),
+										'echo'   => '0',
+									)
+								) ) . '">',
+								'</a>'
 							)
 						)
 					);
