@@ -399,7 +399,6 @@ class Opus_Primus_Structures {
 		if ( ! get_transient( 'opus_primus_copyright_first_post' ) ) {
 
 			/** Retrieve all published posts in ascending order */
-			/** @todo Refactor to use `WP_Query` */
 			$all_posts = get_posts( 'post_status=publish&order=ASC' );
 
 			/** Get the first post */
