@@ -74,7 +74,7 @@ do_action( 'opus_content_before' ); ?>
 
 			$opus_navigation->post_link();
 
-			/** the_Loop - Start */
+			/** Start the_Loop */
 			if ( have_posts() ) {
 				while ( have_posts() ) {
 					the_post();
@@ -87,15 +87,15 @@ do_action( 'opus_content_before' ); ?>
 						/** Make it clear this is an attachment being displayed */
 						printf(
 							'<h2 id="attachment-notice">'
-							. __( 'You are viewing an image attached to %1$s', 'opus-primus' )
+							. esc_html__( 'You are viewing an image attached to %1$s', 'opus-primus' )
 							. '</h2>',
-							'<a href="' . get_permalink( $post->post_parent ) . '">' . get_the_title( $post->post_parent ) . '</a>'
+							'<a href="' . esc_url( get_permalink( $post->post_parent ) ) . '">' . esc_html( get_the_title( $post->post_parent ) ) . '</a>'
 						);
 
 						$opus_posts->post_byline(
 							array(
 								'display_mod_author' => true,
-								'anchor'             => __( 'Displayed', 'opus-primus' )
+								'anchor'             => __( 'Displayed', 'opus-primus' ),
 							)
 						);
 
@@ -110,7 +110,7 @@ do_action( 'opus_content_before' ); ?>
 
 						/** Show the image with link to original */
 						$size = 'large';
-						echo '<div class="attached-image"><a href="' . wp_get_attachment_url( $post->ID ) . '">' . wp_get_attachment_image( $post->ID, $size ) . '</a></div>';
+						echo '<div class="attached-image"><a href="' . esc_url( wp_get_attachment_url( $post->ID ) ) . '">' . esc_url( wp_get_attachment_image( $post->ID, $size ) ) . '</a></div>';
 
 						/** Image Description from media library */
 						$opus_posts->post_content();
@@ -128,12 +128,9 @@ do_action( 'opus_content_before' ); ?>
 
 					<?php
 				}
-				/** End while - have posts */
 			} else {
 				$opus_structures->no_search_results();
 			}
-			/** End if - have posts */
-			/** the_Loop - End */
 
 			/** Add after loop sidebar */
 			if ( is_active_sidebar( 'after-loop' ) ) {
