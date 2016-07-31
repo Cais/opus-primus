@@ -174,7 +174,7 @@ class Opus_Primus_Navigation {
 		          . next_image_link( false, '<span class="right">' . __( 'Next Photo', 'opus-primus' ) . '</span>' )
 		          . '</div><!-- .opus-image-link-navigation -->';
 
-		echo esc_html( apply_filters( 'opus_image_link_navigation_output', $output ) );
+		echo apply_filters( 'opus_image_link_navigation_output', $output );
 
 		do_action( 'opus_image_link_navigation_after' );
 
@@ -381,7 +381,7 @@ class Opus_Primus_Navigation {
 
 		do_action( 'opus_navigation_pagination_before' );
 
-		echo esc_html( $this->pagination() );
+		echo $this->pagination();
 
 		do_action( 'opus_navigation_pagination_after' );
 
@@ -450,7 +450,7 @@ class Opus_Primus_Navigation {
 		);
 		$search_menu_args = wp_parse_args( (array) $defaults, $search_menu_args );
 
-		echo esc_html( sprintf( '<ul class="featured search pages"><li><span class="title">%1$s</span>', __( 'Featured Pages:', 'opus-primus' ) ) );
+		echo sprintf( '<ul class="featured search pages"><li><span class="title">%1$s</span>', __( 'Featured Pages:', 'opus-primus' ) );
 
 		wp_nav_menu( $search_menu_args );
 

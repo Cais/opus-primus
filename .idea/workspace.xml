@@ -7,11 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/404.php" afterPath="$PROJECT_DIR$/404.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archive.php" afterPath="$PROJECT_DIR$/archive.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/author.php" afterPath="$PROJECT_DIR$/author.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-opus-primus-archives.php" afterPath="$PROJECT_DIR$/includes/class-opus-primus-archives.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-opus-primus-posts.php" afterPath="$PROJECT_DIR$/includes/class-opus-primus-posts.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-opus-primus-navigation.php" afterPath="$PROJECT_DIR$/includes/class-opus-primus-navigation.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,7 +54,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/includes/class-opus-primus-router.php" />
         <option value="$PROJECT_DIR$/includes/opus-primus-defaults.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-breadcrumbs.php" />
         <option value="$PROJECT_DIR$/compatibility/bns-login.php" />
@@ -109,6 +104,7 @@
         <option value="$PROJECT_DIR$/archive.php" />
         <option value="$PROJECT_DIR$/author.php" />
         <option value="$PROJECT_DIR$/404.php" />
+        <option value="$PROJECT_DIR$/includes/class-opus-primus-navigation.php" />
       </list>
     </option>
   </component>
@@ -449,14 +445,7 @@
       <workItem from="1469381259756" duration="549000" />
       <workItem from="1469382127773" duration="1248000" />
       <workItem from="1469715596877" duration="8915000" />
-      <workItem from="1469818089423" duration="25158000" />
-    </task>
-    <task id="LOCAL-00602" summary="* Added `opus_authors_list` filter hook&#10;* Added `Share the Author Wealth` method, not implemented as a display element, yet">
-      <created>1429915152756</created>
-      <option name="number" value="00602" />
-      <option name="presentableId" value="LOCAL-00602" />
-      <option name="project" value="LOCAL" />
-      <updated>1429915152756</updated>
+      <workItem from="1469818089423" duration="25299000" />
     </task>
     <task id="LOCAL-00603" summary="- update `readme.txt` to include &quot;changelog.txt&quot; content">
       <created>1430253182403</created>
@@ -794,7 +783,14 @@
       <option name="project" value="LOCAL" />
       <updated>1469999624782</updated>
     </task>
-    <option name="localTasksCounter" value="651" />
+    <task id="LOCAL-00651" summary="- begin better adherence to the WordPress Coding Standards">
+      <created>1470000152827</created>
+      <option name="number" value="00651" />
+      <option name="presentableId" value="LOCAL-00651" />
+      <option name="project" value="LOCAL" />
+      <updated>1470000152827</updated>
+    </task>
+    <option name="localTasksCounter" value="652" />
     <servers>
       <GitHub shared="false" url="http://github.com">
         <option name="assignedIssuesOnly" value="false" />
@@ -815,7 +811,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49895000" />
+    <option name="totallyTimeSpent" value="50036000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -947,14 +943,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_8.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="838" column="9" selection-start-line="838" selection-start-column="9" selection-end-line="838" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
@@ -1357,6 +1345,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="57" column="40" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class-opus-primus-navigation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-518">
+          <caret line="452" column="135" selection-start-line="452" selection-start-column="135" selection-end-line="452" selection-end-column="135" />
           <folding />
         </state>
       </provider>
