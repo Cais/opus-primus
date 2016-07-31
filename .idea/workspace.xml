@@ -7,7 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-opus-primus-structures.php" afterPath="$PROJECT_DIR$/includes/class-opus-primus-structures.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,13 +28,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.php">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="48" column="44" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
+            <state relative-caret-position="257">
+              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding>
-                <element signature="e#6#1140#0#PHP" expanded="true" />
+                <element signature="e#6#1394#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -109,7 +109,6 @@
         <option value="$PROJECT_DIR$/comments.php" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/opus-primus-header.php" />
-        <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/opus-primus.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/opus-primus-archive.php" />
@@ -118,6 +117,7 @@
         <option value="$PROJECT_DIR$/includes/class-opus-primus-images.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-authors.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-structures.php" />
+        <option value="$PROJECT_DIR$/header.php" />
       </list>
     </option>
   </component>
@@ -458,14 +458,7 @@
       <workItem from="1469381259756" duration="549000" />
       <workItem from="1469382127773" duration="1248000" />
       <workItem from="1469715596877" duration="8915000" />
-      <workItem from="1469818089423" duration="21519000" />
-    </task>
-    <task id="LOCAL-00594" summary="* Change `OpusPrimusNavigation` to a singleton style class">
-      <created>1428363746635</created>
-      <option name="number" value="00594" />
-      <option name="presentableId" value="LOCAL-00594" />
-      <option name="project" value="LOCAL" />
-      <updated>1428363746636</updated>
+      <workItem from="1469818089423" duration="21571000" />
     </task>
     <task id="LOCAL-00595" summary="* Change `OpusPrimusPosts` to a singleton style class">
       <created>1428366304732</created>
@@ -803,7 +796,14 @@
       <option name="project" value="LOCAL" />
       <updated>1469996421114</updated>
     </task>
-    <option name="localTasksCounter" value="643" />
+    <task id="LOCAL-00643" summary="- begin better adherence to the WordPress Coding Standards">
+      <created>1469996503375</created>
+      <option name="number" value="00643" />
+      <option name="presentableId" value="LOCAL-00643" />
+      <option name="project" value="LOCAL" />
+      <updated>1469996503375</updated>
+    </task>
+    <option name="localTasksCounter" value="644" />
     <servers>
       <GitHub shared="false" url="http://github.com">
         <option name="assignedIssuesOnly" value="false" />
@@ -824,7 +824,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46256000" />
+    <option name="totallyTimeSpent" value="46308000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1297,14 +1297,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="53" column="60" selection-start-line="53" selection-start-column="60" selection-end-line="53" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/opus-primus-header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="795">
@@ -1385,6 +1377,16 @@
           <caret line="48" column="44" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
           <folding>
             <element signature="e#6#1140#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#1394#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

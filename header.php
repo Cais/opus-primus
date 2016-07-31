@@ -40,6 +40,7 @@
  * @date        February 6, 2016
  * Removed WordPress 4.1 compatibility check for `<title />` usage
  */
+
 ?>
 
 	<!DOCTYPE html>
