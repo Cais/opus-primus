@@ -95,7 +95,7 @@ class Opus_Primus_Images {
 	 * @see     Opus_Primus_Images::first_linked_image
 	 * @see     __
 	 * @see     apply_filters
-	 * @see esc_html
+	 * @see     esc_html
 	 * @see     get_children
 	 * @see     get_permalink
 	 * @see     get_the_ID
@@ -163,34 +163,30 @@ class Opus_Primus_Images {
 			<tbody>
 				<tr>
 					<td class="archive-image">
-						<?php if ( ! is_single() ) {
-
-							echo esc_html( '<span class="archive-image"><a href="' . get_permalink() . '" title="'
-							               . the_title_attribute( array(
-												'before' => __( 'View', 'opus-primus' ) . ' ',
-												'after'  => ' ' . __( 'only', 'opus-primus' ),
-												'echo'   => '0',
-												)
-							               )
-							               . '">' . $archive_image . '</a></span>'
-							);}
-						?>
+						<?php
+						if ( ! is_single() ) {
+							echo '<span class="archive-image"><a href="' . esc_url( get_permalink() ) . '" title="' . esc_attr( the_title_attribute( array(
+									'before' => __( 'View', 'opus-primus' ) . ' ',
+									'after'  => ' ' . __( 'only', 'opus-primus' ),
+									'echo'   => '0',
+							) ) ) . '">' . esc_url( $archive_image ) . '</a></span>';
+						} ?>
 					</td>
 				</tr>
 				<tr>
-					<?php if ( ! empty( $archive_image_excerpt ) ) {
-						printf(
-							'<td class="archive-image-excerpt">%1$s</td>',
-							esc_html( apply_filters( 'opus_archive_image_excerpt', sprintf( __( 'Image Caption: %1$s', 'opus-primus' ), $archive_image_excerpt ) ) )
-						); } ?>
+					<?php
+					if ( ! empty( $archive_image_excerpt ) ) {
+						printf( '<td class="archive-image-excerpt">%1$s</td>', esc_html( apply_filters( 'opus_archive_image_excerpt', sprintf( __( 'Image Caption: %1$s', 'opus-primus' ), $archive_image_excerpt ) ) ) );
+					} ?>
 				</tr>
 				<tr>
-					<?php if ( ! empty( $archive_image_content ) ) {
-
+					<?php
+					if ( ! empty( $archive_image_content ) ) {
 						printf(
 							'<td class="archive-image-content">%1$s</td>',
 							esc_html( apply_filters( 'opus_archive_image_content', sprintf( __( 'Image Description: %1$s', 'opus-primus' ), $archive_image_content ) ) )
-						); } ?>
+						);
+					} ?>
 				</tr>
 			</tbody>
 
@@ -220,7 +216,7 @@ class Opus_Primus_Images {
 	 * @see      __
 	 * @see      apply_filters
 	 * @see      do_action
-	 * @see esc_html
+	 * @see      esc_html
 	 *
 	 * @internal see display_exif_table for tabular output
 	 *
@@ -1005,14 +1001,14 @@ class Opus_Primus_Images {
 			/** Sanity check - are we in the right view to show the image? */
 			if ( ! is_single() && is_archive() ) {
 
-				echo $this->featured_thumbnail( $size = 'thumbnail', $class = 'alignright' );
+				echo esc_url( $this->featured_thumbnail( $size = 'thumbnail', $class = 'alignright' ) );
 
 			} else {
 
 				if ( ! is_single() ) {
-					echo $this->featured_thumbnail();
+					echo esc_url( $this->featured_thumbnail() );
 				} else {
-					echo $this->featured_thumbnail_single_view();
+					echo esc_url( $this->featured_thumbnail_single_view() );
 				}
 			}
 		}
@@ -1068,8 +1064,8 @@ class Opus_Primus_Images {
 	 * @since   0.1
 	 *
 	 * @param   string $before text before title, default is none.
-	 * @param   string $after text after title, default is none.
-	 * @param   bool   $echo deafult = true, display image title text.
+	 * @param   string $after  text after title, default is none.
+	 * @param   bool   $echo   deafult = true, display image title text.
 	 *
 	 * @see     __
 	 * @see     do_action
@@ -1104,7 +1100,7 @@ class Opus_Primus_Images {
 				<?php the_title( $before, $after, $echo ); ?>
 			</a>
 
-		<?php
+			<?php
 		} else {
 
 			the_title( $before, $after, $echo );
