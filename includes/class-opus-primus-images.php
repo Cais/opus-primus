@@ -1005,14 +1005,14 @@ class Opus_Primus_Images {
 			/** Sanity check - are we in the right view to show the image? */
 			if ( ! is_single() && is_archive() ) {
 
-				echo esc_html( $this->featured_thumbnail( $size = 'thumbnail', $class = 'alignright' ) );
+				echo $this->featured_thumbnail( $size = 'thumbnail', $class = 'alignright' );
 
 			} else {
 
 				if ( ! is_single() ) {
-					echo esc_html( $this->featured_thumbnail() );
+					echo $this->featured_thumbnail();
 				} else {
-					echo esc_html( $this->featured_thumbnail_single_view() );
+					echo $this->featured_thumbnail_single_view();
 				}
 			}
 		}
