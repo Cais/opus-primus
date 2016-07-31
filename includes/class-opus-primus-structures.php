@@ -679,7 +679,7 @@ class Opus_Primus_Structures {
 		);
 
 		/** Get the class variables */
-		$opus_archives   = OpusPrimusArchives::create_instance();
+		$opus_archives   = Opus_Primus_Archives::create_instance();
 		$opus_navigation = Opus_Primus_Navigation::create_instance();
 
 		/** Display a list of categories to choose from */

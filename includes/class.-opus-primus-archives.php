@@ -46,9 +46,9 @@
  *
  * @version     1.4
  * @date        April 5, 2015
- * Change `OpusPrimusArchives` to a singleton style class
+ * Change `Opus_Primus_Archives` to a singleton style class
  */
-class OpusPrimusArchives {
+class Opus_Primus_Archives {
 
 	/**
 	 * Set the instance to null initially
@@ -66,7 +66,7 @@ class OpusPrimusArchives {
 	 * @since   1.4
 	 * @date    April 5, 2015
 	 *
-	 * @return null|OpusPrimusArchives
+	 * @return null|Opus_Primus_Archives
 	 */
 	public static function create_instance() {
 

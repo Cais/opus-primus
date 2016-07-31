@@ -6,15 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compatibility/bns-login.php" afterPath="$PROJECT_DIR$/compatibility/bns-login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/opus-primus-comment-tabs.js" afterPath="$PROJECT_DIR$/js/opus-primus-comment-tabs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/opus-primus-full-size-video.js" afterPath="$PROJECT_DIR$/js/opus-primus-full-size-video.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/opus-primus-header-image-position.js" afterPath="$PROJECT_DIR$/js/opus-primus-header-image-position.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/opus-primus.js" afterPath="$PROJECT_DIR$/js/opus-primus.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/404.php" afterPath="$PROJECT_DIR$/404.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-opus-primus-structures.php" afterPath="$PROJECT_DIR$/includes/class-opus-primus-structures.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.-opus-primus-archives.php" afterPath="$PROJECT_DIR$/includes/class.-opus-primus-archives.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,22 +30,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/functions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4410">
-              <caret line="339" column="35" selection-start-line="339" selection-start-column="35" selection-end-line="339" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="readme.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readme.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="241">
               <caret line="49" column="89" selection-start-line="49" selection-start-column="89" selection-end-line="49" selection-end-column="89" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="404.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/404.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2265">
+              <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+              <folding>
+                <element signature="e#6#1496#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class.-opus-primus-archives.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/class.-opus-primus-archives.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="750">
+              <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
+              <folding>
+                <element signature="e#6#1141#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,7 +91,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/page.php" />
         <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/sidebar.php" />
         <option value="$PROJECT_DIR$/sidebar-footer.php" />
@@ -125,7 +133,6 @@
         <option value="$PROJECT_DIR$/includes/class-opus-primus-router.php" />
         <option value="$PROJECT_DIR$/includes/opus-primus-defaults.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-breadcrumbs.php" />
-        <option value="$PROJECT_DIR$/includes/class.-opus-primus-archives.php" />
         <option value="$PROJECT_DIR$/compatibility/bns-login.php" />
         <option value="$PROJECT_DIR$/js/opus-primus-header-image-position.js" />
         <option value="$PROJECT_DIR$/js/opus-primus.js" />
@@ -133,6 +140,8 @@
         <option value="$PROJECT_DIR$/js/opus-primus-full-size-video.js" />
         <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/includes/class.-opus-primus-archives.php" />
+        <option value="$PROJECT_DIR$/404.php" />
       </list>
     </option>
   </component>
@@ -278,6 +287,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BNS-Projects" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -447,14 +482,7 @@
       <workItem from="1469381259756" duration="549000" />
       <workItem from="1469382127773" duration="1248000" />
       <workItem from="1469715596877" duration="8915000" />
-      <workItem from="1469818089423" duration="17776000" />
-    </task>
-    <task id="LOCAL-00586" summary="* Moved the `before_comment_form` and `comments_form_closed` methods back into the `OpusPrimusComments` class">
-      <created>1427850464279</created>
-      <option name="number" value="00586" />
-      <option name="presentableId" value="LOCAL-00586" />
-      <option name="project" value="LOCAL" />
-      <updated>1427850464279</updated>
+      <workItem from="1469818089423" duration="18008000" />
     </task>
     <task id="LOCAL-00587" summary="- code clean-up">
       <created>1427851179338</created>
@@ -792,7 +820,14 @@
       <option name="project" value="LOCAL" />
       <updated>1469990333580</updated>
     </task>
-    <option name="localTasksCounter" value="635" />
+    <task id="LOCAL-00635" summary="- begin better adherence to the WordPress Coding Standards">
+      <created>1469992683043</created>
+      <option name="number" value="00635" />
+      <option name="presentableId" value="LOCAL-00635" />
+      <option name="project" value="LOCAL" />
+      <updated>1469992683043</updated>
+    </task>
+    <option name="localTasksCounter" value="636" />
     <servers>
       <GitHub shared="false" url="http://github.com">
         <option name="assignedIssuesOnly" value="false" />
@@ -813,7 +848,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42513000" />
+    <option name="totallyTimeSpent" value="42745000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -945,13 +980,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/languages/opus-primus-en_CA.mo">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../wp-includes/query.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -1239,16 +1267,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.-opus-primus-archives.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1605">
-          <caret line="107" column="23" selection-start-line="107" selection-start-column="23" selection-end-line="107" selection-end-column="23" />
-          <folding>
-            <element signature="e#6#1141#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/compatibility/opus-primus-contact-form-7.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1337,14 +1355,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="49" column="89" selection-start-line="49" selection-start-column="89" selection-end-line="49" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../wp-admin/includes/plugin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="563">
@@ -1366,6 +1376,34 @@
         <state relative-caret-position="4410">
           <caret line="339" column="35" selection-start-line="339" selection-start-column="35" selection-end-line="339" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="49" column="89" selection-start-line="49" selection-start-column="89" selection-end-line="49" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.-opus-primus-archives.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
+          <folding>
+            <element signature="e#6#1141#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/404.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2265">
+          <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#1496#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
