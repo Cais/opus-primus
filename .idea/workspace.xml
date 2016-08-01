@@ -7,8 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dd81032c-3b86-4f89-8be5-60079d770f35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer.php" afterPath="$PROJECT_DIR$/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-opus-primus-structures.php" afterPath="$PROJECT_DIR$/includes/class-opus-primus-structures.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
     </list>
     <ignored path="opus-primus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,21 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/footer.php">
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="class-opus-primus-structures.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/includes/class-opus-primus-structures.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5">
-              <caret line="299" column="0" selection-start-line="299" selection-start-column="0" selection-end-line="299" selection-end-column="0" />
+            <state relative-caret-position="5145">
+              <caret line="388" column="0" selection-start-line="388" selection-start-column="0" selection-end-line="388" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -82,7 +71,6 @@
         <option value="$PROJECT_DIR$/js/opus-primus-full-size-video.js" />
         <option value="$PROJECT_DIR$/includes/class.-opus-primus-archives.php" />
         <option value="$PROJECT_DIR$/comments.php" />
-        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/opus-primus-header.php" />
         <option value="$PROJECT_DIR$/opus-primus.php" />
         <option value="$PROJECT_DIR$/opus-primus-archive.php" />
@@ -116,17 +104,18 @@
         <option value="$PROJECT_DIR$/includes/class-opus-primus-authors.php" />
         <option value="$PROJECT_DIR$/archive.php" />
         <option value="$PROJECT_DIR$/author.php" />
-        <option value="$PROJECT_DIR$/404.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-navigation.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-posts.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-archives.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-gallery.php" />
         <option value="$PROJECT_DIR$/includes/widgets.php" />
         <option value="$PROJECT_DIR$/single.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/footer.php" />
+        <option value="$PROJECT_DIR$/404.php" />
+        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/includes/class-opus-primus-structures.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -270,6 +259,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BNS-Projects" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opus-primus" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -443,14 +458,7 @@
       <workItem from="1469715596877" duration="8915000" />
       <workItem from="1469818089423" duration="27210000" />
       <workItem from="1470002221341" duration="3897000" />
-      <workItem from="1470083365539" duration="1761000" />
-    </task>
-    <task id="LOCAL-00611" summary="- minor `readme.txt` update">
-      <created>1434849971220</created>
-      <option name="number" value="00611" />
-      <option name="presentableId" value="LOCAL-00611" />
-      <option name="project" value="LOCAL" />
-      <updated>1434849971220</updated>
+      <workItem from="1470083365539" duration="2954000" />
     </task>
     <task id="LOCAL-00612" summary="- correct Text Domain (and a few other minor items)">
       <created>1440773904588</created>
@@ -788,7 +796,14 @@
       <option name="project" value="LOCAL" />
       <updated>1470005660338</updated>
     </task>
-    <option name="localTasksCounter" value="660" />
+    <task id="LOCAL-00660" summary="- improved adherence to WordPress Coding Standards">
+      <created>1470085170427</created>
+      <option name="number" value="00660" />
+      <option name="presentableId" value="LOCAL-00660" />
+      <option name="project" value="LOCAL" />
+      <updated>1470085170427</updated>
+    </task>
+    <option name="localTasksCounter" value="661" />
     <servers>
       <GitHub shared="false" url="http://github.com">
         <option name="assignedIssuesOnly" value="false" />
@@ -809,7 +824,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57605000" />
+    <option name="totallyTimeSpent" value="58798000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -899,7 +914,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- i18n modifications" />
     <MESSAGE value="* Refactored `OpusPrimusComments::comments_link` to use the WordPress core more effectively&#10;* Added two classes for use in rendering the comments link text displayed ... or not&#10;* Added class definition to hide comment link text when comments are closed and there are no comments" />
     <MESSAGE value="* Added `opus_authors_list` filter hook&#10;* Added `Share the Author Wealth` method, not implemented as a display element, yet" />
     <MESSAGE value="- update `readme.txt` to include &quot;changelog.txt&quot; content" />
@@ -924,7 +938,8 @@
     <MESSAGE value="* Removed `OpusPrimusDefaults` class" />
     <MESSAGE value="- begin better adherence to the WordPress Coding Standards" />
     <MESSAGE value="* Changed `get_posts` call to `new WP_Query` in `Opus_Primus_Structures::copyright`" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Changed `get_posts` call to `new WP_Query` in `Opus_Primus_Structures::copyright`" />
+    <MESSAGE value="- improved adherence to WordPress Coding Standards" />
+    <option name="LAST_COMMIT_MESSAGE" value="- improved adherence to WordPress Coding Standards" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="WordPressConfiguration" enabled="true">
@@ -1222,14 +1237,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/404.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="57" column="40" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../wp-includes/link-template.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1100">
@@ -1270,7 +1277,7 @@
         <state relative-caret-position="952">
           <caret line="159" column="51" selection-start-line="159" selection-start-column="51" selection-end-line="159" selection-end-column="51" />
           <folding>
-            <element signature="e#6#1141#0#PHP" expanded="true" />
+            <element signature="e#6#1141#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1299,14 +1306,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/opus-primus-footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -1323,10 +1322,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/404.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../../wp-includes/formatting.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="3907" column="30" selection-start-line="3907" selection-start-column="30" selection-end-line="3907" selection-end-column="30" />
+        <state relative-caret-position="130">
+          <caret line="3906" column="9" selection-start-line="3906" selection-start-column="9" selection-end-line="3906" selection-end-column="9" />
           <folding>
             <marker date="1469112665000" expanded="true" signature="115934:115963" ph="..." />
             <marker date="1469112665000" expanded="true" signature="187368:187397" ph="..." />
@@ -1335,26 +1350,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/class-opus-primus-structures.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="299" column="0" selection-start-line="299" selection-start-column="0" selection-end-line="299" selection-end-column="0" />
+        <state relative-caret-position="242">
+          <caret line="596" column="60" selection-start-line="596" selection-start-column="60" selection-end-line="596" selection-end-column="60" />
+          <folding>
+            <marker date="1470086260000" expanded="true" signature="20911:20948" ph="..." />
+            <marker date="1470086260000" expanded="true" signature="26469:26541" ph="..." />
+            <marker date="1470086260000" expanded="true" signature="27417:27489" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5145">
+          <caret line="388" column="0" selection-start-line="388" selection-start-column="0" selection-end-line="388" selection-end-column="0" />
           <folding />
         </state>
       </provider>

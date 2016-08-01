@@ -386,5 +386,3 @@ function opus_primus_compatibility() {
 }
 
 add_action( 'wp_enqueue_scripts', 'opus_primus_compatibility' );
-
-add_filter( 'bnscl_image_tag_alt_title', 'custom_test' );
