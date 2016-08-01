@@ -277,28 +277,29 @@ class Opus_Primus_Structures {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
+	 * @see     esc_html
 	 * @see     wp_get_theme
 	 *
 	 * @version 1.3
 	 * @date    November 13, 2014
 	 * Moved `support_comment` method to `functions.php` to eliminate duplicate output
 	 *
-	 * @version 1.4.2
-	 * @date    2016-07-28
-	 * Added `esc_html` to return statement
+	 * @version 1.5
+	 * @date    2016-08-01
+	 * Added `esc_html` to echo statement and refactored comments printed
 	 */
 	function support_comment() {
 
-		$comment = "\n";
-		$comment .= '<!-- The following comment is meant to serve as a reference only -->' . "\n";
+		$comment = 'The following comments are meant to serve as support references only:' . "\n";
 		if ( is_child_theme() ) {
-			$comment .= '<!-- Opus Primus version ' . wp_get_theme()->parent()->get( 'Version' ) . ' | ';
-			$comment .= 'Child-Theme: ' . wp_get_theme() . ' version ' . wp_get_theme()->get( 'Version' ) . ' -->' . "\n";
+			$comment .= 'Opus Primus version ' . wp_get_theme()->parent()->get( 'Version' ) . ' | ';
+			$comment .= 'Child-Theme: ' . wp_get_theme() . ' version ' . wp_get_theme()->get( 'Version' ) . "\n";
 		} else {
-			$comment .= '<!-- ' . wp_get_theme() . ' version ' . wp_get_theme()->get( 'Version' ) . ' -->' . "\n";
+			$comment .= wp_get_theme() . ' version ' . wp_get_theme()->get( 'Version' ) . "\n";
 		}
 
-		echo $comment;
+		/** Write the comment block to the page source */
+		echo "\n<!--\n" . esc_html( $comment ) . "-->\n";
 
 	}
 
