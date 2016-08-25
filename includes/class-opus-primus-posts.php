@@ -558,6 +558,7 @@ class Opus_Primus_Posts {
 	 *
 	 * @see         apply_filters
 	 * @see         esc_attr
+	 * @see         esc_url
 	 * @see         get_permalink
 	 * @see         get_the_excerpt
 	 * @see         get_the_title
@@ -569,7 +570,7 @@ class Opus_Primus_Posts {
 		/** Create URL or string text */
 		$opus_no_title = get_the_title();
 		empty( $opus_no_title )
-			? $opus_no_title = '<span class="no-title"><a href="' . get_permalink() . '" title="' . esc_attr( get_the_excerpt() ) . '">' . $anchor . '</span></a>'
+			? $opus_no_title = '<span class="no-title"><a href="' . esc_url( get_permalink() ) . '" title="' . esc_attr( get_the_excerpt() ) . '">' . $anchor . '</span></a>'
 			: $opus_no_title = $anchor;
 
 		return apply_filters( 'opus_no_title_link', $opus_no_title );

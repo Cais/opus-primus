@@ -42,12 +42,12 @@
  */
 
 ?>
+<!DOCTYPE html>
 
-	<!DOCTYPE html>
-
-	<?php do_action( 'opus_html_before' ); ?>
+<?php do_action( 'opus_html_before' ); ?>
 
 <html <?php language_attributes(); ?>>
+
 	<head>
 		<?php do_action( 'opus_head_top' ); ?>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -61,10 +61,10 @@
 
 <body <?php body_class(); ?>>
 
-<?php
-do_action( 'opus_body_top' ); ?>
+<?php do_action( 'opus_body_top' ); ?>
 
 	<div id="opus-primus"><!-- Unique theme identifier -->
+
 <?php
 /** Add empty hook before header */
 do_action( 'opus_header_before' );
@@ -75,7 +75,6 @@ if ( is_singular() ) {
 } else {
 	get_template_part( 'opus-primus-header' );
 }
-/** End if - is singular */
 
 /** Add empty hook after header */
 do_action( 'opus_header_after' );
