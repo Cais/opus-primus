@@ -13,11 +13,11 @@ This file will be used as an archive of all changelog entries.
 * Added `Share the Author Wealth` method, not implemented as a display element, yet
 * Added context (`_x`) for complete byline phrase translation string
 * Change all classes to a singleton style
-* Ensure `$pagination` has been initialized in `Opus_Primus_Navigation::pagination` method
+* Ensure `$pagination` has been initialized in `OpusPrimusNavigation::pagination` method
 * Improved i18n implementation in search found results string
-* Moved the `support_comment` method back into the `Opus_Primus_Structures` class
-* Moved the `before_comment_form` and `comments_form_closed` methods back into the `Opus_Primus_Comments` class
-* Refactored `Opus_Primus_Comments::comments_link` to use the WordPress core more effectively
+* Moved the `support_comment` method back into the `OpusPrimusStructures` class
+* Moved the `before_comment_form` and `comments_form_closed` methods back into the `OpusPrimusComments` class
+* Refactored `OpusPrimusComments::comments_link` to use the WordPress core more effectively
 * Removed `$screen` parameter as not necessary in Taglines Stanza
 * Renamed file `class.OpusPrimusHeaders.php` to `class.OpusPrimusHeader.php` for consistency
 * Removed "TagLines" Stanza and made available as separate plugin - see https://github.com/Cais/opus-primus-taglines-stanza
@@ -64,9 +64,9 @@ This file will be used as an archive of all changelog entries.
 * Added `hide_category_widget_list_items` method and related hook
 * Added some escaping sanitization and linked Featured Image to post via the post ID
 * Changed method to return the Featured Thumbnail versus outputting it
-* Changed from using `get_the_time` to `date_i18n` for `Opus_Primus_Images::exif_timestamp` method
+* Changed from using `get_the_time` to `date_i18n` for `OpusPrimusImages::exif_timestamp` method
 * Extracted code from `featured_thumbnail` method to create `featured_thumbnail_single_view` method
-* Improved look of navigation links in `Opus_Primus_Navigation::multiple_pages_link` method
+* Improved look of navigation links in `OpusPrimusNavigation::multiple_pages_link` method
 
 = CSS =
 * Added `=== Screen Reader Text ===` section
@@ -88,10 +88,10 @@ This file will be used as an archive of all changelog entries.
 * Added `post-title-link` wrapper class to better manage Post Title output
 * Added WordPress HTML5 markup support for search form, comment form, comment list, and caption
 * Added sanity checks to ensure constants are not already defined
-* Added `Opus_Primus_Router` class to replace path and URL CONSTANTS
+* Added `OpusPrimusRouter` class to replace path and URL CONSTANTS
 * Added Child-Theme "slug" for easier customizations
 * Added empty hooks before and after showing the breadcrumbs
-* Added Opus_Primus_Comments class methods to `functions.php` to work-around duplicate output issue
+* Added OpusPrimusComments class methods to `functions.php` to work-around duplicate output issue
 * Added checks for Child-Theme and relevant references to `opus_primus_support_comment`
 * Better code organization to only load classes when needed
 * Changed post breadcrumb link to the WordPress shortlink
@@ -101,7 +101,7 @@ This file will be used as an archive of all changelog entries.
 * Moved `support_comment` method to `functions.php` to eliminate duplicate output
 * Replaced the majority of `require_once` calls with `locate_template` calls
 * Replaced `global` variable calls with `new` class instances
-* Update to use `preg_match_all` in Opus_Primus_Gallery featured and secondary id methods
+* Update to use `preg_match_all` in OpusPrimusGallery featured and secondary id methods
 
 = CSS =
 * Added new typography styles for better reading
@@ -143,17 +143,17 @@ This file will be used as an archive of all changelog entries.
 * Released July 2014
 
 = Code =
-* Added new method `Opus_Primus_Navigation::pagination` for moving between pages of posts
-* Added new method `Opus_Primus_Navigation::pagination_wrapped` to provide actions hooks before and after the `pagination` method
+* Added new method `OpusPrimusNavigation::pagination` for moving between pages of posts
+* Added new method `OpusPrimusNavigation::pagination_wrapped` to provide actions hooks before and after the `pagination` method
 * Added `antispambot` email protection to author biography email addresses
 * Added sanity checks to ensure widgets are active before rendering sidebars
 * Added `opus_primus_defaults.php` to replace `$opus_defaults` class
 * Added `opus-primus-ignite.php` to reduce clutter in `functions.php`
 * Added `opus_image_link_navigation_output` filter hook to provide access to navigation output
 * Added `opus_tagline` to default hidden screen options array
-* Adjusted the `Opus_Primus_Structures::the_loop` and `Opus_Primus_Structures::the_loop_archives` to use the `pagination_wrapped` method
+* Adjusted the `OpusPrimusStructures::the_loop` and `OpusPrimusStructures::the_loop_archives` to use the `pagination_wrapped` method
 * Changed navigation method from `posts_link` to `pagination`
-* Changed single view first year of copyright to published year of post/page in `Opus_Primus_Structures::copyright` method
+* Changed single view first year of copyright to published year of post/page in `OpusPrimusStructures::copyright` method
 * Deprecated `OpusPrimusDefaults` class (file may be removed in a future release)
 * Enqueue custom stylesheet in an update safe location `/wp-content/opus-primus-customs/`
 * Enqueue custom JavaScript in an update safe location `/wp-content/opus-primus-customs/`
@@ -161,8 +161,8 @@ This file will be used as an archive of all changelog entries.
 * Refactored `OpusPrimusTaglines::tagline_create_boxes` to clarify the parameter usage
 * Remove conditional customization enqueue using internal theme folder
 * Renamed `opus-ignite.php` to `opus-primus-ignite.php` and moved to theme root
-* Renamed `Opus_Primus_Navigation::image_nav` to `Opus_Primus_Navigation::image_link_navigation`
-* Replaced `Opus_Primus_Structures::replace_spaces` with `sanitize_html_class`
+* Renamed `OpusPrimusNavigation::image_nav` to `OpusPrimusNavigation::image_link_navigation`
+* Replaced `OpusPrimusStructures::replace_spaces` with `sanitize_html_class`
 * Set Customization path and URL CONSTANTS
 
 = CSS =
@@ -188,13 +188,13 @@ This file will be used as an archive of all changelog entries.
 * Added `opus_primus_theme_version()` call as an accessible text string
 * Added new default `number_of_secondary_images` method under Gallery parameters
 * Bring the Featured Image Thumbnail back into the index view ... can you say "waffle"?
-* Change `$output = null` to `$output = ''` in `Opus_Primus_Posts::sticky_flag` method
+* Change `$output = null` to `$output = ''` in `OpusPrimusPosts::sticky_flag` method
 * Corrected typo in `'opus_links_pages_after'` hook
 * Corrected modified date/time output to account for scheduled posts being modified earlier than they are posted
 * Refactored conditional comments and featured thumbnail checks into the `comments_link` and `show_featured_thumbnail` methods
 * Removed `extract` function, escaped attributes, and refactored conditional checks in PullQuotes Stanza
 * Use `opus_primus_theme_version` in place of `wp_get_theme` calls
-* Use transients to improve performance impact of the `Opus_Primus_Structures::copyright` method
+* Use transients to improve performance impact of the `OpusPrimusStructures::copyright` method
 
 = CSS =
 * Added Format-Aside Dashicons to Post-Format: Aside posts
@@ -217,11 +217,11 @@ This file will be used as an archive of all changelog entries.
 = Code =
 * Added more tests
 * Added Featured Image thumbnail to standard post-format archive views
-* Moved `featured_image` wrapper into Opus_Primus_Gallery::featured_image method
-* Moved `secondary_images` wrapper into Opus_Primus_Gallery::secondary_images method
+* Moved `featured_image` wrapper into OpusPrimusGallery::featured_image method
+* Moved `secondary_images` wrapper into OpusPrimusGallery::secondary_images method
 * Moved the ellipsis out of the read more link
 * Refactored `$output` to use `button` class versus the button element in meta byline flags
-* Removed unused parameter `$more` from `Opus_Primus_Posts::excerpt_more_link` method
+* Removed unused parameter `$more` from `OpusPrimusPosts::excerpt_more_link` method
 * Removed `$sep_location` parameter as it was not used in `browser_title` method
 * Removed Featured Image thumbnail from index view
 * Renamed `OpusPrimusDefaults` methods from `show_*` to `display_*`
@@ -381,7 +381,7 @@ This file will be used as an archive of all changelog entries.
 * Refactored `opus-primus-header` to reflect class/method changes of Structures and Header
 
 = CSS =
-* Added classes to `h2`, `ul`, and `li` elements in `Opus_Primus_Authors::author_details`
+* Added classes to `h2`, `ul`, and `li` elements in `OpusPrimusAuthors::author_details`
 * Add minor comments styles
 * Centered content of Post Format: Video posts.
 

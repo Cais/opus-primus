@@ -39,29 +39,9 @@ are amended with subsequent years based on theme publication regardless of any
 change or modification to the actual file.
 
 == Changelog ==
-Recent changelog as of July 2016
-= Version 1.5 =
-* Released ...
-
-= Code =
-* Changed aperture from `F` to `f /`
-* Changed @uses to @see for function/class/method inline documentation
-* Changed `get_posts` call to `new WP_Query` in `Opus_Primus_Structures::copyright`
-* Removed `OpusPrimusDefaults` class/file deprecated in 1.2.5
-* Removed call to `load_text_domain`; forces theme to use WordPress 4.6 or greater for translations
-* Miscellaneous "escaping" improvements
-* Miscellaneous incline comments/documentation updates
-
-= CSS =
-* Changed input text field height to `auto`
-
-= Miscellaneous =
-* Implement more strict adherence to WordPress Coding Standards (WPCS)
-* File names refactored to better meet WPCS
-
-/** ------------------------------------------------------------------------- */
+Recent changelog as of February 6, 2016
 = Version 1.4.1 =
-* Released February 2016
+* Released ...
 
 = Code =
 * Updated copyright year to 2016
@@ -86,11 +66,11 @@ Recent changelog as of July 2016
 * Added `Share the Author Wealth` method, not implemented as a display element, yet
 * Added context (`_x`) for complete byline phrase translation string
 * Change all classes to a singleton style
-* Ensure `$pagination` has been initialized in `Opus_Primus_Navigation::pagination` method
+* Ensure `$pagination` has been initialized in `OpusPrimusNavigation::pagination` method
 * Improved i18n implementation in search found results string
-* Moved the `support_comment` method back into the `Opus_Primus_Structures` class
-* Moved the `before_comment_form` and `comments_form_closed` methods back into the `Opus_Primus_Comments` class
-* Refactored `Opus_Primus_Comments::comments_link` to use the WordPress core more effectively
+* Moved the `support_comment` method back into the `OpusPrimusStructures` class
+* Moved the `before_comment_form` and `comments_form_closed` methods back into the `OpusPrimusComments` class
+* Refactored `OpusPrimusComments::comments_link` to use the WordPress core more effectively
 * Removed `$screen` parameter as not necessary in Taglines Stanza
 * Renamed file `class.OpusPrimusHeaders.php` to `class.OpusPrimusHeader.php` for consistency
 * Removed "TagLines" Stanza and made available as separate plugin - see https://github.com/Cais/opus-primus-taglines-stanza
@@ -137,9 +117,9 @@ Recent changelog as of July 2016
 * Added `hide_category_widget_list_items` method and related hook
 * Added some escaping sanitization and linked Featured Image to post via the post ID
 * Changed method to return the Featured Thumbnail versus outputting it
-* Changed from using `get_the_time` to `date_i18n` for `Opus_Primus_Images::exif_timestamp` method
+* Changed from using `get_the_time` to `date_i18n` for `OpusPrimusImages::exif_timestamp` method
 * Extracted code from `featured_thumbnail` method to create `featured_thumbnail_single_view` method
-* Improved look of navigation links in `Opus_Primus_Navigation::multiple_pages_link` method
+* Improved look of navigation links in `OpusPrimusNavigation::multiple_pages_link` method
 
 = CSS =
 * Added `=== Screen Reader Text ===` section
@@ -161,10 +141,10 @@ Recent changelog as of July 2016
 * Added `post-title-link` wrapper class to better manage Post Title output
 * Added WordPress HTML5 markup support for search form, comment form, comment list, and caption
 * Added sanity checks to ensure constants are not already defined
-* Added `Opus_Primus_Router` class to replace path and URL CONSTANTS
+* Added `OpusPrimusRouter` class to replace path and URL CONSTANTS
 * Added Child-Theme "slug" for easier customizations
 * Added empty hooks before and after showing the breadcrumbs
-* Added Opus_Primus_Comments class methods to `functions.php` to work-around duplicate output issue
+* Added OpusPrimusComments class methods to `functions.php` to work-around duplicate output issue
 * Added checks for Child-Theme and relevant references to `opus_primus_support_comment`
 * Better code organization to only load classes when needed
 * Changed post breadcrumb link to the WordPress shortlink
@@ -174,7 +154,7 @@ Recent changelog as of July 2016
 * Moved `support_comment` method to `functions.php` to eliminate duplicate output
 * Replaced the majority of `require_once` calls with `locate_template` calls
 * Replaced `global` variable calls with `new` class instances
-* Update to use `preg_match_all` in Opus_Primus_Gallery featured and secondary id methods
+* Update to use `preg_match_all` in OpusPrimusGallery featured and secondary id methods
 
 = CSS =
 * Added new typography styles for better reading
@@ -353,4 +333,3 @@ included with the theme will simply be a copy of the noted page.
 * https://themes.trac.wordpress.org/ticket/23510 - Version 1.3.3 - March 2015
 * https://themes.trac.wordpress.org/ticket/23681 - Version 1.3.4 - March 2015
 * https://themes.trac.wordpress.org/ticket/25523 - Version 1.4 - June 2015
-* https://themes.trac.wordpress.org/ticket/30366 - Version 1.4.1 - February 2016

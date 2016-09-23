@@ -48,8 +48,8 @@
  * needed if we do not have comments.
  */
 
-/** Create Opus_Primus_Comments class object */
-$opus_comments = Opus_Primus_Comments::create_instance(); ?>
+/** Create OpusPrimusComments class object */
+$opus_comments = OpusPrimusComments::create_instance(); ?>
 
 <!-- Show the comments -->
 <!-- Inspired by http://digwp.com/2010/02/separate-comments-pingbacks-trackbacks/ -->
@@ -78,7 +78,9 @@ $opus_comments = Opus_Primus_Comments::create_instance(); ?>
 
 		</div><!-- #comment-tabs -->
 
-	<?php }
+		<?php
+	}
+	/** End if - have comments */
 
 	comment_form(); ?>
 

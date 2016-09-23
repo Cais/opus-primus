@@ -34,8 +34,8 @@
  *
  * @version     1.2.3
  * @date        February 2, 2014
- * Moved `featured_image` wrapper into Opus_Primus_Gallery::featured_image method
- * Moved `secondary_images` wrapper into Opus_Primus_Gallery::secondary_images method
+ * Moved `featured_image` wrapper into OpusPrimusGallery::featured_image method
+ * Moved `secondary_images` wrapper into OpusPrimusGallery::secondary_images method
  *
  * @version     1.2.5
  * @date        July 20, 2014
@@ -43,21 +43,21 @@
  */
 
 /** Create class objects */
-$opus_posts      = Opus_Primus_Posts::create_instance();
-$opus_comments   = Opus_Primus_Comments::create_instance();
-$opus_gallery    = Opus_Primus_Gallery::create_instance();
-$opus_navigation = Opus_Primus_Navigation::create_instance(); ?>
+$opus_posts      = OpusPrimusPosts::create_instance();
+$opus_comments   = OpusPrimusComments::create_instance();
+$opus_gallery    = OpusPrimusGallery::create_instance();
+$opus_navigation = OpusPrimusNavigation::create_instance(); ?>
 
 	<div <?php post_class(); ?>>
 
 		<?php
-		/** Set value for use in post_byline and meta_tags */
+		/** @var $anchor - set value for use in post_byline and meta_tags */
 		$anchor = __( 'Displayed', 'opus-primus' );
 		$opus_posts->post_byline(
 			array(
 				'display_mod_author' => OPUS_DISPLAY_MOD_AUTHOR,
 				'anchor'             => $anchor,
-				'sticky_flag'        => __( 'Exhibition', 'opus-primus' ),
+				'sticky_flag'        => __( 'Exhibition', 'opus-primus' )
 			)
 		);
 		$opus_posts->post_title();
@@ -79,8 +79,8 @@ $opus_navigation = Opus_Primus_Navigation::create_instance(); ?>
 
 		if ( is_single() ) {
 
-			/** Create Opus_Primus_Authors class object */
-			$opus_authors = Opus_Primus_Authors::create_instance();
+			/** Create OpusPrimusAuthors class object */
+			$opus_authors = OpusPrimusAuthors::create_instance();
 			$opus_authors->post_author(
 				array(
 					'display_mod_author'   => OPUS_DISPLAY_MOD_AUTHOR,

@@ -36,12 +36,12 @@
  * `opus_<section>_<placement>`
  */
 
-/** Create Opus_Primus_Structures class object */
-$opus_structures = Opus_Primus_Structures::create_instance();
+/** Create OpusPrimusStructures class object */
+$opus_structures = OpusPrimusStructures::create_instance();
 
-/** Current author data an as object */
+/** @var $current_author - current author data an as object */
 $current_author = ( get_query_var( 'author_name ' ) ) ? get_user_by( 'id', get_query_var( 'author_name' ) ) : get_userdata( get_query_var( 'author' ) );
-/** The author ID */
+/** @var $current_author_id - the author ID */
 $current_author_id = $current_author->ID;
 
 get_header( 'author' );
@@ -66,8 +66,8 @@ do_action( 'opus_content_before' ); ?>
 			<!-- The Author Details block - inserted above the content -->
 			<div class="opus-author-header">
 				<?php
-				/** Create Opus_Primus_Authors class object */
-				$opus_authors = Opus_Primus_Authors::create_instance();
+				/** Create OpusPrimusAuthors class object */
+				$opus_authors = OpusPrimusAuthors::create_instance();
 				$opus_authors->author_details( $current_author_id, true, true, true );
 				$opus_authors->share_the_author_wealth( true ); ?>
 			</div>
@@ -79,7 +79,7 @@ do_action( 'opus_content_before' ); ?>
 				dynamic_sidebar( 'before-loop' );
 			}
 
-			/** The the_Loop structure in its most basic form */
+			/** the_Loop structure in its most basic form */
 			$opus_structures->the_loop();
 
 			/** Add after loop sidebar */

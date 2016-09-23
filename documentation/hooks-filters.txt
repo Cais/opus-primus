@@ -18,7 +18,7 @@ The filters are listed below by file, in order of appearance:
     search.php
         opus_search_found_pre_text
         opus_search_found_post_text
-    includes\class.Opus_Primus_Authors.php
+    includes\class.OpusPrimusAuthors.php
         opus_author_coda
         opus_author_description_excerpt_length
         opus_author_description_excerpt_extender
@@ -26,19 +26,19 @@ The filters are listed below by file, in order of appearance:
         opus_authors_list
         opus_first_author_details_text
         opus_modified_author_by_text
-    includes\class.Opus_Primus_Breadcrumbs.php
+    includes\class.OpusPrimusBreadcrumbs.php
         opus_post_breadcrumbs_home_text
         opus_post_breadcrumbs_sticky_text
         opus_post_breadcrumbs_maximum_post_title_length
         opus_post_breadcrumbs_shortened_title_suffix
-    includes\class.Opus_Primus_Comments.php
+    includes\class.OpusPrimusComments.php
         opus_comments_password_required
         opus_no_comments_message
         opus_comment_form_required_field_glyph
         opus_comments_form_closed
-    includes\class.Opus_Primus_Gallery.php
+    includes\class.OpusPrimusGallery.php
         opus_more_images_text
-    includes\class.Opus_Primus_Images.php
+    includes\class.OpusPrimusImages.php
         opus_archive_image_title
         opus_linked_image_message*
         opus_archive_image_excerpt
@@ -65,10 +65,10 @@ The filters are listed below by file, in order of appearance:
         opus_exif_timestamp
         opus_exif_title
         opus_featured_thumbnail_single_view_portrait
-	includes\class.Opus_Primus_Navigation.php
+	includes\class.OpusPrimusNavigation.php
 		opus_image_link_navigation_output
 		opus_navigation_pagination
-    includes\class.Opus_Primus_Posts.php
+    includes\class.OpusPrimusPosts.php
         opus_category_widget_exclude_list
         opus_excerpt_more_link
         opus_mod_different_author_phrase
@@ -89,7 +89,7 @@ The filters are listed below by file, in order of appearance:
         opus_status_update_over_year
         opus_default_sticky_flag
         opus_sticky_flag
-    includes\class.Opus_Primus_Structures.php
+    includes\class.OpusPrimusStructures.php
         opus_browser_title
         opus_body_classes
         opus_copyright

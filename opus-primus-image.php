@@ -38,20 +38,20 @@
  */
 
 /** Create class objects */
-$opus_posts      = Opus_Primus_Posts::create_instance();
-$opus_comments   = Opus_Primus_Comments::create_instance();
-$opus_navigation = Opus_Primus_Navigation::create_instance(); ?>
+$opus_posts      = OpusPrimusPosts::create_instance();
+$opus_comments   = OpusPrimusComments::create_instance();
+$opus_navigation = OpusPrimusNavigation::create_instance(); ?>
 
 	<div <?php post_class(); ?>>
 
 		<?php
-		/** Set value for use in post_byline and meta_tags */
+		/** @var $anchor - set value for use in post_byline and meta_tags */
 		$anchor = __( 'Displayed', 'opus-primus' );
 		$opus_posts->post_byline(
 			array(
 				'display_mod_author' => OPUS_DISPLAY_MOD_AUTHOR,
 				'anchor'             => $anchor,
-				'sticky_flag'        => __( 'Framed', 'opus-primus' ),
+				'sticky_flag'        => __( 'Framed', 'opus-primus' )
 			)
 		);
 		$opus_posts->post_title();
@@ -63,8 +63,8 @@ $opus_navigation = Opus_Primus_Navigation::create_instance(); ?>
 
 		if ( is_single() ) {
 
-			/** Create Opus_Primus_Authors class object */
-			$opus_authors = Opus_Primus_Authors::create_instance();
+			/** Create OpusPrimusAuthors class object */
+			$opus_authors = OpusPrimusAuthors::create_instance();
 			$opus_authors->post_author(
 				array(
 					'display_mod_author'   => OPUS_DISPLAY_MOD_AUTHOR,

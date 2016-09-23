@@ -31,7 +31,7 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-jQuery().ready(function ($) {
+jQuery(document).ready(function ($) {
 	/** Note: $() will work as an alias for jQuery() inside of this function */
 
 	$('#comment-tabs').tabs({

@@ -48,24 +48,21 @@ if ( is_active_sidebar( 'footer-middle' ) || is_active_sidebar( 'footer-left' ) 
 				<div class="column-left">
 
 					<ul id="footer-sidebar-two">
-						<?php
-						if ( is_active_sidebar( 'footer-middle' ) ) {
+						<?php if ( is_active_sidebar( 'footer-middle' ) ) {
 							dynamic_sidebar( 'footer-middle' );
 						} ?>
 					</ul>
 					<!-- #footer-sidebar-two -->
 
 					<ul id="footer-sidebar-one">
-						<?php
-						if ( is_active_sidebar( 'footer-left' ) ) {
+						<?php if ( is_active_sidebar( 'footer-left' ) ) {
 							dynamic_sidebar( 'footer-left' );
 						} ?>
 					</ul>
 					<!-- #footer-sidebar-one -->
 
 					<ul id="footer-sidebar-three">
-						<?php
-						if ( is_active_sidebar( 'footer-right' ) ) {
+						<?php if ( is_active_sidebar( 'footer-right' ) ) {
 							dynamic_sidebar( 'footer-right' );
 						} ?>
 					</ul>

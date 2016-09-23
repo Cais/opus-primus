@@ -456,7 +456,6 @@ div.attached-image + div.post-content {
 /** === Post-Format: Quote === ---------------------------------------------- */
 @font-face {
 	font-family: 'Merienda';
-	/*noinspection CssUnknownTarget,CssUnknownTarget*/
 	src: url('../fonts/Merienda/Merienda.ttf') format('truetype');
 }
 
@@ -537,7 +536,6 @@ div.post.format-audio .post-content a {
 /** === Post-Format: Chat === ----------------------------------------------- */
 @font-face {
 	font-family: 'Underwood-Champion';
-	/*noinspection CssUnknownTarget*/
 	src: url('../fonts/Underwood-Champion/underwood_champion.ttf') format('truetype');
 }
 

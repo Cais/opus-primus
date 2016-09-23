@@ -43,7 +43,7 @@
  * Removed `table-stripe` class from specific Calendar elements
  */
 
-jQuery().ready(function ($) {
+jQuery(document).ready(function ($) {
 	/** Note: $() will work as an alias for jQuery() inside of this function */
 
 	/** Add a drop shadow to make gallery images pop */

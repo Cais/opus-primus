@@ -40,7 +40,7 @@
  *
  * @version     1.3
  * @date        September 1, 2014
- * Removed constant definitions that were replaced by the Opus_Primus_Router class
+ * Removed constant definitions that were replaced by the OpusPrimusRouter class
  * Replaced `required_once` with `locate_template`
  */
 
@@ -54,7 +54,7 @@ if ( ! defined( 'OPUS_CUSTOM_URL' ) ) {
 }
 
 /** Get the router class so we can build the paths */
-locate_template( 'includes/class-opus-primus-router.php', true, true );
+locate_template( 'includes/class.OpusPrimusRouter.php', true, true );
 
 /** Add Global Defaults */
 locate_template( 'includes/opus-primus-defaults.php', true, true );
@@ -64,22 +64,22 @@ locate_template( 'includes/widgets.php', true, true );
 
 /** Load the classes - in order of appearance/dependency */
 /** Add Navigation */
-locate_template( 'includes/class-opus-primus-navigation.php', true, true );
+locate_template( 'includes/class.OpusPrimusNavigation.php', true, true );
 /** Add Structures */
-locate_template( 'includes/class-opus-primus-structures.php', true, true );
+locate_template( 'includes/class.OpusPrimusStructures.php', true, true );
 /** Add Headers */
-locate_template( 'includes/class-opus-primus-header.php', true, true );
+locate_template( 'includes/class.OpusPrimusHeader.php', true, true );
 /** Add Posts */
-locate_template( 'includes/class-opus-primus-posts.php', true, true );
+locate_template( 'includes/class.OpusPrimusPosts.php', true, true );
 /** Add Comments Hooks */
-locate_template( 'includes/class-opus-primus-comments.php', true, true );
+locate_template( 'includes/class.OpusPrimusComments.php', true, true );
 /** Add Images */
-locate_template( 'includes/class-opus-primus-images.php', true, true );
+locate_template( 'includes/class.OpusPrimusImages.php', true, true );
 /** Add Gallery */
-locate_template( 'includes/class-opus-primus-gallery.php', true, true );
+locate_template( 'includes/class.OpusPrimusGallery.php', true, true );
 /** Add Authors */
-locate_template( 'includes/class-opus-primus-authors.php', true, true );
+locate_template( 'includes/class.OpusPrimusAuthors.php', true, true );
 /** Add Archives */
-locate_template( 'includes/class-opus-primus-archives.php', true, true );
+locate_template( 'includes/class.OpusPrimusArchives.php', true, true );
 /** Add Breadcrumbs */
-locate_template( 'includes/class-opus-primus-breadcrumbs.php', true, true );
+locate_template( 'includes/class.OpusPrimusBreadcrumbs.php', true, true );

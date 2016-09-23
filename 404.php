@@ -43,8 +43,8 @@
  * Minor correction to i18n string, null does not need to be translated
  */
 
-$opus_archives   = Opus_Primus_Archives::create_instance();
-$opus_structures = Opus_Primus_Structures::create_instance();
+$opus_archives   = OpusPrimusArchives::create_instance();
+$opus_structures = OpusPrimusStructures::create_instance();
 
 get_header( '404' );
 
@@ -66,23 +66,23 @@ do_action( 'opus_content_before' ); ?>
 		<div class="the-loop">
 
 			<?php
-			echo esc_html( sprintf(
+			printf(
 				'<h1 class="opus-404-title-text">%1$s</h1>',
 				apply_filters( 'opus_404_title_text', __( 'Something seems to have gone bust ...', 'opus-primus' ) )
-			) );
+			);
 
 			/** Use action hook to add image - see Structures class for hook call */
 			do_action( 'opus_404_image' );
 
-			echo esc_html( sprintf(
+			printf(
 				'<p class="opus-404-message-text">%1$s</p>',
 				apply_filters( 'opus_404_message_text', __( 'This is the 404 error page; we seemed to have lost what you are looking for.', 'opus-primus' ) )
-			) );
+			);
 
-			echo esc_html( sprintf(
+			printf(
 				'<p class="opus-404-posts-text">%1$s</p>',
 				apply_filters( 'opus_404_posts_text', __( 'Were you looking for a recent post?', 'opus-primus' ) )
-			) );
+			);
 
 			/** Use the_widget to display a list of recent posts */
 			the_widget(
@@ -90,15 +90,15 @@ do_action( 'opus_content_before' ); ?>
 				$instance = array(
 					'title'     => '',
 					'number'    => '5',
-					'show_date' => true,
+					'show_date' => true
 				)
 			);
 
 			/** Display links to archives */
-			echo esc_html( sprintf(
+			printf(
 				'<p class="opus-404-category-text">%1$s</p>',
 				apply_filters( 'opus_404_category_text', __( 'Maybe you were looking for one these categories ...', 'opus-primus' ) )
-			) );
+			);
 
 			/** Display a list of categories to choose from */
 			$opus_archives->categories_archive(
@@ -112,10 +112,10 @@ do_action( 'opus_content_before' ); ?>
 				)
 			);
 
-			echo esc_html( sprintf(
+			printf(
 				'<p class="opus-404-tag-text">%1$s</p>',
 				apply_filters( 'opus_404_tag_text', __( '... or maybe you are interested in one of these tags?', 'opus-primus' ) )
-			) );
+			);
 
 			/** Display a list of tags to choose from */
 			$opus_archives->archive_cloud(

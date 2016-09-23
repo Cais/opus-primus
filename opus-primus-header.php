@@ -44,7 +44,7 @@
  */
 
 /** Create OpusPrimusHeader class object */
-$opus_headers = Opus_Primus_Header::create_instance(); ?>
+$opus_headers = OpusPrimusHeader::create_instance(); ?>
 
 	<header>
 
@@ -77,7 +77,7 @@ $opus_headers = Opus_Primus_Header::create_instance(); ?>
 
 		<nav>
 			<?php
-			$opus_navigation = Opus_Primus_Navigation::create_instance();
+			$opus_navigation = OpusPrimusNavigation::create_instance();
 			$opus_navigation->primary_menu(); ?>
 		</nav>
 		<!-- End navigation section -->
@@ -91,5 +91,5 @@ $opus_headers = Opus_Primus_Header::create_instance(); ?>
 	</header><!-- End header section -->
 
 <?php
-$opus_breadcrumbs = Opus_Primus_Breadcrumbs::create_instance();
+$opus_breadcrumbs = OpusPrimusBreadcrumbs::create_instance();
 $opus_breadcrumbs->show_the_trail();

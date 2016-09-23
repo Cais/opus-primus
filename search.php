@@ -42,8 +42,8 @@
  * Improved i18n implementation in search found results string
  */
 
-/** Create Opus_Primus_Structures class object */
-$opus_structures = Opus_Primus_Structures::create_instance();
+/** Create OpusPrimusStructures class object */
+$opus_structures = OpusPrimusStructures::create_instance();
 
 get_header( 'search' );
 
@@ -70,10 +70,10 @@ do_action( 'opus_content_before' ); ?>
 				dynamic_sidebar( 'before-loop' );
 			}
 
-			/** Starts the_Loop */
+			/** the_Loop - Starts */
 			if ( have_posts() ) {
 
-				/** Create text string for output */
+				/** @var string $opus_search_found_pre_text - create text string for output */
 				$opus_search_found_pre_text = __( 'We found it!', 'opus-primus' );
 				$opus_search_found_pre_text .= '<br />';
 				$opus_search_found_pre_text .= __( 'It looks like you searched for ...', 'opus-primus' );
@@ -81,12 +81,12 @@ do_action( 'opus_content_before' ); ?>
 				printf(
 					sprintf(
 						'<h2 class="search-found-pre-text">%1$s <span class="search-query">%2$s</span></h2>',
-						esc_html( apply_filters( 'opus_search_found_pre_text', $opus_search_found_pre_text ) ),
+						apply_filters( 'opus_search_found_pre_text', $opus_search_found_pre_text ),
 						get_search_query()
 					)
 				);
 
-				esc_html_e(
+				_e(
 					apply_filters(
 						'opus_search_found_post_text',
 						'<div class="opus-search-found-post-text">' . __( 'Here are the results:', 'opus-primus' ) . '</div>'
@@ -97,34 +97,39 @@ do_action( 'opus_content_before' ); ?>
 
 					the_post();
 					/** Since we're in the_Loop we need to check the post type */
-					if ( 'page' === get_post_type() ) {
-						?>
+					if ( 'page' == get_post_type() ) { ?>
 
 						<div <?php post_class(); ?>>
 
 							<?php
-							/** Create Opus_Primus_Posts class object */
-							$opus_posts = Opus_Primus_Posts::create_instance();
+							/** Create OpusPrimusPosts class object */
+							$opus_posts = OpusPrimusPosts::create_instance();
 
 							$opus_posts->post_byline( array( 'display_mod_author' => true ) );
 							$opus_posts->post_title();
 							$opus_posts->post_excerpt(); ?>
 
-						</div><!-- post classes --> <?php } else {
+						</div><!-- post classes -->
 
-						get_template_part( 'opus-primus', get_post_format() );}
+					<?php } else {
+
+						get_template_part( 'opus-primus', get_post_format() );
+
+					}
+
 				}
+
 			} else {
 
 				$opus_structures->no_search_results();
 
 			}
 
-			/** Create Opus_Primus_Navigation class object */
-			$opus_navigation = Opus_Primus_Navigation::create_instance();
+			/** Create OpusPrimusNavigation class object */
+			$opus_navigation = OpusPrimusNavigation::create_instance();
 			$opus_navigation->posts_link();
 
-			/** Ends the_Loop */
+			/** the_Loop - Ends */
 
 			/** Add after loop sidebar */
 			if ( is_active_sidebar( 'after-loop' ) ) {

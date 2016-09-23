@@ -40,19 +40,19 @@
  * @date        February 6, 2016
  * Removed WordPress 4.1 compatibility check for `<title />` usage
  */
-
 ?>
-<!DOCTYPE html>
 
-<?php do_action( 'opus_html_before' ); ?>
+	<!DOCTYPE html>
+
+	<?php do_action( 'opus_html_before' ); ?>
 
 <html <?php language_attributes(); ?>>
-
 	<head>
 		<?php do_action( 'opus_head_top' ); ?>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<?php
 		do_action( 'opus_head_bottom' );
@@ -61,10 +61,10 @@
 
 <body <?php body_class(); ?>>
 
-<?php do_action( 'opus_body_top' ); ?>
+<?php
+do_action( 'opus_body_top' ); ?>
 
 	<div id="opus-primus"><!-- Unique theme identifier -->
-
 <?php
 /** Add empty hook before header */
 do_action( 'opus_header_before' );
@@ -75,6 +75,7 @@ if ( is_singular() ) {
 } else {
 	get_template_part( 'opus-primus-header' );
 }
+/** End if - is singular */
 
 /** Add empty hook after header */
 do_action( 'opus_header_after' );

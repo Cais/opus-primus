@@ -34,8 +34,8 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-/** Get Opus_Primus_Structures class object */
-$opus_structures = Opus_Primus_Structures::create_instance(); ?>
+/** Get OpusPrimusStructures class object */
+$opus_structures = OpusPrimusStructures::create_instance(); ?>
 
 <footer>
 

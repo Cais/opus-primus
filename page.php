@@ -40,8 +40,8 @@
  */
 
 /** Create class objects */
-$opus_structures = Opus_Primus_Structures::create_instance();
-$opus_posts      = Opus_Primus_Posts::create_instance();
+$opus_structures = OpusPrimusStructures::create_instance();
+$opus_posts      = OpusPrimusPosts::create_instance();
 
 get_header( 'page' );
 
@@ -68,7 +68,7 @@ do_action( 'opus_content_before' ); ?>
 				dynamic_sidebar( 'before-loop' );
 			}
 
-			/** Starts the_Loop */
+			/** the_Loop - Starts */
 			if ( have_posts() ) {
 
 				while ( have_posts() ) {
@@ -78,8 +78,8 @@ do_action( 'opus_content_before' ); ?>
 					<div <?php post_class(); ?>>
 
 						<?php
-						/** Create Opus_Primus_Images class object */
-						$opus_images = Opus_Primus_Images::create_instance();
+						/** Create OpusPrimusImages class object */
+						$opus_images = OpusPrimusImages::create_instance();
 
 						$opus_posts->post_title();
 						$opus_images->featured_thumbnail( $size = 'full', $class = 'aligncenter' );
@@ -88,19 +88,21 @@ do_action( 'opus_content_before' ); ?>
 						/** Show page byline details */
 						if ( OPUS_DISPLAY_PAGE_BYLINE ) {
 							$opus_posts->post_byline(
-								array( 'display_mod_author' => OPUS_DISPLAY_MOD_AUTHOR )
+								array(
+									'display_mod_author' => OPUS_DISPLAY_MOD_AUTHOR
+								)
 							);
 						} else {
 							$opus_posts->post_byline(
 								array(
 									'display_mod_author' => OPUS_DISPLAY_MOD_AUTHOR,
-									'echo'               => false,
+									'echo'               => false
 								)
 							);
 						}
 
-						/** Create Opus_Primus_Authors class object */
-						$opus_authors = Opus_Primus_Authors::create_instance();
+						/** Create OpusPrimusAuthors class object */
+						$opus_authors = OpusPrimusAuthors::create_instance();
 						$opus_authors->post_author(
 							array(
 								'display_mod_author'   => OPUS_DISPLAY_MOD_AUTHOR,
@@ -113,12 +115,13 @@ do_action( 'opus_content_before' ); ?>
 					</div><!-- post classes -->
 
 				<?php }
+
 			} else {
 
 				$opus_structures->no_search_results();
 
 			}
-			/** Ends the_Loop */
+			/** the_Loop - Ends */
 
 			/** Add after loop sidebar */
 			if ( is_active_sidebar( 'after-loop' ) ) {

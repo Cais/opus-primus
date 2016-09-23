@@ -39,11 +39,11 @@
  * @version     1.3
  * @date        October 9, 2014
  * Replaced `require_once` with `locate_template`
- * Added Opus_Primus_Comments class methods to work-around duplicate output issue
+ * Added OpusPrimusComments class methods to work-around duplicate output issue
  *
  * @version     1.4
  * @date        March 31, 2015
- * Removed Opus_Primus_Comments class methods, duplicate output issue corrected
+ * Removed OpusPrimusComments class methods, duplicate output issue corrected
  */
 
 /** Fire up the theme with its classes, widgets, and defaults */
@@ -57,9 +57,9 @@ locate_template( 'opus-primus-ignite.php', true, true );
  * @package Opus_Primus
  * @since   1.2.4
  *
- * @see    (GLOBAL) $wp_version
- * @see    apply_filters
- * @see    wp_get_theme
+ * @uses    (GLOBAL) $wp_version
+ * @uses    apply_filters
+ * @uses    wp_get_theme
  *
  * @return  string
  */
@@ -76,31 +76,31 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 	 *
 	 * Use to enqueue the theme javascript and custom stylesheet, if it exists
 	 *
-	 * @package OpusPrimus
-	 * @since   0.1
+	 * @package            OpusPrimus
+	 * @since              0.1
 	 *
-	 * @see    OpusPrimusRouter::path
-	 * @see    OpusPrimusRouter::path_uri
-	 * @see    opus_primus_theme_version
-	 * @see    get_header_image
-	 * @see    is_readable
-	 * @see    is_single
-	 * @see    wp_enqueue_script
-	 * @see    wp_enqueue_style
-	 * @see    wp_get_theme->get
+	 * @uses               OpusPrimusRouter::path
+	 * @uses               OpusPrimusRouter::path_uri
+	 * @uses               opus_primus_theme_version
+	 * @uses               get_header_image
+	 * @uses               is_readable
+	 * @uses               is_single
+	 * @uses               wp_enqueue_script
+	 * @uses               wp_enqueue_style
+	 * @uses               wp_get_theme->get
 	 *
-	 * @version 1.3
-	 * @date    August 24, 2014
-	 * Replace CONSTANTS with Opus_Primus_Router methods
+	 * @version            1.3
+	 * @date               August 24, 2014
+	 * Replace CONSTANTS with OpusPrimusRouter methods
 	 * Enqueue JavaScripts and CSS for SlickNav JavaScript plugin integration to handle mobile menus
 	 *
-	 * @version 1.4.1
-	 * @date    February 6, 2016
+	 * @vesion             1.4.1
+	 * @date               February 6, 2016
 	 * Updated SlickNav implementation to version 1.0.6
 	 */
 	function opus_primus_enqueue_scripts() {
-		/** Create Opus_Primus_Router class object */
-		$opus_router = Opus_Primus_Router::create_instance();
+		/** Create OpusPrimusRouter class object */
+		$opus_router = OpusPrimusRouter::create_instance();
 
 		/** Enqueue Theme Scripts */
 		/** Enqueue Opus Primus JavaScripts which will enqueue jQuery as a dependency */
@@ -114,8 +114,8 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 		wp_enqueue_script(
 			'opus-primus-fitvids-init', $opus_router->path_uri( 'lib' ) . 'opus-primus-fitvids-init.js', array(
 			'jquery',
-			'FitVids',
-			), opus_primus_theme_version(), true
+			'FitVids'
+		), opus_primus_theme_version(), true
 		);
 
 		/** Enqueue Opus Primus Comment Tabs which will enqueue jQuery, jQuery UI Core, jQuery UI Widget, and jQuery UI Tabs as dependencies */
@@ -125,8 +125,8 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 				'jquery',
 				'jquery-ui-core',
 				'jquery-ui-widget',
-				'jquery-ui-tabs',
-				), opus_primus_theme_version(), true
+				'jquery-ui-tabs'
+			), opus_primus_theme_version(), true
 			);
 		}
 
@@ -136,9 +136,6 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 		}
 
 		/** Enqueue Theme Stylesheets */
-		/** Main Theme Style */
-		wp_enqueue_style( 'Opus_Primus-Main-Style', get_bloginfo( 'stylesheet_url' ) );
-
 		/** Theme Layouts */
 		wp_enqueue_style( 'Opus-Primus-Layout', $opus_router->path_uri( 'css' ) . 'opus-primus-layout.css', array(), opus_primus_theme_version(), 'screen' );
 
@@ -170,13 +167,14 @@ if ( ! function_exists( 'opus_primus_enqueue_scripts' ) ) {
 		wp_enqueue_script(
 			'SlickNav-init', $opus_router->path_uri( 'lib' ) . 'opus-primus-slicknav-init.js', array(
 			'jquery',
-			'SlickNav-JS-main',
-			), opus_primus_theme_version(), true
+			'SlickNav-JS-main'
+		), opus_primus_theme_version(), true
 		);
 		/** Enqueue SlickNav mobile layout only styles with SlickNav dependency */
 		wp_enqueue_style( 'SlickNav-layout', $opus_router->path_uri( 'lib' ) . 'opus-primus-slicknav.css', array( 'SlickNav-CSS-main' ), opus_primus_theme_version(), 'screen' );
 
 	}
+
 }
 add_action( 'wp_enqueue_scripts', 'opus_primus_enqueue_scripts' );
 
@@ -191,20 +189,20 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 	 * @package OpusPrimus
 	 * @since   0.1
 	 *
-	 * @see    (GLOBAL) $content_width
-	 * @see    add_editor_style
-	 * @see    add_theme_support: automatic-feed-links
-	 * @see    add_theme_support: custom-background
-	 * @see    add_theme_support: custom-header
-	 * @see    add_theme_support: html5 (search form, comment form, comment list, caption, gallery, widgets)
-	 * @see    add_theme_support: post-formats
-	 * @see    add_theme_support: post-thumbnails
-	 * @see    add_theme_support: title-tag
-	 * @see    load_theme_textdomain
-	 * @see    get_locale
-	 * @see    get_template_directory
-	 * @see    get_template_directory_uri
-	 * @see    register_nav_menus
+	 * @uses    (GLOBAL) $content_width
+	 * @uses    add_editor_style
+	 * @uses    add_theme_support: automatic-feed-links
+	 * @uses    add_theme_support: custom-background
+	 * @uses    add_theme_support: custom-header
+	 * @uses    add_theme_support: html5 (search form, comment form, comment list, caption, gallery, widgets)
+	 * @uses    add_theme_support: post-formats
+	 * @uses    add_theme_support: post-thumbnails
+	 * @uses    add_theme_support: title-tag
+	 * @uses    load_theme_textdomain
+	 * @uses    get_locale
+	 * @uses    get_template_directory
+	 * @uses    get_template_directory_uri
+	 * @uses    register_nav_menus
 	 *
 	 * @version 1.3
 	 * @date    August 22, 2014
@@ -217,10 +215,6 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 	 * @version 1.4
 	 * @date    March 15, 2015
 	 * Added `widgets` to the HTML5 theme supported items
-	 *
-	 * @version 1.5
-	 * @date    2016-07-31
-	 * Removed call to `load_text_domain`; forces theme to use WordPress 4.6 or greater for translations
 	 */
 	function opus_primus_theme_setup() {
 		/** This theme uses post thumbnails */
@@ -254,11 +248,11 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 				'link',
 				'quote',
 				'status',
-				'video',
+				'video'
 			)
 		);
 
-		/** Holds custom header parameters */
+		/** @var $opus_custom_header_support - holds custom header parameters */
 		$opus_custom_header_support = array(
 			/**
 			 * There is no default image in use.
@@ -283,7 +277,7 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 			'comment-list',
 			'caption',
 			'gallery',
-			'widgets',
+			'widgets'
 		);
 		add_theme_support( 'html5', $html_items );
 
@@ -292,9 +286,20 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 			array(
 				'primary'   => __( 'Primary (Parent-Theme) Menu', 'opus-primus' ),
 				'secondary' => __( 'Secondary Menu (not used in Parent-Theme)', 'opus-primus' ),
-				'search'    => __( 'Search Results Menu', 'opus-primus' ),
+				'search'    => __( 'Search Results Menu', 'opus-primus' )
 			)
 		);
+
+		/**
+		 * Make theme available for translation
+		 * Translations can be filed in the /languages/ directory
+		 */
+		load_theme_textdomain( 'opus-primus', get_template_directory() . '/languages' );
+		$locale      = get_locale();
+		$locale_file = get_template_directory_uri() . "/languages/$locale.php";
+		if ( is_readable( $locale_file ) ) {
+			require_once( $locale_file );
+		}
 
 		/** Set content width to 1000 - see Full Size Video script */
 		global $content_width;
@@ -303,6 +308,7 @@ if ( ! function_exists( 'opus_primus_theme_setup' ) ) {
 		}
 
 	}
+
 }
 add_action( 'after_setup_theme', 'opus_primus_theme_setup' );
 
@@ -323,16 +329,16 @@ function opus_primus_return_blank() {
  * @subpackage         Compatibility
  * @since              1.2.3
  *
- * @see               OpusPrimusRouter::path_uri
- * @see               is_plugin_active
- * @see               locate_template
- * @see               opus_primus_theme_version
- * @see               wp_enqueue_script
- * @see               wp_enqueue_style
+ * @uses               OpusPrimusRouter::path_uri
+ * @uses               is_plugin_active
+ * @uses               locate_template
+ * @uses               opus_primus_theme_version
+ * @uses               wp_enqueue_script
+ * @uses               wp_enqueue_style
  *
  * @version            1.3
  * @date               October 13, 2014
- * Replaced CONSTANT with Opus_Primus_Router method
+ * Replaced CONSTANT with OpusPrimusRouter method
  * Added Contact Form 7 compatibility
  * Added BNS Login compatibility
  * Added Gravity Forms compatibility (not implemented, yet)
@@ -342,12 +348,11 @@ function opus_primus_compatibility() {
 	/** Call the wp-admin plugin code */
 	require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
 
-	/** Create Opus_Primus_Router class object */
-	$opus_router = Opus_Primus_Router::create_instance();
+	/** Create OpusPrimusRouter class object */
+	$opus_router = OpusPrimusRouter::create_instance();
 
 	/**
 	 * Soliloquy - slider plugin
-	 *
 	 * @link    http://soliloquywp.com/
 	 */
 	if ( is_plugin_active( 'soliloquy/soliloquy.php' ) ) {
@@ -357,7 +362,6 @@ function opus_primus_compatibility() {
 
 	/**
 	 * Contact Form 7 - forms plugin
-	 *
 	 * @link    http://wordpress.org/plugins/contact-form-7/
 	 */
 	if ( is_plugin_active( 'contact-form-7/wp-contact-form-7.php' ) ) {
@@ -367,7 +371,6 @@ function opus_primus_compatibility() {
 
 	/**
 	 * BNS Login - login plugin
-	 *
 	 * @link    http://wordpress.org/plugins/bns-login/
 	 */
 	if ( is_plugin_active( 'bns-login/bns-login.php' ) ) {
@@ -376,7 +379,6 @@ function opus_primus_compatibility() {
 
 	/**
 	 * Gravity Forms - forms plugin
-	 *
 	 * @link    http://gravityforms.com/
 	 */
 	if ( is_plugin_active( 'gravityforms/gravityforms.php' ) ) {
@@ -386,3 +388,9 @@ function opus_primus_compatibility() {
 }
 
 add_action( 'wp_enqueue_scripts', 'opus_primus_compatibility' );
+
+function custom_test() {
+	return 'title=';
+}
+
+add_filter( 'bnscl_image_tag_alt_title', 'custom_test' );

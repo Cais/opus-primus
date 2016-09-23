@@ -52,16 +52,14 @@ if ( is_active_sidebar( 'first-widget' ) || is_active_sidebar( 'second-widget' )
 	<div class="first-sidebar">
 
 		<ul id="sidebar-one">
-			<?php
-			if ( is_active_sidebar( 'first-widget' ) ) {
+			<?php if ( is_active_sidebar( 'first-widget' ) ) {
 				dynamic_sidebar( 'first-widget' );
 			} ?>
 		</ul>
 		<!-- #sidebar-one -->
 
 		<ul id="sidebar-two">
-			<?php
-			if ( is_active_sidebar( 'second-widget' ) ) {
+			<?php if ( is_active_sidebar( 'second-widget' ) ) {
 				dynamic_sidebar( 'second-widget' );
 			} ?>
 		</ul>
@@ -84,16 +82,14 @@ if ( is_active_sidebar( 'third-widget' ) || is_active_sidebar( 'fourth-widget' )
 	<div class="second-sidebar">
 
 		<ul id="sidebar-three">
-			<?php
-			if ( is_active_sidebar( 'third-widget' ) ) {
+			<?php if ( is_active_sidebar( 'third-widget' ) ) {
 				dynamic_sidebar( 'third-widget' );
 			} ?>
 		</ul>
 		<!-- #sidebar-three -->
 
 		<ul id="sidebar-four">
-			<?php
-			if ( is_active_sidebar( 'fourth-widget' ) ) {
+			<?php if ( is_active_sidebar( 'fourth-widget' ) ) {
 				dynamic_sidebar( 'fourth-widget' );
 			} ?>
 		</ul>
